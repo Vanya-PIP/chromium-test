@@ -8,8 +8,15 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
+<<<<<<< HEAD
 #include "base/files/file_util.h"
 #include "base/test"
+||||||| b30439823e517
+#include "base/files/file_util.h"
+#include "base/logging.h"
+=======
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "components/subresource_filter/tools/indexing_tool.h"
 
 const char kHelpMsg[] = R"(

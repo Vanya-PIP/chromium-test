@@ -9,7 +9,14 @@
 #include <psapi.h>
 #include <stddef.h>
 
+<<<<<<< HEAD
 #include "base/test"
+||||||| b30439823e517
+#include "base/logging.h"
+=======
+#include "base/compiler_specific.h"
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "base/memory/raw_ptr.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/win/iat_patch_function.h"
@@ -246,7 +253,7 @@ void HandleHooks::PatchLoadedModules() {
   returned = std::min(kSize, returned);
 
   for (DWORD current = 0; current < returned; current++) {
-    AddIATPatch(modules[current]);
+    AddIATPatch(UNSAFE_TODO(modules[current]));
   }
 }
 

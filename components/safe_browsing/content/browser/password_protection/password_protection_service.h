@@ -10,6 +10,7 @@
 #include "components/password_manager/core/browser/password_reuse_detector.h"
 #include "components/safe_browsing/buildflags.h"
 #include "components/safe_browsing/core/browser/password_protection/metrics_util.h"
+#include "components/safe_browsing/core/browser/password_protection/password_protection_request.h"
 #include "components/safe_browsing/core/browser/password_protection/password_protection_service_base.h"
 #include "components/safe_browsing/core/common/proto/csd.pb.h"
 #include "content/public/browser/commit_deferring_condition.h"
@@ -51,6 +52,18 @@ class PasswordProtectionService : public PasswordProtectionServiceBase {
   using PasswordProtectionServiceBase::PasswordProtectionServiceBase;
 
  public:
+  PasswordProtectionService(
+      const scoped_refptr<SafeBrowsingDatabaseManager>& database_manager,
+      scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
+      history::HistoryService* history_service,
+      PrefService* pref_service,
+      std::unique_ptr<SafeBrowsingTokenFetcher> token_fetcher,
+      bool is_off_the_record,
+      signin::IdentityManager* identity_manager,
+      bool try_token_fetch,
+      SafeBrowsingMetricsCollector* metrics_collector);
+  ~PasswordProtectionService() override;
+
   // Creates an instance of PasswordProtectionRequest and call Start() on that
   // instance. This function also insert this request object in |requests_| for
   // record keeping.
@@ -64,7 +77,9 @@ class PasswordProtectionService : public PasswordProtectionServiceBase {
       const std::vector<password_manager::MatchingReusedCredential>&
           matching_reused_credentials,
       LoginReputationClientRequest::TriggerType trigger_type,
-      bool password_field_exists);
+      bool password_field_exists,
+      std::optional<PasswordProtectionRequest::OtpPhishingVerdictCallback>
+          otp_phishing_verdict_callback = std::nullopt);
 
   // Same as above but uses a PasswordProtectionRequest that avoids sending
   // real requests that can be used for testing.
@@ -78,7 +93,9 @@ class PasswordProtectionService : public PasswordProtectionServiceBase {
       const std::vector<password_manager::MatchingReusedCredential>&
           matching_reused_credentials,
       LoginReputationClientRequest::TriggerType trigger_type,
-      bool password_field_exists);
+      bool password_field_exists,
+      std::optional<PasswordProtectionRequest::OtpPhishingVerdictCallback>
+          otp_phishing_verdict_callback = std::nullopt);
 
 #if defined(ON_FOCUS_PING_ENABLED)
   virtual void MaybeStartPasswordFieldOnFocusRequest(
@@ -100,10 +117,10 @@ class PasswordProtectionService : public PasswordProtectionServiceBase {
 
   // Starts a request to check if the current page is a potential phishing site
   // for one time password filling.
-  virtual void MaybeStartOtpPhishingRequest(
+  void MaybeStartOtpPhishingRequest(
       content::WebContents* web_contents,
       const GURL& main_frame_url,
-      OtpPhishingVerdictCallback callback);
+      PasswordProtectionRequest::OtpPhishingVerdictCallback callback);
 
   // Records a Chrome Sync event that sync password reuse was detected.
   virtual void MaybeLogPasswordReuseDetectedEvent(
@@ -147,6 +164,17 @@ class PasswordProtectionService : public PasswordProtectionServiceBase {
 
   void ResumeDeferredNavigationsIfNeeded(
       PasswordProtectionRequest* request) override;
+
+  void OnOtpHighConfidenceAllowlistCheckCompleted(
+      content::WebContents* web_contents,
+      const GURL& main_frame_url,
+      PasswordProtectionRequest::OtpPhishingVerdictCallback callback,
+      bool did_match_allowlist,
+      std::optional<SafeBrowsingDatabaseManager::
+                        HighConfidenceAllowlistCheckLoggingDetails>
+          logging_details);
+
+  base::WeakPtrFactory<PasswordProtectionService> weak_ptr_factory_{this};
 };
 
 }  // namespace safe_browsing

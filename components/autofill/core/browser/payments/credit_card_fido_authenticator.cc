@@ -6,14 +6,15 @@
 
 #include <memory>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
 #include "base/android/android_info.h"
 #include "base/base64.h"
 #include "base/containers/flat_set.h"
+#include "base/containers/span.h"
 #include "base/strings/string_util.h"
-#include "base/synchronization/waitable_event.h"
 #include "build/build_config.h"
 #include "components/autofill/core/browser/autofill_progress_dialog_type.h"
 #include "components/autofill/core/browser/data_manager/payments/payments_data_manager.h"
@@ -44,11 +45,11 @@ constexpr int kWebAuthnTimeoutMs = 3 * 60 * 1000;  // 3 minutes
 constexpr char kGooglePaymentsRpid[] = "google.com";
 constexpr char kGooglePaymentsRpName[] = "Google Payments";
 
-std::vector<uint8_t> Base64ToBytes(std::string base64) {
+std::vector<uint8_t> Base64ToBytes(std::string_view base64) {
   return base::Base64Decode(base64).value_or(std::vector<uint8_t>());
 }
 
-base::Value BytesToBase64(const std::vector<uint8_t> bytes) {
+base::Value BytesToBase64(base::span<const uint8_t> bytes) {
   return base::Value(base::Base64Encode(bytes));
 }
 }  // namespace
@@ -59,11 +60,7 @@ CreditCardFidoAuthenticator::CreditCardFidoAuthenticator(AutofillDriver* driver,
       autofill_client_(client),
       payments_network_interface_(
           client->GetPaymentsAutofillClient()->GetPaymentsNetworkInterface()),
-      user_is_verifiable_callback_received_(
-          base::WaitableEvent::ResetPolicy::AUTOMATIC,
-          base::WaitableEvent::InitialState::NOT_SIGNALED) {
-  user_is_opted_in_ = IsUserOptedIn();
-}
+      user_is_opted_in_(IsUserOptedIn()) {}
 
 CreditCardFidoAuthenticator::~CreditCardFidoAuthenticator() {
   UpdateUserPref();

@@ -173,9 +173,9 @@ void PermissionServiceImpl::RegisterPageEmbeddedPermissionControl(
       web_contents->GetPrimaryPage());
   std::set<PermissionName> permission_names;
   for (const auto& permission : permissions) {
-    // Ensure all requested permissions are device permissions and check for
-    // duplicates.
-    if (!PermissionUtil::IsDevicePermission(permission) ||
+    // Check for duplicates, and ensure we're only handling permission types
+    // which can be accessed through embedded controls:
+    if (PermissionUtil::IsEmbeddablePermission(permission) &&
         !permission_names.insert(permission->name).second) {
       ReceivedBadMessage();
       return;
@@ -207,7 +207,11 @@ void PermissionServiceImpl::OnPageEmbeddedPermissionControlRegistered(
   std::vector<PermissionStatus> statuses(permissions.size());
   std::ranges::transform(
       permissions, statuses.begin(), [&](const auto& permission) {
-        return this->GetCombinedPermissionAndDeviceResult(permission).status;
+        bool should_include_device_status =
+            PermissionUtil::IsDevicePermission(permission);
+        return should_include_device_status
+                   ? GetCombinedPermissionAndDeviceResult(permission).status
+                   : GetPermissionResultForCurrentContext(permission).status;
       });
   client->OnEmbeddedPermissionControlRegistered(/*allow=*/true,
                                                 std::move(statuses));
@@ -388,11 +392,15 @@ void PermissionServiceImpl::AddPageEmbeddedPermissionObserver(
     ReceivedBadMessage();
     return;
   }
+  bool should_include_device_status =
+      PermissionUtil::IsDevicePermission(permission);
   PermissionResult current_result =
-      GetCombinedPermissionAndDeviceResult(permission);
+      should_include_device_status
+          ? GetCombinedPermissionAndDeviceResult(permission)
+          : GetPermissionResultForCurrentContext(permission);
   context_->CreateSubscription(
       permission, origin_, current_result, PermissionResult(last_known_status),
-      /*should_include_device_status=*/true, std::move(observer));
+      should_include_device_status, std::move(observer));
 }
 
 void PermissionServiceImpl::NotifyEventListener(

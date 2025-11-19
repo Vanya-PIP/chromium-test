@@ -18,6 +18,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.hasDescendant;
 import static androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isEnabled;
+import static androidx.test.espresso.matcher.ViewMatchers.isSelected;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
@@ -141,7 +142,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
         onData(anything()).inRoot(isDialog()).atPosition(1).perform(click());
         itemClickCallbackHelper.waitForCallback(itemClickCount);
@@ -168,7 +170,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Verify "Open" button is disabled before a selection is made.
@@ -221,7 +224,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Verify active list is showing when the menu is initially displayed.
@@ -276,7 +280,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
         onView(withId(R.id.active_instance_list)).inRoot(isDialog()).check(matches(isDisplayed()));
         // Switch to inactive list.
@@ -331,7 +336,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
         onView(withId(R.id.active_instance_list)).inRoot(isDialog()).check(matches(isDisplayed()));
         // Switch to inactive list.
@@ -383,7 +389,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Verify that the active list is showing when the menu is initially displayed.
@@ -434,7 +441,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         onView(withId(R.id.active_instance_list)).inRoot(isDialog()).check(matches(isDisplayed()));
@@ -468,7 +476,22 @@ public class InstanceSwitcherCoordinatorTest {
 
     @Test
     @SmallTest
-    public void testNewWindow() throws Exception {
+    public void testNewRegularWindow() throws Exception {
+        testNewWindow(/* isIncognitoWindow= */ false, R.string.menu_new_window);
+    }
+
+    @Test
+    @SmallTest
+    @EnableFeatures({
+        ChromeFeatureList.ANDROID_OPEN_INCOGNITO_AS_WINDOW,
+        ChromeFeatureList.INSTANCE_SWITCHER_V2,
+        ChromeFeatureList.ROBUST_WINDOW_MANAGEMENT
+    })
+    public void testNewIncognitoWindow() throws Exception {
+        testNewWindow(/* isIncognitoWindow= */ true, R.string.menu_new_incognito_window);
+    }
+
+    private void testNewWindow(boolean isIncognitoWindow, int stringId) throws Exception {
         InstanceInfo[] instances =
                 createPersistedInstances(
                         /* numActiveInstances= */ 3, /* numInactiveInstances= */ 0);
@@ -485,10 +508,15 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             itemClickCallbackHelper::notifyCalled,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            isIncognitoWindow);
                 });
+
         // 0 ~ 2: instances. 3: 'new window' command.
-        onData(anything()).inRoot(isDialog()).atPosition(3).perform(click());
+        onView(withId(R.id.new_window))
+                .inRoot(isDialog())
+                .check(matches(hasDescendant(withText(stringId))))
+                .perform(click());
         itemClickCallbackHelper.waitForCallback(itemClickCount);
     }
 
@@ -512,7 +540,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Verify that we have only [cancel] button.
@@ -554,7 +583,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Verify that we show a info message that users can have up to 5 windows when there are
@@ -598,7 +628,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             newWindowCallbackHelper::notifyCalled,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Verify that we show info message that users can have up to 5 windows when there are more
@@ -661,7 +692,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             newWindowCallbackHelper::notifyCalled,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Verify that we show max info message that users can have up to 5 windows when there are
@@ -751,7 +783,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Verify "Open" button is disabled before a selection is made.
@@ -839,7 +872,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Closing a hidden, tab-less instance skips the confirmation.
@@ -868,7 +902,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         onData(anything())
@@ -912,7 +947,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null,
                             null,
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Verify that the "Current window" string is at position 0.
@@ -970,7 +1006,8 @@ public class InstanceSwitcherCoordinatorTest {
                             renameCallback,
                             null, // newWindowAction
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Click on the 'more' button for the second instance.
@@ -1034,7 +1071,8 @@ public class InstanceSwitcherCoordinatorTest {
                             null, // renameCallback
                             null, // newWindowAction
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         onView(withId(R.id.active_instance_list)).inRoot(isDialog()).check(matches(isDisplayed()));
@@ -1092,7 +1130,8 @@ public class InstanceSwitcherCoordinatorTest {
                             renameCallback,
                             null, // newWindowAction
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Click on the 'more' button for the second instance.
@@ -1157,7 +1196,8 @@ public class InstanceSwitcherCoordinatorTest {
                             renameCallback,
                             null, // newWindowAction
                             MAX_INSTANCE_COUNT,
-                            Arrays.asList(instances));
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
                 });
 
         // Click on the 'more' button for the second instance.
@@ -1184,6 +1224,182 @@ public class InstanceSwitcherCoordinatorTest {
 
         // Check that the rename callback was not called.
         assertEquals(0, renameCallbackHelper.getCallCount());
+    }
+
+    @Test
+    @SmallTest
+    @EnableFeatures({
+        ChromeFeatureList.INSTANCE_SWITCHER_V2,
+        ChromeFeatureList.ROBUST_WINDOW_MANAGEMENT
+    })
+    public void testMultiSelectInactiveWindows_robustWindowManagement() throws Exception {
+        // Initialize instance list with 2 active instances and 3 inactive instances.
+        InstanceInfo[] instances =
+                createPersistedInstances(
+                        /* numActiveInstances= */ 2, /* numInactiveInstances= */ 3);
+        ThreadUtils.runOnUiThreadBlocking(
+                () -> {
+                    InstanceSwitcherCoordinator.showDialog(
+                            mActivityTestRule.getActivity(),
+                            mModalDialogManager,
+                            mIconBridge,
+                            null, // openCallback
+                            null, // closeCallback
+                            null, // renameCallback
+                            null, // newWindowAction
+                            MAX_INSTANCE_COUNT,
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
+                });
+
+        onView(withId(R.id.active_instance_list)).inRoot(isDialog()).check(matches(isDisplayed()));
+        // Switch to inactive list.
+        onView(allOf(withText("Inactive (3)"), isDescendantOfA(withId(R.id.tabs))))
+                .perform(click());
+
+        // Verify "Restore" button is disabled before a selection is made.
+        onView(allOf(withId(R.id.positive_button), withText(R.string.restore)))
+                .inRoot(isDialog())
+                .check(matches(not(isEnabled())));
+
+        // Select the first item.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .perform(actionOnItemAtPosition(0, click()));
+
+        // Verify "Restore" button is now enabled.
+        onView(allOf(withId(R.id.positive_button), withText(R.string.restore)))
+                .inRoot(isDialog())
+                .check(matches(isEnabled()));
+
+        // Verify the first item is selected.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, isSelected())));
+
+        // Verify the close buttons are enabled.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, hasDescendant(allOf(withId(R.id.close_button), isEnabled())))))
+                .check(matches(atPosition(1, hasDescendant(allOf(withId(R.id.close_button), isEnabled())))));
+
+        // Select the second item.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .perform(actionOnItemAtPosition(1, click()));
+
+        // Verify "Restore" button is now disabled because more than one item is selected.
+        onView(allOf(withId(R.id.positive_button), withText(R.string.restore)))
+                .inRoot(isDialog())
+                .check(matches(not(isEnabled())));
+
+        // Verify both items are selected.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, isSelected())))
+                .check(matches(atPosition(1, isSelected())));
+
+        // Verify the close buttons are disabled.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, hasDescendant(allOf(withId(R.id.close_button), not(isEnabled()))))))
+                .check(matches(atPosition(1, hasDescendant(allOf(withId(R.id.close_button), not(isEnabled()))))));
+
+        // Deselect the first item.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .perform(actionOnItemAtPosition(0, click()));
+
+        // Verify "Restore" button is enabled again as only one item is selected.
+        onView(allOf(withId(R.id.positive_button), withText(R.string.restore)))
+                .inRoot(isDialog())
+                .check(matches(isEnabled()));
+
+        // Verify the first item is not selected, and the second one is.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, not(isSelected()))))
+                .check(matches(atPosition(1, isSelected())));
+
+        // Verify the close buttons are enabled again.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, hasDescendant(allOf(withId(R.id.close_button), isEnabled())))))
+                .check(matches(atPosition(1, hasDescendant(allOf(withId(R.id.close_button), isEnabled())))));
+    }
+
+    @Test
+    @SmallTest
+    @EnableFeatures(ChromeFeatureList.INSTANCE_SWITCHER_V2)
+    public void testSingleSelectInactiveWindows_noRobustWindowManagement() throws Exception {
+        // Initialize instance list with 2 active instances and 3 inactive instances.
+        InstanceInfo[] instances =
+                createPersistedInstances(
+                        /* numActiveInstances= */ 2, /* numInactiveInstances= */ 3);
+        ThreadUtils.runOnUiThreadBlocking(
+                () -> {
+                    InstanceSwitcherCoordinator.showDialog(
+                            mActivityTestRule.getActivity(),
+                            mModalDialogManager,
+                            mIconBridge,
+                            null, // openCallback
+                            null, // closeCallback
+                            null, // renameCallback
+                            null, // newWindowAction
+                            MAX_INSTANCE_COUNT,
+                            Arrays.asList(instances),
+                            /* isIncognitoWindow= */ false);
+                });
+        onView(withId(R.id.active_instance_list)).inRoot(isDialog()).check(matches(isDisplayed()));
+        // Switch to inactive list.
+        onView(allOf(withText("Inactive (3)"), isDescendantOfA(withId(R.id.tabs))))
+                .perform(click());
+
+        // Verify "Restore" button is disabled before a selection is made.
+        onView(allOf(withId(R.id.positive_button), withText(R.string.restore)))
+                .inRoot(isDialog())
+                .check(matches(not(isEnabled())));
+
+        // Select the first item.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .perform(actionOnItemAtPosition(0, click()));
+
+        // Verify "Restore" button is now enabled.
+        onView(allOf(withId(R.id.positive_button), withText(R.string.restore)))
+                .inRoot(isDialog())
+                .check(matches(isEnabled()));
+
+        // Verify the first item is selected.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, isSelected())));
+
+        // Verify close button is enabled.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, hasDescendant(allOf(withId(R.id.close_button), isEnabled())))));
+
+        // Select the second item.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .perform(actionOnItemAtPosition(1, click()));
+
+        // Verify "Restore" button is still enabled.
+        onView(allOf(withId(R.id.positive_button), withText(R.string.restore)))
+                .inRoot(isDialog())
+                .check(matches(isEnabled()));
+
+        // Verify the second item is selected, and the first one is not.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, not(isSelected()))))
+                .check(matches(atPosition(1, isSelected())));
+
+        // Verify close button is still enabled.
+        onView(withId(R.id.inactive_instance_list))
+                .inRoot(isDialog())
+                .check(matches(atPosition(0, hasDescendant(allOf(withId(R.id.close_button), isEnabled())))));
     }
 
     private InstanceInfo[] createPersistedInstances(

@@ -15,7 +15,6 @@ import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.Acces
 import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.AccessibilityActionCompat.ACTION_EXPAND;
 import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.AccessibilityActionCompat.ACTION_FOCUS;
 import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.AccessibilityActionCompat.ACTION_IME_ENTER;
-import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.AccessibilityActionCompat.ACTION_LONG_CLICK;
 import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.AccessibilityActionCompat.ACTION_NEXT_AT_MOVEMENT_GRANULARITY;
 import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.AccessibilityActionCompat.ACTION_NEXT_HTML_ELEMENT;
 import static androidx.core.view.accessibility.AccessibilityNodeInfoCompat.AccessibilityActionCompat.ACTION_PAGE_DOWN;
@@ -265,13 +264,6 @@ public class AccessibilityNodeInfoBuilder {
         node.addAction(ACTION_SHOW_ON_SCREEN);
         node.addAction(ACTION_CONTEXT_CLICK);
 
-        // We choose to not add ACTION_LONG_CLICK to nodes to prevent verbose utterances, unless
-        // the relevant experiment is enabled.
-        if (ContentFeatureMap.isEnabled(
-                ContentFeatureList.ACCESSIBILITY_INCLUDE_LONG_CLICK_ACTION)) {
-            node.addAction(ACTION_LONG_CLICK);
-        }
-
         if (hasNonEmptyInnerText) {
             node.addAction(ACTION_NEXT_AT_MOVEMENT_GRANULARITY);
             node.addAction(ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY);
@@ -494,6 +486,18 @@ public class AccessibilityNodeInfoBuilder {
             node.setContentDescription(computedText);
         } else {
             node.setText(computedText);
+
+            // Though actions are generally set elsewhere, we make an exception here in order to
+            // stay consistent with when we supply `text` on a node. In these cases, we can
+            // confidently state there is text selection available via
+            // WebContentsAccessibilityAndroid::SetSelection.
+            if (computedText.length() > 0
+                    && ContentFeatureMap.isEnabled(
+                            ContentFeatureList
+                                    .ACCESSIBILITY_SET_SELECTABLE_ON_ALL_NODES_WITH_TEXT)) {
+                node.addAction(ACTION_SET_SELECTION);
+                node.setTextSelectable(true);
+            }
         }
 
         recordTimeToCreateSpannables(now);

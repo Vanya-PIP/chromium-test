@@ -2,7 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#import "ios/chrome/common/ui/confirmation_alert/constants.h"
 #import "ios/chrome/test/earl_grey/chrome_coordinator_app_interface.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey_ui.h"
@@ -34,12 +33,10 @@
 
 // Taps the secondary action button on a ConfirmationAlertViewController.
 - (void)tapConfirmationAlertSecondaryButton {
-  [[EarlGrey
-      selectElementWithMatcher:
-          grey_allOf(
-              grey_accessibilityID(
-                  kConfirmationAlertSecondaryActionAccessibilityIdentifier),
-              grey_sufficientlyVisible(), nil)] performAction:grey_tap()];
+  [[EarlGrey selectElementWithMatcher:
+                 grey_allOf(chrome_test_util::ButtonStackSecondaryButton(),
+                            grey_sufficientlyVisible(), nil)]
+      performAction:grey_tap()];
 }
 
 #pragma mark - Tests

@@ -11,8 +11,15 @@
 #include "base/containers/flat_map.h"
 #include "base/files/file_enumerator.h"
 #include "base/files/file_path.h"
+<<<<<<< HEAD
 #include "base/files/file_util.h"
 #include "base/test"
+||||||| b30439823e517
+#include "base/files/file_util.h"
+#include "base/logging.h"
+=======
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "base/version.h"
 #include "components/component_updater/component_updater_service.h"
 

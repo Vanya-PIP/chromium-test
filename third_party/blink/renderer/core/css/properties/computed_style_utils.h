@@ -247,6 +247,14 @@ class CORE_EXPORT ComputedStyleUtils {
       const ComputedStyle& style);
   static CSSValue* ValueForTimelineTriggerTimelineList(const CSSAnimationData*,
                                                        const ComputedStyle&);
+  static CSSValue* ValueForAnimationName(const AtomicString&);
+  static CSSValue* ValueForAnimationNameList(const CSSAnimationData*,
+                                             const ComputedStyle&);
+  static bool AnimationNameIsTimingFunction(const AtomicString&);
+  static bool AnimationNameIsFillMode(const AtomicString&);
+  static bool AnimationNameIsDirection(const AtomicString&);
+  static bool AnimationNameIsPlayState(const AtomicString&);
+
   static CSSValueList* ValuesForBorderRadiusCorner(const LengthSize&,
                                                    const ComputedStyle&);
   static CSSValue* ValueForBorderRadiusCorner(const LengthSize&,
@@ -343,6 +351,13 @@ class CORE_EXPORT ComputedStyleUtils {
                                                   const LayoutObject*,
                                                   bool allow_visited_style,
                                                   CSSValuePhase value_phase);
+  static CSSValueList* ValuesForGapDecorationRuleOutsetShorthand(
+      const StylePropertyShorthand&,
+      const ComputedStyle&,
+      const LayoutObject*,
+      bool allow_visited_style,
+      CSSValuePhase value_phase,
+      CSSGapDecorationPropertyDirection direction);
   static CSSValueList* ValueForGapDecorationRuleShorthand(
       const StylePropertyShorthand&,
       const ComputedStyle&,
@@ -371,6 +386,13 @@ class CORE_EXPORT ComputedStyleUtils {
                                                   bool allow_visited_style,
                                                   CSSValuePhase value_phase);
   static CSSValueList* ValuesForGridTemplateShorthand(
+      const StylePropertyShorthand&,
+      const ComputedStyle&,
+      const LayoutObject*,
+      bool allow_visited_style,
+      CSSValuePhase value_phase);
+
+  static const CSSValue* ValuesForBidirectionalGapRuleOutsetShorthand(
       const StylePropertyShorthand&,
       const ComputedStyle&,
       const LayoutObject*,

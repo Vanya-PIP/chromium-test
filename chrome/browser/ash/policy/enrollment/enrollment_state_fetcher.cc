@@ -864,6 +864,7 @@ class EnrollmentStateFetcherImpl::Sequence {
       // Skip enrollment if serial number or brand code are missing.
       // This is expected to happen for prototype devices, for instance.
       // See crbug.com/376581659.
+      LOG(WARNING) << "Serial number or brand code are missing";
       return ReportResult(AutoEnrollmentResult::kNoEnrollment);
     }
 
@@ -878,11 +879,6 @@ class EnrollmentStateFetcherImpl::Sequence {
     ReportStepDurationAndResetTimer(kUMASuffixOwnershipCheck);
     base::UmaHistogramEnumeration(kUMAStateDeterminationOwnershipStatus,
                                   status);
-    if (local_state_->GetBoolean(prefs::kEnrollmentRecoveryRequired)) {
-      base::UmaHistogramEnumeration(
-          kUMAStateDeterminationOwnershipStatusDuringEnrollmentRecovery,
-          status);
-    }
     if (status ==
         ash::DeviceSettingsService::OwnershipStatus::kOwnershipUnknown) {
       LOG(ERROR) << "Device ownership is unknown. Skipping enrollment";

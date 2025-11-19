@@ -12,7 +12,6 @@
 #include "base/command_line.h"
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
-#include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/lazy_instance.h"
 #include "base/location.h"
@@ -156,6 +155,10 @@
 #include "ui/views/views_delegate.h"
 #include "ui/views/widget/widget.h"
 #endif
+
+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
+#include "chrome/browser/ui/ui_features.h"
+#endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 
 namespace {
 
@@ -356,6 +359,10 @@ void InProcessBrowserTest::Initialize() {
   disabled_features.push_back(
       extensions_features::kExtensionDisableUnsupportedDeveloper);
 
+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
+  // Disable session restore infobar the experiment as it causes test failures.
+  disabled_features.push_back(features::kSessionRestoreInfobar);
+#endif
   // In-product help can conflict with tests' expected window activation and
   // focus. Individual tests can re-enable IPH.
   block_all_iph_feature_list_.InitWithNoFeaturesAllowed();

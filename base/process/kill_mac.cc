@@ -10,7 +10,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
 #include "base/test"
 #include "base/posix/eintr_wrapper.h"

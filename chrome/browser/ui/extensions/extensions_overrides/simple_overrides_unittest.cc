@@ -9,8 +9,15 @@
 
 #include "base/containers/contains.h"
 #include "base/files/file_path.h"
+<<<<<<< HEAD
 #include "base/files/file_util.h"
 #include "base/test"
+||||||| b30439823e517
+#include "base/files/file_util.h"
+#include "base/logging.h"
+=======
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "base/path_service.h"
 #include "base/strings/string_split.h"
 #include "chrome/common/extensions/api/omnibox.h"

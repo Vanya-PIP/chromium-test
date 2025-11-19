@@ -10,7 +10,7 @@ import("//build/config/python.gni")
 import("//build/config/ui.gni")
 import("//build/nocompile.gni")
 import("//build/toolchain/toolchain.gni")
-import("//content/common/features.gni")
+import("//content/public/common/features.gni")
 import("//media/media_options.gni")
 import("//printing/buildflags/buildflags.gni")
 import("//testing/libfuzzer/fuzzer_test.gni")
@@ -240,6 +240,20 @@ blink_python_runner("make_deprecation_info") {
   ]
 }
 
+rust_static_library("xml_ffi") {
+  allow_unsafe = true  # Needed for FFI that underpins the `cxx` crate.
+  crate_root = "xml/parser/xml_ffi.rs"
+  sources = [
+    "xml/parser/entities.rs",
+    crate_root,
+  ]
+  cxx_bindings = [ crate_root ]
+  deps = [
+    "//third_party/rust/cxx/v1:lib",
+    "//third_party/rust/xml/v1:lib",
+  ]
+}
+
 component("core") {
   output_name = "blink_core"
 
@@ -389,6 +403,7 @@ component("core") {
   deps = [
     ":generate_eventhandler_names",
     ":make_deprecation_info",
+    ":xml_ffi",
     "//base",
     "//components/attribution_reporting",
     "//components/attribution_reporting:mojom_blink",
@@ -1519,6 +1534,7 @@ source_set("unit_tests") {
   deps = [
     ":core",
     ":element_locator_proto",
+    ":fuzztest_utils",
     ":unit_test_support",
     "//cc",
     "//components/autofill/core/common:features",
@@ -1720,6 +1736,41 @@ source_set("unit_test_support") {
     "//third_party/blink/renderer/platform/testing/data/third_party/Noto/NotoNaskhArabic-regular.woff2",
     "//third_party/blink/web_tests/external/wpt/fonts/mplus-1p-regular.woff",
   ]
+}
+
+source_set("fuzztest_utils") {
+  testonly = true
+
+  sources = [
+    "testing/fuzztest_utils/common_domains.cc",
+    "testing/fuzztest_utils/common_domains.h",
+    "testing/fuzztest_utils/css_domains.cc",
+    "testing/fuzztest_utils/css_domains.h",
+    "testing/fuzztest_utils/dom_scenario.cc",
+    "testing/fuzztest_utils/dom_scenario.h",
+    "testing/fuzztest_utils/dom_scenario_runner.cc",
+    "testing/fuzztest_utils/dom_scenario_runner.h",
+    "testing/fuzztest_utils/html_domains.cc",
+    "testing/fuzztest_utils/html_domains.h",
+    "testing/fuzztest_utils/mathml_domains.cc",
+    "testing/fuzztest_utils/mathml_domains.h",
+    "testing/fuzztest_utils/svg_domains.cc",
+    "testing/fuzztest_utils/svg_domains.h",
+  ]
+
+  configs += [
+    ":blink_core_pch",
+    "//third_party/blink/renderer:config",
+    "//third_party/blink/renderer:inside_blink",
+  ]
+
+  deps = [
+    ":core",
+    ":unit_test_support",
+    "//testing/gtest",
+  ]
+
+  public_deps = [ "//third_party/fuzztest" ]
 }
 
 # Fuzzer for blink::StyleSheetContents

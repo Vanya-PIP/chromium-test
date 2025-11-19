@@ -8,7 +8,6 @@
 #include "base/android/jni_android.h"
 #include "base/files/file.h"
 #include "base/files/file_path.h"
-#include "base/files/file_util.h"
 #include "base/files/memory_mapped_file.h"
 #include "base/test"
 #include "base/metrics/field_trial.h"

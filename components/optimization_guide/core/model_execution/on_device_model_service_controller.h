@@ -16,7 +16,6 @@
 #include "base/functional/callback_forward.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
-#include "base/memory/ref_counted.h"
 #include "base/memory/safe_ref.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/weak_ptr.h"
@@ -95,6 +94,7 @@ class OnDeviceModelServiceController final {
   // context, executing input, and sending the response.
   std::unique_ptr<OnDeviceSession> CreateSession(
       ModelBasedCapabilityKey feature,
+      base::WeakPtr<OptimizationGuideLogger> logger,
       const SessionConfigParams& config_params);
 
   // Sets the language detection model to be used by the ODM service when text

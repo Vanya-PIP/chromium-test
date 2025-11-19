@@ -46,6 +46,7 @@
 #include "gpu/command_buffer/service/sync_point_manager.h"
 #include "gpu/config/gpu_finch_features.h"
 #include "gpu/config/gpu_info_collector.h"
+#include "gpu/config/gpu_preferences.h"
 #include "gpu/config/gpu_switches.h"
 #include "gpu/config/gpu_util.h"
 #include "gpu/ipc/common/gpu_client_ids.h"
@@ -224,9 +225,17 @@ GpuServiceImpl::GpuServiceImpl(
       // outlives the DawnContextProvider.
       std::unique_ptr<gpu::webgpu::DawnCachingInterface> caching_interface;
       if (features::kSkiaGraphiteDawnUsePersistentCache.Get()) {
+        gpu::GpuPersistentCache::AsyncDiskWriteOpts async_opts;
+        async_opts.task_runner =
+            base::ThreadPool::CreateSequencedTaskRunner(
+                {base::MayBlock(), base::TaskPriority::BEST_EFFORT,
+                 base::TaskShutdownBehavior::CONTINUE_ON_SHUTDOWN});
+        async_opts.max_pending_bytes_to_write =
+            gpu::GetDefaultGpuDiskCacheSize();
         caching_interface = dawn_caching_interface_factory_->CreateInstance(
             gpu::kGraphiteDawnGpuDiskCacheHandle,
-            std::make_unique<gpu::GpuPersistentCache>("GraphiteDawn"));
+            std::make_unique<gpu::GpuPersistentCache>("GraphiteDawn",
+                                                      std::move(async_opts)));
       } else {
         auto cache_blob_callback = base::BindRepeating(
             [](GpuServiceImpl* self, const std::string& key,
@@ -649,7 +658,7 @@ void GpuServiceImpl::BindWebNNContextProvider(
         std::move(shared_context_state), gpu_feature_info_, gpu_info_,
         shared_image_manager(),
         base::BindOnce(&GpuServiceImpl::LoseAllContexts, weak_ptr_),
-        main_runner(), GetGpuScheduler(), client_id);
+        main_runner(), GetGpuScheduler(), client_id, gpu_host_);
   }
 
   webnn_context_provider_->BindWebNNContextProvider(
@@ -1237,8 +1246,7 @@ bool GpuServiceImpl::IsGMBNV12Supported() {
                                vulkan_context_provider()
                                    ? vulkan_context_provider()->GetDeviceQueue()
                                    : nullptr,
-                               size, SharedImageFormatToBufferFormat(format),
-                               buffer_usage, size);
+                               size, format, buffer_usage, size);
   if (!pixmap.get() || pixmap->ExportHandle().planes.empty()) {
     return false;
   }

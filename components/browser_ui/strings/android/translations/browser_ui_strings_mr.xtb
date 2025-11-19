@@ -33,6 +33,7 @@
 <translation id="1409338233051621926">अ‍ॅप्सवर, त्यानंतर डीफॉल्ट अ‍ॅप्सवर टॅप करा</translation>
 <translation id="1415402041810619267">URL कापली गेली</translation>
 <translation id="1415855080660575082">Chrome ला तुमचे अलीकडील टॅब तुमच्या डिव्हाइसच्या ॲप सूचीमध्ये आणि शोध परिणामांमध्ये पाहण्यासाठी ते तुमच्या डिव्हाइससह शेअर करू द्या. तुम्ही हे Chrome सेटिंग्जमध्ये सुरू किंवा बंद करू शकता.</translation>
+<translation id="1420688843103859429">टचपॅडवर दोन बोटांनी स्वाइप करून मागे व पुढे नेव्हिगेट करा</translation>
 <translation id="1432650420699700107">साइट तुमच्या स्थानिक नेटवर्कवरील कोणत्याही डिव्हाइससोबत कनेक्ट करण्याची विनंती करू शकतात</translation>
 <translation id="1448064542941920355">झूम कमी करते</translation>
 <translation id="1464044141348608623">तुम्ही तुमचे डिव्हाइस सक्रियपणे केव्हा वापरता हे साइटना जाणून घेण्याची अनुमती देऊ नका</translation>
@@ -202,6 +203,7 @@
 <translation id="3123473560110926937">काही साइटवर ब्लॉक केले आहे</translation>
 <translation id="3132996321662585180">दररोज रिफ्रेश करा</translation>
 <translation id="3143754809889689516">सुरवातीपासून प्ले करा</translation>
+<translation id="3164169438034704658">तुम्ही <ph name="BEGIN_LINK" />Android सेटिंग्ज<ph name="END_LINK" /> मध्ये अचूक स्थान सुरू करू शकता.</translation>
 <translation id="3165022941318558018">साइटला तृतीय पक्ष कुकी वापरण्याची अनुमती द्या</translation>
 <translation id="3167868116600277716">Discover फीड</translation>
 <translation id="3198916472715691905"><ph name="STORAGE_AMOUNT" /> संचयित केलेला डेटा</translation>
@@ -432,6 +434,7 @@
 <translation id="5750869797196646528">हँड ट्रॅकिंग</translation>
 <translation id="5753570386948603678">इतिहासामधून हटवा</translation>
 <translation id="5771720122942595109"><ph name="PERMISSION_1" /> ला ब्लॉक केले</translation>
+<translation id="5792627621688759634">टचपॅड वापरून पेजदरम्यान स्‍वाइप करा</translation>
 <translation id="5801457289562671820">तुमच्या संस्थेने शिफारस केलेले</translation>
 <translation id="5804241973901381774">परवानग्या</translation>
 <translation id="5822675474983796325">तुमच्या नवीन टॅब पेजच्या तळाशी असलेली शीट कस्टमाइझ करा हे पूर्ण उंचीवर उघडले आहे</translation>
@@ -540,6 +543,7 @@
 <translation id="6965382102122355670">ठीक आहे</translation>
 <translation id="6980861169612950611">साइट डेटा हटवायचा आहे का? <ph name="SITE_NAME" /></translation>
 <translation id="6981982820502123353">ॲक्सेसिबिलिटी</translation>
+<translation id="6991142177939282156">अनुमती दिली आहे • अंदाजे वापरत आहे</translation>
 <translation id="6992289844737586249">साइटना तुमचा मायक्रोफोन वापरण्याची अनुमती देण्यापूर्वी प्रथम विचारा (शिफारस केलेले)</translation>
 <translation id="7000754031042624318">Android सेटिंग्जमध्‍ये बंद केले</translation>
 <translation id="702275896380648118">ही साइट तुमच्या पसंतीच्या गोष्टी निर्धारित करते आणि इतर साइटना जाहिराती सुचवते. तुम्हाला आणखी उपयुक्त जाहिराती दाखवण्यासाठी, ही साइट Chrome मधून तुमचे जाहिरातीचे विषयदेखील मिळवते.</translation>
@@ -650,6 +654,7 @@
 <translation id="8261506727792406068">हटवा</translation>
 <translation id="8284326494547611709">मथळे</translation>
 <translation id="8300705686683892304">ॲपद्वारे व्यवस्थापित</translation>
+<translation id="8301363963630676147">या वेळी अनुमती दिली आहे • अंदाजे वापरत आहे</translation>
 <translation id="8315509175050791576">टॅब शेअर करत आहे</translation>
 <translation id="8324158725704657629">पुन्हा विचारू नका</translation>
 <translation id="8362795839483915693">तुम्ही भेट देता त्या साइटवर झूम इन किंवा आउट करू शकता</translation>

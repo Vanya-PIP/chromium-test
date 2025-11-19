@@ -27,12 +27,10 @@ OpenXrCompositionLayer::Type OpenXrCompositionLayer::GetTypeFromMojomData(
 }
 
 OpenXrCompositionLayer::OpenXrCompositionLayer(
-    XrSpace space,
     mojom::XRCompositionLayerDataPtr layer_data,
     OpenXrGraphicsBinding* graphics_binding,
     std::unique_ptr<GraphicsBindingData> graphics_binding_data)
-    : space_(space),
-      graphics_binding_(graphics_binding),
+    : graphics_binding_(graphics_binding),
       graphics_binding_data_(std::move(graphics_binding_data)),
       creation_data_(std::move(layer_data)) {
   type_ = GetTypeFromMojomData(*creation_data_->mutable_data->layer_data);
@@ -96,6 +94,9 @@ XrResult OpenXrCompositionLayer::CreateSwapchain(XrSession session,
   swapchain_create_info.arraySize = 1;
   swapchain_create_info.format = graphics_binding_->GetSwapchainFormat(session);
 
+  swapchain_create_info.createFlags = creation_data_->read_only_data->is_static
+                                          ? XR_SWAPCHAIN_CREATE_STATIC_IMAGE_BIT
+                                          : 0;
   swapchain_create_info.width = swapchain_image_size_.width();
   swapchain_create_info.height = swapchain_image_size_.height();
   swapchain_create_info.mipCount = 1;
@@ -108,6 +109,7 @@ XrResult OpenXrCompositionLayer::CreateSwapchain(XrSession session,
       xrCreateSwapchain(session, &swapchain_create_info, &color_swapchain));
 
   color_swapchain_ = color_swapchain;
+  needs_redraw_ = true;
 
   RETURN_IF_XR_FAILED(graphics_binding_->EnumerateSwapchainImages(*this));
 
@@ -117,6 +119,10 @@ XrResult OpenXrCompositionLayer::CreateSwapchain(XrSession session,
 void OpenXrCompositionLayer::DestroySwapchain(gpu::SharedImageInterface* sii) {
   // In case we still hold an active swapchain image.
   ReleaseActiveSwapchainImage();
+
+  // Reset rendered state.
+  needs_redraw_ = false;
+  is_rendered_ = false;
 
   // As long as we have a context provider we need to destroy any SharedImages
   // that may exist.
@@ -150,6 +156,8 @@ XrResult OpenXrCompositionLayer::ActivateSwapchainImage(
   RETURN_IF_XR_FAILED(xrWaitSwapchainImage(color_swapchain_, &wait_info));
 
   has_active_swapchain_image_ = true;
+  // The current active swapchain image has not yet been rendered.
+  is_rendered_ = false;
   graphics_binding_->OnSwapchainImageActivated(*this, sii);
   return XR_SUCCESS;
 }
@@ -190,10 +198,8 @@ LayerId OpenXrCompositionLayer::GetLayerId() const {
 }
 
 void OpenXrCompositionLayer::UpdateMutableLayerData(
-    XrSpace space,
     mojom::XRLayerMutableDataPtr data) {
   CHECK_EQ(type_, GetTypeFromMojomData(*data->layer_data));
-  space_ = space;
   creation_data_->mutable_data = std::move(data);
 }
 

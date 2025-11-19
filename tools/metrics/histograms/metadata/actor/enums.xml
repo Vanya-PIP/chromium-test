@@ -55,6 +55,8 @@ chromium-metrics-reviews@google.com.
   <int value="34" label="kFilePickerTriggered"/>
   <int value="35" label="kFilePickerConfirmed"/>
   <int value="36" label="kFilePickerCancelled"/>
+  <int value="37" label="ExecutionEngineExistingAction"/>
+  <int value="38" label="ExternalProtocolNavigationBlocked"/>
   <int value="100" label="NavigateInvalidUrl"/>
   <int value="200" label="ClickSuppressed"/>
   <int value="300" label="DragAndReleaseFromOffscreen"/>
@@ -116,6 +118,17 @@ chromium-metrics-reviews@google.com.
 </enum>
 
 <!-- LINT.ThenChange(//chrome/browser/actor/ui/event_dispatcher.h:ComputedTargetResult) -->
+
+<!-- LINT.IfChange(GatingDecision) -->
+
+<enum name="GatingDecision">
+  <int value="0" label="kAllowSameOrigin"/>
+  <int value="1" label="kAllowByStaticList"/>
+  <int value="2" label="kBlockByStaticList"/>
+  <int value="3" label="kNeedsAsyncCheck"/>
+</enum>
+
+<!-- LINT.ThenChange(//chrome/browser/actor/execution_engine.h:GatingDecision) -->
 
 <!-- LINT.IfChange(GetDomNodeResult) -->
 

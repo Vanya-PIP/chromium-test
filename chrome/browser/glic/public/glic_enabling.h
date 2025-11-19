@@ -99,6 +99,14 @@ class GlicEnabling : public signin::IdentityManager::Observer {
   // Whether the FRE screen is displayed in the same window as the chat app.
   static bool IsUnifiedFreEnabled(Profile* profile);
 
+  // Whether the required feature flags for multi-instance - kGlicMultiInstance,
+  // kGlicMultiTab, and kGlicMultitabUnderlines - are enabled.
+  static bool IsMultiInstanceEnabledByFlags();
+
+  // Returns true if glic is enabled for the profile, the feature is enabled,
+  // and the account is non-enterprise (or for glic dev).
+  static bool IsShareImageEnabledForProfile(Profile* profile);
+
   struct ProfileEnablement {
     // These conditions are checked first and may prevent following checks from
     // occurring.

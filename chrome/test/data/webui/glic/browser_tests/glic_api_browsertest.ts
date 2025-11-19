@@ -97,6 +97,24 @@ class ApiTests extends ApiTestFixtureBase {
     this.host.setAudioDucking(false);
   }
 
+  async testPopupOpens() {
+    const link = document.createElement('a');
+    link.setAttribute('href', 'https://www.chromium.org');
+
+    // Attach a click listener to force opening as a popup with specific
+    // dimensions. Including features like width/height forces a new window
+    // instead of a tab.
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open(
+          link.getAttribute('href')!, 'popup_window',
+          'width=500,height=500,scrollbars=yes,resizable=yes');
+    });
+
+    document.body.appendChild(link);
+    link.click();
+  }
+
   async testCreateTabByClickingOnLinkDaisyChains() {
     assertDefined(this.host.getFocusedTabStateV2);
     assertDefined(this.host.getPinnedTabs);
@@ -180,6 +198,65 @@ class ApiTests extends ApiTestFixtureBase {
     // this.host.attachPanel();
     // await panelStates.waitFor(state => state.kind ===
     //    PanelStateKind.ATTACHED);
+  }
+
+  async testCanAttachPanelSidePanel() {
+    assertDefined(this.host.getPanelState);
+    assertDefined(this.host.canAttachPanel);
+
+    const panelStates = observeSequence(this.host.getPanelState());
+    await panelStates.waitFor(state => state.kind === PanelStateKind.ATTACHED);
+
+    await observeSequence(this.host.canAttachPanel()).waitForValue(false);
+  }
+
+  async testCanAttachPanelDetached() {
+    assertDefined(this.host.getPanelState);
+    assertDefined(this.host.detachPanel);
+    assertDefined(this.host.canAttachPanel);
+
+    const panelStates = observeSequence(this.host.getPanelState());
+    await panelStates.waitFor(state => state.kind === PanelStateKind.ATTACHED);
+
+    this.host.detachPanel();
+    await panelStates.waitFor(state => state.kind === PanelStateKind.DETACHED);
+
+    await observeSequence(this.host.canAttachPanel()).waitForValue(true);
+  }
+
+  async testCanAttachPanelDetachedTabClosed() {
+    assertDefined(this.host.getPanelState);
+    assertDefined(this.host.detachPanel);
+    assertDefined(this.host.canAttachPanel);
+
+    const panelStates = observeSequence(this.host.getPanelState());
+    await panelStates.waitFor(state => state.kind === PanelStateKind.ATTACHED);
+
+    this.host.detachPanel();
+    await panelStates.waitFor(state => state.kind === PanelStateKind.DETACHED);
+
+    const canAttachSeq = observeSequence(this.host.canAttachPanel());
+    await canAttachSeq.waitForValue(true);
+
+    // Wait for C++ to close the tab.
+    await this.advanceToNextStep();
+
+    await canAttachSeq.waitForValue(false);
+  }
+
+  async testAttachPanel() {
+    assertDefined(this.host.getPanelState);
+    assertDefined(this.host.detachPanel);
+    assertDefined(this.host.attachPanel);
+
+    const panelStates = observeSequence(this.host.getPanelState());
+    await panelStates.waitFor(state => state.kind === PanelStateKind.ATTACHED);
+
+    this.host.detachPanel();
+    await panelStates.waitFor(state => state.kind === PanelStateKind.DETACHED);
+
+    this.host.attachPanel();
+    await panelStates.waitFor(state => state.kind === PanelStateKind.ATTACHED);
   }
 
   async testMultiplePanelsDetachedAndFloating() {
@@ -2189,6 +2266,45 @@ class ApiTests extends ApiTestFixtureBase {
   async testPanelWillOpenBeforeClientReady() {
     const openData = await observeSequence(this.client.panelOpenData).next();
     assertEquals('test_conversation_id', openData.conversationId);
+  }
+
+  async testPanelWillOpenHasRecentlyActiveConversations() {
+    assertDefined(this.host.registerConversation);
+
+    if (this.testParams === 'instance1') {
+      await this.host.registerConversation(
+          {conversationTitle: 'Title 1', conversationId: 'convo1'});
+    } else if (this.testParams === 'instance2') {
+      await this.host.registerConversation(
+          {conversationTitle: 'Title 2', conversationId: 'convo2'});
+    } else if (this.testParams === 'instance3') {
+      await this.host.registerConversation(
+          {conversationTitle: 'Title 3', conversationId: 'convo3'});
+    } else if (this.testParams === 'instance4') {
+      await this.host.registerConversation(
+          {conversationTitle: 'Title 4', conversationId: 'convo4'});
+    } else if (this.testParams === 'verify') {
+      const openData = await observeSequence(this.client.panelOpenData).next();
+      assertDefined(openData.recentlyActiveConversations);
+      // Expecting convo4, convo2, convo3 (based on activation order in C++
+      // test)
+      assertEquals(3, openData.recentlyActiveConversations.length);
+      assertEquals(
+          'convo4', openData.recentlyActiveConversations[0]?.conversationId);
+      assertEquals(
+          'Title 4',
+          openData.recentlyActiveConversations[0]?.conversationTitle);
+      assertEquals(
+          'convo2', openData.recentlyActiveConversations[1]?.conversationId);
+      assertEquals(
+          'Title 2',
+          openData.recentlyActiveConversations[1]?.conversationTitle);
+      assertEquals(
+          'convo3', openData.recentlyActiveConversations[2]?.conversationId);
+      assertEquals(
+          'Title 3',
+          openData.recentlyActiveConversations[2]?.conversationTitle);
+    }
   }
 
   private async closePanelAndWaitUntilInactive() {

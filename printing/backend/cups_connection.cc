@@ -10,7 +10,14 @@
 #include <string>
 #include <utility>
 
+<<<<<<< HEAD
 #include "base/test"
+||||||| b30439823e517
+#include "base/logging.h"
+=======
+#include "base/check.h"
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "build/build_config.h"
 #include "printing/backend/cups_helper.h"
 #include "printing/backend/cups_jobs.h"

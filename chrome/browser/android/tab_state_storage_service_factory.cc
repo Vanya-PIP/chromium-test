@@ -7,13 +7,52 @@
 #include <memory>
 
 #include "base/android/scoped_java_ref.h"
+#include "chrome/browser/android/restore_id_associator_android.h"
+#include "chrome/browser/android/restore_id_associator_builder_android.h"
+#include "chrome/browser/android/tab_android.h"
+#include "chrome/browser/android/tab_android_conversions.h"
 #include "chrome/browser/android/tab_storage_packager_android.h"
 #include "chrome/browser/flags/android/chrome_feature_list.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/tab/jni_headers/TabStateStorageServiceFactory_jni.h"
+#include "chrome/browser/tab/restore_id_associator.h"
+#include "chrome/browser/tab/restore_id_associator_builder.h"
+#include "chrome/browser/tab/tab_state_storage_service.h"
 #include "chrome/browser/tab/tab_storage_packager.h"
+#include "components/tabs/public/tab_interface.h"
 
 namespace tabs {
+
+namespace {
+
+TabCanonicalizer GetTabCanonicalizer() {
+#if BUILDFLAG(IS_ANDROID)
+  return base::BindRepeating(
+      [](const TabInterface* tab) -> const TabInterface* {
+        return ToTabAndroidChecked(tab);
+      });
+#else
+  return base::BindRepeating([](const TabInterface* tab) { return tab; });
+#endif  // !BUILDFLAG(IS_ANDROID)
+}
+
+AssociatorBuilderFactory GetAssociatorBuilderFactory() {
+#if BUILDFLAG(IS_ANDROID)
+  return base::BindRepeating(
+      [](OnTabAssociation on_tab_assoc,
+         OnCollectionAssociation on_collection_assoc)
+          -> std::unique_ptr<RestoreIdAssociatorBuilder> {
+        return std::make_unique<RestoreIdAssociatorBuilderAndroid>(
+            on_tab_assoc, on_collection_assoc);
+      });
+#else
+  return base::BindRepeating(
+      [](OnTabAssociation, OnCollectionAssociation)
+          -> std::unique_ptr<RestoreIdAssociatorBuilder> { return nullptr; });
+#endif  // !BUILDFLAG(IS_ANDROID)
+}
+
+}  // namespace
 
 static base::android::ScopedJavaLocalRef<jobject>
 JNI_TabStateStorageServiceFactory_GetForProfile(JNIEnv* env, Profile* profile) {
@@ -52,12 +91,6 @@ TabStateStorageServiceFactory::BuildServiceInstanceForBrowserContext(
     content::BrowserContext* context) const {
   DCHECK(context);
 
-  if (!base::FeatureList::IsEnabled(
-          chrome::android::kTabStorageSqlitePrototype) ||
-      !base::FeatureList::IsEnabled(chrome::android::kTabCollectionAndroid)) {
-    return nullptr;
-  }
-
   Profile* profile = static_cast<Profile*>(context);
   std::unique_ptr<TabStateStorageBackend> tab_backend =
       std::make_unique<TabStateStorageBackend>(profile->GetPath());
@@ -65,8 +98,9 @@ TabStateStorageServiceFactory::BuildServiceInstanceForBrowserContext(
 #if BUILDFLAG(IS_ANDROID)
   packager = std::make_unique<TabStoragePackagerAndroid>(profile);
 #endif
-  return std::make_unique<TabStateStorageService>(std::move(tab_backend),
-                                                  std::move(packager));
+  return std::make_unique<TabStateStorageService>(
+      std::move(tab_backend), std::move(packager), GetTabCanonicalizer(),
+      GetAssociatorBuilderFactory());
 }
 
 }  // namespace tabs

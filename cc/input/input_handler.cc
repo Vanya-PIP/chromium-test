@@ -36,6 +36,7 @@
 #include "ui/gfx/geometry/point.h"
 #include "ui/gfx/geometry/point_conversions.h"
 #include "ui/gfx/geometry/point_f.h"
+#include "ui/gfx/geometry/quad_f.h"
 #include "ui/gfx/geometry/vector2d_f.h"
 
 namespace cc {
@@ -2557,10 +2558,8 @@ void InputHandler::ClearAnimatingSnapTargetsForElement(ElementId element_id) {
   SetAnimatingSnapTargetsForElement(element_id);
 }
 
-void InputHandler::EnsureSnapAnimationData(ElementId element_id) {
-  if (!snap_animation_data_map_.contains(element_id)) {
-    snap_animation_data_map_.insert_or_assign(element_id, SnapAnimationData());
-  }
+inline void InputHandler::EnsureSnapAnimationData(ElementId element_id) {
+  snap_animation_data_map_.try_emplace(element_id);
 }
 
 }  // namespace cc

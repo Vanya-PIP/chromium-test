@@ -63,6 +63,7 @@
 #include "components/viz/common/traced_value.h"
 #include "components/viz/common/view_transition_element_resource_id.h"
 #include "ui/gfx/geometry/point_conversions.h"
+#include "ui/gfx/geometry/quad_f.h"
 #include "ui/gfx/geometry/rect_conversions.h"
 #include "ui/gfx/geometry/size_conversions.h"
 #include "ui/gfx/geometry/vector2d_conversions.h"
@@ -2111,8 +2112,8 @@ void LayerTreeImpl::DidAnimateScrollOffset() {
   host_impl_->DidAnimateScrollOffset();
 }
 
-bool LayerTreeImpl::use_gpu_rasterization() const {
-  return host_impl_->use_gpu_rasterization();
+const RasterCapabilities& LayerTreeImpl::raster_caps() const {
+  return host_impl_->raster_caps();
 }
 
 void LayerTreeImpl::SetNeedsRedraw() {

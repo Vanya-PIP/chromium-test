@@ -7,7 +7,6 @@
 #include <optional>
 #include <tuple>
 
-#include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/test"
 #include "base/memory/scoped_refptr.h"

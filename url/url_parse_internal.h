@@ -38,49 +38,27 @@ inline bool ShouldTrimFromURL(char ch) {
   return ShouldTrimFromURL(static_cast<char16_t>(ch));
 }
 
-// Given an already-initialized begin index and length, this shrinks the range
-// to eliminate "should-be-trimmed" characters. Note that the length does *not*
-// indicate the length of untrimmed data from |*begin|, but rather the position
-// in the input string (so the string starts at character |*begin| in the spec,
-// and goes until |*len|).
-template<typename CHAR>
-inline void TrimURL(const CHAR* spec, int* begin, int* len,
-                    bool trim_path_end = true) {
-  // Strip leading whitespace and control characters.
-  while (*begin < *len && ShouldTrimFromURL(spec[*begin]))
-    (*begin)++;
-
-  if (trim_path_end) {
-    // Strip trailing whitespace and control characters. We need the >i test
-    // for when the input string is all blanks; we don't want to back past the
-    // input.
-    while (*len > *begin && ShouldTrimFromURL(spec[*len - 1]))
-      (*len)--;
-  }
-}
-
 // This shrinks the input URL string to eliminate "should-be-trimmed"
-// characters. The returned value is a pair of the trimmed string and its offset
-// from the beginning of the input URL.
+// characters. The returned value is a pair of the start index of the remaining
+// string and the start index of the trailing trimmed string in `spec`.
 template <typename CHAR>
-inline std::pair<std::basic_string_view<CHAR>, size_t> TrimUrl(
-    std::basic_string_view<CHAR> spec,
-    bool trim_path_end = true) {
-  size_t offset = 0;
+inline std::pair<size_t, size_t> TrimUrl(std::basic_string_view<CHAR> spec,
+                                         bool trim_path_end = true) {
+  size_t begin = 0;
+  size_t end = spec.length();
   // Strip leading whitespace and control characters.
-  while (!spec.empty() && ShouldTrimFromURL(spec[0])) {
-    spec = spec.substr(1);
-    ++offset;
+  while (begin < end && ShouldTrimFromURL(spec[begin])) {
+    ++begin;
   }
 
   if (trim_path_end) {
-    // Strip trailing whitespace and control characters. We need the empty()
-    // test for when the input string is all blanks.
-    while (!spec.empty() && ShouldTrimFromURL(spec[spec.length() - 1])) {
-      spec = spec.substr(0, spec.length() - 1);
+    // Strip trailing whitespace and control characters. We need the `begin <
+    // end` test for when the input string is all blanks.
+    while (begin < end && ShouldTrimFromURL(spec[end - 1])) {
+      --end;
     }
   }
-  return {spec, offset};
+  return {begin, end};
 }
 
 // Counts the number of consecutive slashes or backslashes starting at the given
@@ -157,10 +135,10 @@ void ParsePathInternal(const char16_t* spec,
                        Component* ref);
 
 // Internal functions in url_parse.cc that parse non-special URLs, which are
-// similar to `ParseNonSpecialURL` functions in url_parse.h, but with
+// similar to `ParseNonSpecialUrl` functions in url_parse.h, but with
 // `trim_path_end` parameter that controls whether to trim path end or not.
-Parsed ParseNonSpecialURLInternal(std::string_view url, bool trim_path_end);
-Parsed ParseNonSpecialURLInternal(std::u16string_view url, bool trim_path_end);
+Parsed ParseNonSpecialUrlInternal(std::string_view url, bool trim_path_end);
+Parsed ParseNonSpecialUrlInternal(std::u16string_view url, bool trim_path_end);
 
 // Given a spec and a pointer to the character after the colon following the
 // special scheme, this parses it and fills in the structure, Every item in the

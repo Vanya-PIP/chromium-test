@@ -10,7 +10,6 @@
 #import "base/apple/foundation_util.h"
 #import "base/cancelable_callback.h"
 #import "base/files/file_path.h"
-#import "base/files/file_util.h"
 #import "base/notreached.h"
 #import "base/strings/sys_string_conversions.h"
 #import "base/timer/timer.h"
@@ -1100,6 +1099,10 @@ constexpr base::TimeDelta kClearItemsDelay = base::Seconds(2.0);
 - (void)setFetchedIcon:(UIImage*)fetchedIcon
     forItemsWithImageLink:(NSString*)imageLink
                 imageType:(DriveItem::ImageType)imageType {
+  if (!fetchedIcon) {
+    // If the icon could not be fetched, do nothing.
+    return;
+  }
   // Update items with the same image link in the consumer.
   NSMutableSet<NSString*>* itemsToUpdate = [NSMutableSet set];
   for (const DriveItem& item : _fetchedDriveItems) {

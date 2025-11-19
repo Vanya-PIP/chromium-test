@@ -115,47 +115,11 @@ enum class SubmittedFormType { kNull = 0, kExtracted = 1, kCached = 2 };
 constexpr char kSubmissionSourceHistogram[] =
     "Autofill.SubmissionDetectionSource.AutofillAgent";
 
-constexpr char kWebElementFocusabilityHistogram[] =
-    "Autofill.DynamicElement.Focusability";
-
-constexpr char kWebElementTypeHistogram[] = "Autofill.DynamicElement.Type";
-
 // Time to wait in ms to ensure that only a single select or datalist change
 // will be acted upon, instead of multiple in close succession (debounce time).
 constexpr base::TimeDelta kWaitTimeForOptionsChanges = base::Milliseconds(50);
 
 using FormAndField = std::pair<FormData, raw_ref<const FormFieldData>>;
-
-void LogElementTypeAndFocusabilityMetric(const WebNode& node) {
-  static_assert(
-      base::to_underlying(blink::mojom::FormControlType::kMaxValue) == 30,
-      "Update the histogram when the FormControlEnum changes");
-  // Used for metrics. Do not renumber.
-  enum class ElementType {
-    kForm = 31,  // Should be FormControlType::kMaxValue + 1.
-    kOther = 32,
-    kNull = 33,
-    kMaxValue = kNull
-  };
-  if (WebElement element = node.DynamicTo<WebElement>(); !element) {
-    base::UmaHistogramEnumeration(kWebElementTypeHistogram, ElementType::kNull);
-  } else if (WebFormControlElement control_element =
-                 element.DynamicTo<WebFormControlElement>()) {
-    base::UmaHistogramEnumeration(
-        kWebElementTypeHistogram,
-        static_cast<ElementType>(base::to_underlying(
-            control_element.FormControlType())));  // nocheck
-  } else if (element.DynamicTo<WebFormElement>()) {
-    base::UmaHistogramEnumeration(kWebElementTypeHistogram, ElementType::kForm);
-  } else {
-    base::UmaHistogramEnumeration(kWebElementTypeHistogram,
-                                  ElementType::kOther);
-  }
-  if (WebInputElement input_element = node.DynamicTo<WebInputElement>()) {
-    base::UmaHistogramBoolean(kWebElementFocusabilityHistogram,
-                              input_element.IsFocusable());
-  }
-}
 
 void LogRendererExtractLabeledTextNodeValueLatency(base::TimeDelta latency,
                                                    bool is_successful) {
@@ -521,9 +485,8 @@ class AutofillAgent::DeferringAutofillDriver : public mojom::AutofillDriver {
                         FieldRendererId field_id) override {
     DeferMsg(&mojom::AutofillDriver::FocusOnFormField, form, field_id);
   }
-  void DidAutofillForm(const FormData& form,
-                       base::TimeTicks timestamp) override {
-    DeferMsg(&mojom::AutofillDriver::DidAutofillForm, form, timestamp);
+  void DidAutofillForm(const FormData& form) override {
+    DeferMsg(&mojom::AutofillDriver::DidAutofillForm, form);
   }
   void DidEndTextFieldEditing() override {
     DeferMsg(&mojom::AutofillDriver::DidEndTextFieldEditing);
@@ -1188,7 +1151,7 @@ void AutofillAgent::ApplyFieldsAction(
         filled_forms.push_back(*form);
         if (auto* autofill_driver = unsafe_autofill_driver()) {
           CHECK_EQ(action_persistence, mojom::ActionPersistence::kFill);
-          autofill_driver->DidAutofillForm(*form, base::TimeTicks::Now());
+          autofill_driver->DidAutofillForm(*form);
         }
       }
     }
@@ -1747,16 +1710,14 @@ void AutofillAgent::ExtractFormsAndNotifyPasswordAutofillAgent(
           &AutofillAgent::ExtractFormsUnthrottled, base::Unretained(this),
           base::BindOnce(
               [](PasswordAutofillAgent* password_autofill_agent,
-                 FormCache* form_cache, int element_id, bool success) {
+                 FormCache* form_cache, bool success) {
                 if (success) {
-                  LogElementTypeAndFocusabilityMetric(
-                      WebNode::FromDomNodeId(element_id));
                   password_autofill_agent->OnDynamicFormsSeen(
                       SynchronousFormCache(form_cache->extracted_forms()));
                 }
               },
               base::Unretained(password_autofill_agent_.get()),
-              base::Unretained(&form_cache_), element.GetDomNodeId()),
+              base::Unretained(&form_cache_)),
           GetCallTimerState(kExtractFormsAndNotifyPasswordAutofillAgent)));
 }
 

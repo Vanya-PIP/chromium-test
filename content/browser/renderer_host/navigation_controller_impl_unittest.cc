@@ -14,7 +14,6 @@
 #include <utility>
 
 #include "base/compiler_specific.h"
-#include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_util.h"
@@ -161,11 +160,6 @@ class MockPageBroadcast : public blink::mojom::PageBroadcast {
   MOCK_METHOD(void,
               SetPageAttributionSupport,
               (network::mojom::AttributionSupport support),
-              (override));
-
-  MOCK_METHOD(void,
-              UpdateCanvasNoiseToken,
-              (std::optional<blink::NoiseToken> canvas_noise_token),
               (override));
 
   MOCK_METHOD(void,

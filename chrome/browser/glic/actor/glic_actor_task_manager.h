@@ -48,6 +48,12 @@ class GlicActorTaskManager {
       glic::mojom::WebClientHandler::ResumeActorTaskCallback callback);
   void InterruptActorTask(actor::TaskId task_id);
   void UninterruptActorTask(actor::TaskId task_id);
+  void CreateActorTab(
+      actor::TaskId task_id,
+      bool foreground,
+      const std::optional<int32_t>& initiator_tab_id,
+      const std::optional<int32_t>& initiator_window_id,
+      glic::mojom::WebClientHandler::CreateActorTabCallback callback);
 
   void CancelTask();
   bool IsActuating() const;
@@ -55,8 +61,6 @@ class GlicActorTaskManager {
   base::WeakPtr<GlicActorTaskManager> GetWeakPtr();
 
  private:
-  void StopActorTask(actor::TaskId task_id, bool success);
-
   void PerformActionsFinished(
       mojom::WebClientHandler::PerformActionsCallback callback,
       actor::TaskId task_id,
@@ -65,6 +69,9 @@ class GlicActorTaskManager {
       actor::mojom::ActionResultCode result_code,
       std::optional<size_t> index_of_failed_action,
       std::vector<actor::ActionResultWithLatencyInfo> action_results);
+  void CreateActorTabFinished(
+      glic::mojom::WebClientHandler::CreateActorTabCallback callback,
+      tabs::TabInterface* new_tab);
 
   raw_ptr<Profile> profile_;
   raw_ptr<actor::ActorKeyedService> actor_keyed_service_;

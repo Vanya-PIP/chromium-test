@@ -6,8 +6,14 @@
 
 #include <optional>
 
+<<<<<<< HEAD
 #include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
+||||||| b30439823e517
+#include "base/debug/crash_logging.h"
+#include "base/debug/dump_without_crashing.h"
+=======
+>>>>>>> 144.0.7520.0~1
 #include "components/content_settings/core/browser/host_content_settings_map.h"
 #include "components/prefs/pref_service.h"
 #include "components/signin/public/identity_manager/identity_manager.h"
@@ -43,12 +49,8 @@ std::optional<SupervisedUserLogRecord::Segment> GetSupervisionStatus(
     SupervisedUserService* supervised_user_service) {
   if (supervised_user_service &&
       supervised_user_service->IsSupervisedLocally()) {
-// This type of supervision is signin-status independent (but only available
-// to non-incognito profiles).
-#if !BUILDFLAG(IS_ANDROID)
-    // Verify if any non-Android platform reaches this code.
-    base::debug::DumpWithoutCrashing();  // http://crbug.com/442625941
-#endif                                   // !BUILDFLAG(IS_ANDROID)
+    // This type of supervision is signin-status independent (but only available
+    // to non-incognito profiles).
     return SupervisedUserLogRecord::Segment::kSupervisionEnabledLocally;
   }
 

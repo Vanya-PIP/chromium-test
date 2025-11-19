@@ -35,6 +35,7 @@
 #include "chrome/browser/web_applications/ui_manager/update_dialog_types.h"
 #include "chrome/browser/web_applications/web_app_command_scheduler.h"
 #include "chrome/browser/web_applications/web_app_constants.h"
+#include "chrome/browser/web_applications/web_app_filter.h"
 #include "chrome/browser/web_applications/web_app_helpers.h"
 #include "chrome/browser/web_applications/web_app_icon_manager.h"
 #include "chrome/browser/web_applications/web_app_install_manager.h"
@@ -140,6 +141,12 @@ WebAppBrowserController::WebAppBrowserController(
 
 WebAppBrowserController::~WebAppBrowserController() = default;
 
+WebAppBrowserController* WebAppBrowserController::From(
+    BrowserWindowInterface* browser) {
+  auto* result = AppBrowserController::From(browser);
+  return result ? result->AsWebAppBrowserController() : nullptr;
+}
+
 bool WebAppBrowserController::HasMinimalUiButtons() const {
   if (has_tab_strip()) {
     return false;
@@ -197,7 +204,8 @@ bool WebAppBrowserController::AppUsesTabbed() const {
 }
 
 bool WebAppBrowserController::IsIsolatedWebApp() const {
-  return is_isolated_web_app_for_testing_ || registrar().IsIsolated(app_id());
+  return is_isolated_web_app_for_testing_ ||
+         registrar().AppMatches(app_id(), WebAppFilter::IsIsolatedApp());
 }
 
 void WebAppBrowserController::SetIsolatedWebAppTrueForTesting() {
@@ -655,6 +663,12 @@ void WebAppBrowserController::OnTabInserted(content::WebContents* contents) {
 
   WebAppTabHelper* tab_helper = WebAppTabHelper::FromWebContents(contents);
   tab_helper->SetIsInAppWindow(app_id());
+
+  if (!did_notify_first_tab_) {
+    did_notify_first_tab_ = true;
+    tab_helper->NotifyIsFirstWebContentsInAppWindow(
+        base::PassKey<WebAppBrowserController>());
+  }
 }
 
 void WebAppBrowserController::OnTabRemoved(content::WebContents* contents) {

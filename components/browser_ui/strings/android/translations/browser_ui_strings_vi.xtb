@@ -33,6 +33,7 @@
 <translation id="1409338233051621926">Nhấn vào Ứng dụng rồi nhấn vào Ứng dụng mặc định</translation>
 <translation id="1415402041810619267">URL đã được cắt bớt</translation>
 <translation id="1415855080660575082">Cho phép Chrome chia sẻ các thẻ gần đây với thiết bị của bạn để xem các thẻ này trong danh sách ứng dụng và kết quả tìm kiếm trên thiết bị. Bạn có thể bật hoặc tắt tính năng này trong phần cài đặt của Chrome.</translation>
+<translation id="1420688843103859429">Di chuyển qua lại bằng cách vuốt hai ngón tay trên bàn di chuột</translation>
 <translation id="1432650420699700107">Các trang web có thể yêu cầu kết nối với thiết bị bất kỳ trên mạng cục bộ của bạn</translation>
 <translation id="1448064542941920355">Giảm mức thu phóng</translation>
 <translation id="1464044141348608623">Không cho phép các trang web biết khi bạn đang dùng thiết bị</translation>
@@ -201,6 +202,7 @@ Chương trình Bảo vệ nâng cao kiểm soát các chế độ cài đặt s
 <translation id="3123473560110926937">Đã chặn trên một số trang web</translation>
 <translation id="3132996321662585180">Làm mới hằng ngày</translation>
 <translation id="3143754809889689516">Phát từ đầu</translation>
+<translation id="3164169438034704658">Bạn có thể bật chế độ vị trí chính xác trong phần <ph name="BEGIN_LINK" />Cài đặt Android<ph name="END_LINK" />.</translation>
 <translation id="3165022941318558018">Cho phép một trang web dùng cookie của bên thứ ba</translation>
 <translation id="3167868116600277716">Nguồn cấp dữ liệu khám phá</translation>
 <translation id="3198916472715691905">Dữ liệu đã lưu trữ: <ph name="STORAGE_AMOUNT" /></translation>
@@ -431,6 +433,7 @@ Chương trình Bảo vệ nâng cao kiểm soát các chế độ cài đặt s
 <translation id="5750869797196646528">Theo dõi cử chỉ tay</translation>
 <translation id="5753570386948603678">Xoá khỏi nhật ký</translation>
 <translation id="5771720122942595109">Đã chặn: <ph name="PERMISSION_1" /></translation>
+<translation id="5792627621688759634">Vuốt hai ngón tay trên bàn di chuột để di chuyển giữa các trang</translation>
 <translation id="5801457289562671820">Do tổ chức của bạn đề xuất</translation>
 <translation id="5804241973901381774">Quyền</translation>
 <translation id="5822675474983796325">Bảng tuỳ chỉnh trang thẻ mới của bạn ở dưới cùng đã mở trên toàn màn hình</translation>

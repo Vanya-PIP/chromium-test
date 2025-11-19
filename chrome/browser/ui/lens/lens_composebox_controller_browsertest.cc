@@ -35,6 +35,8 @@
 #include "components/omnibox/browser/aim_eligibility_service.h"
 #include "components/prefs/pref_service.h"
 #include "content/public/test/browser_test.h"
+#include "content/public/test/browser_test_utils.h"
+#include "content/public/test/test_navigation_observer.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/lens_server_proto/aim_communication.pb.h"
 #include "ui/base/unowned_user_data/user_data_factory.h"
@@ -215,6 +217,10 @@ class LensComposeboxControllerBrowserTest : public InProcessBrowserTest {
     ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
   }
 
+  bool IsResultsSidePanelShowing() {
+    return GetLensSidePanelCoordinator()->IsEntryShowing();
+  }
+
   LensSearchController* GetLensSearchController() {
     return LensSearchController::From(browser()->GetActiveTabInterface());
   }
@@ -264,10 +270,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   GetLensSearchController()->OpenLensOverlayWithPendingRegion(
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
-  auto* overlay_controller = GetLensOverlayController();
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set and then send a fake AIM query
   // via mojo.
@@ -300,10 +304,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   lens_controller->OpenLensOverlayWithPendingRegion(
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
-  auto* overlay_controller = GetLensOverlayController();
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set and then send a fake AIM query
   // via mojo.
@@ -370,9 +372,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
   auto* overlay_controller = GetLensOverlayController();
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set and then send a fake AIM query
   // via mojo.
@@ -384,6 +385,16 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   auto* composebox_handler =
       GetLensComposeboxController()->composebox_handler_for_testing();
   ASSERT_TRUE(composebox_handler);
+
+  // Verify the side panel has opened and contents have finished loading.
+  // This is needed to prevent the handshake from being reset.
+  auto* test_side_panel_coordinator = GetLensSidePanelCoordinator();
+  ASSERT_TRUE(test_side_panel_coordinator);
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    return test_side_panel_coordinator->GetSidePanelWebContents() != nullptr;
+  }));
+  ASSERT_TRUE(content::WaitForLoadStop(
+      test_side_panel_coordinator->GetSidePanelWebContents()));
 
   // Mock a focus of the composebox. Should be logged.
   composebox_handler->FocusChanged(true);
@@ -421,6 +432,11 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
       "Lens.Composebox.UserAction",
       lens::LensComposeboxUserAction::kQueryIssued, 1);
 
+  // Also need to wait for the overlay controller to hide to prevent
+  // race conditions with `CloseLensSync`.
+  ASSERT_TRUE(base::test::RunUntil(
+      [&]() { return overlay_controller->state() == State::kHidden; }));
+
   // Send another query.
   GetLensComposeboxController()->composebox_handler_for_testing()->SubmitQuery(
       "test query 2", /*mouse_button=*/0, /*alt_key=*/false, /*ctrl_key=*/false,
@@ -436,8 +452,7 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   // Close the overlay to trigger session end metrics.
   lens_controller->CloseLensSync(
       lens::LensOverlayDismissalSource::kOverlayCloseButton);
-  ASSERT_TRUE(base::test::RunUntil(
-      [&]() { return overlay_controller->state() == State::kOff; }));
+  ASSERT_TRUE(base::test::RunUntil([&]() { return lens_controller->IsOff(); }));
 
   // Verify session end metrics are logged once.
   histogram_tester.ExpectUniqueSample("Lens.Composebox.ShownInSession", true,
@@ -458,9 +473,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   lens_controller->OpenLensOverlayWithPendingRegion(
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set.
   ASSERT_TRUE(base::test::RunUntil([&]() {
@@ -485,8 +499,7 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   // Close the overlay to trigger session end metrics again.
   lens_controller->CloseLensSync(
       lens::LensOverlayDismissalSource::kSidePanelCloseButton);
-  ASSERT_TRUE(base::test::RunUntil(
-      [&]() { return overlay_controller->state() == State::kOff; }));
+  ASSERT_TRUE(base::test::RunUntil([&]() { return lens_controller->IsOff(); }));
 
   // Verify session end metrics totals.
   histogram_tester.ExpectUniqueSample("Lens.Composebox.ShownInSession", true,
@@ -518,10 +531,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   lens_controller->OpenLensOverlayWithPendingRegion(
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
-  auto* overlay_controller = GetLensOverlayController();
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set.
   ASSERT_TRUE(base::test::RunUntil([&]() {
@@ -533,6 +544,7 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   // panel is open.
   lens_controller->HideOverlay(
       lens::LensOverlayDismissalSource::kOverlayBackgroundClick);
+  auto* overlay_controller = GetLensOverlayController();
   ASSERT_TRUE(base::test::RunUntil(
       [&]() { return overlay_controller->state() == State::kHidden; }));
 
@@ -540,9 +552,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   GetLensComposeboxController()
       ->composebox_handler_for_testing()
       ->HandleLensButtonClick();
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 }
 
 IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
@@ -558,10 +569,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   lens_controller->OpenLensOverlayWithPendingRegion(
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
-  auto* overlay_controller = GetLensOverlayController();
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set.
   ASSERT_TRUE(base::test::RunUntil([&]() {
@@ -643,10 +652,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   lens_controller->OpenLensOverlayWithPendingRegion(
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
-  auto* overlay_controller = GetLensOverlayController();
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set and then send a fake AIM query
   // via mojo.
@@ -668,6 +675,7 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   }));
 
   // Verify that there is a region selection.
+  auto* overlay_controller = GetLensOverlayController();
   ASSERT_TRUE(overlay_controller->HasRegionSelection());
 
   // Mock a handshake call so the composebox controller can send query messages.
@@ -727,10 +735,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   lens_controller->OpenLensOverlayWithPendingRegion(
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
-  auto* overlay_controller = GetLensOverlayController();
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set.
   ASSERT_TRUE(base::test::RunUntil([&]() {
@@ -786,9 +792,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   lens_controller->OpenLensOverlayWithPendingRegion(
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
-  auto* overlay_controller = GetLensOverlayController();
-  ASSERT_TRUE(base::test::RunUntil(
-      [&]() { return overlay_controller->state() == State::kOverlayAndResults; }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set.
   ASSERT_TRUE(base::test::RunUntil([&]() {
@@ -834,6 +839,7 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   // Close the overlay to trigger CloseUI.
   lens_controller->CloseLensSync(
       lens::LensOverlayDismissalSource::kOverlayCloseButton);
+  auto* overlay_controller = GetLensOverlayController();
   ASSERT_TRUE(base::test::RunUntil(
       [&]() { return overlay_controller->state() == State::kOff; }));
 
@@ -842,6 +848,40 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
                 ->GetLensSuggestInputs()
                 .ByteSizeLong(),
             static_cast<size_t>(0));
+}
+
+IN_PROC_BROWSER_TEST_F(
+    LensComposeboxControllerBrowserTest,
+    AddVisualSelectionContext_DoesNotAddNonAimFollowUpSelections) {
+  WaitForPaint();
+
+  auto* lens_controller = GetLensSearchController();
+  ASSERT_TRUE(lens_controller);
+  auto* composebox_controller = GetLensComposeboxController();
+  auto* overlay_controller = GetLensOverlayController();
+  auto* test_composebox_controller =
+      static_cast<TestLensComposeboxController*>(composebox_controller);
+  ASSERT_TRUE(test_composebox_controller);
+
+  MockSearchboxPage& mock_searchbox_page =
+      test_composebox_controller->mock_searchbox_page();
+  EXPECT_CALL(mock_searchbox_page, AddFileContext(testing::_, testing::_))
+      .Times(0);
+
+  // Open the overlay directly to the side panel so composebox is visible.
+  SkBitmap initial_bitmap = CreateNonEmptyBitmap(100, 100);
+  lens_controller->OpenLensOverlayWithPendingRegion(
+      lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
+      kTestRegion->Clone(), initial_bitmap);
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
+
+  // A visual selection context should not have been added but the overlay
+  // should still have a region selection. This is because this is a not an AIM
+  // follow up selection.
+  auto vsc_id = composebox_controller->vsc_image_data_id_for_testing();
+  ASSERT_FALSE(vsc_id.has_value());
+  ASSERT_TRUE(overlay_controller->HasRegionSelection());
 }
 
 IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
@@ -856,10 +896,8 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   lens_controller->OpenLensOverlayWithPendingRegion(
       lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
       kTestRegion->Clone(), initial_bitmap);
-  auto* overlay_controller = GetLensOverlayController();
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    return overlay_controller->state() == State::kOverlayAndResults;
-  }));
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
 
   // Wait for the composebox handler to be set.
   ASSERT_TRUE(base::test::RunUntil([&]() {
@@ -894,8 +932,7 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
                     searchbox::mojom::SelectedFileInfoPtr info) {
         captured_file_info = std::move(info);
       });
-  composebox_controller->AddVisualSelectionContext(thumbnail_uri,
-                                                   /*is_deletable=*/true);
+  composebox_controller->AddVisualSelectionContext(thumbnail_uri);
 
   ASSERT_TRUE(
       base::test::RunUntil([&]() { return !captured_file_info.is_null(); }));
@@ -903,4 +940,230 @@ IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
   ASSERT_EQ(captured_file_info->mime_type, "image/png");
   ASSERT_EQ(captured_file_info->image_data_url, thumbnail_uri);
   ASSERT_EQ(captured_file_info->is_deletable, true);
+}
+
+IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
+                       UpdatesVisualSearchInteractionDataBetweenInteractions) {
+  WaitForPaint();
+
+  auto* lens_controller = GetLensSearchController();
+  ASSERT_TRUE(lens_controller);
+
+  // Open the overlay directly to the side panel so composebox is visible.
+  SkBitmap initial_bitmap = CreateNonEmptyBitmap(100, 100);
+  lens_controller->OpenLensOverlayWithPendingRegion(
+      lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
+      kTestRegion->Clone(), initial_bitmap);
+  auto* overlay_controller = GetLensOverlayController();
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
+
+  // Wait for the composebox handler to be set.
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    return GetLensComposeboxController()->composebox_handler_for_testing() !=
+           nullptr;
+  }));
+
+  // Also need to run until the query controller has sent all requests to avoid
+  // flakiness.
+  auto* fake_query_controller =
+      static_cast<lens::TestLensOverlayQueryController*>(
+          lens_controller->lens_overlay_query_controller());
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    return fake_query_controller->num_full_image_requests_sent() == 1 &&
+           fake_query_controller->num_page_content_update_requests_sent() ==
+               1 &&
+           fake_query_controller->num_interaction_requests_sent() == 1;
+  }));
+
+  // Mock a handshake call so the composebox controller can send query messages.
+  lens::AimToClientMessage aim_to_client_message;
+  aim_to_client_message.mutable_handshake_response()->add_capabilities(
+      lens::FeatureCapability::DEFAULT);
+  MockAimToClientMessage(aim_to_client_message);
+
+  // Send a query.
+  GetLensComposeboxController()->composebox_handler_for_testing()->SubmitQuery(
+      "test query", /*mouse_button=*/0, /*alt_key=*/false, /*ctrl_key=*/false,
+      /*meta_key=*/false,
+      /*shift_key=*/false);
+
+  // Verify the client message sent.
+  auto* test_side_panel_coordinator = GetLensSidePanelCoordinator();
+  ASSERT_TRUE(test_side_panel_coordinator);
+  ASSERT_TRUE(test_side_panel_coordinator->last_sent_client_message_to_aim_
+                  .has_submit_query());
+
+  // Verify the visual search interaction data has the region.
+  auto submit_query = test_side_panel_coordinator
+                          ->last_sent_client_message_to_aim_.submit_query();
+  auto lens_image_query_data = submit_query.payload().lens_image_query_data(0);
+  ASSERT_TRUE(lens_image_query_data.has_visual_search_interaction_data());
+  ASSERT_TRUE(
+      lens_image_query_data.visual_search_interaction_data().has_zoomed_crop());
+  auto zoomed_crop =
+      lens_image_query_data.visual_search_interaction_data().zoomed_crop();
+  const float tolerance = 0.01f;
+  EXPECT_NEAR(zoomed_crop.crop().center_x(), 0.5f, tolerance);
+  EXPECT_NEAR(zoomed_crop.crop().center_y(), 0.5f, tolerance);
+  EXPECT_NEAR(zoomed_crop.crop().width(), 0.8f, tolerance);
+  EXPECT_NEAR(zoomed_crop.crop().height(), 0.8f, tolerance);
+
+  // Clear the region selection.
+  overlay_controller->ClearRegionSelectionForTesting();
+
+  // Send another query.
+  GetLensComposeboxController()->composebox_handler_for_testing()->SubmitQuery(
+      "test query 2", /*mouse_button=*/0, /*alt_key=*/false,
+      /*ctrl_key=*/false,
+      /*meta_key=*/false,
+      /*shift_key=*/false);
+
+  // Verify the new message.
+  submit_query = test_side_panel_coordinator->last_sent_client_message_to_aim_
+                     .submit_query();
+  lens_image_query_data = submit_query.payload().lens_image_query_data(0);
+  ASSERT_FALSE(lens_image_query_data.has_visual_search_interaction_data());
+}
+
+IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
+                       DeleteVisualSelectionContext) {
+  WaitForPaint();
+  auto* controller = GetLensSearchController();
+  ASSERT_TRUE(controller->IsOff());
+
+  // Issue a text search request to open the side panel without the overlay.
+  controller->IssueTextSearchRequest(
+      lens::LensOverlayInvocationSource::kContentAreaContextMenuText, "query",
+      {}, AutocompleteMatchType::Type::SEARCH_WHAT_YOU_TYPED,
+      /*is_zero_prefix_suggestion=*/false,
+      /*suppress_contextualization=*/true);
+
+  // Wait for side panel to be visible.
+  ASSERT_TRUE(base::test::RunUntil(
+      [&]() { return GetLensSidePanelCoordinator()->IsEntryShowing(); }));
+
+  // No visual selection context should have been added.
+  auto* composebox_controller = GetLensComposeboxController();
+  auto* overlay_controller = GetLensOverlayController();
+  EXPECT_FALSE(
+      composebox_controller->vsc_image_data_id_for_testing().has_value());
+  EXPECT_FALSE(overlay_controller->HasRegionSelection());
+  EXPECT_FALSE(overlay_controller->IsOverlayActive());
+
+  // Reshow the overlay.
+  controller->OpenLensOverlayInCurrentSession();
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
+
+  // Issue a visual search request.
+  overlay_controller->IssueLensRegionRequestForTesting(kTestRegion.Clone(),
+                                                       /*is_click=*/false);
+
+  // A visual selection context should have been added.
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    return composebox_controller->vsc_image_data_id_for_testing().has_value();
+  }));
+  ASSERT_TRUE(overlay_controller->HasRegionSelection());
+
+  // Delete with a random token should not clear the selection.
+  composebox_controller->DeleteContext(base::UnguessableToken::Create());
+  ASSERT_TRUE(overlay_controller->HasRegionSelection());
+  ASSERT_TRUE(
+      composebox_controller->vsc_image_data_id_for_testing().has_value());
+
+  // Delete with the correct token should clear the selection.
+  auto vsc_id = composebox_controller->vsc_image_data_id_for_testing();
+  composebox_controller->DeleteContext(vsc_id.value());
+  ASSERT_FALSE(overlay_controller->HasRegionSelection());
+  ASSERT_FALSE(
+      composebox_controller->vsc_image_data_id_for_testing().has_value());
+}
+
+IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
+                       ClearFilesDeletesVisualSelectionContext) {
+  WaitForPaint();
+  auto* controller = GetLensSearchController();
+  ASSERT_TRUE(controller->IsOff());
+
+  // Issue a text search request to open the side panel without the overlay.
+  controller->IssueTextSearchRequest(
+      lens::LensOverlayInvocationSource::kContentAreaContextMenuText, "query",
+      {}, AutocompleteMatchType::Type::SEARCH_WHAT_YOU_TYPED,
+      /*is_zero_prefix_suggestion=*/false,
+      /*suppress_contextualization=*/true);
+
+  // Wait for side panel to be visible.
+  ASSERT_TRUE(base::test::RunUntil(
+      [&]() { return GetLensSidePanelCoordinator()->IsEntryShowing(); }));
+
+  // No visual selection context should have been added.
+  auto* composebox_controller = GetLensComposeboxController();
+  auto* overlay_controller = GetLensOverlayController();
+  EXPECT_FALSE(
+      composebox_controller->vsc_image_data_id_for_testing().has_value());
+  EXPECT_FALSE(overlay_controller->HasRegionSelection());
+  EXPECT_FALSE(overlay_controller->IsOverlayActive());
+
+  // Reshow the overlay.
+  controller->OpenLensOverlayInCurrentSession();
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
+
+  // Issue a visual search request.
+  overlay_controller->IssueLensRegionRequestForTesting(kTestRegion.Clone(),
+                                                       /*is_click=*/false);
+
+  // A visual selection context should have been added.
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    return composebox_controller->vsc_image_data_id_for_testing().has_value();
+  }));
+  ASSERT_TRUE(overlay_controller->HasRegionSelection());
+
+  // ClearFiles should clear the selection.
+  composebox_controller->ClearFiles();
+  ASSERT_FALSE(overlay_controller->HasRegionSelection());
+  ASSERT_FALSE(
+      composebox_controller->vsc_image_data_id_for_testing().has_value());
+}
+
+IN_PROC_BROWSER_TEST_F(LensComposeboxControllerBrowserTest,
+                       IssueComposeboxQueryHidesOverlay) {
+  WaitForPaint();
+
+  auto* lens_controller = GetLensSearchController();
+  ASSERT_TRUE(lens_controller);
+
+  // Open the overlay directly to the side panel so composebox is visible.
+  SkBitmap initial_bitmap = CreateNonEmptyBitmap(100, 100);
+  lens_controller->OpenLensOverlayWithPendingRegion(
+      lens::LensOverlayInvocationSource::kContentAreaContextMenuImage,
+      kTestRegion->Clone(), initial_bitmap);
+  auto* overlay_controller = GetLensOverlayController();
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return IsResultsSidePanelShowing(); }));
+
+  // Wait for the composebox handler to be set.
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    return GetLensComposeboxController()->composebox_handler_for_testing() !=
+           nullptr;
+  }));
+
+  // Mock a handshake call so the composebox controller can send query messages.
+  lens::AimToClientMessage aim_to_client_message;
+  aim_to_client_message.mutable_handshake_response()->add_capabilities(
+      lens::FeatureCapability::DEFAULT);
+  MockAimToClientMessage(aim_to_client_message);
+
+  // Verify overlay is showing.
+  ASSERT_TRUE(overlay_controller->IsOverlayShowing());
+
+  // Send a query.
+  GetLensComposeboxController()->composebox_handler_for_testing()->SubmitQuery(
+      "test query", /*mouse_button=*/0, /*alt_key=*/false, /*ctrl_key=*/false,
+      /*meta_key=*/false, /*shift_key=*/false);
+
+  // Verify overlay is hidden.
+  ASSERT_TRUE(base::test::RunUntil(
+      [&]() { return overlay_controller->state() == State::kHidden; }));
 }

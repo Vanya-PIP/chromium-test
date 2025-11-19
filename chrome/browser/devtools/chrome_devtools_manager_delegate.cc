@@ -33,6 +33,7 @@
 #include "chrome/browser/ui/webui_browser/webui_browser.h"
 #include "chrome/browser/web_applications/proto/web_app_install_state.pb.h"
 #include "chrome/browser/web_applications/web_app.h"
+#include "chrome/browser/web_applications/web_app_filter.h"
 #include "chrome/browser/web_applications/web_app_provider.h"
 #include "chrome/browser/web_applications/web_app_registrar.h"
 #include "chrome/browser/web_applications/web_app_tab_helper.h"
@@ -92,7 +93,8 @@ std::optional<std::string> GetIsolatedWebAppNameAndVersion(
   const web_app::WebAppRegistrar& registrar = provider->registrar_unsafe();
   const web_app::WebApp* web_app = registrar.GetAppById(*app_id);
 
-  if (web_app && registrar.IsIsolated(*app_id)) {
+  if (web_app &&
+      registrar.AppMatches(*app_id, web_app::WebAppFilter::IsIsolatedApp())) {
     // Version is a key part of IWA so should be displayed in inspect tool
     return base::StrCat({registrar.GetAppShortName(*app_id), " (",
                          web_app->isolation_data()->version().GetString(),
@@ -217,12 +219,14 @@ void ChromeDevToolsManagerDelegate::Inspect(
 
 scoped_refptr<content::DevToolsAgentHost>
 ChromeDevToolsManagerDelegate::OpenDevTools(
-    content::DevToolsAgentHost* agent_host) {
+    content::DevToolsAgentHost* agent_host,
+    const content::DevToolsManagerDelegate::DevToolsOptions& devtools_options) {
   scoped_refptr<content::DevToolsAgentHost> tab_agent_host(
       content::DevToolsAgentHost::GetOrCreateForTab(
           agent_host->GetWebContents()));
   DevToolsWindow::OpenDevToolsWindow(tab_agent_host, nullptr,
-                                     DevToolsOpenedByAction::kUnknown);
+                                     DevToolsOpenedByAction::kUnknown,
+                                     devtools_options);
   DevToolsWindow* window =
       DevToolsWindow::FindDevToolsWindow(tab_agent_host.get());
   if (!window) {
@@ -331,28 +335,8 @@ bool ChromeDevToolsManagerDelegate::AllowInspectingRenderFrameHost(
     content::RenderFrameHost* rfh) {
   Profile* profile =
       Profile::FromBrowserContext(rfh->GetProcess()->GetBrowserContext());
-  auto* process_manager = extensions::ProcessManager::Get(profile);
-  auto* extension = process_manager
-                        ? process_manager->GetExtensionForRenderFrameHost(rfh)
-                        : nullptr;
-  if (extension || !web_app::AreWebAppsEnabled(profile)) {
-    return IsInspectionAllowed(profile, extension);
-  }
-
-  if (auto* web_app_provider =
-          web_app::WebAppProvider::GetForWebApps(profile)) {
-    std::optional<webapps::AppId> app_id =
-        web_app_provider->registrar_unsafe().FindBestAppWithUrlInScope(
-            rfh->GetMainFrame()->GetLastCommittedURL(),
-            web_app::WebAppFilter::InstalledInChrome());
-    if (app_id) {
-      const auto* web_app =
-          web_app_provider->registrar_unsafe().GetAppById(app_id.value());
-      return IsInspectionAllowed(profile, web_app);
-    }
-  }
-  // |extension| is always nullptr here.
-  return IsInspectionAllowed(profile, extension);
+  return IsInspectionAllowed(profile,
+                             content::WebContents::FromRenderFrameHost(rfh));
 }
 
 void ChromeDevToolsManagerDelegate::ClientAttached(

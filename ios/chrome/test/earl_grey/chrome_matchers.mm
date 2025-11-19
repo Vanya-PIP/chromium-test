@@ -872,9 +872,11 @@ id<GREYMatcher> ContentViewSmallerThanScrollView() {
 }
 
 id<GREYMatcher> HistoryEntry(const std::string& url, const std::string& title) {
-  return [ChromeMatchersAppInterface
-      historyEntryForURL:base::SysUTF8ToNSString(url)
-                   title:base::SysUTF8ToNSString(title)];
+  return grey_allOf(
+      grey_accessibilityLabel(
+          [NSString stringWithFormat:@"%@, %@", base::SysUTF8ToNSString(title),
+                                     base::SysUTF8ToNSString(url)]),
+      grey_sufficientlyVisible(), nil);
 }
 
 id<GREYMatcher> HistoryEntry(const GURL& url, const std::string& title) {
@@ -1193,6 +1195,24 @@ id<GREYMatcher> FakeJoinFlowView() {
 
 id<GREYMatcher> TabGroupsPanel() {
   return [ChromeMatchersAppInterface tabGroupsPanel];
+}
+
+#pragma mark - Button Stack
+
+id<GREYMatcher> ButtonStackPrimaryButton() {
+  return [ChromeMatchersAppInterface buttonStackPrimaryButton];
+}
+
+id<GREYMatcher> ButtonStackSecondaryButton() {
+  return [ChromeMatchersAppInterface buttonStackSecondaryButton];
+}
+
+id<GREYMatcher> ButtonStackTertiaryButton() {
+  return [ChromeMatchersAppInterface buttonStackTertiaryButton];
+}
+
+id<GREYMatcher> ButtonStackCheckmarkSymbol() {
+  return [ChromeMatchersAppInterface buttonStackCheckmarkSymbol];
 }
 
 }  // namespace chrome_test_util

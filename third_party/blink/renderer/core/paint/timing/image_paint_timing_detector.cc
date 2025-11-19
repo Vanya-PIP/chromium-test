@@ -137,8 +137,7 @@ ImagePaintTimingDetector::TakePaintTimingCallback() {
               is_recording_lcp);
         }
       },
-      WrapWeakPersistent(this), frame_index_, IsRecordingLargestImagePaint());
-  last_registered_frame_index_ = frame_index_++;
+      WrapWeakPersistent(this), frame_index_++, IsRecordingLargestImagePaint());
 
   // This is for unit-testing purposes only. Some of these tests check for UKMs
   // and things that are not covered by WPT.
@@ -176,11 +175,6 @@ void ImageRecordsManager::AssignPaintTimeToRegisteredQueuedRecords(
     bool is_recording_lcp) {
   while (!images_queued_for_paint_time_.empty()) {
     ImageRecord* record = images_queued_for_paint_time_.front();
-    // Skip any null records at the start of the queue
-    if (!record) {
-      images_queued_for_paint_time_.pop_front();
-      continue;
-    }
     // Not ready for this frame yet - we're done with the queue for now.
     if (record->FrameIndex() > last_queued_frame_index) {
       break;
@@ -201,13 +195,6 @@ void ImageRecordsManager::AssignPaintTimeToRegisteredQueuedRecords(
       continue;
     }
 
-    // For non-animated images, if it's not loaded yet (too early) or already
-    // painted (too late), move on.
-    if ((!record->IsLoaded() && !record->HasFirstAnimatedFrameTime()) ||
-        record->HasPaintTime()) {
-      continue;
-    }
-
     // A record may be in |images_queued_for_paint_time_| twice, for instance if
     // is already loaded by the time of its first paint.
     // If it's no longer pending for any other reason, move on.
@@ -216,7 +203,8 @@ void ImageRecordsManager::AssignPaintTimeToRegisteredQueuedRecords(
       continue;
     }
 
-    // Set paint time.
+    // Set paint time if it hasn't been set. Note for first video frame with
+    // ReportFirstFrameTimeAsRenderTime enabled, this will already be set.
     if (!record->HasPaintTime()) {
       record->SetPaintTime(presentation_timestamp, paint_timing_info);
     }

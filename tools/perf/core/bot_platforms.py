@@ -38,7 +38,6 @@ class PerfPlatform(object):
                num_shards,
                platform_os,
                is_fyi=False,
-               is_calibration=False,
                run_reference_build=False,
                pinpoint_only=False,
                executables=None,
@@ -50,7 +49,6 @@ class PerfPlatform(object):
     # For sorting ignore case and "segments" in the bot name.
     self._sort_key = name.lower().replace('-', ' ')
     self._is_fyi = is_fyi
-    self._is_calibration = is_calibration
     self.run_reference_build = run_reference_build
     self.pinpoint_only = pinpoint_only
     self.executables = executables or frozenset()
@@ -119,12 +117,8 @@ class PerfPlatform(object):
     return self._is_fyi
 
   @property
-  def is_calibration(self):
-    return self._is_calibration
-
-  @property
   def is_official(self):
-    return not self._is_fyi and not self.is_calibration
+    return not self._is_fyi
 
   @property
   def builder_url(self):
@@ -609,16 +603,18 @@ _CROSSBENCH_WEBVIEW = frozenset([
         arguments=[
             '--wpr=crossbench_android_embedder_000.wprgo',
             '--skip-wpr-script-injection',
-            '--embedder=com.google.android.googlequicksearchbox',
+            '--embedder=../../clank/android_webview/tools/crossbench_config/cipd/arm64/Velvet_arm64.apk',
             '--splashscreen=skip',
             '--cuj-config=../../third_party/crossbench/config/team/woa/embedder_cuj_config.hjson',
             '--probe-config=../../clank/android_webview/tools/crossbench_config/'
             'agsa_probe_config.hjson',
             '--repetitions=50',
             '--cool-down-threshold=moderate',
-            '--http-request-timeout=15s',
-            '--action-runner=android',
+            '--http-request-timeout=10s',
             '--ignore-partial-failures',
+            '--embedder-process-name=googleapp',
+            '--embedder-setup-command-config=../../clank/android_webview/tools/crossbench_config/'
+            'agsa_setup_config.hjson',
         ]),
 ])
 # pylint: enable=line-too-long
@@ -669,7 +665,7 @@ _LINUX_EXECUTABLE_CONFIGS = frozenset([
     # TODO(crbug.com/40562709): Add views_perftests.
     _base_perftests(200),
     _load_library_perf_tests(),
-    # (crbug.com/445456830) temporarily disabled _tint_benchmark(),
+    _tint_benchmark(),
     _tracing_perftests(5),
 ])
 _LINUX_R350_BENCHMARK_CONFIGS = PerfSuite(
@@ -685,7 +681,7 @@ _MAC_INTEL_BENCHMARK_CONFIGS = PerfSuite(OFFICIAL_BENCHMARK_CONFIGS).Remove([
 _MAC_INTEL_EXECUTABLE_CONFIGS = frozenset([
     _base_perftests(300),
     _dawn_perf_tests(330),
-    # (crbug.com/445456830) temporarily disabled _tint_benchmark(),
+    _tint_benchmark(),
     _views_perftests(),
     _load_library_perf_tests(),
 ])
@@ -728,7 +724,7 @@ _MAC_M1_PRO_BENCHMARK_CONFIGS = PerfSuite([
 _MAC_M1_MINI_2020_EXECUTABLE_CONFIGS = frozenset([
     _base_perftests(300),
     _dawn_perf_tests(330),
-    # (crbug.com/445456830) temporarily disabled _tint_benchmark(),
+    _tint_benchmark(),
     _views_perftests(),
 ])
 _MAC_M2_PRO_BENCHMARK_CONFIGS = PerfSuite(OFFICIAL_BENCHMARK_CONFIGS).Remove([
@@ -771,7 +767,7 @@ _WIN_11_EXECUTABLE_CONFIGS = frozenset([
     _base_perftests(200),
     _components_perftests(125),
     _dawn_perf_tests(600),
-    # (crbug.com/445456830) temporarily disabled _tint_benchmark(),
+    _tint_benchmark(),
     _views_perftests(),
 ])
 _WIN_ARM64_BENCHMARK_CONFIGS = PerfSuite([
@@ -788,6 +784,24 @@ _WIN_ARM64_BENCHMARK_CONFIGS = PerfSuite([
 _WIN_ARM64_EXECUTABLE_CONFIGS = frozenset([
     _base_perftests(200),
     _components_perftests(125),
+    _views_perftests(),
+])
+_FALCON_BENCHMARK_CONFIGS = PerfSuite([
+    _GetBenchmarkConfig('blink_perf.dom'),
+    _GetBenchmarkConfig('jetstream2'),
+    _GetBenchmarkConfig('media.desktop'),
+    _GetBenchmarkConfig('rendering.desktop', abridged=True),
+    _GetBenchmarkConfig('rendering.desktop.notracing'),
+    _GetBenchmarkConfig('speedometer2'),
+    _GetBenchmarkConfig('speedometer3'),
+    _GetBenchmarkConfig('system_health.common_desktop'),
+    _GetBenchmarkConfig('v8.browsing_desktop'),
+])
+_FALCON_EXECUTABLE_CONFIGS = frozenset([
+    _base_perftests(200),
+    _components_perftests(125),
+    _dawn_perf_tests(600),
+    _tint_benchmark(),
     _views_perftests(),
 ])
 _ANDROID_GO_BENCHMARK_CONFIGS = PerfSuite([
@@ -867,12 +881,6 @@ _LINUX_PERF_FYI_BENCHMARK_CONFIGS = PerfSuite([
     _GetBenchmarkConfig('speedometer2-minorms'),
     _GetBenchmarkConfig('speedometer3'),
 ])
-_LINUX_PERF_CALIBRATION_BENCHMARK_CONFIGS = PerfSuite([
-    _GetBenchmarkConfig('speedometer2'),
-    _GetBenchmarkConfig('speedometer3'),
-    _GetBenchmarkConfig('blink_perf.shadow_dom'),
-    _GetBenchmarkConfig('system_health.common_desktop'),
-])
 
 
 # Linux
@@ -893,6 +901,13 @@ LINUX_R350 = PerfPlatform('linux-r350-perf',
                           30,
                           'linux',
                           executables=_LINUX_EXECUTABLE_CONFIGS,
+                          crossbench=_CROSSBENCH_BENCHMARKS_ALL)
+LINUX_FALCON_RAK_5070 = PerfPlatform('linux-falcon-rak-5070-perf',
+                          'Linux Falcon RAK 5070',
+                          _FALCON_BENCHMARK_CONFIGS,
+                          1,
+                          'linux',
+                          executables=_FALCON_EXECUTABLE_CONFIGS,
                           crossbench=_CROSSBENCH_BENCHMARKS_ALL)
 
 # Mac
@@ -1003,6 +1018,13 @@ WIN_11_PGO = PerfPlatform('win-11-perf-pgo',
                           'win',
                           executables=_WIN_11_EXECUTABLE_CONFIGS,
                           pinpoint_only=True)
+WIN_FALCON_RAK_5070 = PerfPlatform('win-falcon-rak-5070-perf',
+                      'Windows Falcon RAK 5070',
+                      _FALCON_BENCHMARK_CONFIGS,
+                      1,
+                      'win',
+                      executables=_FALCON_EXECUTABLE_CONFIGS,
+                      crossbench=_CROSSBENCH_BENCHMARKS_ALL)
 WIN_ARM64_SNAPDRAGON_ELITE = PerfPlatform(
     'win-arm64-snapdragon-elite-perf',
     'Windows Dell Snapdragon Elite',
@@ -1197,16 +1219,6 @@ LINUX_PERF_FYI = PerfPlatform('linux-perf-fyi',
                               crossbench=_CROSSBENCH_BENCHMARKS_ALL,
                               is_fyi=True)
 
-# Calibration bots
-LINUX_PERF_CALIBRATION = PerfPlatform(
-    'linux-perf-calibration',
-    'Ubuntu-18.04, 8 core, NVIDIA Quadro P400',
-    _LINUX_BENCHMARK_CONFIGS,
-    28,
-    'linux',
-    executables=_LINUX_EXECUTABLE_CONFIGS,
-    is_calibration=True)
-
 ALL_PLATFORMS = {
     p for p in locals().values() if isinstance(p, PerfPlatform)
 }
@@ -1214,7 +1226,6 @@ PLATFORMS_BY_NAME = {p.name: p for p in ALL_PLATFORMS}
 FYI_PLATFORMS = {
     p for p in ALL_PLATFORMS if p.is_fyi
 }
-CALIBRATION_PLATFORMS = {p for p in ALL_PLATFORMS if p.is_calibration}
 OFFICIAL_PLATFORMS = {p for p in ALL_PLATFORMS if p.is_official}
 ALL_PLATFORM_NAMES = {
     p.name for p in ALL_PLATFORMS

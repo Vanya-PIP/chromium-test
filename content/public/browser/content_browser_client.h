@@ -86,6 +86,7 @@
 #include "third_party/blink/public/common/user_agent/user_agent_metadata.h"
 #include "third_party/blink/public/mojom/ai/ai_manager.mojom-forward.h"
 #include "third_party/blink/public/mojom/browsing_topics/browsing_topics.mojom-forward.h"
+#include "third_party/blink/public/mojom/cpu_performance.mojom-forward.h"
 #include "third_party/blink/public/mojom/file_system_access/file_system_access_cloud_identifier.mojom-forward.h"
 #include "third_party/blink/public/mojom/file_system_access/file_system_access_error.mojom-forward.h"
 #include "third_party/blink/public/mojom/manifest/manifest.mojom-forward.h"
@@ -257,6 +258,7 @@ class NavigationUIData;
 class PrefetchServiceDelegate;
 class PrerenderWebContentsDelegate;
 class PresentationObserver;
+class ProcessSelectionUserData;
 class ReceiverPresentationServiceDelegate;
 class RenderFrameHost;
 class RenderProcessHost;
@@ -2866,7 +2868,7 @@ class CONTENT_EXPORT ContentBrowserClient {
   virtual bool IsJitDisabledForSite(BrowserContext* browser_context,
                                     const GURL& site_url);
 
-  // Whether v8 optimizations should be disabled for the given |browser_context|
+  // Whether v8 optimizations should be enabled for the given |browser_context|
   // and |site_url|. Pass an empty GURL for |site_url| to get the default
   // optimization policy for |browser_context|. Don't resolve |site_url| to an
   // effective URL before passing it to this function.
@@ -2874,11 +2876,13 @@ class CONTENT_EXPORT ContentBrowserClient {
   // This is distinct from IsJitDisabledForSite(): IsJitDisabledForSite()
   // disables JIT compilation altogether in the process, which fully disables
   // wasm and forces v8 to operate in interpreted mode.
-  // AreV8OptimizationsDisabledForSite() only disables v8's "higher tier"
-  // optimizers, leaving the basic JIT compiler and the wasm JIT compiler
-  // enabled.
-  virtual bool AreV8OptimizationsDisabledForSite(
+  // AreV8OptimizationsEnabledForSite() only controls the enabled-state of v8's
+  // "higher tier" optimizers, leaving the basic JIT compiler and the wasm JIT
+  // compiler unaffected.
+  virtual bool AreV8OptimizationsEnabledForSite(
       BrowserContext* browser_context,
+      const std::optional<base::SafeRef<ProcessSelectionUserData>>&
+          process_selection_user_data,
       const GURL& site_url);
 
   // Whether v8 feature flag overrides are disallowed for the given `site_url`.
@@ -3082,6 +3086,9 @@ class CONTENT_EXPORT ContentBrowserClient {
   // in RenderFrameHostImpl. Currently in Chrome, this is true for all
   // extension origins.
   virtual bool ShouldUseFirstPartyStorageKey(const url::Origin& origin);
+
+  // Checks if the BeforeUnload Dialog event should be skipped.
+  virtual bool ShouldSkipBeforeUnloadDialog(content::RenderFrameHost* rfh);
 
   // Allows the embedder to return a delegate for the responsiveness calculator.
   // The default implementation returns nullptr.
@@ -3340,12 +3347,6 @@ class CONTENT_EXPORT ContentBrowserClient {
   GetClipboardTypesIfPolicyApplied(
       const ui::ClipboardSequenceNumberToken& seqno);
 
-  // Returns true if CanvasNoise should be enabled for `origin`'s navigation.
-  // Enablement depends on corresponding feature flag values, and whether the
-  // origin has an exception from Canvas noising. Default returns false.
-  virtual bool ShouldEnableCanvasNoise(BrowserContext* browser_context,
-                                       const GURL& origin);
-
   // Returns true if PrefetchPrerenderIntegration should be allowed, this
   // allows a prerender fall back to prefetch if available.
   virtual bool UsePrefetchPrerenderIntegration();
@@ -3362,6 +3363,7 @@ class CONTENT_EXPORT ContentBrowserClient {
   // experiments. For more details, see
   // https://docs.google.com/document/d/1bBhfhO7BotUB7Myy_8mtFF_4lI5N8hUyNayV_gI019Y/edit?tab=t.0#heading=h.9osmajzfan4b
   virtual bool UsePreloadServingMetrics();
+
 #if !BUILDFLAG(IS_ANDROID)
   // Gives the content embedder a chance to disallow a credential request,
   // for example if there's an active actor task in the tab associated with
@@ -3372,6 +3374,27 @@ class CONTENT_EXPORT ContentBrowserClient {
   // Whether to animate back-forward transition gestures with a screenshot of
   // the destination.
   virtual bool ShouldAnimateBackForwardTransitions();
+
+  // Returns the CPU performance tier, which exposes some information about how
+  // powerful the user device is.
+  virtual blink::mojom::PerformanceTier GetCpuPerformanceTier();
+
+  // Describes the type of logins assisted by the browser via passkeys or
+  // federation.
+  enum class AssistedLoginType {
+    kFedCmPassive,
+    kFedCmActive,
+    kPasskeyStoredInGPM,
+    kPasskeyStoredInWindowsHello,
+    kPasskeyStoredInICloudKeychain,
+    kPasskeyStoredInChromeProfile,
+    kPasskeyHybrid,
+    kPasskeySecurityKey,
+  };
+
+  // Records a browser-assisted login. This is used to record metrics in the
+  // embedder. This covers federated and webauthn assisted logins.
+  virtual void RecordAssistedLogin(AssistedLoginType login_type);
 };
 
 }  // namespace content

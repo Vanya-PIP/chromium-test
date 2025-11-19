@@ -151,6 +151,7 @@ class AnimationClock;
 class AriaNotificationOptions;
 class Attr;
 class BeforeUnloadEventListener;
+class ViewTransitionSupplement;
 class CaretPosition;
 class CaretPositionFromPointOptions;
 class CDATASection;
@@ -187,6 +188,7 @@ class Event;
 class EventFactoryBase;
 class EventListener;
 class ExceptionState;
+class FocusOptions;
 class FocusedElementChangeObserver;
 class FontFaceSet;
 class FontMatchingMetrics;
@@ -1118,6 +1120,7 @@ class CORE_EXPORT Document : public ContainerNode,
   bool SetFocusedElement(Element*, const FocusParams&);
   void ClearFocusedElement(bool omit_blur_events = false);
   Element* FocusedElement() const { return focused_element_.Get(); }
+  const FocusOptions* GetFocusOptions() const { return focus_options_.Get(); }
   void ClearFocusedElementIfNeeded();
   void UpdateFocusgroupLastFocused(Element& focused_element);
   UserActionElementSet& UserActionElements() { return user_action_elements_; }
@@ -1718,10 +1721,10 @@ class CORE_EXPORT Document : public ContainerNode,
     return popover_pointerdown_target_.Get();
   }
   void SetPopoverPointerdownTarget(const HTMLElement*);
-  std::optional<gfx::PointF> CustomizableSelectMousedownLocation() const {
-    return customizable_select_mousedown_location_;
+  std::optional<gfx::PointF> PopoverPickerMousedownLocation() const {
+    return popover_picker_mousedown_location_;
   }
-  void SetCustomizableSelectMousedownLocation(std::optional<gfx::PointF>);
+  void SetPopoverPickerMousedownLocation(std::optional<gfx::PointF>);
   const HTMLDialogElement* DialogPointerdownTarget() const;
   void SetDialogPointerdownTarget(const HTMLDialogElement*);
 
@@ -1982,6 +1985,7 @@ class CORE_EXPORT Document : public ContainerNode,
   // A META element with name=responsive-embedded-sizing was added, removed, or
   // modified. Re-collect the META values.
   void ResponsiveEmbeddedSizingChanged();
+  void SetResponsiveEmbeddedSizing() { responsive_embedded_sizing_ = true; }
 
   // Use counter related functions.
   void CountUse(mojom::WebFeature feature) final;
@@ -2274,6 +2278,18 @@ class CORE_EXPORT Document : public ContainerNode,
   // if the registry is global, otherwise the effective global registry is
   // nullptr.
   CustomElementRegistry* EffectiveGlobalCustomElementRegistry() const;
+
+  ViewTransitionSupplement* GetViewTransitionsIfExists() const {
+    return view_transitions_;
+  }
+
+  ViewTransitionSupplement& GetViewTransitions() {
+    if (view_transitions_) {
+      return *view_transitions_;
+    } else {
+      return CreateViewTransitions();
+    }
+  }
 
  protected:
   void ClearXMLVersion() { xml_version_ = String(); }
@@ -2584,6 +2600,10 @@ class CORE_EXPORT Document : public ContainerNode,
   // pages' triggers can determine whether or not to block scripts.
   void UnblockScriptExecutionForPrerenderActivation();
 
+  // Slow path for GetViewTransitions() when view_transitions_ does not already
+  // exist.
+  ViewTransitionSupplement& CreateViewTransitions();
+
   // Mutable because the token is lazily-generated on demand if no token is
   // explicitly set.
   mutable std::optional<DocumentToken> token_;
@@ -2714,6 +2734,7 @@ class CORE_EXPORT Document : public ContainerNode,
   // We implement this as a Vector because its maximum size is typically 1.
   HeapVector<Member<Element>> autofocus_candidates_;
   Member<Element> focused_element_;
+  Member<const FocusOptions> focus_options_;
   Member<Range> sequential_focus_navigation_starting_point_;
   Member<Element> hover_element_;
   Member<Element> active_element_;
@@ -2924,8 +2945,8 @@ class CORE_EXPORT Document : public ContainerNode,
   HeapVector<Member<HTMLElement>> popover_hint_stack_;
   // The popover (if any) that received the most recent pointerdown event.
   Member<const HTMLElement> popover_pointerdown_target_;
-  // The mouse location for the mousedown that opened the select, if any.
-  std::optional<gfx::PointF> customizable_select_mousedown_location_;
+  // The mouse location for the mousedown that opened the picker, if any.
+  std::optional<gfx::PointF> popover_picker_mousedown_location_;
   // The dialog (if any) that received the most recent pointerdown event. This
   // is distinct from popover_pointerdown_target_ because the same pointer
   // action could trigger light dismiss on a containing popover and not a
@@ -3133,6 +3154,11 @@ class CORE_EXPORT Document : public ContainerNode,
   // Document owns pending preloads, prefetches and modulepreloads initiated by
   // link header so that they won't be incidentally GC-ed and cancelled.
   HeapHashSet<Member<const PendingLinkPreload>> pending_link_header_preloads_;
+
+  // Contains information about which view transitions exist for this document,
+  // and for any elements contained in it. Created dynamically on first call
+  // to GetViewTransitions().
+  Member<ViewTransitionSupplement> view_transitions_;
 
   // This is incremented when a module script is evaluated.
   // http://crbug.com/1079044

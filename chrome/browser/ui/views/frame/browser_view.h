@@ -30,6 +30,7 @@
 #include "chrome/browser/ui/views/frame/contents_container_view.h"
 #include "chrome/browser/ui/views/frame/contents_web_view.h"
 #include "chrome/browser/ui/views/frame/immersive_mode_controller.h"
+#include "chrome/browser/ui/views/frame/shadow_overlay_view.h"
 #include "chrome/browser/ui/views/frame/tab_strip_region_view.h"
 #include "chrome/browser/ui/views/intent_picker_bubble_view.h"
 #include "chrome/browser/ui/views/omnibox/omnibox_popup_closer.h"
@@ -39,6 +40,7 @@
 #include "components/enterprise/buildflags/buildflags.h"
 #include "components/infobars/core/infobar_container.h"
 #include "components/user_education/common/feature_promo/feature_promo_handle.h"
+#include "components/viz/common/frame_timing_details.h"
 #include "components/webapps/browser/banners/app_banner_manager.h"
 #include "content/public/browser/page_user_data.h"
 #include "content/public/browser/permission_controller.h"
@@ -247,7 +249,7 @@ class BrowserView : public BrowserWindow,
   // Container for the web contents.
   views::View* contents_container() { return contents_container_; }
 
-  views::View* main_container() { return main_container_; }
+  views::View* main_shadow_overlay() { return main_shadow_overlay_; }
 
   SidePanel* toolbar_height_side_panel() { return toolbar_height_side_panel_; }
 
@@ -750,8 +752,6 @@ class BrowserView : public BrowserWindow,
   bool AcceleratorPressed(const ui::Accelerator& accelerator) override;
 
   // ImmersiveModeController::Observer:
-  void OnImmersiveRevealStarted() override;
-  void OnImmersiveRevealEnded() override;
   void OnImmersiveFullscreenEntered() override;
   void OnImmersiveFullscreenExited() override;
   void OnImmersiveModeControllerDestroyed() override;
@@ -1030,7 +1030,10 @@ class BrowserView : public BrowserWindow,
       version_info::Channel,
       Profile* profile) const;
 
-  // Reparents |top_container_| to |main_container_| instead of |overlay_view_|.
+  // Reparents |top_container_| to |overlay_view_|.
+  void ReparentTopContainerForStartOfImmersive();
+
+  // Reparents |top_container_| to |main_container_|.
   void ReparentTopContainerForEndOfImmersive();
 
   // Ensures that the correct focus order is set for child views, regardless of
@@ -1095,6 +1098,11 @@ class BrowserView : public BrowserWindow,
   // when it should not be able to.
   void UpdateFullscreenAllowedFromPolicy(bool allowed_without_policy);
 
+  // Called when the a viz frame that contains the first paint of this browser
+  // view is successfully painted onto the screen for the first time.
+  // `frame_timing_details` contains the paint timing information of the frame.
+  void OnFirstPresentation(const viz::FrameTimingDetails& frame_timing_details);
+
   class ExclusiveAccessContextImpl;
   std::unique_ptr<ExclusiveAccessContextImpl> exclusive_access_context_;
 
@@ -1112,39 +1120,38 @@ class BrowserView : public BrowserWindow,
   // |------------------------------------------------------------------------|
   // | Web App toolbar and title (web_app_frame_toolbar_)(no immersive)       |
   // |------------------------------------------------------------------------|
-  // | MainContainer (main_container_)                                        |
+  // | TopContainerView (top_container)                                       |
+  // |  -------------------------------------------------------------------|  |
+  // |  | Tabs (tab_strip_region_view)(immersive)                          |  |
+  // |  |------------------------------------------------------------------|  |
+  // |  | Web app toolbar and title (web_app_frame_toolbar_)(immersive)    |  |
+  // |  |------------------------------------------------------------------|  |
+  // |  | Navigation buttons, address bar, menu (toolbar_)                 |  |
+  // |  |------------------------------------------------------------------|  |
+  // |  | Bookmarks (bookmark_bar_view_)                                   |  |
+  // |  -------------------------------------------------------------------|  |
   // |------------------------------------------------------------------------|
-  // |  | TopContainerView (top_container)                                    |
-  // |  |  ----------------------------------------------------------------|  |
-  // |  |  | Tabs (tab_strip_region_view)(immersive)                       |  |
-  // |  |  |---------------------------------------------------------------|  |
-  // |  |  | Web app toolbar and title (web_app_frame_toolbar_)(immersive) |  |
-  // |  |  |---------------------------------------------------------------|  |
-  // |  |  | Navigation buttons, address bar, menu (toolbar_)              |  |
-  // |  |  |---------------------------------------------------------------|  |
-  // |  |  | Bookmarks (bookmark_bar_view_)                                |  |
-  // |  |  ----------------------------------------------------------------|  |
-  // |  |---------------------------------------------------------------------|
-  // |  | All infobars (infobar_container_)                                   |
-  // |  |---------------------------------------------------------------------|
-  // |  | Contents container (contents_container_)                            |
-  // |  |  -----------------------------------------------------------------  |
-  // |  |  |  contents_web_view_ (or multi_contents_view_ if defined       |  |
-  // |  |  -----------------------------------------------------------------  |
-  // |  |---------------------------------------------------------------------|
-  // |  | ContentHeightSidePanel (contents_height_side_panel_)                |
-  // |  |---------------------------------------------------------------------|
+  // | All infobars (infobar_container_)                                      |
+  // |------------------------------------------------------------------------|
+  // | Contents container (contents_container_)                               |
+  // |  --------------------------------------------------------------------  |
+  // |  |  contents_web_view_ (or multi_contents_view_ if defined          |  |
+  // |  --------------------------------------------------------------------  |
+  // |------------------------------------------------------------------------|
+  // | ContentHeightSidePanel (contents_height_side_panel_)                   |
   // |------------------------------------------------------------------------|
   // | ToolbarHeightSidePanel ()                                              |
+  // |------------------------------------------------------------------------|
+  // | Shadow Overlay (frames main browser area in some situations)           |
   // --------------------------------------------------------------------------
 
   // The view that draws the background the main_container and
   // toolbar_height_side_panel are displayed on.
-  raw_ptr<views::View> main_region_ = nullptr;
+  raw_ptr<views::View> main_background_region_ = nullptr;
 
   // The view that contains the primary UI (Toolbar, BookmarksBar, InfoBar,
   // WebContents, and Side panel).
-  raw_ptr<views::View> main_container_ = nullptr;
+  raw_ptr<ShadowOverlayView> main_shadow_overlay_ = nullptr;
 
   // The view that manages the tab strip, toolbar, and sometimes the bookmark
   // bar. Stacked top in the view hiearachy so it can be used to slide out
@@ -1153,6 +1160,10 @@ class BrowserView : public BrowserWindow,
   // in immersive fullscreen mode. In all other cases, they live directly in
   // BrowserView.
   raw_ptr<TopContainerView> top_container_ = nullptr;
+  // The insertion index of the top container in the BrowserView view tree.
+  // This is used to correctly reparent the top container when exiting
+  // fullscreen mode. See BrowserView::ReparentTopContainerForEndOfImmersive.
+  std::optional<size_t> top_container_insertion_index_;
 
   // Menu button and page status icons. Only used by web-app windows.
   raw_ptr<WebAppFrameToolbarView> web_app_frame_toolbar_ = nullptr;
@@ -1165,6 +1176,10 @@ class BrowserView : public BrowserWindow,
 
   // The view that contains the tabstrip, new tab button, and grab handle space.
   raw_ptr<TabStripRegionView> tab_strip_region_view_ = nullptr;
+  // The insertion index of the TabStripRegionView in the BrowserView view tree.
+  // This is used to correctly reparent the tabstrip when exiting fullscreen
+  // mode. See BrowserView::ReparentTopContainerForEndOfImmersive.
+  std::optional<size_t> tab_strip_region_insertion_index_;
 
   // The webui based tabstrip, when applicable. see https://crbug.com/989131.
   raw_ptr<WebUITabStripContainerView> webui_tab_strip_ = nullptr;

@@ -92,6 +92,7 @@
 #include "third_party/blink/public/common/origin_trials/trial_token_validator.h"
 #include "third_party/blink/public/common/security/protocol_handler_security_level.h"
 #include "third_party/blink/public/common/thread_safe_browser_interface_broker_proxy.h"
+#include "third_party/blink/public/mojom/cpu_performance.mojom.h"
 #include "third_party/blink/public/mojom/indexeddb/indexeddb.mojom.h"
 #include "third_party/blink/public/mojom/peerconnection/webrtc_ip_handling_policy.mojom.h"
 #include "third_party/blink/public/mojom/service_worker/service_worker_provider.mojom.h"
@@ -1073,6 +1074,16 @@ SkBitmap* RendererBlinkPlatformImpl::GetSadPageBitmap() {
 
 //------------------------------------------------------------------------------
 
+blink::mojom::PerformanceTier
+RendererBlinkPlatformImpl::GetCpuPerformanceTier() {
+  if (auto* render_thread = RenderThreadImpl::current()) {
+    return render_thread->GetCpuPerformanceTier();
+  }
+  return blink::mojom::PerformanceTier::kUnknown;
+}
+
+//------------------------------------------------------------------------------
+
 std::unique_ptr<blink::WebV8ValueConverter>
 RendererBlinkPlatformImpl::CreateWebV8ValueConverter() {
   return std::make_unique<V8ValueConverterImpl>();
@@ -1169,6 +1180,11 @@ std::pair<base::TimeDelta, base::TimeDelta> RendererBlinkPlatformImpl::
 #endif  // BUILDFLAG(IS_ANDROID)
 
 void RendererBlinkPlatformImpl::OnV8HeapLastResortGC() {
+  // In --single-process mode, the RendererMemoryCoordinatorPolicy does not run.
+  if (base::CommandLine::ForCurrentProcess()->HasSwitch(
+          switches::kSingleProcess)) {
+    return;
+  }
   RendererMemoryCoordinatorPolicy::Get().OnV8HeapLastResortGC();
 }
 

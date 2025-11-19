@@ -14,14 +14,15 @@
 #include "base/containers/span.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
+#include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
-#include "chrome/browser/ui/omnibox/features.h"
 #include "chrome/browser/ui/omnibox/omnibox_controller.h"
 #include "chrome/browser/ui/omnibox/omnibox_edit_model.h"
+#include "chrome/browser/ui/omnibox/omnibox_next_features.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/browser/ui/views/location_bar/location_bar_view.h"
 #include "chrome/browser/ui/views/omnibox/omnibox_header_view.h"
@@ -258,8 +259,8 @@ OmniboxPopupViewViews::OmniboxPopupViewViews(OmniboxViewViews* omnibox_view,
     : OmniboxPopupView(controller),
       omnibox_view_(omnibox_view),
       location_bar_view_(location_bar_view) {
-  model()->set_popup_view(this);
-  edit_model_observation_.Observe(model());
+  controller->edit_model()->set_popup_view(this);
+  edit_model_observation_.Observe(controller->edit_model());
 
   if (omnibox_view_) {
     GetViewAccessibility().SetPopupForId(
@@ -285,7 +286,7 @@ OmniboxPopupViewViews::~OmniboxPopupViewViews() {
     widget_->RemoveObserver(&widget_observer_helper_);
   }
   CHECK(!widget_observer_helper_.IsInObserverList());
-  model()->set_popup_view(nullptr);
+  controller()->edit_model()->set_popup_view(nullptr);
   UpdateAccessibleControlIds();
 }
 
@@ -296,15 +297,17 @@ gfx::Image OmniboxPopupViewViews::GetMatchIcon(
   bool dark_mode =
       color_provider && color_utils::IsDark(color_provider->GetColor(
                             kColorOmniboxResultsBackground));
-  return model()->GetMatchIcon(match, vector_icon_color, dark_mode);
+  return controller()->edit_model()->GetMatchIcon(match, vector_icon_color,
+                                                  dark_mode);
 }
 
 void OmniboxPopupViewViews::SetSelectedIndex(size_t index) {
   DCHECK(HasMatchAt(index));
-  if (index != model()->GetPopupSelection().line) {
+  if (index != controller()->edit_model()->GetPopupSelection().line) {
     OmniboxPopupSelection::LineState line_state = OmniboxPopupSelection::NORMAL;
-    model()->SetPopupSelection(OmniboxPopupSelection(index, line_state));
-    OnPropertyChanged(model(), views::kPropertyEffectsNone);
+    controller()->edit_model()->SetPopupSelection(
+        OmniboxPopupSelection(index, line_state));
+    OnPropertyChanged(controller()->edit_model(), views::kPropertyEffectsNone);
   }
 }
 
@@ -313,7 +316,7 @@ size_t OmniboxPopupViewViews::GetSelectedIndex() const {
 }
 
 OmniboxPopupSelection OmniboxPopupViewViews::GetSelection() const {
-  return model()->GetPopupSelection();
+  return controller()->edit_model()->GetPopupSelection();
 }
 
 void OmniboxPopupViewViews::UpdatePopupBounds() {
@@ -496,6 +499,11 @@ std::u16string_view OmniboxPopupViewViews::GetAccessibleButtonTextForResult(
   return static_cast<const views::LabelButton*>(button)->GetText();
 }
 
+raw_ptr<OmniboxPopupViewWebUI>
+OmniboxPopupViewViews::GetOmniboxPopupViewWebUI() {
+  return nullptr;
+}
+
 bool OmniboxPopupViewViews::OnMouseDragged(const ui::MouseEvent& event) {
   const size_t index = GetIndexForPoint(event.location());
 
@@ -528,20 +536,14 @@ void OmniboxPopupViewViews::OnGestureEvent(ui::GestureEvent* event) {
     case ui::EventType::kGestureTap:
     case ui::EventType::kGestureScrollEnd: {
       DCHECK(HasMatchAt(index));
-      model()->OpenSelection(OmniboxPopupSelection(index), event->time_stamp());
+      controller()->edit_model()->OpenSelection(OmniboxPopupSelection(index),
+                                                event->time_stamp());
       break;
     }
     default:
       return;
   }
   event->SetHandled();
-}
-
-void OmniboxPopupViewViews::FireAXEventsForNewActiveDescendant(
-    View* descendant_view) {
-  // Selected children changed is fired on the popup.
-  NotifyAccessibilityEventDeprecated(ax::mojom::Event::kSelectedChildrenChanged,
-                                     true);
 }
 
 void OmniboxPopupViewViews::OnWidgetBoundsChanged(views::Widget* widget,
@@ -617,6 +619,17 @@ void OmniboxPopupViewViews::OnMatchIconUpdated(size_t match_index) {
   if (OmniboxResultView* result_view = result_view_at(match_index)) {
     result_view->OnMatchIconUpdated();
   }
+}
+
+void OmniboxPopupViewViews::OnContentsChanged() {
+  UpdatePopupAppearance();
+}
+
+void OmniboxPopupViewViews::FireAXEventsForNewActiveDescendant(
+    View* descendant_view) {
+  // Selected children changed is fired on the popup.
+  NotifyAccessibilityEventDeprecated(ax::mojom::Event::kSelectedChildrenChanged,
+                                     true);
 }
 
 gfx::Rect OmniboxPopupViewViews::GetTargetBounds() const {
@@ -776,7 +789,8 @@ std::u16string OmniboxPopupViewViews::UpdateRowView(
     const AutocompleteMatch& match,
     const std::u16string& previous_row_header) {
   std::u16string current_row_header =
-      model()->GetSuggestionGroupHeaderText(match.suggestion_group_id);
+      controller()->edit_model()->GetSuggestionGroupHeaderText(
+          match.suggestion_group_id);
   // Show the header if it's distinct from the previous match's header.
   if (!current_row_header.empty() &&
       current_row_header != previous_row_header) {
@@ -791,7 +805,8 @@ std::u16string OmniboxPopupViewViews::UpdateRowView(
   result_view->SetVisible(!controller()->IsSuggestionHidden(match));
 
   const SkBitmap* bitmap =
-      model()->GetPopupRichSuggestionBitmap(row_view->line());
+      controller()->edit_model()->GetPopupRichSuggestionBitmap(
+          row_view->line());
   if (bitmap) {
     result_view->SetRichSuggestionImage(
         gfx::ImageSkia::CreateFrom1xBitmap(*bitmap));

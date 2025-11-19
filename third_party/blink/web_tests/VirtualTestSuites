@@ -28,6 +28,27 @@
   "content_shell.filter so that they can be run in blink_wpt_tests step.",
   "TODO(crbug.com/380755410): Find a way to do this systematically.",
 
+  {
+    "prefix": "ai_relax_user_activation",
+    "platforms": ["Linux", "Mac", "Win"],
+    "bases": [
+      "external/wpt/ai/language-model/language-model-create-sticky-user-activation.tentative.https.window.js"
+    ],
+    "args": ["--enable-features=AIRelaxUserActivationReqs"],
+    "exclusive_tests": "ALL",
+    "owners": ["msw@chromium.org", "iahouma@google.com", "chrome-chia@google.com"],
+    "expires": "never"
+  },
+  {
+    "prefix": "ai_require_transient_user_activation",
+    "platforms": ["Linux", "Mac", "Win"],
+    "bases": [
+      "external/wpt/ai/language-model/language-model-create-transient-user-activation.tentative.https.window.js"
+    ],
+    "args": ["--disable-features=AIRelaxUserActivationReqs"],
+    "owners": ["msw@chromium.org", "iahouma@google.com", "chrome-chia@google.com"],
+    "expires": "never"
+  },
   "This suite tests some android features on Linux and should never expire.",
   {
     "prefix": "android",
@@ -390,7 +411,7 @@
     ]
   },
   {
-    "prefix": "css-anchor-update-enabled",
+    "prefix": "css-anchor-update-disabled",
     "owners": [
       "ikilpatrick@chromium.org",
       "rendering-core-dev@chromium.org"
@@ -404,7 +425,7 @@
       "external/wpt/css/css-anchor-position"
     ],
     "args": [
-      "--enable-blink-features=CSSAnchorUpdate"
+      "--disable-blink-features=CSSAnchorUpdate"
     ],
     "expires": "Aug 13, 2026"
   },
@@ -547,26 +568,6 @@
       "--blink-settings=preferredColorScheme=0"
     ],
     "expires": "never"
-  },
-  {
-    "prefix": "dark-mode-classifier-transparency-and-num-colors",
-    "owners": [
-      "peconn@chromium.org",
-      "pdr@chromium.org"
-    ],
-    "platforms": [
-      "Linux",
-      "Mac",
-      "Win"
-    ],
-    "bases": [
-      "dark-mode/images"
-    ],
-    "args": [
-      "--blink-settings=preferredColorScheme=0,forceDarkModeEnabled=true",
-      "--dark-mode-settings=ImageClassifierPolicy=1"
-    ],
-    "expires": "Jul 1, 2026"
   },
   {
     "prefix": "dark-mode-default",
@@ -1177,11 +1178,11 @@
     ],
     "bases": [
       "wpt_internal/fenced_frame",
-      "wpt_internal/shared-worker/back-forward-cache/shared-worker-with-fenced-frame-client.tentative.https.window.js"
+      "wpt_internal/shared-worker/back-forward-cache/shared-worker-with-fenced-frame-client.https.window.js"
     ],
     "exclusive_tests": [
       "wpt_internal/fenced_frame",
-      "wpt_internal/shared-worker/back-forward-cache/shared-worker-with-fenced-frame-client.tentative.https.window.js"
+      "wpt_internal/shared-worker/back-forward-cache/shared-worker-with-fenced-frame-client.https.window.js"
     ],
     "args": [
       "--enable-features=PrivacySandboxAdsAPIsOverride,Fledge,AdInterestGroupAPI,FencedFramesEnforceFocus,FencedFramesLocalUnpartitionedDataAccess,ExemptUrlFromNetworkRevocationForTesting,FencedFramesCrossOriginEventReportingAllTraffic,FencedFramesReportEventHeaderChanges,FencedFramesDefaultMode"
@@ -2523,7 +2524,7 @@
     ],
     "bases": [],
     "args": [
-      "--disable-blink-features=PermissionElement,GeolocationElement"
+      "--disable-blink-features=PermissionElement,GeolocationElement,InstallElement"
     ],
     "owners": [
       "permissions-core@google.com"
@@ -3743,6 +3744,78 @@
       "external/wpt/wasm/jsapi/constructor/validate.any.shadowrealm-in-window.html",
       "external/wpt/wasm/jsapi/constructor/validate.https.any.shadowrealm-in-audioworklet.html",
       "external/wpt/wasm/jsapi/constructor/validate.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/exports.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/exports.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/exports.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/exports.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/exports.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/exports.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports-live-bindings.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports-live-bindings.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports-live-bindings.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports-live-bindings.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports-live-bindings.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports-live-bindings.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/global-exports.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/js-wasm-cycle.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/js-wasm-cycle.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/js-wasm-cycle.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/js-wasm-cycle.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/js-wasm-cycle.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/js-wasm-cycle.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/mutable-global-sharing.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/mutable-global-sharing.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/mutable-global-sharing.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/mutable-global-sharing.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/mutable-global-sharing.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/mutable-global-sharing.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/namespace-instance.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/namespace-instance.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/namespace-instance.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/namespace-instance.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/namespace-instance.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/namespace-instance.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/resolve-export.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/resolve-export.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/resolve-export.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/resolve-export.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/resolve-export.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/resolve-export.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase-string-builtins.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase-string-builtins.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase-string-builtins.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase-string-builtins.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase-string-builtins.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase-string-builtins.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/source-phase.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/string-builtins.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/string-builtins.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/string-builtins.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/string-builtins.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/string-builtins.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/string-builtins.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/v128-tdz.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/v128-tdz.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/v128-tdz.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/v128-tdz.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/v128-tdz.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/v128-tdz.tentative.https.any.shadowrealm-in-serviceworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/wasm-import-wasm-export.tentative.any.shadowrealm-in-dedicatedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/wasm-import-wasm-export.tentative.any.shadowrealm-in-shadowrealm.html",
+      "external/wpt/wasm/jsapi/esm-integration/wasm-import-wasm-export.tentative.any.shadowrealm-in-sharedworker.html",
+      "external/wpt/wasm/jsapi/esm-integration/wasm-import-wasm-export.tentative.any.shadowrealm-in-window.html",
+      "external/wpt/wasm/jsapi/esm-integration/wasm-import-wasm-export.tentative.https.any.shadowrealm-in-audioworklet.html",
+      "external/wpt/wasm/jsapi/esm-integration/wasm-import-wasm-export.tentative.https.any.shadowrealm-in-serviceworker.html",
       "external/wpt/wasm/jsapi/exception/basic.tentative.any.shadowrealm-in-dedicatedworker.html",
       "external/wpt/wasm/jsapi/exception/basic.tentative.any.shadowrealm-in-shadowrealm.html",
       "external/wpt/wasm/jsapi/exception/basic.tentative.any.shadowrealm-in-sharedworker.html",
@@ -4315,25 +4388,6 @@
     "expires": "never"
   },
   {
-    "prefix": "svg2-cascade",
-    "owners": [
-      "futhark@chromium.org",
-      "pdr@chromium.org"
-    ],
-    "platforms": [
-      "Linux"
-    ],
-    "bases": [
-      "external/wpt/svg",
-      "paint/invalidation/svg",
-      "svg"
-    ],
-    "args": [
-      "--enable-blink-features=Svg2Cascade"
-    ],
-    "expires": "Dec 1, 2025"
-  },
-  {
     "prefix": "enable-shared-worker-bfcache",
     "owners": ["annasato@chromium.org"],
     "platforms": ["Mac", "Win", "Linux"],
@@ -4868,6 +4922,17 @@
     ],
     "args": [
       "--disable-features=DeprecateUnload"
+    ],
+    "exclusive_tests": [
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/001.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/002.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/003.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/004.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/005.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/unload/004.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/unload/007.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/unload/unload-main-frame-same-origin.window.js",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/unload/unload-main-frame-cross-origin.window.js"
     ],
     "expires": "Jun 1, 2026",
     "owners": [
@@ -5956,6 +6021,51 @@
     ],
     "expires": "Oct 24, 2026"
   },
+  "Currently, XSLT is disabled on ToT for tests, via the",
+  "fieldtrial_testing_config.json file which disables the XSLTSpecialTrial",
+  "flag. The `xslt-enabled` virtual suite re-enables the XSLTSpecialTrial",
+  "flag, which should re-enable XSLT. The `xslt-disabled` virtual suite",
+  "re-enables the XSLTSpecialTrial flag and disables the main XSLT flag,",
+  "which should keep XSLT disabled.",
+  {
+    "prefix": "xslt-enabled",
+    "platforms": ["Linux", "Mac", "Win"],
+    "bases": [
+      "fast/parser",
+      "fast/xsl",
+      "external/wpt/dom/xslt",
+      "http/tests/xsl",
+      "external/wpt/content-security-policy/xslt/xsltprocessor-include-blocked.html",
+      "external/wpt/fetch/metadata/xslt.https.sub.html",
+      "fast/css/dumpAsText/xml-stylesheet-pi-not-in-prolog.xml",
+      "http/tests/document-policy/resources/document-policy-in-xsl.xslt",
+      "http/tests/inspector-protocol/issues/xsltpi-issue.js",
+      "http/tests/inspector-protocol/issues/xsltprocessor-issue.js",
+      "http/tests/loading/css-no-cache-revalidation.html",
+      "http/tests/misc/xslt-bad-import.html",
+      "http/tests/permissions-policy/permissions-policy-frame-policy-in-xsl.html",
+      "http/tests/security/contentSecurityPolicy/xsl-blocked.php",
+      "http/tests/security/contentSecurityPolicy/xsl-unaffected-by-style-src-1.php",
+      "inspector-protocol/debugger/unpause-after-xslt-commit.js",
+      "loader/resources/document-updated-by-xslt.svg",
+      "svg/custom/invalid-xslt-crash.svg",
+      "xmlviewer/long-multi-byte-char.xml"
+    ],
+    "exclusive_tests": [
+      "http/tests/inspector-protocol/issues/xsltpi-issue.js",
+      "http/tests/inspector-protocol/issues/xsltprocessor-issue.js",
+      "http/tests/loading/css-no-cache-revalidation.html",
+      "http/tests/permissions-policy/permissions-policy-frame-policy-in-xsl.html"
+    ],
+    "args": [ "--enable-blink-features=XSLTSpecialTrial" ],
+    "owners": [
+      "masonf@chromium.org"
+    ],
+    "expires": "Aug 1, 2026"
+  },
+  "This suite just verifies that both XSLT-disabled flags work. The main ToT",
+  "code verifies XSLTSpecialTrial, since it is enabled via fieldtrial testing",
+  "config. This virtual suite verifies the XSLT flag.",
   {
     "prefix": "xslt-disabled",
     "platforms": ["Linux", "Mac", "Win"],
@@ -5971,10 +6081,28 @@
       "svg/custom/invalid-xslt-crash.svg",
       "external/wpt/fetch/metadata/xslt.https.sub.html"
     ],
-    "args": [ "--disable-blink-features=XSLT" ],
+    "args": [
+      "--disable-blink-features=XSLT",
+      "--enable-blink-features=XSLTSpecialTrial"
+    ],
     "owners": [
       "masonf@chromium.org"
     ],
     "expires": "Aug 1, 2026"
+  },
+  {
+    "prefix": "rust-xml",
+    "platforms": ["Linux"],
+    "bases": [
+      "fast/xmlhttprequest/",
+      "external/wpt/custom-elements/parser/parser-uses-create-an-element-for-a-token-svg.svg",
+      "external/wpt/svg/painting",
+      "http/tests/security/contentTypeOptions/xml-external-entity.xml"
+    ],
+    "args": [ "--enable-features=XMLParsingRust" ],
+    "owners": [
+      "drott@chromium.org"
+    ],
+    "expires": "Nov 1, 2026"
   }
 ]

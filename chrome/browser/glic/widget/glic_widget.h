@@ -50,19 +50,15 @@ class GlicWidget : public views::Widget, public ThemeServiceObserver {
   // True if |bounds| is an allowed position the Widget can be shown in.
   static bool IsWidgetLocationAllowed(const gfx::Rect& bounds);
 
-  // Create a widget with the given bounds.
-  static std::unique_ptr<GlicWidget> Create(
-      Profile* profile,
-      const gfx::Rect& initial_bounds,
-      base::WeakPtr<ui::AcceleratorTarget> accelerator_delegate,
+  static std::unique_ptr<views::WidgetDelegate> CreateWidgetDelegate(
+      std::unique_ptr<GlicView> contents_view,
       bool user_resizable);
 
-  // Returns the last requested size, given by glic_size, clamped between the
-  // widget's minimum size and a maximum size (or the initial size if none is
-  // set).
-  static gfx::Size GetLastRequestedSizeClamped(
-      const GlicWidget* glic_widget,
-      std::optional<gfx::Size> glic_size);
+  // Create a widget with the given bounds.
+  static std::unique_ptr<GlicWidget> Create(views::WidgetDelegate* delegate,
+                                            Profile* profile,
+                                            const gfx::Rect& initial_bounds,
+                                            bool user_resizable);
 
   // Get the most-overlapping display.
   display::Display GetDisplay();

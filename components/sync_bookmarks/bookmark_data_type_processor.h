@@ -6,6 +6,7 @@
 #define COMPONENTS_SYNC_BOOKMARKS_BOOKMARK_DATA_TYPE_PROCESSOR_H_
 
 #include <memory>
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -122,6 +123,11 @@ class BookmarkDataTypeProcessor : public syncer::DataTypeProcessor,
   // entities.
   void NudgeForCommitIfNeeded();
 
+  // Returns true if the given `count` of bookmarks exceeds the sync limit. An
+  // `offset` can be provided for cases where the exact count is not known.
+  bool DoesCountExceedBookmarksSyncLimit(size_t count,
+                                         size_t offset = 0) const;
+
   // Performs the required clean up when bookmark model is being deleted.
   void OnBookmarkModelBeingDeleted();
 
@@ -144,6 +150,20 @@ class BookmarkDataTypeProcessor : public syncer::DataTypeProcessor,
   // Honors `wipe_model_upon_sync_disabled_behavior_`, i.e. deletes all
   // bookmarks in the model depending on the selected behavior.
   void TriggerWipeModelUponSyncDisabledBehavior();
+
+  // Handles the error state from the given `model_metadata` if a previous sync
+  // cycle reported an error. Returns true if there was an error to be handled.
+  [[nodiscard]] bool HandlePreviousErrorState(
+      const sync_pb::BookmarkModelMetadata& model_metadata);
+
+  // Handles the case where metadata needs to be cleared when the model is
+  // ready. Returns true if there was a pending clear metadata operation.
+  [[nodiscard]] bool HandlePendingClearMetadata(
+      const std::string& metadata_str);
+
+  // Processes the metadata and initializes the tracker if the metadata is valid
+  // and there was no previous error.
+  void ProcessMetadataAndMaybeInitTracker(const std::string& metadata_str);
 
   // Creates a DictionaryValue for local and remote debugging information about
   // `node` and appends it to `all_nodes`. It does the same for child nodes
@@ -212,7 +232,7 @@ class BookmarkDataTypeProcessor : public syncer::DataTypeProcessor,
   std::unique_ptr<BookmarkModelObserverImpl> bookmark_model_observer_;
 
   // This member variable exists only to allow tests to override the limit.
-  size_t max_bookmarks_till_sync_enabled_;
+  std::optional<size_t> sync_bookmarks_limit_for_tests_;
 
   // Marks whether metadata should be cleared upon ModelReadyToSync(). True if
   // ClearMetadataIfStopped() is called before ModelReadyToSync().

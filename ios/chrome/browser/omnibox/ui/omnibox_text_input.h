@@ -46,6 +46,9 @@
 /// Input accessory view.
 @property(nonatomic, strong) UIView* inputAccessoryView;
 
+/// A string that represents the current value of the accessibility element.
+@property(nonatomic, readonly) NSString* accessibilityValue;
+
 /// Returns the underlying view of the text input.
 - (UIView*)view;
 
@@ -123,6 +126,9 @@
 - (void)enterPreEditState;
 - (void)exitPreEditState;
 - (BOOL)isPreEditing;
+
+/// Current omnibox font.
+- (UIFont*)currentFont;
 
 @end
 

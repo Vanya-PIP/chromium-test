@@ -7,8 +7,15 @@
 #include "base/apple/foundation_util.h"
 #include "base/command_line.h"
 #include "base/files/file_path.h"
+<<<<<<< HEAD
 #include "base/files/file_util.h"
 #include "base/test"
+||||||| b30439823e517
+#include "base/files/file_util.h"
+#include "base/logging.h"
+=======
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "base/test/allow_check_is_test_for_testing.h"
 #include "base/test/gtest_util.h"
 #include "base/test/test_support_ios.h"

@@ -100,6 +100,11 @@ IN_PROC_BROWSER_TEST_F(CrComponentsSearchboxTest, RealboxLensTest) {
   RunTest("cr_components/searchbox/searchbox_lens_test.js", "mocha.run()");
 }
 
+IN_PROC_BROWSER_TEST_F(CrComponentsSearchboxTest, SearchboxDropdownTest) {
+  set_test_loader_host(chrome::kChromeUINewTabPageHost);
+  RunTest("cr_components/searchbox/searchbox_dropdown_test.js", "mocha.run()");
+}
+
 IN_PROC_BROWSER_TEST_F(CrComponentsSearchboxTest, SearchboxIconTest) {
   set_test_loader_host(chrome::kChromeUINewTabPageHost);
   RunTest("cr_components/searchbox/searchbox_icon_test.js", "mocha.run()");
@@ -193,9 +198,9 @@ IN_PROC_BROWSER_TEST_F(CrComponentsMostVisitedTest, ShowAddButton) {
           "runMochaSuite('ShowAddButton');");
 }
 
-IN_PROC_BROWSER_TEST_F(CrComponentsMostVisitedTest, ShowMoreButton) {
+IN_PROC_BROWSER_TEST_F(CrComponentsMostVisitedTest, ExpandableTiles) {
   RunTest("cr_components/most_visited_test.js",
-          "runMochaSuite('ShowMoreButton');");
+          "runMochaSuite('ExpandableTiles');");
 }
 
 typedef WebUIMochaBrowserTest CrComponentsThemeColorPickerTest;
@@ -258,4 +263,9 @@ IN_PROC_BROWSER_TEST_F(CrComponentsComposeboxTest, ContextMenuEntrypoint) {
 
 IN_PROC_BROWSER_TEST_F(CrComponentsComposeboxTest, RecentTabChip) {
   RunTest("cr_components/composebox/recent_tab_chip_test.js", "mocha.run()");
+}
+
+IN_PROC_BROWSER_TEST_F(CrComponentsComposeboxTest, ComposeboxVoiceSearch) {
+  RunTest("cr_components/composebox/composebox_voice_search_test.js",
+          "mocha.run()");
 }

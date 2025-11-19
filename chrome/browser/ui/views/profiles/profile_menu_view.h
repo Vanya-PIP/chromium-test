@@ -13,7 +13,6 @@
 #include <vector>
 
 #include "base/functional/callback_forward.h"
-#include "base/memory/weak_ptr.h"
 #include "build/build_config.h"
 #include "chrome/browser/password_manager/web_app_profile_switcher.h"
 #include "chrome/browser/profiles/avatar_menu.h"
@@ -106,6 +105,7 @@ class ProfileMenuView : public ProfileMenuViewBase {
   void OnManageProfilesButtonClicked();
   void OnEditProfileButtonClicked();
   void OnAutofillSettingsButtonClicked();
+  void OnYourSavedInfoSettingsButtonClicked();
   void OnBatchUploadButtonClicked(ActionableItem button_type);
 
   // We normally close the bubble any time it becomes inactive but this can lead

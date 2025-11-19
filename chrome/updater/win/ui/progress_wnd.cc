@@ -11,7 +11,14 @@
 #include <typeinfo>
 
 #include "base/check_op.h"
+<<<<<<< HEAD
 #include "base/test"
+||||||| b30439823e517
+#include "base/logging.h"
+=======
+#include "base/debug/dump_without_crashing.h"
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "base/notreached.h"
 #include "base/process/launch.h"
 #include "base/strings/string_number_conversions_win.h"
@@ -111,7 +118,10 @@ ProgressWnd::ProgressWnd(WTL::CMessageLoop* message_loop, HWND parent)
 
 ProgressWnd::~ProgressWnd() {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
-  CHECK(!IsWindow());
+  if (IsWindow()) {
+    // TODO(crbug.com/447657543): replace with a check when the bug is fixed.
+    base::debug::DumpWithoutCrashing();
+  }
   cur_state_ = States::STATE_END;
 }
 

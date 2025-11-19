@@ -6,8 +6,15 @@
 
 #include <optional>
 
+<<<<<<< HEAD
 #include "base/hash/md5.h"
 #include "base/test"
+||||||| b30439823e517
+#include "base/hash/md5.h"
+#include "base/logging.h"
+=======
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "base/strings/strcat.h"
 #include "base/task/bind_post_task.h"
 #include "base/task/single_thread_task_runner.h"

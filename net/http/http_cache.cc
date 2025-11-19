@@ -13,7 +13,6 @@
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
 #include "base/feature_list.h"
-#include "base/files/file_util.h"
 #include "base/format_macros.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
@@ -692,9 +691,6 @@ std::string HttpCache::GetResourceURLFromHttpCacheKey(const std::string& key) {
 
 // static
 bool HttpCache::CanGenerateCacheKeyForRequest(const HttpRequestInfo& request) {
-  // WARNING: If this function is changed to look at `request.url` in future,
-  // it will break GenerateCacheKeyForRequestWithAlternateURL(). Add an extra
-  // `url` parameter instead.
   if (IsSplitCacheEnabled()) {
     if (request.network_isolation_key.IsTransient()) {
       return false;
@@ -773,13 +769,12 @@ std::string HttpCache::GenerateCacheKey(
 // static
 std::optional<std::string> HttpCache::GenerateCacheKeyForRequest(
     const HttpRequestInfo* request) {
-  return GenerateCacheKeyForRequestWithAlternateURL(request, request->url);
+  return GenerateCacheKeyInternal(*request, /*include_url=*/true);
 }
 
 // static
 std::optional<std::string> HttpCache::GenerateCacheKeyInternal(
     const HttpRequestInfo& request,
-    const GURL& url,
     bool include_url) {
   if (!CanGenerateCacheKeyForRequest(request)) {
     return std::nullopt;
@@ -789,26 +784,16 @@ std::optional<std::string> HttpCache::GenerateCacheKeyInternal(
       request.upload_data_stream ? request.upload_data_stream->identifier()
                                  : int64_t{0};
   return GenerateCacheKey(
-      url, request.load_flags, request.network_isolation_key,
+      request.url, request.load_flags, request.network_isolation_key,
       upload_data_identifier, request.is_subframe_document_resource,
       request.is_main_frame_navigation, request.is_shared_resource,
       request.initiator, include_url);
 }
 
 // static
-std::optional<std::string>
-HttpCache::GenerateCacheKeyForRequestWithAlternateURL(
-    const HttpRequestInfo* request,
-    const GURL& url) {
-  CHECK(request);
-  return GenerateCacheKeyInternal(*request, url, /*include_url=*/true);
-}
-
-// static
 std::optional<std::string> HttpCache::GenerateCachePartitionKeyForRequest(
     const HttpRequestInfo& request) {
-  return GenerateCacheKeyInternal(request, request.url,
-                                  /*include_url=*/false);
+  return GenerateCacheKeyInternal(request, /*include_url=*/false);
 }
 
 // static
@@ -1771,6 +1756,12 @@ void HttpCache::OnNoVarySearchCacheLoadComplete(
   auto provisional_no_vary_search_cache = std::move(no_vary_search_cache_);
   no_vary_search_cache_ = std::move(result.value());
   no_vary_search_cache_->MergeFrom(*provisional_no_vary_search_cache);
+  // The persisted cache may have had a different size than our current
+  // configuration. Reconfigure it and evict entries if necessary.
+  const size_t max_size = features::kHttpCacheNoVarySearchCacheMaxEntries.Get();
+  if (max_size >= 1) {
+    no_vary_search_cache_->SetMaxSize(max_size);
+  }
 }
 
 }  // namespace net

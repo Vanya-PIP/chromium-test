@@ -26,6 +26,7 @@ import org.chromium.chrome.browser.app.tab_activity_glue.ReparentingTask;
 import org.chromium.chrome.browser.compositor.CompositorViewHolder;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.multiwindow.MultiInstanceManager;
+import org.chromium.chrome.browser.multiwindow.MultiInstanceManager.NewWindowAppSource;
 import org.chromium.chrome.browser.prefetch.settings.PreloadPagesSettingsBridge;
 import org.chromium.chrome.browser.prefetch.settings.PreloadPagesState;
 import org.chromium.chrome.browser.profiles.Profile;
@@ -169,6 +170,8 @@ public class ChromeTabCreator implements TabCreator, NeedsTabModel, NeedsTabMode
                 return "TabListInterface";
             case TabLaunchType.FROM_LINK_CREATING_NEW_WINDOW:
                 return "LinkToNewWindow";
+            case TabLaunchType.FROM_TIPS_NOTIFICATIONS:
+                return "TipsNotifications";
             default:
                 assert false : "Unexpected serialization of tabLaunchType: " + tabLaunchType;
                 return "TypeUnknown";
@@ -473,7 +476,8 @@ public class ChromeTabCreator implements TabCreator, NeedsTabModel, NeedsTabMode
             mTabModel.addTab(tab, position, type, creationState);
             if (type == TabLaunchType.FROM_LINK_CREATING_NEW_WINDOW
                     && mMultiInstanceManager != null) {
-                mMultiInstanceManager.moveTabsToNewWindow(Collections.singletonList(tab));
+                mMultiInstanceManager.moveTabsToNewWindow(
+                        Collections.singletonList(tab), NewWindowAppSource.MENU);
             }
             return tab;
         }
@@ -766,6 +770,7 @@ public class ChromeTabCreator implements TabCreator, NeedsTabModel, NeedsTabMode
             case TabLaunchType.FROM_REPARENTING_BACKGROUND:
             case TabLaunchType.FROM_SPECULATIVE_BACKGROUND_CREATION:
             case TabLaunchType.FROM_TAB_LIST_INTERFACE:
+            case TabLaunchType.FROM_TIPS_NOTIFICATIONS:
                 // On low end devices tabs are backgrounded in a frozen state, so we set the
                 // transition type to RELOAD to avoid handling intents when the tab is foregrounded.
                 // (https://crbug.com/758027)

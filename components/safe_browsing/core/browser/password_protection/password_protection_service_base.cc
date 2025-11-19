@@ -126,13 +126,6 @@ bool PasswordProtectionServiceBase::ShouldShowModalWarning(
          IsWarningEnabled(password_type);
 }
 
-bool PasswordProtectionServiceBase::ShouldRunOtpPhishingVerdictCallback(
-    LoginReputationClientRequest::TriggerType trigger_type) const {
-  return trigger_type ==
-             LoginReputationClientRequest::ONE_TIME_PASSWORD_FIELD_DETECTED &&
-         otp_phishing_verdict_callback_.has_value();
-}
-
 LoginReputationClientResponse::VerdictType
 PasswordProtectionServiceBase::GetCachedVerdict(
     const GURL& url,
@@ -191,12 +184,13 @@ void PasswordProtectionServiceBase::RequestFinished(
       warning_shown = true;
     }
 
-    if (ShouldRunOtpPhishingVerdictCallback(request->trigger_type())) {
-      std::move(otp_phishing_verdict_callback_.value())
-          .Run(response->verdict_type() ==
-                   LoginReputationClientResponse::PHISHING ||
-               response->verdict_type() ==
-                   LoginReputationClientResponse::LOW_REPUTATION);
+    if (request->trigger_type() ==
+            LoginReputationClientRequest::ONE_TIME_PASSWORD_FIELD_DETECTED &&
+        request->HasOtpPhishingVerdictCallback()) {
+      request->TakeOtpPhishingVerdictCallback().Run(
+          response->verdict_type() == LoginReputationClientResponse::PHISHING ||
+          response->verdict_type() ==
+              LoginReputationClientResponse::LOW_REPUTATION);
     }
   }
 

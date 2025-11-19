@@ -106,8 +106,7 @@ void BrowserViewLayoutImplOld::Layout(views::View* browser_view) {
     LayoutVerticalTabStrip(available_bounds);
   }
 
-  views().main_container->SetBoundsRect(available_bounds);
-  gfx::Rect main_container_bounds = views().main_container->GetLocalBounds();
+  gfx::Rect main_container_bounds = available_bounds;
   main_container_bounds.set_y(available_bounds.y() +
                               delegate().GetTopInsetInBrowserView());
 
@@ -119,8 +118,7 @@ void BrowserViewLayoutImplOld::Layout(views::View* browser_view) {
   }
   LayoutToolbar(main_container_bounds);
 
-  dialog_top_y_ = main_container_bounds.y() + views().main_container->y() -
-                  kConstrainedWindowOverlap;
+  dialog_top_y_ = main_container_bounds.y() - kConstrainedWindowOverlap;
 
   LayoutBookmarkAndInfoBars(main_container_bounds);
 
@@ -152,15 +150,16 @@ gfx::Size BrowserViewLayoutImplOld::GetMinimumSize(
   // The minimum height for the normal (tabbed) browser window's contents area.
   constexpr int kMainBrowserContentsMinimumHeight = 1;
 
-  const bool has_tabstrip =
-      delegate().SupportsWindowFeature(Browser::FEATURE_TABSTRIP);
+  const bool has_tabstrip = delegate().SupportsWindowFeature(
+      Browser::WindowFeature::kFeatureTabStrip);
   const bool has_toolbar =
-      delegate().SupportsWindowFeature(Browser::FEATURE_TOOLBAR);
-  const bool has_location_bar =
-      delegate().SupportsWindowFeature(Browser::FEATURE_LOCATIONBAR);
+      delegate().SupportsWindowFeature(Browser::WindowFeature::kFeatureToolbar);
+  const bool has_location_bar = delegate().SupportsWindowFeature(
+      Browser::WindowFeature::kFeatureLocationBar);
   const bool has_bookmarks_bar =
       views().bookmark_bar && views().bookmark_bar->GetVisible() &&
-      delegate().SupportsWindowFeature(Browser::FEATURE_BOOKMARKBAR);
+      delegate().SupportsWindowFeature(
+          Browser::WindowFeature::kFeatureBookmarkBar);
 
   // TODO(crbug.com/437917495): Verify all callers have the correct bounds in
   // vertical and horizontal tabstrip modes.
@@ -579,8 +578,7 @@ void BrowserViewLayoutImplOld::LayoutInfoBar(gfx::Rect& available_bounds) {
       (delegate().IsTopControlsSlideBehaviorEnabled() &&
        delegate().GetTopControlsSlideBehaviorShownRatio() == 0.f)) {
     // Can be null in tests.
-    top = (views().main_container ? views().main_container->y() : 0) +
-          immersive_mode_controller->GetMinimumContentOffset();
+    top = immersive_mode_controller->GetMinimumContentOffset();
   }
   // The content usually starts at the bottom of the infobar. When there is an
   // extra infobar offset the infobar is shifted down while the content stays.

@@ -26,15 +26,15 @@ public class ContentFeatureList {
     public static final String ACCESSIBILITY_DEPRECATE_TYPE_ANNOUNCE =
             "AccessibilityDeprecateTypeAnnounce";
 
-    public static final String ACCESSIBILITY_INCLUDE_LONG_CLICK_ACTION =
-            "AccessibilityIncludeLongClickAction";
-
     public static final String ACCESSIBILITY_PAGE_ZOOM_V2 = "AccessibilityPageZoomV2";
 
     public static final String ANDROID_DESKTOP_ZOOM_SCALING = "AndroidDesktopZoomScaling";
 
     public static final String ACCESSIBILITY_POPULATE_SUPPLEMENTAL_DESCRIPTION_API =
             "AccessibilityPopulateSupplementalDescriptionApi";
+
+    public static final String ACCESSIBILITY_SET_SELECTABLE_ON_ALL_NODES_WITH_TEXT =
+            "AccessibilitySetSelectableOnAllNodesWithText";
 
     public static final String ACCESSIBILITY_UNIFIED_SNAPSHOTS = "AccessibilityUnifiedSnapshots";
     public static final String ACCESSIBILITY_MANAGE_BROADCAST_RECEIVER_ON_BACKGROUND =

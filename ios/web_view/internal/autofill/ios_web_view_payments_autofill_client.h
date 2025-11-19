@@ -10,6 +10,7 @@
 #include "base/containers/span.h"
 #include "base/functional/callback.h"
 #include "components/autofill/core/browser/payments/card_unmask_delegate.h"
+#include "components/autofill/core/browser/payments/multiple_request_payments_network_interface.h"
 #include "components/autofill/core/browser/payments/payments_autofill_client.h"
 #include "components/autofill/core/browser/ui/payments/card_unmask_prompt_options.h"
 #include "ios/web_view/internal/autofill/cwv_autofill_client_ios_bridge.h"
@@ -24,13 +25,14 @@ namespace autofill {
 
 class AutofillProgressDialogController;
 class BnplIssuer;
+struct BnplTosModel;
 class CardUnmaskOtpInputDialogController;
 class CardUnmaskPromptController;
 class CreditCardCvcAuthenticator;
+class CreditCardOtpAuthenticator;
 class CreditCardRiskBasedAuthenticator;
 class WebViewAutofillClientIOS;
 class PaymentsDataManager;
-class CreditCardRiskBasedAuthenticator;
 struct CardUnmaskChallengeOption;
 struct VirtualCardEnrollmentFields;
 class VirtualCardEnrollmentManager;
@@ -160,7 +162,7 @@ class IOSWebViewPaymentsAutofillClient : public PaymentsAutofillClient {
       base::WeakPtr<TouchToFillDelegate> delegate,
       std::vector<autofill::LoyaltyCard> loyalty_cards_to_suggest) override;
   bool UpdateTouchToFillBnplPaymentMethod(
-      std::optional<uint64_t> extracted_amount,
+      std::optional<int64_t> extracted_amount,
       bool is_amount_supported_by_any_issuer) override;
   bool ShowTouchToFillProgress(base::OnceClosure cancel_callback) override;
   bool ShowTouchToFillBnplIssuers(
@@ -169,6 +171,9 @@ class IOSWebViewPaymentsAutofillClient : public PaymentsAutofillClient {
       base::OnceCallback<void(autofill::BnplIssuer)> selected_issuer_callback,
       base::OnceClosure cancel_callback) override;
   bool ShowTouchToFillError(const AutofillErrorDialogContext& context) override;
+  bool ShowTouchToFillBnplTos(BnplTosModel model,
+                              base::OnceClosure accept_callback,
+                              base::OnceClosure cancel_callback) override;
   void HideTouchToFillPaymentMethod() override;
   void SetTouchToFillVisible(bool visible) override;
   PaymentsDataManager& GetPaymentsDataManager() final;
@@ -195,11 +200,16 @@ class IOSWebViewPaymentsAutofillClient : public PaymentsAutofillClient {
 
   std::unique_ptr<PaymentsNetworkInterface> payments_network_interface_;
 
+  std::unique_ptr<MultipleRequestPaymentsNetworkInterface>
+      multiple_request_payments_network_interface_;
+
   std::unique_ptr<CreditCardCvcAuthenticator> cvc_authenticator_;
 
   std::unique_ptr<CreditCardRiskBasedAuthenticator> risk_based_authenticator_;
 
   std::unique_ptr<payments::MandatoryReauthManager> payments_reauth_manager_;
+
+  std::unique_ptr<CreditCardOtpAuthenticator> otp_authenticator_;
 
   std::unique_ptr<VirtualCardEnrollmentManager>
       virtual_card_enrollment_manager_;

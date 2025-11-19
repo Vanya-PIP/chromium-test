@@ -189,12 +189,14 @@
   _omniboxMetricsRecorder =
       [[OmniboxMetricsRecorder alloc] initWithClient:_client.get()
                                            textModel:_omniboxTextModel.get()];
+  viewController.metricsRecorder = _omniboxMetricsRecorder;
   [_omniboxMetricsRecorder
       setAutocompleteController:[_omniboxAutocompleteController
                                     autocompleteController]];
 
   self.pasteDelegate = [[OmniboxTextFieldPasteDelegate alloc] init];
   [textInput setPasteDelegate:self.pasteDelegate];
+  self.pasteDelegate.textInput = textInput;
 
   _keyboardMediator = [[OmniboxAssistiveKeyboardMediator alloc] init];
   _keyboardMediator.applicationCommandsHandler =
@@ -262,6 +264,11 @@
 
   self.popupCoordinator = [self createPopupCoordinator:self.presenterDelegate];
   [self.popupCoordinator start];
+  if (IsMultilineBrowserOmniboxEnabled()) {
+    // Pre-render the input accessory view to make sure it shows on first launch
+    // crbug.com/458003863.
+    [self updateInputAccessoryView];
+  }
 }
 
 - (void)stop {
@@ -305,6 +312,10 @@
 
 - (void)endEditing {
   [_omniboxTextController endEditing];
+}
+
+- (void)acceptInput {
+  [self.mediator acceptInput];
 }
 
 - (void)insertTextToOmnibox:(NSString*)text {
@@ -374,10 +385,16 @@
 #pragma mark - OmniboxMediatorDelegate
 
 - (void)omniboxMediatorDidBeginEditing:(OmniboxMediator*)mediator {
+  [self updateInputAccessoryView];
+}
+
+#pragma mark - Private
+
+- (void)updateInputAccessoryView {
   BOOL showKeyboardAccessory =
       experimental_flags::IsOmniboxDebuggingEnabled() ||
       (!self.searchOnlyUI &&
-       _presentationContext != OmniboxPresentationContext::kAIMPrototype);
+       _presentationContext != OmniboxPresentationContext::kComposebox);
 
   if (!self.keyboardAccessoryView && showKeyboardAccessory) {
     TemplateURLService* templateURLService =

@@ -20,6 +20,7 @@ import org.chromium.chrome.browser.tab.TabAssociatedApp;
 import org.chromium.chrome.browser.tab.TabStateExtractor;
 import org.chromium.chrome.browser.tab.WebContentsState;
 import org.chromium.chrome.browser.tabmodel.TabModel;
+import org.chromium.chrome.browser.tabmodel.TabModelObserver;
 import org.chromium.chrome.browser.tabmodel.TabModelSelector;
 import org.chromium.chrome.browser.tabwindow.TabWindowManager;
 import org.chromium.chrome.browser.tabwindow.WindowId;
@@ -30,6 +31,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.function.Supplier;
 
 /** Saves Java-accessible data for use in C++. */
 @JNINamespace("tabs")
@@ -42,24 +44,35 @@ public class TabStoragePackager {
     private static class TabModelInfo {
         public final @WindowId int windowId;
         public final @TabModelType int tabModelType;
+        public final Supplier<@Nullable Tab> activeTabSupplier;
 
         /**
          * @param windowId The {@link WindowId} the {@link TabModel} is associated with.
          * @param tabModelType The type of tab model being saved.
+         * @param activeTabSupplier The supplier of the active tab in the tab model.
          */
-        TabModelInfo(@WindowId int windowId, @TabModelType int tabModelType) {
+        TabModelInfo(
+                @WindowId int windowId,
+                @TabModelType int tabModelType,
+                Supplier<@Nullable Tab> activeTabSupplier) {
             this.windowId = windowId;
             this.tabModelType = tabModelType;
+            this.activeTabSupplier = activeTabSupplier;
         }
 
         /**
          * @param windowId The {@link WindowId} the {@link TabModel} is associated with.
          * @param isOffTheRecord Whether the tab model is off the record.
+         * @param activeTabSupplier The supplier of the active tab in the tab model.
          */
         public static TabModelInfo createForWindowScopedModel(
-                @WindowId int windowId, boolean isOffTheRecord) {
+                @WindowId int windowId,
+                boolean isOffTheRecord,
+                Supplier<@Nullable Tab> activeTabSupplier) {
             return new TabModelInfo(
-                    windowId, isOffTheRecord ? TabModelType.INCOGNITO : TabModelType.REGULAR);
+                    windowId,
+                    isOffTheRecord ? TabModelType.INCOGNITO : TabModelType.REGULAR,
+                    activeTabSupplier);
         }
 
         /**
@@ -67,7 +80,10 @@ public class TabStoragePackager {
          *     ArchivedTabModelOrchestrator}.
          */
         public static TabModelInfo createForArchivedModel() {
-            return new TabModelInfo(TabWindowManager.INVALID_WINDOW_ID, TabModelType.ARCHIVED);
+            return new TabModelInfo(
+                    TabWindowManager.INVALID_WINDOW_ID,
+                    TabModelType.ARCHIVED,
+                    /* activeTabSupplier= */ () -> null);
         }
     }
 
@@ -121,11 +137,14 @@ public class TabStoragePackager {
         }
         assert tabModel != null && selector != null;
 
+        configureRemoveFromCacheOnDestroy(tabModel, collection);
+
         @WindowId
         int windowId = TabWindowManagerSingleton.getInstance().getWindowIdForSelector(selector);
         assert windowId != TabWindowManager.INVALID_WINDOW_ID;
 
-        return TabModelInfo.createForWindowScopedModel(windowId, tabModel.isOffTheRecord());
+        return TabModelInfo.createForWindowScopedModel(
+                windowId, tabModel.isOffTheRecord(), tabModel.getCurrentTabSupplier());
     }
 
     @Nullable
@@ -140,6 +159,8 @@ public class TabStoragePackager {
         TabStripCollection archivedCollection = tabModel.getTabStripCollection();
         if (!Objects.equals(archivedCollection, collection)) return null;
 
+        configureRemoveFromCacheOnDestroy(tabModel, collection);
+
         return TabModelInfo.createForArchivedModel();
     }
 
@@ -150,7 +171,22 @@ public class TabStoragePackager {
         TabModelInfo info = getTabModelInfo(profile, collection);
         return TabStoragePackagerJni.get()
                 .consolidateTabStripCollectionData(
-                        mNativeTabStoragePackager, info.windowId, info.tabModelType);
+                        mNativeTabStoragePackager,
+                        info.windowId,
+                        info.tabModelType,
+                        info.activeTabSupplier.get());
+    }
+
+    private void configureRemoveFromCacheOnDestroy(
+            TabModel tabModel, TabStripCollection collection) {
+        tabModel.addObserver(
+                new TabModelObserver() {
+                    @Override
+                    public void onDestroy() {
+                        mTabModelInfoMap.remove(collection);
+                        tabModel.removeObserver(this);
+                    }
+                });
     }
 
     @NativeMethods
@@ -166,6 +202,9 @@ public class TabStoragePackager {
                 @JniType("TabAndroid*") Tab tab);
 
         long consolidateTabStripCollectionData(
-                long nativeTabStoragePackagerAndroid, int windowId, @TabModelType int tabModelType);
+                long nativeTabStoragePackagerAndroid,
+                int windowId,
+                @TabModelType int tabModelType,
+                @JniType("TabAndroid*") @Nullable Tab activeTab);
     }
 }

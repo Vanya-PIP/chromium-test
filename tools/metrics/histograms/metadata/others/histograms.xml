@@ -530,7 +530,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Ads.InterestGroup.AtAuctionTotalSize.{Type}" units="KB"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>caraitto@chromium.org</owner>
   <owner>pauljensen@chromium.org</owner>
   <owner>privacy-sandbox-dev@chromium.org</owner>
@@ -967,7 +967,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Ads.InterestGroup.Auction.KAnonymityDataAge" units="ms"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>behamilton@chromium.org</owner>
   <owner>privacy-sandbox-dev@chromium.org</owner>
   <summary>
@@ -1193,7 +1193,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Ads.InterestGroup.Auction.NumOwnersWithoutInterestGroups"
-    units="owners" expires_after="2026-03-01">
+    units="owners" expires_after="2026-05-03">
   <owner>dmcardle@chromium.org</owner>
   <owner>privacy-sandbox-dev@chromium.org</owner>
   <summary>
@@ -3167,159 +3167,42 @@ chromium-metrics-reviews@google.com.
   <summary>Compressed/Decompressed size ratio.</summary>
 </histogram>
 
-<histogram name="CertificateType2{CertificateTypeBRValidity2}" units="units"
-    expires_after="never">
+<histogram name="CertificateType2.{BRValidity}.{ChainPosition}.{Algorithm}"
+    units="units" expires_after="never">
 <!-- expires-never: histograms are used to assess policy -->
 
 <!-- https://crbug.com/732640#c5 -->
 
-  <owner>rsleevi@chromium.org</owner>
+  <owner>mattm@chromium.org</owner>
+  <owner>src/net/cert/OWNERS</owner>
   <summary>
     Information about the certificate algorithms and sizes in use on the web, to
     examine compliance with the CA/Browser Forum requirements and security best
     practice. This histogram considers the notBefore as the issuance date, for
-    purposes of what requirements apply. {CertificateTypeBRValidity2}
+    purposes of what requirements apply. {BRValidity}
+
+    Records the size in bits of the key for certificates with chain position
+    {ChainPosition} and algorithm {Algorithm}.
   </summary>
-  <token key="CertificateTypeBRValidity2">
-    <variant name=""/>
-    <variant name=".BR"
+  <token key="BRValidity">
+    <variant name="BR"
         summary="The *leaf* certificate of the chain expires after 2013-12-31
                  and was issued on or after 2012-07-01, as judged by the
                  notBefore, meaning that it should be in scope for the
-                 Baseline Requirement's key size requirements"/>
-    <variant name=".NonBR"
+                 Baseline Requirement's key size requirements."/>
+    <variant name="NonBR"
         summary="The *leaf* certificate of the chain expires on or before
-                 2013-12-31 or was issued before 2012-07-01"/>
+                 2013-12-31 or was issued before 2012-07-01."/>
   </token>
-</histogram>
-
-<histogram name="ChromiumAndroidLinker.RelroAvailableImmediately"
-    enum="BooleanRelroAvailableImmediately" expires_after="2023-12-29">
-  <owner>lizeb@chromium.org</owner>
-  <owner>pasko@chromium.org</owner>
-  <summary>
-    Recorded when RELRO is replaced with a shared memory region, in all
-    processes consuming RELRO. Indicates whether the shared RELRO was available
-    synchronously right after the native library was loaded. ModernLinker only.
-  </summary>
-</histogram>
-
-<histogram name="ChromiumAndroidLinker.RelroProvidedSuccessfully"
-    enum="BooleanSuccess" expires_after="2026-03-15">
-  <owner>lizeb@chromium.org</owner>
-  <owner>pasko@chromium.org</owner>
-  <summary>
-    Recorded when the native library is loaded by the Chromium linker, and an
-    attempt to spawn a shared RELRO region is made. Indicates whether the
-    attempt was a success. If the number of samples from
-    &quot;ChromiumAndroidLinker.RelroAvailableImmediately&quot; where the
-    availability was not immediate is large compared to the counts of successful
-    RELRO spawns, it would indicate potential startup performance improvements
-    when starting child process(es) during early browser startup phases.
-    ModernLinker only.
-  </summary>
-</histogram>
-
-<histogram name="ChromiumAndroidLinker.RelroSharingStatus2"
-    enum="RelroSharingStatus" expires_after="2026-07-06">
-  <owner>lizeb@chromium.org</owner>
-  <owner>pasko@chromium.org</owner>
-  <summary>
-    Recorded when RELRO is replaced with a shared memory region, in all
-    processes consuming RELRO. Indicates whether the replacement was a success.
-    ModernLinker only.
-
-    See a description of RELRO sharing here:
-    https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/android_native_libraries.md#RELRO-Sharing
-
-    Warning: this histogram was expired from 2022-12-04 to 2023-09-07; data may
-    be missing.
-  </summary>
-</histogram>
-
-<histogram name="ChromiumAndroidLinker.{ProcessType}LoadTime2" units="ms"
-    expires_after="2022-10-01">
-  <owner>pasko@chromium.org</owner>
-  <owner>rsesek@chromium.org</owner>
-  <summary>
-    The amount of time it took to load the native libraries in {ProcessType}.
-
-    In order to explain the nature of the uploaded samples for this histogram it
-    is necessary to define a few core properties of the running processes.
-
-    On Android 10 (=Q) a new feature was introduced and became used in Chrome:
-    App Zygotes. An App Zygote (AZ) is a process pre-created by the system to
-    allow faster initialization of isolated processes (IP) for a specific app.
-    When AZ is created it runs the app-specific &quot;preload&quot; function
-    once, and becomes idle, after that no work can be performed in the AZ other
-    than getting forked. Whenever an app requests the Android Framework (AF) to
-    provide an isolated process, the AF notifies the AZ to fork itself into a
-    new process, which later will be provided to the app. An AZ created for one
-    app (package) cannot be used for another app.
-
-    The purpose of the AZ in Chrome is to load the native library - it avoids
-    loading the same library in each isolated process separately.
-
-    Capabilities of the AZ are very restricted. It runs in the same sandbox
-    constraints as an isolated process, while also not having the ability to
-    communicate with any other process on the system. Only after forking from
-    the AZ the inherited process becomes able to communicate to the rest of
-    Chrome.
-
-    Beyond isolated processes, Chrome can request processes with more
-    privileges: privileged processes (PP). In this case those processes will be
-    forked from another zygote. There are several types of those zygotes, we
-    will refer to them as Other Zygote (OZ) for simplicity. The decisions
-    whether to start an isolated process through an AZ, and when to start a new
-    AZ are made dynamically and depends on a few factors.
-
-    The suffixes of this histogram, as described below, correspond to distinct
-    execution scenarios:
-
-    Suffix &quot;Browser&quot;: the native library is loaded in the main app
-    process
-
-    Suffix &quot;Zygote&quot;: OZ forks into AZ, AZ loads the native library, AZ
-    forks into IP
-
-    Suffix &quot;Child&quot;: OZ forks into PP, PP loads the native library
-
-    Suffix &quot;Child&quot;: OZ forks into IP, IP loads the native library
-
-    Suffix &quot;Child&quot;: OZ forks into AZ, AZ fails to load the native
-    library, AZ forks into IP, IP loads the native library (this scenario should
-    happen rarely).
-
-    After library loading happens in the AZ, the recorded histogram value (for
-    simplicity) gets copied to each child process forked from this AZ process
-    and uploaded &quot;as if&quot; it is a unique sample from this child
-    process. This leads to a discrepancy in sample counts.
-
-    In early 2021-10 it had about 7% extra uploaded samples in
-    &quot;ChromiumAndroidLinker.ZygoteLoadTime2&quot;.
-  </summary>
-  <token key="ProcessType">
-    <variant name="Browser" summary="the browser process"/>
-    <variant name="Child" summary="a child process"/>
-    <variant name="Zygote" summary="the App Zygote"/>
+  <token key="ChainPosition">
+    <variant name="Intermediate" summary="Intermediate"/>
+    <variant name="Leaf" summary="Leaf"/>
+    <variant name="Root" summary="Root"/>
   </token>
-</histogram>
-
-<histogram name="ChromiumAndroidLinker.{ProcessType}ThreadLoadTime" units="ms"
-    expires_after="2022-10-01">
-  <owner>pasko@chromium.org</owner>
-  <owner>agrieve@chromium.org</owner>
-  <summary>
-    The amount of CPU time (thread time) it took to load the native libraries in
-    {ProcessType}.
-
-    For a more detailed description of each suffix process type suffix (Browser,
-    Child, Zygote) see description of the ChromiumAndroidLinker.*LoadTime2.
-  </summary>
-  <token key="ProcessType">
-    <variant name="Browser" summary="the browser process"/>
-    <variant name="Child" summary="a child process"/>
-    <variant name="Zygote" summary="the App Zygote"/>
+  <token key="Algorithm">
+    <variant name="ECDSA" summary="ECDSA"/>
+    <variant name="RSA" summary="RSA"/>
+    <variant name="Unknown" summary="SPKI unrecognized by cert library"/>
   </token>
 </histogram>
 
@@ -3367,7 +3250,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="ClientHints.StoreLatency" units="ms"
-    expires_after="2025-12-07">
+    expires_after="2026-04-12">
   <owner>victortan@chromium.org</owner>
   <owner>miketaylr@chromium.org</owner>
   <owner>katabolism-finch@google.com</owner>
@@ -3378,7 +3261,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="ClientHints.UpdateEventCount" units="count"
-    expires_after="2025-12-07">
+    expires_after="2026-04-12">
   <owner>victortan@chromium.org</owner>
   <owner>katabolism-finch@google.com</owner>
   <summary>
@@ -3388,7 +3271,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="ClientHints.UpdateSize" units="count"
-    expires_after="2026-02-09">
+    expires_after="2026-04-12">
   <owner>victortan@chromium.org</owner>
   <owner>katabolism-finch@google.com</owner>
   <summary>
@@ -3433,7 +3316,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="ComponentUpdater.InstallResult" enum="ComponentManagerError"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>wanghaifan@google.com</owner>
   <owner>cros-demo-mode-eng@google.com</owner>
   <owner>src/components/component_updater/OWNERS</owner>
@@ -4020,7 +3903,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="DirectSockets.TCPReadableStreamError" enum="NetErrorCodes"
-    expires_after="2026-02-09">
+    expires_after="2026-04-26">
   <owner>greengrape@google.com</owner>
   <owner>iwa-team@google.com</owner>
   <summary>How often tcp socket readable stream is errored.</summary>
@@ -4202,7 +4085,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="DocumentScan.ScanRequested" enum="DocumentScanSaneBackend"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>bmgordon@chromium.org</owner>
   <owner>project-bolton@google.com</owner>
   <summary>
@@ -4212,7 +4095,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="DocumentScan.ScanSucceeded" enum="DocumentScanSaneBackend"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>bmgordon@chromium.org</owner>
   <owner>project-bolton@google.com</owner>
   <summary>
@@ -4991,7 +4874,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Feedback.TrustSafetySentiment.CallTriggerOccurred"
-    enum="TrustSafetySentimentFeatureArea" expires_after="2026-03-01">
+    enum="TrustSafetySentimentFeatureArea" expires_after="2026-05-03">
   <owner>skrakowi@google.com</owner>
   <owner>chrome-counter-abuse-alerts@google.com</owner>
   <summary>
@@ -5014,7 +4897,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Feedback.TrustSafetySentiment.TriggerOccurred"
-    enum="TrustSafetySentimentFeatureArea" expires_after="2026-02-22">
+    enum="TrustSafetySentimentFeatureArea" expires_after="2026-04-26">
   <owner>sauski@google.com</owner>
   <owner>chrome-hats-eng@google.com</owner>
   <summary>
@@ -5053,7 +4936,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="FetchKeepAlive.RequestOutliveDuration" units="ms"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>mych@chromium.org</owner>
   <owner>chrome-bfcache@google.com</owner>
   <summary>
@@ -5071,7 +4954,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="FetchKeepAlive.Requests2.Network"
-    enum="FetchKeepAliveRequestNetworkMetricType" expires_after="2026-03-01">
+    enum="FetchKeepAliveRequestNetworkMetricType" expires_after="2026-05-03">
   <owner>mych@chromium.org</owner>
   <owner>chrome-bfcache@google.com</owner>
   <summary>
@@ -5093,7 +4976,7 @@ chromium-metrics-reviews@google.com.
 
 <histogram
     name="FetchKeepAlive.Requests2.{RequestState}.IsContextDetached.{Process}"
-    enum="Boolean" expires_after="2026-02-22">
+    enum="Boolean" expires_after="2026-04-26">
   <owner>mych@chromium.org</owner>
   <owner>chrome-bfcache@google.com</owner>
   <summary>
@@ -5112,7 +4995,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="FetchKeepAlive.Requests2.{RequestState}.{Process}"
-    enum="FetchKeepAliveRequestMetricType" expires_after="2026-03-01">
+    enum="FetchKeepAliveRequestMetricType" expires_after="2026-05-03">
   <owner>mych@chromium.org</owner>
   <owner>chrome-bfcache@google.com</owner>
   <summary>
@@ -5147,7 +5030,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="FetchLater.Browser.Metrics" enum="FetchLaterBrowserMetricType"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>mych@chromium.org</owner>
   <owner>chrome-bfcache@google.com</owner>
   <summary>
@@ -5385,7 +5268,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="FirstRun.Sentinel.Created" enum="FirstRunSentinelResult"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>jlebel@chromium.org</owner>
   <owner>chrome-signin-team@google.com</owner>
   <summary>
@@ -5415,7 +5298,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="FirstRun.Stage" enum="FirstRunStageResult"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>tinazwang@chromium.org</owner>
   <owner>bling-get-started@google.com</owner>
   <summary>
@@ -5426,7 +5309,7 @@ chromium-metrics-reviews@google.com.
   </summary>
 </histogram>
 
-<histogram name="FirstUserAction.BackgroundTime{FirstUserActionType}"
+<histogram name="FirstUserAction.BackgroundTime{ActionType}{DeviceType}"
     units="minutes" expires_after="2026-08-07">
   <owner>justincohen@chromium.org</owner>
   <owner>olivierrobin@chromium.org</owner>
@@ -5437,9 +5320,9 @@ chromium-metrics-reviews@google.com.
     with a grain of salt. Was expired for M85, M86.
 
     The amount of time (in seconds) that the app was in the background before
-    the user started it {FirstUserActionType}
+    the user started it {ActionType}. {DeviceType}
   </summary>
-  <token key="FirstUserActionType">
+  <token key="ActionType">
     <variant name=""/>
     <variant name="Continuation"
         summary="and performed an user action indicating that they were
@@ -5450,6 +5333,10 @@ chromium-metrics-reviews@google.com.
     <variant name="NewTask"
         summary="and performed an user action indicating that they were
                  beginning a new task from the last time they used the app"/>
+  </token>
+  <token key="DeviceType">
+    <variant name="Handset" summary="(handset only)"/>
+    <variant name="Tablet" summary="(tablet only)"/>
   </token>
 </histogram>
 
@@ -5524,7 +5411,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Gamepad.KnownGamepadConnectedWithId"
-    enum="GamepadVendorProduct" expires_after="2026-02-22">
+    enum="GamepadVendorProduct" expires_after="2026-04-26">
   <owner>mattreynolds@chromium.org</owner>
   <owner>deviceapi-team@google.com</owner>
   <summary>
@@ -5572,7 +5459,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Hardware.Display.Count.OnChange" units="units"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>sashamcintosh@chromium.org</owner>
   <owner>chromeos-gfx@chromium.org</owner>
   <summary>
@@ -5582,7 +5469,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Hardware.Display.Count.OnStartup" units="units"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>sashamcintosh@chromium.org</owner>
   <owner>chromeos-gfx@chromium.org</owner>
   <summary>
@@ -5592,7 +5479,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Hardware.Display.SupportsHDR" enum="BooleanSupported"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>cassew@google.com</owner>
   <owner>media-dev-uma@chromium.org</owner>
   <summary>
@@ -5604,7 +5491,7 @@ chromium-metrics-reviews@google.com.
   </summary>
 </histogram>
 
-<histogram name="Hardware.TotalDiskSpace" units="GB" expires_after="2026-03-01">
+<histogram name="Hardware.TotalDiskSpace" units="GB" expires_after="2026-05-03">
   <owner>zmo@chromium.org</owner>
   <owner>chrome-gpu-metric-alerts@chromium.org</owner>
   <summary>
@@ -5684,7 +5571,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="ImportantFile.FileReplaceResult{ImportantFileClients}"
-    enum="ImportantFileReplaceResult" expires_after="2026-02-22">
+    enum="ImportantFileReplaceResult" expires_after="2026-04-26">
   <owner>etienneb@chromium.org</owner>
   <owner>joenotcharles@google.com</owner>
   <summary>
@@ -5709,7 +5596,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="ImportantFile.FileReplaceRetryCount2{ImportantFileClients}"
-    units="attempt count" expires_after="2026-02-22">
+    units="attempt count" expires_after="2026-04-26">
   <owner>etienneb@chromium.org</owner>
   <owner>joenotcharles@google.com</owner>
   <summary>
@@ -5758,110 +5645,6 @@ chromium-metrics-reviews@google.com.
   <summary>
     Records the action taken by the user on the Incognito clear browsing data
     dialog.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.AccelerometerAndroidAvailable"
-    enum="BooleanAvailable" expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    Whether the Sensor.TYPE_LINEAR_ACCELERATION was available at the start of
-    Device Motion.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.AccelerometerIncGravityAndroidAvailable"
-    enum="BooleanAvailable" expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    Whether the Sensor.TYPE_ACCELEROMETER was available at the start of Device
-    Motion.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.AccelerometerWindowsAvailable"
-    enum="BooleanAvailable" expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    Whether the SENSOR_TYPE_ACCELEROMETER_3D was available at the start of
-    Device Motion on the Windows platform.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.DeviceOrientationSensorAndroid"
-    enum="DeviceOrientationSensorTypeAndroid" expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    Provides a histogram of the base sensors (if any) that are used at the start
-    of the Device Orientation API. Currently Sensor.TYPE_GAME_ROTATION_VECTOR is
-    the default sensor for orientation, if it's not available fall-back options
-    are provided by using either Sensor.TYPE_ROTATION_VECTOR or a combination of
-    Sensor.TYPE_ACCELEROMETER and Sensor.TYPE_MAGNETIC_FIELD.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.GyrometerWindowsAvailable"
-    enum="BooleanAvailable" expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    Whether the SENSOR_TYPE_GYROMETER_3D was available at the start of Device
-    Motion on the Windows platform.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.GyroscopeAndroidAvailable"
-    enum="BooleanAvailable" expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    Whether the Sensor.TYPE_GYROSCOPE was available at the start of Device
-    Motion.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.InclinometerWindowsAvailable"
-    enum="BooleanAvailable" expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    Whether the SENSOR_TYPE_INCLINOMETER_3D was available at the start of Device
-    Orientation on the Windows platform.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.MotionDefaultAvailable" enum="BooleanAvailable"
-    expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    This histogram counts the number of Device Motion API invocations in the
-    default implementation (Linux and CrOS). The default implementation does not
-    provide any sensors so the result is always false.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.MotionMacAvailable" enum="BooleanAvailable"
-    expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    Whether the sudden motion sensor was available at the start of Device Motion
-    on the MacOS platform.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.OrientationDefaultAvailable"
-    enum="BooleanAvailable" expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    This histogram counts the number of Device Orientation API invocations in
-    the default implementation (Linux and CrOS). The default implementation does
-    not provide any sensors so the result is always false.
-  </summary>
-</histogram>
-
-<histogram name="InertialSensor.OrientationMacAvailable"
-    enum="BooleanAvailable" expires_after="M95">
-  <owner>timvolodine@chromium.org</owner>
-  <summary>
-    Whether the sudden motion sensor was available at the start of Device
-    Orientation on the MacOS platform.
   </summary>
 </histogram>
 
@@ -5990,7 +5773,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="LoadingPredictor.SetLCPPNavigationHint.Time" units="ms"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>chikamune@chromium.org</owner>
   <owner>chrome-loading@google.com</owner>
   <improvement direction="LOWER_IS_BETTER"/>
@@ -6354,7 +6137,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="MPArch.ChildProcessLaunchSubsequent" units="ms"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>pasko@chromium.org</owner>
   <owner>yfriedman@chromium.org</owner>
   <summary>
@@ -6707,7 +6490,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="OSCrypt.AppBoundEncryption.SupportLevel"
-    enum="AppBoundEncryptionSupportLevel" expires_after="2026-03-01">
+    enum="AppBoundEncryptionSupportLevel" expires_after="2026-05-03">
   <owner>wfh@chromium.org</owner>
   <owner>nparker@chromium.org</owner>
   <summary>
@@ -6729,7 +6512,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="OSCrypt.AppBoundProvider.Decrypt.ResultLastError"
-    enum="WinGetLastError" expires_after="2026-03-01">
+    enum="WinGetLastError" expires_after="2026-05-03">
   <owner>wfh@chromium.org</owner>
   <owner>nparker@chromium.org</owner>
   <summary>
@@ -6755,7 +6538,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="OSCrypt.AppBoundProvider.Encrypt.ResultLastError"
-    enum="WinGetLastError" expires_after="2026-03-01">
+    enum="WinGetLastError" expires_after="2026-05-03">
   <owner>wfh@chromium.org</owner>
   <owner>nparker@chromium.org</owner>
   <summary>
@@ -6768,13 +6551,39 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="OSCrypt.AppBoundProvider.KeyRetrieval.Status"
-    enum="OSCryptAppBoundKeyRetrievalStatus" expires_after="2026-03-01">
+    enum="OSCryptAppBoundKeyRetrievalStatus" expires_after="2026-05-03">
   <owner>wfh@chromium.org</owner>
   <owner>nparker@chromium.org</owner>
   <summary>
     The result of the App-Bound OSCrypt Async Key Provider reading the key from
     persistent storage while being initialized. This is recorded once during
     browser startup if the App-Bound Key Provider is enabled, on Windows only.
+  </summary>
+</histogram>
+
+<histogram name="OSCrypt.Async.DecryptionFallbackToSync" enum="Boolean"
+    expires_after="2026-06-15">
+  <owner>wfh@chromium.org</owner>
+  <owner>thomasanderson@chromium.org</owner>
+  <summary>
+    Whether or not a fallback to OSCrypt Sync occured in a decryption call to an
+    OSCrypt Async Encryptor. This histogram is recorded every time a data
+    decryption happens and only reports true if the Encryptor was unable to
+    decrypt the data, a fallback to OSCrypt Sync therefore happened, and OSCrypt
+    Sync was able to successfully decrypt the data. It reports false otherwise.
+  </summary>
+</histogram>
+
+<histogram name="OSCrypt.Async.EncryptionFallbackToSync" enum="Boolean"
+    expires_after="2026-06-15">
+  <owner>wfh@chromium.org</owner>
+  <owner>thomasanderson@chromium.org</owner>
+  <summary>
+    Whether or not a fallback to OSCrypt Sync occured in a encryption call to an
+    OSCrypt Async Encryptor. This histogram is recorded every time a data
+    encryption happens and only reports true if the Encryptor contained no valid
+    key for encryption, a fallback to OSCrypt Sync therefore happened, and
+    OSCrypt Sync successfully encrypted the data. It reports false otherwise.
   </summary>
 </histogram>
 
@@ -6813,7 +6622,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="OSCrypt.EncryptionPrefixVersion"
-    enum="EncryptionPrefixVersion" expires_after="2026-02-22">
+    enum="EncryptionPrefixVersion" expires_after="2026-04-26">
   <owner>wfh@chromium.org</owner>
   <owner>thestig@chromium.org</owner>
   <summary>
@@ -6823,7 +6632,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="OSCrypt.EncryptorKeyCount{EncryptorKeyType}" units="key count"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>wfh@chromium.org</owner>
   <owner>chrome-platform-security-core@google.com</owner>
   <summary>
@@ -6849,7 +6658,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="OSCrypt.FreedesktopSecretKeyProvider.{InitStatus}.ErrorDetail"
-    enum="FreedesktopSecretKeyProviderErrorDetail" expires_after="2026-02-22">
+    enum="FreedesktopSecretKeyProviderErrorDetail" expires_after="2026-04-26">
   <owner>thomasanderson@chromium.org</owner>
   <owner>thestig@chromium.org</owner>
   <summary>
@@ -6950,7 +6759,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="OSCrypt.Win.Decrypt.Result" enum="BooleanSuccess"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>wfh@chromium.org</owner>
   <owner>nparker@chromium.org</owner>
   <summary>
@@ -7838,7 +7647,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="ReadingList.WebUI.LoadCompletedTime" units="ms"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>corising@chromium.org</owner>
   <owner>top-chrome-desktop-ui@google.com</owner>
   <summary>
@@ -7871,7 +7680,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="ReadingList.{ReadStatus}.Count.{RecordedAt}.{StorageState}"
-    units="count" expires_after="2026-03-01">
+    units="count" expires_after="2026-05-03">
   <owner>mastiz@chromium.org</owner>
   <owner>mmrashad@google.com</owner>
   <owner>treib@chromium.org</owner>
@@ -8044,7 +7853,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="ReportingAndNEL.UnresponsiveRenderer.CrashReportOutcome"
-    enum="CrashRepHandlingOutcome" expires_after="2026-02-22">
+    enum="CrashRepHandlingOutcome" expires_after="2026-04-26">
   <owner>iclelland@chromium.org</owner>
   <owner>issackjohn@microsoft.com</owner>
   <owner>src/net/reporting/OWNERS</owner>
@@ -8354,7 +8163,7 @@ useful for Chirp alerts (go/crca-alerts). -->
 </histogram>
 
 <histogram name="Shutdown.BrowserExit.Time2" units="ms"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>etienneb@chromium.org</owner>
   <owner>gab@chromium.org</owner>
   <summary>
@@ -8365,7 +8174,7 @@ useful for Chirp alerts (go/crca-alerts). -->
 </histogram>
 
 <histogram name="Shutdown.EndSession.Time2" units="ms"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>etienneb@chromium.org</owner>
   <owner>gab@chromium.org</owner>
   <summary>
@@ -8399,7 +8208,7 @@ useful for Chirp alerts (go/crca-alerts). -->
 </histogram>
 
 <histogram name="Shutdown.ShutdownType2" enum="ShutdownType"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>etienneb@chromium.org</owner>
   <owner>gab@chromium.org</owner>
   <summary>
@@ -8459,7 +8268,7 @@ useful for Chirp alerts (go/crca-alerts). -->
 </histogram>
 
 <histogram name="Shutdown.WindowClose.Time2" units="ms"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>etienneb@chromium.org</owner>
   <owner>gab@chromium.org</owner>
   <summary>
@@ -8623,7 +8432,7 @@ useful for Chirp alerts (go/crca-alerts). -->
 </histogram>
 
 <histogram name="SiteIsolatedCodeCache.DataSize" units="bytes"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>olivierli@chromium.org</owner>
   <owner>leszeks@chromium.org</owner>
   <owner>catan-team@chromium.org</owner>
@@ -9014,7 +8823,7 @@ useful for Chirp alerts (go/crca-alerts). -->
 </histogram>
 
 <histogram name="Style.RebuildLayoutTreeTime" units="microseconds"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>futhark@chromium.org</owner>
   <summary>
     Microseconds spent in RebuildLayoutTree called from Document::UpdateStyle.
@@ -9022,7 +8831,7 @@ useful for Chirp alerts (go/crca-alerts). -->
 </histogram>
 
 <histogram name="Style.RecalcTime" units="microseconds"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>futhark@chromium.org</owner>
   <summary>
     Microseconds spent in RecalcStyle called from Document::UpdateStyle.
@@ -9050,14 +8859,14 @@ useful for Chirp alerts (go/crca-alerts). -->
 </histogram>
 
 <histogram name="SubresourceWebBundles.LoadResult"
-    enum="SubresourceWebBundleLoadResult" expires_after="2026-03-01">
+    enum="SubresourceWebBundleLoadResult" expires_after="2026-05-03">
   <owner>hayato@chromium.org</owner>
   <owner>webpackage-dev@chromium.org</owner>
   <summary>The result of loading subresource web bundles.</summary>
 </histogram>
 
 <histogram name="SubresourceWebBundles.MaxMemoryUsagePerProcess" units="bytes"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>hayato@chromium.org</owner>
   <owner>webpackage-dev@chromium.org</owner>
   <summary>
@@ -9912,7 +9721,7 @@ should be kept until we use this API.  -->
 </histogram>
 
 <histogram name="UsageStats.Events" enum="UsageStatsEvents"
-    expires_after="2026-03-01">
+    expires_after="2026-05-03">
   <owner>pnoland@chromium.org</owner>
   <owner>fgorski@chromium.org</owner>
   <summary>
@@ -10063,7 +9872,7 @@ regressions. -->
 </histogram>
 
 <histogram name="WebContentsObserver.{Method}{FrameType}" units="ms"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>cduvall@chromium.org</owner>
   <owner>sisidovski@chromium.org</owner>
   <owner>chrome-loading@google.com</owner>

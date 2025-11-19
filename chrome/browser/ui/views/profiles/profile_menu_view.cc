@@ -370,11 +370,7 @@ void ProfileMenuView::OnSyncErrorButtonClicked(
           syncer::TrustedVaultUserActionTriggerForUMA::kProfileMenu);
       break;
     case syncer::SyncService::UserActionableError::kNeedsPassphrase:
-      ShowSyncPassphraseDialog(
-          browser(),
-          base::BindRepeating(
-              &SyncPassphraseDialogDecryptData,
-              base::Unretained(SyncServiceFactory::GetForProfile(&profile()))));
+      ShowSyncPassphraseDialogAndDecryptData(browser());
       break;
     case syncer::SyncService::UserActionableError::kNeedsSettingsConfirmation:
       chrome::ShowSettingsSubPage(&browser(), chrome::kSyncSetupSubPage);
@@ -511,6 +507,14 @@ void ProfileMenuView::OnAutofillSettingsButtonClicked() {
       "Autofill.AutofillAndPasswordsSettingsPage.VisitReferrer",
       autofill::autofill_metrics::AutofillSettingsReferrer::kProfileMenu);
   chrome::ShowSettingsSubPage(&browser(), chrome::kAutofillSubPage);
+}
+
+void ProfileMenuView::OnYourSavedInfoSettingsButtonClicked() {
+  OnActionableItemClicked(ActionableItem::kAutofillSettingsButton);
+  if (!perform_menu_actions()) {
+    return;
+  }
+  chrome::ShowSettingsSubPage(&browser(), chrome::kYourSavedInfoSubPage);
 }
 
 void ProfileMenuView::OnBatchUploadButtonClicked(ActionableItem button_type) {
@@ -846,6 +850,8 @@ ProfileMenuView::GetIdentitySectionParams(const ProfileAttributesEntry& entry) {
           syncer::SyncService::UserActionableError::kSignInNeedsUpdate,
           /*support_title_case=*/true));
       params.has_dotted_ring = true;
+      signin_metrics::LogSigninPendingOffered(
+          explicit_signin_access_point_.value_or(access_point));
       break;
     case signin_util::SignedInState::kSyncPaused:
       // Sync paused is covered by the sync errors path.
@@ -899,22 +905,24 @@ void ProfileMenuView::MaybeBuildBatchUploadButton() {
 void ProfileMenuView::BuildAutofillSettingsButton() {
   CHECK(!profile().IsGuestSession());
 
-  int message_id = IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON;
-  const gfx::VectorIcon* icon = &vector_icons::kPasswordManagerIcon;
-
-  if (base::FeatureList::IsEnabled(
+  bool use_your_saved_info_branding =
+      base::FeatureList::IsEnabled(
           autofill::features::kYourSavedInfoSettingsPage) ||
       base::FeatureList::IsEnabled(
-          autofill::features::kYourSavedInfoBrandingInSettings)) {
-    message_id = IDS_SETTINGS_YOUR_SAVED_INFO;
-    icon = &vector_icons::kPersonTextIcon;
-  }
+          autofill::features::kYourSavedInfoBrandingInSettings);
+  int message_id = use_your_saved_info_branding
+                       ? IDS_SETTINGS_YOUR_SAVED_INFO
+                       : IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON;
+  const gfx::VectorIcon& icon = use_your_saved_info_branding
+                                    ? vector_icons::kPersonTextIcon
+                                    : vector_icons::kPasswordManagerIcon;
+  auto action = base::FeatureList::IsEnabled(
+                    autofill::features::kYourSavedInfoSettingsPage)
+                    ? &ProfileMenuView::OnYourSavedInfoSettingsButtonClicked
+                    : &ProfileMenuView::OnAutofillSettingsButtonClicked;
 
-  AddFeatureButton(
-      l10n_util::GetStringUTF16(message_id),
-      base::BindRepeating(&ProfileMenuView::OnAutofillSettingsButtonClicked,
-                          base::Unretained(this)),
-      *icon);
+  AddFeatureButton(l10n_util::GetStringUTF16(message_id),
+                   base::BindRepeating(action, base::Unretained(this)), icon);
 }
 
 void ProfileMenuView::BuildCustomizeProfileButton() {

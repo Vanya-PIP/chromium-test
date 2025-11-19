@@ -18,8 +18,15 @@
 #include "base/containers/contains.h"
 #include "base/containers/unique_ptr_adapters.h"
 #include "base/functional/callback_helpers.h"
+<<<<<<< HEAD
 #include "base/hash/md5.h"
 #include "base/test"
+||||||| b30439823e517
+#include "base/hash/md5.h"
+#include "base/logging.h"
+=======
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "base/memory/raw_ptr.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"
@@ -43,6 +50,7 @@
 #include "content/web_test/renderer/test_preferences.h"
 #include "content/web_test/renderer/test_runner_utils.h"
 #include "content/web_test/renderer/web_frame_test_proxy.h"
+#include "crypto/obsolete/md5.h"
 #include "gin/arguments.h"
 #include "gin/array_buffer.h"
 #include "gin/dictionary.h"
@@ -1498,6 +1506,7 @@ void TestRunnerBindings::SetDisallowedSubresourcePathSuffixes(
   // Some tests rely on console loggings.
   subresource_filter::mojom::ActivationState activation_state(
       activation_level,
+      subresource_filter::mojom::SubresourceFilterDisabledReason::kUnknown,
       /*filtering_disabled_for_document=*/false,
       /*generic_blocking_rules_disabled=*/false,
       /*measure_performance=*/false,
@@ -3886,12 +3895,10 @@ void TestRunner::FinishTest(WebFrameTestProxy& source) {
         DCHECK_GT(actual.info().width(), 0);
         DCHECK_GT(actual.info().height(), 0);
 
-        base::MD5Digest digest;
         auto bytes = UNSAFE_TODO(
             base::span(static_cast<const uint8_t*>(actual.getPixels()),
                        actual.computeByteSize()));
-        base::MD5Sum(bytes, &digest);
-        dump_result->actual_pixel_hash = base::MD5DigestToBase16(digest);
+        dump_result->actual_pixel_hash = Md5AsHexForWebTestPixels(bytes);
 
         if (dump_result->actual_pixel_hash != test_config_.expected_pixel_hash)
           dump_result->pixels = std::move(actual);

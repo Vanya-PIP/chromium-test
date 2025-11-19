@@ -1261,7 +1261,6 @@ interface CanvasRenderingContext2D
     method roundRect
     method save
     method scale
-    method setHitTestRegions
     method setLineDash
     method setTransform
     method stroke
@@ -2958,6 +2957,8 @@ interface FontFaceSetLoadEvent : Event
 interface FormControlRange : AbstractRange
     attribute @@toStringTag
     method constructor
+    method getBoundingClientRect
+    method getClientRects
     method setFormControlRange
     method toString
 interface FormData
@@ -8942,7 +8943,7 @@ interface SVGStyleElement : SVGElement
 interface SVGSwitchElement : SVGGraphicsElement
     attribute @@toStringTag
     method constructor
-interface SVGSymbolElement : SVGElement
+interface SVGSymbolElement : SVGGraphicsElement
     attribute @@toStringTag
     getter preserveAspectRatio
     getter viewBox
@@ -10911,7 +10912,6 @@ interface WebGL2RenderingContext
     method samplerParameterf
     method samplerParameteri
     method scissor
-    method setHitTestRegions
     method shaderSource
     method stencilFunc
     method stencilFuncSeparate
@@ -11415,7 +11415,6 @@ interface WebGLRenderingContext
     method renderbufferStorage
     method sampleCoverage
     method scissor
-    method setHitTestRegions
     method shaderSource
     method stencilFunc
     method stencilFuncSeparate
@@ -12117,6 +12116,17 @@ namespace GPUTextureUsage
     attribute RENDER_ATTACHMENT
     attribute STORAGE_BINDING
     attribute TEXTURE_BINDING
+namespace Temporal
+    attribute @@toStringTag
+    attribute Now
+    method Duration
+    method Instant
+    method PlainDate
+    method PlainDateTime
+    method PlainMonthDay
+    method PlainTime
+    method PlainYearMonth
+    method ZonedDateTime
 namespace console
     attribute @@toStringTag
     getter memory
@@ -12365,8 +12375,6 @@ namespace console
     method getScreenDetails
     method getSelection
     method matchMedia
-    method maximize
-    method minimize
     method moveBy
     method moveTo
     method open
@@ -12383,12 +12391,10 @@ namespace console
     method requestResize
     method resizeBy
     method resizeTo
-    method restore
     method scroll
     method scrollBy
     method scrollTo
     method setInterval
-    method setResizable
     method setTimeout
     method showDirectoryPicker
     method showOpenFilePicker

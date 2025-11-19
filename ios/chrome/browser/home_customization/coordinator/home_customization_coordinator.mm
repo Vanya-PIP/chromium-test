@@ -32,9 +32,12 @@
 #import "ios/chrome/browser/shared/model/browser/browser.h"
 #import "ios/chrome/browser/shared/model/prefs/pref_names.h"
 #import "ios/chrome/browser/shared/model/profile/profile_ios.h"
+#import "ios/chrome/browser/shared/public/commands/command_dispatcher.h"
+#import "ios/chrome/browser/shared/public/commands/snackbar_commands.h"
 #import "ios/chrome/browser/shared/public/features/features.h"
 #import "ios/chrome/browser/url_loading/model/url_loading_browser_agent.h"
 #import "ios/chrome/browser/url_loading/model/url_loading_params.h"
+#import "ios/chrome/common/ui/util/constraints_ui_util.h"
 #import "services/network/public/cpp/shared_url_loader_factory.h"
 
 namespace {
@@ -75,6 +78,10 @@ CGFloat const kSheetCornerRadius = 30;
   // The mediator for background configuration generation and interactions.
   HomeCustomizationBackgroundConfigurationMediator*
       _backgroundConfigurationMediator;
+
+  // Transparent overlay view used to dim the background content when presenting
+  // half sheets.
+  UIView* _dimView;
 }
 
 // The main page of the customization menu.
@@ -151,10 +158,18 @@ CGFloat const kSheetCornerRadius = 30;
 
   [self dismissBackgroundPickerActionSheet];
 
+  [HandlerForProtocol(self.browser->GetCommandDispatcher(), SnackbarCommands)
+      dismissAllSnackbars];
+
   _mediator = nil;
   _mainViewController = nil;
   _magicStackViewController = nil;
   _discoverViewController = nil;
+  _dimView = nil;
+
+  // Reenable interaction with the NTP when the presentation controller is
+  // dismissed.
+  self.baseViewController.view.accessibilityElementsHidden = NO;
 
   [super stop];
 }
@@ -181,15 +196,53 @@ CGFloat const kSheetCornerRadius = 30;
 - (void)presentCustomizationMenuPage:(CustomizationMenuPage)page {
   UIViewController* menuPage = [self createMenuPage:page];
 
+  // True if this is the first page being presented in the half sheet hierarchy.
+  BOOL isFirstPagePresentation =
+      self.baseViewController == self.currentPageViewController;
+
   // If this is the first page being presented, set a reference to it in
   // `firstPageViewController`.
-  if (self.baseViewController == self.currentPageViewController) {
+  if (isFirstPagePresentation) {
     self.firstPageViewController = menuPage;
+    _dimView = [[UIView alloc] init];
+    _dimView.translatesAutoresizingMaskIntoConstraints = NO;
+    _dimView.backgroundColor = UIColor.clearColor;
+
+    // Disable accesibility interactions while the first page is being presented
+    // so the user can't interact with the NTP.
+    self.baseViewController.view.accessibilityElementsHidden = YES;
+
+    // Add a tap gesture recognizer to the dim view so that tapping outside the
+    // presented half sheet (on the dimmed view) can trigger dismissal.
+    UIGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc]
+        initWithTarget:self
+                action:@selector(handleDimViewTap:)];
+    [_dimView addGestureRecognizer:tapGesture];
   }
 
   [self.currentPageViewController presentViewController:menuPage
                                                animated:YES
                                              completion:nil];
+
+  id<UIViewControllerTransitionCoordinator> transitionCoordinator =
+      self.baseViewController.transitionCoordinator;
+
+  __weak UIView* weakDimView = _dimView;
+
+  // Add the dim view alongside the half sheet presentation.
+  // Using `animateAlongsideTransition` ensures we have access to
+  // `context.containerView` so the dim view can be inserted correctly
+  // into the presentation hierarchy.
+  [transitionCoordinator
+      animateAlongsideTransition:^(
+          id<UIViewControllerTransitionCoordinatorContext> context) {
+        if (!weakDimView) {
+          return;
+        }
+        [context.containerView insertSubview:weakDimView atIndex:0];
+        AddSameConstraints(weakDimView, context.containerView);
+      }
+                      completion:nil];
 
   self.currentPageViewController = menuPage;
 
@@ -208,6 +261,12 @@ CGFloat const kSheetCornerRadius = 30;
 }
 
 #pragma mark - UISheetPresentationControllerDelegate
+
+- (void)presentationControllerWillDismiss:
+    (UIPresentationController*)presentationController {
+  [HandlerForProtocol(self.browser->GetCommandDispatcher(), SnackbarCommands)
+      dismissAllSnackbars];
+}
 
 - (void)presentationControllerDidDismiss:
     (UIPresentationController*)presentationController {
@@ -239,6 +298,8 @@ CGFloat const kSheetCornerRadius = 30;
     case CustomizationMenuPage::kMain: {
       self.mainViewController =
           [[HomeCustomizationMainViewController alloc] init];
+      self.mainViewController.snackbarCommandHandler = HandlerForProtocol(
+          self.browser->GetCommandDispatcher(), SnackbarCommands);
       self.mainViewController.backgroundPickerPresentationDelegate = self;
       self.mainViewController.mutator = _mediator;
       self.mainViewController.customizationMutator =
@@ -357,6 +418,12 @@ CGFloat const kSheetCornerRadius = 30;
   return (height < kInitialDetentHeight)
              ? UISheetPresentationControllerDetentInactive
              : height;
+}
+
+// Called when the user taps on the dim view to dismiss the presented half
+// sheet.
+- (void)handleDimViewTap:(UITapGestureRecognizer*)gesture {
+  [self.delegate dismissCustomizationMenu];
 }
 
 #pragma mark - HomeCustomizationBackgroundPickerPresentationDelegate

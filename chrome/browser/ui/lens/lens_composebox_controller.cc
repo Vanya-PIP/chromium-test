@@ -4,6 +4,7 @@
 
 #include "chrome/browser/ui/lens/lens_composebox_controller.h"
 
+#include "base/base64url.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/lens/lens_composebox_handler.h"
 #include "chrome/browser/ui/lens/lens_overlay_controller.h"
@@ -18,6 +19,7 @@
 #include "components/lens/lens_payload_construction.h"
 #include "components/tabs/public/tab_interface.h"
 #include "third_party/lens_server_proto/aim_communication.pb.h"
+#include "third_party/lens_server_proto/lens_overlay_visual_search_interaction_data.pb.h"
 
 namespace {
 lens::LensOverlayVisualInputType LensMimeTypeToVisualInputType(
@@ -123,6 +125,10 @@ void LensComposeboxController::IssueComposeboxQuery(
 
   // Record that a query was issued.
   GetSessionMetricsLogger()->OnAimQueryIssued();
+
+  // When issuing a composebox query, the overlay should always be dismissed.
+  // This is a no-op if the overlay is already closed.
+  lens_search_controller_->HideOverlay();
 }
 
 void LensComposeboxController::OnFocusChanged(bool focused) {
@@ -200,12 +206,26 @@ void LensComposeboxController::ShowLensSelectionOverlay() {
 }
 
 void LensComposeboxController::AddVisualSelectionContext(
-    const std::string& image_data_url,
-    bool is_deletable) {
+    const std::string& image_data_url) {
   if (!lens::features::GetEnableLensButtonInSearchbox()) {
     return;
   }
 
+  // Clear any existing visual selection context.
+  ClearVisualSelectionContext();
+
+  vsc_image_data_.emplace(
+      base::UnguessableToken::Create(),
+      BuildVisualSelectionFileInfo(image_data_url, /*is_deletable=*/true));
+  // If the composebox handler is not yet bound, the image will be added when
+  // the composebox is bound.
+  if (composebox_handler_) {
+    composebox_handler_->AddFileContextFromBrowser(vsc_image_data_->id,
+                                        vsc_image_data_->file_info.Clone());
+  }
+}
+
+void LensComposeboxController::ClearVisualSelectionContext() {
   // If there is existing visual selection context, mark it as expired. There
   // should only be one visual selection context at a time. The UI should
   // appropriately remove the existing thumbnail.
@@ -214,18 +234,22 @@ void LensComposeboxController::AddVisualSelectionContext(
         vsc_image_data_->id,
         composebox_query::mojom::FileUploadStatus::kUploadExpired,
         std::nullopt);
-    vsc_image_data_.reset();
   }
+  vsc_image_data_.reset();
+}
 
-  vsc_image_data_.emplace(
-      base::UnguessableToken::Create(),
-      BuildVisualSelectionFileInfo(image_data_url, is_deletable));
-  // If the composebox handler is not yet bound, the image will be added when
-  // the composebox is bound.
-  if (composebox_handler_) {
-    composebox_handler_->AddFileContextFromBrowser(vsc_image_data_->id,
-                                        vsc_image_data_->file_info.Clone());
+void LensComposeboxController::DeleteContext(const base::UnguessableToken& id) {
+  // If the id matches the visual selection context, delete it and notify
+  // the overlay to clear the visual selection.
+  if (vsc_image_data_ && vsc_image_data_->id == id) {
+    vsc_image_data_.reset();
+    lens_search_controller_->lens_overlay_controller()->ClearAllSelections();
   }
+}
+
+void LensComposeboxController::ClearFiles() {
+  ClearVisualSelectionContext();
+  lens_search_controller_->lens_overlay_controller()->ClearAllSelections();
 }
 
 lens::LensSessionMetricsLogger*
@@ -281,6 +305,16 @@ lens::ClientToAimMessage LensComposeboxController::BuildSubmitQueryMessage(
                                           media_type));
   lens_image_query_data->set_visual_input_type(
       LensMimeTypeToVisualInputType(primary_content_type));
+
+  // Add the latest visual search interaction data to the query if it exists.
+  std::optional<lens::LensOverlayVisualSearchInteractionData>
+      visual_search_interaction_data =
+          query_controller->GetVisualSearchInteractionData();
+  if (visual_search_interaction_data &&
+      overlay_controller->HasRegionSelection()) {
+    lens_image_query_data->mutable_visual_search_interaction_data()->CopyFrom(
+        visual_search_interaction_data.value());
+  }
   return client_to_aim_message;
 }
 

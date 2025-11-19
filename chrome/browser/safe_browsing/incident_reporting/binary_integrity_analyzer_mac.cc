@@ -10,8 +10,15 @@
 #include <utility>
 
 #include "base/apple/bundle_locations.h"
+<<<<<<< HEAD
 #include "base/files/file_util.h"
 #include "base/test"
+||||||| b30439823e517
+#include "base/files/file_util.h"
+#include "base/logging.h"
+=======
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "chrome/browser/safe_browsing/incident_reporting/binary_integrity_incident.h"
 #include "chrome/browser/safe_browsing/incident_reporting/incident_receiver.h"
 #include "chrome/browser/safe_browsing/signature_evaluator_mac.h"

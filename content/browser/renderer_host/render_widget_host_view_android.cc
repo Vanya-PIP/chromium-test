@@ -1724,6 +1724,7 @@ void RenderWidgetHostViewAndroid::DidEnterBackForwardCache() {
   //
   // Called after to prevent prematurely evict the BFCached surface.
   host()->ForceFirstFrameAfterNavigationTimeout();
+  mouse_wheel_phase_handler_.DidEnterBackForwardCache();
 }
 
 void RenderWidgetHostViewAndroid::ActivatedOrEvictedFromBackForwardCache() {
@@ -3230,6 +3231,11 @@ void RenderWidgetHostViewAndroid::CreateOverscrollControllerIfPossible() {
 
   overscroll_controller_ = std::make_unique<OverscrollControllerAndroid>(
       overscroll_refresh_handler, compositor, view_.GetDipScale(), host());
+
+  const auto& web_prefs =
+      host()->owner_delegate()->GetWebkitPreferencesForWidget();
+  SetTouchpadOverscrollHistoryNavigation(
+      web_prefs.enable_touchpad_overscroll_history_navigation);
 }
 
 void RenderWidgetHostViewAndroid::SetOverscrollControllerForTesting(
@@ -3768,6 +3774,13 @@ void RenderWidgetHostViewAndroid::EndRotationAndSyncIfNecessary() {
 void RenderWidgetHostViewAndroid::EvictInternal() {
   screen_state_change_handler_.WasEvicted();
   local_surface_id_allocator_.Invalidate();
+}
+
+void RenderWidgetHostViewAndroid::SetTouchpadOverscrollHistoryNavigation(
+    bool enabled) {
+  if (overscroll_controller_) {
+    overscroll_controller_->SetTouchpadOverscrollHistoryNavigation(enabled);
+  }
 }
 
 CompositorImpl* RenderWidgetHostViewAndroid::GetCompositorImpl() {

@@ -352,8 +352,15 @@ HEADLESS_MODE_PROTOCOL_TEST(ScreenDetailsWorkAreaScaled,
 
 HEADLESS_MODE_PROTOCOL_TEST(RequestFullscreen, "shared/request-fullscreen.js")
 
-// Fails on all platforms, see https://crbug.com/429035133
-HEADLESS_MODE_PROTOCOL_TEST(DISABLED_RequestFullscreenOnSecondaryScreen,
+// TODO(crbug.com/429035133): Times out on macOS. Fix and re-enable.
+#if BUILDFLAG(IS_MAC)
+#define MAYBE_RequestFullscreenOnSecondaryScreen \
+  DISABLED_RequestFullscreenOnSecondaryScreen
+#else
+#define MAYBE_RequestFullscreenOnSecondaryScreen \
+  RequestFullscreenOnSecondaryScreen
+#endif  // BUILDFLAG(IS_MAC)
+HEADLESS_MODE_PROTOCOL_TEST(MAYBE_RequestFullscreenOnSecondaryScreen,
                             "shared/request-fullscreen-on-secondary-screen.js")
 
 HEADLESS_MODE_PROTOCOL_TEST(CreateTargetPosition,
@@ -421,8 +428,8 @@ HEADLESS_MODE_PROTOCOL_TEST(WindowScreenAvail, "shared/window-screen-avail.js")
 HEADLESS_MODE_PROTOCOL_TEST(MAYBE_StartFullscreenSwitch,
                             "sanity/start-fullscreen-switch.js")
 
-// TODO(crbug.com/423951863): Fails on Linux and Mac.
-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+// TODO(crbug.com/423951863): Fails on Mac 13.
+#if BUILDFLAG(IS_MAC)
 #define MAYBE_StartFullscreenSwitchScaled DISABLED_StartFullscreenSwitchScaled
 #else
 #define MAYBE_StartFullscreenSwitchScaled StartFullscreenSwitchScaled

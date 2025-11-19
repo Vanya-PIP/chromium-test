@@ -952,6 +952,8 @@ void SerializeLayer(LayerImpl& layer,
           picture_layer.GetContentColorUsage();
       tile_display_extra->recorded_bounds =
           picture_layer.GetRasterSource()->recorded_bounds();
+      tile_display_extra->proposed_tiling_scales_for_deletion =
+          picture_layer.TakeProposedTilingScalesForDeletion();
       wire.layer_extra = viz::mojom::LayerExtra::NewTileDisplayLayerExtra(
           std::move(tile_display_extra));
       SerializePictureLayerTileUpdates(picture_layer, resource_provider,
@@ -1306,7 +1308,8 @@ base::TimeTicks VizLayerContext::UpdateDisplayTreeFrom(
     viz::ClientResourceProvider& resource_provider,
     gpu::SharedImageInterface* shared_image_interface,
     const gfx::Rect& viewport_damage_rect,
-    const viz::LocalSurfaceId& target_local_surface_id) {
+    const viz::LocalSurfaceId& target_local_surface_id,
+    bool frame_has_damage) {
   auto& property_trees = *tree.property_trees();
   auto update = viz::mojom::LayerTreeUpdate::New();
   update->begin_frame_args = tree.CurrentBeginFrameArgs();
@@ -1319,6 +1322,7 @@ base::TimeTicks VizLayerContext::UpdateDisplayTreeFrom(
   update->min_page_scale_factor = tree.min_page_scale_factor();
   update->max_page_scale_factor = tree.max_page_scale_factor();
   update->external_page_scale_factor = tree.external_page_scale_factor();
+  update->frame_has_damage = frame_has_damage;
   update->device_viewport = tree.GetDeviceViewport();
   update->device_scale_factor = tree.device_scale_factor();
   update->painted_device_scale_factor = tree.painted_device_scale_factor();
@@ -1493,6 +1497,15 @@ void VizLayerContext::UpdateDisplayTile(
 }
 
 void VizLayerContext::OnRequestCommitForFrame(const viz::BeginFrameArgs& args) {
+}
+
+void VizLayerContext::OnTilingsReadyForCleanup(
+    int32_t layer_id,
+    const std::vector<float>& tiling_scales_to_clean_up) {
+  if (auto* layer = static_cast<PictureLayerImpl*>(
+          host_impl_->active_tree()->LayerById(layer_id))) {
+    layer->CleanUpTilings(tiling_scales_to_clean_up);
+  }
 }
 
 void VizLayerContext::SerializeAnimationUpdates(

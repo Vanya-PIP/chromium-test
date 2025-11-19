@@ -153,9 +153,7 @@ _BANNED_JAVA_IMPORTS: Sequence[BanRule] = (
         'import android.annotation.TargetApi;',
         ('Do not use TargetApi, use @androidx.annotation.RequiresApi instead. '
          'RequiresApi ensures that any calls are guarded by the appropriate '
-         'SDK_INT check. See https://crbug.com/1116486.', ),
-        True
-    ),
+         'SDK_INT check. See https://crbug.com/1116486.', ), True),
     BanRule(
         'import androidx.test.rule.ActivityTestRule;',
         ('Do not use ActivityTestRule, use '
@@ -173,7 +171,7 @@ _BANNED_JAVA_IMPORTS: Sequence[BanRule] = (
     BanRule(
         'import java.util.Optional',
         ('Prefer @Nullable over Optional/OptionalInt/OptionalDouble/etc. See '
-         '//styleguide/java/java.md',),
+         '//styleguide/java/java.md', ),
         False,
     ),
 )
@@ -268,20 +266,21 @@ _BANNED_JAVA_FUNCTIONS: Sequence[BanRule] = (
         False,
     ),
     BanRule(
-        pattern=(r'/((DeviceInfo\.isDesktop\()|IS_DESKTOP_ANDROID|PackageManager\.FEATURE_PC)'),
-        explanation=(
-            'Usage of IS_DESKTOP_ANDROID build flag or DeviceInfo.isDesktop() '
-            'is discouraged. Use system affordances to determine feature '
-            'availablility. Refer to https://chromium.googlesource.com/chromium/src/+/HEAD/docs/ui/android/device_form_factor.md for guidelines. '
-            'To request an exception, file a bug at '
-            'https://b.corp.google.com/issues/new?component=1753515&template=2172655'
-            'Once approved, use centralized util DeviceInfo.isDesktop() '
-            'instead of direct build flag or PackageManager.FEATURE_PC checks. '
-            'Allowances may be granted to only the directories below: '
-            '[build/, chrome/, components/, extensions/, infra/, tools/] '
-            'Note: in particular we need to avoid components shared with '
-            'WebView.',
-        ),
+        pattern=
+        (r'/((DeviceInfo\.isDesktop\()|IS_DESKTOP_ANDROID|PackageManager\.FEATURE_PC)'
+         ),
+        explanation=
+        ('Usage of IS_DESKTOP_ANDROID build flag or DeviceInfo.isDesktop() '
+         'is discouraged. Use system affordances to determine feature '
+         'availablility. Refer to https://chromium.googlesource.com/chromium/src/+/HEAD/docs/ui/android/device_form_factor.md for guidelines. '
+         'To request an exception, file a bug at '
+         'https://b.corp.google.com/issues/new?component=1753515&template=2172655'
+         'Once approved, use centralized util DeviceInfo.isDesktop() '
+         'instead of direct build flag or PackageManager.FEATURE_PC checks. '
+         'Allowances may be granted to only the directories below: '
+         '[build/, chrome/, components/, extensions/, infra/, tools/] '
+         'Note: in particular we need to avoid components shared with '
+         'WebView.', ),
         treat_as_error=False,
         surface_as_gerrit_lint=True,
     ),
@@ -1306,6 +1305,7 @@ _BANNED_CPP_FUNCTIONS: Sequence[BanRule] = (
             'constant_range',
             # Views
             'subrange',
+            'subrange_kind',
             # Banned: Range factories
             # Banned: Range adaptors
             # Incidentally listed on
@@ -2048,15 +2048,14 @@ _BANNED_CPP_FUNCTIONS: Sequence[BanRule] = (
         treat_as_error=False,
     ),
     BanRule(
-      pattern='TestBrowserWindow',
-      explanation=(
-          'Do not use TestBrowserWindow. See '
-          'docs/chrome_browser_design_principles.md for details. If you want '
-          'to write a test that has a Browser, create a browser_test. If you '
-          'want to write a unit_test, your code should not reference Browser '
-          'or BrowserWindow.',
-      ),
-      treat_as_error=False,
+        pattern='TestBrowserWindow',
+        explanation=
+        ('Do not use TestBrowserWindow. See '
+         'docs/chrome_browser_design_principles.md for details. If you want '
+         'to write a test that has a Browser, create a browser_test. If you '
+         'want to write a unit_test, your code should not reference Browser '
+         'or BrowserWindow.', ),
+        treat_as_error=False,
     ),
     BanRule(
         pattern='RunUntilIdle',
@@ -2147,28 +2146,103 @@ _BANNED_CPP_FUNCTIONS: Sequence[BanRule] = (
     ),
     BanRule(
         pattern=(r'IS_DESKTOP_ANDROID'),
-        explanation=(
-            'Usage of IS_DESKTOP_ANDROID build flag '
-            'is discouraged. Use system affordances to determine feature '
-            'availablility. Refer to https://chromium.googlesource.com/chromium/src/+/HEAD/docs/ui/android/device_form_factor.md for guidelines. '
-            'To request an exception, file a bug at '
-            'https://b.corp.google.com/issues/new?component=1753515&template=2172655'
-            'Once approved, use centralized util DeviceInfo.isDesktop() '
-            'instead of direct build flag or PackageManager.FEATURE_PC checks. '
-            'Allowances may be granted to only the directories below: '
-            '[build/, chrome/, components/, extensions/, infra/, tools/] '
-            'Note: in particular we need to avoid components shared with '
-            'WebView.',
-        ),
+        explanation=
+        ('Usage of IS_DESKTOP_ANDROID build flag '
+         'is discouraged. Use system affordances to determine feature '
+         'availablility. Refer to https://chromium.googlesource.com/chromium/src/+/HEAD/docs/ui/android/device_form_factor.md for guidelines. '
+         'To request an exception, file a bug at '
+         'https://b.corp.google.com/issues/new?component=1753515&template=2172655'
+         'Once approved, use centralized util DeviceInfo.isDesktop() '
+         'instead of direct build flag or PackageManager.FEATURE_PC checks. '
+         'Allowances may be granted to only the directories below: '
+         '[build/, chrome/, components/, extensions/, infra/, tools/] '
+         'Note: in particular we need to avoid components shared with '
+         'WebView.', ),
         treat_as_error=False,
         surface_as_gerrit_lint=True,
     ),
     BanRule(
-      pattern='PageActionIconView',
-      explanation=(
-          'PageActionIconView will soon be removed. Use PageActionView instead. '
-          'See chrome/browser/ui/views/page_action/README.md for details.'),
-      treat_as_error=False,
+        pattern='PageActionIconView',
+        explanation=
+        ('PageActionIconView will soon be removed. Use PageActionView instead. '
+         'See chrome/browser/ui/views/page_action/README.md for details.'),
+        treat_as_error=False,
+    ),
+    BanRule(
+        pattern=(r'/\bkIgnoreCertificateErrors\b'),
+        explanation=
+        ('Usage of --ignore-certificate-errors in tests using '
+         'net::EmbeddedTestServer to serve HTTPS requests is likely '
+         'incorrect. Instead of blanket ignoring certificate errors using this '
+         'switch, strongly prefer to configure the EmbeddedTestServer with a '
+         'valid certificate for the relevant hostname(s). For tips on how to do '
+         'so, see comment above the kIgnoreCertificateErrors switch definition '
+         'or see https://www.chromium.org/developers/testing/browser-tests/#networking.',),
+        treat_as_error=True,
+        excluded_paths=[
+            _THIRD_PARTY_EXCEPT_BLINK,
+            r'^(?!.*test\.cc$).*$',  # Only apply the ban in C++ test files.
+
+            # Existing test usages allowlisted when this rule was added.
+            # TODO(crbug.com/40147519): Go through and either fix if incorrect,
+            # or permanently allowlist the few valid uses of this switch.
+            r'^chrome/browser/android/customtabs/tab_interaction_recorder_browsertest\.cc',
+            r'^chrome/browser/ash/login/saml/saml_browsertest\.cc',
+            r'^chrome/browser/ash/login/saml/saml_lockscreen_browsertest\.cc',
+            r'^chrome/browser/autofill/autofill_annotations_provider_browsertest\.cc',
+            r'^chrome/browser/autofill/autofill_metrics_browsertest\.cc',
+            r'^chrome/browser/banners/app_banner_manager_browsertest\.cc',
+            r'^chrome/browser/browsing_data/browsing_data_model_browsertest\.cc',
+            r'^chrome/browser/chrome_back_forward_cache_browsertest\.cc',
+            r'^chrome/browser/chrome_content_browser_client_browsertest\.cc',
+            r'^chrome/browser/chrome_content_browser_client_unittest\.cc',
+            r'^chrome/browser/chrome_navigation_browsertest\.cc',
+            r'^chrome/browser/chrome_shared_array_buffer_browsertest\.cc',
+            r'^chrome/browser/chrome_web_platform_security_metrics_browsertest\.cc',
+            r'^chrome/browser/content_settings/mixed_content_settings_tab_helper_browsertest\.cc',
+            r'^chrome/browser/extensions/api/webrtc_audio_private/webrtc_audio_private_browsertest\.cc',
+            r'^chrome/browser/extensions/background_header_browsertest\.cc',
+            r'^chrome/browser/extensions/extension_cookies_browsertest\.cc',
+            r'^chrome/browser/extensions/extension_modules_apitest\.cc',
+            r'^chrome/browser/favicon/content_favicon_driver_browsertest\.cc',
+            r'^chrome/browser/geolocation/geolocation_browsertest\.cc',
+            r'^chrome/browser/idle/idle_browsertest\.cc',
+            r'^chrome/browser/lookalikes/lookalike_url_navigation_throttle_browsertest\.cc',
+            r'^chrome/browser/metrics/variations/variations_http_headers_browsertest\.cc',
+            r'^chrome/browser/page_load_metrics/observers/signed_exchange_page_load_metrics_browsertest\.cc',
+            r'^chrome/browser/page_load_metrics/observers/third_party_cookie_deprecation_metrics_observer_browsertest\.cc',
+            r'^chrome/browser/page_load_metrics/observers/third_party_metrics_observer_browsertest\.cc',
+            r'^chrome/browser/payments/service_worker_payment_app_finder_browsertest\.cc',
+            r'^chrome/browser/payments/site_per_process_payments_browsertest\.cc',
+            r'^chrome/browser/permissions/permission_delegation_browsertest\.cc',
+            r'^chrome/browser/policy/test/policy_test_google_browsertest\.cc',
+            r'^chrome/browser/prefetch/prefetch_browsertest\.cc',
+            r'^chrome/browser/push_messaging/push_messaging_browsertest\.cc',
+            r'^chrome/browser/signin/chromeos_mirror_account_consistency_browsertest\.cc',
+            r'^chrome/browser/signin/mirror_browsertest\.cc',
+            r'^chrome/browser/site_isolation/origin_agent_cluster_browsertest\.cc',
+            r'^chrome/browser/ssl/ssl_browsertest\.cc',
+            r'^chrome/browser/subresource_filter/ad_heuristic_tpcd_browsertest\.cc',
+            r'^chrome/browser/trusted_vault/trusted_vault_encryption_keys_tab_helper_browsertest\.cc',
+            r'^chrome/browser/ui/search/third_party_ntp_browsertest\.cc',
+            r'^chrome/browser/ui/search/third_party_ntp_uitest\.cc',
+            r'^chrome/browser/ui/test/popup_multiscreen_interactive_uitest\.cc',
+            r'^chrome/browser/ui/views/file_system_access/file_system_access_browsertest\.cc',
+            r'^chrome/browser/ui/webauthn/authenticator_dialog_browsertest\.cc',
+            r'^chrome/browser/webauthn/chrome_webauthn_autofill_interactive_uitest\.cc',
+            r'^chrome/browser/webauthn/chrome_webauthn_browsertest\.cc',
+            r'^chrome/browser/webauthn/webauthn_focus_interactive_uitest\.cc',
+            r'^chrome/common/request_header_integrity/request_header_integrity_url_loader_throttle_browsertest\.cc',
+            r'^chrome/renderer/chrome_content_renderer_client_browsertest\.cc',
+            r'^components/guest_contents/browser/guest_contents_security_browsertest\.cc',
+            r'^components/network_session_configurator/browser/network_session_configurator_unittest\.cc',
+            r'^components/optimization_guide/content/browser/page_content_metadata_observer_browsertest\.cc',
+            r'^components/optimization_guide/content/browser/page_content_proto_provider_browsertest\.cc',
+            r'^content/browser/btm/btm_bounce_detector_browsertest\.cc',
+            r'^content/browser/btm/btm_navigation_flow_detector_browsertest\.cc',
+            r'^content/browser/fenced_frame/fenced_frame_browsertest\.cc',
+            r'^content/browser/webid/webid_browsertest\.cc',
+        ],
     ),
 )
 
@@ -2410,14 +2484,14 @@ _KNOWN_ROBOTS = set() | set('%s@appspot.gserviceaccount.com' % s for s in (
         ) | set(
             '%s@skia-public.iam.gserviceaccount.com' % s
             for s in ('chromium-autoroll', 'chromium-release-autoroll')) | set(
-            '%s@skia-infra-corp.iam.gserviceaccount.com' % s
-            for s in ('pinpoint-worker',)
+                '%s@skia-infra-corp.iam.gserviceaccount.com' % s
+                for s in ('pinpoint-worker', )
             ) | set(
-                '%s@skia-corp.google.com.iam.gserviceaccount.com' % s
-                for s in ('chromium-internal-autoroll', )
+                '%s@skia-corp.google.com.iam.gserviceaccount.com' % s for s in
+                ('chromium-internal-autoroll', )
             ) | set(
-                '%s@system.gserviceaccount.com' %
-                s for s in ('chrome-screen-ai-releaser', 'crash-eng', 'crash')
+                '%s@system.gserviceaccount.com' % s for s in
+                ('chrome-screen-ai-releaser', 'crash-eng', 'crash')
             ) | set(
                 '%s@owners-cleanup-prod.google.com.iam.gserviceaccount.com' % s
                 for s in ('swarming-tasks', )) | set(
@@ -2429,8 +2503,8 @@ _KNOWN_ROBOTS = set() | set('%s@appspot.gserviceaccount.com' % s for s in (
                     'chops-security-cronjobs-cpesuggest')) | set(
                         '%s@chromeos-release-bot.iam.gserviceaccount.com' % s
                         for s in ('chromeos-ci-release', )) | set(
-                        '%s@chromeos-bot.iam.gserviceaccount.com' % s
-                        for s in ('chromeos-ci-prod', ))
+                            '%s@chromeos-bot.iam.gserviceaccount.com' % s
+                            for s in ('chromeos-ci-prod', ))
 
 _INVALID_GRD_FILE_LINE = [(r'<file lang=.* path=.*',
                            'Path should come before lang in GRD files.')]
@@ -5370,7 +5444,8 @@ def CheckNoDeprecatedCss(input_api, output_api):
             # The NTP team prefers reserving -webkit-line-clamp for
             # ellipsis effect which can only be used with -webkit-box.
             r"ui/webui/resources/cr_components/most_visited/.*\.css$",
-            r"ui/webui/resources/cr_components/searchbox/searchbox_match.css$"))
+            r"ui/webui/resources/cr_components/searchbox/searchbox_match.css$")
+    )
     file_filter = lambda f: input_api.FilterSourceFile(
         f, files_to_check=file_inclusion_pattern, files_to_skip=files_to_skip)
     for fpath in input_api.AffectedFiles(file_filter=file_filter):
@@ -7152,8 +7227,7 @@ def CheckStableMojomChanges(input_api, output_api):
             return [
                 output_api.PresubmitError(
                     f'If present, No-Stable-Mojom-Checks only accepts the value '
-                    f'"true", but got "{no_stable_mojom_checks}" instead.'
-                )
+                    f'"true", but got "{no_stable_mojom_checks}" instead.')
             ]
 
     def CheckMojomsIfNeeded():
@@ -7392,15 +7466,6 @@ def _IsMiraclePtrDisallowed(input_api, affected_file):
             or "third_party/blink/renderer/platform/fonts/" in path):
         return True
 
-    # The below paths are an explicitly listed subset of Renderer-only code,
-    # because the plan is to Oilpanize it.
-    # TODO(crbug.com/330759291): Remove once Oilpanization is completed or
-    # abandoned.
-    if ("third_party/blink/renderer/core/paint/" in path or
-            "third_party/blink/renderer/platform/graphics/compositing/" in path
-            or "third_party/blink/renderer/platform/graphics/paint/" in path):
-        return True
-
     # We assume that everything else may be used outside of Renderer processes.
     return False
 
@@ -7585,15 +7650,14 @@ def _CheckAndroidNullAwayAnnotatedClasses(input_api, output_api):
     def _FilterFile(affected_file):
         return input_api.FilterSourceFile(
             affected_file,
-            files_to_skip=(
-                _EXCLUDED_PATHS + _TEST_CODE_EXCLUDED_PATHS +
-                input_api.DEFAULT_FILES_TO_SKIP + (
-                    r'.*Test.*\.java',
-                    r'^build/.*',
-                    r'^chromecast/.*',
-                    r'^components/cronet/.*',
-                    r'^tools/.*',
-                )),
+            files_to_skip=(_EXCLUDED_PATHS + _TEST_CODE_EXCLUDED_PATHS +
+                           input_api.DEFAULT_FILES_TO_SKIP + (
+                               r'.*Test.*\.java',
+                               r'^build/.*',
+                               r'^chromecast/.*',
+                               r'^components/cronet/.*',
+                               r'^tools/.*',
+                           )),
             files_to_check=[r'.*\.java$'])
 
     for f in input_api.AffectedSourceFiles(_FilterFile):
@@ -7837,6 +7901,7 @@ def CheckTodoBugReferences(input_api, output_api):
     else:
         return []
 
+
 def CheckNoBrowserStarInUnittests(input_api, output_api):
     """Checks that unit-tests don't contain Browser* variables.
     """
@@ -7846,10 +7911,7 @@ def CheckNoBrowserStarInUnittests(input_api, output_api):
         """Check unit-tests only"""
         return input_api.FilterSourceFile(
             affected_file,
-            files_to_check=(
-              r'.*unittest\.cc$',
-              r'.*unittest\.h$'
-            ),
+            files_to_check=(r'.*unittest\.cc$', r'.*unittest\.h$'),
             files_to_skip=input_api.DEFAULT_FILES_TO_SKIP,
         )
 
@@ -7866,7 +7928,7 @@ def CheckNoBrowserStarInUnittests(input_api, output_api):
     if not problems:
         return []
 
-    WARNING_MSG="""Do not use "Browser*" type in unittest files (e.g.,
+    WARNING_MSG = """Do not use "Browser*" type in unittest files (e.g.,
     "*unittest.cc" or "*unittest.h"). Unit tests should generally
     not depend on the full Browser class or related components. Consider
     refactoring to mock dependencies, use test-specific fakes,
@@ -7886,7 +7948,10 @@ def CheckBaseFeatureMacro(input_api, output_api):
             continue
 
         # Create a set of changed line numbers.
-        changed_line_numbers = {line_num for line_num, _ in f.ChangedContents()}
+        changed_line_numbers = {
+            line_num
+            for line_num, _ in f.ChangedContents()
+        }
         if not changed_line_numbers:
             continue
 

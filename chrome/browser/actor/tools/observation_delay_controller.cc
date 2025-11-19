@@ -191,6 +191,9 @@ void ObservationDelayController::MoveToState(State new_state) {
       break;
     }
     case State::kMaybeDelayForLcp: {
+      inner_journal_entry_ = journal_->CreatePendingAsyncEntry(
+          GURL::EmptyGURL(), task_id_, MakeBrowserTrackUUID(task_id_),
+          "MaybeDelayForLcp", {});
       base::TimeDelta delay;
       const base::TimeDelta lcp_delay = GetLcpDelay();
       if (!lcp_delay.is_zero()) {
@@ -226,6 +229,7 @@ void ObservationDelayController::MoveToState(State new_state) {
       // must be provided.
       CHECK(ready_callback_);
       wait_journal_entry_.reset();
+      page_stability_monitor_remote_.reset();
       PostFinishedTask(std::move(ready_callback_));
       break;
     }

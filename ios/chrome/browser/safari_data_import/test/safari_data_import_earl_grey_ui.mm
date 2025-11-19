@@ -6,9 +6,9 @@
 
 #import "base/test/ios/wait_util.h"
 #import "components/strings/grit/components_strings.h"
+#import "ios/chrome/browser/data_import/public/accessibility_utils.h"
 #import "ios/chrome/browser/safari_data_import/public/utils.h"
 #import "ios/chrome/browser/safari_data_import/test/safari_data_import_app_interface.h"
-#import "ios/chrome/common/ui/confirmation_alert/constants.h"
 #import "ios/chrome/common/ui/promo_style/constants.h"
 #import "ios/chrome/grit/ios_strings.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey.h"
@@ -44,9 +44,7 @@ bool IsSafariDataImportEntryPointVisible(bool verify_visibility) {
 void DismissSafariDataImportEntryPoint(bool verify_visibility) {
   if (IsSafariDataImportEntryPointVisible(verify_visibility)) {
     [[EarlGrey
-        selectElementWithMatcher:
-            grey_accessibilityID(
-                kConfirmationAlertSecondaryActionAccessibilityIdentifier)]
+        selectElementWithMatcher:chrome_test_util::ButtonStackSecondaryButton()]
         performAction:grey_tap()];
   }
 }
@@ -57,18 +55,16 @@ bool IsSafariDataImportEntryPointVisible() {
 
 void StartImportOnSafariDataImportEntryPoint() {
   if (IsSafariDataImportEntryPointVisible(true)) {
-    [[EarlGrey selectElementWithMatcher:
-                   grey_accessibilityID(
-                       kConfirmationAlertPrimaryActionAccessibilityIdentifier)]
+    [[EarlGrey
+        selectElementWithMatcher:chrome_test_util::ButtonStackPrimaryButton()]
         performAction:grey_tap()];
   }
 }
 
 void SetReminderOnSafariDataImportEntryPoint() {
   if (IsSafariDataImportEntryPointVisible(true)) {
-    [[EarlGrey selectElementWithMatcher:
-                   grey_accessibilityID(
-                       kConfirmationAlertTertiaryActionAccessibilityIdentifier)]
+    [[EarlGrey
+        selectElementWithMatcher:chrome_test_util::ButtonStackTertiaryButton()]
         performAction:grey_tap()];
   }
 }
@@ -76,12 +72,10 @@ void SetReminderOnSafariDataImportEntryPoint() {
 void GoToImportScreen() {
   StartImportOnSafariDataImportEntryPoint();
   /// Taps "I've exported my data."
-  [[EarlGrey
-      selectElementWithMatcher:
-          grey_allOf(
-              grey_accessibilityID(
-                  kConfirmationAlertSecondaryActionAccessibilityIdentifier),
-              grey_interactable(), nil)] performAction:grey_tap()];
+  [[EarlGrey selectElementWithMatcher:
+                 grey_allOf(chrome_test_util::ButtonStackSecondaryButton(),
+                            grey_interactable(), nil)]
+      performAction:grey_tap()];
 }
 
 id<GREYMatcher> ImportScreenButtonWithTextId(int text_id) {
@@ -134,18 +128,18 @@ void ExpectImportTableHasRowCount(int expected_count) {
   BOOL visible = [ChromeEarlGrey
       testUIElementAppearanceWithMatcher:
           grey_accessibilityID(
-              GetSafariDataItemTableViewAccessibilityIdentifier())];
+              GetImportDataItemTableViewAccessibilityIdentifier())];
   GREYAssertEqual(visible, expected_count > 0,
                   visible ? @"Import table is unexpectedly displayed."
                           : @"Import table is unexpectedly hidden.");
   id<GREYMatcher> last_row =
       grey_allOf(grey_accessibilityID(
-                     GetSafariDataItemTableViewCellAccessibilityIdentifier(
+                     GetImportDataItemTableViewCellAccessibilityIdentifier(
                          expected_count - 1)),
                  grey_sufficientlyVisible(), nil);
   id<GREYMatcher> row_index_out_of_bounds =
       grey_allOf(grey_accessibilityID(
-                     GetSafariDataItemTableViewCellAccessibilityIdentifier(
+                     GetImportDataItemTableViewCellAccessibilityIdentifier(
                          expected_count)),
                  grey_sufficientlyVisible(), nil);
   [[EarlGrey selectElementWithMatcher:last_row]

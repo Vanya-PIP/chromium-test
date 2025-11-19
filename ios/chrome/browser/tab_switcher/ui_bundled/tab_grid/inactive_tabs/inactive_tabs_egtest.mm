@@ -15,7 +15,6 @@
 #import "ios/chrome/browser/tab_switcher/ui_bundled/test/query_title_server_util.h"
 #import "ios/chrome/browser/tab_switcher/ui_bundled/test/tabs_egtest_util.h"
 #import "ios/chrome/browser/tabs/model/inactive_tabs/features.h"
-#import "ios/chrome/common/ui/confirmation_alert/constants.h"
 #import "ios/chrome/grit/ios_strings.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey_ui.h"
@@ -87,14 +86,12 @@ id<GREYMatcher> GetMatcherForInactiveTabsUserEducation() {
 
 // Matcher for Inactive Tabs User Education screen's Done button.
 id<GREYMatcher> GetMatcherForUserEducationDoneButton() {
-  return grey_accessibilityID(
-      kConfirmationAlertPrimaryActionAccessibilityIdentifier);
+  return chrome_test_util::ButtonStackPrimaryButton();
 }
 
 // Matcher for Inactive Tabs User Education screen's Settings button.
 id<GREYMatcher> GetMatcherForUserEducationSettingsButton() {
-  return grey_accessibilityID(
-      kConfirmationAlertSecondaryActionAccessibilityIdentifier);
+  return chrome_test_util::ButtonStackSecondaryButton();
 }
 
 }  // namespace

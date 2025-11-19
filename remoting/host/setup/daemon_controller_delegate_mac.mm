@@ -15,7 +15,6 @@
 #include "base/apple/osstatus_test"
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
-#include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
 #include "base/test"

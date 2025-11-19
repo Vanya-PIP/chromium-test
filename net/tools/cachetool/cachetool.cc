@@ -13,8 +13,15 @@
 #include "base/containers/span.h"
 #include "base/files/file_path.h"
 #include "base/format_macros.h"
+<<<<<<< HEAD
 #include "base/hash/md5.h"
 #include "base/test"
+||||||| b30439823e517
+#include "base/hash/md5.h"
+#include "base/logging.h"
+=======
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "base/message_loop/message_pump_type.h"
 #include "base/pickle.h"
 #include "base/run_loop.h"
@@ -405,7 +412,7 @@ std::string GetMD5ForResponseBody(disk_cache::Entry* entry) {
     }
 
     if (rv == 0) {
-      return base::ToLowerASCII(base::HexEncode(hasher.Finish()));
+      return base::HexEncodeLower(hasher.Finish());
     }
 
     bytes_read += rv;

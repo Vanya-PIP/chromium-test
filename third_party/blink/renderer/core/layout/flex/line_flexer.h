@@ -18,9 +18,9 @@ class LineFlexer {
 
  public:
   LineFlexer(base::span<FlexItem> line_items,
+             LayoutUnit main_axis_inner_size,
              LayoutUnit sum_hypothetical_main_size,
-             LayoutUnit sum_flex_base_size,
-             LayoutUnit main_axis_inner_size);
+             LayoutUnit gap_between_items);
 
   void Run() {
     while (ResolveFlexibleLengths()) {
@@ -29,18 +29,18 @@ class LineFlexer {
   }
 
  private:
-  typedef Vector<wtf_size_t, 8> ViolationsIndicesVector;
-
-  enum FlexSign {
-    kPositive,
-    kNegative,
+  enum FlexerMode {
+    kGrow,
+    kShrink,
   };
 
-  void FreezeViolations(ViolationsIndicesVector& violations);
+  void FreezeViolations(FlexerState should_freeze);
   bool ResolveFlexibleLengths();
 
   base::span<FlexItem> line_items_;
-  const FlexSign flex_sign_;
+  const LayoutUnit main_axis_inner_size_;
+  const LayoutUnit gap_between_items_;
+  const FlexerMode mode_;
 
   double total_flex_grow_ = 0.0;
   double total_flex_shrink_ = 0.0;

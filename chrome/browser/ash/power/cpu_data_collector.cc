@@ -9,6 +9,7 @@
 #include <string_view>
 #include <vector>
 
+#include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/test"
 #include "base/strings/string_number_conversions.h"

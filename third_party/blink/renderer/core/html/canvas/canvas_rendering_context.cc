@@ -29,7 +29,6 @@
 #include "services/metrics/public/cpp/ukm_builders.h"
 #include "third_party/blink/public/common/features.h"
 #include "third_party/blink/public/platform/platform.h"
-#include "third_party/blink/renderer/bindings/core/v8/v8_canvas_element_hit_test_region.h"
 #include "third_party/blink/renderer/bindings/core/v8/v8_canvas_hit_test_rect.h"
 #include "third_party/blink/renderer/core/animation_frame/worker_animation_frame_provider.h"
 #include "third_party/blink/renderer/core/frame/local_dom_window.h"
@@ -49,13 +48,6 @@
 #include "third_party/blink/renderer/platform/wtf/text/string_builder.h"
 
 namespace blink {
-namespace {
-
-// A default size used for canvas memory allocation when canvas size is greater
-// than 2^20.
-constexpr int kMaximumCanvasSize = 2 << 20;
-
-}  // namespace
 
 CanvasRenderingContext::CanvasRenderingContext(
     CanvasRenderingContextHost* host,
@@ -77,22 +69,17 @@ CanvasRenderingContext::CanvasRenderingContext(
   CHECK(host_);
 }
 
-intptr_t CanvasRenderingContext::AllocatedBufferSize() const {
+base::ByteCount CanvasRenderingContext::AllocatedBufferSize() const {
   if (!Host() || isContextLost()) {
-    return 0;
+    return base::ByteCount(0);
+  }
+  const gfx::Size& size = DrawingBufferSize();
+  if (size.IsEmpty()) {
+    return base::ByteCount(0);
   }
   int buffer_count = AllocatedBufferCountPerPixel();
-
-  // NOTE: All formats used by canvas are either 8-bit or 16-bit.
-  const int bytes_per_pixel = GetSharedImageFormat().BitsPerPixel() / 8;
-
-  // Recomputation of externally memory usage computation is carried out
-  // in all cases.
-  base::CheckedNumeric<intptr_t> checked_usage = buffer_count * bytes_per_pixel;
-  gfx::Size canvas_size = DrawingBufferSize();
-  checked_usage *= std::min(kMaximumCanvasSize, canvas_size.width());
-  checked_usage *= std::min(kMaximumCanvasSize, canvas_size.height());
-  return checked_usage.ValueOrDefault(std::numeric_limits<intptr_t>::max());
+  return buffer_count *
+         base::ByteCount(GetSharedImageFormat().EstimatedSizeInBytes(size));
 }
 
 void CanvasRenderingContext::Dispose() {
@@ -291,43 +278,6 @@ scoped_refptr<StaticBitmapImage> CanvasRenderingContext::GetElementImage(
   return UnacceleratedStaticBitmapImage::Create(surface->makeImageSnapshot());
 }
 
-bool CanvasRenderingContext::ConvertHitTestRegionsToHTMLCanvasRegions(
-    const HeapVector<Member<CanvasElementHitTestRegion>>& hit_test_regions,
-    VectorOf<HTMLCanvasElement::ElementHitTestRegion>& result,
-    const String& func_name,
-    ExceptionState& exception_state) {
-  for (const auto& region : hit_test_regions) {
-    if (!IsDrawElementImageEligible(region->element(), func_name,
-                                    exception_state)) {
-      return false;
-    }
-
-    double width = [&]() -> double {
-      if (region->rect()->hasWidth()) {
-        return *region->rect()->width();
-      }
-      gfx::RectF bounds =
-          region->element()->GetBoundingClientRectNoLifecycleUpdate();
-      return bounds.width();
-    }();
-
-    double height = [&]() -> double {
-      if (region->rect()->hasHeight()) {
-        return *region->rect()->height();
-      }
-      gfx::RectF bounds =
-          region->element()->GetBoundingClientRectNoLifecycleUpdate();
-      return bounds.height();
-    }();
-
-    result.push_back(
-        MakeGarbageCollected<HTMLCanvasElement::ElementHitTestRegion>(
-            region->element(), gfx::RectF(region->rect()->x(),
-                                          region->rect()->y(), width, height)));
-  }
-  return true;
-}
-
 void CanvasRenderingContext::DidDraw(
     const SkIRect& dirty_rect,
     CanvasPerformanceMonitor::DrawType draw_type) {
@@ -489,16 +439,6 @@ CanvasRenderingContext::GetCanvasPerformanceMonitor() {
   DEFINE_THREAD_SAFE_STATIC_LOCAL(ThreadSpecific<CanvasPerformanceMonitor>,
                                   monitor, ());
   return *monitor;
-}
-
-CanvasRenderingContext::ElementHitTestRegion::ElementHitTestRegion(
-    Element* element,
-    const gfx::RectF& rect)
-    : element_(element), rect_(rect) {}
-
-void CanvasRenderingContext::ElementHitTestRegion::Trace(
-    Visitor* visitor) const {
-  visitor->Trace(element_);
 }
 
 }  // namespace blink

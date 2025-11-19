@@ -16,7 +16,6 @@
 #import "ios/chrome/browser/shared/public/features/features.h"
 #import "ios/chrome/browser/signin/model/fake_system_identity.h"
 #import "ios/chrome/browser/tips_notifications/model/utils.h"
-#import "ios/chrome/common/ui/confirmation_alert/constants.h"
 #import "ios/chrome/test/earl_grey/chrome_actions.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey_ui.h"
@@ -195,6 +194,11 @@ void MaybeDismissNotification() {
 
 // Tests triggering and interacting with each of the Tips notifications.
 - (void)testTriggerNotifications {
+  // TODO(crbug.com/455768805): Re-enable the test.
+  if (@available(iOS 26.1, *)) {
+    EARL_GREY_TEST_DISABLED(@"Test disabled on iOS 26.1.");
+  }
+
   [SigninEarlGrey addFakeIdentity:[FakeSystemIdentity fakeIdentity1]];
   [ChromeEarlGreyUI waitForAppToIdle];
 
@@ -263,8 +267,7 @@ void MaybeDismissNotification() {
   [ChromeEarlGrey waitForUIElementToAppearWithMatcher:dockingPromoView];
 
   // Tap "Got It" on the Docking promo view.
-  id<GREYMatcher> gotItButton = grey_accessibilityID(
-      kConfirmationAlertPrimaryActionAccessibilityIdentifier);
+  id<GREYMatcher> gotItButton = chrome_test_util::ButtonStackPrimaryButton();
   [ChromeEarlGrey waitForAndTapButton:gotItButton];
 
   // Wait for and tap the Signin notification.
@@ -320,9 +323,8 @@ void MaybeDismissNotification() {
                                           PromoScreenSecondaryButtonMatcher()]
       performAction:grey_tap()];
   // Tap "Go To Lens".
-  [[EarlGrey selectElementWithMatcher:
-                 grey_accessibilityID(
-                     kConfirmationAlertPrimaryActionAccessibilityIdentifier)]
+  [[EarlGrey
+      selectElementWithMatcher:chrome_test_util::ButtonStackPrimaryButton()]
       performAction:grey_tap()];
   MaybeTapAllowOnPopup();
   [ChromeEarlGrey simulatePhysicalKeyboardEvent:@"escape" flags:0];
@@ -360,9 +362,8 @@ void MaybeDismissNotification() {
                                           PromoScreenSecondaryButtonMatcher()]
       performAction:grey_tap()];
   // Tap "Go To Settings".
-  [[EarlGrey selectElementWithMatcher:
-                 grey_accessibilityID(
-                     kConfirmationAlertPrimaryActionAccessibilityIdentifier)]
+  [[EarlGrey
+      selectElementWithMatcher:chrome_test_util::ButtonStackPrimaryButton()]
       performAction:grey_tap()];
 
   // Request the notification a second time.
@@ -417,8 +418,8 @@ void MaybeDismissNotification() {
       waitForUIElementToAppearWithMatcher:
           grey_accessibilityID(@"kCredentialProviderPromoAccessibilityId")];
   // Close the promo.
-  id<GREYMatcher> noThanksButton = grey_accessibilityID(
-      kConfirmationAlertSecondaryActionAccessibilityIdentifier);
+  id<GREYMatcher> noThanksButton =
+      chrome_test_util::ButtonStackSecondaryButton();
   [ChromeEarlGrey waitForAndTapButton:noThanksButton];
 }
 

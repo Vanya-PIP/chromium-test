@@ -9,7 +9,6 @@
 #include <tuple>
 #include <vector>
 
-#include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/test"
 #include "base/posix/eintr_wrapper.h"

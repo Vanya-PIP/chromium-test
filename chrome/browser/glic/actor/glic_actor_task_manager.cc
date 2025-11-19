@@ -4,6 +4,7 @@
 
 #include "chrome/browser/glic/actor/glic_actor_task_manager.h"
 
+#include "base/base64.h"
 #include "base/check.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
@@ -21,6 +22,8 @@
 #include "chrome/common/actor/journal_details_builder.h"
 #include "chrome/common/chrome_features.h"
 #include "components/optimization_guide/proto/features/actions_data.pb.h"
+#include "components/sessions/core/session_id.h"
+#include "components/tabs/public/tab_interface.h"
 #include "mojo/public/cpp/base/proto_wrapper.h"
 
 namespace glic {
@@ -62,6 +65,12 @@ void GlicActorTaskManager::PerformActionsFinished(
     std::vector<actor::ActionResultWithLatencyInfo> action_results) {
   actor::ActorTask* task = actor_keyed_service_->GetTask(task_id);
 
+  actor_keyed_service_->GetJournal().Log(
+      GURL::EmptyGURL(), task_id, "PerformActionsFinished",
+      actor::JournalDetailsBuilder()
+          .Add("result_code", base::ToString(result_code))
+          .Build());
+
   // Task is checked when calling PerformActions and it doesn't go away.
   CHECK(task);
 
@@ -93,6 +102,10 @@ void GlicActorTaskManager::PerformActions(
   // wrapper for proto-to-actor conversion.
   optimization_guide::proto::Actions actions;
   if (!actions.ParseFromArray(actions_proto.data(), actions_proto.size())) {
+    // TODO(bokan): include the base64 proto in the error
+    actor_keyed_service_->GetJournal().Log(
+        GURL(), actor::TaskId(), "GlicPerformActions",
+        actor::JournalDetailsBuilder().AddError("Invalid Proto").Build());
     std::move(callback).Run(
         base::unexpected(mojom::PerformActionsErrorReason::kInvalidProto));
     return;
@@ -105,6 +118,9 @@ void GlicActorTaskManager::PerformActions(
           .Build());
 
   if (!actions.has_task_id()) {
+    actor_keyed_service_->GetJournal().Log(
+        GURL(), actor::TaskId(actions.task_id()), "GlicPerformActions",
+        actor::JournalDetailsBuilder().AddError("Missing Task Id").Build());
     std::move(callback).Run(
         base::unexpected(mojom::PerformActionsErrorReason::kMissingTaskId));
     return;
@@ -154,11 +170,6 @@ void GlicActorTaskManager::PerformActions(
 void GlicActorTaskManager::StopActorTask(
     actor::TaskId task_id,
     mojom::ActorTaskStopReason stop_reason) {
-  const bool success = stop_reason == mojom::ActorTaskStopReason::kTaskComplete;
-  StopActorTask(task_id, success);
-}
-
-void GlicActorTaskManager::StopActorTask(actor::TaskId task_id, bool success) {
   if (current_task_id_ == task_id) {
     current_task_id_ = actor::TaskId();
   }
@@ -174,7 +185,20 @@ void GlicActorTaskManager::StopActorTask(actor::TaskId task_id, bool success) {
     return;
   }
 
-  actor_keyed_service_->StopTask(task->id(), success);
+  actor::ActorTask::StoppedReason reason;
+  switch (stop_reason) {
+    case glic::mojom::ActorTaskStopReason::kStoppedByUser:
+      reason = actor::ActorTask::StoppedReason::kStoppedByUser;
+      break;
+    case glic::mojom::ActorTaskStopReason::kTaskComplete:
+      reason = actor::ActorTask::StoppedReason::kTaskComplete;
+      break;
+    case glic::mojom::ActorTaskStopReason::kModelError:
+      reason = actor::ActorTask::StoppedReason::kModelError;
+      break;
+  }
+
+  actor_keyed_service_->StopTask(task->id(), reason);
 }
 
 void GlicActorTaskManager::PauseActorTask(
@@ -345,9 +369,37 @@ void GlicActorTaskManager::UninterruptActorTask(actor::TaskId task_id) {
   task->Uninterrupt();
 }
 
+void GlicActorTaskManager::CreateActorTab(
+    actor::TaskId task_id,
+    bool foreground,
+    const std::optional<int32_t>& initiator_tab_id,
+    const std::optional<int32_t>& initiator_window_id,
+    glic::mojom::WebClientHandler::CreateActorTabCallback callback) {
+  tabs::TabHandle initiator_tab_handle =
+      initiator_tab_id.has_value() ? tabs::TabHandle(*initiator_tab_id)
+                                   : tabs::TabHandle::Null();
+  SessionID initiator_window_session_id =
+      initiator_window_id.has_value()
+          ? SessionID::FromSerializedValue(*initiator_window_id)
+          : SessionID::InvalidValue();
+
+  actor_keyed_service_->CreateActorTab(
+      task_id, foreground, initiator_tab_handle, initiator_window_session_id,
+      base::BindOnce(&GlicActorTaskManager::CreateActorTabFinished,
+                     GetWeakPtr(), std::move(callback)));
+}
+
+void GlicActorTaskManager::CreateActorTabFinished(
+    glic::mojom::WebClientHandler::CreateActorTabCallback callback,
+    tabs::TabInterface* new_tab) {
+  std::move(callback).Run(
+      CreateTabData(new_tab ? new_tab->GetContents() : nullptr));
+}
+
 void GlicActorTaskManager::CancelTask() {
   if (current_task_id_) {
-    StopActorTask(current_task_id_, /*success=*/false);
+    StopActorTask(current_task_id_,
+                  glic::mojom::ActorTaskStopReason::kStoppedByUser);
   }
 }
 

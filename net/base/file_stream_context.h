@@ -30,8 +30,15 @@
 #include <stdint.h>
 
 #include "base/files/file.h"
+<<<<<<< HEAD
 #include "base/test"
 #include "base/memory/weak_ptr.h"
+||||||| b30439823e517
+#include "base/logging.h"
+#include "base/memory/weak_ptr.h"
+=======
+#include "base/logging.h"
+>>>>>>> 144.0.7520.0~1
 #include "base/message_loop/message_pump_for_io.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/task/task_runner.h"

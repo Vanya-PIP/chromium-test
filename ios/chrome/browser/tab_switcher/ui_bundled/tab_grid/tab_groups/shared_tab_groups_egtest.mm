@@ -25,7 +25,6 @@
 #import "ios/chrome/browser/tab_switcher/ui_bundled/tab_grid/tab_groups/tab_groups_eg_utils.h"
 #import "ios/chrome/browser/tab_switcher/ui_bundled/test/query_title_server_util.h"
 #import "ios/chrome/browser/tab_switcher/ui_bundled/test/tabs_egtest_util.h"
-#import "ios/chrome/common/ui/confirmation_alert/constants.h"
 #import "ios/chrome/grit/ios_strings.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey.h"
 #import "ios/chrome/test/earl_grey/chrome_earl_grey_ui.h"
@@ -265,9 +264,8 @@ void WaitForFakeJoinFlowView() {
       assertWithMatcher:grey_sufficientlyVisible()];
 
   // Dismiss it, go back and re-enter.
-  [[EarlGrey selectElementWithMatcher:
-                 grey_accessibilityID(
-                     kConfirmationAlertPrimaryActionAccessibilityIdentifier)]
+  [[EarlGrey
+      selectElementWithMatcher:chrome_test_util::ButtonStackPrimaryButton()]
       performAction:grey_tap()];
   [ChromeEarlGrey waitForUIElementToDisappearWithMatcher:educationScreen];
   [[EarlGrey selectElementWithMatcher:CloseTabGroupButton()]
@@ -1283,6 +1281,13 @@ void WaitForFakeJoinFlowView() {
 // Tests that the activity summary is displayed when a tab is added from sync to
 // a shared tab group.
 - (void)testActivitySummary {
+#if TARGET_IPHONE_SIMULATOR
+  // TODO(crbug.com/456719999): Re-enable the test on simulators.
+  if (base::ios::IsRunningOnIOS26OrLater()) {
+    EARL_GREY_TEST_DISABLED(@"Test disabled on simulators.");
+  }
+#endif
+
   AddSharedGroup(/*owner=*/YES, self.testServer);
   [ChromeEarlGrey waitForMainTabCount:1];
 

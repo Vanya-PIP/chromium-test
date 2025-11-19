@@ -5,6 +5,7 @@
 #ifndef CHROME_BROWSER_GLIC_WIDGET_GLIC_FLOATING_UI_H_
 #define CHROME_BROWSER_GLIC_WIDGET_GLIC_FLOATING_UI_H_
 
+#include "base/callback_list.h"
 #include "base/time/time.h"
 #include "chrome/browser/glic/host/context/glic_screenshot_capturer.h"
 #include "chrome/browser/glic/host/glic.mojom.h"
@@ -12,10 +13,12 @@
 #include "chrome/browser/glic/service/glic_ui_embedder.h"
 #include "chrome/browser/glic/widget/glic_window_event_observer.h"
 #include "chrome/browser/glic/widget/local_hotkey_manager.h"
+#include "components/tabs/public/tab_interface.h"
 #include "components/web_modal/web_contents_modal_dialog_host.h"
 #include "components/web_modal/web_contents_modal_dialog_manager_delegate.h"
 #include "ui/gfx/geometry/rect.h"
 #include "ui/gfx/geometry/size.h"
+#include "ui/views/widget/widget_delegate.h"
 #include "ui/views/widget/widget_observer.h"
 
 class BrowserWindowInterface;
@@ -43,6 +46,7 @@ class GlicFloatingUi : public GlicUiEmbedder,
                  GlicInstanceMetrics& instance_metrics);
   GlicFloatingUi(Profile* profile,
                  gfx::Rect initial_bounds,
+                 tabs::TabHandle source_tab,
                  GlicUiEmbedder::Delegate& delegate,
                  GlicInstanceMetrics& instance_metrics);
   ~GlicFloatingUi() override;
@@ -50,8 +54,9 @@ class GlicFloatingUi : public GlicUiEmbedder,
   static gfx::Size GetDefaultSize();
 
   // GlicUiEmbedder:
+  void OnClientReady() override;
   Host::EmbedderDelegate* GetHostEmbedderDelegate() override;
-  void Show() override;
+  void Show(const ShowOptions& options) override;
   bool IsShowing() const override;
   void Close() override;
   std::unique_ptr<GlicUiEmbedder> CreateInactiveEmbedder() const override;
@@ -115,6 +120,9 @@ class GlicFloatingUi : public GlicUiEmbedder,
   void CreateAndSetupWidget(gfx::Rect initial_bounds);
   void MaybeSetWidgetCanResize();
   void SetGlicWindowToFloatingMode(bool floating);
+  void OnSourceTabDestroyed(tabs::TabInterface* tab,
+                            const InstanceId& instance_id);
+  void FloatingPanelCanAttachChanged(bool can_attach);
 
   // Whether the widget should be user resizable, kept here in case it's
   // specified before the widget is created.
@@ -124,6 +132,9 @@ class GlicFloatingUi : public GlicUiEmbedder,
   std::unique_ptr<LocalHotkeyManager> application_hotkey_manager_;
   std::unique_ptr<LocalHotkeyManager> glic_panel_hotkey_manager_;
   std::unique_ptr<GlicWindowAnimator> glic_window_animator_;
+
+  // Must outlive `glic_widget_`
+  std::unique_ptr<views::WidgetDelegate> glic_delegate_;
   std::unique_ptr<GlicWidget> glic_widget_;
   std::unique_ptr<GlicWindowEventObserver> window_event_observer_;
   mojom::PanelState panel_state_;
@@ -141,6 +152,9 @@ class GlicFloatingUi : public GlicUiEmbedder,
   raw_ref<GlicInstanceMetrics> instance_metrics_;
 
   std::unique_ptr<GlicScreenshotCapturer> screenshot_capturer_;
+
+  tabs::TabHandle source_tab_;
+  base::CallbackListSubscription source_tab_destruction_subscription_;
 
   base::WeakPtrFactory<GlicFloatingUi> weak_ptr_factory_{this};
 };

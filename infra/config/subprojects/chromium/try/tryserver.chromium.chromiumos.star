@@ -22,6 +22,9 @@ try_.defaults.set(
     os = os.LINUX_DEFAULT,
     compilator_cores = 16,
     execution_timeout = try_constants.DEFAULT_EXECUTION_TIMEOUT,
+    experiments = {
+        "chromium_tests.resultdb_module": 100,
+    },
     orchestrator_cores = 2,
     orchestrator_siso_remote_jobs = siso.remote_jobs.HIGH_JOBS_FOR_CQ,
     service_account = try_constants.DEFAULT_SERVICE_ACCOUNT,
@@ -151,7 +154,7 @@ try_.orchestrator_builder(
     ),
 )
 
-CHROMEOS_SHARED_CACHE = "shared_chromeos_amd64_generic_rel_cache"
+CHROMEOS_SHARED_CACHE = "shared_chromeos_amd64_generic_rel_cache_{}".format(settings.project.replace("-", "_"))
 
 try_.compilator_builder(
     name = "chromeos-amd64-generic-rel-gtest-compilator",

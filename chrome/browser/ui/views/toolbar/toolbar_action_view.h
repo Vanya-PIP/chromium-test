@@ -7,8 +7,8 @@
 
 #include "base/functional/callback.h"
 #include "base/memory/raw_ptr.h"
+#include "chrome/browser/ui/views/extensions/extension_context_menu_controller.h"
 #include "chrome/browser/ui/views/toolbar/toolbar_action_hover_card_controller.h"
-#include "chrome/browser/ui/views/toolbar/toolbar_action_view_delegate_views.h"
 #include "extensions/common/extension_id.h"
 #include "ui/base/metadata/metadata_header_macros.h"
 #include "ui/views/bubble/bubble_dialog_delegate_view.h"
@@ -18,18 +18,16 @@
 #include "ui/views/controls/menu/menu_model_adapter.h"
 #include "ui/views/drag_controller.h"
 
-class ExtensionContextMenuController;
-
 namespace content {
 class WebContents;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // ToolbarActionView
-// A wrapper around a ToolbarActionViewController to display a toolbar action
+// A wrapper around a ToolbarActionViewModel to display a toolbar action
 // action in the browser's toolbar.
 class ToolbarActionView : public views::MenuButton,
-                          public ToolbarActionViewDelegateViews {
+                          public ExtensionContextMenuController::Observer {
   METADATA_HEADER(ToolbarActionView, views::MenuButton)
 
  public:
@@ -54,12 +52,22 @@ class ToolbarActionView : public views::MenuButton,
     virtual void MovePinnedActionBy(const std::string& action_id,
                                     int move_by) = 0;
 
+    // Updates the hover card for `action_view` based on `update_type`.
+    virtual void UpdateHoverCard(
+        ToolbarActionView* action_view,
+        ToolbarActionHoverCardUpdateType update_type) = 0;
+
+    // Called when a context menu is shown.
+    virtual void OnContextMenuShown(const std::string& action_id) = 0;
+
+    // Called when a context menu has closed.
+    virtual void OnContextMenuClosed(const std::string& action_id) = 0;
+
    protected:
     ~Delegate() override = default;
   };
 
-  ToolbarActionView(ToolbarActionViewController* view_controller,
-                    Delegate* delegate);
+  ToolbarActionView(ToolbarActionViewModel* view_model, Delegate* delegate);
   ToolbarActionView(const ToolbarActionView&) = delete;
   ToolbarActionView& operator=(const ToolbarActionView&) = delete;
   ~ToolbarActionView() override;
@@ -85,6 +93,8 @@ class ToolbarActionView : public views::MenuButton,
   // to be deprecated.
   views::BubbleAnchor GetReferenceButtonForPopup();
 
+  void UpdateState();
+
   // views::MenuButton:
   gfx::Rect GetAnchorBoundsInScreen() const override;
   std::unique_ptr<views::LabelButtonBorder> CreateDefaultBorder()
@@ -94,10 +104,7 @@ class ToolbarActionView : public views::MenuButton,
   void OnMouseMoved(const ui::MouseEvent& event) override;
   void OnMouseEntered(const ui::MouseEvent& event) override;
 
-  // ToolbarActionViewDelegateViews:
-  void UpdateState() override;
-
-  ToolbarActionViewController* view_controller() { return view_controller_; }
+  ToolbarActionViewModel* view_model() { return view_model_; }
 
   // Returns button icon so it can be accessed during tests.
   gfx::ImageSkia GetIconForTest();
@@ -118,6 +125,10 @@ class ToolbarActionView : public views::MenuButton,
   void AddedToWidget() override;
   void RemovedFromWidget() override;
 
+  // ExtensionContextMenuController::Observer:
+  void OnContextMenuShown() override;
+  void OnContextMenuClosed() override;
+
   // Like GetReferenceButtonForPopup but with a more precise return type.
   views::Button* GetReferenceButtonForPopupInternal();
 
@@ -126,8 +137,8 @@ class ToolbarActionView : public views::MenuButton,
   // A lock to keep the MenuButton pressed when a menu or popup is visible.
   std::unique_ptr<views::MenuButtonController::PressedLock> pressed_lock_;
 
-  // The controller for this toolbar action view.
-  raw_ptr<ToolbarActionViewController> view_controller_;
+  // The view model for this toolbar action view.
+  raw_ptr<ToolbarActionViewModel> view_model_;
 
   // Delegate that usually represents a container for ToolbarActionView.
   raw_ptr<Delegate> delegate_;

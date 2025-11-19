@@ -32,6 +32,7 @@
 #include "third_party/blink/renderer/core/html/custom/custom_element_definition.h"
 #include "third_party/blink/renderer/core/html/custom/custom_element_registry.h"
 #include "third_party/blink/renderer/core/html/custom/element_internals.h"
+#include "third_party/blink/renderer/core/html/display_ad_element_monitor.h"
 #include "third_party/blink/renderer/core/html/html_element.h"
 #include "third_party/blink/renderer/core/intersection_observer/element_intersection_observer_data.h"
 #include "third_party/blink/renderer/core/layout/anchor_position_scroll_data.h"
@@ -156,6 +157,36 @@ void ElementRareDataVector::ClearColumnPseudoElements(wtf_size_t to_keep) {
     return;
   }
   data->ClearColumnPseudoElements(to_keep);
+}
+
+void ElementRareDataVector::AddOverscrollPseudoElement(PseudoElement& element) {
+  PseudoElementData* data =
+      static_cast<PseudoElementData*>(GetField(FieldId::kPseudoElementData));
+  if (!data) {
+    data = MakeGarbageCollected<PseudoElementData>();
+    SetField(FieldId::kPseudoElementData, data);
+  }
+  data->SetPseudoElement(element.GetPseudoId(), &element,
+                         element.GetPseudoArgument());
+}
+
+const OverscrollPseudoElementData*
+ElementRareDataVector::GetOverscrollPseudoElementData() const {
+  PseudoElementData* data =
+      static_cast<PseudoElementData*>(GetField(FieldId::kPseudoElementData));
+  if (!data) {
+    return nullptr;
+  }
+  return data->GetOverscrollAreaData();
+}
+
+void ElementRareDataVector::ClearOverscrollPseudoElements() {
+  PseudoElementData* data =
+      static_cast<PseudoElementData*>(GetField(FieldId::kPseudoElementData));
+  if (!data) {
+    return;
+  }
+  data->ClearOverscrollAreas();
 }
 
 CSSStyleDeclaration& ElementRareDataVector::EnsureInlineCSSStyleDeclaration(
@@ -572,6 +603,18 @@ ElementAnimationTriggerData&
 ElementRareDataVector::EnsureAnimationTriggerData() {
   return EnsureField<ElementAnimationTriggerData>(
       FieldId::kAnimationTriggerData);
+}
+
+DisplayAdElementMonitor* ElementRareDataVector::GetDisplayAdElementMonitor()
+    const {
+  return static_cast<DisplayAdElementMonitor*>(
+      GetField(FieldId::kDisplayAdElementMonitor));
+}
+
+DisplayAdElementMonitor& ElementRareDataVector::EnsureDisplayAdElementMonitor(
+    Element* element) {
+  return EnsureField<DisplayAdElementMonitor>(FieldId::kDisplayAdElementMonitor,
+                                              element);
 }
 
 void ElementRareDataVector::SetFocusgroupLastFocused(Element* element) {

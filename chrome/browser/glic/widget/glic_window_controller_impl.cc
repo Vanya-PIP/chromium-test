@@ -5,6 +5,7 @@
 #include "chrome/browser/glic/widget/glic_window_controller_impl.h"
 
 #include <algorithm>
+#include <utility>
 
 #include "base/check.h"
 #include "base/check_deref.h"
@@ -49,7 +50,8 @@
 #include "chrome/browser/ui/views/frame/tab_strip_view_interface.h"
 #include "chrome/browser/ui/views/interaction/browser_elements_views.h"
 #include "chrome/browser/ui/views/side_panel/side_panel.h"
-#include "chrome/browser/ui/views/side_panel/side_panel_coordinator.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_entry.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_ui.h"
 #include "chrome/browser/ui/views/tabs/glic_button.h"
 #include "chrome/browser/ui/views/tabs/tab_strip_action_container.h"
 #include "chrome/browser/ui/views/tabs/window_finder.h"
@@ -66,6 +68,7 @@
 #include "ui/display/display_observer.h"
 #include "ui/display/screen.h"
 #include "ui/events/event_observer.h"
+#include "ui/gfx/geometry/rect.h"
 #include "ui/views/accessibility/view_accessibility.h"
 #include "ui/views/controls/webview/webview.h"
 #include "ui/views/event_monitor.h"
@@ -576,10 +579,16 @@ std::unique_ptr<views::View> GlicWindowControllerImpl::CreateViewForSidePanel(
 }
 
 void GlicWindowControllerImpl::SetupAndShowGlicWidget(Browser* browser) {
-  auto initial_bounds = GetInitialBounds(browser);
-  glic_widget_ = GlicWidget::Create(profile_, initial_bounds,
-                                    glic_panel_hotkey_manager_->GetWeakPtr(),
-                                    user_resizable_);
+  const gfx::Rect initial_bounds = GetInitialBounds(browser);
+
+  auto glic_view =
+      std::make_unique<GlicView>(profile_, initial_bounds.size(),
+                                 glic_panel_hotkey_manager_->GetWeakPtr());
+  glic_delegate_ =
+      GlicWidget::CreateWidgetDelegate(std::move(glic_view), user_resizable_);
+  glic_widget_ = GlicWidget::Create(glic_delegate_.get(), profile_,
+                                    initial_bounds, user_resizable_);
+
   glic_widget_observation_.Observe(glic_widget_.get());
   SetupGlicWidgetAccessibilityText();
 
@@ -823,9 +832,7 @@ void GlicWindowControllerImpl::AttachToBrowserAndShow(
     AttachChangeReason reason) {
   AttachToBrowser(browser, reason);
   SetWindowState(GlicWindowController::State::kWaitingForSidePanelToShow);
-
-  auto* side_panel_coordinator = browser.GetFeatures().side_panel_coordinator();
-  side_panel_coordinator->Show(SidePanelEntry::Id::kGlic);
+  browser.GetFeatures().side_panel_ui()->Show(SidePanelEntry::Id::kGlic);
 }
 
 void GlicWindowControllerImpl::SidePanelShown(BrowserWindowInterface* browser) {
@@ -1027,7 +1034,9 @@ void GlicWindowControllerImpl::ResetAndHidePanel() {
     if (glic_view_) {
       glic_view_->SetWebContents(nullptr);
     }
-    attached_browser_->GetFeatures().side_panel_coordinator()->Close();
+
+    attached_browser_->GetFeatures().side_panel_ui()->Close(
+        SidePanelEntry::PanelType::kContent);
   }
 
   // The following state is always safe to reset regardless of if the panel is
@@ -1038,6 +1047,7 @@ void GlicWindowControllerImpl::ResetAndHidePanel() {
   glic_window_animator_.reset();
   glic_widget_observation_.Reset();
   glic_widget_.reset();
+  glic_delegate_.reset();
   scoped_glic_button_indicator_.reset();
 
   // Attached Side Panel State.
@@ -1073,10 +1083,6 @@ void GlicWindowControllerImpl::ShowTitleBarContextMenuAt(gfx::Point event_loc) {
 }
 
 mojom::PanelState GlicWindowControllerImpl::GetPanelState() {
-  return panel_state_;
-}
-
-mojom::PanelState GlicWindowControllerImpl::GetGlobalPanelState() {
   return panel_state_;
 }
 
@@ -1274,6 +1280,15 @@ GlicWindowControllerImpl::AddWindowActivationChangedCallback(
   return window_activation_callback_list_.Add(std::move(callback));
 }
 
+base::CallbackListSubscription
+GlicWindowControllerImpl::AddGlobalShowHideCallback(
+    base::RepeatingClosure callback) {
+  return RegisterStateChange(
+      base::BindRepeating([](base::RepeatingClosure callback, bool,
+                             mojom::CurrentView) { callback.Run(); },
+                          std::move(callback)));
+}
+
 void GlicWindowControllerImpl::Preload() {
   if (!host().contents_container()) {
     host().CreateContents(/*initially_hidden=*/true);
@@ -1337,8 +1352,10 @@ base::CallbackListSubscription GlicWindowControllerImpl::RegisterStateChange(
 base::CallbackListSubscription
 GlicWindowControllerImpl::AddActiveInstanceChangedCallbackAndNotifyImmediately(
     ActiveInstanceChangedCallback callback) {
-  NOTIMPLEMENTED();
-  return base::CallbackListSubscription();
+  NOTREACHED();
+}
+GlicInstance* GlicWindowControllerImpl::GetActiveInstance() {
+  NOTREACHED();
 }
 
 void GlicWindowControllerImpl::SetWindowState(State new_state) {
@@ -1473,6 +1490,10 @@ bool GlicWindowControllerImpl::InvocationSourceMatchesCurrentView(
           current_view == mojom::CurrentView::kActuation) ||
          (source == mojom::InvocationSource::kTopChromeButton &&
           current_view == mojom::CurrentView::kConversation);
+}
+
+glic::GlicInstanceMetrics* GlicWindowControllerImpl::instance_metrics() {
+  return nullptr;
 }
 
 }  // namespace glic

@@ -10,7 +10,7 @@
 #include "chrome/browser/ui/extensions/extension_popup_types.h"
 #include "ui/gfx/native_ui_types.h"
 
-class ExtensionActionViewController;
+class ExtensionActionViewModel;
 
 namespace extensions {
 class ExtensionViewHost;
@@ -20,16 +20,15 @@ class ExtensionActionPlatformDelegate {
  public:
   virtual ~ExtensionActionPlatformDelegate() = default;
 
-  // Attaches the delegate to an ExtensionActionViewController. It is called
-  // by the controller on its constructor.
-  virtual void AttachToController(
-      ExtensionActionViewController* controller) = 0;
+  // Attaches the delegate to an ExtensionActionViewModel. It is called
+  // by the model on its constructor.
+  virtual void AttachToModel(ExtensionActionViewModel* model) = 0;
 
-  // Detaches the delegate from an ExtensionActionViewController. It is called
-  // by the controller on its destructor.
-  virtual void DetachFromController() = 0;
+  // Detaches the delegate from an ExtensionActionViewModel. It is called
+  // by the model on its destructor.
+  virtual void DetachFromModel() = 0;
 
-  // The following are forwarded from ToolbarActionViewController. See that
+  // The following are forwarded from ToolbarActionViewModel. See that
   // class for the definitions.
   virtual void RegisterCommand() = 0;
   virtual void UnregisterCommand() = 0;
@@ -56,6 +55,10 @@ class ExtensionActionPlatformDelegate {
   // Shows the context menu for the action as a fallback for performing another
   // action.
   virtual void ShowContextMenuAsFallback() = 0;
+
+  // Closes the overflow menu, if it was open. Returns whether or not the
+  // overflow menu was closed.
+  virtual bool CloseOverflowMenuIfOpen() = 0;
 };
 
 #endif  // CHROME_BROWSER_UI_EXTENSIONS_EXTENSION_ACTION_PLATFORM_DELEGATE_H_

@@ -11,6 +11,9 @@
 // Feature to enable Reader Mode UI and entry points.
 BASE_DECLARE_FEATURE(kEnableReaderMode);
 
+// Feature to enable Reader Mode UI in the US country code.
+BASE_DECLARE_FEATURE(kEnableReaderModeInUS);
+
 // Feature to enable Reader Mode omnibox entry point.
 BASE_DECLARE_FEATURE(kEnableReaderModeOmniboxEntryPoint);
 
@@ -30,10 +33,6 @@ BASE_DECLARE_FEATURE(kEnableReaderModeDebugInfo);
 
 // Feature to enable Readability heuristic for page triggering eligibility.
 BASE_DECLARE_FEATURE(kEnableReadabilityHeuristic);
-
-// Feature to enable the default browser promo with Reading mode eligibility
-// criteria.
-BASE_DECLARE_FEATURE(kEnableReaderModeDefaultBrowserPromo);
 
 // Name to configure the duration string for heuristic page load delay. See
 // `base::TimeDeltaFromString` for valid duration string configurations.

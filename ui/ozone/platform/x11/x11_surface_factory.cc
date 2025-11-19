@@ -86,29 +86,6 @@ class GLOzoneEGLX11 : public GLOzoneEGL {
     }
   }
 
-  std::unique_ptr<NativePixmapGLBinding> ImportNativePixmap(
-      scoped_refptr<gfx::NativePixmap> pixmap,
-      gfx::BufferFormat plane_format,
-      gfx::BufferPlane plane,
-      gfx::Size plane_size,
-      const gfx::ColorSpace& color_space,
-      GLenum target,
-      GLuint texture_id) override {
-    switch (GetNativePixmapSupportType()) {
-      case NativePixmapSupportType::kDMABuf: {
-        return NativePixmapEGLBinding::Create(pixmap, plane_format, plane,
-                                              plane_size, color_space, target,
-                                              texture_id);
-      }
-      case NativePixmapSupportType::kX11Pixmap: {
-        return NativePixmapEGLX11Binding::Create(
-            pixmap, plane_format, plane_size, target, texture_id);
-      }
-      default:
-        return nullptr;
-    }
-  }
-
   scoped_refptr<gl::GLSurface> CreateViewGLSurface(
       gl::GLDisplay* display,
       gfx::AcceleratedWidget window) override {
@@ -160,6 +137,30 @@ class GLOzoneEGLX11 : public GLOzoneEGL {
   }
 
  private:
+  std::unique_ptr<NativePixmapGLBinding> ImportNativePixmap(
+      scoped_refptr<gfx::NativePixmap> pixmap,
+      viz::SharedImageFormat plane_format,
+      gfx::BufferPlane plane,
+      gfx::Size plane_size,
+      const gfx::ColorSpace& color_space,
+      GLenum target,
+      GLuint texture_id) override {
+    auto buffer_format = viz::SharedImageFormatToBufferFormat(plane_format);
+    switch (GetNativePixmapSupportType()) {
+      case NativePixmapSupportType::kDMABuf: {
+        return NativePixmapEGLBinding::Create(pixmap, buffer_format, plane,
+                                              plane_size, color_space, target,
+                                              texture_id);
+      }
+      case NativePixmapSupportType::kX11Pixmap: {
+        return NativePixmapEGLX11Binding::Create(
+            pixmap, buffer_format, plane_size, target, texture_id);
+      }
+      default:
+        return nullptr;
+    }
+  }
+
   bool is_swiftshader_ = false;
 };
 
@@ -214,19 +215,19 @@ scoped_refptr<gfx::NativePixmap> X11SurfaceFactory::CreateNativePixmap(
     gfx::AcceleratedWidget widget,
     gpu::VulkanDeviceQueue* device_queue,
     gfx::Size size,
-    gfx::BufferFormat format,
+    viz::SharedImageFormat format,
     gfx::BufferUsage usage,
     std::optional<gfx::Size> framebuffer_size) {
   scoped_refptr<gfx::NativePixmapDmaBuf> pixmap;
   auto buffer = ui::GpuMemoryBufferSupportX11::GetInstance()->CreateBuffer(
-      format, size, usage);
+      viz::SharedImageFormatToBufferFormat(format), size, usage);
   if (buffer) {
     gfx::NativePixmapHandle handle = buffer->ExportHandle();
     if (handle.planes.empty()) {
       return nullptr;
     }
-    pixmap = base::MakeRefCounted<gfx::NativePixmapDmaBuf>(
-        size, viz::GetSharedImageFormat(format), std::move(handle));
+    pixmap = base::MakeRefCounted<gfx::NativePixmapDmaBuf>(size, format,
+                                                           std::move(handle));
   }
 
   // CreateNativePixmap is non-blocking operation. Thus, it is safe to call it

@@ -23,8 +23,6 @@
 
 BASE_FEATURE(kTestFeature, base::FEATURE_DISABLED_BY_DEFAULT);
 
-BASE_FEATURE(kSafetyCheckMagicStack, base::FEATURE_ENABLED_BY_DEFAULT);
-
 BASE_FEATURE(kSafetyCheckAutorunByManagerKillswitch,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
@@ -56,9 +54,6 @@ const char kSafetyCheckAllowSafeBrowsingNotifications[] =
 
 const char kSafetyCheckAllowUpdateChromeNotifications[] =
     "SafetyCheckAllowUpdateChromeNotifications";
-
-const char kSafetyCheckMagicStackAutorunHoursThreshold[] =
-    "SafetyCheckMagicStackAutorunHoursThreshold";
 
 const char kSafetyCheckNotificationsProvisionalEnabled[] =
     "SafetyCheckNotificationsProvisionalEnabled";
@@ -112,14 +107,6 @@ const base::TimeDelta InactiveThresholdForSafetyCheckNotifications() {
       kSafetyCheckNotifications, kSafetyCheckNotificationsUserInactiveThreshold,
       /*default_value=*/
       kSafetyCheckNotificationDefaultDelay);
-}
-
-// How many hours between each autorun of the Safety Check in the Magic Stack.
-const base::TimeDelta TimeDelayForSafetyCheckAutorun() {
-  int delay = base::GetFieldTrialParamByFeatureAsInt(
-      kSafetyCheckMagicStack, kSafetyCheckMagicStackAutorunHoursThreshold,
-      /*default_value=*/720);
-  return base::Hours(delay);
 }
 
 BASE_FEATURE(kHideToolbarsInOverflowMenu, base::FEATURE_DISABLED_BY_DEFAULT);
@@ -206,27 +193,26 @@ BASE_FEATURE(kNTPMIAEntrypointAllLocales,
              "kNTPMIAEntrypointAllLocales",
              base::FEATURE_DISABLED_BY_DEFAULT);
 
-// When enabled the AIM ZPS entrypoint will open the AIM prototype which
-// contains temporary UI exploration for AIM.
-BASE_FEATURE(kAIMPrototype, base::FEATURE_DISABLED_BY_DEFAULT);
+BASE_FEATURE(kComposeboxAutoattachTab, base::FEATURE_DISABLED_BY_DEFAULT);
 
-const char kAIMPrototypeParam[] = "AIMPrototypeParam";
-const char kAIMPrototypeParamAllOmniboxEntrypoints[] =
-    "AIMPrototypeAllOmniboxEntrypoints";
+// Used to gate the immersive SRP in the Composebox.
+BASE_FEATURE(kComposeboxImmersiveSRP, base::FEATURE_DISABLED_BY_DEFAULT);
 
-BASE_FEATURE(kAIMPrototypeAutoattachTab, base::FEATURE_DISABLED_BY_DEFAULT);
+const char kComposeboxTabPickerVariationParam[] =
+    "kComposeboxTabPickerVariationParam";
+const char kComposeboxTabPickerVariationParamCachedAPC[] =
+    "kComposeboxTabPickerVariationParamCachedAPC";
+const char kComposeboxTabPickerVariationParamOnFlightAPC[] =
+    "kComposeboxTabPickerVariationParamOnFlightAPC";
 
-// Used to gate the immersive SRP in the AIM prototype.
-BASE_FEATURE(kAIMPrototypeImmersiveSRP, base::FEATURE_DISABLED_BY_DEFAULT);
+// Feature flag for the tab picker in the Composebox.
+BASE_FEATURE(kComposeboxTabPickerVariation, base::FEATURE_DISABLED_BY_DEFAULT);
 
-const char kAIMPrototypeTabPickerParam[] = "kAIMPrototypeTabPickerParam";
-const char kAIMPrototypeTabPickerParamCachedAPC[] =
-    "kAIMPrototypeTabPickerParamCachedAPC";
-const char kAIMPrototypeTabPickerParamOnFlightAPC[] =
-    "kAIMPrototypeTabPickerParamOnFlightAPC";
-
-// Feature flag for the tab picker in the aim prototype.
-BASE_FEATURE(kAIMPrototypeTabPicker, base::FEATURE_DISABLED_BY_DEFAULT);
+bool IsComposeboxTabPickerCachedAPCEnabled() {
+  std::string param = base::GetFieldTrialParamValueByFeature(
+      kComposeboxTabPickerVariation, kComposeboxTabPickerVariationParam);
+  return param == kComposeboxTabPickerVariationParamCachedAPC;
+}
 
 BASE_FEATURE(kOmniboxDRSPrototype, base::FEATURE_DISABLED_BY_DEFAULT);
 
@@ -336,10 +322,6 @@ BASE_FEATURE(kOnlyAccessClipboardAsync, base::FEATURE_ENABLED_BY_DEFAULT);
 
 bool IsSafetyCheckAutorunByManagerEnabled() {
   return base::FeatureList::IsEnabled(kSafetyCheckAutorunByManagerKillswitch);
-}
-
-bool IsSafetyCheckMagicStackEnabled() {
-  return base::FeatureList::IsEnabled(kSafetyCheckMagicStack);
 }
 
 bool ShouldHideSafetyCheckModuleIfNoIssues() {
@@ -658,6 +640,13 @@ bool IsLiquidGlassEffectEnabled() {
   }
 
   return false;
+}
+
+BASE_FEATURE(kIOSKeyboardAccessoryDefaultView,
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsIOSKeyboardAccessoryDefaultViewEnabled() {
+  return base::FeatureList::IsEnabled(kIOSKeyboardAccessoryDefaultView);
 }
 
 BASE_FEATURE(kIOSKeyboardAccessoryTwoBubble, base::FEATURE_DISABLED_BY_DEFAULT);
@@ -1042,6 +1031,12 @@ int MaxRecentlyUsedBackgrounds() {
   return kMaxRecentlyUsedBackgrounds.Get();
 }
 
+BASE_FEATURE(kNTPBackgroundColorSlider, base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsNTPBackgroundColorSliderEnabled() {
+  return base::FeatureList::IsEnabled(kNTPBackgroundColorSlider);
+}
+
 BASE_FEATURE(kRunDefaultStatusCheck, base::FEATURE_ENABLED_BY_DEFAULT);
 
 bool IsRunDefaultStatusCheckEnabled() {
@@ -1178,9 +1173,19 @@ bool IsSyncedSetUpEnabled() {
          base::FeatureList::IsEnabled(kIOSSyncedSetUp);
 }
 
+const char kSyncedSetUpImpressionLimit[] = "SyncedSetUpImpressionLimit";
+
+int GetSyncedSetUpImpressionLimit() {
+  return base::GetFieldTrialParamByFeatureAsInt(
+      kIOSSyncedSetUp, kSyncedSetUpImpressionLimit, /*default_value=*/1);
+}
+
 BASE_FEATURE(kMultilineBrowserOmnibox, base::FEATURE_DISABLED_BY_DEFAULT);
 
 bool IsMultilineBrowserOmniboxEnabled() {
+  if (ui::GetDeviceFormFactor() != ui::DEVICE_FORM_FACTOR_PHONE) {
+    return false;
+  }
   return base::FeatureList::IsEnabled(kMultilineBrowserOmnibox);
 }
 
@@ -1226,4 +1231,25 @@ bool ShouldShowKeyboardAccessoryFeatures() {
   std::string feature_param = base::GetFieldTrialParamValueByFeature(
       kDisableKeyboardAccessory, kDisableKeyboardAccessoryParam);
   return feature_param == kDisableKeyboardAccessoryOnlyFeatures;
+}
+
+BASE_FEATURE(kLocationBarBadgeMigration, base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsLocationBarBadgeMigrationEnabled() {
+  return base::FeatureList::IsEnabled(kLocationBarBadgeMigration);
+}
+
+BASE_FEATURE(kIOSFusebox, base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsIOSFuseboxEnabled() {
+  return base::FeatureList::IsEnabled(kIOSFusebox);
+}
+
+BASE_FEATURE(kComposeboxIOS, base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsComposeboxIOSEnabled() {
+  if (ui::GetDeviceFormFactor() != ui::DEVICE_FORM_FACTOR_PHONE) {
+    return false;
+  }
+  return base::FeatureList::IsEnabled(kComposeboxIOS);
 }

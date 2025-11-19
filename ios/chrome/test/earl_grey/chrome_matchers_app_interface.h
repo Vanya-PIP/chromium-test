@@ -686,9 +686,6 @@
 // smaller than the scroll view bounds.
 + (id<GREYMatcher>)contentViewSmallerThanScrollView;
 
-// Returns a matcher for a history entry with `url` and `title`.
-+ (id<GREYMatcher>)historyEntryForURL:(NSString*)URL title:(NSString*)title;
-
 // Returns a matcher to the add button in the toolbar of the settings view.
 + (id<GREYMatcher>)settingsToolbarAddButton;
 
@@ -948,6 +945,20 @@
 
 // Returns the matcher for the tab groups panel view.
 + (id<GREYMatcher>)tabGroupsPanel;
+
+#pragma mark - Button Stack
+
+// Returns a matcher for the primary button in a button stack.
++ (id<GREYMatcher>)buttonStackPrimaryButton;
+
+// Returns a matcher for the secondary button in a button stack.
++ (id<GREYMatcher>)buttonStackSecondaryButton;
+
+// Returns a matcher for the tertiary button in a button stack.
++ (id<GREYMatcher>)buttonStackTertiaryButton;
+
+// Returns a matcher for the checkmark symbol in a button stack.
++ (id<GREYMatcher>)buttonStackCheckmarkSymbol;
 
 @end
 
