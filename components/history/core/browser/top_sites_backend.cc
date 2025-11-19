@@ -12,7 +12,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/task/cancelable_task_tracker.h"

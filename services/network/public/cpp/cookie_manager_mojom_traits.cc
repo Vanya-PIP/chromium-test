@@ -5,7 +5,7 @@
 #include "services/network/public/cpp/cookie_manager_mojom_traits.h"
 
 #include "base/debug/alias.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/time/time.h"
 #include "mojo/public/cpp/base/time_mojom_traits.h"

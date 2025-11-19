@@ -15,7 +15,7 @@
 #include <vector>
 
 #include "base/dcheck_is_on.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/memory/raw_ptr.h"
 #include "base/observer_list.h"
 #include "third_party/abseil-cpp/absl/container/flat_hash_map.h"

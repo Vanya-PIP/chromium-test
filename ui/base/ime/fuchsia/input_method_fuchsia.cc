@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/fuchsia/process_context.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/ime/text_input_client.h"
 #include "ui/events/base_event_utils.h"
 #include "ui/events/keycodes/dom/dom_code.h"

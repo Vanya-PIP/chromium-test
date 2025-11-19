@@ -18,7 +18,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/strcat.h"

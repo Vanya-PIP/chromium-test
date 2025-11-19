@@ -10,7 +10,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 // TODO(slan): Find a replacement for LibcurlWrapper in Chromium to remove the
 // breakpad dependency.
 #include "chromecast/crash/libcurl_wrapper.h"

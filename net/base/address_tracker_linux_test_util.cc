@@ -15,7 +15,7 @@
 
 #include "base/check_op.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/ip_address.h"
 
 bool operator==(const struct ifaddrmsg& lhs, const struct ifaddrmsg& rhs) {

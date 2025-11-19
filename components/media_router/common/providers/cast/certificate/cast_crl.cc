@@ -11,7 +11,7 @@
 #include "base/build_time.h"
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/time/time.h"
 #include "components/media_router/common/providers/cast/certificate/cast_fallback_crl.h"

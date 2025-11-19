@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "components/device_event_log/device_event_log_impl.h"
 

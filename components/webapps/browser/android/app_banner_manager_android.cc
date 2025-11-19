@@ -35,7 +35,7 @@
 #include "components/webapps/browser/banners/native_app_banner_data.h"
 #include "components/webapps/browser/banners/web_app_banner_data.h"
 #include "components/webapps/browser/features.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_manager.h"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/browser/webapps_client.h"

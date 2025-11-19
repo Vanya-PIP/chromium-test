@@ -11,7 +11,7 @@
 #include "base/android/device_info.h"
 #include "base/android/jni_array.h"
 #include "base/android/jni_string.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"

@@ -27,7 +27,7 @@
 #include "build/build_config.h"
 
 #if BUILDFLAG(ENABLE_BANNED_BASE_FEATURE_PREFIX)
-#include "base/logging.h"
+#include "base/test"
 #endif
 
 namespace base {

@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "gpu/vulkan/vulkan_device_queue.h"
 #include "gpu/vulkan/vulkan_function_pointers.h"

@@ -11,7 +11,7 @@
 #include "base/files/file_util.h"
 #include "base/files/memory_mapped_file.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_util.h"

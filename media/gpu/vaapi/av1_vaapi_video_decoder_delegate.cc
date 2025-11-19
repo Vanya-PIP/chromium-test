@@ -17,7 +17,7 @@
 
 #include "base/containers/span.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "media/gpu/av1_picture.h"
 #include "media/gpu/vaapi/vaapi_common.h"

@@ -8,7 +8,7 @@
 
 #include "base/base64.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash::multidevice {
 

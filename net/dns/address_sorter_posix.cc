@@ -38,7 +38,7 @@
 #include <vector>
 
 #include "base/containers/unique_ptr_adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/ip_endpoint.h"
 #include "net/base/net_errors.h"
 #include "net/log/net_log_source.h"

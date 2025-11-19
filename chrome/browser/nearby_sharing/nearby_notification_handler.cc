@@ -18,7 +18,7 @@
 #include "chrome/browser/notifications/notification_display_service_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/settings_window_manager_chromeos.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace {
 

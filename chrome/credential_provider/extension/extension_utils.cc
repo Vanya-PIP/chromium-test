@@ -8,7 +8,7 @@
 #include "chrome/credential_provider/extension/extension_strings.h"
 #include "chrome/credential_provider/extension/os_service_manager.h"
 #include "chrome/credential_provider/extension/scoped_handle.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/reg_utils.h"
 
 namespace credential_provider {

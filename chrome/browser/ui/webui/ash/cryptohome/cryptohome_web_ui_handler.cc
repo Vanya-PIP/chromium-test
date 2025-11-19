@@ -7,7 +7,7 @@
 #include <numeric>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/values.h"
 #include "chromeos/ash/components/dbus/cryptohome/rpc.pb.h"

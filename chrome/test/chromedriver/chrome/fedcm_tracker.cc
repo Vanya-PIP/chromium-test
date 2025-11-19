@@ -4,7 +4,7 @@
 
 #include "chrome/test/chromedriver/chrome/fedcm_tracker.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/test/chromedriver/chrome/devtools_client.h"
 #include "chrome/test/chromedriver/chrome/status.h"
 

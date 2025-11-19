@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/environment.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/nix/xdg_util.h"
 #include "build/build_config.h"
 #include "media/audio/audio_device_description.h"

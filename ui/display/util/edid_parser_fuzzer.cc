@@ -12,7 +12,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/display/util/edid_parser.h"
 #include "ui/gfx/geometry/size.h"
 

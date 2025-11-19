@@ -18,7 +18,7 @@
 #include "net/base/network_change_notifier.h"
 #include "remoting/base/auto_thread_task_runner.h"
 #include "remoting/base/host_settings.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/base/host_exit_codes.h"
 #include "remoting/host/base/switches.h"
 #include "remoting/host/chromoting_host_context.h"

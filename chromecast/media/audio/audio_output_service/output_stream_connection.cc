@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/io_buffer.h"
 
 namespace chromecast {

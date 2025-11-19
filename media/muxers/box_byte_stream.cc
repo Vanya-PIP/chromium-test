@@ -5,7 +5,7 @@
 #include "media/muxers/box_byte_stream.h"
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/safe_conversions.h"
 

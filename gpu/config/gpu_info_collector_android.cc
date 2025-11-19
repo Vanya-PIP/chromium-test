@@ -8,7 +8,7 @@
 
 #include "base/android/android_info.h"
 #include "base/android/jni_android.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/trace_event/trace_event.h"
 #include "third_party/angle/src/gpu_info_util/SystemInfo.h"

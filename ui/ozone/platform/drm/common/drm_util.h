@@ -21,7 +21,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/viz/common/resources/shared_image_format.h"
 #include "ui/display/display_features.h"

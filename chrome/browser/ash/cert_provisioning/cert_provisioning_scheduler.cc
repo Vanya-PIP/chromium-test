@@ -16,7 +16,7 @@
 #include "base/containers/flat_set.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/observer_list_types.h"
 #include "base/strings/stringprintf.h"

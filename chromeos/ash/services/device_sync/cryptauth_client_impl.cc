@@ -9,7 +9,7 @@
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/device_sync/proto/cryptauth_devicesync.pb.h"
 #include "chromeos/ash/services/device_sync/proto/cryptauth_enrollment.pb.h"
 #include "chromeos/ash/services/device_sync/proto/cryptauth_proto_to_query_parameters_util.h"

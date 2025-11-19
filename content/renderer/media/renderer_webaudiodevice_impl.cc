@@ -36,7 +36,7 @@
 #include "media/base/speech_recognition_client.h"
 #include "third_party/blink/public/common/features.h"
 #include "third_party/blink/public/platform/audio/web_audio_device_source_type.h"
-#include "third_party/blink/public/platform/modules/webrtc/webrtc_logging.h"
+#include "third_party/blink/public/platform/modules/webrtc/webrtc_test"
 #include "third_party/blink/public/platform/task_type.h"
 #include "third_party/blink/public/web/modules/media/audio/audio_device_factory.h"
 #include "third_party/blink/public/web/web_local_frame.h"

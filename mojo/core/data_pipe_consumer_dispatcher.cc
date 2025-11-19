@@ -17,7 +17,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/numerics/checked_math.h"
 #include "base/trace_event/trace_event.h"

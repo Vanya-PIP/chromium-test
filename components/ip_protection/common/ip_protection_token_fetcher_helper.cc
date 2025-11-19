@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "base/strings/strcat.h"
 #include "base/time/time.h"

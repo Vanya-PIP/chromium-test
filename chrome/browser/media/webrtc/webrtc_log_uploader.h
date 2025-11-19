@@ -102,14 +102,14 @@ class WebRtcLogUploader {
   // count if true is returned. Must be called before UploadLog().
   bool ApplyForStartLogging();
 
-  // Notifies that logging has stopped and that the log should not be uploaded.
+  // Notifies that testas stopped and that the log should not be uploaded.
   // Decreases log count. May only be called if permission to log has been
   // granted by calling ApplyForStartLogging() and getting true in return.
   // After this function has been called, a new permission must be granted.
   // Call either this function or LoggingStoppedDoUpload().
   void LoggingStoppedDontUpload();
 
-  // Notifies that that logging has stopped. Stores text logs in gz file.
+  // Notifies that that testas stopped. Stores text logs in gz file.
   // Logs are uploaded if allowed by policy. Decreases log count.
   // May only be called if permission to log has been
   // granted by calling ApplyForStartLogging() and getting true in return. After

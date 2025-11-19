@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "chrome/browser/optimization_guide/chrome_hints_manager.h"
 #include "chrome/browser/optimization_guide/optimization_guide_keyed_service.h"

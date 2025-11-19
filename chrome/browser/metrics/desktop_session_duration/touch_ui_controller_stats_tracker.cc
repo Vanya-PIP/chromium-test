@@ -5,7 +5,7 @@
 #include "chrome/browser/metrics/desktop_session_duration/touch_ui_controller_stats_tracker.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/no_destructor.h"
 #include "chrome/browser/metrics/desktop_session_duration/desktop_session_duration_tracker.h"

@@ -7,7 +7,7 @@
 #include <pointer-gestures-unstable-v1-server-protocol.h>
 #include <wayland-server-core.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 
 namespace wl {

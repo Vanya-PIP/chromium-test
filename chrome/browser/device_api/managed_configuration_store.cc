@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/value_store/leveldb_value_store.h"
 #include "components/value_store/value_store_change.h"
 

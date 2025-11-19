@@ -10,7 +10,7 @@
 #include "base/android/jni_array.h"
 #include "base/android/jni_string.h"
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 // Must come after all headers that specialize FromJniType() / ToJniType().

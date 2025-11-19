@@ -19,7 +19,7 @@
 #include "build/branding_buildflags.h"
 #include "chrome/credential_provider/common/gcp_strings.h"
 #include "chrome/credential_provider/gaiacp/gaia_credential_provider_i.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 
 namespace credential_provider {
 

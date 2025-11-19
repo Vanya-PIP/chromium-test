@@ -4,7 +4,7 @@
 
 #include "chrome/browser/glic/gemini_act_on_web_settings_policy_handler.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/glic/glic_pref_names.h"
 #include "chrome/common/pref_names.h"
 #include "components/policy/core/browser/gen_ai_default_settings_policy_handler.h"

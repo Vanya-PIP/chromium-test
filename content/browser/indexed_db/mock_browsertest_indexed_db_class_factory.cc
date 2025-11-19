@@ -10,7 +10,7 @@
 #include <string_view>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/task/sequenced_task_runner.h"
 #include "components/services/storage/indexed_db/scopes/leveldb_scope.h"

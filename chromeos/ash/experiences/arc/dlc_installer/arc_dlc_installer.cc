@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "ash/constants/ash_features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "chromeos/ash/components/dbus/dlcservice/dlcservice_client.h"

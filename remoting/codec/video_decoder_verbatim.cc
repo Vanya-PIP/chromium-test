@@ -8,7 +8,7 @@
 #include <cstdint>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "remoting/base/util.h"
 #include "remoting/proto/video.pb.h"

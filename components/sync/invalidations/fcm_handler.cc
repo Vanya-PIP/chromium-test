@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/observer_list.h"
 #include "components/gcm_driver/gcm_driver.h"

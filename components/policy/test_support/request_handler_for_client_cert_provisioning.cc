@@ -12,7 +12,7 @@
 
 #include "base/base64.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "components/policy/core/common/cloud/cloud_policy_constants.h"
 #include "components/policy/proto/device_management_backend.pb.h"

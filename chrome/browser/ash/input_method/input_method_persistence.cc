@@ -6,7 +6,7 @@
 
 #include "base/check.h"
 #include "base/check_deref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/system/sys_info.h"
 #include "chrome/browser/ash/login/lock/screen_locker.h"

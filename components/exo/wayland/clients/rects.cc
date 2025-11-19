@@ -22,7 +22,7 @@
 #include "base/at_exit.h"
 #include "base/command_line.h"
 #include "base/containers/circular_deque.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/message_loop/message_pump_type.h"
 #include "base/scoped_generic.h"

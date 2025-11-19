@@ -7,7 +7,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "net/cert/x509_certificate.h"
 
 namespace net {

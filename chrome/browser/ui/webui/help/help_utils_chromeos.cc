@@ -9,7 +9,7 @@
 #include <algorithm>
 
 #include "ash/constants/ash_switches.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromeos/ash/components/settings/cros_settings.h"
 #include "chromeos/ash/components/settings/cros_settings_names.h"

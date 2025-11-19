@@ -86,7 +86,7 @@ use `GetSwitchValueASCII()` and friends to retrieve values passed in.
 
 ```cpp
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 ```
 
 ### Exercise 1: Using command-line arguments

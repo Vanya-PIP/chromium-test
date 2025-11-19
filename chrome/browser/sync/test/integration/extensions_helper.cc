@@ -5,7 +5,7 @@
 #include "chrome/browser/sync/test/integration/extensions_helper.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/test/bind.h"
 #include "chrome/browser/extensions/updater/extension_updater.h"

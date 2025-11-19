@@ -18,7 +18,7 @@
 #include "base/path_service.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"
 #include "base/win/registry.h"

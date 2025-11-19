@@ -8,7 +8,7 @@
 
 #import "base/check.h"
 #import "base/i18n/message_formatter.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "base/time/time.h"
 #import "base/timer/timer.h"

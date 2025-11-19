@@ -37,7 +37,7 @@
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/web_applications/app_browser_controller.h"
 #include "chrome/common/channel_info.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/phone_hub_manager.h"
 #include "chromeos/ash/experiences/system_web_apps/types/system_web_app_delegate.h"
 #include "chromeos/ash/services/secure_channel/presence_monitor_impl.h"

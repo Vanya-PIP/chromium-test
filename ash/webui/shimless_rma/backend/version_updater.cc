@@ -6,7 +6,7 @@
 
 #include "ash/constants/ash_features.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/dbus/update_engine/update_engine.pb.h"
 #include "chromeos/ash/components/dbus/update_engine/update_engine_client.h"
 #include "chromeos/ash/components/network/network_state.h"

@@ -16,7 +16,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/bind_post_task.h"

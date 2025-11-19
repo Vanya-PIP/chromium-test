@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "dbus/object_path.h"
 #include "device/bluetooth/bluetooth_gatt_characteristic.h"

@@ -12,7 +12,7 @@
 #include "base/base64.h"
 #include "base/compiler_specific.h"
 #include "base/strings/stringprintf.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "google_apis/google_api_keys.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
 #include "url/gurl.h"

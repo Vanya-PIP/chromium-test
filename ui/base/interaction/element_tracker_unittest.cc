@@ -6,7 +6,7 @@
 
 #include "base/functional/callback_forward.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "base/test/mock_callback.h"
 #include "testing/gmock/include/gmock/gmock.h"

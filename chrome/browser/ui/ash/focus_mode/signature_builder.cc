@@ -5,7 +5,7 @@
 #include "chrome/browser/ui/ash/focus_mode/signature_builder.h"
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"

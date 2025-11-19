@@ -7,7 +7,7 @@
 #include "build/branding_buildflags.h"
 #include "build/build_config.h"
 
-// On Windows don't use FilePath and logging.h.
+// On Windows don't use FilePath and test.
 // http://crbug.com/604923
 #if !BUILDFLAG(IS_WIN)
 #include "base/check.h"

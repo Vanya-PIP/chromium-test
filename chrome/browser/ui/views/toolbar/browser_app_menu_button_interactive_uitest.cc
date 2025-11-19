@@ -5,7 +5,7 @@
 #include <optional>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "base/test/gtest_util.h"
 #include "chrome/browser/profiles/profile.h"

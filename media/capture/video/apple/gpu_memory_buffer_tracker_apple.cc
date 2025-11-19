@@ -4,7 +4,7 @@
 
 #include "media/capture/video/apple/gpu_memory_buffer_tracker_apple.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 

@@ -15,7 +15,7 @@
 #include "ash/test/ash_test_helper.h"
 #include "ash/test_shell_delegate.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/utf_string_conversions.h"

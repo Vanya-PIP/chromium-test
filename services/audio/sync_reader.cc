@@ -12,7 +12,7 @@
 #include "base/command_line.h"
 #include "base/containers/span.h"
 #include "base/format_macros.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/strcat.h"

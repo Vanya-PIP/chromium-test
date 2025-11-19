@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/check_is_test.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
@@ -16,7 +16,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/json/values_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "build/build_config.h"
 #include "build/chromeos_buildflags.h"

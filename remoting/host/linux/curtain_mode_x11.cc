@@ -5,7 +5,7 @@
 #include <memory>
 
 #include "base/task/single_thread_task_runner.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/client_session_control.h"
 #include "remoting/host/curtain_mode.h"
 #include "remoting/host/linux/x11_util.h"

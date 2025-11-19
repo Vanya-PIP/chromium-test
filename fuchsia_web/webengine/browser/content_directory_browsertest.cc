@@ -13,7 +13,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/fuchsia/file_utils.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/path_service.h"
 #include "base/threading/thread_restrictions.h"
 #include "content/public/test/browser_test.h"

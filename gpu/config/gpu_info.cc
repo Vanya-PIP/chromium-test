@@ -6,7 +6,7 @@
 
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "build/build_config.h"
 #include "gpu/config/gpu_util.h"

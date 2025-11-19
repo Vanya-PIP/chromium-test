@@ -56,7 +56,7 @@
 #include "base/dcheck_is_on.h"
 #include "base/feature_list.h"
 #include "base/format_macros.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"

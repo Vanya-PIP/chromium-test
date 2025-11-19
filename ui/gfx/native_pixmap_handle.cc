@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"
 #include "ui/gfx/geometry/size.h"
@@ -20,7 +20,7 @@
 
 #if BUILDFLAG(IS_FUCHSIA)
 #include <lib/zx/vmo.h>
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #endif
 
 namespace gfx {

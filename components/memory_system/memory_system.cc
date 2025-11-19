@@ -6,7 +6,7 @@
 
 #include "base/allocator/dispatcher/dispatcher.h"
 #include "base/allocator/dispatcher/initializer.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/debugging_buildflags.h"
 #include "build/build_config.h"
 #include "components/gwp_asan/buildflags/buildflags.h"

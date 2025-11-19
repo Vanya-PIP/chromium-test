@@ -5,7 +5,7 @@
 #include "chromecast/browser/general_audience_browsing_navigation_throttle.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/browser/general_audience_browsing_service.h"
 #include "components/url_matcher/url_util.h"
 #include "content/public/browser/navigation_handle.h"

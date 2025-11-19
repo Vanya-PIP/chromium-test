@@ -10,7 +10,7 @@
 #include <optional>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/events/event.h"
 #include "ui/events/event_utils.h"
 #include "ui/events/keycodes/dom/dom_code.h"

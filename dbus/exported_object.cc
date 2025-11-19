@@ -11,9 +11,9 @@
 
 #include "base/check.h"
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/task_runner.h"

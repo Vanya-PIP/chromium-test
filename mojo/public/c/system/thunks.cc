@@ -14,7 +14,7 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "build/build_config.h"

@@ -14,7 +14,7 @@
 #include "base/containers/contains.h"
 #include "base/debug/debugging_buildflags.h"
 #include "base/immediate_crash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/kill.h"
 #include "base/process/process_handle.h"
 #include "base/profiler/stack_buffer.h"

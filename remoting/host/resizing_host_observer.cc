@@ -15,7 +15,7 @@
 #include "base/functional/bind.h"
 #include "base/time/default_tick_clock.h"
 #include "base/time/tick_clock.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/base/screen_resolution.h"
 #include "remoting/host/desktop_display_info_monitor.h"
 #include "remoting/host/desktop_resizer.h"

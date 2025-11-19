@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/reporting/util/file.h"
 #include "components/reporting/util/status.h"
 

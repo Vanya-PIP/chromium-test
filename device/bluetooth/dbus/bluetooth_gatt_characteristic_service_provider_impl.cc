@@ -10,7 +10,7 @@
 #include "base/containers/to_vector.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "device/bluetooth/bluetooth_gatt_characteristic.h"
 #include "device/bluetooth/dbus/bluetooth_gatt_attribute_helpers.h"

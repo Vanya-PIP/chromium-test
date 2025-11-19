@@ -4,7 +4,7 @@
 
 #include "ash/accelerators/accelerator_history_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "ui/events/event.h"
 #include "ui/events/event_target.h"

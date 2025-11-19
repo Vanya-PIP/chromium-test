@@ -4,7 +4,7 @@
 
 #include "chromecast/base/path_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 
 namespace chromecast {

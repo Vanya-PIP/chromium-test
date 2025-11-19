@@ -5,7 +5,7 @@
 #include "components/metrics/entropy_state.h"
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/rand_util.h"
 #include "base/strings/string_number_conversions.h"

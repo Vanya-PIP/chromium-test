@@ -14,7 +14,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"

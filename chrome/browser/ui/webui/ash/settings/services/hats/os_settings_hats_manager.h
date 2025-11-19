@@ -5,7 +5,7 @@
 #ifndef CHROME_BROWSER_UI_WEBUI_ASH_SETTINGS_SERVICES_HATS_OS_SETTINGS_HATS_MANAGER_H_
 #define CHROME_BROWSER_UI_WEBUI_ASH_SETTINGS_SERVICES_HATS_OS_SETTINGS_HATS_MANAGER_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/timer/timer.h"

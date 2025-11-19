@@ -8,7 +8,7 @@
 #include "base/command_line.h"
 #include "base/files/file_enumerator.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "base/rand_util.h"
 #include "base/version.h"

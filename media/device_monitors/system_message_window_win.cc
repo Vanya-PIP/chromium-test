@@ -9,7 +9,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/system/system_monitor.h"
 #include "base/win/wrapped_window_proc.h"

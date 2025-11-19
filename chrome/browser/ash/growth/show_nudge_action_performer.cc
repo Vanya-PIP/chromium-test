@@ -16,7 +16,7 @@
 #include "ash/shell.h"
 #include "ash/system/toast/anchored_nudge_manager_impl.h"
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/browser/ash/growth/campaigns_manager_session.h"
 #include "chrome/browser/ash/growth/metrics.h"

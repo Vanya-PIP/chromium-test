@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/observer_list.h"
 #include "chromeos/ash/components/dbus/os_install/fake_os_install_client.h"

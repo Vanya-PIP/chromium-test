@@ -14,9 +14,9 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
-#include "base/logging.h"
+#include "base/test"
 
 fuchsia::ui::views::ViewRef CloneViewRef(
     const fuchsia::ui::views::ViewRef& view_ref) {

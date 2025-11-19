@@ -7,7 +7,7 @@
 #include <memory>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/task_environment.h"
 #include "base/time/time.h"
 #include "chrome/browser/chromeos/video_conference/video_conference_manager_client_common.h"

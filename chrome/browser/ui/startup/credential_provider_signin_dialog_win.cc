@@ -15,7 +15,7 @@
 #include "base/functional/bind.h"
 #include "base/json/json_writer.h"
 #include "base/memory/raw_ptr.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/win/win_util.h"
 #include "chrome/browser/signin/signin_promo.h"

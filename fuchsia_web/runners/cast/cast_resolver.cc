@@ -15,7 +15,7 @@
 #include <vector>
 
 #include "base/files/file_util.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/notimplemented.h"
 #include "base/numerics/byte_conversions.h"
 

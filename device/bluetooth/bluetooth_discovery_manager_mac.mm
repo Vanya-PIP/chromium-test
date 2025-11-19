@@ -7,7 +7,7 @@
 #import <IOBluetooth/IOBluetooth.h>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 
 namespace device {

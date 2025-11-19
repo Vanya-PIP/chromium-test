@@ -12,7 +12,7 @@
 #include "base/containers/auto_spanification_helper.h"
 #include "base/containers/span.h"
 #include "base/containers/span_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/safe_math.h"
 #include "base/strings/string_number_conversions.h"

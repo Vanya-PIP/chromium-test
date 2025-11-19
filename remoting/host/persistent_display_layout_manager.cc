@@ -10,11 +10,11 @@
 #include "base/files/file_error_or.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "base/time/time.h"
 #include "remoting/base/async_file_util.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/proto/control.pb.h"
 #include "third_party/webrtc/modules/desktop_capture/desktop_capture_types.h"
 

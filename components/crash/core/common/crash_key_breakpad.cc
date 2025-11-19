@@ -13,7 +13,7 @@
 #include <string_view>
 
 #include "base/check_op.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/format_macros.h"
 #include "base/strings/stringprintf.h"
 #include "build/build_config.h"

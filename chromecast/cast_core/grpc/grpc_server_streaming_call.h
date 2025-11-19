@@ -9,7 +9,7 @@
 #include <grpcpp/support/client_callback.h>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chromecast/cast_core/grpc/grpc_call.h"
 #include "chromecast/cast_core/grpc/grpc_client_reactor.h"

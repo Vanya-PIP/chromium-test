@@ -8,7 +8,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/stringprintf.h"
 #include "base/system/sys_info.h"

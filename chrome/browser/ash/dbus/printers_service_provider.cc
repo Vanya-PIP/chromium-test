@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/dbus/printers_service_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/printing/cups_printers_manager_factory.h"
 #include "chrome/browser/ash/printing/cups_printers_manager_proxy.h"
 #include "dbus/message.h"

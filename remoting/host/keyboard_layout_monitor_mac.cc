@@ -16,7 +16,7 @@
 #include "base/apple/scoped_cftyperef.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/sequenced_task_runner.h"

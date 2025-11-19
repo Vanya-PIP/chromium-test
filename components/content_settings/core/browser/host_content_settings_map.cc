@@ -19,7 +19,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/fixed_flat_map.h"
 #include "base/containers/flat_map.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_functions.h"

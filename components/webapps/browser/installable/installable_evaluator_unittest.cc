@@ -10,7 +10,7 @@
 #include "base/test/task_environment.h"
 #include "build/build_config.h"
 #include "components/webapps/browser/features.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_manager.h"
 #include "content/public/common/content_features.h"
 #include "content/public/test/test_renderer_host.h"

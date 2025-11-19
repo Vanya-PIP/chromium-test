@@ -18,7 +18,7 @@
 #include "base/functional/callback.h"
 #include "base/lazy_instance.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/ref_counted.h"
 #include "base/memory/weak_ptr.h"
@@ -28,7 +28,7 @@
 #include "net/base/net_errors.h"
 #include "net/socket/stream_socket.h"
 #include "net/socket/unix_domain_server_socket_posix.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/security_key/security_key_socket.h"
 
 namespace {

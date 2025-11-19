@@ -7,7 +7,7 @@
 #include "ash/constants/ash_features.h"
 #include "ash/constants/ash_pref_names.h"
 #include "ash/system/media/media_notification_provider.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/files/file_util.h"
 #include "base/path_service.h"
 #include "base/system/sys_info.h"

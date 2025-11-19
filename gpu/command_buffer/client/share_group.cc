@@ -16,7 +16,7 @@
 
 #include "base/check.h"
 #include "base/containers/stack.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/synchronization/lock.h"
 #include "gpu/command_buffer/client/gles2_cmd_helper.h"
 #include "gpu/command_buffer/client/gles2_implementation.h"

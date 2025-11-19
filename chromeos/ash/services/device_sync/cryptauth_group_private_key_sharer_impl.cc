@@ -10,7 +10,7 @@
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/numerics/byte_conversions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/device_sync/async_execution_time_metrics_logger.h"
 #include "chromeos/ash/services/device_sync/cryptauth_client.h"
 #include "chromeos/ash/services/device_sync/cryptauth_ecies_encryptor_impl.h"

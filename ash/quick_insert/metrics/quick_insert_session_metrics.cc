@@ -7,7 +7,7 @@
 #include "ash/constants/ash_pref_names.h"
 #include "ash/quick_insert/quick_insert_category.h"
 #include "ash/quick_insert/quick_insert_search_result.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "components/metrics/structured/structured_events.h"

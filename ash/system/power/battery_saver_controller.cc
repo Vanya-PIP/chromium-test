@@ -13,7 +13,7 @@
 #include "ash/system/power/power_notification_controller.h"
 #include "ash/system/system_notification_controller.h"
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "base/time/time.h"

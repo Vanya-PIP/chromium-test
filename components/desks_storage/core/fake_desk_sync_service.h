@@ -5,7 +5,7 @@
 #ifndef COMPONENTS_DESKS_STORAGE_CORE_FAKE_DESK_SYNC_SERVICE_H_
 #define COMPONENTS_DESKS_STORAGE_CORE_FAKE_DESK_SYNC_SERVICE_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/desks_storage/core/desk_sync_service.h"
 #include "components/desks_storage/core/fake_desk_sync_bridge.h"
 #include "components/sync/test/fake_data_type_controller_delegate.h"

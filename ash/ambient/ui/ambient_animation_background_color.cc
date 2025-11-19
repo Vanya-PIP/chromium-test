@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "cc/paint/skottie_color_map.h"
 #include "cc/paint/skottie_resource_metadata.h"
 #include "cc/paint/skottie_wrapper.h"

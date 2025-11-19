@@ -5,7 +5,7 @@
 #include "chromecast/crash/linux/dummy_minidump_generator.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/scoped_blocking_call.h"
 
 namespace chromecast {

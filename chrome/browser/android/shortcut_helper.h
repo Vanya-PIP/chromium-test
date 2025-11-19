@@ -15,7 +15,7 @@
 #include "chrome/browser/android/webapk/webapk_info.h"
 #include "chrome/browser/android/webapk/webapk_install_service.h"
 #include "chrome/browser/android/webapk/webapk_installer.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "third_party/skia/include/core/SkBitmap.h"
 
 namespace content {

@@ -10,7 +10,7 @@
 #include "base/strings/to_string.h"
 #include "chrome/common/actor/action_result.h"
 #include "chrome/common/actor/actor_constants.h"
-#include "chrome/common/actor/actor_logging.h"
+#include "chrome/common/actor/actor_test"
 #include "chrome/common/actor/journal_details_builder.h"
 #include "chrome/renderer/actor/tool_utils.h"
 #include "content/public/renderer/render_frame.h"

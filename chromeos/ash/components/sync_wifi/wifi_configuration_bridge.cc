@@ -10,7 +10,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/stringprintf.h"

@@ -9,7 +9,7 @@
 #include <optional>
 #include <ostream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/access_token.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

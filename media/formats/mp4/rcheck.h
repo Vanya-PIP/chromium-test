@@ -5,7 +5,7 @@
 #ifndef MEDIA_FORMATS_MP4_RCHECK_H_
 #define MEDIA_FORMATS_MP4_RCHECK_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/media_log.h"
 
 // Evaluate |condition| once. If the result is false, log |msg| to |media_log|,

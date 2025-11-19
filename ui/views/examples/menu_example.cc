@@ -8,7 +8,7 @@
 #include <set>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/base/metadata/metadata_header_macros.h"

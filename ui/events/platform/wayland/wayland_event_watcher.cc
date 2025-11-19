@@ -10,7 +10,7 @@
 
 #include "base/check.h"
 #include "base/environment.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/nix/xdg_util.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"

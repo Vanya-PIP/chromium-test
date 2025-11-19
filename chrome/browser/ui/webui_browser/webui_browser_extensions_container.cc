@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/browser/extensions/extension_view_host.h"

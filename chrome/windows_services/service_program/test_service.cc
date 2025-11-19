@@ -14,7 +14,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/immediate_crash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/process/process.h"
 #include "base/task/single_thread_task_runner.h"

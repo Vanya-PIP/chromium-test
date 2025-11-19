@@ -13,8 +13,8 @@
 
 #include "base/auto_reset.h"
 #include "base/check.h"
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 
 namespace base {

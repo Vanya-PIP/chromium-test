@@ -8,7 +8,7 @@
 
 #include "base/command_line.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/task/single_thread_task_runner.h"
 #include "gpu/command_buffer/client/gles2_cmd_helper.h"

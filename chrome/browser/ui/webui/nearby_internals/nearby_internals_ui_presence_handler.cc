@@ -12,7 +12,7 @@
 #include "chromeos/ash/components/nearby/presence/credentials/prefs.h"
 #include "chromeos/ash/components/nearby/presence/nearby_presence_service.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_share_settings.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_service.h"
 #include "components/push_notification/push_notification_service.h"
 

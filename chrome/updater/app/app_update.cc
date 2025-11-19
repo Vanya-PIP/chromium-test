@@ -5,7 +5,7 @@
 #include "chrome/updater/app/app_update.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "chrome/updater/app/app.h"
 #include "chrome/updater/branded_constants.h"

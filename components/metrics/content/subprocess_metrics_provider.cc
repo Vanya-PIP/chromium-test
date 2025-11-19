@@ -6,10 +6,10 @@
 
 #include <utility>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/debug/leak_annotations.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/metrics/histogram_base.h"
 #include "base/metrics/persistent_histogram_allocator.h"

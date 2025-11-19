@@ -7,7 +7,7 @@
 #include <optional>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/not_fatal_until.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/trace_event/trace_event.h"

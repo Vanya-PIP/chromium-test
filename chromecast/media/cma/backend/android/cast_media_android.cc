@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "base/at_exit.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/chromecast_buildflags.h"
 #include "chromecast/media/cma/backend/android/media_pipeline_backend_android.h"
 #include "chromecast/public/cast_media_shlib.h"

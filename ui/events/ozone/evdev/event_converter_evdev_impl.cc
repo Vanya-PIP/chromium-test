@@ -10,7 +10,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "ui/events/devices/stylus_state.h"
 #include "ui/events/event.h"

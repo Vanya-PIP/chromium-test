@@ -9,7 +9,7 @@
 #include "base/android/jni_android.h"
 #include "base/android/jni_string.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/synchronization/waitable_event.h"
 #include "base/threading/thread_restrictions.h"
 #include "base/uuid.h"

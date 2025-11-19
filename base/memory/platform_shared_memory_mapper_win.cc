@@ -11,7 +11,7 @@
 
 #include <aclapi.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "partition_alloc/page_allocator.h"
 
 namespace base {

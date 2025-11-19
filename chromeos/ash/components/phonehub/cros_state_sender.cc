@@ -6,7 +6,7 @@
 #include "ash/constants/ash_features.h"
 
 #include "base/metrics/histogram_functions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/message_sender.h"
 #include "chromeos/ash/components/phonehub/phone_model.h"
 #include "chromeos/ash/components/phonehub/public/cpp/attestation_certificate_generator.h"

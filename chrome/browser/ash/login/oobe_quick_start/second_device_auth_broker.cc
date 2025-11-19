@@ -28,7 +28,7 @@
 #include "chromeos/ash/components/channel/channel_info.h"
 #include "chromeos/ash/components/dbus/attestation/keystore.pb.h"
 #include "chromeos/ash/components/dbus/constants/attestation_constants.h"
-#include "chromeos/ash/components/quick_start/logging.h"
+#include "chromeos/ash/components/quick_start/test"
 #include "chromeos/ash/components/quick_start/quick_start_metrics.h"
 #include "chromeos/ash/components/quick_start/types.h"
 #include "components/account_id/account_id.h"

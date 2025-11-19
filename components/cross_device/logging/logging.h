@@ -9,7 +9,7 @@
 #include <string_view>
 
 #include "base/component_export.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/cross_device/logging/log_buffer.h"
 
 // Use the CD_LOG() macro for all logging related to Cross Device Features so

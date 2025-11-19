@@ -6,7 +6,7 @@
 
 #include "base/check.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "library_loaders/xlib_loader.h"
 #include "library_loaders/xlib_xcb_loader.h"

@@ -11,7 +11,7 @@
 
 #include "ash/public/cpp/wallpaper/wallpaper_controller.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/singleton.h"
 #include "base/task/thread_pool.h"

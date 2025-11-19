@@ -4,7 +4,7 @@
 
 #include "media/base/decoder_buffer_queue.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/decoder_buffer.h"
 #include "media/base/timestamp_constants.h"
 

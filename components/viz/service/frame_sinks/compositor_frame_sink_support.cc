@@ -13,7 +13,7 @@
 #include "base/check.h"
 #include "base/containers/contains.h"
 #include "base/containers/map_util.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/stack_trace.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/app_mode/kiosk_app_update_install_gate.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/app_mode/kiosk_chrome_app_manager.h"
 #include "chrome/browser/profiles/profile.h"
 #include "extensions/browser/extension_registry.h"

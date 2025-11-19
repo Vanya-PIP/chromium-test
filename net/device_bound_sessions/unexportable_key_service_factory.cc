@@ -4,7 +4,7 @@
 
 #include "net/device_bound_sessions/unexportable_key_service_factory.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/branding_buildflags.h"
 #include "components/unexportable_keys/unexportable_key_service.h"
 #include "components/unexportable_keys/unexportable_key_service_impl.h"

@@ -4,7 +4,7 @@
 
 #include "services/network/http_auth_cache_proxy_copier.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "net/http/http_auth_cache.h"
 
 namespace network {

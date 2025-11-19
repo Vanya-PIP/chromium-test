@@ -14,7 +14,7 @@
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/glic/fre/fre_util.h"
 #include "chrome/browser/glic/host/auth_controller.h"
 #include "chrome/common/chrome_features.h"

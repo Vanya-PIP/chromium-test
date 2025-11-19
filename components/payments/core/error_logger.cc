@@ -4,7 +4,7 @@
 
 #include "components/payments/core/error_logger.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace payments {
 

@@ -14,7 +14,7 @@
 #include "base/test/test_simple_task_runner.h"
 #include "base/timer/mock_timer.h"
 #include "build/build_config.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_test_util.h"
 #include "chromeos/ash/components/proximity_auth/fake_lock_handler.h"
 #include "chromeos/ash/components/proximity_auth/fake_remote_device_life_cycle.h"

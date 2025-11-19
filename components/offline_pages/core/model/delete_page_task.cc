@@ -10,7 +10,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "components/offline_pages/core/model/get_pages_task.h"
 #include "components/offline_pages/core/model/offline_page_model_utils.h"

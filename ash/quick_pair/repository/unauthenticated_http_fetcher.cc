@@ -6,7 +6,7 @@
 
 #include "ash/quick_pair/common/fast_pair/fast_pair_http_result.h"
 #include "ash/quick_pair/common/quick_pair_browser_delegate.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "services/network/public/cpp/resource_request.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "services/network/public/cpp/simple_url_loader.h"

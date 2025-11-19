@@ -13,7 +13,7 @@
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"
 #include "remoting/base/http_status.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/protobuf_http_request_config.h"
 #include "remoting/base/session_authz_service_client.h"
 #include "remoting/proto/session_authz_service.h"

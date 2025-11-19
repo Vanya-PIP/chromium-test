@@ -4,7 +4,7 @@
 
 #include "media/gpu/chromeos/fourcc.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "media/gpu/macros.h"
 

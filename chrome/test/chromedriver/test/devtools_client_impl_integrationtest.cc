@@ -8,7 +8,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/test/chromedriver/chrome/devtools_client_impl.h"
 #include "chrome/test/chromedriver/chrome/status.h"

@@ -17,7 +17,7 @@
 #include "base/json/json_reader.h"
 #include "base/json/json_string_value_serializer.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/observer_list.h"
 #include "base/types/expected_macros.h"

@@ -11,7 +11,7 @@
 #include "base/containers/span.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/values.h"
 #include "crypto/random.h"

@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/to_string.h"
 #include "base/values.h"
 #include "chrome/browser/web_applications/proto/web_app.pb.h"

@@ -13,7 +13,7 @@
 #include <utility>
 
 #include "base/containers/to_vector.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/test/mock_log.h"
 #include "base/test/scoped_command_line.h"

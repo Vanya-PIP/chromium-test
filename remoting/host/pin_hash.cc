@@ -5,7 +5,7 @@
 #include "remoting/host/pin_hash.h"
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "remoting/protocol/auth_util.h"
 #include "remoting/protocol/me2me_host_authenticator_factory.h"

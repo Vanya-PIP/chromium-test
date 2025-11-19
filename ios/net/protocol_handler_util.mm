@@ -7,7 +7,7 @@
 #import <string>
 
 #import "base/base64.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "base/time/time.h"
 #import "ios/net/crn_http_url_response.h"

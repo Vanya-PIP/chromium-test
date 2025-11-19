@@ -12,7 +12,7 @@
 #include "base/files/file_util.h"
 #include "base/files/important_file_writer.h"
 #include "base/hash/sha1.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/string_util.h"
 #include "chrome/updater/updater_branding.h"

@@ -11,7 +11,7 @@
 #include <variant>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "cc/base/math_util.h"
 #include "cc/layers/append_quads_data.h"

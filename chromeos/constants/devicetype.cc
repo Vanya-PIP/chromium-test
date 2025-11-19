@@ -5,7 +5,7 @@
 #include "chromeos/constants/devicetype.h"
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/system/sys_info.h"
 
 namespace chromeos {

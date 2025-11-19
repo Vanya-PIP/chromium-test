@@ -9,7 +9,7 @@
 #include "base/check_op.h"
 #include "base/containers/span.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "base/task/sequenced_task_runner.h"
 #include "chromecast/public/media/cast_decoder_buffer.h"

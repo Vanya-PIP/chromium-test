@@ -11,7 +11,7 @@
 #include <memory>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/synchronization/lock.h"
 #include "base/task/bind_post_task.h"

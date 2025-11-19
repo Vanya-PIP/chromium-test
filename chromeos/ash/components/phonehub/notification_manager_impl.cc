@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/phonehub/notification_manager_impl.h"
 
 #include "base/containers/flat_set.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/message_sender.h"
 #include "chromeos/ash/components/phonehub/notification.h"
 #include "chromeos/ash/components/phonehub/user_action_recorder.h"

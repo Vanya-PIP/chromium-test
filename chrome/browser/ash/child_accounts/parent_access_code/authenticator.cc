@@ -7,7 +7,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "base/strings/stringprintf.h"
 #include "crypto/hash.h"

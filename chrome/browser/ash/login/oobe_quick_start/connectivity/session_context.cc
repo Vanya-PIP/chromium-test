@@ -12,7 +12,7 @@
 #include "base/values.h"
 #include "chrome/browser/ash/login/oobe_quick_start/oobe_quick_start_pref_names.h"
 #include "chrome/browser/browser_process.h"
-#include "chromeos/ash/components/quick_start/logging.h"
+#include "chromeos/ash/components/quick_start/test"
 #include "components/prefs/pref_service.h"
 #include "crypto/random.h"
 

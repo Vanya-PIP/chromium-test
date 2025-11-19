@@ -6,7 +6,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/public/cpp/bindings/remote.h"
 
 namespace chromecast {

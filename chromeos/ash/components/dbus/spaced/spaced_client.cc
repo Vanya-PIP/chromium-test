@@ -7,7 +7,7 @@
 #include <map>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chromeos/ash/components/dbus/spaced/fake_spaced_client.h"
 #include "dbus/bus.h"

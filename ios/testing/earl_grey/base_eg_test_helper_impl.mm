@@ -5,7 +5,7 @@
 #import "ios/testing/earl_grey/base_eg_test_helper_impl.h"
 
 #import "base/debug/stack_trace.h"
-#import "base/logging.h"
+#import "base/test"
 #import "ios/testing/earl_grey/earl_grey_test.h"
 
 @implementation BaseEGTestHelperImpl {

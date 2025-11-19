@@ -10,7 +10,7 @@
 #include <iterator>
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/no_destructor.h"

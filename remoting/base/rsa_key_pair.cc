@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "base/time/time.h"
 #include "crypto/sign.h"

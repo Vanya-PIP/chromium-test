@@ -8,7 +8,7 @@
 #include "base/base64.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/types/fixed_array.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
 #include "components/prefs/scoped_user_pref_update.h"

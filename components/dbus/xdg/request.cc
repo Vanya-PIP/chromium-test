@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/nix/xdg_util.h"
 #include "base/unguessable_token.h"
 #include "components/dbus/utils/read_value.h"

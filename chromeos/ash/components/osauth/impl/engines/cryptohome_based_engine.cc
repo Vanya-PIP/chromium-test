@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/login/auth/public/user_context.h"
 #include "chromeos/ash/components/osauth/public/common_types.h"
 #include "chromeos/ash/components/osauth/public/cryptohome_core.h"

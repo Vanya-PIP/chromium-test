@@ -9,7 +9,7 @@
 
 #include "base/bits.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_span.h"
 

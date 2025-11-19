@@ -11,7 +11,7 @@
 #include "base/memory/ptr_util.h"
 #include "base/time/time.h"
 #include "base/timer/timer.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/secure_message_delegate.h"
 #include "chromeos/ash/services/secure_channel/authenticator.h"
 #include "chromeos/ash/services/secure_channel/connection.h"

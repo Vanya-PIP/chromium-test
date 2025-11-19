@@ -9,7 +9,7 @@
 #include "android_webview/browser/gfx/task_forwarding_sequence.h"
 #include "android_webview/browser/gfx/task_queue_webview.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "gpu/command_buffer/service/gpu_task_scheduler_helper.h"
 #include "ui/gl/gl_surface.h"
 

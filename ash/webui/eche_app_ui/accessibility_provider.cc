@@ -19,7 +19,7 @@
 #include "ash/webui/eche_app_ui/mojom/eche_app.mojom.h"
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/browser/render_widget_host_view.h"
 #include "content/public/browser/web_contents.h"
 #include "services/accessibility/android/public/mojom/accessibility_helper.mojom-shared.h"

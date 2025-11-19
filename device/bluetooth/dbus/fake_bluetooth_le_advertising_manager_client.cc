@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "dbus/bus.h"
 #include "dbus/message.h"

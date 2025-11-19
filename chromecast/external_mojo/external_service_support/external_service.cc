@@ -4,7 +4,7 @@
 
 #include "chromecast/external_mojo/external_service_support/external_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace chromecast {
 namespace external_service_support {

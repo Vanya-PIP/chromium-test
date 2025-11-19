@@ -23,9 +23,9 @@
 #include <tuple>
 
 #include "partition_alloc/buildflags.h"
-#include "partition_alloc/partition_alloc_base/apple/mach_logging.h"
+#include "partition_alloc/partition_alloc_base/apple/mach_test"
 #include "partition_alloc/partition_alloc_base/bits.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_check.h"
 #include "partition_alloc/partition_alloc_constants.h"
 #include "partition_alloc/partition_root.h"

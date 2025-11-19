@@ -6,7 +6,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "build/build_config.h"
 

@@ -9,7 +9,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/strings/string_util.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/common/pref_names.h"
 #include "components/prefs/pref_service.h"
 #include "services/network/public/cpp/is_potentially_trustworthy.h"

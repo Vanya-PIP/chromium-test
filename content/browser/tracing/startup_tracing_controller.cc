@@ -8,7 +8,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/run_loop.h"
 #include "base/synchronization/waitable_event.h"

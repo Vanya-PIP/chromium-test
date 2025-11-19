@@ -18,7 +18,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process_manager.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_adapter_factory.h"
 
 namespace {

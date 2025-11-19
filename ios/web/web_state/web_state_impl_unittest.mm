@@ -12,7 +12,7 @@
 #import "base/base64.h"
 #import "base/functional/bind.h"
 #import "base/functional/callback_helpers.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "base/strings/utf_string_conversions.h"
 #import "base/task/sequenced_task_runner.h"

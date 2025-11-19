@@ -10,7 +10,7 @@
 #include <limits>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/notreached.h"
 #include "base/numerics/byte_conversions.h"

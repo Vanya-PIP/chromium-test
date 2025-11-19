@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/task/single_thread_task_runner.h"
 #include "device/bluetooth/floss/floss_dbus_client.h"

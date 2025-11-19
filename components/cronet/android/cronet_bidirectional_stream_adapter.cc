@@ -18,7 +18,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_number_conversions.h"
 #include "components/cronet/android/cronet_context_adapter.h"

@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"

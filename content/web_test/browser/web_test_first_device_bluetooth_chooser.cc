@@ -4,7 +4,7 @@
 
 #include "content/web_test/browser/web_test_first_device_bluetooth_chooser.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace content {
 

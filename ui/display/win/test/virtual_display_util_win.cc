@@ -11,7 +11,7 @@
 
 #include "base/containers/fixed_flat_map.h"
 #include "base/containers/flat_tree.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "third_party/win_virtual_display/driver/public/properties.h"
 #include "ui/display/display.h"

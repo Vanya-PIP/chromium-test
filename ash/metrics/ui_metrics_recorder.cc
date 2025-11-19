@@ -9,7 +9,7 @@
 
 #include "base/check_op.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/notreached.h"

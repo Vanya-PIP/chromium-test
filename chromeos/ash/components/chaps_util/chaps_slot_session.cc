@@ -12,7 +12,7 @@
 #include <optional>
 
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/threading/scoped_blocking_call.h"

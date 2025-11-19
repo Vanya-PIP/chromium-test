@@ -9,7 +9,7 @@
 
 #include "chromecast/media/audio/playback_rate_shifter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "base/types/fixed_array.h"
 #include "testing/gtest/include/gtest/gtest.h"

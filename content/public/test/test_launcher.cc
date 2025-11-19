@@ -24,7 +24,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/hash/hash.h"
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/message_loop/message_pump_type.h"
 #include "base/sequence_checker.h"

@@ -6,7 +6,7 @@
 
 #include "base/metrics/histogram_macros.h"
 #include "base/time/clock.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash {
 

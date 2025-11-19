@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/clock.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/app_mode/isolated_web_app/kiosk_iwa_manager.h"

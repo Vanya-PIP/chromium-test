@@ -22,7 +22,7 @@
 #include "ash/system/unified/unified_system_tray_controller.h"
 #include "ash/wm/container_finder.h"
 #include "ash/wm/tablet_mode/tablet_mode_controller.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/metrics/histogram_macros.h"
 #include "ui/aura/window.h"
 #include "ui/compositor/layer.h"

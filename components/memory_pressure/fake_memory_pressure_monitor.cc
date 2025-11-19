@@ -4,7 +4,7 @@
 
 #include "components/memory_pressure/fake_memory_pressure_monitor.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace memory_pressure {
 namespace test {

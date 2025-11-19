@@ -4,7 +4,7 @@
 
 #import "ios/chrome/browser/print/coordinator/print_coordinator.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/user_metrics.h"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/chrome/browser/tabs/model/tab_title_util.h"

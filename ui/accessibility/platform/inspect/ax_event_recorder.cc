@@ -5,7 +5,7 @@
 #include "ui/accessibility/platform/inspect/ax_event_recorder.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ui {
 

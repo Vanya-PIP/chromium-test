@@ -6,7 +6,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/user_metrics.h"
 #import "base/metrics/user_metrics_action.h"
 #import "base/notimplemented.h"

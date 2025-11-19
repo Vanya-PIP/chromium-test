@@ -17,7 +17,7 @@
 #include "base/functional/bind.h"
 #include "base/i18n/time_formatting.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "base/rand_util.h"
 #include "base/run_loop.h"

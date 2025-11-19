@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/check_deref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/floating_sso/cookie_sync_conversions.h"
 #include "components/sync/base/data_type.h"
 #include "components/sync/base/deletion_origin.h"

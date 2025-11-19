@@ -8,7 +8,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/ref_counted.h"
 #include "base/notimplemented.h"

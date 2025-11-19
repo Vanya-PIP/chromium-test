@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
 
 MediaFoundationPreferencesImpl::MediaFoundationPreferencesImpl(

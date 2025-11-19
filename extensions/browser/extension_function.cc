@@ -10,10 +10,10 @@
 #include <utility>
 
 #include "base/dcheck_is_on.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/singleton.h"
 #include "base/metrics/histogram_functions.h"

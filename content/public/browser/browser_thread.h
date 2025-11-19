@@ -20,7 +20,7 @@
 #include "content/public/browser/browser_task_traits.h"
 
 #if defined(UNIT_TEST)
-#include "base/logging.h"
+#include "base/test"
 #endif
 
 namespace content {

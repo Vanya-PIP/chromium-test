@@ -7,7 +7,7 @@
 #include <concepts>
 #include <string>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/types/cxx23_to_underlying.h"
 #include "chrome/browser/ui/webui/ash/cloud_upload/cloud_upload_util.h"

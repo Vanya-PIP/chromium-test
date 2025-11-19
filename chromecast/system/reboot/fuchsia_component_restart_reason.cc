@@ -6,7 +6,7 @@
 #include "base/files/file.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "chromecast/public/reboot_shlib.h"
 

@@ -14,7 +14,7 @@
 #include <vector>
 
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "components/autofill/core/browser/form_parsing/buildflags.h"
 #include "components/autofill/core/browser/form_parsing/regex_patterns_inl.h"

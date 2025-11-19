@@ -10,7 +10,7 @@
 #include "base/check_op.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "chromeos/ash/components/osauth/impl/auth_factor_presence_cache.h"
 #include "chromeos/ash/components/osauth/impl/auth_hub_common.h"

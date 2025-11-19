@@ -15,7 +15,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"
 #include "chromecast/media/api/decoder_buffer_base.h"

@@ -14,7 +14,7 @@
 
 #include "partition_alloc/build_config.h"
 #include "partition_alloc/partition_alloc_base/files/file_util.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_base/posix/eintr_wrapper.h"
 #include "partition_alloc/partition_alloc_check.h"
 

@@ -13,7 +13,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/numerics/ranges.h"
 #include "base/task/sequenced_task_runner.h"

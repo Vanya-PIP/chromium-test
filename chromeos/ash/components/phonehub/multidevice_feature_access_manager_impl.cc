@@ -6,7 +6,7 @@
 
 #include "ash/constants/ash_features.h"
 #include "ash/webui/eche_app_ui/pref_names.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/connection_scheduler.h"
 #include "chromeos/ash/components/phonehub/message_sender.h"
 #include "chromeos/ash/components/phonehub/phone_hub_structured_metrics_logger.h"

@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/offline_pages/task/task_queue.h"
 
 namespace offline_pages {

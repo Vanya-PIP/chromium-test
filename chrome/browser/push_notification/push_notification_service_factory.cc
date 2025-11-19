@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "build/build_config.h"
 #include "chrome/browser/ash/profiles/profile_helper.h"

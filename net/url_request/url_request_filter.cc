@@ -4,7 +4,7 @@
 
 #include "net/url_request/url_request_filter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/task/current_thread.h"
 #include "net/url_request/url_request.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/browser/webapps/webapps_client_android.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

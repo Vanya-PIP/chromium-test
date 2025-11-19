@@ -43,7 +43,7 @@
 #include "base/files/file_enumerator.h"
 #include "base/files/file_path.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"

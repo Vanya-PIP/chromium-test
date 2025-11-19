@@ -29,7 +29,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/functional/function_ref.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/strings/strcat.h"
 #include "base/strings/sys_string_conversions.h"

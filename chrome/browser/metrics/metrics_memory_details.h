@@ -9,7 +9,7 @@
 #include "build/build_config.h"
 #include "chrome/browser/memory_details.h"
 
-// Handles asynchronous fetching of memory details and logging histograms about
+// Handles asynchronous fetching of memory details and testistograms about
 // memory use of various processes.
 // Will run the provided callback when finished.
 class MetricsMemoryDetails : public MemoryDetails {

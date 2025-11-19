@@ -11,7 +11,7 @@
 #include <memory>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_split.h"
 #include "media/base/mock_media_log.h"

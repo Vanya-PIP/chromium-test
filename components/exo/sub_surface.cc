@@ -4,7 +4,7 @@
 
 #include "components/exo/sub_surface.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "base/trace_event/traced_value.h"
 #include "components/exo/sub_surface_observer.h"

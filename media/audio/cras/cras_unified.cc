@@ -9,7 +9,7 @@
 #include <algorithm>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/string_number_conversions.h"

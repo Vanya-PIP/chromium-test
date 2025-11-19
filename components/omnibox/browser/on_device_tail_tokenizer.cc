@@ -14,7 +14,7 @@
 #include "base/containers/flat_map.h"
 #include "base/containers/flat_set.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "components/omnibox/browser/omnibox_field_trial.h"
 

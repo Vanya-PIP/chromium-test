@@ -7,7 +7,7 @@
 #include <string>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "chromeos/ash/components/system/statistics_provider.h"
 

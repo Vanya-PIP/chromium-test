@@ -10,7 +10,7 @@
 #include "base/containers/fixed_flat_set.h"
 #include "base/json/json_reader.h"
 #include "base/json/values_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/utf_string_conversions.h"

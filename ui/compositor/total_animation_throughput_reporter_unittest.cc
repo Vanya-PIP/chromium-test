@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
 #include "base/test/bind.h"

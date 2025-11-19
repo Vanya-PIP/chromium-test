@@ -11,7 +11,7 @@
 #include "base/containers/fixed_flat_set.h"
 #include "base/containers/flat_map.h"
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/synchronization/lock.h"
 #include "base/thread_annotations.h"

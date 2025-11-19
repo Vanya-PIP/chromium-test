@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/policy/enrollment/enrollment_token_provider.h"
 
 #include "ash/constants/ash_switches.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/branding_buildflags.h"
 #include "chrome/browser/ash/login/configuration_keys.h"
 #include "chrome/browser/ash/login/oobe_configuration.h"

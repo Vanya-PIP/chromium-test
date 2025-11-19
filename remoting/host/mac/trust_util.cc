@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/mac/code_signature.h"
 #include "base/strings/string_util.h"

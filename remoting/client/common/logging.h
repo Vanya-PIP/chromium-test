@@ -5,7 +5,7 @@
 #ifndef REMOTING_CLIENT_COMMON_LOGGING_H_
 #define REMOTING_CLIENT_COMMON_LOGGING_H_
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace remoting {
 

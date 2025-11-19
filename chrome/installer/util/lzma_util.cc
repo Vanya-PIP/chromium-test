@@ -20,7 +20,7 @@
 
 #include "base/containers/span.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/types/expected_macros.h"
 #include "chrome/installer/util/unbuffered_file_writer.h"

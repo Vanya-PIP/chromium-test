@@ -10,7 +10,7 @@
 #include "base/memory/ptr_util.h"
 #include "base/power_monitor/power_monitor.h"
 #include "base/trace_event/trace_event.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/components/multidevice/software_feature.h"
 #include "chromeos/ash/components/multidevice/software_feature_state.h"

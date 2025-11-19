@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/weak_ptr.h"
 #include "base/observer_list.h"
@@ -16,7 +16,7 @@
 #include "base/strings/string_number_conversions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "remoting/base/http_status.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/oauth_token_getter.h"
 #include "remoting/signaling/ftl_device_id_provider.h"
 #include "remoting/signaling/ftl_messaging_client.h"

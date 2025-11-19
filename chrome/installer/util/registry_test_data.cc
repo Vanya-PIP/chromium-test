@@ -6,7 +6,7 @@
 
 #include <windows.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/win/registry.h"
 #include "testing/gtest/include/gtest/gtest.h"

@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "content/public/browser/font_list_async.h"
 #include "third_party/blink/public/common/privacy_budget/identifiable_token_builder.h"

@@ -14,7 +14,7 @@
 #include "ash/public/mojom/input_device_settings.mojom.h"
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/values.h"
 #include "build/branding_buildflags.h"

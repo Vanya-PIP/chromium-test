@@ -5,7 +5,7 @@
 #include "chrome/browser/ui/webui/ash/cloud_upload/cloud_upload_ui.h"
 
 #include "ash/webui/common/trusted_types_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "chrome/browser/chromeos/upload_office_to_cloud/upload_office_to_cloud.h"
 #include "chrome/browser/profiles/profile.h"

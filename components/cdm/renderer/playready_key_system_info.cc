@@ -4,7 +4,7 @@
 
 #include "components/cdm/renderer/playready_key_system_info.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "components/cdm/common/buildflags.h"
 #include "components/cdm/common/playready_cdm_common.h"

@@ -18,7 +18,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversions.h"

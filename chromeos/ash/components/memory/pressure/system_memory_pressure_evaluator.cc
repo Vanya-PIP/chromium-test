@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/memory/pressure/system_memory_pressure_evaluator.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 
 namespace ash {

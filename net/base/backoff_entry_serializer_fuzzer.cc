@@ -11,7 +11,7 @@
 #include <optional>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/time/tick_clock.h"
 #include "base/time/time.h"

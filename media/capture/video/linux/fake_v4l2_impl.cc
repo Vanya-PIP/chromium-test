@@ -23,7 +23,7 @@
 #include "base/containers/flat_set.h"
 #include "base/containers/heap_array.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notimplemented.h"
 #include "base/synchronization/waitable_event.h"

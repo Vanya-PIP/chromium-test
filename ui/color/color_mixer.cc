@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/color/color_provider_utils.h"
 #include "ui/color/color_recipe.h"
 #include "ui/gfx/color_palette.h"

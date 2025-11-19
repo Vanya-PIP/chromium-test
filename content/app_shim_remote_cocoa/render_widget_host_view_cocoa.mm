@@ -16,7 +16,7 @@
 #import "base/apple/foundation_util.h"
 #include "base/apple/owned_objc.h"
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #import "base/mac/mac_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/numerics/safe_conversions.h"

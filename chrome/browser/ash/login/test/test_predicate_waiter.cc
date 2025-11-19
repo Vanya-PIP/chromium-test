@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/login/test/test_predicate_waiter.h"
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 
 namespace ash {

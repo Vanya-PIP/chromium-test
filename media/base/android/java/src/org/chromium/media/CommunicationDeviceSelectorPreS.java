@@ -216,7 +216,7 @@ class CommunicationDeviceSelectorPreS extends CommunicationDeviceSelector {
             return;
         }
         if (!mAudioManager.isBluetoothScoOn()) {
-            // TODO(henrika): can we do anything else than logging here?
+            // TODO(henrika): can we do anything else than testere?
             loge("Unable to stop BT SCO since it is already disabled");
             mBluetoothScoState = STATE_BLUETOOTH_SCO_OFF;
             return;

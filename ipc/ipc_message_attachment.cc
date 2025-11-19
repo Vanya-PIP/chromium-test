@@ -5,7 +5,7 @@
 #include "ipc/ipc_message_attachment.h"
 
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "build/build_config.h"
 #include "ipc/ipc_mojo_handle_attachment.h"

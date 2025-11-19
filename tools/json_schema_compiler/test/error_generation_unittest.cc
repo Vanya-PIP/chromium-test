@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "tools/json_schema_compiler/test/test_util.h"

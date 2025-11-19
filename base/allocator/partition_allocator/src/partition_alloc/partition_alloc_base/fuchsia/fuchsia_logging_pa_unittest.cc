@@ -12,8 +12,8 @@
 #include <lib/sys/cpp/component_context.h>
 
 #include "partition_alloc/buildflags.h"
-#include "partition_alloc/partition_alloc_base/fuchsia/fuchsia_logging.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/fuchsia/fuchsia_test"
+#include "partition_alloc/partition_alloc_base/test"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

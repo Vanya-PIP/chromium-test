@@ -7,7 +7,7 @@
 #include <string_view>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/values.h"
 #include "net/base/net_errors.h"

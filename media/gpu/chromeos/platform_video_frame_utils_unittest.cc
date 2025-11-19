@@ -15,7 +15,7 @@
 #include "base/files/file.h"
 #include "base/files/file_path.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/time/time.h"
 #include "gpu/command_buffer/client/test_shared_image_interface.h"

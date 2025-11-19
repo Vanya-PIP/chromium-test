@@ -9,7 +9,7 @@
 #import "base/debug/dump_without_crashing.h"
 #import "base/functional/bind.h"
 #import "base/ios/ios_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/metrics/histogram_macros.h"
 #import "base/metrics/user_metrics.h"

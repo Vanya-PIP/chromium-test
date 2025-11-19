@@ -20,8 +20,8 @@
 #include "chrome/browser/web_applications/web_app_constants.h"
 #include "chrome/browser/web_applications/web_app_install_info.h"
 #include "chrome/browser/web_applications/web_app_install_params.h"
-#include "chrome/browser/web_applications/web_app_logging.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "chrome/browser/web_applications/web_app_test"
+#include "components/webapps/browser/installable/installable_test"
 #include "third_party/skia/include/core/SkColor.h"
 #include "url/gurl.h"
 

@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/metrics/histogram_tester.h"
 #include "base/test/metrics/user_action_tester.h"
 #include "base/test/task_environment.h"

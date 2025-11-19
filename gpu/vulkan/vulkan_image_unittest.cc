@@ -4,7 +4,7 @@
 
 #include "gpu/vulkan/vulkan_image.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "gpu/config/gpu_info_collector.h"
 #include "gpu/config/gpu_test_config.h"

@@ -13,7 +13,7 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/mem_buffer_util.h"
 #include "base/fuchsia/process_context.h"
 #include "base/strings/stringprintf.h"

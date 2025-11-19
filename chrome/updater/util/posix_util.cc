@@ -15,7 +15,7 @@
 #include "base/files/file.h"
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/scoped_blocking_call.h"
 #include "chrome/updater/updater_branding.h"
 #include "chrome/updater/util/util.h"

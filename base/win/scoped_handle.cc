@@ -8,7 +8,7 @@
 
 #include "base/check_op.h"
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/scoped_handle_verifier.h"
 #include "base/win/win_util.h"
 #include "base/win/windows_types.h"

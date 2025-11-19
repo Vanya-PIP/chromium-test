@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/child_accounts/on_device_controls/blocked_app_types.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 namespace ash::on_device_controls {

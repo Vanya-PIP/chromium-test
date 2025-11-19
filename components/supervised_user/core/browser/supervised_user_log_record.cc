@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "components/content_settings/core/browser/host_content_settings_map.h"
 #include "components/prefs/pref_service.h"

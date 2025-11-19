@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/strings/string_number_conversions.h"
 #include "dbus/bus.h"

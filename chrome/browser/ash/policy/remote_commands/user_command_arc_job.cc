@@ -9,7 +9,7 @@
 #include "base/functional/bind.h"
 #include "base/location.h"
 #include "base/memory/ref_counted.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/arc/policy/arc_policy_bridge.h"

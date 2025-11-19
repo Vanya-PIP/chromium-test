@@ -8,7 +8,7 @@
 
 #include "base/apple/bridging.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 
 using base::apple::CFToNSPtrCast;

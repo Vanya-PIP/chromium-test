@@ -4,7 +4,7 @@
 
 #include "ui/gl/vsync_thread_win_dxgi.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/typed_macros.h"
 #include "base/win/windows_version.h"
 #include "ui/gl/gl_features.h"

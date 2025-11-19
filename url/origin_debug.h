@@ -7,7 +7,7 @@
 
 #include "base/component_export.h"
 #include "base/debug/alias.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 
 // DEBUG_ALIAS_FOR_ORIGIN(var_name, origin) copies `origin` into a new
 // stack-allocated variable named `<var_name>`. This helps ensure that the

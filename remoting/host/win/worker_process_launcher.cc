@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"
 #include "mojo/public/cpp/bindings/scoped_interface_endpoint_handle.h"

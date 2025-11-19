@@ -993,7 +993,7 @@ def CreateOptionParser():
   parser.add_option('-n',
                     '--logging-include',
                     dest='logging_include',
-                    default='base/logging.h',
+                    default='base/test',
                     help=('Header file where the logging function is defined.'))
   parser.add_option('--macro-include',
                     dest='macro_include',

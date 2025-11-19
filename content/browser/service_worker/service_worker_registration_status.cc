@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"
 #include "third_party/blink/public/mojom/service_worker/service_worker_error_type.mojom.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/lens/lens_overlay_side_panel_navigation_throttle.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/themes/theme_service.h"
 #include "chrome/browser/themes/theme_service_factory.h"
 #include "chrome/test/base/chrome_render_view_host_test_harness.h"

@@ -22,7 +22,7 @@
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/safe_conversions.h"

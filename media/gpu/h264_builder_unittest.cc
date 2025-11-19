@@ -4,7 +4,7 @@
 
 #include "media/gpu/h264_builder.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/filters/h26x_annex_b_bitstream_builder.h"
 #include "media/parsers/h264_parser.h"
 #include "testing/gtest/include/gtest/gtest.h"

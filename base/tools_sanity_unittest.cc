@@ -20,7 +20,7 @@
 #include "base/cfi_buildflags.h"
 #include "base/debug/asan_invalid_access.h"
 #include "base/debug/profiler.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "base/sanitizer_buildflags.h"

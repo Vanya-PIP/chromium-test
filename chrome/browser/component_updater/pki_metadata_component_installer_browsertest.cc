@@ -15,7 +15,7 @@
 #include "base/containers/to_vector.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/run_loop.h"

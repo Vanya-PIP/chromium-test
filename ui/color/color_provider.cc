@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/color/color_mixer.h"
 #include "ui/color/color_provider_utils.h"
 #include "ui/color/color_recipe.h"

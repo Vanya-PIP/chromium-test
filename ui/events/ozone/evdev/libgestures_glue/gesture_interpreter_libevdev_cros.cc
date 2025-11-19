@@ -11,7 +11,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/contains.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"

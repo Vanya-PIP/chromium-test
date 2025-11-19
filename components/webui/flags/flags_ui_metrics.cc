@@ -7,7 +7,7 @@
 #include <set>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/metrics_hashes.h"
 #include "base/notreached.h"

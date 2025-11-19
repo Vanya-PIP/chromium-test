@@ -12,7 +12,7 @@
 #include "base/files/file.h"
 #include "base/files/file_path.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/color_plane_layout.h"
 #include "media/base/format_utils.h"
 #include "media/base/video_frame.h"

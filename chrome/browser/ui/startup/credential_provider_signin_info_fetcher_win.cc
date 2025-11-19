@@ -8,9 +8,9 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/credential_provider/common/gcp_strings.h"
 #include "google_apis/gaia/gaia_access_token_fetcher.h"
 #include "google_apis/gaia/gaia_oauth_client.h"

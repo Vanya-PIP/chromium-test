@@ -4,7 +4,7 @@
 
 #include "base/memory/unsafe_shared_memory_pool.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/to_string.h"
 
 namespace {

@@ -8,7 +8,7 @@
 #include <unordered_map>
 
 #include "base/functional/bind.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/browser/chromeos/app_mode/kiosk_web_contents_observer.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_list.h"

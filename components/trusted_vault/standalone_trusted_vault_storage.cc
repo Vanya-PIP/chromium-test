@@ -9,7 +9,7 @@
 #include "base/base64.h"
 #include "base/files/file_util.h"
 #include "base/files/important_file_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_number_conversions.h"

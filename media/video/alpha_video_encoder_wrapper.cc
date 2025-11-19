@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <cmath>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"

@@ -19,7 +19,7 @@
 #include "base/command_line.h"
 #include "base/files/file_path.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/memory/weak_ptr.h"
 #include "base/strings/stringprintf.h"

@@ -7,7 +7,7 @@
 #include <sstream>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "base/task/sequenced_task_runner.h"
 #include "chromecast/cast_core/runtime/browser/message_port_handler.h"

@@ -4,7 +4,7 @@
 
 #include "base/mac/launchd.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/scoped_launch_data.h"
 #include "base/numerics/safe_conversions.h"
 

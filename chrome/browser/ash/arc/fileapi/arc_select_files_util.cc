@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/arc/fileapi/arc_select_files_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "third_party/re2/src/re2/re2.h"
 

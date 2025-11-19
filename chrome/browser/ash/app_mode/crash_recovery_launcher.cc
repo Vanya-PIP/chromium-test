@@ -11,7 +11,7 @@
 
 #include "base/check_deref.h"
 #include "base/notreached.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/browser/ash/app_mode/isolated_web_app/kiosk_iwa_launcher.h"
 #include "chrome/browser/ash/app_mode/kiosk_app_launch_error.h"
 #include "chrome/browser/ash/app_mode/kiosk_app_launcher.h"

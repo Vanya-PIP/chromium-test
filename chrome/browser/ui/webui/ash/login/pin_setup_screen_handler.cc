@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/i18n/number_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/values.h"
 #include "chrome/browser/ash/login/screens/pin_setup_screen.h"

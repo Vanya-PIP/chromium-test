@@ -7,7 +7,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/user_metrics.h"
 #include "chrome/common/pref_names.h"

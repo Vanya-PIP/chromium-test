@@ -23,7 +23,7 @@
 #include "base/containers/fixed_flat_map.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/stack_allocated.h"
 #include "base/metrics/histogram_macros.h"

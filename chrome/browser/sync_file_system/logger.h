@@ -8,12 +8,12 @@
 #include <vector>
 
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/drive/event_logger.h"
 
 namespace sync_file_system {
 // Originally wanted to use 'logging' here, but it conflicts with
-// base/logging.h, and breaks DCHECK() and friends.
+// base/test, and breaks DCHECK() and friends.
 namespace util {
 
 // Resets the log.

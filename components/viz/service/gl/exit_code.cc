@@ -4,7 +4,7 @@
 
 #include "components/viz/service/gl/exit_code.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/viz/service/gl/gpu_log_message_manager.h"
 
 namespace viz {

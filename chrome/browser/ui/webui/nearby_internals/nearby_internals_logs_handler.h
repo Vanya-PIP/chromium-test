@@ -8,7 +8,7 @@
 #include "base/scoped_observation.h"
 #include "base/values.h"
 #include "components/cross_device/logging/log_buffer.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "content/public/browser/web_ui_message_handler.h"
 
 // WebUIMessageHandler for the NS_LOG Macro to pass logging messages to the

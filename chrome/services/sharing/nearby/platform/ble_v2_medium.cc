@@ -9,7 +9,7 @@
 #include "chrome/services/sharing/nearby/platform/ble_v2_medium.h"
 
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/notreached.h"
 #include "base/rand_util.h"
@@ -25,7 +25,7 @@
 #include "chrome/services/sharing/nearby/platform/ble_v2_server_socket.h"
 #include "chrome/services/sharing/nearby/platform/bluetooth_utils.h"
 #include "chrome/services/sharing/nearby/platform/nearby_platform_metrics.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/cross_device/nearby/nearby_features.h"
 #include "third_party/nearby/src/internal/platform/byte_array.h"
 #include "third_party/nearby/src/internal/platform/implementation/ble_v2.h"

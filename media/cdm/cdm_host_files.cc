@@ -11,7 +11,7 @@
 #include "base/files/file.h"
 #include "base/files/file_path.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/native_library.h"
 #include "base/not_fatal_until.h"

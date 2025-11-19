@@ -17,7 +17,7 @@
 #include <vector>
 
 #include "base/posix/eintr_wrapper.h"  //nogncheck
-#include "sandbox/mac/sandbox_logging.h"
+#include "sandbox/mac/sandbox_test"
 #include "sandbox/mac/sandbox_serializer.h"
 #include "sandbox/mac/seatbelt.h"
 

@@ -10,7 +10,7 @@
 
 #include "base/containers/flat_map.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
 #include "base/strings/strcat.h"

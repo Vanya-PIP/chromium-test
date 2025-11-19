@@ -7,7 +7,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/values.h"
 #include "chrome/common/chromeos/extensions/api/events.h"

@@ -10,7 +10,7 @@
 #include "base/cpu.h"
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/protected_memory_buildflags.h"
 #include "base/strings/string_util.h"
 #include "base/test/gtest_util.h"

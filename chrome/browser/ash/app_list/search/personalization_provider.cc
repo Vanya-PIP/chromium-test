@@ -15,7 +15,7 @@
 #include "ash/webui/personalization_app/personalization_app_url_constants.h"
 #include "ash/webui/personalization_app/search/search.mojom.h"
 #include "ash/webui/personalization_app/search/search_handler.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/apps/app_service/app_service_proxy.h"
 #include "chrome/browser/apps/app_service/app_service_proxy_factory.h"

@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/app_list/arc/arc_app_utils.h"
 #include "chrome/browser/ash/arc/arc_support_host.h"
 #include "chrome/browser/signin/identity_manager_factory.h"

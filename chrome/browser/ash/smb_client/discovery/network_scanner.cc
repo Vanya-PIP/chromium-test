@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "chrome/browser/ash/smb_client/discovery/host_locator.h"
 

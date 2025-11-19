@@ -10,7 +10,7 @@
 
 #include "ash/constants/ash_features.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/values.h"
 #include "chromeos/ash/components/dbus/shill/fake_modem_3gpp_client.h"

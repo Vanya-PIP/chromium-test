@@ -7,7 +7,7 @@
 #include "ash/webui/eche_app_ui/proto/exo_messages.pb.h"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_functions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/multidevice_feature_access_manager.h"
 
 namespace ash {

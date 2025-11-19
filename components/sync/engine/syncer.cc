@@ -8,7 +8,7 @@
 #include <string>
 
 #include "base/auto_reset.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "base/strings/strcat.h"

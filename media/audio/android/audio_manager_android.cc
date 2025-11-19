@@ -18,7 +18,7 @@
 #include "base/containers/flat_map.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"

@@ -9,7 +9,7 @@
 #include "ash/quick_pair/common/quick_pair_browser_delegate.h"
 #include "base/base64.h"
 #include "base/containers/contains.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
 #include "components/prefs/scoped_user_pref_update.h"

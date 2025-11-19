@@ -13,7 +13,7 @@
 #include <string>
 
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/strings/pattern.h"
 #include "base/strings/string_split.h"

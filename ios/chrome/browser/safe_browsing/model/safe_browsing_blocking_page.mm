@@ -4,7 +4,7 @@
 
 #import "ios/chrome/browser/safe_browsing/model/safe_browsing_blocking_page.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/ptr_util.h"
 #import "base/strings/string_number_conversions.h"
 #import "base/time/time.h"

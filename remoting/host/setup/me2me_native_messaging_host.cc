@@ -15,7 +15,7 @@
 #include "base/functional/callback.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringize_macros.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"

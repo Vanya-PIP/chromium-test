@@ -17,7 +17,7 @@
 #include "base/base_paths.h"
 #include "base/command_line.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/process/launch.h"
 #include "base/process/process.h"

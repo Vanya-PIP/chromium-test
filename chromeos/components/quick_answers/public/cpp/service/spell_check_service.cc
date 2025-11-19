@@ -4,7 +4,7 @@
 
 #include "chromeos/components/quick_answers/public/cpp/service/spell_check_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
 
 namespace quick_answers {

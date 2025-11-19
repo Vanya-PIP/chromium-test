@@ -5,7 +5,7 @@
 #ifndef COMPONENTS_WEBAPPS_BROWSER_BANNERS_APP_BANNER_METRICS_H_
 #define COMPONENTS_WEBAPPS_BROWSER_BANNERS_APP_BANNER_METRICS_H_
 
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "third_party/blink/public/mojom/manifest/display_mode.mojom-forward.h"
 
 namespace webapps {

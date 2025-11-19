@@ -8,7 +8,7 @@
 #include "base/command_line.h"
 #include "base/i18n/icu_util.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/fuzztest_support.h"
 #include "base/values.h"
 #include "third_party/fuzztest/src/fuzztest/fuzztest.h"

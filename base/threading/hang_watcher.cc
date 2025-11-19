@@ -10,7 +10,7 @@
 
 #include "base/containers/flat_map.h"
 #include "base/debug/alias.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/debug/leak_annotations.h"
 #include "base/feature_list.h"
@@ -35,7 +35,7 @@ namespace base {
 
 namespace {
 
-// Defines how much logging happens when the HangWatcher monitors the threads.
+// Defines how much testappens when the HangWatcher monitors the threads.
 // Logging levels are set per thread type through Finch. It's important that
 // the order of the enum members stay the same and that their numerical
 // values be in increasing order. The implementation of

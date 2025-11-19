@@ -16,7 +16,7 @@
 #include "base/compiler_specific.h"
 #include "base/feature_list.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/no_destructor.h"

@@ -25,7 +25,7 @@
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
 #include "base/json/json_string_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"
 #include "base/run_loop.h"

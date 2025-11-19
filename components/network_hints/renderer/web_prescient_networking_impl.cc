@@ -4,7 +4,7 @@
 
 #include "components/network_hints/renderer/web_prescient_networking_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/renderer/render_frame.h"
 #include "third_party/blink/public/platform/browser_interface_broker_proxy.h"
 

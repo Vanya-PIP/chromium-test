@@ -7,7 +7,7 @@
 #include "ash/ambient/util/ambient_util.h"
 #include "ash/utility/lottie_util.h"
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "cc/paint/skottie_resource_metadata.h"
 

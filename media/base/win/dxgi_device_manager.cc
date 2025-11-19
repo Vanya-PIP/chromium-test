@@ -11,7 +11,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/win/mf_helpers.h"
 #include "media/base/win/mf_initializer.h"
 

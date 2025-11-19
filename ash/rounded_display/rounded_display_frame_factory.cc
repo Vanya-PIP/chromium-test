@@ -14,7 +14,7 @@
 #include "ash/rounded_display/rounded_display_gutter.h"
 #include "base/check.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "components/viz/common/quads/compositor_frame.h"
 #include "components/viz/common/quads/texture_draw_quad.h"

@@ -6,7 +6,7 @@
 
 #include "base/android/jni_array.h"
 #include "base/android/jni_string.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/feed/core/proto/v2/ui.pb.h"
 
 namespace feed {

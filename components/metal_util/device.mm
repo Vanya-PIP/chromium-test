@@ -6,7 +6,7 @@
 
 #import <Metal/Metal.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace metal {
 

@@ -14,7 +14,7 @@
 #include "chrome/browser/notifications/notification_display_service_factory.h"
 #include "chrome/browser/ui/settings_window_manager_chromeos.h"
 #include "chrome/grit/generated_resources.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/base/resource/resource_bundle.h"
 #include "ui/message_center/message_center.h"

@@ -5,7 +5,7 @@
 #include "media/audio/apple/glitch_helper.h"
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"
 #include "media/base/audio_timestamp_helper.h"

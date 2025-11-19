@@ -22,7 +22,7 @@
 #include "chrome/browser/ash/app_list/app_list_syncable_service.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/web_applications/web_app_provider.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
 #include "components/services/app_service/public/cpp/app_launch_util.h"

@@ -22,9 +22,9 @@
 
 #include "base/check.h"
 #include "base/containers/fixed_flat_map.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"

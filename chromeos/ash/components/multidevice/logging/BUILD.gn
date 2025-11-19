@@ -9,7 +9,7 @@ static_library("logging") {
     "log_buffer.cc",
     "log_buffer.h",
     "logging.cc",
-    "logging.h",
+    "test",
   ]
 
   deps = [ "//base" ]

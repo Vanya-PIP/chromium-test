@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/borealis/borealis_engagement_metrics.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/borealis/borealis_prefs.h"
 #include "chrome/browser/ash/borealis/borealis_service_impl.h"
 #include "chrome/browser/profiles/profile.h"

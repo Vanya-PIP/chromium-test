@@ -24,7 +24,7 @@
 #include "components/favicon/core/large_icon_service.h"
 #include "components/favicon_base/favicon_types.h"
 #include "components/webapps/browser/installable/installable_data.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_manager.h"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/common/web_page_metadata.mojom.h"

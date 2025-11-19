@@ -14,7 +14,7 @@
 #endif
 
 #include "base/dcheck_is_on.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/process/process_handle.h"
 #include "net/socket/tcp_socket.h"

@@ -9,7 +9,7 @@
 #include "base/base64.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/expected.h"
 #include "chromeos/ash/components/quick_start/quick_start_message_type.h"
 #include "sandbox/policy/sandbox.h"

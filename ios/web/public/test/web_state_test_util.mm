@@ -6,7 +6,7 @@
 
 #import "base/check.h"
 #import "base/functional/callback_helpers.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/run_loop.h"
 #import "base/strings/sys_string_conversions.h"
 #import "base/test/ios/wait_util.h"

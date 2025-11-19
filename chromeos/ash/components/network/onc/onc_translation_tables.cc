@@ -7,7 +7,7 @@
 #include <cstddef>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "chromeos/ash/components/network/network_type_pattern.h"
 #include "chromeos/ash/components/network/tether_constants.h"

@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "services/network/p2p/socket_udp.h"
 #include "services/network/public/cpp/p2p_socket_type.h"

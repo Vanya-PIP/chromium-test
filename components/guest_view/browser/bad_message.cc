@@ -4,7 +4,7 @@
 
 #include "components/guest_view/browser/bad_message.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "content/public/browser/render_process_host.h"
 

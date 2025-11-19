@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/values.h"
 #include "testing/gmock/include/gmock/gmock.h"

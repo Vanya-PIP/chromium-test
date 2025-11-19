@@ -9,7 +9,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "media/gpu/test/video_test_helpers.h"
 #include "testing/gtest/include/gtest/gtest.h"

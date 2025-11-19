@@ -7,7 +7,7 @@
 #include <errno.h>
 #include <unistd.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/posix/safe_strerror.h"
 

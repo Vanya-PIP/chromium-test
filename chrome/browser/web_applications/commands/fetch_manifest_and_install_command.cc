@@ -9,7 +9,7 @@
 
 #include "base/auto_reset.h"
 #include "base/check_is_test.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
@@ -44,7 +44,7 @@
 #include "components/webapps/browser/features.h"
 #include "components/webapps/browser/install_result_code.h"
 #include "components/webapps/browser/installable/installable_evaluator.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/browser/installable/installable_params.h"
 #include "components/webapps/common/constants.h"

@@ -10,7 +10,7 @@
 #include "remoting/host/win/chromoting_module.h"
 
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/run_loop.h"
 #include "base/strings/utf_string_conversions.h"

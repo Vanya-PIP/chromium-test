@@ -9,7 +9,7 @@
 #include <memory>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/time/time.h"
 #include "ui/events/ozone/evdev/touch_event_converter_evdev.h"

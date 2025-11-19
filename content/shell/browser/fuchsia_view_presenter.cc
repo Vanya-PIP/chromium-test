@@ -6,7 +6,7 @@
 
 #include <lib/sys/cpp/component_context.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"

@@ -8,14 +8,14 @@
 
 #include "base/containers/contains.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/pattern.h"
 #include "base/strings/stringprintf.h"
 #include "base/values.h"
 #include "chrome/test/chromedriver/chrome/client_hints.h"
 #include "chrome/test/chromedriver/chrome/log.h"
 #include "chrome/test/chromedriver/chrome/status.h"
-#include "chrome/test/chromedriver/logging.h"
+#include "chrome/test/chromedriver/test"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

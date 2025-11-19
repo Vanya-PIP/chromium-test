@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/observer_list.h"
 #include "base/strings/utf_string_conversions.h"

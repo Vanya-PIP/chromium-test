@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "chrome/browser/ash/extensions/file_manager/search_by_pattern.h"
 #include "chrome/browser/ash/fileapi/recent_source.h"

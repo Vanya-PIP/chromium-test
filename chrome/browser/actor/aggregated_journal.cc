@@ -7,7 +7,7 @@
 #include "base/memory/safe_ref.h"
 #include "base/rand_util.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chrome/common/actor/actor_logging.h"
+#include "chrome/common/actor/actor_test"
 #include "chrome/common/actor/journal_details_builder.h"
 #include "chrome/common/chrome_render_frame.mojom.h"
 #include "content/public/browser/document_user_data.h"

@@ -13,7 +13,7 @@
 
 #include "base/check.h"
 #include "base/fuchsia/fuchsia_component_connect.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/functional/bind.h"
 #include "base/trace_event/trace_id_helper.h"

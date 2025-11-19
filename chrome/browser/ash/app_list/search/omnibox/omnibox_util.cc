@@ -9,7 +9,7 @@
 
 #include "base/containers/flat_set.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/browser/ash/app_list/search/omnibox/omnibox_result.h"

@@ -14,7 +14,7 @@
 #include "base/functional/callback_forward.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/task/thread_pool.h"
 #include "base/values.h"

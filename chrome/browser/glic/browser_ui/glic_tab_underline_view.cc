@@ -4,7 +4,7 @@
 
 #include "chrome/browser/glic/browser_ui/glic_tab_underline_view.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "cc/paint/paint_flags.h"
 #include "chrome/browser/glic/public/glic_keyed_service.h"
 #include "chrome/browser/glic/public/glic_keyed_service_factory.h"

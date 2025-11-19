@@ -7,7 +7,7 @@
 
 #include <optional>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/types/pass_key.h"
 #include "extensions/common/extension_id.h"
 #include "extensions/common/mojom/context_type.mojom-forward.h"

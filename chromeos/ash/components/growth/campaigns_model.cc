@@ -17,7 +17,7 @@
 #include "ash/webui/grit/ash_mall_cros_app_resources.h"
 #include "ash/webui/grit/ash_personalization_app_resources.h"
 #include "ash/webui/grit/ash_print_management_resources.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/stringprintf.h"

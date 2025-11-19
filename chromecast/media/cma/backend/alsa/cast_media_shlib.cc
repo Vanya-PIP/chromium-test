@@ -5,7 +5,7 @@
 #include <alsa/asoundlib.h>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/cma/backend/media_pipeline_backend_for_mixer.h"
 #include "chromecast/public/cast_media_shlib.h"
 #include "chromecast/public/graphics_types.h"

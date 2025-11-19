@@ -10,7 +10,7 @@
 #include <cmath>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/angle_conversions.h"
 #include "base/numerics/math_constants.h"
 #include "ui/events/gesture_detection/scale_gesture_listeners.h"

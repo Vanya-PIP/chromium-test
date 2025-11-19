@@ -13,7 +13,7 @@
 #include "base/files/file_enumerator.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/test_file_util.h"
 
 void ClearCacheForFile(const base::FilePath& path) {

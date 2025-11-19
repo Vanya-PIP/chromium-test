@@ -16,10 +16,10 @@
 #include <atomic>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/feature_list.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/threading/thread_id_name_manager.h"

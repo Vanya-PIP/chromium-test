@@ -5,7 +5,7 @@
 #import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
 
-#import "base/logging.h"
+#import "base/test"
 
 @interface ObjCInteropTestCase : XCTestCase
 @end

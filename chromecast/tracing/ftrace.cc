@@ -12,7 +12,7 @@
 #include <string_view>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/trace_event/common/trace_event_common.h"
 #include "chromecast/tracing/system_tracing_common.h"

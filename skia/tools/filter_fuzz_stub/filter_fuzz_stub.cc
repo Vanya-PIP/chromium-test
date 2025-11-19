@@ -4,7 +4,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/memory.h"
 #include "base/test/test_discardable_memory_allocator.h"
 #include "third_party/skia/include/core/SkBitmap.h"

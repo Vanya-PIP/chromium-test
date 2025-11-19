@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/scoped_native_library.h"
 #include "base/win/registry.h"
 

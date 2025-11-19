@@ -27,7 +27,7 @@
 #include "base/time/time.h"
 #include "base/timer/timer.h"
 #include "base/types/expected.h"
-#include "chrome/browser/ash/policy/remote_commands/crd/crd_logging.h"
+#include "chrome/browser/ash/policy/remote_commands/crd/crd_test"
 #include "chrome/browser/ash/policy/remote_commands/crd/crd_oauth_token_fetcher.h"
 #include "chrome/browser/ash/policy/remote_commands/crd/crd_remote_command_utils.h"
 #include "chrome/browser/ash/policy/remote_commands/crd/crd_session_observer.h"

@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/expected.h"
 #include "components/legion/attestation_handler.h"
 #include "components/legion/legion_common.h"

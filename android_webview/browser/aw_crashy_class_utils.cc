@@ -5,7 +5,7 @@
 #include <ostream>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 
 // Must come after all headers that specialize FromJniType() / ToJniType().
 #include "android_webview/browser_jni_headers/AwCrashyClassUtils_jni.h"

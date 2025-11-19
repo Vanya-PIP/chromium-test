@@ -7,7 +7,7 @@
 #include "base/memory/weak_ptr.h"
 #include "base/notimplemented.h"
 #include "base/strings/utf_string_conversion_utils.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/linux/ei_keymap.h"
 #include "remoting/host/linux/ei_sender_session.h"
 #include "remoting/host/linux/pipewire_capture_stream.h"

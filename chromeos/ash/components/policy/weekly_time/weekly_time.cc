@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 namespace em = enterprise_management;

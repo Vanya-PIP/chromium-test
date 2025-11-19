@@ -13,7 +13,7 @@
 #include "chrome/browser/ash/tether/tether_service_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/ash/network/tether_notification_presenter.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/network/device_state.h"
 #include "chromeos/ash/components/network/network_connect.h"
 #include "chromeos/ash/components/network/network_type_pattern.h"

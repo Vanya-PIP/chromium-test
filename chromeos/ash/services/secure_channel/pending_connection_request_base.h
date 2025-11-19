@@ -8,9 +8,9 @@
 #include <memory>
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/client_connection_parameters.h"
 #include "chromeos/ash/services/secure_channel/pending_connection_request.h"
 #include "chromeos/ash/services/secure_channel/public/cpp/shared/connection_priority.h"

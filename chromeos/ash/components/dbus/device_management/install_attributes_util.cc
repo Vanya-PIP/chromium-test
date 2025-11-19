@@ -10,7 +10,7 @@
 
 #include "base/check_op.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/dbus/device_management/install_attributes_client.h"
 
 namespace ash::install_attributes_util {

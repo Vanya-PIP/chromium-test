@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "cc/paint/paint_op_reader.h"
 
 struct Environment {

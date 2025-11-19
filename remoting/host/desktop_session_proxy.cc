@@ -13,7 +13,7 @@
 #include "base/containers/map_util.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/process/process_handle.h"

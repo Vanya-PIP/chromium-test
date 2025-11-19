@@ -8,7 +8,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "base/metrics/metrics_hashes.h"
 #include "base/metrics/user_metrics.h"

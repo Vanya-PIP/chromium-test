@@ -5,7 +5,7 @@
 #include "media/cast/encoding/av1_encoder.h"
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "media/base/video_encoder_metrics_provider.h"
 #include "media/base/video_frame.h"

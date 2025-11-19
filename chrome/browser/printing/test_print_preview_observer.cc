@@ -7,7 +7,7 @@
 #include <tuple>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "chrome/browser/ui/webui/print_preview/print_preview_ui.h"
 #include "content/public/browser/web_contents.h"

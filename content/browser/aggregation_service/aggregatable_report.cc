@@ -26,7 +26,7 @@
 #include "base/containers/flat_map.h"
 #include "base/containers/span.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/safe_conversions.h"

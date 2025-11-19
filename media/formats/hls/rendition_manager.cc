@@ -4,7 +4,7 @@
 
 #include "media/formats/hls/rendition_manager.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "media/formats/hls/multivariant_playlist.h"
 #include "media/formats/hls/rendition.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/test/chromedriver/chrome/scoped_temp_dir_with_retry.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/platform_thread.h"
 #include "base/time/time.h"
 

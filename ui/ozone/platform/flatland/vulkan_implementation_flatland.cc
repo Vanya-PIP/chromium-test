@@ -11,7 +11,7 @@
 #include <tuple>
 
 #include "base/files/file_path.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/callback_helpers.h"
 #include "base/notimplemented.h"
 #include "gpu/vulkan/fuchsia/vulkan_fuchsia_ext.h"

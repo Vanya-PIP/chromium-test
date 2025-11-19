@@ -10,7 +10,7 @@
 #include <string_view>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/values.h"
 #include "chromeos/ash/components/dbus/shill/shill_manager_client.h"

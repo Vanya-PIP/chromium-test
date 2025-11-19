@@ -12,7 +12,7 @@
 #include <fuchsia/sysmem/cpp/fidl.h>
 #include <lib/sys/cpp/component_context.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/memory/platform_shared_memory_region.h"
 #include "base/memory/writable_shared_memory_region.h"

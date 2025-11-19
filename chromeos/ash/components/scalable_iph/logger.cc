@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/scalable_iph/logger.h"
 
 #include "ash/constants/ash_features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"
 #include "base/strings/to_string.h"

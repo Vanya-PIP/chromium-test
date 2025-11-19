@@ -25,13 +25,13 @@
 #include <memory>
 
 #include "base/debug/alias.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/rand_util.h"
 #include "base/task/current_thread.h"

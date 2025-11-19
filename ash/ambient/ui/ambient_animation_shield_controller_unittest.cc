@@ -7,7 +7,7 @@
 #include "ash/ambient/test/ambient_ash_test_base.h"
 #include "ash/ambient/ui/ambient_view_ids.h"
 #include "ash/style/dark_light_mode_controller_impl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "ui/views/view.h"

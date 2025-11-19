@@ -4,7 +4,7 @@
 
 #include "chromecast/metrics/metrics_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace chromecast {
 

@@ -5,7 +5,7 @@
 #include "ash/system/focus_mode/sounds/soundscape/soundscape_types.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/values.h"
 

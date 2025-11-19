@@ -9,7 +9,7 @@
 #include <unordered_set>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 
 // A set of macros and functions for conditinoally skipping XR browser tests

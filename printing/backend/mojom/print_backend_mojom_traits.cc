@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "ui/gfx/geometry/mojom/geometry.mojom-shared.h"
 #include "ui/gfx/geometry/mojom/geometry_mojom_traits.h"

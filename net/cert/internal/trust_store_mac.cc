@@ -12,14 +12,14 @@
 #include <vector>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/callback_list.h"
 #include "base/containers/contains.h"
 #include "base/containers/flat_map.h"
 #include "base/containers/to_vector.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/no_destructor.h"
 #include "base/numerics/safe_conversions.h"

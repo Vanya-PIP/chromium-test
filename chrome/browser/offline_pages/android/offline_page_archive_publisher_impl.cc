@@ -15,7 +15,7 @@
 #include "base/android/scoped_java_ref.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "chrome/browser/offline_pages/android/offline_page_bridge.h"

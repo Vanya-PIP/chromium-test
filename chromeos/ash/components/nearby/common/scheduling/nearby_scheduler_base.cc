@@ -13,7 +13,7 @@
 #include "base/numerics/clamped_math.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/time/clock.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_service.h"
 #include "components/prefs/scoped_user_pref_update.h"
 #include "content/public/browser/network_service_instance.h"

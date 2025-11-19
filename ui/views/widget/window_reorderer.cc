@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/containers/adapters.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/memory/raw_ptr.h"
 #include "base/scoped_multi_source_observation.h"
 #include "ui/aura/window.h"

@@ -22,7 +22,7 @@
 #include "base/containers/checked_iterators.h"
 #include "base/containers/map_util.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/strings/string_util.h"

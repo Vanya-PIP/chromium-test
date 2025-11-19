@@ -5,7 +5,7 @@
 #include "base/metrics/histogram_delta_serialization.h"
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_base.h"
 #include "base/metrics/histogram_snapshot_manager.h"
 #include "base/metrics/statistics_recorder.h"

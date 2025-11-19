@@ -12,7 +12,7 @@
 
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notimplemented.h"
 #include "base/task/sequenced_task_runner.h"
@@ -25,7 +25,7 @@
 #include "remoting/base/passthrough_oauth_token_getter.h"
 #include "remoting/client/common/client_status_observer.h"
 #include "remoting/client/common/frame_consumer_wrapper.h"
-#include "remoting/client/common/logging.h"
+#include "remoting/client/common/test"
 #include "remoting/proto/control.pb.h"
 #include "remoting/proto/remoting/v1/host_info.pb.h"
 #include "remoting/proto/remoting/v1/remote_support_host_messages.pb.h"

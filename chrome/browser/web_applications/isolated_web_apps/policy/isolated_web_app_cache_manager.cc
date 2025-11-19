@@ -11,7 +11,7 @@
 #include "base/containers/to_value_list.h"
 #include "base/containers/to_vector.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/to_string.h"
 #include "base/types/expected_macros.h"

@@ -4,7 +4,7 @@
 
 #include "media/base/limiting_audio_queue.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/audio_timestamp_helper.h"
 
 

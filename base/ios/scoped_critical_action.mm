@@ -11,7 +11,7 @@
 #include <string_view>
 
 #include "base/ios/ios_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/memory/singleton.h"
 #include "base/metrics/histogram_macros.h"

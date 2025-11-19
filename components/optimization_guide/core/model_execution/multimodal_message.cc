@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "components/optimization_guide/core/model_execution/on_device_model_execution_proto_descriptors.h"

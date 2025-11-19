@@ -11,7 +11,7 @@
 #include "base/containers/flat_map.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/values.h"
@@ -19,7 +19,7 @@
 #include "chrome/test/chromedriver/chrome/devtools_client.h"
 #include "chrome/test/chromedriver/chrome/status.h"
 #include "chrome/test/chromedriver/chrome/web_view.h"
-#include "chrome/test/chromedriver/logging.h"
+#include "chrome/test/chromedriver/test"
 #include "chrome/test/chromedriver/net/timeout.h"
 
 namespace {

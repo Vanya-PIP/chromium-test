@@ -4,7 +4,7 @@
 
 #include "base/apple/scoped_mach_vm.h"
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 
 namespace base::apple {
 

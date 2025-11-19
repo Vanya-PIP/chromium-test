@@ -11,7 +11,7 @@
 #include "ash/constants/ash_switches.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chromeos/ash/components/dbus/audio/fake_cras_audio_client.h"
 #include "chromeos/ash/components/dbus/audio/voice_isolation_ui_appearance.h"

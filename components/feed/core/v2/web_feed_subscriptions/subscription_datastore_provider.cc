@@ -4,7 +4,7 @@
 
 #include "components/feed/core/v2/web_feed_subscriptions/subscription_datastore_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "components/feed/core/proto/v2/xsurface.pb.h"
 #include "components/feed/core/v2/public/types.h"

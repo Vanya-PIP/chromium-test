@@ -8,7 +8,7 @@
 #include <map>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/public/cpp/bindings/map_traits.h"
 #include "third_party/protobuf/src/google/protobuf/map.h"
 

@@ -13,7 +13,7 @@
 #include "base/time/time.h"
 #include "net/base/network_change_notifier.h"
 #include "remoting/base/auto_thread_task_runner.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/chromoting_host_context.h"
 #include "remoting/host/it2me/it2me_constants.h"
 #include "remoting/host/it2me/it2me_native_messaging_host.h"

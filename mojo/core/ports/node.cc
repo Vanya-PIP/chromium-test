@@ -18,7 +18,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/no_destructor.h"
 #include "base/notreached.h"

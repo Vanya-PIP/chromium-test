@@ -25,7 +25,7 @@
 #include "base/i18n/time_formatting.h"
 #include "base/json/json_writer.h"
 #include "base/json/string_escape.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"

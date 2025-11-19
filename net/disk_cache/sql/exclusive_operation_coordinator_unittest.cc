@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "base/test/task_environment.h"
 #include "net/disk_cache/sql/cache_entry_key.h"

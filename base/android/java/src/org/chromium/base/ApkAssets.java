@@ -53,7 +53,7 @@ public class ApkAssets {
         } catch (IOException e) {
             sLastError =
                     "Error while loading asset " + apkSubpath + " from " + splitName + ": " + e;
-            // As a general rule there's no point logging here because the caller should handle
+            // As a general rule there's no point testere because the caller should handle
             // receiving an fd of -1 sensibly, and the log message is either mirrored later, or
             // unwanted (in the case where a missing file is expected), or wanted but will be
             // ignored, as most non-fatal logs are.

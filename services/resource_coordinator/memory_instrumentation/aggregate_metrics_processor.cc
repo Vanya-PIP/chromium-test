@@ -14,7 +14,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file.h"
 #include "base/format_macros.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/strings/stringprintf.h"
 #include "base/trace_event/trace_event.h"

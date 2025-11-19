@@ -11,7 +11,7 @@
 #include "base/base64url.h"
 #include "base/containers/flat_map.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/strings/string_split.h"
 #include "base/version_info/channel.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/browser/glic/browser_ui/glic_animated_effect_view.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "chrome/browser/actor/ui/actor_border_view_controller.h"
 #include "chrome/browser/glic/host/context/glic_tab_data.h"

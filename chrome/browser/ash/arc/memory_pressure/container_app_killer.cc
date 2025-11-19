@@ -7,7 +7,7 @@
 #include <algorithm>  // For sort.
 #include <vector>
 
-#include "base/logging.h"  // For LOG.
+#include "base/test"  // For LOG.
 #include "base/process/process_metrics.h"
 #include "chrome/browser/memory/memory_kills_monitor.h"
 #include "chromeos/ash/experiences/arc/arc_util.h"  // For IsArcVmEnabled.

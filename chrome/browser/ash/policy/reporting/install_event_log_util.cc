@@ -8,7 +8,7 @@
 
 #include "base/i18n/time_formatting.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/time/time.h"

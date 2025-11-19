@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/json/json_file_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromecast/media/cma/backend/cast_audio_json.h"
 

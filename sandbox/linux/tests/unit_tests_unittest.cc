@@ -8,7 +8,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "sandbox/linux/tests/unit_tests.h"
 

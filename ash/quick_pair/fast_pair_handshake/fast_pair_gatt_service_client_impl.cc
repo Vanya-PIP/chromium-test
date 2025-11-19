@@ -13,7 +13,7 @@
 #include "ash/quick_pair/fast_pair_handshake/fast_pair_data_encryptor.h"
 #include "base/memory/ptr_util.h"
 #include "base/time/time.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_device.h"
 #include "device/bluetooth/bluetooth_gatt_connection.h"
 #include "device/bluetooth/bluetooth_gatt_notify_session.h"

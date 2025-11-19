@@ -4,7 +4,7 @@
 
 #include "chrome/browser/supervised_user/chromeos/supervised_user_favicon_request_handler.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/favicon/favicon_utils.h"
 #include "components/favicon/core/favicon_service.h"

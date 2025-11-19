@@ -4,7 +4,7 @@
 
 #include "gpu/command_buffer/service/shared_image/shared_memory_image_backing.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notimplemented.h"
 #include "base/notreached.h"

@@ -12,7 +12,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 
 ApplicationControllerImpl::ApplicationControllerImpl(
     fuchsia::web::Frame* frame,

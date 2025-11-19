@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/login/test/oobe_screen_exit_waiter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "chrome/browser/ui/ash/login/login_display_host.h"
 #include "testing/gtest/include/gtest/gtest.h"

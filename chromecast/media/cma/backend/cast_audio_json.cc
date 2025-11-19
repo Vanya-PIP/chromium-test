@@ -11,7 +11,7 @@
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"
 #include "base/task/thread_pool/thread_pool_instance.h"

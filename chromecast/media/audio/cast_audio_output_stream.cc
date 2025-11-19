@@ -12,7 +12,7 @@
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/synchronization/lock.h"

@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "google_apis/gcm/base/mcs_util.h"
 #include "net/socket/stream_socket.h"
 #include "testing/gtest/include/gtest/gtest.h"

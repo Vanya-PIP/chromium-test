@@ -4,7 +4,7 @@
 
 #include "ui/gl/scoped_egl_image.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gl/egl_util.h"
 #include "ui/gl/gl_bindings.h"
 #include "ui/gl/gl_surface_egl.h"

@@ -14,7 +14,7 @@
 
 #include <utility>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/containers/buffer_iterator.h"
 #include "base/mac/scoped_mach_msg_destroy.h"
 

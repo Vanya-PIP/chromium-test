@@ -10,7 +10,7 @@
 #include <string>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/time/time.h"
 #include "base/values.h"

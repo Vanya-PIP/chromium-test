@@ -10,7 +10,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "chromeos/ash/services/boca/babelorca/mojom/tachyon_parsing_service.mojom.h"
 #include "google_apis/gaia/gaia_auth_util.h"

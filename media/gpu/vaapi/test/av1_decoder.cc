@@ -10,7 +10,7 @@
 #include <bitset>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "media/base/video_decoder.h"

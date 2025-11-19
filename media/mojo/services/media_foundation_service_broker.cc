@@ -5,7 +5,7 @@
 #include "media/mojo/services/media_foundation_service_broker.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "media/cdm/win/media_foundation_cdm_module.h"
 #include "media/mojo/services/media_foundation_gpu_info_monitor.h"

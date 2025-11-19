@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/expected_macros.h"
 #include "chrome/browser/ash/app_mode/isolated_web_app/kiosk_iwa_data.h"
 #include "chrome/browser/ash/app_mode/isolated_web_app/kiosk_iwa_manager.h"

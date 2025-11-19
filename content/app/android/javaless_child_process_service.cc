@@ -20,7 +20,7 @@
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/memory_pressure_listener.h"
 #include "base/no_destructor.h"
 #include "base/process/process_handle.h"

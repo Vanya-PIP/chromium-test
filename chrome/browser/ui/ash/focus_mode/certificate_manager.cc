@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "base/strings/strcat.h"

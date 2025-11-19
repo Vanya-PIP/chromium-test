@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/app_mode/kiosk_app_update_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/app_mode/app_mode_utils.h"
 #include "chrome/browser/ash/app_mode/kiosk_chrome_app_manager.h"

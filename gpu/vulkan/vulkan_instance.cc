@@ -12,7 +12,7 @@
 #include <array>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "build/build_config.h"
 #include "gpu/vulkan/vulkan_crash_keys.h"

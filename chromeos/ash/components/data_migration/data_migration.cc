@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "third_party/nearby/src/internal/platform/byte_array.h"
 #include "third_party/nearby/src/internal/platform/byte_utils.h"

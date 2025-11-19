@@ -11,7 +11,7 @@
 #include <stdint.h>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/parsers/vp8_parser.h"
 #include "media/parsers/webp_parser.h"
 

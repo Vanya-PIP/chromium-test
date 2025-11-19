@@ -15,7 +15,7 @@
 #include "ash/ambient/util/ambient_util.h"
 #include "ash/public/cpp/ambient/ambient_ui_model.h"
 #include "ash/style/ash_color_id.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/compositor/layer.h"
 #include "ui/views/border.h"

@@ -8,7 +8,7 @@
 
 #include <tuple>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/decoder_buffer.h"
 #include "media/base/video_codecs.h"
 #include "media/gpu/av1_decoder.h"

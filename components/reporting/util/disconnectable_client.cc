@@ -12,7 +12,7 @@
 #include "base/containers/fixed_flat_map.h"
 #include "base/feature_list.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/field_trial_params.h"

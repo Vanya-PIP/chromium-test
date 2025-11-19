@@ -9,7 +9,7 @@
 #import <memory>
 #import <utility>
 
-#import "base/debug/crash_logging.h"
+#import "base/debug/crash_test"
 #import "base/debug/dump_without_crashing.h"
 #import "base/memory/raw_ptr.h"
 #import "base/memory/ref_counted_memory.h"

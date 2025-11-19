@@ -8,7 +8,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/crx_file/crx_creator.h"
 #include "crypto/keypair.h"
 

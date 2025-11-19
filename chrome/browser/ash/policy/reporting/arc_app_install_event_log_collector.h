@@ -11,7 +11,7 @@
 #include <set>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chrome/browser/ash/app_list/arc/arc_app_list_prefs.h"
 #include "chrome/browser/ash/arc/policy/arc_policy_bridge.h"

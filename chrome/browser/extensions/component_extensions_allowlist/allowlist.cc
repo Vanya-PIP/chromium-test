@@ -7,7 +7,7 @@
 #include <stddef.h>
 
 #include "base/containers/fixed_flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "build/branding_buildflags.h"
 #include "build/build_config.h"

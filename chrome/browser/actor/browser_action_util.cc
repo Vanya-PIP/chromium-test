@@ -43,7 +43,7 @@
 #include "chrome/browser/ui/browser_finder.h"
 #include "chrome/common/actor/action_result.h"
 #include "chrome/common/actor/actor_constants.h"
-#include "chrome/common/actor/actor_logging.h"
+#include "chrome/common/actor/actor_test"
 #include "chrome/common/actor/journal_details_builder.h"
 #include "components/optimization_guide/content/browser/page_content_proto_provider.h"
 #include "components/optimization_guide/proto/features/actions_data.pb.h"

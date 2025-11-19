@@ -6,7 +6,7 @@
 
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "chrome/browser/downgrade/user_data_downgrade.h"
 

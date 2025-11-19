@@ -24,7 +24,7 @@
 #include "ash/system/mahi/resources/grit/mahi_resources.h"
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "chromeos/components/mahi/public/cpp/mahi_manager.h"

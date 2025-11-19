@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/report/utils/psm_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "crypto/hmac.h"

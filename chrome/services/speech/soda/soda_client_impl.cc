@@ -8,7 +8,7 @@
 
 #include "base/debug/dump_without_crashing.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "build/build_config.h"
 #include "media/base/media_switches.h"

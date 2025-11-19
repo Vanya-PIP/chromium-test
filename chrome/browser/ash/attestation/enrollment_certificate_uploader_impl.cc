@@ -11,7 +11,7 @@
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "chrome/browser/ash/attestation/attestation_ca_client.h"
 #include "chromeos/ash/components/attestation/attestation_features.h"

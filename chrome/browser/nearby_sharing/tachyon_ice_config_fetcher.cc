@@ -20,7 +20,7 @@
 #include "chrome/browser/nearby_sharing/proto/tachyon_enums.pb.h"
 #include "chrome/services/sharing/public/cpp/sharing_webrtc_metrics.h"
 #include "chromeos/ash/components/nearby/common/client/nearby_http_result.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "google_apis/gaia/gaia_constants.h"
 #include "net/base/load_flags.h"
 #include "services/network/public/cpp/resource_request.h"

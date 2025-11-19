@@ -5,7 +5,7 @@
 #include "gpu/command_buffer/service/shared_memory_region_wrapper.h"
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/system/sys_info.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"

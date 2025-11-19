@@ -10,7 +10,7 @@
 #include <string>
 #include <utility>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/task/common/task_annotator.h"

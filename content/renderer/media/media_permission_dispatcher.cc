@@ -5,7 +5,7 @@
 #include "content/renderer/media/media_permission_dispatcher.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/task/bind_post_task.h"
 #include "base/task/single_thread_task_runner.h"

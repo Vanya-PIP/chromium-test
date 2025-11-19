@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/experiences/arc/net/browser_url_opener.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace arc {
 

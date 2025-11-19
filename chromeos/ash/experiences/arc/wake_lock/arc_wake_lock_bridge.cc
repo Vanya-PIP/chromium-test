@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/singleton.h"
 #include "chromeos/ash/experiences/arc/arc_browser_context_keyed_service_factory_base.h"

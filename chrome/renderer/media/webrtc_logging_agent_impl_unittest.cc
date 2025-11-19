@@ -15,7 +15,7 @@
 #include "chrome/renderer/media/webrtc_logging_agent_impl.h"
 #include "mojo/public/cpp/bindings/unique_receiver_set.h"
 #include "testing/gtest/include/gtest/gtest.h"
-#include "third_party/blink/public/platform/modules/webrtc/webrtc_logging.h"
+#include "third_party/blink/public/platform/modules/webrtc/webrtc_test"
 
 namespace chrome {
 namespace {

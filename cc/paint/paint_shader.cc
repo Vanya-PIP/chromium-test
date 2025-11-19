@@ -10,7 +10,7 @@
 #include "base/atomic_sequence_num.h"
 #include "base/compiler_specific.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/checked_math.h"
 #include "base/types/optional_util.h"

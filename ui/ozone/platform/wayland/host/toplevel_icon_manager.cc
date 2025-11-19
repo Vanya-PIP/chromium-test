@@ -7,7 +7,7 @@
 #include <xdg-toplevel-icon-v1-client-protocol.h>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/ozone/platform/wayland/common/wayland_object.h"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"
 

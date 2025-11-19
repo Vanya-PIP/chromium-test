@@ -15,7 +15,7 @@
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/task_traits.h"

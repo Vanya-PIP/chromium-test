@@ -5,7 +5,7 @@
 #include "device/bluetooth/bluez/bluetooth_gatt_connection_bluez.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "device/bluetooth/bluetooth_adapter.h"
 #include "device/bluetooth/bluetooth_device.h"
 #include "device/bluetooth/dbus/bluez_dbus_manager.h"

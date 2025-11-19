@@ -9,7 +9,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/services/tts/constants.h"
 #include "library_loaders/libchrometts.h"
 #include "sandbox/linux/syscall_broker/broker_command.h"

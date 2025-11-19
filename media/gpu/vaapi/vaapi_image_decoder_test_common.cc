@@ -9,7 +9,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/test_data_util.h"
 #include "media/gpu/vaapi/vaapi_image_decoder.h"
 

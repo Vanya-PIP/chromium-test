@@ -8,7 +8,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "components/cast_streaming/browser/common/decoder_buffer_factory.h"

@@ -8,7 +8,7 @@
 #include <optional>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"

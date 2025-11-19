@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/child_accounts/child_status_reporting_service.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "chrome/browser/ash/child_accounts/event_based_status_reporting_service_factory.h"
 #include "chrome/browser/ash/child_accounts/usage_time_limit_processor.h"

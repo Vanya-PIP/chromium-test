@@ -10,7 +10,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "build/build_config.h"
 #include "components/paint_preview/browser/compositor_utils.h"

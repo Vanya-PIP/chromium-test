@@ -13,10 +13,10 @@
 #include <utility>
 #include <vector>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "components/fuchsia_legacymetrics/legacymetrics_histogram_flattener.h"
 

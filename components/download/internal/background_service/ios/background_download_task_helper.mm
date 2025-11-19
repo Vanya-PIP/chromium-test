@@ -13,7 +13,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/weak_ptr.h"
 #include "base/notimplemented.h"

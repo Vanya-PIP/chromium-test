@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <limits>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 namespace chromecast {

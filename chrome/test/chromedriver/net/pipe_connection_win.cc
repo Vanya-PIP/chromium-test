@@ -20,7 +20,7 @@
 
 #include "base/containers/span.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_view_util.h"

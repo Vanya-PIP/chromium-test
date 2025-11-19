@@ -15,7 +15,7 @@
 #include <vector>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"

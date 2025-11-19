@@ -9,7 +9,7 @@
 #import "base/files/file.h"
 #import "base/files/file_util.h"
 #import "base/functional/callback_helpers.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/path_service.h"
 #import "base/strings/sys_string_conversions.h"

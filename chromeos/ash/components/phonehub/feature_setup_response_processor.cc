@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/phonehub/feature_setup_response_processor.h"
 
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/message_receiver.h"
 #include "chromeos/ash/components/phonehub/multidevice_feature_access_manager.h"
 #include "chromeos/ash/components/phonehub/proto/phonehub_api.pb.h"

@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/named_mojo_ipc_server/named_mojo_ipc_server_client_util.h"
 #include "mojo/public/cpp/platform/named_platform_channel.h"
 #include "mojo/public/cpp/system/invitation.h"

@@ -23,7 +23,7 @@
 #include "chrome/test/chromedriver/chrome/stub_chrome.h"
 #include "chrome/test/chromedriver/chrome/stub_web_view.h"
 #include "chrome/test/chromedriver/commands.h"
-#include "chrome/test/chromedriver/logging.h"
+#include "chrome/test/chromedriver/test"
 #include "chrome/test/chromedriver/session.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

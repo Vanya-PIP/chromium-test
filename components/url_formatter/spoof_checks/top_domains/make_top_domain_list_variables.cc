@@ -30,7 +30,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_util.h"
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"

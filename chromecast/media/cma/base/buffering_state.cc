@@ -6,7 +6,7 @@
 
 #include <sstream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "media/base/timestamp_constants.h"
 

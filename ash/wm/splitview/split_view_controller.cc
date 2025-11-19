@@ -59,7 +59,7 @@
 #include "base/check_deref.h"
 #include "base/containers/flat_map.h"
 #include "base/containers/span.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/memory/raw_ref.h"

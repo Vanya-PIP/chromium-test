@@ -12,7 +12,7 @@
 #include <zircon/rights.h>
 #include <algorithm>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/process/process_metrics.h"
 #include "media/base/decoder_buffer.h"
 

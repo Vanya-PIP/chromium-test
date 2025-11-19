@@ -6,7 +6,7 @@
 
 #import <WebKit/WebKit.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/task/cancelable_task_tracker.h"
 #import "base/test/ios/wait_util.h"
 #import "components/browsing_data/core/browsing_data_utils.h"

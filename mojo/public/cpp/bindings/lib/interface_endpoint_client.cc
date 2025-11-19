@@ -16,7 +16,7 @@
 #include "base/debug/alias.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"

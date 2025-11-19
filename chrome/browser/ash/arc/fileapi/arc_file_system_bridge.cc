@@ -13,7 +13,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/escape.h"

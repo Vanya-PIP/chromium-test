@@ -14,7 +14,7 @@
 #include <winioctl.h>
 #include <wlanapi.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/win_util.h"
 #include "services/device/geolocation/wifi_data_provider_common.h"
 #include "services/device/geolocation/wifi_data_provider_common_win.h"

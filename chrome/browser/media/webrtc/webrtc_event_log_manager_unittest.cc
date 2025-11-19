@@ -734,7 +734,7 @@ class WebRtcEventLogManagerTestBase : public ::testing::Test {
     // Set the preference associated with the policy for WebRTC remote-bound
     // event logging.
     RegisterUserProfilePrefs(registry.get());
-    if (policy_allows_remote_logging.has_value()) {
+    if (policy_allows_remote_testas_value()) {
       regular_prefs->SetBoolean(prefs::kWebRtcEventLogCollectionAllowed,
                                 policy_allows_remote_logging.value());
     }

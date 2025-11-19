@@ -9,7 +9,7 @@
 #include <string_view>
 
 #include "base/containers/fixed_flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "chromecast/media/base/media_codec_support.h"
 

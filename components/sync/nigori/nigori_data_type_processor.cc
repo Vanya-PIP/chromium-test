@@ -7,7 +7,7 @@
 #include <optional>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "components/sync/base/client_tag_hash.h"
 #include "components/sync/base/data_type_histogram.h"

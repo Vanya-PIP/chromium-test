@@ -10,7 +10,7 @@
 #include <optional>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/message_loop/message_pump_default.h"
 #include "base/message_loop/message_pump_type.h"

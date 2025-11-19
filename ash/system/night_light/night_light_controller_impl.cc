@@ -25,7 +25,7 @@
 #include "ash/system/night_light/night_light_metrics_recorder.h"
 #include "base/functional/bind.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/time/default_clock.h"
 #include "base/time/time.h"

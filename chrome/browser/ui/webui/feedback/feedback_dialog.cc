@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "chrome/browser/media/webrtc/media_capture_devices_dispatcher.h"
 #include "chrome/browser/profiles/keep_alive/profile_keep_alive_types.h"

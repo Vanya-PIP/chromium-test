@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "crypto/keypair.h"
 #include "crypto/openssl_util.h"
 #include "third_party/boringssl/src/include/openssl/bn.h"

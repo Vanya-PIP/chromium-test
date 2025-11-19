@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/timer/elapsed_timer.h"
 #include "third_party/material_color_utilities/src/cpp/quantize/celebi.h"
 #include "third_party/material_color_utilities/src/cpp/score/score.h"

@@ -4,7 +4,7 @@
 
 #include "remoting/host/remote_open_url/remote_open_url_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_WIN)

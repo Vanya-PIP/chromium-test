@@ -13,7 +13,7 @@
 
 #include "base/barrier_closure.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/clamped_math.h"
 #include "base/rand_util.h"
 #include "base/strings/stringprintf.h"

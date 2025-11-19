@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/tick_clock.h"
 
 namespace media {

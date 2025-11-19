@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/values.h"
 #include "chromeos/ash/components/login/login_state/scoped_test_public_session_login_state.h"

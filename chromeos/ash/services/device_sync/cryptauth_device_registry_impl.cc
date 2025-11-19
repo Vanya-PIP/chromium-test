@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/device_sync/cryptauth_device.h"
 #include "chromeos/ash/services/device_sync/pref_names.h"
 #include "chromeos/ash/services/device_sync/value_string_encoding.h"

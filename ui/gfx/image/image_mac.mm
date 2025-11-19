@@ -13,7 +13,7 @@
 #include <stddef.h>
 
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gfx/geometry/size.h"
 #include "ui/gfx/image/image_internal.h"
 #include "ui/gfx/image/image_png_rep.h"

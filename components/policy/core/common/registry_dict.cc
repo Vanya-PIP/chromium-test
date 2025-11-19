@@ -14,7 +14,7 @@
 #include <utility>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "base/strings/cstring_view.h"
 #include "base/strings/string_number_conversions.h"

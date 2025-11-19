@@ -7,7 +7,7 @@
 #include <array>
 #include <variant>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "media/base/limits.h"
 #include "media/base/media_switches.h"

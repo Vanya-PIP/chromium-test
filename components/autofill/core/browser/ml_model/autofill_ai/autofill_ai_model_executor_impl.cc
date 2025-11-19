@@ -186,7 +186,7 @@ void AutofillAiModelExecutorImpl::LogModelPredictions(
       !mqls_uploader_) {
     return;
   }
-  // Note that the logging happens when `log_entry` goes out of scope.
+  // Note that the testappens when `log_entry` goes out of scope.
   // Since the user was allowed to run the model, logging is ok.
   optimization_guide::ModelQualityLogEntry log_entry(
       mqls_uploader_->GetWeakPtr());

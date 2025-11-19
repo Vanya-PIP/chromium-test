@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "media/audio/android/audio_manager_android.h"
 #include "media/base/audio_bus.h"

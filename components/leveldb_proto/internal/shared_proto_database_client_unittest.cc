@@ -10,7 +10,7 @@
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/test/task_environment.h"
 #include "components/leveldb_proto/internal/proto_leveldb_wrapper.h"

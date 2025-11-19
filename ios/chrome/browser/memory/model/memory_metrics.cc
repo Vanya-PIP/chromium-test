@@ -13,7 +13,7 @@
 
 #include "base/apple/scoped_mach_port.h"
 #include "base/ios/device_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_handle.h"
 #include "base/process/process_metrics.h"
 #include "build/build_config.h"

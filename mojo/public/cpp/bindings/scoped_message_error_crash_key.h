@@ -8,7 +8,7 @@
 #include <string>
 
 #include "base/component_export.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 
 namespace mojo {
 namespace debug {

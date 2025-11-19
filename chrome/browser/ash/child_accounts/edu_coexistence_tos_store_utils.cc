@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/child_accounts/edu_coexistence_tos_store_utils.h"
 
 #include "ash/constants/ash_pref_names.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/values.h"
 #include "chrome/browser/profiles/profile.h"

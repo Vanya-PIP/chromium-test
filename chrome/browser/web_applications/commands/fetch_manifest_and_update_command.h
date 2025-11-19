@@ -13,7 +13,7 @@
 #include "chrome/browser/web_applications/locks/shared_web_contents_with_app_lock.h"
 #include "chrome/browser/web_applications/web_app_install_utils.h"
 #include "components/webapps/browser/install_result_code.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/web_contents/web_app_url_loader.h"
 #include "components/webapps/common/web_app_id.h"
 #include "content/public/browser/web_contents_observer.h"

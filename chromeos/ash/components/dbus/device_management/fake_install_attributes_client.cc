@@ -8,7 +8,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/path_service.h"
 #include "base/task/single_thread_task_runner.h"

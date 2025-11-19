@@ -11,7 +11,7 @@
 
 #include "base/containers/contains.h"
 #include "base/containers/queue.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "base/task/sequenced_task_runner.h"
 #include "chrome/browser/ash/policy/reporting/metrics_reporting/network/wifi_signal_strength_rssi_fetcher.h"

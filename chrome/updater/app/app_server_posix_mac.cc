@@ -6,7 +6,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "chrome/updater/mac/setup/keystone.h"
 #include "chrome/updater/registration_data.h"

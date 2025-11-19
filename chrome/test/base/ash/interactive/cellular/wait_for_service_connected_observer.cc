@@ -5,7 +5,7 @@
 #include "chrome/test/base/ash/interactive/cellular/wait_for_service_connected_observer.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/dbus/shill/shill_service_client.h"
 #include "dbus/object_path.h"
 

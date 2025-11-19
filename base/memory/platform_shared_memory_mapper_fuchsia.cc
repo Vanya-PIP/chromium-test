@@ -11,8 +11,8 @@
 
 #include <lib/zx/vmar.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 
 namespace base {
 

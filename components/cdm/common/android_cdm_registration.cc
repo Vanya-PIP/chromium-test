@@ -4,7 +4,7 @@
 
 #include "components/cdm/common/android_cdm_registration.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/android/media_drm_bridge.h"
 #include "media/cdm/cdm_type.h"
 

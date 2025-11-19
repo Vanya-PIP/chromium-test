@@ -16,7 +16,7 @@
 #include "base/check_op.h"
 #include "base/clang_profiling_buildflags.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/process/kill.h"

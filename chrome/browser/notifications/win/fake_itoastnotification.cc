@@ -6,7 +6,7 @@
 
 #include <wrl/client.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/scoped_hstring.h"
 
 namespace mswr = Microsoft::WRL;

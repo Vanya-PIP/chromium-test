@@ -13,7 +13,7 @@
 #include "base/containers/to_vector.h"
 #include "base/debug/stack_trace.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "base/sampling_heap_profiler/lock_free_address_hash_set.h"

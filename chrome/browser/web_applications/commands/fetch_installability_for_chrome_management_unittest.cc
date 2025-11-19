@@ -20,7 +20,7 @@
 #include "chrome/browser/web_applications/web_app_install_info.h"
 #include "chrome/browser/web_applications/web_app_provider.h"
 #include "chrome/browser/web_applications/web_contents/web_app_data_retriever.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/web_contents/web_app_url_loader.h"
 #include "components/webapps/common/web_app_id.h"
 #include "content/public/browser/web_contents.h"

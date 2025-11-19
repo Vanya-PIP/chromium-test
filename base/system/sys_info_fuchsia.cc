@@ -13,9 +13,9 @@
 
 #include "base/containers/flat_map.h"
 #include "base/files/file_util.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/system_info.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notimplemented.h"
 #include "base/numerics/clamped_math.h"

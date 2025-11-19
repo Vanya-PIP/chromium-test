@@ -4,7 +4,7 @@
 
 #include "chrome/browser/contextual_tasks/contextual_tasks_ui_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"
 #include "base/task/sequenced_task_runner.h"

@@ -5,7 +5,7 @@
 #include <stddef.h>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/registry.h"
 #include "base/win/shlwapi.h"
 #include "chrome/installer/util/create_reg_key_work_item.h"

@@ -13,7 +13,7 @@
 #include "base/functional/bind.h"
 #include "base/location.h"
 #include "base/strings/stringprintf.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/sequenced_task_runner.h"
 #include "google_apis/gaia/gaia_constants.h"
 #include "google_apis/gaia/google_service_auth_error.h"

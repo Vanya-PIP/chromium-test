@@ -9,7 +9,7 @@
 
 #include "base/check_op.h"
 #include "base/containers/fixed_flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/skia/include/core/SkPathBuilder.h"
 #include "third_party/skia/include/core/SkRect.h"
 #include "third_party/skia/include/core/SkSize.h"

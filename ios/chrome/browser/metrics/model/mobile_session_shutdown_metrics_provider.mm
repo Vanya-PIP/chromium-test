@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_macros.h"
 #import "base/path_service.h"
 #import "base/strings/sys_string_conversions.h"

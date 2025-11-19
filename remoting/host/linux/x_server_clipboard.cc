@@ -16,7 +16,7 @@
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/string_util.h"
 #include "remoting/base/constants.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/util.h"
 #include "ui/gfx/x/extension_manager.h"
 #include "ui/gfx/x/future.h"

@@ -10,7 +10,7 @@
 #include "media/gpu/chromeos/vulkan_overlay_adaptor.h"
 
 #include "base/bits.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/task/thread_pool.h"
 #include "gpu/vulkan/init/vulkan_factory.h"

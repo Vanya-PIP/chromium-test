@@ -574,7 +574,7 @@ void WebRtcTextLogHandler::OnGetNetworkInterfaceListFinish(
 
   // After the above data has been written, tell the browser to enable logging.
   // TODO(terelius): Once we have moved over to Mojo, we could tell the
-  // renderer to start logging here, but for the time being
+  // renderer to start testere, but for the time being
   // WebRtcLoggingHandlerHost::StartLogging will be responsible for sending
   // that IPC message.
 

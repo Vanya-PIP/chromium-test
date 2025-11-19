@@ -19,7 +19,7 @@
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"

@@ -4,7 +4,7 @@
 
 #include "chromecast/media/cma/backend/android/audio_sink_android.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/cma/backend/android/audio_sink_android_audiotrack_impl.h"
 #include "chromecast/media/cma/backend/android/audio_sink_manager.h"
 

@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/client_connection_parameters.h"
 #include "chromeos/ash/services/secure_channel/public/cpp/shared/connection_priority.h"
 #include "chromeos/ash/services/secure_channel/public/mojom/secure_channel.mojom.h"

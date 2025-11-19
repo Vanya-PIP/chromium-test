@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/arc/instance_throttle/arc_instance_throttle.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/no_destructor.h"
 #include "base/time/time.h"

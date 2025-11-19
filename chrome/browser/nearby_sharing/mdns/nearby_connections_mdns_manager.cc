@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
 
 namespace {

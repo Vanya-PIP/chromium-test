@@ -6,7 +6,7 @@
 
 #import "base/apple/foundation_util.h"
 #import "base/format_macros.h"
-#import "base/logging.h"
+#import "base/test"
 #import "components/favicon/core/large_icon_service.h"
 #import "components/omnibox/common/omnibox_features.h"
 #import "ios/chrome/browser/content_suggestions/ui_bundled/cells/content_suggestions_tile_layout_util.h"

@@ -13,7 +13,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/time/time.h"
 #include "ui/base/dragdrop/mojom/drag_drop_types.mojom.h"

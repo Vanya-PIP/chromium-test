@@ -19,7 +19,7 @@
 #include <utility>
 
 #include "base/base_export.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/memory/raw_ptr.h"
 
 namespace base {

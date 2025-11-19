@@ -11,7 +11,7 @@
 #include <string>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/test/ui_controls.h"
 #include "ui/display/display.h"
 #include "ui/display/screen.h"

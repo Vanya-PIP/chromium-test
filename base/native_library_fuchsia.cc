@@ -19,7 +19,7 @@
 #include "base/base_paths.h"
 #include "base/files/file.h"
 #include "base/files/file_path.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/notreached.h"
 #include "base/path_service.h"
 #include "base/posix/safe_strerror.h"

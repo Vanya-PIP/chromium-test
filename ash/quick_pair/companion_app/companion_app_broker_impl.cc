@@ -14,7 +14,7 @@
 #include "ash/quick_pair/common/quick_pair_browser_delegate.h"
 #include "ash/session/session_controller_impl.h"
 #include "ash/shell.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace {
 

@@ -9,7 +9,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/sequence_checker.h"
 #include "chrome/browser/android/webapk/proto/webapk_database.pb.h"

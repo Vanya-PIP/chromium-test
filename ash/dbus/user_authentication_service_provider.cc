@@ -10,7 +10,7 @@
 #include "ash/public/cpp/auth/active_session_auth_controller.h"
 #include "ash/public/cpp/webauthn_dialog_controller.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "chromeos/ash/components/osauth/impl/request/webauthn_auth_request.h"
 #include "chromeos/components/webauthn/webauthn_request_registrar.h"

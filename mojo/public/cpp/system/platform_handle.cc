@@ -5,7 +5,7 @@
 #include "mojo/public/cpp/system/platform_handle.h"
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/platform_shared_memory_region.h"
 #include "base/memory/read_only_shared_memory_region.h"
 #include "base/memory/unsafe_shared_memory_region.h"

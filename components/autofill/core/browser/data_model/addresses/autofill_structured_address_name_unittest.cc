@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/test/scoped_feature_list.h"

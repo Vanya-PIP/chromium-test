@@ -4,7 +4,7 @@
 
 #include "chrome/browser/on_device_translation/translation_metrics.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/gtest_util.h"
 #include "base/test/metrics/histogram_tester.h"
 #include "chrome/browser/on_device_translation/language_pack_util.h"

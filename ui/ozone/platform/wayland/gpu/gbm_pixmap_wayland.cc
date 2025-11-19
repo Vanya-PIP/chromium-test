@@ -11,7 +11,7 @@
 #include <memory>
 
 #include "base/files/platform_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/trace_event/trace_event.h"
 #include "ui/gfx/buffer_format_util.h"

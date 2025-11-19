@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/openscreen/src/platform/api/logging.h"
+#include "third_party/openscreen/src/platform/api/test"
 
 #include <cstring>
 #include <sstream>
@@ -10,7 +10,7 @@
 
 #include "base/debug/debugger.h"
 #include "base/immediate_crash.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace openscreen {
 

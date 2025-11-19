@@ -6,7 +6,7 @@
 
 #include "base/command_line.h"
 #include "chrome/credential_provider/extension/extension_strings.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 
 namespace credential_provider {
 namespace extension {

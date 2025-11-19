@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "chrome/browser/favicon/chrome_favicon_client.h"
 #include "chrome/browser/history/history_service_factory.h"

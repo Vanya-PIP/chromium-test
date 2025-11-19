@@ -29,7 +29,7 @@
 #include "base/containers/heap_array.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/path_service.h"
 #include "base/strings/string_util.h"

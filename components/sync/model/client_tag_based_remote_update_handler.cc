@@ -10,7 +10,7 @@
 
 #include "base/check.h"
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/sync/base/data_type.h"
 #include "components/sync/base/data_type_histogram.h"
 #include "components/sync/base/time.h"

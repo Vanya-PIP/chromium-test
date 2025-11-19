@@ -7,7 +7,7 @@
 #include <tuple>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_tokenizer.h"
 #include "base/strings/stringprintf.h"
 #include "base/test/trace_event_analyzer.h"

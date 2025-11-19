@@ -15,7 +15,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/i18n/file_util_icu.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/rand_util.h"
 #include "base/strings/strcat.h"

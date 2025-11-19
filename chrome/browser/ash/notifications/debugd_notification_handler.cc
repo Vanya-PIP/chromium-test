@@ -13,7 +13,7 @@
 #include "ash/strings/grit/ash_strings.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "chromeos/ash/components/dbus/debug_daemon/debug_daemon_client.h"
 #include "ui/base/l10n/l10n_util.h"

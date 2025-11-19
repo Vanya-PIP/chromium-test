@@ -89,7 +89,7 @@ public class WebViewLayoutTest {
     @MediumTest
     public void testSimple() throws Exception {
         runWebViewLayoutTest(
-                "experimental/basic-logging.html", "experimental/basic-logging-expected.txt");
+                "experimental/basic-testtml", "experimental/basic-logging-expected.txt");
     }
 
     @Test

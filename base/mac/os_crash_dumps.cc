@@ -13,7 +13,7 @@
 #include <stddef.h>
 #include <unistd.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace base::mac {
 

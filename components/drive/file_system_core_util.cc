@@ -13,7 +13,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/json/json_file_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/values.h"

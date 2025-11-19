@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/commerce/core/subscriptions/commerce_subscription.h"
 #include "components/commerce/core/subscriptions/subscriptions_storage.h"
 #include "components/session_proto_db/session_proto_storage.h"

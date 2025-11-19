@@ -31,7 +31,7 @@
 #include "content/public/browser/network_service_instance.h"
 #include "content/public/common/content_switches.h"
 #include "fuchsia_web/common/fuchsia_dir_scheme.h"
-#include "fuchsia_web/common/init_logging.h"
+#include "fuchsia_web/common/init_test"
 #include "fuchsia_web/webengine/browser/frame_impl.h"
 #include "fuchsia_web/webengine/browser/navigation_policy_throttle.h"
 #include "fuchsia_web/webengine/browser/web_engine_browser_context.h"

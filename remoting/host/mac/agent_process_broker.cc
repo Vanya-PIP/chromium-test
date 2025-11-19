@@ -17,14 +17,14 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_handle.h"
 #include "base/sequence_checker.h"
 #include "base/strings/stringprintf.h"
 #include "components/named_mojo_ipc_server/connection_info.h"
 #include "components/named_mojo_ipc_server/endpoint_options.h"
 #include "mojo/public/cpp/bindings/remote.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/ipc_constants.h"
 #include "remoting/host/mac/agent_process_broker_constants.h"
 #include "remoting/host/mojo_caller_security_checker.h"

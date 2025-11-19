@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notimplemented.h"
 #include "base/strings/sys_string_conversions.h"

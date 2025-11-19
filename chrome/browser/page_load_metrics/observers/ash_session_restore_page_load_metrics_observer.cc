@@ -6,7 +6,7 @@
 
 #include "ash/wm/window_restore/window_restore_util.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/no_destructor.h"
 #include "chrome/browser/profiles/profile.h"

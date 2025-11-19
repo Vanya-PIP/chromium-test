@@ -27,7 +27,7 @@
 
 #include "base/check.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_split.h"

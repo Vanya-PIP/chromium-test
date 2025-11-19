@@ -5,7 +5,7 @@
 #include "ash/api/tasks/test_tasks_delegate.h"
 
 #include "ash/api/tasks/tasks_client.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/account_id/account_id.h"
 

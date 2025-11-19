@@ -13,7 +13,7 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ref.h"
 #include "base/no_destructor.h"

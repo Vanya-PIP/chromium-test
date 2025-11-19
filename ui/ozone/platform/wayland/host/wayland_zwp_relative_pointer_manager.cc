@@ -6,7 +6,7 @@
 
 #include <relative-pointer-unstable-v1-client-protocol.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/buildflag.h"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"
 #include "ui/ozone/platform/wayland/host/wayland_event_source.h"

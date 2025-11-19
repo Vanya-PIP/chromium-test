@@ -9,7 +9,7 @@
 #import "base/functional/callback_helpers.h"
 #import "base/i18n/message_formatter.h"
 #import "base/ios/ios_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/metrics/histogram_macros.h"
 #import "base/metrics/user_metrics.h"

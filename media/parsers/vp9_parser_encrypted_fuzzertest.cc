@@ -6,7 +6,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "media/base/decrypt_config.h"
 #include "media/base/subsample_entry.h"

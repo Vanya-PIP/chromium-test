@@ -8,7 +8,7 @@
 
 #include "base/files/file.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/strcat.h"
 #include "components/services/filesystem/public/mojom/types.mojom.h"

@@ -4,7 +4,7 @@
 
 #include "ui/events/event_source.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "ui/events/event_rewriter.h"
 #include "ui/events/event_rewriter_continuation.h"

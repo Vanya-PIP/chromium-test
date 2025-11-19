@@ -4,7 +4,7 @@
 
 #import "ios/chrome/test/fakes/fake_language_detection_tab_helper_observer.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "components/translate/core/common/language_detection_details.h"
 
 FakeLanguageDetectionTabHelperObserver::FakeLanguageDetectionTabHelperObserver(

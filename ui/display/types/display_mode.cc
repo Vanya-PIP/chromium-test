@@ -6,7 +6,7 @@
 
 #include <ostream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/stringprintf.h"
 

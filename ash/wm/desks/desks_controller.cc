@@ -52,7 +52,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/i18n/number_formatting.h"

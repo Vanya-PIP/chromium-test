@@ -10,7 +10,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/current_thread.h"
 #include "base/trace_event/trace_event.h"
 #include "ui/events/base_event_utils.h"

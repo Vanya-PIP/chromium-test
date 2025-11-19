@@ -5,7 +5,7 @@
 #import "ios/web/webui/url_fetcher_block_adapter.h"
 
 #import "base/functional/bind.h"
-#import "base/logging.h"
+#import "base/test"
 #import "services/network/public/cpp/resource_request.h"
 #import "services/network/public/cpp/shared_url_loader_factory.h"
 #import "services/network/public/cpp/simple_url_loader.h"

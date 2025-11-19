@@ -10,7 +10,7 @@
 #include "base/base64.h"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"
 #include "base/task/single_thread_task_runner.h"

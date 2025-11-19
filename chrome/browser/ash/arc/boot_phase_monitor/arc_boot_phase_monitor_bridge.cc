@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/one_shot_event.h"

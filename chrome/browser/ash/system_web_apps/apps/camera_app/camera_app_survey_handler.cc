@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/system_web_apps/apps/camera_app/camera_app_survey_handler.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/hats/hats_config.h"
 #include "chrome/browser/profiles/profile_manager.h"
 

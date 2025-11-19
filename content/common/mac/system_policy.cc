@@ -4,7 +4,7 @@
 
 #include "content/common/mac/system_policy.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/strings/stringprintf.h"
 
 extern "C" {

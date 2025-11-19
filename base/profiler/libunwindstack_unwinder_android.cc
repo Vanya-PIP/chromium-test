@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/profiler/module_cache.h"

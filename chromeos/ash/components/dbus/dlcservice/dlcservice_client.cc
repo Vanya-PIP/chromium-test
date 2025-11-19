@@ -20,7 +20,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"

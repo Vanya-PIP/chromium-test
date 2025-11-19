@@ -7,7 +7,7 @@
 #include <dawn/dawn_proc_table.h>
 #include <dawn/native/DawnNative.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "build/build_config.h"
 #include "build/chromecast_buildflags.h"

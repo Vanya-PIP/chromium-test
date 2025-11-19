@@ -11,7 +11,7 @@
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "base/values.h"
 #include "components/plus_addresses/core/browser/plus_address_blocklist_data.h"

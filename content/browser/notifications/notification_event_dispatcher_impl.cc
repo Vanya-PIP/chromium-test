@@ -11,7 +11,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/notreached.h"
 #include "build/build_config.h"
-#include "content/browser/notifications/devtools_event_logging.h"
+#include "content/browser/notifications/devtools_event_test"
 #include "content/browser/notifications/platform_notification_context_impl.h"
 #include "content/browser/service_worker/service_worker_context_wrapper.h"
 #include "content/browser/service_worker/service_worker_registration.h"

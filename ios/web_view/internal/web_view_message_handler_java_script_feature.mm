@@ -4,7 +4,7 @@
 
 #import "ios/web_view/internal/web_view_message_handler_java_script_feature.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "ios/web/public/browser_state.h"
 #import "ios/web/public/js_messaging/script_message.h"
 

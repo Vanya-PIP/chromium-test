@@ -17,7 +17,7 @@
 
 #include "base/check.h"
 #include "base/containers/circular_deque.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/mem_buffer_util.h"
 #include "base/functional/bind.h"
 #include "base/stl_util.h"

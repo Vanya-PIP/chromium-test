@@ -29,7 +29,7 @@
 #include "chrome/common/chrome_features.h"
 #include "components/services/app_service/public/cpp/icon_info.h"
 #include "components/services/app_service/public/cpp/share_target.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "content/public/browser/web_contents.h"
 #include "services/network/public/cpp/permissions_policy/origin_with_possible_wildcards.h"

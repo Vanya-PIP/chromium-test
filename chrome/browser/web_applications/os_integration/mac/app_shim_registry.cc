@@ -10,7 +10,7 @@
 
 #include "base/base64.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/no_destructor.h"
 #include "chrome/browser/browser_process.h"

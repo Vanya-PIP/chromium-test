@@ -4,7 +4,7 @@
 
 #include "components/push_notification/push_notification_client_manager.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace {
 

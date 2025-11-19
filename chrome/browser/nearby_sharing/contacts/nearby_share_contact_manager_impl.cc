@@ -20,7 +20,7 @@
 #include "chromeos/ash/components/nearby/common/scheduling/nearby_scheduler_factory.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_share_settings.mojom-shared.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_share_settings.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_service.h"
 #include "crypto/secure_hash.h"
 #include "third_party/nearby/sharing/proto/device_rpc.pb.h"

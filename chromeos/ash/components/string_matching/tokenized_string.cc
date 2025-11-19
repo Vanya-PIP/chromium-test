@@ -10,7 +10,7 @@
 
 #include "base/i18n/break_iterator.h"
 #include "base/i18n/case_conversion.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"

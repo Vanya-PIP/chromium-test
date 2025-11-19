@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "base/android/jni_string.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/grit/test_dummy_resources.h"
 #include "ui/base/resource/resource_bundle.h"
 

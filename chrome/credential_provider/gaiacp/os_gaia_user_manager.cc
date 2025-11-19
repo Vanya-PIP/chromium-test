@@ -16,7 +16,7 @@
 #include "chrome/credential_provider/common/gcp_strings.h"
 #include "chrome/credential_provider/gaiacp/gaia_resources.h"
 #include "chrome/credential_provider/gaiacp/gcp_utils.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/os_user_manager.h"
 #include "chrome/credential_provider/gaiacp/scoped_lsa_policy.h"
 

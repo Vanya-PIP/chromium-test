@@ -10,7 +10,7 @@
 #include "base/compiler_specific.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/strings/string_number_conversions.h"
 #include "media/base/byte_queue.h"

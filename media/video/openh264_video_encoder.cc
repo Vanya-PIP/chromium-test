@@ -8,7 +8,7 @@
 #include <limits>
 #include <numeric>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/system/sys_info.h"
 #include "base/time/time.h"

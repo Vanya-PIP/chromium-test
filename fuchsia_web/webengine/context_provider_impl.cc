@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 
 ContextProviderImpl::ContextProviderImpl(
     sys::OutgoingDirectory& outgoing_directory)

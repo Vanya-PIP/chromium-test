@@ -14,7 +14,7 @@
 #include "ash/shell.h"
 #include "ash/wallpaper/wallpaper_controller_impl.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/task/single_thread_task_runner.h"
 #include "components/account_id/account_id.h"

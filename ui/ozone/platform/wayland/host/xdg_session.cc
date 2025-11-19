@@ -11,7 +11,7 @@
 
 #include "base/check_deref.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_number_conversions.h"
 #include "ui/gfx/native_ui_types.h"

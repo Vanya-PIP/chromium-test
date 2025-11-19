@@ -4,7 +4,7 @@
 
 #include "media/ffmpeg/ffmpeg_decoding_loop.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/ffmpeg/ffmpeg_common.h"
 
 namespace media {

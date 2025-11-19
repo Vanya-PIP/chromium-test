@@ -13,7 +13,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/run_loop.h"
 #include "base/task/thread_pool.h"

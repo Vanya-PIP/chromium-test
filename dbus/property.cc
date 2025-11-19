@@ -10,7 +10,7 @@
 
 #include "base/containers/to_vector.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "dbus/message.h"
 #include "dbus/object_path.h"
 #include "dbus/object_proxy.h"

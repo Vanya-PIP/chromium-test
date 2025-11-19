@@ -10,7 +10,7 @@
 #include <ostream>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 
 namespace base {

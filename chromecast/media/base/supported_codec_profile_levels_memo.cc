@@ -4,7 +4,7 @@
 
 #include "chromecast/media/base/supported_codec_profile_levels_memo.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/public/media/decoder_config.h"
 
 namespace chromecast {

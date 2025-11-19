@@ -6,7 +6,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/system/sys_info.h"
 #include "chromeos/ash/services/ime/constants.h"

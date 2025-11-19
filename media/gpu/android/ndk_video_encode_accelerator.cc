@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "base/bits.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/shared_memory_mapping.h"
 #include "base/memory/unsafe_shared_memory_region.h"
 #include "base/notimplemented.h"

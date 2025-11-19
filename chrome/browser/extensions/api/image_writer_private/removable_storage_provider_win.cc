@@ -9,7 +9,7 @@
 
 #include <setupapi.h>
 
-// LogSeverity is both a macro in setupapi.h and a typedef in base/logging.h
+// LogSeverity is both a macro in setupapi.h and a typedef in base/test
 #undef LogSeverity
 
 #include <winioctl.h>
@@ -17,7 +17,7 @@
 #include <memory>
 
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"

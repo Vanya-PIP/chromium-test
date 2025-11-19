@@ -16,7 +16,7 @@
 #include "base/test/simple_test_tick_clock.h"
 #include "base/test/test_simple_task_runner.h"
 #include "base/time/time.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/components/multidevice/remote_device_test_util.h"
 #include "chromeos/ash/components/multidevice/software_feature_state.h"

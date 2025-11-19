@@ -5,7 +5,7 @@
 #include "chrome/renderer/supervised_user/supervised_user_error_page_controller.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/strings/to_string.h"
 #include "base/strings/utf_string_conversions.h"

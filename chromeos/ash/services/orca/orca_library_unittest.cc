@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/services/orca/orca_library.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 #include "base/path_service.h"
 #include "base/test/gmock_expected_support.h"

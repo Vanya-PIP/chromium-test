@@ -8,7 +8,7 @@
 #include <optional>
 
 #include "ash/birch/birch_data_provider.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "chrome/browser/ash/release_notes/release_notes_storage.h"

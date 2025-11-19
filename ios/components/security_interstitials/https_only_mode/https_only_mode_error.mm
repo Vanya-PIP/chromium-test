@@ -4,7 +4,7 @@
 
 #import "ios/components/security_interstitials/https_only_mode/https_only_mode_error.h"
 
-#import "base/logging.h"
+#import "base/test"
 
 const NSErrorDomain kHttpsOnlyModeErrorDomain =
     @"com.google.chrome.https_only_mode";

@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "ui/events/event.h"
 #include "ui/events/keycodes/dom/dom_code.h"

@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/safe_strerror.h"
 #include "base/strings/string_util.h"
 

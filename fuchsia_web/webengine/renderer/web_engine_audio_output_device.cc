@@ -4,8 +4,8 @@
 
 #include "fuchsia_web/webengine/renderer/web_engine_audio_output_device.h"
 
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/shared_memory_mapping.h"
 #include "base/memory/writable_shared_memory_region.h"

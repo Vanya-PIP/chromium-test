@@ -11,7 +11,7 @@
 #include "base/check_deref.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/browser/ash/auth/cryptohome_pin_engine.h"

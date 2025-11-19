@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/dbus/bluetooth_advertisement_monitor_service_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "device/bluetooth/dbus/bluetooth_advertisement_monitor_service_provider_impl.h"
 #include "device/bluetooth/dbus/bluez_dbus_manager.h"

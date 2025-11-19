@@ -9,11 +9,11 @@
 #import <optional>
 #import <variant>
 
-#import "base/debug/crash_logging.h"
+#import "base/debug/crash_test"
 #import "base/debug/dump_without_crashing.h"
 #import "base/feature_list.h"
 #import "base/functional/bind.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/metrics/histogram_macros.h"
 #import "base/not_fatal_until.h"

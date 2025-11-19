@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/services/orca/orca_library.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/scoped_native_library.h"
 #include "base/types/expected.h"
 #include "chromeos/ash/services/orca/public/cpp/orca_entry.h"

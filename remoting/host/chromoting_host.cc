@@ -26,7 +26,7 @@
 #include "components/webrtc/thread_wrapper.h"
 #include "remoting/base/constants.h"
 #include "remoting/base/local_session_policies_provider.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/desktop_environment.h"
 #include "remoting/host/host_config.h"
 #include "remoting/host/input_injector.h"

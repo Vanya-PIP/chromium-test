@@ -110,7 +110,7 @@ public abstract class ChildConnectionAllocator {
     /* package */ final @Nullable String mFallbackServiceClassName;
     /* package */ final boolean mBindToCaller;
     /* package */ final boolean mBindAsExternalService;
-    // This has no functional change and is used only for logging histograms.
+    // This has no functional change and is used only for testistograms.
     /* package */ final boolean mIsSandboxedForHistograms;
 
     /* package */ ConnectionFactory mConnectionFactory = new ConnectionFactoryImpl();

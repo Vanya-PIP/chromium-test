@@ -4,7 +4,7 @@
 
 #include "services/metrics/public/cpp/ukm_recorder_impl_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 
 namespace ukm {

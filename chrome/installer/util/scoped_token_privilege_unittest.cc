@@ -14,7 +14,7 @@
 #include <memory>
 
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 
 namespace installer {

@@ -7,7 +7,7 @@
 #import "base/apple/foundation_util.h"
 #import "base/ios/crb_protocol_observers.h"
 #import "base/ios/ios_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/notreached.h"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/chrome/app/application_delegate/app_state.h"

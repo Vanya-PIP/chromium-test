@@ -11,7 +11,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_for_io.h"
 #include "base/task/current_thread.h"
 #include "base/task/single_thread_task_runner.h"

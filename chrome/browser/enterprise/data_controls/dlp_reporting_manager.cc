@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "build/build_config.h"
 #include "components/enterprise/common/proto/synced/dlp_policy_event.pb.h"

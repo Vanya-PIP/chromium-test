@@ -11,7 +11,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/functional/callback.h"
 #include "base/memory/ref_counted.h"

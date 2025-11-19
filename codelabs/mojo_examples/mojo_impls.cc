@@ -4,7 +4,7 @@
 
 #include "codelabs/mojo_examples/mojo_impls.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 ObjectAImpl::ObjectAImpl() = default;
 ObjectAImpl::~ObjectAImpl() = default;

@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/parsers/h265_parser.h"
 #include "media/parsers/h265_poc.h"
 

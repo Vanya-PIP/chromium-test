@@ -12,7 +12,7 @@
 #include "base/containers/contains.h"
 #include "base/files/file_util.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "ui/display/manager/managed_display_info.h"

@@ -16,7 +16,7 @@
 #include "base/task/single_thread_task_runner.h"
 #include "base/task/task_runner.h"
 #include "base/timer/timer.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/background_eid_generator.h"
 #include "chromeos/ash/services/secure_channel/ble_weave_packet_generator.h"
 #include "chromeos/ash/services/secure_channel/ble_weave_packet_receiver.h"

@@ -6,7 +6,7 @@
 
 #include "apps/launcher.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/preloading/prefetch/no_state_prefetch/chrome_no_state_prefetch_contents_delegate.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_finder.h"

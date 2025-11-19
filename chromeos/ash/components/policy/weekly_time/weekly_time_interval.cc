@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/policy/weekly_time/weekly_time_interval.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 namespace em = enterprise_management;

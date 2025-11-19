@@ -8,7 +8,7 @@
 #import <objc/runtime.h>
 
 #import "base/apple/foundation_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 
 @interface UIApplication (Testing)

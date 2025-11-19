@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/time/time.h"
@@ -16,7 +16,7 @@
 #include "base/win/sid.h"
 #include "remoting/base/crash/breakpad_utils.h"
 #include "remoting/base/crash/crash_reporting_breakpad.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/version.h"
 #include "third_party/breakpad/breakpad/src/client/windows/crash_generation/crash_generation_server.h"
 

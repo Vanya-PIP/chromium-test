@@ -14,7 +14,7 @@
 #include <va/va_drmcommon.h>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notimplemented.h"
 #include "base/numerics/safe_conversions.h"

@@ -6,7 +6,7 @@
 
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/profiles/profile_manager.h"

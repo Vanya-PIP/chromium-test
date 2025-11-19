@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "media/base/audio_parameters.h"
 #include "media/base/bit_reader.h"

@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/i18n/unicodestring.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/time/time.h"
 #include "third_party/icu/source/common/unicode/unistr.h"

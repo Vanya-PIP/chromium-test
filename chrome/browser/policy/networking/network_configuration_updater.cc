@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromeos/components/onc/onc_utils.h"
 #include "components/policy/core/common/policy_map.h"

@@ -4,7 +4,7 @@
 
 #include "ui/gl/vsync_thread_win_dcomp.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/typed_macros.h"
 #include "ui/gl/direct_composition_support.h"
 #include "ui/gl/gl_features.h"

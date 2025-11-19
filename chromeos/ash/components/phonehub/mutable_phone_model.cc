@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "chromeos/ash/components/phonehub/mutable_phone_model.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash::phonehub {
 

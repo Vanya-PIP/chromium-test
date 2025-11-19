@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notimplemented.h"
 #include "ui/ozone/platform/wayland/test/test_selection_device_manager.h"

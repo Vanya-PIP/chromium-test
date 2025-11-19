@@ -31,7 +31,7 @@
 #include "components/webapps/browser/installable/installable_data.h"
 #include "components/webapps/browser/installable/installable_evaluator.h"
 #include "components/webapps/browser/installable/installable_icon_fetcher.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"

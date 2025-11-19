@@ -11,7 +11,7 @@
 #include "base/command_line.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/supports_user_data.h"
 #include "base/task/sequenced_task_runner.h"

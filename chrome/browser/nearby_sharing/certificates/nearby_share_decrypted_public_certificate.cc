@@ -10,7 +10,7 @@
 #include "chrome/browser/nearby_sharing/certificates/common.h"
 #include "chrome/browser/nearby_sharing/certificates/constants.h"
 #include "chromeos/ash/components/nearby/common/proto/timestamp.pb.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "crypto/aead.h"
 #include "crypto/aes_ctr.h"
 #include "crypto/hmac.h"

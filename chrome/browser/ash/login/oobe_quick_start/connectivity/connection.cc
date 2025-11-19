@@ -17,7 +17,7 @@
 #include "chrome/browser/ash/login/oobe_quick_start/connectivity/session_context.h"
 #include "chrome/browser/ash/login/oobe_quick_start/connectivity/target_device_connection_broker.h"
 #include "chromeos/ash/components/nearby/common/connections_manager/nearby_connection.h"
-#include "chromeos/ash/components/quick_start/logging.h"
+#include "chromeos/ash/components/quick_start/test"
 #include "chromeos/ash/components/quick_start/quick_start_message.h"
 #include "chromeos/ash/components/quick_start/quick_start_metrics.h"
 #include "chromeos/ash/components/quick_start/quick_start_requests.h"

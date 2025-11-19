@@ -21,7 +21,7 @@
 #include "base/bits.h"
 #include "base/check_op.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "sandbox/linux/system_headers/linux_seccomp.h"
 #include "sandbox/linux/system_headers/linux_syscalls.h"

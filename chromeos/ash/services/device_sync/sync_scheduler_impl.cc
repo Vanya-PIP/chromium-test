@@ -13,7 +13,7 @@
 #include "base/numerics/safe_conversions.h"
 #include "base/rand_util.h"
 #include "base/strings/stringprintf.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash {
 

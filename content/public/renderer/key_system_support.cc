@@ -4,7 +4,7 @@
 
 #include "content/public/renderer/key_system_support.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/renderer/render_thread.h"
 #include "content/renderer/render_frame_impl.h"
 #include "media/base/key_systems_support_registration.h"

@@ -29,7 +29,7 @@
 #include "services/network/public/mojom/url_loader.mojom.h"
 
 #if BUILDFLAG(IS_CHROMEOS)
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #endif
 
 namespace rlz {

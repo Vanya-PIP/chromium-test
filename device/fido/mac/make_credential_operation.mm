@@ -9,7 +9,7 @@
 #include <string>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"

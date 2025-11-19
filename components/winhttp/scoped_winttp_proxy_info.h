@@ -12,7 +12,7 @@
 #include <string>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace winhttp {
 

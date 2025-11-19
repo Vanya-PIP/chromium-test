@@ -11,7 +11,7 @@
 #include "base/location.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/time/time.h"
 #include "chrome/browser/ash/policy/core/browser_policy_connector_ash.h"
 #include "chrome/browser/browser_process.h"

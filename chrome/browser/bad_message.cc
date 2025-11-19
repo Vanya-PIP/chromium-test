@@ -4,7 +4,7 @@
 
 #include "chrome/browser/bad_message.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/trace_event/trace_event.h"
 #include "base/tracing/protos/chrome_track_event.pbzero.h"

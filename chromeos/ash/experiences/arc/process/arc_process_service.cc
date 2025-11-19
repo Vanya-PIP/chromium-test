@@ -20,7 +20,7 @@
 #include "base/containers/flat_set.h"
 #include "base/containers/queue.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/singleton.h"
 #include "base/process/process.h"

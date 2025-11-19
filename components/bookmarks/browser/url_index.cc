@@ -7,7 +7,7 @@
 #include <iterator>
 
 #include "base/containers/adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/uuid.h"
 #include "components/bookmarks/browser/url_and_title.h"

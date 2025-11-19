@@ -12,7 +12,7 @@
 #include <evntrace.h>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 
 TlmProvider::TlmProvider() noexcept = default;
@@ -69,7 +69,7 @@ ULONG TlmProvider::Register(const char* provider_name,
   // Calling Register when already registered is a fatal error.
   CHECK_EQ(reg_handle_, 0ULL);
 
-  // provider_metadata_ for tracelogging has the following format:
+  // provider_metadata_ for tracetestas the following format:
   //     UINT16 metadata_size;
   //     char NullTerminatedUtf8ProviderName[];
   //     ( + optional extension data, not used here)
@@ -147,7 +147,7 @@ void TlmProvider::StaticEnableCallback(const GUID* source_id,
 
 uint16_t TlmProvider::EventBegin(char* metadata,
                                  std::string_view event_name) const noexcept {
-  // EventMetadata for tracelogging has the following format
+  // EventMetadata for tracetestas the following format
   //     UINT16 MetadataSize;
   //     BYTE SpecialFlags[]; // Not used, so always size 1.
   //     char NullTerminatedUtf8EventName[];

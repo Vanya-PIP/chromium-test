@@ -7,7 +7,7 @@
 #import <CoreWLAN/CoreWLAN.h>
 #import <Foundation/Foundation.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #include "services/device/geolocation/wifi_data_provider_common.h"
 #include "services/device/geolocation/wifi_data_provider_handle.h"

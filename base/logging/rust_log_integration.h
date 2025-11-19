@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 #include "base/base_export.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/logging/log_severity.h"
 #include "third_party/rust/cxx/v1/cxx.h"
 

@@ -29,7 +29,7 @@
 #include "base/functional/function_ref.h"
 #include "base/json/json_file_value_serializer.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/numerics/checked_math.h"
 #include "base/path_service.h"

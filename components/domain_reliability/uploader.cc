@@ -8,7 +8,7 @@
 
 #include "base/containers/unique_ptr_adapters.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/supports_user_data.h"
 #include "components/domain_reliability/util.h"

@@ -6,7 +6,7 @@
 
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace syncer {
 

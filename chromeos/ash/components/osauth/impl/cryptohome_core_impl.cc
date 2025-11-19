@@ -11,7 +11,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "chromeos/ash/components/dbus/userdataauth/userdataauth_client.h"
 #include "chromeos/ash/components/login/auth/auth_factor_editor.h"

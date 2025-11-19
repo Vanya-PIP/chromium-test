@@ -8,8 +8,8 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
-#include "base/syslog_logging.h"
+#include "base/test"
+#include "base/syslog_test"
 #include "base/system/sys_info.h"
 #include "base/task/single_thread_task_runner.h"
 #include "chrome/browser/ash/attestation/machine_certificate_uploader.h"

@@ -7,7 +7,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/system/sys_info.h"
 #include "base/time/default_clock.h"

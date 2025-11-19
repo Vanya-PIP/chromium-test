@@ -10,7 +10,7 @@
 
 #include "base/functional/bind.h"
 #include "base/strings/string_number_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "third_party/blink/public/mojom/devtools/console_message.mojom-data-view.h"
 #include "ui/base/l10n/l10n_util.h"
 

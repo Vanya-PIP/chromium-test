@@ -9,7 +9,7 @@
 #include <algorithm>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 
 namespace media {

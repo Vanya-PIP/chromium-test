@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/containers/fixed_flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/ui_base_features.h"
 #include "ui/gfx/font_list.h"
 #include "ui/views/controls/focus_ring.h"

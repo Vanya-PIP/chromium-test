@@ -15,7 +15,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/weak_ptr.h"
 #include "base/task/sequenced_task_runner.h"

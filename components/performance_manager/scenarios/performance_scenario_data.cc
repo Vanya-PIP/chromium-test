@@ -8,7 +8,7 @@
 #include <optional>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/shared_memory_mapper.h"
 #include "base/memory/structured_shared_memory.h"
 #include "base/metrics/histogram_functions.h"

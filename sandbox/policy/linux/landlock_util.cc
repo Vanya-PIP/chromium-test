@@ -6,7 +6,7 @@
 
 #include <errno.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "sandbox/linux/services/syscall_wrappers.h"
 #include "sandbox/linux/system_headers/linux_landlock.h"

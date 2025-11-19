@@ -9,7 +9,7 @@
 #include "base/check.h"
 #include "base/files/file_util.h"
 #include "base/json/json_file_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/base/audio_device_ids.h"
 #include "media/audio/audio_device_description.h"
 

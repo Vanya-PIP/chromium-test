@@ -13,7 +13,7 @@
 #include "base/check.h"
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/trace_event/trace_event.h"
 #include "chromeos/ash/components/channel/channel_info.h"

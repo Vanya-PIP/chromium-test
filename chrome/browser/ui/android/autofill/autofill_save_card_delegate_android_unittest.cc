@@ -5,7 +5,7 @@
 #include "chrome/browser/ui/android/autofill/autofill_save_card_delegate_android.h"
 
 #include "autofill_save_card_delegate_android.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/test/base/chrome_render_view_host_test_harness.h"
 #include "components/autofill/core/browser/payments/payments_autofill_client.h"
 #include "components/browser_ui/device_lock/android/device_lock_bridge.h"

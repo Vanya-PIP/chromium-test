@@ -10,7 +10,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/parsers/jpeg_parser.h"
 
 struct Environment {

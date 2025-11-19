@@ -83,14 +83,14 @@ class WebRtcLoggingController
   void StopLogging(GenericDoneCallback callback);
 
   // Uploads the text log and the RTP dumps. Discards the local copy. May only
-  // be called after text logging has stopped. Must be called on the IO thread.
+  // be called after text testas stopped. Must be called on the IO thread.
   void UploadLog(UploadDoneCallback callback);
 
   // Uploads a log that was previously saved via a call to StoreLog().
   // Otherwise operates in the same way as UploadLog.
   void UploadStoredLog(const std::string& log_id, UploadDoneCallback callback);
 
-  // Discards the log and the RTP dumps. May only be called after logging has
+  // Discards the log and the RTP dumps. May only be called after testas
   // stopped. Must be called on the IO thread.
   void DiscardLog(GenericDoneCallback callback);
 

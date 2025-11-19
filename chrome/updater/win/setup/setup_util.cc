@@ -23,7 +23,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/flat_map.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/path_service.h"
 #include "base/strings/strcat.h"

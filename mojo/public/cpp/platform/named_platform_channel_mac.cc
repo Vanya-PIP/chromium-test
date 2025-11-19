@@ -8,7 +8,7 @@
 #include <servers/bootstrap.h>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_mach_port.h"
 #include "base/rand_util.h"
 #include "base/strings/stringprintf.h"

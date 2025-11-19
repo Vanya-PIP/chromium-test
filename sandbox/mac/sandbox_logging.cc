@@ -7,7 +7,7 @@
 #pragma allow_unsafe_libc_calls
 #endif
 
-#include "sandbox/mac/sandbox_logging.h"
+#include "sandbox/mac/sandbox_test"
 
 #include <errno.h>
 #include <os/log.h>

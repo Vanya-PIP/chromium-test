@@ -16,7 +16,7 @@
 #include "base/check_is_test.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/strings/strcat_win.h"
 #include "base/task/task_traits.h"

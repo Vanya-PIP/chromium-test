@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_ANDROID)

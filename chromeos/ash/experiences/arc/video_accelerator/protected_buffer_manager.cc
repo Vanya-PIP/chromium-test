@@ -8,7 +8,7 @@
 
 #include "base/bits.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/unsafe_shared_memory_region.h"
 #include "base/notreached.h"
 #include "base/posix/eintr_wrapper.h"

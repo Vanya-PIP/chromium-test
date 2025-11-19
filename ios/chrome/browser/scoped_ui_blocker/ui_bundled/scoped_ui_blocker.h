@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 @protocol UIBlockerManager;
 @protocol UIBlockerTarget;

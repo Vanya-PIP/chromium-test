@@ -12,7 +12,7 @@
 #include "ash/system/focus_mode/sounds/soundscape/soundscape_types.h"
 #include "ash/system/focus_mode/sounds/soundscape/soundscapes_downloader.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 
 namespace ash {

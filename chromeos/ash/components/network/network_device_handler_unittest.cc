@@ -8,7 +8,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
 #include "base/test/metrics/histogram_tester.h"

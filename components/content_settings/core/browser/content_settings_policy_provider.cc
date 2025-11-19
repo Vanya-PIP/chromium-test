@@ -14,7 +14,7 @@
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/trace_event/trace_event.h"
 #include "base/values.h"

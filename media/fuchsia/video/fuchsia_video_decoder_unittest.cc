@@ -16,7 +16,7 @@
 
 #include "base/containers/flat_map.h"
 #include "base/containers/flat_set.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/koid.h"
 #include "base/fuchsia/process_context.h"
 #include "base/functional/bind.h"

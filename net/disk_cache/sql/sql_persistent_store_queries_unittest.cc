@@ -12,7 +12,7 @@
 #include "base/containers/fixed_flat_map.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/process/launch.h"
 #include "base/run_loop.h"

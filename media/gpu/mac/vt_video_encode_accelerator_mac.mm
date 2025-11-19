@@ -11,10 +11,10 @@
 
 #include "base/apple/bridging.h"
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/containers/contains.h"
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/memory/shared_memory_mapping.h"
 #include "base/memory/unsafe_shared_memory_region.h"

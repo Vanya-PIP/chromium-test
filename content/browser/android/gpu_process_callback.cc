@@ -7,7 +7,7 @@
 
 #include "base/android/scoped_java_ref.h"
 #include "base/android/unguessable_token_android.h"
-#include "base/logging.h"
+#include "base/test"
 #include "content/common/android/surface_wrapper.h"
 #include "content/public/browser/browser_thread.h"
 #include "gpu/ipc/common/gpu_surface_tracker.h"

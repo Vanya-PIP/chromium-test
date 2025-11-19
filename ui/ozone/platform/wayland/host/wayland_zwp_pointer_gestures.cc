@@ -6,7 +6,7 @@
 
 #include <wayland-util.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gfx/geometry/vector2d_f.h"
 #include "ui/ozone/platform/wayland/common/wayland_util.h"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"

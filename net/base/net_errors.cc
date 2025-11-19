@@ -8,7 +8,7 @@
 
 #include "base/check_op.h"
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "net/third_party/quiche/src/quiche/quic/core/quic_error_codes.h"
 

@@ -12,7 +12,7 @@
 #include "base/check.h"
 #include "base/functional/callback_helpers.h"
 #include "base/metrics/histogram_functions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/time/default_clock.h"
 #include "base/trace_event/trace_event.h"
 #include "chrome/browser/ash/login/auth/chrome_safe_mode_delegate.h"

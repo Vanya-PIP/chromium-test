@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "dbus/message.h"
 #include "device/bluetooth/floss/floss_adapter_client.h"

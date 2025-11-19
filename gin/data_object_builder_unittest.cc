@@ -9,7 +9,7 @@
 #include "base/check_op.h"
 #include "base/debug/debugging_buildflags.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "gin/dictionary.h"
 #include "gin/public/isolate_holder.h"
 #include "gin/test/v8_test.h"

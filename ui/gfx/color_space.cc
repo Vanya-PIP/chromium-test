@@ -11,9 +11,9 @@
 
 #include "base/atomic_sequence_num.h"
 #include "base/compiler_specific.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/synchronization/lock.h"
 #include "skia/ext/skcolorspace_primaries.h"

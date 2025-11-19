@@ -17,7 +17,7 @@
 
 #include "base/containers/span.h"
 #include "base/containers/span_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/decrypt_config.h"
 #include "media/base/media_util.h"
 #include "media/base/video_decoder_config.h"

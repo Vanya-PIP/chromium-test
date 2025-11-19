@@ -16,7 +16,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/time/time.h"
 #include "base/timer/timer.h"
 #include "base/trace_event/trace_event.h"

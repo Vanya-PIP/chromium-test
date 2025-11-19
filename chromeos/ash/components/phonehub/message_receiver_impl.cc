@@ -9,7 +9,7 @@
 #include <string>
 
 #include "ash/constants/ash_features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/phonehub/proto/phonehub_api.pb.h"
 #include "chromeos/ash/components/phonehub/util/histogram_util.h"
 

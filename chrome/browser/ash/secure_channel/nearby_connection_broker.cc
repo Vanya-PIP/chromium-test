@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/time/time.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/public/mojom/nearby_connector.mojom-shared.h"
 
 namespace ash {

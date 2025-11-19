@@ -6,7 +6,7 @@
 
 #include "ash/frame_throttler/frame_throttling_controller.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "base/time/time.h"

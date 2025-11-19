@@ -8,7 +8,7 @@
 #include <numbers>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/ranges.h"
 #include "base/time/time.h"

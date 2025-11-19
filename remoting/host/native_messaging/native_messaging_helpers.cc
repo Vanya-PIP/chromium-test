@@ -5,7 +5,7 @@
 #include "remoting/host/native_messaging/native_messaging_helpers.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringize_macros.h"
 #include "remoting/host/native_messaging/native_messaging_constants.h"
 

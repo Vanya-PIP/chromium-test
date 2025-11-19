@@ -40,11 +40,11 @@
 
 #include "base/command_line.h"
 #include "base/containers/adapters.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/not_fatal_until.h"
 #include "base/numerics/safe_conversions.h"

@@ -11,7 +11,7 @@
 #include "base/files/memory_mapped_file.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/task/thread_pool.h"
 #include "base/test/bind.h"

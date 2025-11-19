@@ -6,7 +6,7 @@
 
 #import <Security/Security.h>
 
-#import "base/logging.h"
+#import "base/test"
 
 namespace credential_provider_extension {
 

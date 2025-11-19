@@ -12,7 +12,7 @@
 
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 
 namespace base {

@@ -6,10 +6,10 @@
 
 #include <memory>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/intl_profile_watcher.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/task/sequenced_task_runner.h"
 #include "third_party/icu/source/common/unicode/unistr.h"

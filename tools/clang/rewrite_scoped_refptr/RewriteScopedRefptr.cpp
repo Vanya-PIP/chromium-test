@@ -325,7 +325,7 @@ int main(int argc, const char* argv[]) {
   auto bool_conversion_matcher = hasParent(
       expr(anyOf(implicit_to_bool, expr(hasParent(implicit_to_bool)))));
 
-  auto is_logging_helper =
+  auto is_testelper =
       functionDecl(anyOf(hasName("CheckEQImpl"), hasName("CheckNEImpl")));
   auto is_gtest_helper = functionDecl(
       anyOf(cxxMethodDecl(ofClass(cxxRecordDecl(isSameOrDerivedFrom(
@@ -352,7 +352,7 @@ int main(int argc, const char* argv[]) {
           // result in an incorrect replacement that changes the helper function
           // itself. Instead, the right replacement is to rewrite the macro's
           // arguments.
-          unless(hasAncestor(decl(anyOf(is_logging_helper, is_gtest_helper,
+          unless(hasAncestor(decl(anyOf(is_testelper, is_gtest_helper,
                                         is_gtest_assertion_result_ctor))))),
       &get_callback);
 
@@ -386,7 +386,7 @@ int main(int argc, const char* argv[]) {
   MacroRewriterCallback macro_callback(&replacements);
   // CHECK_EQ/CHECK_NE helpers.
   match_finder.addMatcher(
-      callExpr(callee(is_logging_helper), argumentCountIs(3),
+      callExpr(callee(is_testelper), argumentCountIs(3),
                hasAnyArgument(ignoringParenImpCasts(
                    id("expr", expr(hasType(is_scoped_refptr))))),
                hasAnyArgument(ignoringParenImpCasts(hasType(pointerType()))),

@@ -8,7 +8,7 @@
 
 #include "base/base64.h"
 #include "base/strings/strcat.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "build/chromeos_buildflags.h"
 #include "components/viz/common/frame_sinks/copy_output_result.h"
 #include "content/public/browser/render_widget_host.h"

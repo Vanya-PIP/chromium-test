@@ -11,12 +11,12 @@
 #include <memory>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/base64.h"
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_view_util.h"
 #include "base/strings/sys_string_conversions.h"

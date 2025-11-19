@@ -263,7 +263,7 @@ class BASE_EXPORT StatisticsRecorder {
   // This method is thread safe.
   static size_t GetHistogramCount();
 
-  // Initializes logging histograms with --v=1. Safe to call multiple times.
+  // Initializes testistograms with --v=1. Safe to call multiple times.
   // Is called from ctor but for browser it seems that it is more useful to
   // start logging after statistics recorder, so we need to init log-on-shutdown
   // later.

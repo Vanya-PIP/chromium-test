@@ -9,7 +9,7 @@
 
 #include "base/containers/contains.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/time/time.h"

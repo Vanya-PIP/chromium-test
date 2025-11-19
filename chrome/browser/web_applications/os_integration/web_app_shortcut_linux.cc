@@ -21,7 +21,7 @@
 #include "base/functional/callback.h"
 #include "base/i18n/file_util_icu.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/metrics/histogram_macros.h"

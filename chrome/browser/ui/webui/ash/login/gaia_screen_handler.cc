@@ -25,7 +25,7 @@
 #include "base/i18n/message_formatter.h"
 #include "base/i18n/number_formatting.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"

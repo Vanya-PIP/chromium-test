@@ -5,7 +5,7 @@
 #include "ui/ozone/platform/wayland/host/wayland_wp_color_management_surface.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notimplemented.h"
 #include "ui/gfx/display_color_spaces.h"

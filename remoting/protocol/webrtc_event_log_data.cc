@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 
 namespace remoting::protocol {

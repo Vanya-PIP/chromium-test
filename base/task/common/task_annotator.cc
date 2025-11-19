@@ -17,7 +17,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/safety_checks.h"
 #include "base/metrics/metrics_hashes.h"
 #include "base/time/time.h"

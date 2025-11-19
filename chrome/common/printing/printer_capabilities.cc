@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"

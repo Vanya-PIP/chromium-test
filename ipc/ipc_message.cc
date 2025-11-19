@@ -15,7 +15,7 @@
 
 #include "base/atomic_sequence_num.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/pickle.h"
 #include "base/trace_event/trace_event.h"
 #include "base/trace_event/trace_log.h"

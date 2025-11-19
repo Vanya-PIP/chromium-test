@@ -5,7 +5,7 @@
 
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/decrypt_config.h"
 #include "media/ffmpeg/ffmpeg_common.h"
 #include "media/formats/mp4/avc.h"

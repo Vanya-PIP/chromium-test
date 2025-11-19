@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/environment.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "base/threading/thread_restrictions.h"
 #include "chrome/browser/media/test_license_server_config.h"

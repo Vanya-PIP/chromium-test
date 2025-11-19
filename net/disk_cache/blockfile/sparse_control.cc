@@ -12,7 +12,7 @@
 #include "base/format_macros.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"

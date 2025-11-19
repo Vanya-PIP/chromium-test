@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/browser/web_applications/proto/web_app.pb.h"

@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/scoped_observation.h"
 #include "base/strings/stringprintf.h"

@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/floss/fake_floss_lescan_client.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/task/single_thread_task_runner.h"
 #include "device/bluetooth/floss/floss_dbus_client.h"

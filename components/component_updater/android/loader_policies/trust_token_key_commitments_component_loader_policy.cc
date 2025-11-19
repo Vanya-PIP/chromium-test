@@ -16,7 +16,7 @@
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "base/version.h"
 #include "components/component_updater/android/component_loader_policy.h"

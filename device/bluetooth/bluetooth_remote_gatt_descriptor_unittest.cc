@@ -9,7 +9,7 @@
 
 #include <array>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
 #include "build/build_config.h"

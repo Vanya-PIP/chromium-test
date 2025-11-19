@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/policy/reporting/arc_app_install_event_logger.h"
 
 namespace policy {

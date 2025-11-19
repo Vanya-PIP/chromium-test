@@ -9,7 +9,7 @@
 #include <mfapi.h>
 #include <synchapi.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/native_library.h"
 #include "base/no_destructor.h"

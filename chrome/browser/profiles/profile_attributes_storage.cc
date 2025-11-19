@@ -17,7 +17,7 @@
 #include "base/functional/callback.h"
 #include "base/i18n/number_formatting.h"
 #include "base/i18n/string_compare.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/ref_counted_memory.h"
 #include "base/metrics/histogram_functions.h"

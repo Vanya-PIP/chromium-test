@@ -6,7 +6,7 @@
 
 #include <array>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "chrome/browser/nearby_sharing/certificates/constants.h"
 #include "crypto/hkdf.h"

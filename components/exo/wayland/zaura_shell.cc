@@ -29,7 +29,7 @@
 #include "ash/wm/window_state.h"
 #include "base/bit_cast.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notimplemented.h"
 #include "base/strings/string_number_conversions.h"

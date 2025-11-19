@@ -8,7 +8,7 @@
 #include <stddef.h>
 #include <sys/sysctl.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"
 

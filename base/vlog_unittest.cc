@@ -155,7 +155,7 @@ TEST(VlogTest, VmoduleOrderFirstMatchIsPattern) {
 }
 
 TEST(VlogTest, VmoduleOrderSample) {
-  // logging.h --vmodule example, with some overlapping cases checked.
+  // test --vmodule example, with some overlapping cases checked.
   const char kVModuleSwitch[] =
       "profile=2,icon_loader=1,browser_*=3,*/chromeos/*=4";
   int min_log_level = 0;

@@ -4,7 +4,7 @@
 
 #include "fuchsia_web/common/test/frame_for_test.h"
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "fuchsia_web/common/test/test_navigation_listener.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

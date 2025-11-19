@@ -8,7 +8,7 @@
 #define RLZ_LIB_ASSERT_H_
 
 #include <string>
-#include "base/logging.h"
+#include "base/test"
 
 // An assertion macro.
 // Can mute expected assertions in debug mode.

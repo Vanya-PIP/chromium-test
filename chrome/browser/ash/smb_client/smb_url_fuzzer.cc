@@ -7,7 +7,7 @@
 
 #include "base/at_exit.h"
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/smb_client/smb_url.h"
 
 // This is a workaround for https://crbug.com/778929.

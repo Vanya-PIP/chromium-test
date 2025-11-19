@@ -27,7 +27,7 @@
 #include "chromeos/ash/components/network/network_handler.h"
 #include "chromeos/ash/components/network/network_state_handler.h"
 #include "chromeos/ash/components/network/technology_state_controller.h"
-#include "chromeos/ash/components/quick_start/logging.h"
+#include "chromeos/ash/components/quick_start/test"
 #include "chromeos/ash/components/quick_start/quick_start_metrics.h"
 #include "chromeos/ash/services/nearby/public/mojom/quick_start_decoder_types.mojom-shared.h"
 #include "chromeos/ash/services/nearby/public/mojom/quick_start_decoder_types.mojom.h"

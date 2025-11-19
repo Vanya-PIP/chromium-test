@@ -27,7 +27,7 @@
 #include "base/files/file_util.h"
 #include "base/files/safe_base_name.h"
 #include "base/i18n/file_util_icu.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/nix/xdg_util.h"
 #include "base/notimplemented.h"

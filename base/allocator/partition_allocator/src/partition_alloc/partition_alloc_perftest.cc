@@ -19,7 +19,7 @@
 #include "base/timer/lap_timer.h"
 #include "partition_alloc/build_config.h"
 #include "partition_alloc/extended_api.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_base/strings/stringprintf.h"
 #include "partition_alloc/partition_alloc_base/threading/platform_thread_for_testing.h"
 #include "partition_alloc/partition_alloc_base/time/time.h"

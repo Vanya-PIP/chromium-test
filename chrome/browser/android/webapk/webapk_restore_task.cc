@@ -14,7 +14,7 @@
 #include "chrome/browser/android/webapk/webapk_restore_web_contents_manager.h"
 #include "components/webapps/browser/android/webapk/webapk_types.h"
 #include "components/webapps/browser/android/webapps_icon_utils.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/web_contents/web_app_url_loader.h"
 #include "content/public/browser/manifest_icon_downloader.h"
 #include "url/gurl.h"

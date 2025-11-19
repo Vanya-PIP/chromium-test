@@ -9,7 +9,7 @@
 
 #include "base/base64.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/task/thread_pool.h"
 #include "build/build_config.h"

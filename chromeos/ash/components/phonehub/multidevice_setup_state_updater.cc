@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/phonehub/multidevice_setup_state_updater.h"
 
 #include "base/functional/callback_helpers.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/pref_names.h"
 #include "chromeos/ash/components/phonehub/util/histogram_util.h"
 #include "chromeos/ash/services/multidevice_setup/public/cpp/prefs.h"

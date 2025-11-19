@@ -6,7 +6,7 @@
 
 #include "base/i18n/break_iterator.h"
 #include "base/i18n/case_conversion.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/grit/platform_locale_settings.h"
 #include "content/public/browser/webid/identity_request_account.h"

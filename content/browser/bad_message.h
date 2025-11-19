@@ -5,7 +5,7 @@
 #ifndef CONTENT_BROWSER_BAD_MESSAGE_H_
 #define CONTENT_BROWSER_BAD_MESSAGE_H_
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "content/common/buildflags.h"
 #include "content/public/browser/child_process_id.h"
 

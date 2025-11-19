@@ -67,7 +67,7 @@ Other types of false positives and their suppressions:
 * Dead stores. To suppress, use `[[maybe_unused]]`. This also suppresses dead
   store warnings on conventional builds without static analysis enabled!
 
-See the definitions of the `ANALYZER_*` macros in base/logging.h for more
+See the definitions of the `ANALYZER_*` macros in base/test for more
 detailed information about how the annotations are implemented.
 
 ## Logging bugs

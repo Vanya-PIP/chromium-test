@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_functions.h"

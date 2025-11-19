@@ -9,7 +9,7 @@
 #include "base/base64.h"
 #include "base/containers/span.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/numerics/byte_conversions.h"
 #include "base/strings/string_view_util.h"

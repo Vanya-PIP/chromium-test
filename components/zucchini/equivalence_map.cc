@@ -10,7 +10,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "components/zucchini/encoded_view.h"
 #include "components/zucchini/patch_reader.h"

@@ -4,7 +4,7 @@
 
 #include "services/shape_detection/barcode_detection_provider_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace shape_detection {
 

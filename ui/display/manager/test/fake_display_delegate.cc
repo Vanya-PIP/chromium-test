@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/strings/string_split.h"
 #include "base/time/time.h"

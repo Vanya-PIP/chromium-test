@@ -8,7 +8,7 @@
 #include <memory>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "build/buildflag.h"
 #include "device/vr/openxr/openxr_anchor_manager.h"

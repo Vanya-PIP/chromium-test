@@ -11,7 +11,7 @@
 
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "pdf/pdfium/pdfium_api_wrappers.h"
 #include "printing/units.h"
 #include "third_party/pdfium/public/cpp/fpdf_scopers.h"

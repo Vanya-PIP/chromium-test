@@ -9,7 +9,7 @@
 #include "ash/strings/grit/ash_strings.h"
 #include "ash/style/ash_color_id.h"
 #include "ash/style/ash_color_provider.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/test/task_environment.h"
 #include "base/time/time.h"

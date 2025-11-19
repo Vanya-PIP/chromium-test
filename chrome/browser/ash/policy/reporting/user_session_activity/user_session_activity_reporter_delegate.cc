@@ -11,7 +11,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/sequence_checker.h"
 #include "base/time/time.h"

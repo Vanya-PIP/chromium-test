@@ -9,7 +9,7 @@
 #include <cmath>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/win/win_util.h"
 #include "third_party/abseil-cpp/absl/cleanup/cleanup.h"

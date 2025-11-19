@@ -13,7 +13,7 @@
 
 #include "base/files/file_util.h"
 #include "base/format_macros.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/numerics/clamped_math.h"
 #include "base/rand_util.h"

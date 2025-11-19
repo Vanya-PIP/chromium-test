@@ -14,7 +14,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/containers/circular_deque.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromeos/ash/components/dbus/shill/modem_3gpp_client.h"
 #include "chromeos/ash/components/dbus/shill/shill_device_client.h"

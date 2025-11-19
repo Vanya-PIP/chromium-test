@@ -10,7 +10,7 @@
 
 #include "base/check.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/starboard/media/media/starboard_api_wrapper_base.h"
 
 namespace chromecast {

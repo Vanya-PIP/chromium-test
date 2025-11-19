@@ -4,7 +4,7 @@
 
 #include "components/metrics/install_date_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/metrics/metrics_pref_names.h"
 #include "components/prefs/pref_service.h"
 

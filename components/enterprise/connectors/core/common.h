@@ -100,7 +100,7 @@ enum class EnterpriseReportingEventType {
   kMaxValue = kExtensionTelemetryEvent,
 };
 
-// Mapping from event name to UMA enum for logging histogram.
+// Mapping from event name to UMA enum for testistogram.
 inline constexpr auto kEventNameToUmaEnumMap =
     base::MakeFixedFlatMap<std::string_view, EnterpriseReportingEventType>({
         {kKeyPasswordReuseEvent,

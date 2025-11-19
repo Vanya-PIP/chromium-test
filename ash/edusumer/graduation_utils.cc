@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "ash/constants/ash_pref_names.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/values.h"
 #include "components/prefs/pref_service.h"

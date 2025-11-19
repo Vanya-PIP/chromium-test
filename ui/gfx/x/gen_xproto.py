@@ -1340,7 +1340,7 @@ class GenXproto(FileWriter):
         self.write('#include <xcb/xcb.h>')
         self.write('#include <xcb/xcbext.h>')
         self.write()
-        self.write('#include "base/logging.h"')
+        self.write('#include "base/test"')
         self.write('#include "base/posix/eintr_wrapper.h"')
         self.write('#include "ui/gfx/x/connection.h"')
         self.write('#include "ui/gfx/x/xproto_internal.h"')

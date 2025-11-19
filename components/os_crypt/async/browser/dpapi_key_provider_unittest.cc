@@ -13,7 +13,7 @@
 #include <vector>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/rand_util.h"
 #include "base/run_loop.h"

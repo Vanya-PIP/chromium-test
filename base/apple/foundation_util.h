@@ -17,7 +17,7 @@
 #include "base/base_export.h"
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 
 #if defined(__OBJC__)

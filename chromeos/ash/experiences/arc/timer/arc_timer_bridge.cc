@@ -8,7 +8,7 @@
 
 #include "base/containers/flat_set.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/strings/stringprintf.h"
 #include "chromeos/ash/components/dbus/dbus_thread_manager.h"

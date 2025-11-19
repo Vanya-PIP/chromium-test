@@ -12,7 +12,7 @@
 #include <string_view>
 #include <utility>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
 
 namespace base {

@@ -10,7 +10,7 @@
 #include "chrome/browser/ash/file_system_provider/content_cache/local_fd.h"
 
 #include "base/files/file_error_or.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash::file_system_provider {
 

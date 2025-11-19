@@ -10,7 +10,7 @@
 #include <string>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/strcat.h"
 #include "base/synchronization/waitable_event.h"

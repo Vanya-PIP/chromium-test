@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/to_string.h"
 #include "third_party/skia/include/core/SkColor.h"

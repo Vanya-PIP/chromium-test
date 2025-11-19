@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/audio_buffer.h"
 
 namespace media {

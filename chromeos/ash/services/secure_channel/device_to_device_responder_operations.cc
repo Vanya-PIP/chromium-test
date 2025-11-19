@@ -7,7 +7,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/memory/raw_ptr.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/secure_message_delegate.h"
 #include "chromeos/ash/services/device_sync/proto/cryptauth_api.pb.h"
 #include "chromeos/ash/services/secure_channel/session_keys.h"

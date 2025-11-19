@@ -5,7 +5,7 @@
 #include "chromecast/browser/service_connector.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/browser/system_connector.h"
 #include "content/public/browser/browser_task_traits.h"
 #include "content/public/browser/browser_thread.h"

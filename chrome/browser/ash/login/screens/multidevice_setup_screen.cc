@@ -6,7 +6,7 @@
 
 #include "ash/constants/ash_switches.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_macros.h"
 #include "chrome/browser/ash/device_sync/device_sync_client_factory.h"

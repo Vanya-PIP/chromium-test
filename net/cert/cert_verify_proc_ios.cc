@@ -9,10 +9,10 @@
 #include <string_view>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_view_util.h"
 #include "crypto/hash.h"

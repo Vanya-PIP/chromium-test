@@ -4,7 +4,7 @@
 
 #include "components/cronet/cronet_proxy_delegate.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/trace_event/trace_event.h"
 #include "base/types/expected.h"

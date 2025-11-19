@@ -13,7 +13,7 @@
 #include "ash/style/ash_color_provider.h"
 #include "ash/system/tray/tray_constants.h"
 #include "ash/system/tray/tray_utils.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/constants/chromeos_features.h"
 #include "components/session_manager/session_manager_types.h"
 #include "third_party/skia/include/core/SkColor.h"

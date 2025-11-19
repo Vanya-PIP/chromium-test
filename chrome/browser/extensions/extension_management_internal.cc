@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "base/version.h"
 #include "chrome/browser/extensions/extension_management_constants.h"

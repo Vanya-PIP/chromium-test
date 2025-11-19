@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/experiences/arc/intent_helper/arc_icon_cache_delegate.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace arc {
 

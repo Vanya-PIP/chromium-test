@@ -26,7 +26,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/not_fatal_until.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/string_number_conversions.h"

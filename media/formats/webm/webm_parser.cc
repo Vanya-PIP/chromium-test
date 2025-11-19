@@ -22,7 +22,7 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_span.h"
 #include "base/notimplemented.h"

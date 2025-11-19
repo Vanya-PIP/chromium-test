@@ -10,7 +10,7 @@
 #include "base/check.h"
 #include "base/command_line.h"
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/apps/app_service/app_service_proxy.h"
 #include "chrome/browser/apps/app_service/publisher_host_factory.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"

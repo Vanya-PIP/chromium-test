@@ -5,7 +5,7 @@
 #include "media/capture/video/apple/pixel_buffer_transferer.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 

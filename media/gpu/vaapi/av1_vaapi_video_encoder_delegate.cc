@@ -16,7 +16,7 @@
 
 #include "base/bits.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/gpu/macros.h"
 #include "media/gpu/svc_layers.h"
 #include "media/gpu/vaapi/vaapi_common.h"

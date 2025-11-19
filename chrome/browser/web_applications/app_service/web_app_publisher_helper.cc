@@ -35,7 +35,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/functional/concurrent_callbacks.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"
 #include "base/one_shot_event.h"

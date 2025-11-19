@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"
 #include "chromeos/constants/chromeos_features.h"

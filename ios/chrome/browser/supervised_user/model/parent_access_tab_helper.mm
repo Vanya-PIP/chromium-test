@@ -4,7 +4,7 @@
 
 #import "ios/chrome/browser/supervised_user/model/parent_access_tab_helper.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/notreached.h"
 #import "base/strings/sys_string_conversions.h"
 #import "components/supervised_user/core/browser/proto/parent_access_callback.pb.h"

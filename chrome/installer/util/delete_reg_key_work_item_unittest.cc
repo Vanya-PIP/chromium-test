@@ -15,7 +15,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/registry.h"
 #include "base/win/security_descriptor.h"
 #include "chrome/installer/util/registry_test_data.h"

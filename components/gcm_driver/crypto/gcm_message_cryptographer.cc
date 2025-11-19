@@ -14,7 +14,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/ostream_operators.h"

@@ -15,7 +15,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "chromeos/ash/components/kcer/cert_cache.h"
 #include "chromeos/ash/components/kcer/helpers/pkcs12_reader.h"

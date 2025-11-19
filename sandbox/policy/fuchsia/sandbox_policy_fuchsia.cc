@@ -38,7 +38,7 @@
 #include "base/fuchsia/default_job.h"
 #include "base/fuchsia/file_utils.h"
 #include "base/fuchsia/filtered_service_directory.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/functional/bind.h"
 #include "base/no_destructor.h"

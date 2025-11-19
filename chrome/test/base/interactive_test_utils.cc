@@ -4,7 +4,7 @@
 
 #include "chrome/test/base/interactive_test_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/task/current_thread.h"
 #include "build/build_config.h"

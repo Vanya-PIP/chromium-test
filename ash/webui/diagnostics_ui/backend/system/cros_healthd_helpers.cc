@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "ash/webui/diagnostics_ui/backend/common/histogram_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/services/cros_healthd/public/mojom/cros_healthd_diagnostics.mojom.h"
 #include "chromeos/ash/services/cros_healthd/public/mojom/cros_healthd_probe.mojom.h"
 

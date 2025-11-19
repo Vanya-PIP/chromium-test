@@ -11,7 +11,7 @@
 #include "chrome/browser/ash/device_sync/device_sync_client_factory.h"
 #include "chrome/browser/ash/multidevice_setup/multidevice_setup_service_factory.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/multidevice_setup/multidevice_setup_service.h"
 #include "chromeos/ash/services/multidevice_setup/public/cpp/multidevice_setup_client.h"
 #include "chromeos/ash/services/multidevice_setup/public/cpp/multidevice_setup_client_impl.h"

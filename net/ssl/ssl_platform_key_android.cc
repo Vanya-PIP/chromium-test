@@ -18,7 +18,7 @@
 
 #include "base/android/scoped_java_ref.h"
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/android/keystore.h"
 #include "net/base/net_errors.h"
 #include "net/ssl/ssl_platform_key_util.h"

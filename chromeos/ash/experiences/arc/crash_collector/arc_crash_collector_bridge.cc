@@ -12,7 +12,7 @@
 
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/process/launch.h"
 #include "base/strings/stringprintf.h"

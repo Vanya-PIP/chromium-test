@@ -15,7 +15,7 @@
 #include "base/containers/flat_set.h"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/trace_event/trace_event.h"

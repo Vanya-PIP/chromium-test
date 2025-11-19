@@ -4,7 +4,7 @@
 
 #include "ipc/mojo_param_traits.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "ipc/ipc_mojo_handle_attachment.h"
 #include "ipc/ipc_mojo_message_helper.h"
 #include "ipc/param_traits_utils.h"

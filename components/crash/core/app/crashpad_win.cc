@@ -8,7 +8,7 @@
 #include <optional>
 #include <string>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/environment.h"
 #include "base/files/file_util.h"
 #include "base/numerics/safe_conversions.h"

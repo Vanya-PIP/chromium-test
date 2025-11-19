@@ -4,7 +4,7 @@
 
 #include "chrome/credential_provider/gaiacp/chrome_availability_checker.h"
 #include "chrome/credential_provider/gaiacp/gcp_utils.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/installer/launcher_support/chrome_launcher_support.h"
 
 namespace credential_provider {

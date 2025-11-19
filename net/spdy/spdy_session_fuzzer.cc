@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "net/base/host_port_pair.h"
 #include "net/base/net_errors.h"

@@ -14,7 +14,7 @@
 #include "base/functional/callback.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/user_metrics.h"
 #include "base/strings/string_util.h"

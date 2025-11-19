@@ -17,7 +17,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/test/task_environment.h"
 #include "content/child/dwrite_font_proxy/dwrite_font_proxy_win.h"

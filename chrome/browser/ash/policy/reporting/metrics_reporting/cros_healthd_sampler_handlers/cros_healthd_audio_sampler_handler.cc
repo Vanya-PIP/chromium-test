@@ -7,7 +7,7 @@
 #include <optional>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/reporting/metrics/sampler.h"
 #include "components/reporting/proto/synced/metric_data.pb.h"
 

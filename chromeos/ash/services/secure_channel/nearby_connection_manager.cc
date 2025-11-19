@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "base/containers/contains.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/authenticated_channel.h"
 #include "chromeos/ash/services/secure_channel/public/mojom/nearby_connector.mojom-shared.h"
 

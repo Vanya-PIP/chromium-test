@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/android/jni_string.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/webxr/android/webxr_utils.h"
 #include "device/vr/android/xr_activity_state_handler.h"
 

@@ -12,7 +12,7 @@
 #include "base/allocator/partition_alloc_support.h"
 #include "base/android/android_info.h"
 #include "base/command_line.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/memory/memory_pressure_listener_registry.h"

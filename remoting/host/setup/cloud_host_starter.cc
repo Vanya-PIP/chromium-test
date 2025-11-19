@@ -20,7 +20,7 @@
 #include "remoting/base/compute_engine_service_client.h"
 #include "remoting/base/http_status.h"
 #include "remoting/base/instance_identity_token.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/oauth_token_info.h"
 #include "remoting/base/passthrough_oauth_token_getter.h"
 #include "remoting/base/service_urls.h"

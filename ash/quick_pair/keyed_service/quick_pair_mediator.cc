@@ -36,7 +36,7 @@
 #include "chromeos/ash/services/bluetooth_config/fast_pair_delegate.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process_manager_impl.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_registry_simple.h"
 
 namespace ash {

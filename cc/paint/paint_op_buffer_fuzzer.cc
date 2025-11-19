@@ -7,7 +7,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "cc/paint/paint_cache.h"
 #include "cc/paint/paint_op.h"
 #include "cc/test/transfer_cache_test_helper.h"

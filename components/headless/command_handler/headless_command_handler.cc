@@ -22,7 +22,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/path_service.h"
 #include "base/strings/strcat.h"

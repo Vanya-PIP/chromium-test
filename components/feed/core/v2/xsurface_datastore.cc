@@ -6,7 +6,7 @@
 
 #include <iterator>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 
 namespace feed {

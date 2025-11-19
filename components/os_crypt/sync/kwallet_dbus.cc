@@ -8,7 +8,7 @@
 #include <algorithm>
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "dbus/bus.h"
 #include "dbus/message.h"
 #include "dbus/object_proxy.h"

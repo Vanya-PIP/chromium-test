@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/base/compound_buffer.h"
 #include "remoting/protocol/message_serialization.h"
 #include "url/gurl.h"

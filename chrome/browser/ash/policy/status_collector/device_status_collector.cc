@@ -36,7 +36,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"
 #include "base/sequence_checker.h"

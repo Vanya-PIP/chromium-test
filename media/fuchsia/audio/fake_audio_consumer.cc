@@ -7,7 +7,7 @@
 #include <lib/vfs/cpp/pseudo_dir.h>
 #include <lib/vfs/cpp/service.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 
 namespace media {
 

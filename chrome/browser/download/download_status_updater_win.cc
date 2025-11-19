@@ -12,7 +12,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_list.h"
 #include "chrome/browser/ui/browser_window.h"

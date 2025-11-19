@@ -15,7 +15,7 @@
 #include "partition_alloc/build_config.h"
 #include "partition_alloc/buildflags.h"
 #include "partition_alloc/partition_alloc_base/component_export.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 
 // Use the PA_MACH_LOG family of macros along with a mach_error_t
 // (kern_return_t) containing a Mach error. The error value will be decoded so

@@ -10,7 +10,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/version.h"
 #include "chrome/updater/registration_data.h"

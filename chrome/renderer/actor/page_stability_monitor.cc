@@ -14,7 +14,7 @@
 #include "base/task/sequenced_task_runner.h"
 #include "base/time/time.h"
 #include "base/types/cxx23_to_underlying.h"
-#include "chrome/common/actor/actor_logging.h"
+#include "chrome/common/actor/actor_test"
 #include "chrome/common/actor/journal_details_builder.h"
 #include "chrome/common/chrome_features.h"
 #include "chrome/renderer/actor/paint_stability_monitor.h"

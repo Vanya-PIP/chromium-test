@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ssl/ssl_client_auth_observer.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "content/public/browser/browser_thread.h"
 #include "content/public/browser/client_certificate_delegate.h"

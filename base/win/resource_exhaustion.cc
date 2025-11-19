@@ -4,7 +4,7 @@
 
 #include "base/win/resource_exhaustion.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace base::win {
 

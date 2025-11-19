@@ -13,7 +13,7 @@
 #include "base/command_line.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "chrome/common/safe_browsing/binary_feature_extractor.h"
 #include "components/safe_browsing/core/common/proto/csd.pb.h"

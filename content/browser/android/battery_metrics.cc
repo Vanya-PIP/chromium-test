@@ -7,7 +7,7 @@
 #include "base/android/application_status_listener.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram.h"
 #include "base/metrics/histogram_base.h"
 #include "base/metrics/histogram_functions.h"

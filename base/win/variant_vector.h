@@ -15,7 +15,7 @@
 
 #include "base/base_export.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/scoped_variant.h"
 #include "base/win/variant_conversions.h"
 

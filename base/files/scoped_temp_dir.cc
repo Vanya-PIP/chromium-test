@@ -5,7 +5,7 @@
 #include "base/files/scoped_temp_dir.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace base {
 

@@ -10,7 +10,7 @@
 #include "testing/gtest/include/gtest/gtest.h"
 
 #include "components/cross_device/logging/log_buffer.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace {
 

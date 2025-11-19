@@ -9,10 +9,10 @@
 #include <utility>
 #include <variant>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/stringprintf.h"

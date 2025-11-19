@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/attestation/attestation_features.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/test/bind.h"

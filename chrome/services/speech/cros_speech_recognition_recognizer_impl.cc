@@ -8,7 +8,7 @@
 
 #include "base/containers/flat_map.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/services/speech/soda/cros_soda_client.h"
 #include "components/soda/constants.h"
 #include "components/soda/soda_installer.h"

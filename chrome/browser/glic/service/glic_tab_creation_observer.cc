@@ -5,7 +5,7 @@
 #include "chrome/browser/glic/service/glic_tab_creation_observer.h"
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_list.h"

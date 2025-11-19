@@ -6,7 +6,7 @@
 
 #include <bit>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "gpu/command_buffer/common/shared_image_usage.h"
 #include "gpu/ipc/client/gpu_channel_host.h"

@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/task_traits.h"

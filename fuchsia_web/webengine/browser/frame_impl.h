@@ -22,7 +22,7 @@
 
 #include "base/fuchsia/scoped_fx_logger.h"
 #include "base/gtest_prod_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/read_only_shared_memory_region.h"
 #include "base/timer/timer.h"

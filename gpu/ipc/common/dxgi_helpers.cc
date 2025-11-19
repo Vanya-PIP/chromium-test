@@ -10,9 +10,9 @@
 #include "gpu/ipc/common/dxgi_helpers.h"
 
 #include "base/check.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "third_party/libyuv/include/libyuv/planar_functions.h"

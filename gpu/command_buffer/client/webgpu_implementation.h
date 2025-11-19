@@ -17,7 +17,7 @@
 #include "gpu/command_buffer/client/dawn_client_serializer.h"
 #include "gpu/command_buffer/client/gpu_control_client.h"
 #include "gpu/command_buffer/client/implementation_base.h"
-#include "gpu/command_buffer/client/logging.h"
+#include "gpu/command_buffer/client/test"
 #include "gpu/command_buffer/client/transfer_buffer.h"
 #include "gpu/command_buffer/client/webgpu_cmd_helper.h"
 #include "gpu/command_buffer/client/webgpu_export.h"

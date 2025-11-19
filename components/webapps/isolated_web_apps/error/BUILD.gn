@@ -5,7 +5,7 @@
 source_set("error") {
   sources = [
     "uma_logging.cc",
-    "uma_logging.h",
+    "uma_test",
     "unusable_swbn_file_error.cc",
     "unusable_swbn_file_error.h",
   ]

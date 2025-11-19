@@ -8,7 +8,7 @@
 
 #include <unistd.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/posix/eintr_wrapper.h"
 #include "ui/gfx/buffer_format_util.h"

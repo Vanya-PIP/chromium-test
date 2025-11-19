@@ -10,7 +10,7 @@
 #include <string_view>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_base.h"
 #include "base/metrics/histogram_functions.h"

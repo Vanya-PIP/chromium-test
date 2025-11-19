@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/version.h"
 #include "chrome/browser/extensions/updater/extension_updater.h"
 #include "chrome/browser/profiles/profile.h"

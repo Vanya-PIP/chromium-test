@@ -7,7 +7,7 @@
 #include "ash/quick_pair/common/quick_pair_browser_delegate.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/image_fetcher/core/image_fetcher.h"
 #include "components/image_fetcher/core/image_fetcher_impl.h"
 #include "components/image_fetcher/core/request_metadata.h"

@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/video_frame.h"
 #include "media/gpu/chromeos/native_pixmap_frame_resource.h"
 #include "media/gpu/chromeos/video_frame_resource.h"

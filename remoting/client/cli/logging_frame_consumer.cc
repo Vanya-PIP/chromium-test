@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/callback.h"
-#include "remoting/client/common/logging.h"
+#include "remoting/client/common/test"
 #include "third_party/webrtc/modules/desktop_capture/desktop_frame.h"
 
 namespace remoting {

@@ -18,7 +18,7 @@
 #include "base/json/json_string_value_serializer.h"
 #include "base/json/json_writer.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_handle.h"
 #include "base/strings/string_tokenizer.h"
 #include "base/strings/string_util.h"

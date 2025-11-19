@@ -8,7 +8,7 @@
 
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "base/run_loop.h"

@@ -9,7 +9,7 @@
 
 #import <string_view>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/string_number_conversions.h"
 #import "base/strings/string_split.h"
 #import "base/strings/string_util.h"

@@ -9,7 +9,7 @@
 #include "base/check.h"
 #include "base/command_line.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/browser/about_flags.h"
 #include "chrome/browser/ash/login/session/user_session_manager.h"

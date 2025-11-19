@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/system/statistics_provider.h"
 #include "components/version_info/channel.h"
 #include "components/version_info/version_info.h"

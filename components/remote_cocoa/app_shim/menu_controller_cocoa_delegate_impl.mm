@@ -6,7 +6,7 @@
 
 #include "base/apple/bridging.h"
 #include "base/apple/foundation_util.h"
-#include "base/logging.h"
+#include "base/test"
 #import "base/message_loop/message_pump_apple.h"
 #import "skia/ext/skia_utils_mac.h"
 #import "ui/base/cocoa/cocoa_base_utils.h"

@@ -7,7 +7,7 @@
 #include <fidl/fuchsia.ui.input3/cpp/fidl.h>
 #include <cstdint>
 
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "ui/events/keycodes/dom/dom_key.h"
 #include "ui/events/keycodes/dom/keycode_converter.h"

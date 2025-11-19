@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/policy/core/common/cloud/cloud_policy_constants.h"
 #include "components/policy/test_support/remote_commands_state.h"
 #include "components/policy/test_support/request_handler_for_check_user_account.h"

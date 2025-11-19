@@ -22,7 +22,7 @@
 #include "base/command_line.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/system/sys_info.h"
 #include "base/values.h"

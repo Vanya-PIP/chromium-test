@@ -7,7 +7,7 @@
 #include "ash/constants/ash_switches.h"
 #include "base/check_op.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "chrome/browser/ash/login/login_pref_names.h"
 #include "chrome/browser/ash/login/startup_utils.h"

@@ -10,7 +10,7 @@
 #include "ash/constants/ash_features.h"
 #include "ash/public/cpp/wallpaper/online_wallpaper_params.h"
 #include "ash/public/cpp/wallpaper/wallpaper_types.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/types/cxx23_to_underlying.h"
 

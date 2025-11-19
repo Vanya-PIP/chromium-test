@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chromecast/chromecast_buildflags.h"
 #include "chromecast/graphics/cast_window_manager.h"

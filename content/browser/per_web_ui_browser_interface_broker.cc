@@ -4,7 +4,7 @@
 
 #include "content/public/browser/per_web_ui_browser_interface_broker.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/browser/renderer_host/render_frame_host_impl.h"
 #include "content/browser/webui/web_ui_impl.h"
 #include "content/public/browser/render_frame_host.h"

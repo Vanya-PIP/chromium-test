@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/to_string.h"
 #include "base/time/time.h"
 #include "content/browser/shared_storage/shared_storage_event_params.h"

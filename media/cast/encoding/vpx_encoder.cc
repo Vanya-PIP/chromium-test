@@ -5,7 +5,7 @@
 #include "media/cast/encoding/vpx_encoder.h"
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "media/base/media_switches.h"
 #include "media/base/video_codecs.h"

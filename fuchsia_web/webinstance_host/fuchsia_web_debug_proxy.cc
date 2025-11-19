@@ -9,8 +9,8 @@
 #include "base/check.h"
 #include "base/containers/flat_set.h"
 #include "base/containers/unique_ptr_adapters.h"
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 
 namespace {
 

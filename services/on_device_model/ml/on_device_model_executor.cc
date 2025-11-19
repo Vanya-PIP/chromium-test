@@ -15,7 +15,7 @@
 #include "base/check.h"
 #include "base/compiler_specific.h"
 #include "base/containers/unique_ptr_adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/weak_ptr.h"

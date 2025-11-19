@@ -7,7 +7,7 @@
 
 #include <grpcpp/grpcpp.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/cast_core/grpc/grpc_server_streaming_call.h"
 #include "chromecast/cast_core/grpc/grpc_unary_call.h"
 

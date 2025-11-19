@@ -10,7 +10,7 @@
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
 #include "base/timer/timer.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/device_sync/public/cpp/device_sync_client.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"

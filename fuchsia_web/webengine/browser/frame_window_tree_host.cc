@@ -4,7 +4,7 @@
 
 #include "fuchsia_web/webengine/browser/frame_window_tree_host.h"
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/memory/raw_ptr.h"
 #include "content/public/browser/render_widget_host_view.h"
 #include "content/public/browser/web_contents.h"

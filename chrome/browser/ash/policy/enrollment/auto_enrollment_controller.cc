@@ -9,7 +9,7 @@
 #include "base/check_is_test.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/login/oobe_configuration.h"

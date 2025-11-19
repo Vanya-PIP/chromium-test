@@ -14,7 +14,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "ui/gfx/linux/scoped_gbm_device.h"  // nogncheck
 #include "ui/ozone/public/ozone_switches.h"

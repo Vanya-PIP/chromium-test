@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/login/session/session_termination_manager.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/dbus/session_manager/session_manager_client.h"
 #include "chromeos/ash/components/dbus/userdataauth/cryptohome_misc_client.h"
 #include "chromeos/dbus/power/power_manager_client.h"

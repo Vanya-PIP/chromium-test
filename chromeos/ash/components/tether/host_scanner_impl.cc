@@ -10,7 +10,7 @@
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/trace_event/trace_event.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/network/network_state.h"
 #include "chromeos/ash/components/tether/connection_preserver.h"
 #include "chromeos/ash/components/tether/device_id_tether_network_guid_map.h"

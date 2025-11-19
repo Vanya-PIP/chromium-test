@@ -25,7 +25,7 @@
 #include "base/containers/fixed_flat_map.h"
 #include "base/functional/bind.h"
 #include "base/json/values_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/observer_list.h"
 #include "base/scoped_observation.h"

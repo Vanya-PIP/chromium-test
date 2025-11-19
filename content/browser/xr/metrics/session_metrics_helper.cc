@@ -6,7 +6,7 @@
 
 #include "content/browser/xr/metrics/session_metrics_helper.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_macros.h"

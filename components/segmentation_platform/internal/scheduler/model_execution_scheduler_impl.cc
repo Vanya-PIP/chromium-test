@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/time/clock.h"
 #include "components/segmentation_platform/internal/database/segment_info_database.h"

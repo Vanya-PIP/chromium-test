@@ -5,7 +5,7 @@
 #include "chrome/installer/util/copy_tree_work_item.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/shlwapi.h"
 
 CopyTreeWorkItem::~CopyTreeWorkItem() = default;

@@ -8,7 +8,7 @@
 #include <initializer_list>
 #include <sstream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/test.pb.h"
 #include "components/optimization_guide/core/model_execution/multimodal_message.h"
 #include "components/optimization_guide/core/model_execution/on_device_model_execution_proto_descriptors.h"

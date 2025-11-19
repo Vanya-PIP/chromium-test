@@ -10,7 +10,7 @@
 #include "base/apple/foundation_util.h"
 #include "base/command_line.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/launch_services_spi.h"
 #include "base/mac/mac_util.h"
 #include "base/metrics/histogram_functions.h"

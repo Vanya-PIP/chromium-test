@@ -5,7 +5,7 @@
 #include "base/metrics/field_trial_param_associator.h"
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial.h"
 
 namespace base {

@@ -11,7 +11,7 @@
 #include "base/base64.h"
 #include "base/check.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "net/http/http_request_headers.h"
 #include "net/test/embedded_test_server/http_request.h"

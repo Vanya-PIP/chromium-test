@@ -19,7 +19,7 @@
 
 #include "base/containers/flat_set.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "skia/ext/skia_utils_base.h"
 #include "third_party/perfetto/include/perfetto/tracing/traced_value.h"
 #include "ui/display/display_features.h"

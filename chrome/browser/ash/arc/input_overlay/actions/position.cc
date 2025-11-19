@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/arc/input_overlay/actions/position.h"
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 
 namespace arc::input_overlay {

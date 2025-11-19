@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/views/qrcode_generator/qrcode_generator_bubble.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/scoped_observation.h"
 #include "chrome/test/base/testing_profile.h"

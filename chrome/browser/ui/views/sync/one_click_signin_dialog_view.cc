@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/views/chrome_layout_provider.h"
 #include "chrome/common/url_constants.h"

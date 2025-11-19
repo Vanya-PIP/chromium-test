@@ -7,7 +7,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "chrome/browser/ash/system_logs/shill_log_pii_identifiers.h"
 #include "chromeos/ash/components/dbus/shill/shill_device_client.h"

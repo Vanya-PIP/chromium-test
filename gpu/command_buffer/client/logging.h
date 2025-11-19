@@ -5,7 +5,7 @@
 #ifndef GPU_COMMAND_BUFFER_CLIENT_LOGGING_H_
 #define GPU_COMMAND_BUFFER_CLIENT_LOGGING_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "gpu/command_buffer/client/gles2_impl_export.h"
 
 // Macros to log information if --enable-gpu-client-logging is set and either:

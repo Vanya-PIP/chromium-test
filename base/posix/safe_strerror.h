@@ -14,7 +14,7 @@
 namespace base {
 
 // BEFORE using anything from this file, first look at PLOG and friends in
-// logging.h and use them instead if applicable.
+// test and use them instead if applicable.
 //
 // This file declares safe, portable alternatives to the POSIX strerror()
 // function. strerror() is inherently unsafe in multi-threaded apps and should

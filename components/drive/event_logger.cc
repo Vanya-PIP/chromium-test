@@ -4,7 +4,7 @@
 
 #include "components/drive/event_logger.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 
 namespace drive {

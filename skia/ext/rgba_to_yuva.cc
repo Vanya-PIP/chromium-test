@@ -9,7 +9,7 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "third_party/skia/include/core/SkBlendMode.h"
 #include "third_party/skia/include/core/SkCanvas.h"

@@ -9,7 +9,7 @@
 #include <stddef.h>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "ui/events/event.h"
 #include "ui/events/ozone/evdev/device_event_dispatcher_evdev.h"

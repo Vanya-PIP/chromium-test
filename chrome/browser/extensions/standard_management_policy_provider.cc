@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/browser/extensions/extension_management.h"
 #include "chrome/browser/extensions/managed_installation_mode.h"

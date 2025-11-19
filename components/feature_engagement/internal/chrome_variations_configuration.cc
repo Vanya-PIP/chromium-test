@@ -13,7 +13,7 @@
 #include "base/check_op.h"
 #include "base/containers/contains.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "components/feature_engagement/public/configuration.h"
 #include "components/feature_engagement/public/configuration_provider.h"

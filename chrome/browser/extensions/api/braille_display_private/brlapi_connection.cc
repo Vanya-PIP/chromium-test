@@ -10,7 +10,7 @@
 #include <string>
 
 #include "base/files/file_descriptor_watcher_posix.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/memory/raw_ptr.h"
 #include "base/system/sys_info.h"

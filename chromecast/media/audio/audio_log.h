@@ -7,7 +7,7 @@
 
 #include <ostream>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace logging {
 

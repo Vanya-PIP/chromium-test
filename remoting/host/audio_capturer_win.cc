@@ -18,7 +18,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/synchronization/lock.h"
 #include "remoting/host/win/default_audio_device_change_detector.h"

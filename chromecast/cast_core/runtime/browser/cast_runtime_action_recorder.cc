@@ -5,7 +5,7 @@
 #include "chromecast/cast_core/runtime/browser/cast_runtime_action_recorder.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/user_metrics.h"
 
 namespace chromecast {

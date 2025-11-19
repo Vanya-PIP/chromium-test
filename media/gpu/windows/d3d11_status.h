@@ -9,7 +9,7 @@
 
 #include <sstream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "media/base/status.h"
 

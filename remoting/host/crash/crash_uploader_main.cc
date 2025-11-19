@@ -6,7 +6,7 @@
 
 #include "base/at_exit.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/message_loop/message_pump_type.h"
 #include "base/run_loop.h"
@@ -15,7 +15,7 @@
 #include "base/task/single_thread_task_runner.h"
 #include "base/task/thread_pool/thread_pool_instance.h"
 #include "mojo/core/embedder/embedder.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/base/host_exit_codes.h"
 #include "remoting/host/crash/minidump_handler.h"
 

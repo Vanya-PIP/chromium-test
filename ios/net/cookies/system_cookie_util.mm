@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <stddef.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_macros.h"
 #import "base/strings/sys_string_conversions.h"
 #import "net/cookies/cookie_constants.h"

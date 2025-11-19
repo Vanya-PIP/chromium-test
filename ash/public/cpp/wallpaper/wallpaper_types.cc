@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/types/cxx23_to_underlying.h"
 

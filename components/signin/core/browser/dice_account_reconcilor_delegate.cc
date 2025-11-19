@@ -9,7 +9,7 @@
 
 #include "base/containers/contains.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "components/prefs/pref_service.h"
 #include "components/signin/public/base/consent_level.h"

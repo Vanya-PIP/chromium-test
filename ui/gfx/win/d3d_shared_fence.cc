@@ -5,7 +5,7 @@
 #include "ui/gfx/win/d3d_shared_fence.h"
 
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 
 #include <dxgi1_6.h>

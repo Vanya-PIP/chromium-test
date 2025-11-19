@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "base/i18n/case_conversion.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/notification.h"
 
 namespace ash::phonehub {

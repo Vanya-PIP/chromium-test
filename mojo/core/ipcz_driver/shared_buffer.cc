@@ -14,7 +14,7 @@
 #include <utility>
 
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/notreached.h"
 #include "base/unguessable_token.h"

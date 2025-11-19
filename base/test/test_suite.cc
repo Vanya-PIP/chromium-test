@@ -31,7 +31,7 @@
 #include "base/functional/bind.h"
 #include "base/i18n/icu_util.h"
 #include "base/i18n/rtl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/statistics_recorder.h"

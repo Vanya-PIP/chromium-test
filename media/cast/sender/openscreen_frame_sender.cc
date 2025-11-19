@@ -12,7 +12,7 @@
 
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/trace_event/trace_event.h"
 #include "media/base/media_switches.h"

@@ -5,7 +5,7 @@
 #include "media/cdm/cdm_module.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/not_fatal_until.h"

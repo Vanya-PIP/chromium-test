@@ -5,7 +5,7 @@
 #include "ash/metrics/stylus_metrics_recorder.h"
 
 #include "ash/shell.h"
-#include "base/logging.h"
+#include "base/test"
 
 /* Emit metrics related to stylus utilization:
  *   StylusDetachedFromGarageSession

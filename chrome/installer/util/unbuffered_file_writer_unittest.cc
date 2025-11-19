@@ -16,7 +16,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/gmock_expected_support.h"
 #include "base/test/metrics/histogram_tester.h"
 #include "testing/gmock/include/gmock/gmock.h"

@@ -17,7 +17,7 @@
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/credential_provider/gaiacp/gcp_utils.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/reg_utils.h"
 
 namespace credential_provider {

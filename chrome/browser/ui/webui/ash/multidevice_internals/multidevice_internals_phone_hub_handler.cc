@@ -17,7 +17,7 @@
 #include "base/values.h"
 #include "chrome/browser/ash/phonehub/phone_hub_manager_factory.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/camera_roll_item.h"
 #include "chromeos/ash/components/phonehub/fake_phone_hub_manager.h"
 #include "chromeos/ash/components/phonehub/notification.h"

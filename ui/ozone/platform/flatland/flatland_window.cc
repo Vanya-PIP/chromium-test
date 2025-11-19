@@ -17,7 +17,7 @@
 
 #include "base/check_op.h"
 #include "base/fuchsia/fuchsia_component_connect.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/notimplemented.h"

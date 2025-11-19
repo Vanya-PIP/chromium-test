@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "services/webnn/ort/scoped_ort_types.h"
 
 struct OrtStatus;

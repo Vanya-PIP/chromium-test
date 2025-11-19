@@ -5,7 +5,7 @@
 #include "net/cert/qwac.h"
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/boringssl/src/pki/parser.h"
 
 namespace net {

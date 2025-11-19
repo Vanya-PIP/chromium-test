@@ -6,7 +6,7 @@
 
 #include <Security/Security.h>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/location.h"

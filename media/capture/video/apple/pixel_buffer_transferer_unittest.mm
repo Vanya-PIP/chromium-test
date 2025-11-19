@@ -7,7 +7,7 @@
 #include <cmath>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "media/capture/video/apple/pixel_buffer_pool.h"
 #include "media/capture/video/apple/test/pixel_buffer_test_utils.h"

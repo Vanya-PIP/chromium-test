@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/scoped_feature_list.h"
 #include "base/time/time.h"
 #include "components/media_router/common/providers/cast/certificate/cast_cert_reader.h"

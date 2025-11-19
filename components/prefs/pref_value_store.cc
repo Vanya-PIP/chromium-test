@@ -9,7 +9,7 @@
 #include <string>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/prefs/pref_notifier.h"
 
 PrefValueStore::PrefStoreKeeper::PrefStoreKeeper()

@@ -4,7 +4,7 @@
 
 #include "ui/ozone/platform/headless/vulkan_surface_headless.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "gpu/vulkan/vulkan_function_pointers.h"
 #include "ui/gfx/native_ui_types.h"
 

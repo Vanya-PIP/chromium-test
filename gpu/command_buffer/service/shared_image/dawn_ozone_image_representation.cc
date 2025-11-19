@@ -7,7 +7,7 @@
 #include <dawn/native/VulkanBackend.h>
 #include <vulkan/vulkan.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/memory/scoped_refptr.h"
 #include "gpu/command_buffer/service/memory_tracking.h"

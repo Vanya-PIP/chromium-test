@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/tab_groups/tab_group_id.h"
 #include "components/tab_groups/tab_group_visual_data.h"
 #include "components/tabs/public/tab_collection.h"

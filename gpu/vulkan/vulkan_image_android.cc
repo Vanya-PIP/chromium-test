@@ -6,9 +6,9 @@
 
 #include <android/hardware_buffer.h>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "gpu/vulkan/vulkan_device_queue.h"
 #include "gpu/vulkan/vulkan_function_pointers.h"
 

@@ -17,7 +17,7 @@
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace ash {
 namespace quick_pair {

@@ -8,7 +8,7 @@
 #include <variant>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/openscreen/src/platform/base/span.h"
 
 namespace mirroring {

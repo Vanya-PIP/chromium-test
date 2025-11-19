@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/sync/engine/net/server_connection_manager.h"
 #include "components/sync/engine/sync_cycle_event.h"
 

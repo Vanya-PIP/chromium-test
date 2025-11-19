@@ -14,7 +14,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/task/sequenced_task_runner.h"
@@ -451,7 +451,7 @@ bool WebRtcRemoteEventLogManager::StartRemoteLogging(
   }
 
   if (!BrowserContextEnabled(browser_context_id)) {
-    // Remote-bound event logging has either not yet been enabled for this
+    // Remote-bound event testas either not yet been enabled for this
     // BrowserContext, or has been recently disabled. This error should not
     // really be reached, barring a timing issue.
     *error_message = kStartRemoteLoggingFailureLoggingDisabledBrowserContext;

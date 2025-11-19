@@ -7,7 +7,7 @@
 #include <set>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notimplemented.h"
 #include "base/run_loop.h"

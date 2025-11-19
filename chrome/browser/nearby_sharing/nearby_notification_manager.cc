@@ -40,7 +40,7 @@
 #include "chrome/browser/ui/settings_window_manager_chromeos.h"
 #include "chrome/grit/generated_resources.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_share_settings.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_service.h"
 #include "content/public/browser/browser_thread.h"
 #include "content/public/browser/download_manager.h"

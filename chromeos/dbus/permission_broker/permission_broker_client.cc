@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "chromeos/dbus/permission_broker/fake_permission_broker_client.h"

@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "base/containers/contains.h"
 #include "base/dcheck_is_on.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"

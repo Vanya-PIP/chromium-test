@@ -654,7 +654,7 @@ void TabletModeController::OnECLidAngleDriverStatusChanged(bool is_supported) {
   // StartTrackingTabletUsageMetricsIfApplicable() before or after
   // `!is_supported` won't make any difference. The reason is that for
   // `!is_supported` case, because we haven't seen any accelerometer data yet,
-  // we won't start logging here anyway.
+  // we won't start testere anyway.
   // OnECLidAngleDriverStatusChanged can be called before or after
   // TabletModeEventReceived. Thus we'll need the logging both here and in
   // TabletModeEventReceived function.

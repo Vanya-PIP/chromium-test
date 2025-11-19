@@ -7,7 +7,7 @@
 #include <list>
 #include <map>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/string_util.h"

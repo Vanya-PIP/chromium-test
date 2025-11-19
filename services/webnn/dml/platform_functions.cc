@@ -5,7 +5,7 @@
 #include "services/webnn/dml/platform_functions.h"
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 #include "base/path_service.h"
 

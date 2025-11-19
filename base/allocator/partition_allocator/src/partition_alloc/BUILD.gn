@@ -642,7 +642,7 @@ if (is_clang_or_gcc) {
       "partition_alloc_base/log_message.cc",
       "partition_alloc_base/log_message.h",
       "partition_alloc_base/logging.cc",
-      "partition_alloc_base/logging.h",
+      "partition_alloc_base/test",
       "partition_alloc_base/memory/page_size.h",
       "partition_alloc_base/memory/ref_counted.cc",
       "partition_alloc_base/memory/ref_counted.h",
@@ -748,7 +748,7 @@ if (is_clang_or_gcc) {
     if (is_fuchsia) {
       sources += [
         "partition_alloc_base/fuchsia/fuchsia_logging.cc",
-        "partition_alloc_base/fuchsia/fuchsia_logging.h",
+        "partition_alloc_base/fuchsia/fuchsia_test",
         "partition_alloc_base/memory/page_size_posix.cc",
         "partition_alloc_base/posix/safe_strerror.cc",
         "partition_alloc_base/posix/safe_strerror.h",
@@ -779,7 +779,7 @@ if (is_clang_or_gcc) {
         "partition_alloc_base/apple/foundation_util.h",
         "partition_alloc_base/apple/foundation_util.mm",
         "partition_alloc_base/apple/mach_logging.cc",
-        "partition_alloc_base/apple/mach_logging.h",
+        "partition_alloc_base/apple/mach_test",
         "partition_alloc_base/apple/scoped_cftyperef.h",
         "partition_alloc_base/apple/scoped_typeref.h",
       ]

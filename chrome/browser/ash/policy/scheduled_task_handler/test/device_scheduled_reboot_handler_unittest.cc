@@ -8,7 +8,7 @@
 
 #include "ash/constants/ash_pref_names.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/test/bind.h"
 #include "base/test/mock_log.h"

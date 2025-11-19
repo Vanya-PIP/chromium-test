@@ -7,7 +7,7 @@
 #include <array>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_view_util.h"
 #include "crypto/kex.h"
 #include "crypto/keypair.h"

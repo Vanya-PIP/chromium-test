@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/version.h"
 #include "components/signin/public/base/gaia_id_hash.h"

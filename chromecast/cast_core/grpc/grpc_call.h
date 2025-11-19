@@ -9,7 +9,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chromecast/cast_core/grpc/grpc_call_options.h"
 

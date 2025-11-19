@@ -9,7 +9,7 @@
 
 #include "base/command_line.h"
 #include "base/environment.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/ozone_buildflags.h"
 #include "ui/ozone/public/ozone_switches.h"
 

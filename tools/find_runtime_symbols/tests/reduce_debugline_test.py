@@ -34,24 +34,24 @@ class ReduceDebuglineTest(unittest.TestCase):
 
       message_loop.h                               551            0xa41310
 
-      ../../base/logging.h:
-      logging.h                                    246            0xa41710
+      ../../base/test:
+      test                                    246            0xa41710
 
-      logging.h                                    247            0xa41726
+      test                                    247            0xa41726
 
-      ../../base/logging.h:
-      logging.h                                    846            0xa3fd90
+      ../../base/test:
+      test                                    846            0xa3fd90
 
-      logging.h                                    846            0xa3fda0
+      test                                    846            0xa3fda0
 
       """)
 
   _EXPECTED_REDUCED_DEBUGLINE = [
-      (0xa3fd90, '../../base/logging.h'),
+      (0xa3fd90, '../../base/test'),
       (0xa41210, '../../chrome/service/service_main.cc'),
       (0xa41300, '../../base/message_loop.h'),
       (0xa4141f, '../../chrome/service/service_main.cc'),
-      (0xa41710, '../../base/logging.h'),
+      (0xa41710, '../../base/test'),
       ]
 
   def test(self):

@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "chromeos/ash/experiences/arc/arc_browser_context_keyed_service_factory_base.h"
 #include "chromeos/ash/experiences/arc/arc_features.h"

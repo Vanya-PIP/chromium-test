@@ -6,7 +6,7 @@
 
 #include "chrome/services/sharing/public/cpp/advertisement.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_util.h"
 

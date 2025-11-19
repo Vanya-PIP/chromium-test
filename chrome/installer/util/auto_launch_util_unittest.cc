@@ -4,7 +4,7 @@
 
 #include "chrome/installer/util/auto_launch_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/scoped_path_override.h"
 #include "chrome/common/chrome_paths.h"
 #include "testing/gtest/include/gtest/gtest.h"

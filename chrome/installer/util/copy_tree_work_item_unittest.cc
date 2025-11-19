@@ -12,7 +12,7 @@
 #include "base/base_paths.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/threading/platform_thread.h"
 #include "chrome/installer/util/work_item.h"

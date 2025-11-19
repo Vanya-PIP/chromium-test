@@ -15,7 +15,7 @@
 #include <limits>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/trace_event/trace_event.h"

@@ -14,7 +14,7 @@
 #include "ash/wallpaper/wallpaper_controller_impl.h"
 #include "ash/webui/personalization_app/mojom/personalization_app.mojom-shared.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/system_web_apps/apps/personalization_app/personalization_app_metrics.h"
 #include "chrome/browser/ash/system_web_apps/apps/personalization_app/personalization_app_utils.h"
 #include "chrome/browser/profiles/profile.h"

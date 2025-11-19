@@ -4,7 +4,7 @@
 
 #include "media/fuchsia/audio/fake_audio_device_enumerator.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 

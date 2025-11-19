@@ -10,7 +10,7 @@
 
 #include "base/apple/scoped_cftyperef.h"
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "ui/base/accelerators/accelerator.h"
 

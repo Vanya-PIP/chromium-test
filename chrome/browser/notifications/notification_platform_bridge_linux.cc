@@ -26,7 +26,7 @@
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
 #include "base/i18n/number_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/ref_counted_memory.h"

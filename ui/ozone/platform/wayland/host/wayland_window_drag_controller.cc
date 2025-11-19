@@ -16,7 +16,7 @@
 #include "base/check.h"
 #include "base/containers/contains.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/memory/weak_ptr.h"
 #include "base/notreached.h"

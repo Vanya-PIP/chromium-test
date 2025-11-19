@@ -9,7 +9,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/notreached.h"
 #include "build/build_config.h"

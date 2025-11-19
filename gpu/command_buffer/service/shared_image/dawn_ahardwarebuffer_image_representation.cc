@@ -6,7 +6,7 @@
 
 #include <dawn/native/VulkanBackend.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "gpu/config/gpu_finch_features.h"
 #include "third_party/abseil-cpp/absl/cleanup/cleanup.h"
 

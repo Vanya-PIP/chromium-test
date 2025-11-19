@@ -11,7 +11,7 @@
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_functions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/software_feature.h"
 #include "chromeos/ash/components/multidevice/software_feature_state.h"
 #include "chromeos/ash/services/device_sync/async_execution_time_metrics_logger.h"

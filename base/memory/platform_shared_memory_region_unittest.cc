@@ -27,12 +27,12 @@
 #elif BUILDFLAG(IS_WIN)
 #include <windows.h>
 
-#include "base/logging.h"
+#include "base/test"
 #elif BUILDFLAG(IS_FUCHSIA)
 #include <lib/zx/object.h>
 #include <lib/zx/process.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #endif
 
 using base::test::ErrorIs;

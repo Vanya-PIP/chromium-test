@@ -4,7 +4,7 @@
 
 #include "chrome/browser/enterprise/reporting/real_time_report_generator_desktop.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/enterprise/browser/reporting/real_time_report_type.h"
 #include "components/enterprise/common/proto/synced/extensions_workflow_events.pb.h"

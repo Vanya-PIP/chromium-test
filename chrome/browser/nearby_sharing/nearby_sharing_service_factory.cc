@@ -21,7 +21,7 @@
 #include "chromeos/ash/components/browser_context_helper/browser_context_helper.h"
 #include "chromeos/ash/components/nearby/common/connections_manager/nearby_connections_manager.h"
 #include "chromeos/ash/components/nearby/common/connections_manager/nearby_connections_manager_impl.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/pref_registry/pref_registry_syncable.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"

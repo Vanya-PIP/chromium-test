@@ -4,7 +4,7 @@
 
 #include "ui/accessibility/platform/inspect/ax_call_statement_invoker_win.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/win/scoped_bstr.h"
 #include "ui/accessibility/platform/inspect/ax_inspect_utils_win.h"

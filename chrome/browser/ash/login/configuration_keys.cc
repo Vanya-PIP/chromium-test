@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/login/configuration_keys.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 namespace configuration {

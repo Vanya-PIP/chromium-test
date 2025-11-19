@@ -13,7 +13,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/app_mode/pref_names.h"
 #include "chrome/browser/lifetime/application_lifetime.h"
 #include "chromeos/ash/components/cryptohome/error_util.h"

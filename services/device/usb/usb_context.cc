@@ -7,7 +7,7 @@
 #include <atomic>
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/threading/simple_thread.h"
 #include "base/threading/thread_restrictions.h"

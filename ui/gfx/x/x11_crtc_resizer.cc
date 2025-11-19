@@ -12,7 +12,7 @@
 #include "base/check.h"
 #include "base/containers/adapters.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/stl_util.h"
 #include "ui/gfx/geometry/vector2d.h"
 #include "ui/gfx/x/connection.h"

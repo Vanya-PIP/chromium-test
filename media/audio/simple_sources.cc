@@ -14,7 +14,7 @@
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/thread_annotations.h"
 #include "base/time/time.h"

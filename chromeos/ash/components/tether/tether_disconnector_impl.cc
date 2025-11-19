@@ -6,7 +6,7 @@
 
 #include "base/metrics/histogram_macros.h"
 #include "base/values.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/network/network_connection_handler.h"
 #include "chromeos/ash/components/network/network_state.h"
 #include "chromeos/ash/components/network/network_state_handler.h"

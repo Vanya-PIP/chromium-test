@@ -7,7 +7,7 @@
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
 #include "chromeos/ash/components/dbus/easy_unlock/easy_unlock_client.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "third_party/cros_system_api/dbus/service_constants.h"
 
 namespace ash::multidevice {

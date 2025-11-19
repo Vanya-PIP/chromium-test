@@ -9,7 +9,7 @@
 
 #include "base/check.h"
 #include "base/check_deref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/common/pref_names.h"
 #include "components/account_id/account_id.h"

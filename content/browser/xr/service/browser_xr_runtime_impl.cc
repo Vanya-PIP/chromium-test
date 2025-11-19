@@ -10,7 +10,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "build/build_config.h"
 #include "content/browser/xr/service/vr_service_impl.h"

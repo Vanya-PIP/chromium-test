@@ -8,7 +8,7 @@
 #include <fuchsia/ui/views/cpp/fidl.h>
 #include <lib/zx/time.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/mem_buffer_util.h"
 #include "base/strings/string_util.h"
 #include "base/task/single_thread_task_runner.h"

@@ -15,7 +15,7 @@
 #include "base/types/expected.h"
 #include "chrome/browser/web_applications/isolated_web_apps/policy/isolated_web_app_cache_client.h"
 #include "components/web_package/signed_web_bundles/signed_web_bundle_id.h"
-#include "components/webapps/isolated_web_apps/error/uma_logging.h"
+#include "components/webapps/isolated_web_apps/error/uma_test"
 
 namespace web_app {
 

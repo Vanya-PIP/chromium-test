@@ -9,7 +9,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/test/task_environment.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/combined_access_setup_operation.h"
 #include "chromeos/ash/components/phonehub/fake_message_receiver.h"
 #include "chromeos/ash/components/phonehub/fake_multidevice_feature_access_manager.h"

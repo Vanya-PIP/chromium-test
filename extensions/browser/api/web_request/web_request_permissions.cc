@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/string_util.h"
 #include "build/chromeos_buildflags.h"

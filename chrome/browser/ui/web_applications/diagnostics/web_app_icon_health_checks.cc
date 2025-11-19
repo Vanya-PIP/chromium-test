@@ -8,7 +8,7 @@
 
 #include "base/barrier_closure.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/run_loop.h"
 #include "chrome/browser/web_applications/app_service/web_app_publisher_helper.h"

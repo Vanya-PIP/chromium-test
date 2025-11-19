@@ -4,7 +4,7 @@
 
 #include "chrome/test/base/ash/interactive/cellular/esim_name_observer.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "dbus/object_path.h"
 #include "third_party/cros_system_api/dbus/hermes/dbus-constants.h"
 

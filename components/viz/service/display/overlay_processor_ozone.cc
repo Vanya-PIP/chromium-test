@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/timer/elapsed_timer.h"
 #include "build/build_config.h"

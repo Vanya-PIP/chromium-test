@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/string_matching/fuzzy_tokenized_string_match.h"
 
 #include "base/containers/adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/time/time.h"

@@ -12,7 +12,7 @@
 #include <ostream>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/angle_conversions.h"
 #include "cc/trees/layer_tree_host.h"
 #include "ui/compositor/layer.h"

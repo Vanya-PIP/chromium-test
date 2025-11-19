@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/voice/model/text_to_speech_parser.h"
 
 #import "base/base64.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "base/values.h"
 #import "ios/web/public/js_messaging/web_frame.h"

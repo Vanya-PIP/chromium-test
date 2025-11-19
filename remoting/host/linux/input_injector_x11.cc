@@ -21,7 +21,7 @@
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"
 #include "build/build_config.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/clipboard.h"
 #include "remoting/host/linux/input_injector_constants_linux.h"
 #include "remoting/host/linux/unicode_to_keysym.h"

@@ -4,7 +4,7 @@
 
 #include "services/tracing/public/cpp/perfetto/track_name_recorder.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/no_destructor.h"
 #include "base/process/current_process.h"
 #include "base/rand_util.h"

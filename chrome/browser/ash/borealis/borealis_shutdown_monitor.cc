@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/borealis/borealis_shutdown_monitor.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "chrome/browser/ash/borealis/borealis_context_manager.h"
 #include "chrome/browser/ash/borealis/borealis_service.h"

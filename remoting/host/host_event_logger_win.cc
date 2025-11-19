@@ -12,7 +12,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/strings/utf_string_conversions.h"
 #include "net/base/ip_endpoint.h"

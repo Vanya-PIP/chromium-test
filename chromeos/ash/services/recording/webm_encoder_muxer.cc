@@ -7,7 +7,7 @@
 #include "base/check_op.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/notreached.h"
 #include "base/task/sequenced_task_runner.h"

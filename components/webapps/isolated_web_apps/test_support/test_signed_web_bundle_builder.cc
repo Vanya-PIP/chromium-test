@@ -12,7 +12,7 @@
 #include "base/containers/span.h"
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/threading/thread_restrictions.h"
 #include "components/web_package/test_support/signed_web_bundles/web_bundle_signer.h"

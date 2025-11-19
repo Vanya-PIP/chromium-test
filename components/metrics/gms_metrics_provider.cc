@@ -5,7 +5,7 @@
 #include "components/metrics/gms_metrics_provider.h"
 
 #include "base/android/device_info.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_number_conversions.h"
 

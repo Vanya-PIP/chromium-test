@@ -188,7 +188,7 @@ static_library("devtools") {
       "url_constants.cc",
       "url_constants.h",
       "visual_logging.cc",
-      "visual_logging.h",
+      "visual_test",
     ]
     deps += [
       "//chrome/browser:browser_process",

@@ -8,7 +8,7 @@
 #include "base/containers/fixed_flat_map.h"
 #include "base/containers/flat_set.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"
 #include "ui/gfx/geometry/size.h"

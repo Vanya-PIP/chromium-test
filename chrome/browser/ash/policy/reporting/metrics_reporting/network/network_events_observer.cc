@@ -10,7 +10,7 @@
 #include "base/check.h"
 #include "base/containers/contains.h"
 #include "base/containers/queue.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "chrome/browser/ash/net/network_health/network_health_manager.h"
 #include "chrome/browser/ash/policy/reporting/metrics_reporting/network/network_telemetry_sampler.h"

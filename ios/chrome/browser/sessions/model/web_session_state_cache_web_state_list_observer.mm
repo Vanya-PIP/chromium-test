@@ -4,7 +4,7 @@
 
 #import "ios/chrome/browser/sessions/model/web_session_state_cache_web_state_list_observer.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "ios/chrome/browser/sessions/model/web_session_state_cache.h"
 #import "ios/chrome/browser/sessions/model/web_session_state_tab_helper.h"
 #import "ios/chrome/browser/shared/model/profile/profile_ios.h"

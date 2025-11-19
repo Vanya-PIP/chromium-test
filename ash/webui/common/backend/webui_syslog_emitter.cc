@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 
 namespace ash {
 

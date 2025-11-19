@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 
-#include "chrome/test/chromedriver/logging.h"
+#include "chrome/test/chromedriver/test"
 
 #include <stddef.h>
 

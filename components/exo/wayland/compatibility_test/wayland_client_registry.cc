@@ -6,7 +6,7 @@
 #include <wayland-client-protocol.h>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/exo/wayland/compatibility_test/wayland_client_registry.h"
 
 namespace exo {

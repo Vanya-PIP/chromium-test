@@ -10,7 +10,7 @@
 #include "base/files/file_path.h"
 #include "base/files/memory_mapped_file.h"
 #include "base/i18n/rtl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/posix/global_descriptors.h"
 #include "base/trace_event/trace_event.h"

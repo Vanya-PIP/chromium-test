@@ -10,7 +10,7 @@
 #include "ash/public/mojom/input_device_settings.mojom.h"
 #include "ash/shell.h"
 #include "ash/system/input_device_settings/input_device_settings_defaults.h"
-#include "ash/system/input_device_settings/input_device_settings_logging.h"
+#include "ash/system/input_device_settings/input_device_settings_test"
 #include "ash/system/input_device_settings/input_device_settings_metadata.h"
 #include "ash/system/input_device_settings/input_device_settings_pref_names.h"
 #include "ash/system/input_device_settings/input_device_settings_utils.h"

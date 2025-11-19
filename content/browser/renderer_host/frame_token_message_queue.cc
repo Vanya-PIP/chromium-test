@@ -4,7 +4,7 @@
 
 #include "content/browser/renderer_host/frame_token_message_queue.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/strings/string_number_conversions.h"

@@ -9,7 +9,7 @@
 #include <memory>
 
 #include "base/apple/scoped_mach_port.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/test_timeouts.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

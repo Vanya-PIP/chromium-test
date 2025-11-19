@@ -16,7 +16,7 @@
 #include "base/android/path_utils.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/process/process_metrics.h"
 

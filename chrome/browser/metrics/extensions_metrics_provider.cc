@@ -13,7 +13,7 @@
 #include <vector>
 
 #include "base/hash/legacy_hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"

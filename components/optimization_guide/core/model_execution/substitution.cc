@@ -14,7 +14,7 @@
 #include <vector>
 
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"
 #include "components/optimization_guide/core/model_execution/multimodal_message.h"

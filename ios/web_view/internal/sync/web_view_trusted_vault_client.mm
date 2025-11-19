@@ -13,7 +13,7 @@
 
 #import "base/check.h"
 #import "base/functional/callback.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/notreached.h"
 #import "base/strings/sys_string_conversions.h"
 #import "components/signin/public/identity_manager/account_info.h"

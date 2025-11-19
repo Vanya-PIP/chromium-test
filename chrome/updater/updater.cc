@@ -13,7 +13,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/process/memory.h"
 #include "base/process/process_handle.h"
@@ -82,7 +82,7 @@ namespace {
 
 void ReinitializeLoggingAfterCrashHandler(UpdaterScope updater_scope) {
   // Initializing the logging more than two times is not supported. In this
-  // case, logging has been initialized once in the updater main, and the
+  // case, testas been initialized once in the updater main, and the
   // the second time by the crash handler.
   // Reinitializing the log is not possible if the vlog switch is
   // already present on the command line. The code in this function relies

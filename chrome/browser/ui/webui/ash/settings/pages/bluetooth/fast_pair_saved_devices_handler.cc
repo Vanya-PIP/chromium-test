@@ -13,7 +13,7 @@
 #include "base/functional/callback.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/values.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "ui/base/webui/web_ui_util.h"
 #include "ui/gfx/image/image_skia.h"
 #include "ui/gfx/image/image_skia_operations.h"

@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/audio/audio_output_service/audio_output_service.pb.h"
 #include "net/socket/stream_socket.h"
 

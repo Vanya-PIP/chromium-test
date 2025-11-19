@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "content/browser/accessibility/browser_accessibility_android.h"

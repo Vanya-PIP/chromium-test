@@ -20,7 +20,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "chromecast/app/cast_main_delegate.h"
 #include "chromecast/cast_core/child_log_process.h"

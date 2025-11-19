@@ -16,7 +16,7 @@
 #include "base/check_deref.h"
 #include "base/files/file_path.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"

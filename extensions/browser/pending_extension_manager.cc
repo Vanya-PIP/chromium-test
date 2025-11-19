@@ -9,7 +9,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/flat_set.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/version.h"
 #include "build/build_config.h"

@@ -7,7 +7,7 @@
 #include <sstream>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 
 namespace syncer::internal {

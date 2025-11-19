@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/extensions/speech/speech_recognition_private_recognizer.h"
 
 #include "ash/public/cpp/projector/speech_recognition_availability.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "chrome/browser/ash/extensions/speech/speech_recognition_private_manager.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/speech/network_speech_recognizer.h"

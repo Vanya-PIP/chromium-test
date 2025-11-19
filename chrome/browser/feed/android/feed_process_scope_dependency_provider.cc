@@ -5,7 +5,7 @@
 #include "base/android/jni_android.h"
 #include "base/android/jni_array.h"
 #include "base/android/jni_string.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/feed/android/jni_translation.h"
 #include "chrome/browser/feed/feed_service_factory.h"
 #include "chrome/browser/profiles/profile.h"

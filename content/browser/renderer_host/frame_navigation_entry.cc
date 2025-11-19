@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/debug/alias.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/strings/utf_string_conversions.h"
 #include "third_party/blink/public/common/page_state/page_state_serialization.h"
 

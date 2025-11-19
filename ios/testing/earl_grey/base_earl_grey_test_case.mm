@@ -8,7 +8,7 @@
 #import <objc/runtime.h>
 
 #import "base/feature_list.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/testing/earl_grey/app_launch_configuration.h"
 #import "ios/testing/earl_grey/app_launch_manager.h"

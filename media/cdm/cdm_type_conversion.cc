@@ -6,7 +6,7 @@
 
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/not_fatal_until.h"
 #include "base/numerics/safe_conversions.h"
 #include "ui/gfx/color_space.h"

@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/callback.h"
-#include "remoting/client/common/logging.h"
+#include "remoting/client/common/test"
 #include "remoting/proto/audio.pb.h"
 
 namespace remoting {

@@ -4,7 +4,7 @@
 
 #include "components/network_time/time_tracker/time_tracker.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace {
 // Amount of divergence allowed between wall clock and tick clock.

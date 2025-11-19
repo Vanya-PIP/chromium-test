@@ -11,7 +11,7 @@
 #include <string_view>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversions.h"
@@ -23,7 +23,7 @@
 #include "chrome/credential_provider/gaiacp/gcp_utils.h"
 #include "chrome/credential_provider/gaiacp/gcpw_strings.h"
 #include "chrome/credential_provider/gaiacp/internet_availability_checker.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/mdm_utils.h"
 #include "chrome/credential_provider/gaiacp/os_user_manager.h"
 #include "chrome/credential_provider/gaiacp/reg_utils.h"

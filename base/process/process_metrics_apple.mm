@@ -14,11 +14,11 @@
 
 #include <optional>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_mach_port.h"
 #include "base/byte_count.h"
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/memory/ptr_util.h"
 #include "base/notimplemented.h"

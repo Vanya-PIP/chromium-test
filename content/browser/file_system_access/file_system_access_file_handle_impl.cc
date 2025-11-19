@@ -9,7 +9,7 @@
 #include "base/files/safe_base_name.h"
 #include "base/functional/callback_forward.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

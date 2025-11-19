@@ -12,7 +12,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/task/single_thread_task_runner.h"
 #include "chromeos/dbus/permission_broker/permission_broker_client.h"

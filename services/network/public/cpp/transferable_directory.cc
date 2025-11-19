@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "services/network/public/cpp/transferable_directory.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "services/network/public/cpp/network_service_buildflags.h"
 

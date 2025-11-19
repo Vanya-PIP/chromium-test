@@ -12,7 +12,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/pickle.h"
 #include "net/disk_cache/disk_cache.h"
 #include "net/disk_cache/simple/simple_backend_version.h"

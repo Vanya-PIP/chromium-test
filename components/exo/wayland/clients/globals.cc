@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace exo::wayland::clients {
 namespace {

@@ -7,7 +7,7 @@
 #include <cmath>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 
 namespace arc::input_overlay {

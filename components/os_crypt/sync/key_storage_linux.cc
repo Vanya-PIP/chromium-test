@@ -8,7 +8,7 @@
 
 #include "base/environment.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/nix/xdg_util.h"
 #include "base/no_destructor.h"

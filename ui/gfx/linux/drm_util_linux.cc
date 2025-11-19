@@ -6,7 +6,7 @@
 
 #include <drm_fourcc.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/viz/common/resources/shared_image_format.h"
 

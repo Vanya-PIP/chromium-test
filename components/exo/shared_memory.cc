@@ -9,7 +9,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "components/exo/buffer.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"

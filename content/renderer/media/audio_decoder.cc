@@ -11,7 +11,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_util.h"
 #include "base/strings/to_string.h"

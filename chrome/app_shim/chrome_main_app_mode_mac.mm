@@ -14,7 +14,7 @@
 #include "base/allocator/early_zone_registration_apple.h"
 #include "base/apple/bundle_locations.h"
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/at_exit.h"
 #include "base/base_switches.h"
 #include "base/check.h"

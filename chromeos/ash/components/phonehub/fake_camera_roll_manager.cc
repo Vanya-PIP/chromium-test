@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/phonehub/fake_camera_roll_manager.h"
 
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/proto/phonehub_api.pb.h"
 
 namespace ash::phonehub {

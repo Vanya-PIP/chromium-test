@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"

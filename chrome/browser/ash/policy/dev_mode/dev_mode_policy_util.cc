@@ -6,7 +6,7 @@
 
 #include "ash/constants/ash_switches.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/system/sys_info.h"
 #include "components/policy/proto/chrome_device_policy.pb.h"
 #include "components/policy/proto/device_management_backend.pb.h"

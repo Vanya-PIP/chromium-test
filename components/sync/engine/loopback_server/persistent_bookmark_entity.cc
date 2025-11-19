@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/uuid.h"
 #include "components/sync/base/client_tag_hash.h"
 #include "components/sync/protocol/entity_specifics.pb.h"

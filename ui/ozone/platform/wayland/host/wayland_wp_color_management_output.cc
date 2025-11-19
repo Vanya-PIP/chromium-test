@@ -4,7 +4,7 @@
 
 #include "ui/ozone/platform/wayland/host/wayland_wp_color_management_output.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gfx/display_color_spaces.h"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"
 #include "ui/ozone/platform/wayland/host/wayland_output.h"

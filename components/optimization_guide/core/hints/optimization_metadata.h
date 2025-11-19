@@ -7,7 +7,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/optimization_guide/core/optimization_guide_util.h"
 #include "components/optimization_guide/proto/hints.pb.h"
 

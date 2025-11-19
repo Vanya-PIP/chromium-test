@@ -13,7 +13,7 @@
 #include "base/apple/foundation_util.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_policy.h"
 #include "base/strings/pattern.h"
 #include "base/strings/sys_string_conversions.h"

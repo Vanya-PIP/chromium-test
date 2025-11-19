@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/data_migration/device.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace data_migration {
 

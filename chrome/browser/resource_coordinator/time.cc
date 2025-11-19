@@ -5,7 +5,7 @@
 #include "chrome/browser/resource_coordinator/time.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/clock.h"
 #include "base/time/tick_clock.h"
 

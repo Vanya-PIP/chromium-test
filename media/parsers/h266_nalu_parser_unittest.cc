@@ -7,7 +7,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/subsample_entry.h"
 #include "media/base/test_data_util.h"
 #include "media/parsers/h266_nalu_parser.h"

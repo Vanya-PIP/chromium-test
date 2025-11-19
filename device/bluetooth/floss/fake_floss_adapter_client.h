@@ -8,7 +8,7 @@
 #include <string>
 #include <unordered_set>
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/bluetooth/bluetooth_export.h"
 #include "device/bluetooth/floss/floss_adapter_client.h"
 

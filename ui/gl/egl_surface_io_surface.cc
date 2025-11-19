@@ -5,7 +5,7 @@
 #include "ui/gl/egl_surface_io_surface.h"
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gl/gl_bindings.h"
 
 // Enums for the EGL_ANGLE_iosurface_client_buffer extension

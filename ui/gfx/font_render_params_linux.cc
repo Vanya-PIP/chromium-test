@@ -12,7 +12,7 @@
 
 #include "base/command_line.h"
 #include "base/containers/lru_cache.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"

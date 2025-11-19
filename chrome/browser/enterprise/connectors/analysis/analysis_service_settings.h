@@ -9,7 +9,7 @@
 #include <optional>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/values.h"
 #include "build/build_config.h"

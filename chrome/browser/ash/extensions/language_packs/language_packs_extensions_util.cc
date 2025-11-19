@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/extensions/language_packs/language_packs_extensions_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/common/extensions/api/input_method_private.h"
 #include "chromeos/ash/components/language_packs/language_pack_manager.h"
 

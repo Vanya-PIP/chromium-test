@@ -31,7 +31,7 @@
 #include "ash/webui/grit/ash_diagnostics_app_resources_map.h"
 #include "base/containers/span.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"

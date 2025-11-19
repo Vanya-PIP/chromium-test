@@ -9,7 +9,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/stl_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "components/device_event_log/device_event_log.h"

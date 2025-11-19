@@ -9,7 +9,7 @@
 
 #include "base/check.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/values.h"
 #include "content/public/browser/render_frame_host.h"

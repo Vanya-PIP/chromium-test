@@ -11,7 +11,7 @@
 #include "base/check.h"
 #include "base/feature_list.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"

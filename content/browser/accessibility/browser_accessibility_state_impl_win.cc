@@ -13,7 +13,7 @@
 #include "base/callback_list.h"
 #include "base/check_deref.h"
 #include "base/containers/heap_array.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"

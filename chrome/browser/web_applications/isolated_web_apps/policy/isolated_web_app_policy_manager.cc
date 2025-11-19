@@ -26,7 +26,7 @@
 #include "base/functional/callback_forward.h"
 #include "base/functional/callback_helpers.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/no_destructor.h"

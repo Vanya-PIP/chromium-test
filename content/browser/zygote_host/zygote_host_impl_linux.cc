@@ -10,7 +10,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/files/file_enumerator.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/unix_domain_socket.h"
 #include "base/process/kill.h"
 #include "base/process/memory.h"

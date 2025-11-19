@@ -10,7 +10,7 @@
 #define _GNU_SOURCE
 #endif
 
-#include "base/logging.h"
+#include "base/test"
 
 #include <errno.h>
 #include <sys/time.h>

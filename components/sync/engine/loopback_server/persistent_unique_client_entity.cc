@@ -4,7 +4,7 @@
 
 #include "components/sync/engine/loopback_server/persistent_unique_client_entity.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "base/strings/string_number_conversions.h"
 #include "components/sync/base/client_tag_hash.h"

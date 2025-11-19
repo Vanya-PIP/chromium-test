@@ -12,7 +12,7 @@
 #if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC)
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #endif
 
 namespace named_mojo_ipc_server {

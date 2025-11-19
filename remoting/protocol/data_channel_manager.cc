@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/protocol/message_pipe.h"
 
 namespace remoting::protocol {

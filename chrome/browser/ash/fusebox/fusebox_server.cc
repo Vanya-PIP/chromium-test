@@ -13,7 +13,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/strings/escape.h"
 #include "base/strings/strcat.h"

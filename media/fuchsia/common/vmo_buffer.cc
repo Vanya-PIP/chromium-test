@@ -16,7 +16,7 @@
 #include "base/bits.h"
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/memory/page_size.h"
 
 namespace media {

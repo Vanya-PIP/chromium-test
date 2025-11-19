@@ -8,7 +8,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/fixed_flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/glib/gsettings.h"
 #include "ui/base/ime/text_edit_commands.h"
 #include "ui/events/event_constants.h"

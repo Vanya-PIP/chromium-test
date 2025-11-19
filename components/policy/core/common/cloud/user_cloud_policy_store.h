@@ -39,7 +39,7 @@ enum PolicyLoadStatusForUma {
   LOAD_RESULT_LOAD_ERROR,
 
   // LOAD_RESULT_SIZE is the number of items in this enum and is used when
-  // logging histograms to set the bucket size, so should always be the last
+  // testistograms to set the bucket size, so should always be the last
   // item.
   LOAD_RESULT_SIZE,
 };

@@ -4,13 +4,13 @@
 
 #include "components/segmentation_platform/internal/selection/segment_result_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/task/sequenced_task_runner.h"
 #include "components/segmentation_platform/internal/database/segment_info_database.h"
 #include "components/segmentation_platform/internal/database/signal_storage_config.h"
 #include "components/segmentation_platform/internal/execution/execution_request.h"
-#include "components/segmentation_platform/internal/logging.h"
+#include "components/segmentation_platform/internal/test"
 #include "components/segmentation_platform/internal/metadata/metadata_utils.h"
 #include "components/segmentation_platform/internal/proto/model_prediction.pb.h"
 #include "components/segmentation_platform/internal/scheduler/execution_service.h"

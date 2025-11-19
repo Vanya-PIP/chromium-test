@@ -22,7 +22,7 @@
 #include "chromeos/ash/components/nearby/presence/proto/list_shared_credentials_rpc.pb.h"
 #include "chromeos/ash/components/nearby/presence/proto/rpc_resources.pb.h"
 #include "chromeos/ash/components/nearby/presence/proto/update_device_rpc.pb.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_service.h"
 #include "components/signin/public/identity_manager/identity_manager.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"

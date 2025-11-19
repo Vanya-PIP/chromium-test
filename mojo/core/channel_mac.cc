@@ -20,7 +20,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_mach_port.h"
 #include "base/apple/scoped_mach_vm.h"
 #include "base/containers/buffer_iterator.h"
@@ -28,7 +28,7 @@
 #include "base/containers/span.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/scoped_mach_msg_destroy.h"
 #include "base/message_loop/message_pump_for_io.h"
 #include "base/numerics/byte_conversions.h"

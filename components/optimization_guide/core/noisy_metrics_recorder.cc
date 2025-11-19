@@ -7,7 +7,7 @@
 #include <cmath>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 
 NoisyMetricsRecorder::NoisyMetricsRecorder() = default;

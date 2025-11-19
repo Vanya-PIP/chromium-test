@@ -7,7 +7,7 @@
 #pragma allow_unsafe_buffers
 #endif
 
-#include "device/fido/win/logging.h"
+#include "device/fido/win/test"
 
 #include <string>
 #include <string_view>

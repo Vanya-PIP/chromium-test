@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/metrics_hashes.h"
 #include "base/time/time.h"
 #include "chromecast/base/hash_util.h"

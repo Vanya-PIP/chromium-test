@@ -8,10 +8,10 @@
 #include <utility>
 
 #include "base/containers/to_vector.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "cc/base/math_util.h"
 #include "components/viz/common/features.h"
 #include "components/viz/common/quads/compositor_render_pass.h"

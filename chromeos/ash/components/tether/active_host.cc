@@ -7,7 +7,7 @@
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
 #include "base/values.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/components/tether/pref_names.h"
 #include "chromeos/ash/components/tether/tether_host_fetcher.h"

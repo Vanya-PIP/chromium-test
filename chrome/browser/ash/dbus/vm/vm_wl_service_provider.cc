@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/dbus/vm/vm_wl_service_provider.h"
 
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/guest_os/public/guest_os_wayland_server.h"
 #include "chromeos/ash/components/dbus/vm_wl/wl.pb.h"
 #include "dbus/message.h"

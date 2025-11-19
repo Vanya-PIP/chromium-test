@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "ui/display/types/display_configuration_params.h"
 #include "ui/display/types/display_snapshot.h"

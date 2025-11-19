@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/services/device_sync/cryptauth_gcm_manager.h"
 
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/device_sync/pref_names.h"
 #include "components/prefs/pref_registry_simple.h"
 

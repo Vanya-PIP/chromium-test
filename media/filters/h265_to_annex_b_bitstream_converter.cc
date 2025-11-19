@@ -11,7 +11,7 @@
 
 #include <stddef.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/formats/mp4/box_definitions.h"
 #include "media/formats/mp4/hevc.h"
 #include "media/parsers/h265_nalu_parser.h"

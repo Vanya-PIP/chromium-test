@@ -6,7 +6,7 @@
 
 #include "chrome/browser/nearby_sharing/nearby_share_metrics.h"
 #include "chrome/browser/nearby_sharing/transfer_metadata.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace {
 

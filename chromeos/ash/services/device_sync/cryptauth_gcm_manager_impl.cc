@@ -9,7 +9,7 @@
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/device_sync/cryptauth_feature_type.h"
 #include "chromeos/ash/services/device_sync/cryptauth_key_bundle.h"
 #include "chromeos/ash/services/device_sync/pref_names.h"

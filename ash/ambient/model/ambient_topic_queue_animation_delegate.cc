@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "ash/ambient/util/ambient_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "cc/paint/skottie_resource_metadata.h"
 #include "ui/gfx/geometry/size_f.h"

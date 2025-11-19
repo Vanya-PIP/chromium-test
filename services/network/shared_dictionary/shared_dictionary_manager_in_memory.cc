@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "services/network/shared_dictionary/shared_dictionary_storage_in_memory.h"
 

@@ -19,7 +19,7 @@
 #include "ash/webui/grit/ash_focus_mode_resources_map.h"
 #include "base/base64.h"
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"

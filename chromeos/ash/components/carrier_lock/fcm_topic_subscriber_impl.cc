@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/carrier_lock/fcm_topic_subscriber_impl.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "components/gcm_driver/gcm_driver.h"
 #include "components/gcm_driver/instance_id/instance_id.h"

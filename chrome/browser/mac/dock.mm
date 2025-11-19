@@ -15,7 +15,7 @@
 #include "base/apple/bundle_locations.h"
 #include "base/apple/foundation_util.h"
 #include "base/apple/scoped_cftyperef.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/launchd.h"
 #include "build/branding_buildflags.h"
 

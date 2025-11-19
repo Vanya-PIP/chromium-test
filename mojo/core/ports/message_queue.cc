@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/core/ports/message_filter.h"
 
 namespace mojo {

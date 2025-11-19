@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/attestation/certificate_util.h"
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"
 #include "base/time/time.h"

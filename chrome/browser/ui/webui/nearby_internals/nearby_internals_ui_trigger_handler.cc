@@ -16,7 +16,7 @@
 #include "chrome/browser/nearby_sharing/share_target.h"
 #include "chrome/browser/nearby_sharing/text_attachment.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_share_target_types.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace {
 

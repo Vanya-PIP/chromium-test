@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "chrome/updater/protos/omaha_settings.pb.h"
 #include "chrome/updater/test/unit_test_util.h"

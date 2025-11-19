@@ -8,7 +8,7 @@
 #include "ash/constants/ash_switches.h"
 #include "base/check.h"
 #include "base/command_line.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"

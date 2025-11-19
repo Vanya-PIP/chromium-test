@@ -19,7 +19,7 @@
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/timer/timer.h"
 #include "base/types/cxx23_to_underlying.h"
 #include "content/public/browser/browser_context.h"

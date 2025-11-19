@@ -25,7 +25,7 @@
 #include "chrome/common/url_constants.h"
 #include "chrome/common/webui_url_constants.h"
 #include "chrome/grit/generated_resources.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/network/network_connect.h"
 #include "chromeos/ash/components/tether/pref_names.h"
 #include "components/prefs/pref_registry_simple.h"

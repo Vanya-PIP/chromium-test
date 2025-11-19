@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "chrome/browser/tab/storage_package.h"
 #include "chrome/browser/tab/tab_state_storage_database.h"

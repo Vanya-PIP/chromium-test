@@ -15,7 +15,7 @@
 #include "base/files/file_util.h"
 #include "base/format_macros.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"

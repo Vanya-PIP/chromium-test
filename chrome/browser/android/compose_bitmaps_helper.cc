@@ -4,7 +4,7 @@
 
 #include "chrome/browser/android/compose_bitmaps_helper.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/skia/include/core/SkBitmap.h"
 #include "third_party/skia/include/core/SkImageInfo.h"
 #include "third_party/skia/include/core/SkPixmap.h"

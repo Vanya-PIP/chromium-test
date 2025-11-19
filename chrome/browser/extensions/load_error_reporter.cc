@@ -7,7 +7,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversions.h"

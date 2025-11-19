@@ -8,7 +8,7 @@
 #include <ctime>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 namespace ash {

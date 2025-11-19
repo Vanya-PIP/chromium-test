@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/functional/callback.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash::tether {
 

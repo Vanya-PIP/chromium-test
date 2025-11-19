@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/unguessable_token.h"
 #include "chrome/browser/chromeos/video_conference/video_conference_manager_client_common.h"

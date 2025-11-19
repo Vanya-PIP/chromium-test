@@ -18,7 +18,7 @@
 #include <vector>
 
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/pickle.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/arc/tracing/uma_perf_reporting.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/stringprintf.h"
 

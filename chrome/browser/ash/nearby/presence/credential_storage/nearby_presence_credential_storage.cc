@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/task/sequenced_task_runner.h"

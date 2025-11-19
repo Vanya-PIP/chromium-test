@@ -16,7 +16,7 @@
 #include "ash/webui/personalization_app/mojom/personalization_app.mojom-shared.h"
 #include "base/check.h"
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 namespace ash {

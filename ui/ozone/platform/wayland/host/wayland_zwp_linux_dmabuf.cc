@@ -13,7 +13,7 @@
 #include <algorithm>
 #include <cstring>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/timer/elapsed_timer.h"
 #include "ui/gfx/linux/drm_util_linux.h"

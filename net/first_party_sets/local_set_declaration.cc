@@ -9,7 +9,7 @@
 
 #include "base/containers/contains.h"
 #include "base/containers/map_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/schemeful_site.h"
 #include "net/first_party_sets/first_party_set_entry.h"
 #include "net/first_party_sets/sets_mutation.h"

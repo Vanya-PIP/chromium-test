@@ -8,7 +8,7 @@
 
 #include "base/auto_reset.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "chrome/browser/ash/arc/pip/arc_picture_in_picture_window_controller_impl.h"
 #include "chrome/browser/picture_in_picture/picture_in_picture_window_manager.h"

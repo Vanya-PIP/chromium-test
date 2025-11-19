@@ -17,7 +17,7 @@
 #include "base/containers/span.h"
 #include "base/files/scoped_file.h"
 #include "base/linux_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/platform_shared_memory_region.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/posix/unix_domain_socket.h"

@@ -7,7 +7,7 @@
 #include <dawn/native/D3D11Backend.h>
 #include <dawn/native/D3D12Backend.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/stringprintf.h"
 #include "gpu/command_buffer/common/shared_image_usage.h"

@@ -15,7 +15,7 @@
 #include "base/time/default_clock.h"
 #include "base/time/default_tick_clock.h"
 #include "base/values.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/software_feature_state.h"
 #include "chromeos/ash/services/device_sync/proto/enum_util.h"
 #include "components/prefs/pref_service.h"

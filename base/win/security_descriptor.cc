@@ -16,7 +16,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/checked_math.h"
 #include "base/win/scoped_localalloc.h"

@@ -22,7 +22,7 @@
 #include "base/apple/scoped_cftyperef.h"
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_policy.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/numerics/safe_conversions.h"

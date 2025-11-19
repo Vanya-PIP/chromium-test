@@ -10,7 +10,7 @@
 
 #include "base/apple/bundle_locations.h"
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/mac/authorization_util.h"
 #include "base/mac/scoped_authorizationref.h"
 #include "base/strings/sys_string_conversions.h"

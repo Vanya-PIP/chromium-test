@@ -4,7 +4,7 @@
 
 #include "media/webrtc/helpers.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/scoped_feature_list.h"
 #include "build/build_config.h"
 #include "build/chromecast_buildflags.h"

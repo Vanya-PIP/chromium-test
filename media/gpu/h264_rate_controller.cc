@@ -9,7 +9,7 @@
 #include <limits>
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "media/gpu/h264_rate_control_util.h"
 

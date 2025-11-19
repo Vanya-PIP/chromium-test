@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/supports_user_data.h"
 #include "components/guest_contents/common/guest_contents.mojom.h"
 #include "content/public/renderer/render_frame.h"

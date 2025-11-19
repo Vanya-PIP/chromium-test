@@ -7,7 +7,7 @@
 #include <limits>
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "media/base/audio_buffer.h"
 #include "media/base/audio_decoder.h"

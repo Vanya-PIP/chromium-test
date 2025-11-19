@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "remoting/host/linux/x_server_clipboard.h"
 #include "remoting/proto/event.pb.h"

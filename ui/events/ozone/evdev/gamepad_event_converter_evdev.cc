@@ -11,7 +11,7 @@
 #include <sys/ioctl.h>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/trace_event/trace_event.h"
 #include "ui/events/event_utils.h"

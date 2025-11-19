@@ -5,7 +5,7 @@
 #ifndef CHROME_SERVICES_SHARING_NEARBY_PLATFORM_LOG_MESSAGE_H_
 #define CHROME_SERVICES_SHARING_NEARBY_PLATFORM_LOG_MESSAGE_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/nearby/src/internal/platform/implementation/log_message.h"
 
 namespace nearby::chrome {

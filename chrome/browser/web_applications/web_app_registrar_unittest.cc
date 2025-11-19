@@ -14,7 +14,7 @@
 #include "base/containers/flat_set.h"
 #include "base/files/file_path.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/run_loop.h"
 #include "base/strings/strcat.h"

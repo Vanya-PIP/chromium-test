@@ -7,7 +7,7 @@
 #include <stdint.h>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/updater/updater_scope.h"
 #include "chrome/updater/util/win_util.h"
 #include "chrome/updater/win/ui/ui_constants.h"

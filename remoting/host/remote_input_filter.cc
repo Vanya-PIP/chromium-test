@@ -6,7 +6,7 @@
 
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/proto/event.pb.h"
 
 namespace {

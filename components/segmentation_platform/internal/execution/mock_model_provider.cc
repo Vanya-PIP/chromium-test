@@ -8,7 +8,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/segmentation_platform/public/model_provider.h"
 
 namespace segmentation_platform {

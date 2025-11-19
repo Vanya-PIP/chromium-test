@@ -12,7 +12,7 @@
 
 #if BUILDFLAG(IS_CHROMEOS)
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/uuid.h"
 #include "chrome/browser/ash/profiles/profile_helper.h"

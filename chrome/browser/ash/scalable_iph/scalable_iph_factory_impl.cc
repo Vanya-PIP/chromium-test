@@ -10,7 +10,7 @@
 #include "base/check_is_test.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/scoped_observation.h"
 #include "chrome/browser/ash/phonehub/phone_hub_manager_factory.h"

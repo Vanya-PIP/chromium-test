@@ -177,7 +177,7 @@ component("evdev") {
       "libgestures_glue/gesture_interpreter_libevdev_cros.cc",
       "libgestures_glue/gesture_interpreter_libevdev_cros.h",
       "libgestures_glue/gesture_logging.cc",
-      "libgestures_glue/gesture_logging.h",
+      "libgestures_glue/gesture_test",
       "libgestures_glue/gesture_properties_service.cc",
       "libgestures_glue/gesture_properties_service.h",
       "libgestures_glue/gesture_property_provider.cc",

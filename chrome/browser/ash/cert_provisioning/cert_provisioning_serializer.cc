@@ -8,7 +8,7 @@
 #include <string>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/cert_provisioning/cert_provisioning_common.h"

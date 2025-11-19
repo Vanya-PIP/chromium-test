@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/services/secure_channel/presence_monitor_delegate.h"
 
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device.h"
 #include "chromeos/ash/components/multidevice/remote_device_cache.h"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"

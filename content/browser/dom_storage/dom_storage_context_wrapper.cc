@@ -20,7 +20,7 @@
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/task/thread_pool.h"

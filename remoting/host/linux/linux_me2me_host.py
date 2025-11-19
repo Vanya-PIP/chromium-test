@@ -1866,31 +1866,31 @@ class ParentProcessLogger(object):
     old_flags = fcntl.fcntl(write_fd, fcntl.F_GETFD)
     fcntl.fcntl(write_fd, fcntl.F_SETFD, old_flags | fcntl.FD_CLOEXEC)
     self._write_file = os.fdopen(write_fd, 'w')
-    self._logging_handler = None
+    self._testandler = None
     ParentProcessLogger.__instance = self
 
   def _start_logging(self):
-    """Installs a logging handler that sends log entries to a pipe, prefixed
+    """Installs a testandler that sends log entries to a pipe, prefixed
     with the string 'MSG:'. This allows them to be distinguished by the parent
     process from commands sent over the same pipe.
 
     Must be called by the child process.
     """
-    self._logging_handler = logging.StreamHandler(self._write_file)
-    self._logging_handler.setFormatter(logging.Formatter(fmt='MSG:%(message)s'))
-    logging.getLogger().addHandler(self._logging_handler)
+    self._testandler = logging.StreamHandler(self._write_file)
+    self._testandler.setFormatter(logging.Formatter(fmt='MSG:%(message)s'))
+    logging.getLogger().addHandler(self._testandler)
 
   def _release_parent(self, success):
-    """Uninstalls logging handler and closes the pipe, releasing the parent.
+    """Uninstalls testandler and closes the pipe, releasing the parent.
 
     Must be called by the child process.
 
     success: If true, write a "host ready" message to the parent process before
              closing the pipe.
     """
-    if self._logging_handler:
-      logging.getLogger().removeHandler(self._logging_handler)
-      self._logging_handler = None
+    if self._testandler:
+      logging.getLogger().removeHandler(self._testandler)
+      self._testandler = None
     if not self._write_file.closed:
       if success:
         try:

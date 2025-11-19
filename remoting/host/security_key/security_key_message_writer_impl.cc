@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/host/security_key/security_key_message.h"
 
 namespace remoting {

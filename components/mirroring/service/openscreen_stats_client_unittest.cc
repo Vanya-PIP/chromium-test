@@ -4,7 +4,7 @@
 
 #include "components/mirroring/service/openscreen_stats_client.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/cast/logging/stats_event_subscriber.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"

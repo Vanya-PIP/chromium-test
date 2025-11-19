@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_base.h"
 #include "base/metrics/histogram_samples.h"
 #include "base/metrics/statistics_recorder.h"

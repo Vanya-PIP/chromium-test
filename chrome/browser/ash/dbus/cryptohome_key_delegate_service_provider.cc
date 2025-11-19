@@ -12,7 +12,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/certificate_provider/certificate_provider_service.h"
 #include "chrome/browser/ash/certificate_provider/certificate_provider_service_factory.h"
 #include "chrome/browser/ash/profiles/profile_helper.h"

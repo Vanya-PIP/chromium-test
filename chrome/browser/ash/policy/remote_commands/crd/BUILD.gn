@@ -10,7 +10,7 @@ static_library("crd") {
   sources = [
     "crd_admin_session_controller.cc",
     "crd_admin_session_controller.h",
-    "crd_logging.h",
+    "crd_test",
     "crd_oauth_token_fetcher.cc",
     "crd_oauth_token_fetcher.h",
     "crd_remote_command_utils.cc",

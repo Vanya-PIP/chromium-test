@@ -15,7 +15,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "third_party/abseil-cpp/absl/cleanup/cleanup.h"
 

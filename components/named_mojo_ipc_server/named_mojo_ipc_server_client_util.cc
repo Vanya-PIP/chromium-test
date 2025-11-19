@@ -12,7 +12,7 @@
 #include <mach/mach.h>
 #include <mach/message.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/mac/scoped_mach_msg_destroy.h"
 #include "mojo/public/cpp/platform/platform_channel.h"
 #include "mojo/public/cpp/platform/platform_channel_endpoint.h"

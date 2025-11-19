@@ -18,7 +18,7 @@
 #include "base/process/launch.h"
 #include "base/values.h"
 #include "chrome/test/chromedriver/chrome_launcher.h"
-#include "chrome/test/chromedriver/logging.h"
+#include "chrome/test/chromedriver/test"
 #include "chrome/test/chromedriver/net/pipe_builder.h"
 
 testing::AssertionResult StatusOk(const Status& status) {

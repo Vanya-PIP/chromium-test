@@ -4,7 +4,7 @@
 
 #include "media/gpu/test/fake_command_buffer_helper.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "build/build_config.h"
 #include "gpu/command_buffer/service/shared_image/shared_image_backing.h"

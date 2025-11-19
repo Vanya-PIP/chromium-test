@@ -17,7 +17,7 @@
 
 #include "base/bits.h"
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/memory/ptr_util.h"
 #include "base/memory/shared_memory_tracker.h"

@@ -6,7 +6,7 @@
 #include <cstdint>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chrome/browser/ash/policy/scheduled_task_handler/scheduled_task_util.h"
 #include "chromeos/ash/components/settings/timezone_settings.h"

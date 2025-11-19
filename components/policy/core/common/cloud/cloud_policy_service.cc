@@ -7,7 +7,7 @@
 #include <stddef.h>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/observer_list.h"
 #include "base/time/time.h"

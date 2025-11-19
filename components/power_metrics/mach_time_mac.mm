@@ -4,7 +4,7 @@
 
 #include "components/power_metrics/mach_time_mac.h"
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/check.h"
 
 namespace power_metrics {

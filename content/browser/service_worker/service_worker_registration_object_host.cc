@@ -4,7 +4,7 @@
 
 #include "content/browser/service_worker/service_worker_registration_object_host.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "content/browser/service_worker/service_worker_consts.h"

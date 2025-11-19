@@ -9,7 +9,7 @@
 #include "base/command_line.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/native_library.h"
 #include "base/path_service.h"

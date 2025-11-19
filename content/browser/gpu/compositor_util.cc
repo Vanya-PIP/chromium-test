@@ -12,7 +12,7 @@
 
 #include "base/command_line.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"

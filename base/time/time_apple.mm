@@ -14,10 +14,10 @@
 #include <sys/types.h>
 #include <time.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/apple/scoped_mach_port.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/time/time_override.h"
 #include "build/build_config.h"

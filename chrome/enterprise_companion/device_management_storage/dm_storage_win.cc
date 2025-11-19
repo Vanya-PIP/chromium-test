@@ -9,7 +9,7 @@
 
 #include "base/base_paths_win.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/path_service.h"
 #include "base/strings/sys_string_conversions.h"

@@ -8,7 +8,7 @@
 #include "ash/session/session_controller_impl.h"
 #include "ash/shell.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notimplemented.h"
 #include "base/notreached.h"

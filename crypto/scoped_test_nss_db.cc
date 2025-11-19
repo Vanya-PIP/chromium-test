@@ -6,7 +6,7 @@
 
 #include <cert.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/thread_restrictions.h"
 #include "crypto/nss_util.h"
 #include "crypto/nss_util_internal.h"

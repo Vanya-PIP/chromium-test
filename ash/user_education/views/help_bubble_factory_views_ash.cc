@@ -12,7 +12,7 @@
 #include "ash/user_education/views/help_bubble_view_ash.h"
 #include "base/callback_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "components/user_education/common/help_bubble/help_bubble.h"
 #include "components/user_education/common/help_bubble/help_bubble_params.h"

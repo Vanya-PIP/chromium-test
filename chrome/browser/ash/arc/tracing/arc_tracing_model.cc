@@ -8,7 +8,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "base/strings/string_split.h"

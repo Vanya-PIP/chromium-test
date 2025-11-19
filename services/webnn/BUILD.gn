@@ -185,7 +185,7 @@ component("webnn_service") {
       "ort/graph_impl_ort.cc",
       "ort/graph_impl_ort.h",
       "ort/logging.cc",
-      "ort/logging.h",
+      "ort/test",
       "ort/model_editor.cc",
       "ort/model_editor.h",
       "ort/ort_data_type.cc",

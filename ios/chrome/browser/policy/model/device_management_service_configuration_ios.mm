@@ -6,7 +6,7 @@
 
 #import <stdint.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/strcat.h"
 #import "base/strings/string_number_conversions.h"
 #import "base/system/sys_info.h"

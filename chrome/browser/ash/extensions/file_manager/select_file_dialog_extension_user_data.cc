@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chrome/browser/chromeos/policy/dlp/dlp_file_destination.h"
 #include "content/public/browser/web_contents.h"

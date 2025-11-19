@@ -9,7 +9,7 @@
 #include <string_view>
 
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"
 #include "gpu/config/gpu_driver_bug_workaround_type.h"

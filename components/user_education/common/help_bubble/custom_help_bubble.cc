@@ -4,7 +4,7 @@
 
 #include "components/user_education/common/help_bubble/custom_help_bubble.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace user_education {
 

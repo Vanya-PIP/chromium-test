@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "third_party/abseil-cpp/absl/strings/ascii.h"
 #include "ui/gfx/x/connection.h"

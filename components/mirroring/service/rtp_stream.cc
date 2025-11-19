@@ -5,7 +5,7 @@
 #include "components/mirroring/service/rtp_stream.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "base/values.h"
 #include "media/base/video_frame.h"

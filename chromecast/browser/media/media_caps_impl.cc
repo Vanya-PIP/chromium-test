@@ -4,7 +4,7 @@
 
 #include "chromecast/browser/media/media_caps_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/public/media/decoder_config.h"
 #include "mojo/public/cpp/bindings/remote.h"
 

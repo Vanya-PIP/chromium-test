@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/containers/adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "net/base/completion_once_callback.h"
 #include "net/base/io_buffer.h"

@@ -11,7 +11,7 @@
 #include <string_view>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromeos/components/onc/onc_signature.h"
 

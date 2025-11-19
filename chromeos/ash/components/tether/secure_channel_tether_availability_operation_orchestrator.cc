@@ -4,7 +4,7 @@
 // found in the LICENSE file.
 
 #include "chromeos/ash/components/tether/secure_channel_tether_availability_operation_orchestrator.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash::tether {
 

@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/task/sequenced_task_runner.h"
 #include "components/optimization_guide/core/delivery/optimization_guide_model_provider.h"

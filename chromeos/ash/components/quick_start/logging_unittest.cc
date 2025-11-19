@@ -8,7 +8,7 @@
 #include "base/no_destructor.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
-#include "chromeos/ash/components/quick_start/logging.h"
+#include "chromeos/ash/components/quick_start/test"
 
 namespace ash::quick_start {
 

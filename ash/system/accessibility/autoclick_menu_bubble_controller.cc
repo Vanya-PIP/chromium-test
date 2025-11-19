@@ -20,7 +20,7 @@
 #include "ash/wm/work_area_insets.h"
 #include "ash/wm/workspace/workspace_layout_manager.h"
 #include "ash/wm/workspace_controller.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/strings/string_number_conversions.h"
 #include "ui/aura/window_tree_host.h"

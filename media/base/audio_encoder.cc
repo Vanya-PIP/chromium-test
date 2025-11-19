@@ -5,7 +5,7 @@
 #include "media/base/audio_encoder.h"
 
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "base/time/time.h"
 #include "media/base/audio_timestamp_helper.h"

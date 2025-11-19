@@ -26,7 +26,7 @@
 #include "base/cpu.h"
 #include "base/files/dir_reader_posix.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"

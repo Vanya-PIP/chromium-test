@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/time/time.h"
 #include "chrome/browser/android/android_theme_resources.h"

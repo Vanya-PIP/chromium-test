@@ -20,7 +20,7 @@
 #include "base/process/process.h"
 #include "base/rand_util.h"
 #include "base/strings/string_number_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/thread_pool.h"
 #include "base/threading/thread_restrictions.h"
 #include "base/time/time.h"

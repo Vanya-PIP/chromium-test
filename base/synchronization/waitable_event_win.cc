@@ -18,9 +18,9 @@
 #include <utility>
 
 #include "base/compiler_specific.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/threading/scoped_blocking_call.h"

@@ -21,7 +21,7 @@
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/path_service.h"
 #include "base/posix/eintr_wrapper.h"

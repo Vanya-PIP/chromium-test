@@ -9,7 +9,7 @@
 #include "base/apple/scoped_nsautorelease_pool.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/memory/ref_counted.h"
 #include "base/memory/stack_allocated.h"

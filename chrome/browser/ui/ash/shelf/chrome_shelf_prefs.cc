@@ -25,7 +25,7 @@
 #include "base/containers/extend.h"
 #include "base/containers/span.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/values.h"
 #include "chrome/browser/apps/app_preload_service/app_preload_service.h"

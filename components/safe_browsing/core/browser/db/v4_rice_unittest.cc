@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "components/safe_browsing/core/browser/db/v4_rice.h"
-#include "base/logging.h"
+#include "base/test"
 #include "testing/platform_test.h"
 
 using ::google::protobuf::RepeatedField;

@@ -24,7 +24,7 @@
 #include "base/files/file_util.h"
 #include "base/files/platform_file.h"
 #include "base/linux_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_shared_memory.h"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"

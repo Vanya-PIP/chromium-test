@@ -5,7 +5,7 @@
 #include "chrome/browser/sync/test/integration/apps_helper.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
 #include "base/strings/string_number_conversions.h"

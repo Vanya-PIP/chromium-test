@@ -5,7 +5,7 @@
 #include "chrome/enterprise_companion/icu_util.h"
 
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 #if ENTERPRISE_COMPANION_USE_ICU_DATA_FILE
 #include <array>

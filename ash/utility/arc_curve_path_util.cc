@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/skia/include/core/SkPath.h"
 #include "third_party/skia/include/core/SkPathBuilder.h"
 #include "third_party/skia/include/core/SkPoint.h"

@@ -10,12 +10,12 @@
 #include <utility>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/bits.h"
 #include "base/compiler_specific.h"
 #include "base/containers/buffer_iterator.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/scoped_mach_msg_destroy.h"
 #include "base/no_destructor.h"
 #include "base/notreached.h"

@@ -11,7 +11,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/strings/stringprintf.h"
 #include "base/task/sequenced_task_runner.h"

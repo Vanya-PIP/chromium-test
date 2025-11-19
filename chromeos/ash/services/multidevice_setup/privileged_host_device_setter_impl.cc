@@ -5,7 +5,7 @@
 #include "chromeos/ash/services/multidevice_setup/privileged_host_device_setter_impl.h"
 
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/multidevice_setup/multidevice_setup_base.h"
 
 namespace ash {

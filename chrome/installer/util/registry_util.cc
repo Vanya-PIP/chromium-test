@@ -9,7 +9,7 @@
 #include <string>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/registry.h"
 #include "base/win/windows_types.h"
 

@@ -10,7 +10,7 @@
 #include "base/functional/callback.h"
 #include "base/task/cancelable_task_tracker.h"
 #include "build/android_buildflags.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_page_data.h"
 #include "third_party/blink/public/mojom/manifest/manifest.mojom.h"
 #include "third_party/skia/include/core/SkBitmap.h"

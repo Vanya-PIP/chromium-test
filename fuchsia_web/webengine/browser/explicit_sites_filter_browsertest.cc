@@ -8,7 +8,7 @@
 #include <string>
 #include <string_view>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/run_loop.h"
 #include "components/policy/content/safe_search_service.h"
 #include "components/safe_search_api/stub_url_checker.h"

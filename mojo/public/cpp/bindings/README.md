@@ -227,7 +227,7 @@ a common pattern, since a bound implementation must outlive any `mojo::Receiver`
 which binds it.
 
 ``` cpp
-#include "base/logging.h"
+#include "base/test"
 #include "sample/logger.mojom.h"
 
 class LoggerImpl : public sample::mojom::Logger {

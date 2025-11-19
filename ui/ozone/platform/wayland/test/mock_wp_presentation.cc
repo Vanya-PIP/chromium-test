@@ -6,7 +6,7 @@
 
 #include <wayland-server-core.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/ozone/platform/wayland/test/server_object.h"
 
 namespace wl {

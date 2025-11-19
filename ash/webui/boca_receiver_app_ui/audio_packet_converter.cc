@@ -10,7 +10,7 @@
 
 #include "ash/webui/boca_receiver_app_ui/mojom/boca_receiver.mojom.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/proto/audio.pb.h"
 
 namespace ash::boca_receiver {

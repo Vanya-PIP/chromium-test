@@ -29,7 +29,7 @@
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/process/launch.h"

@@ -17,7 +17,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/browser/ash/platform_keys/key_permissions/key_permissions_manager_impl.h"
 #include "chrome/browser/ash/platform_keys/platform_keys_service.h"

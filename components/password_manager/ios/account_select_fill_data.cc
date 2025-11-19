@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <variant>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/strings/string_util.h"
 #include "base/types/expected.h"

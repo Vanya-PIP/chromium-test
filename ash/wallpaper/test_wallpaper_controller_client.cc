@@ -7,7 +7,7 @@
 #include "ash/webui/personalization_app/mojom/personalization_app.mojom.h"
 #include "ash/webui/personalization_app/proto/backdrop_wallpaper.pb.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 namespace ash {

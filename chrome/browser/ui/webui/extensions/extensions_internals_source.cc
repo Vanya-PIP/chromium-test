@@ -11,7 +11,7 @@
 
 #include "base/containers/flat_map.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_number_conversions.h"

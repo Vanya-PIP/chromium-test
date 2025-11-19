@@ -12,7 +12,7 @@
 #include "base/test/task_environment.h"
 #include "base/test/test_future.h"
 #include "chromeos/ash/components/multidevice/fake_secure_message_delegate.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/device_sync/proto/cryptauth_api.pb.h"
 #include "chromeos/ash/services/secure_channel/session_keys.h"
 #include "testing/gtest/include/gtest/gtest.h"

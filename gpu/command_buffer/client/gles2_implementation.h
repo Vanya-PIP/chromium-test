@@ -32,7 +32,7 @@
 #include "gpu/command_buffer/client/gles2_interface.h"
 #include "gpu/command_buffer/client/gpu_control_client.h"
 #include "gpu/command_buffer/client/implementation_base.h"
-#include "gpu/command_buffer/client/logging.h"
+#include "gpu/command_buffer/client/test"
 #include "gpu/command_buffer/client/mapped_memory.h"
 #include "gpu/command_buffer/client/query_tracker.h"
 #include "gpu/command_buffer/client/readback_buffer_shadow_tracker.h"

@@ -13,7 +13,7 @@
 #include "base/android/jni_string.h"
 #include "base/android/token_android.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "chrome/browser/android/tab_android.h"
 #include "chrome/browser/android/tab_group_android.h"

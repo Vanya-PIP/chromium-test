@@ -13,7 +13,7 @@
 #include "ash/public/cpp/ime_controller.h"
 #include "ash/strings/grit/ash_strings.h"
 #include "ash/style/ash_color_id.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "chromeos/ash/components/auth_panel/impl/auth_factor_store.h"
 #include "chromeos/ash/components/auth_panel/impl/auth_panel_event_dispatcher.h"

@@ -18,7 +18,7 @@
 #include "ash/system/toast/anchored_nudge_manager_impl.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/clock.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/components/phonehub/pref_names.h"
 #include "components/prefs/pref_registry_simple.h"

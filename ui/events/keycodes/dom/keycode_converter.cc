@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversion_utils.h"
 #include "build/build_config.h"

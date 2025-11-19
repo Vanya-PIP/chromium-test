@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/cryptohome/userdataauth_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "chromeos/ash/components/dbus/cryptohome/UserDataAuth.pb.h"
 #include "components/device_event_log/device_event_log.h"

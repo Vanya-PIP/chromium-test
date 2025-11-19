@@ -14,7 +14,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/win/wrapped_window_proc.h"
 #include "components/storage_monitor/portable_device_watcher_win.h"

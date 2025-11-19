@@ -31,7 +31,7 @@ enum class SettingsAccessPoint : int {
 };
 
 // Enum representing actions taken by users visiting the
-// Safe Browsing settings page. They are used for logging histograms, entries
+// Safe Browsing settings page. They are used for testistograms, entries
 // must not be removed or reordered.
 // A Java counterpart will be generated for this enum.
 // GENERATED_JAVA_ENUM_PACKAGE: (

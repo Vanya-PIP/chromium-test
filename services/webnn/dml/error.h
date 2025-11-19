@@ -7,7 +7,7 @@
 
 #include <winerror.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace webnn::dml {
 

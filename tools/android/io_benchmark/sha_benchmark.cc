@@ -13,7 +13,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "crypto/hash.h"
 

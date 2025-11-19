@@ -7,7 +7,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "gpu/command_buffer/service/graphite_shared_context.h"
 #include "third_party/libyuv/include/libyuv/planar_functions.h"

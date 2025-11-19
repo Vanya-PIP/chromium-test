@@ -17,7 +17,7 @@
 #include "base/check_op.h"
 #include "base/files/file.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "chrome/browser/ash/policy/reporting/single_arc_app_install_event_log.h"
 #include "chrome/browser/ash/policy/reporting/single_extension_install_event_log.h"

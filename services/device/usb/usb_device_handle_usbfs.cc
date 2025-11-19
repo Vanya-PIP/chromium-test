@@ -18,7 +18,7 @@
 #include "base/containers/contains.h"
 #include "base/files/file_descriptor_watcher_posix.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/numerics/checked_math.h"
 #include "base/posix/eintr_wrapper.h"

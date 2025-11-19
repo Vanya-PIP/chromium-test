@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/passwords/well_known_change_password_navigation_throttle.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "chrome/browser/affiliations/affiliation_service_factory.h"

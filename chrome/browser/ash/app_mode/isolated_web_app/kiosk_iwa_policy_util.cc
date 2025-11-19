@@ -13,7 +13,7 @@
 #include "base/check.h"
 #include "base/check_deref.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/types/expected.h"
 #include "base/types/expected_macros.h"

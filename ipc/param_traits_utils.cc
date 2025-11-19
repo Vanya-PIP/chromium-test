@@ -17,7 +17,7 @@
 
 #include "base/files/file_path.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"
@@ -48,7 +48,7 @@
 #endif
 
 #if BUILDFLAG(IS_FUCHSIA)
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "ipc/handle_attachment_fuchsia.h"
 #endif
 

@@ -8,7 +8,7 @@
 #include <ostream>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chrome/browser/ash/borealis/borealis_context.h"
 #include "chrome/browser/ash/borealis/borealis_context_manager.h"

@@ -6,7 +6,7 @@
 
 #include <winsock2.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace net {
 

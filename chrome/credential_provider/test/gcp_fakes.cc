@@ -34,7 +34,7 @@
 #include "chrome/credential_provider/common/gcp_strings.h"
 #include "chrome/credential_provider/extension/extension_strings.h"
 #include "chrome/credential_provider/gaiacp/gcp_utils.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/mdm_utils.h"
 #include "chrome/credential_provider/gaiacp/reg_utils.h"
 #include "google_apis/gaia/gaia_id.h"

@@ -11,7 +11,7 @@
 #include "base/containers/queue.h"
 #include "base/features.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/no_destructor.h"
 #include "base/rand_util.h"

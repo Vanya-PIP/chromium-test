@@ -16,7 +16,7 @@
 #include "base/fuchsia/scoped_service_publisher.h"
 #include "base/fuchsia/test_component_context_for_process.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/test/bind.h"
 #include "base/test/fidl_matchers.h"

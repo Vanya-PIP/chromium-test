@@ -16,7 +16,7 @@
 #include "components/webapps/browser/android/add_to_homescreen_params.h"
 #include "components/webapps/browser/banners/app_banner_manager.h"
 #include "components/webapps/browser/banners/app_banner_settings_helper.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "third_party/skia/include/core/SkBitmap.h"
 #include "url/gurl.h"
 

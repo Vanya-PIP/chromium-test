@@ -23,7 +23,7 @@
 
 #include "base/containers/circular_deque.h"
 #include "base/files/scoped_file.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
 #include "base/location.h"
 #include "base/memory/ref_counted.h"

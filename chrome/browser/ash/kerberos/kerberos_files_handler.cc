@@ -12,7 +12,7 @@
 #include "base/files/file_util.h"
 #include "base/files/important_file_writer.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/strings/stringprintf.h"
 #include "base/task/thread_pool.h"

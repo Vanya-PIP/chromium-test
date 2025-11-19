@@ -15,7 +15,7 @@
 #include "base/apple/bridging.h"
 #include "base/apple/foundation_util.h"
 #include "base/apple/scoped_cftyperef.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/enterprise_companion/enterprise_companion_branding.h"
 
 namespace enterprise_companion {

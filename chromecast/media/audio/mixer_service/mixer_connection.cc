@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/time/time.h"
 #include "chromecast/base/chromecast_switches.h"

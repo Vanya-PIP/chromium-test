@@ -21,7 +21,7 @@
 #include "base/containers/span.h"
 #include "base/files/scoped_file.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/safe_strerror.h"
 #include "base/strings/strcat.h"
 #include "base/types/expected.h"

@@ -9,7 +9,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/to_value_list.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "components/enterprise/connectors/core/common.h"
 #include "components/enterprise/connectors/core/reporting_constants.h"

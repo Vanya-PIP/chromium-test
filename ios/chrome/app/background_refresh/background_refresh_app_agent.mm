@@ -7,7 +7,7 @@
 #import <BackgroundTasks/BackgroundTasks.h>
 
 #import "base/ios/block_types.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/task/sequenced_task_runner.h"
 #import "ios/chrome/app/application_delegate/app_init_stage.h"

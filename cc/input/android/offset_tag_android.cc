@@ -6,7 +6,7 @@
 
 #include "base/android/scoped_java_ref.h"
 #include "base/android/token_android.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/token.h"
 #include "cc/cc_jni_headers/BrowserControlsOffsetTagModifications_jni.h"
 #include "cc/cc_jni_headers/BrowserControlsOffsetTags_jni.h"

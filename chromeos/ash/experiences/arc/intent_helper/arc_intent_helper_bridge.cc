@@ -11,7 +11,7 @@
 #include "ash/public/cpp/system/power/power_button_controller_base.h"
 #include "ash/public/cpp/wallpaper/wallpaper_controller.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_macros.h"

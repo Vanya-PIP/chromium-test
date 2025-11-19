@@ -8,7 +8,7 @@
 #include <string_view>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "components/cast/message_port/platform_message_port.h"
 

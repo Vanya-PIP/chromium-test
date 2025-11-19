@@ -5,7 +5,7 @@
 #include "components/offline_pages/core/offline_event_logger.h"
 
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"
 #include "components/offline_pages/core/offline_clock.h"

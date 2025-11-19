@@ -13,7 +13,7 @@
 #include "base/files/file_path.h"
 #include "base/json/json_file_value_serializer.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/notreached.h"
 #include "base/path_service.h"

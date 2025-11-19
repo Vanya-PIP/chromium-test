@@ -9,9 +9,9 @@
 #include <algorithm>
 
 #include "base/compiler_specific.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/types/fixed_array.h"
 #include "testing/gtest/include/gtest/gtest.h"

@@ -11,7 +11,7 @@
 #include "base/apple/foundation_util.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "chrome/enterprise_companion/enterprise_companion_branding.h"
 

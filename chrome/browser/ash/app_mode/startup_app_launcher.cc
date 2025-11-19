@@ -11,7 +11,7 @@
 #include "base/check_op.h"
 #include "base/functional/bind.h"
 #include "base/notreached.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/types/cxx23_to_underlying.h"
 #include "chrome/browser/ash/app_mode/kiosk_app_launch_error.h"
 #include "chrome/browser/ash/app_mode/kiosk_app_launcher.h"

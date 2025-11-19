@@ -5,7 +5,7 @@
 #include "components/manta/anchovy/anchovy_proto_helper.h"
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/manta/manta_service_callbacks.h"
 #include "components/manta/proto/anchovy.pb.h"
 

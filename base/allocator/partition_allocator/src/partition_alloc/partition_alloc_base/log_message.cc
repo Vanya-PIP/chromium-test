@@ -24,7 +24,7 @@
 #include "partition_alloc/partition_alloc_base/debug/alias.h"
 #include "partition_alloc/partition_alloc_base/debug/stack_trace.h"
 #include "partition_alloc/partition_alloc_base/immediate_crash.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_base/strings/safe_sprintf.h"
 #include "partition_alloc/partition_alloc_base/strings/string_util.h"
 #include "partition_alloc/partition_alloc_base/strings/stringprintf.h"

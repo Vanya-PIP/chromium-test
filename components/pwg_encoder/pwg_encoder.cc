@@ -12,7 +12,7 @@
 
 #include "base/check.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "components/pwg_encoder/bitmap_image.h"
 

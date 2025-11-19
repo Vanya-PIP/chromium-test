@@ -6,7 +6,7 @@
 
 #include "base/check_op.h"
 #include "base/i18n/case_conversion.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"

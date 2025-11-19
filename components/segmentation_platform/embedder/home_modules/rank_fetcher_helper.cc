@@ -6,7 +6,7 @@
 
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/segmentation_platform/embedder/home_modules/card_selection_signals.h"
 #include "components/segmentation_platform/embedder/home_modules/ephemeral_home_module_backend.h"
 #include "components/segmentation_platform/public/constants.h"

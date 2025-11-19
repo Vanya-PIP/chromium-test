@@ -6,7 +6,7 @@
 #include "media/mojo/services/webrtc_video_perf_recorder.h"
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
 

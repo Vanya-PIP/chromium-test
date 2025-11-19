@@ -6,7 +6,7 @@ import {WebUiSyslogEmitter, WebUiSyslogEmitterRemote} from './webui_syslog_emitt
 
 // This file provides a way to emit SYSLOGs directly from a WebUI.
 //
-// From base/syslog_logging.h:
+// From base/syslog_test:
 //   "Keep in mind that the syslog is always active regardless of the logging
 //    level and applied flags. Use only for important information that a system
 //    administrator might need to maintain the browser installation."

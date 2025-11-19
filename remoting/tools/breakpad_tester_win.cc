@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/win/scoped_handle.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 
 namespace {
 

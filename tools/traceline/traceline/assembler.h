@@ -51,7 +51,7 @@
 
 #include <string>
 
-#include "logging.h"
+#include "test"
 
 #define ASSERT(x) CHECK(x)
 

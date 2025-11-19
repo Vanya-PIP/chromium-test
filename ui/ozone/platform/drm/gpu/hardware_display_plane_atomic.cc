@@ -7,7 +7,7 @@
 #include <drm_fourcc.h>
 
 #include "base/files/platform_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/media_buildflags.h"
 #include "ui/gfx/geometry/rect.h"
 #include "ui/ozone/platform/drm/common/scoped_drm_types.h"

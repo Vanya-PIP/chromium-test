@@ -8,7 +8,7 @@
 #include <ios>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/types/cxx23_to_underlying.h"
 #include "chrome/browser/keyboard_accessory/android/accessory_sheet_enums.h"

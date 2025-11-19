@@ -12,7 +12,7 @@
 #include "base/base64.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "chrome/browser/ash/arc/enterprise/cert_store/arc_cert_installer_utils.h"
 #include "chrome/browser/ash/policy/remote_commands/user_command_arc_job.h"

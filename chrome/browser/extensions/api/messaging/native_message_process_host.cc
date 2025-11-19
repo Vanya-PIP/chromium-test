@@ -13,7 +13,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/process/kill.h"
 #include "base/task/single_thread_task_runner.h"

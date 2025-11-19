@@ -8,8 +8,8 @@
 #import <WebKit/WebKit.h>
 
 #import "base/apple/foundation_util.h"
-#import "base/debug/crash_logging.h"
-#import "base/logging.h"
+#import "base/debug/crash_test"
+#import "base/test"
 #import "base/notreached.h"
 #import "base/strings/sys_string_conversions.h"
 #import "base/values.h"

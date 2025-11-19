@@ -7,7 +7,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/test/task_environment.h"
 #include "chromeos/ash/components/dbus/cryptohome/UserDataAuth.pb.h"

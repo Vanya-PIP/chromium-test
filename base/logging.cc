@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "base/logging.h"
+#include "base/test"
 
 #include <limits.h>
 #include <stdint.h>
@@ -27,7 +27,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/stack.h"
 #include "base/debug/alias.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/debugger.h"
 #include "base/debug/stack_trace.h"
 #include "base/debug/task_trace.h"
@@ -53,7 +53,7 @@
 #include "base/trace_event/typed_macros.h"
 #include "base/vlog.h"
 #include "build/build_config.h"
-#include "third_party/abseil-cpp/absl/base/internal/raw_logging.h"
+#include "third_party/abseil-cpp/absl/base/internal/raw_test"
 #include "third_party/abseil-cpp/absl/cleanup/cleanup.h"
 #include "third_party/perfetto/protos/perfetto/trace/track_event/log_message.pbzero.h"
 

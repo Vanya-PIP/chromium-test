@@ -6,7 +6,7 @@
 
 #include "base/apple/bundle_locations.h"
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/debug/dump_without_crashing.h"
 #include "base/strings/stringprintf.h"

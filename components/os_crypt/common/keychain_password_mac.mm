@@ -6,7 +6,7 @@
 
 #import <Security/Security.h>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/base64.h"
 #include "base/containers/span.h"

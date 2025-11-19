@@ -19,7 +19,7 @@
 #include "base/feature_list.h"
 #include "base/feature_list_buildflags.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial.h"
 #include "base/metrics/field_trial_params.h"
 #include "base/stl_util.h"

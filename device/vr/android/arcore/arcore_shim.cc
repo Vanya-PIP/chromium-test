@@ -7,7 +7,7 @@
 #include <dlfcn.h>
 
 #include "base/android/android_info.h"
-#include "base/logging.h"
+#include "base/test"
 #include "device/vr/android/arcore/arcore_sdk.h"
 
 namespace {

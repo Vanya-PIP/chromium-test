@@ -29,7 +29,7 @@
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/ref_counted_memory.h"

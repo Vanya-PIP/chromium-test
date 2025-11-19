@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "chromecast/base/cast_paths.h"
 

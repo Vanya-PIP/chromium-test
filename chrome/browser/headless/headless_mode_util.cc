@@ -18,7 +18,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/headless/headless_mode_switches.h"
 #include "chrome/common/chrome_switches.h"
 #include "content/public/common/content_switches.h"

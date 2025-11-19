@@ -6,7 +6,7 @@
 
 #include "ash/constants/ash_switches.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/grit/branded_strings.h"
 #include "chrome/grit/generated_resources.h"

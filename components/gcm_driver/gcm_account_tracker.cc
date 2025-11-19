@@ -11,7 +11,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"
 #include "components/gcm_driver/gcm_driver.h"

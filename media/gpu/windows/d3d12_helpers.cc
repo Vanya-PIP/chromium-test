@@ -5,7 +5,7 @@
 #include "media/gpu/windows/d3d12_helpers.h"
 
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/video_codecs.h"
 #include "media/gpu/windows/format_utils.h"
 #include "media/gpu/windows/supported_profile_helpers.h"

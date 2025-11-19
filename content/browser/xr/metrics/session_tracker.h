@@ -8,7 +8,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "services/metrics/public/cpp/ukm_builders.h"
 

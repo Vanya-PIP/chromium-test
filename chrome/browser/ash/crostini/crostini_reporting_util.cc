@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/clock.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/crostini/crostini_pref_names.h"

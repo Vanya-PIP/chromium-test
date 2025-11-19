@@ -6,7 +6,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/cxx23_to_underlying.h"
 #include "extensions/browser/api/offscreen/audio_lifetime_enforcer.h"
 #include "extensions/browser/api/offscreen/offscreen_document_lifetime_enforcer.h"

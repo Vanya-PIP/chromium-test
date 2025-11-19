@@ -10,7 +10,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/zucchini/buffer_view.h"
 #include "components/zucchini/disassembler.h"
 #include "components/zucchini/disassembler_dex.h"

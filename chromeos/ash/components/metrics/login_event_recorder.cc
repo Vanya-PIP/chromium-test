@@ -12,7 +12,7 @@
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/strcat.h"

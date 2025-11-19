@@ -27,7 +27,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/uuid.h"
 #include "chrome/browser/ash/floating_sso/floating_sso_service.h"

@@ -43,7 +43,7 @@
 #include <xdg-toplevel-icon-v1-client-protocol.h>
 #include <xx-session-management-v1-client-protocol.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace wl {
 namespace {

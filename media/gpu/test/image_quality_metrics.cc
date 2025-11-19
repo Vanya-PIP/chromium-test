@@ -9,7 +9,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/video_frame.h"
 #include "media/base/video_types.h"
 #include "media/gpu/test/video_frame_helpers.h"

@@ -7,7 +7,7 @@
 #include <map>
 
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/tick_clock.h"
 
 namespace extensions {

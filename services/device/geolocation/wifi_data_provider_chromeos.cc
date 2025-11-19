@@ -12,7 +12,7 @@
 #include <functional>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "chromeos/ash/components/network/geolocation_handler.h"
 #include "chromeos/ash/components/network/network_handler.h"

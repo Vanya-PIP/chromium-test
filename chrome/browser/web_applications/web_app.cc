@@ -19,7 +19,7 @@
 #include "base/check_op.h"
 #include "base/containers/flat_set.h"
 #include "base/containers/to_value_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/not_fatal_until.h"
 #include "base/notreached.h"
 #include "base/strings/strcat.h"

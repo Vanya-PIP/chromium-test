@@ -13,7 +13,7 @@
 #include "base/command_line.h"
 #include "base/debug/leak_annotations.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/no_destructor.h"
 #include "base/strings/string_view_util.h"

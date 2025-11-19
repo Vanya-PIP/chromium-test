@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/string_util.h"
 #include "base/trace_event/trace_event.h"

@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "chromecast/media/audio/mixer_service/mixer_service_transport.pb.h"
 #include "chromecast/net/io_buffer_pool.h"

@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/services/multidevice_setup/eligible_host_devices_provider.h"
 
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash::multidevice_setup {
 

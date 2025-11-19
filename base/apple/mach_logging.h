@@ -8,7 +8,7 @@
 #include <mach/mach.h>
 
 #include "base/base_export.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/blink_buildflags.h"
 #include "build/build_config.h"
 

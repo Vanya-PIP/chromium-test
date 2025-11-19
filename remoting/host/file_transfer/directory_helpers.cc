@@ -6,7 +6,7 @@
 
 #include "base/check_is_test.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "build/build_config.h"
 #include "remoting/protocol/file_transfer_helpers.h"

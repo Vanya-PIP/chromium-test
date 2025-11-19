@@ -4,7 +4,7 @@
 
 #include "chrome/browser/password_manager/android/fake_password_manager_lifecycle_helper.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace password_manager {
 

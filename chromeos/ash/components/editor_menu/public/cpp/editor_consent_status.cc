@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/editor_menu/public/cpp/editor_consent_status.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/cxx23_to_underlying.h"
 
 namespace chromeos::editor_menu {

@@ -12,7 +12,7 @@
 
 #include "base/containers/span.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "net/disk_cache/blockfile/storage_block.h"
 

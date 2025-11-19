@@ -10,7 +10,7 @@
 #include <functional>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/propvarutil.h"
 #include "base/win/variant_conversions.h"
 

@@ -340,7 +340,7 @@ source_set("web_applications") {
     "web_app_launch_queue_delegate_impl.cc",
     "web_app_launch_queue_delegate_impl.h",
     "web_app_logging.cc",
-    "web_app_logging.h",
+    "web_app_test",
     "web_app_management_type.cc",
     "web_app_management_type.h",
     "web_app_origin_association_manager.cc",

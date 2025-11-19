@@ -7,7 +7,7 @@
 #include <array>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "device/fido/enclave/types.h"
 #include "device/fido/fido_constants.h"
 

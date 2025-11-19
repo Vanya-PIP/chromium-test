@@ -1515,7 +1515,7 @@ source_set("browser") {
     "notifications/blink_notification_service_impl.cc",
     "notifications/blink_notification_service_impl.h",
     "notifications/devtools_event_logging.cc",
-    "notifications/devtools_event_logging.h",
+    "notifications/devtools_event_test",
     "notifications/notification_database.cc",
     "notifications/notification_database.h",
     "notifications/notification_database_conversions.cc",

@@ -23,7 +23,7 @@ class InclusionPathCheckerTest(unittest.TestCase):
     bads = [
         ('#import "ios/web_view/aaa_imported.h"', 'ios/web_view/public/aaa.h'),
         ('#include "ios/web_view/eee_imported.h"', 'ios/web_view/public/eee.h'),
-        ('#include "base/logging.h"', 'ios/web_view/public/fff.h'),
+        ('#include "base/test"', 'ios/web_view/public/fff.h'),
         ('#import "ios/web_view/public/ggg_imported.h"',
          'ios/web_view/public/ggg.h'),
         ('#import "subdirectory/hhh_imported.h"', 'ios/web_view/public/hhh.h'),
@@ -37,7 +37,7 @@ class InclusionPathCheckerTest(unittest.TestCase):
 
         /**
          *  Some random comments here.
-         *  Write #include "base/logging.h" to use logging functions.
+         *  Write #include "base/test" to use logging functions.
          */
 
         int main() {

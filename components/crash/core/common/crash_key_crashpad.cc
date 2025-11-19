@@ -7,7 +7,7 @@
 
 #include "components/crash/core/common/crash_key.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "components/crash/core/common/crash_key_base_support.h"
 #include "third_party/crashpad/crashpad/client/annotation_list.h"
 #include "third_party/crashpad/crashpad/client/crashpad_info.h"

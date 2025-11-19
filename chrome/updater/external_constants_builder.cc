@@ -14,7 +14,7 @@
 #include "base/base64.h"
 #include "base/files/file_util.h"
 #include "base/json/json_file_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/time/time.h"
 #include "base/values.h"

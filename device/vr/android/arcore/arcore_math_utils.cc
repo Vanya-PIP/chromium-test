@@ -5,7 +5,7 @@
 #include "device/vr/android/arcore/arcore_math_utils.h"
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace device {
 

@@ -21,7 +21,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "gpu/command_buffer/common/gles2_cmd_utils.h"
 #include "gpu/config/gpu_driver_bug_workarounds.h"

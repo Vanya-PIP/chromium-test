@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/cdm/cenc_utils.h"
 
 struct Environment {

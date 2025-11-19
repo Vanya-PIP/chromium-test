@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/logging/test_rust_logger_consumer.rs.h"
 #include "base/test/mock_log.h"
 

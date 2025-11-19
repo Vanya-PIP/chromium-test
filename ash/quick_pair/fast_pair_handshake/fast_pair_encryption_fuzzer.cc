@@ -14,7 +14,7 @@
 #include <stdint.h>
 #include <array>
 
-#include "ash/quick_pair/common/logging.h"
+#include "ash/quick_pair/common/test"
 #include "ash/quick_pair/fast_pair_handshake/fast_pair_key_pair.h"
 #include "base/check.h"
 #include "base/no_destructor.h"

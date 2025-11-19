@@ -7,7 +7,7 @@
 #include "base/containers/contains.h"
 #include "base/hash/sha1.h"
 #include "base/strings/string_number_conversions.h"
-#include "chromeos/ash/components/quick_start/logging.h"
+#include "chromeos/ash/components/quick_start/test"
 
 namespace ash::quick_start {
 

@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/sequence_checker.h"
 #include "base/task/sequenced_task_runner.h"

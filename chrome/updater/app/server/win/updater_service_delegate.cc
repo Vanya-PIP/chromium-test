@@ -6,7 +6,7 @@
 
 #include "base/command_line.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/process/launch.h"
 #include "base/task/single_thread_task_executor.h"

@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_functions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/tether/device_id_tether_network_guid_map.h"
 #include "chromeos/ash/components/tether/host_scan_cache.h"
 

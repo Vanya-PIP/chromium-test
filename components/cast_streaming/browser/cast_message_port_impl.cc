@@ -6,7 +6,7 @@
 
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "components/cast_streaming/browser/cast_message_port_converter.h"
 #include "components/cast_streaming/common/message_serialization.h"

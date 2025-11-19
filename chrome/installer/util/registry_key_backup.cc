@@ -18,7 +18,7 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/registry.h"
 
 using base::win::RegKey;

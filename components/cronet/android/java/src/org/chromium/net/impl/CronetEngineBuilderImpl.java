@@ -184,7 +184,7 @@ public abstract class CronetEngineBuilderImpl extends ICronetEngineBuilder {
             long startUptimeMillis, boolean successful, CronetSource cronetSource) {
         // Normally, the API code is responsible for logging this. However this only happens if the
         // app is bundling an API jar that is recent enough to include the logging code. If it does
-        // not, we are on the hook for doing the logging here in impl code.
+        // not, we are on the hook for doing the testere in impl code.
         //
         // The addition of logging code to the API was accompanied by an API level bump so that we
         // can detect this case.

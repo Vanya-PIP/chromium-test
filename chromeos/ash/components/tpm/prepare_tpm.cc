@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/dbus/tpm_manager/tpm_manager.pb.h"
 #include "chromeos/dbus/tpm_manager/tpm_manager_client.h"
 

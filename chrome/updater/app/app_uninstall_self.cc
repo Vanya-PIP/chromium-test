@@ -5,7 +5,7 @@
 #include "chrome/updater/app/app_uninstall_self.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

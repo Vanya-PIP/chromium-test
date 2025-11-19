@@ -10,7 +10,7 @@
 
 #include "base/containers/contains.h"
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/unsafe_shared_memory_region.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"
 

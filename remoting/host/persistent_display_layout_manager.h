@@ -11,7 +11,7 @@
 
 #include "base/files/file_error_or.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/sequence_checker.h"
 #include "base/thread_annotations.h"

@@ -15,7 +15,7 @@
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/time/default_clock.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/multidevice_setup/account_status_change_delegate_notifier_impl.h"
 #include "chromeos/ash/services/multidevice_setup/android_sms_app_installing_status_observer.h"
 #include "chromeos/ash/services/multidevice_setup/eligible_host_devices_provider_impl.h"

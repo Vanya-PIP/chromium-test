@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace chromecast {
 

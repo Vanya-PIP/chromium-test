@@ -16,7 +16,7 @@ import java.lang.annotation.RetentionPolicy;
 public class DialogTypeRecorder {
     private static final String HISTOGRAM_NAME = "Android.UIDialogShown";
 
-    // Used for logging histogram of dialog types. Do not change these constants.
+    // Used for testistogram of dialog types. Do not change these constants.
     @IntDef({
         DialogType.DATE,
         DialogType.TIME,

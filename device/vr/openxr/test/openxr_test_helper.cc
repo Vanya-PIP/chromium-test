@@ -13,7 +13,7 @@
 #include <limits>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "device/vr/openxr/openxr_interaction_profile_paths.h"
 #include "device/vr/openxr/openxr_platform.h"
 #include "device/vr/openxr/openxr_util.h"

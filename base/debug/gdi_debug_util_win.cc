@@ -15,7 +15,7 @@
 #include <optional>
 
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/process/process.h"
 #include "base/win/scoped_gdi_object.h"

@@ -8,7 +8,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "components/services/app_service/public/cpp/intent_filter.h"
 #include "components/services/app_service/public/cpp/intent_filter_util.h"

@@ -9,7 +9,7 @@
 #include <variant>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/process/process.h"
 #include "base/task/sequenced_task_runner.h"

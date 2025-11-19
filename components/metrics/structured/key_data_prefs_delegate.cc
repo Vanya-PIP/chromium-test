@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "components/metrics/structured/lib/key_data.h"
 #include "components/metrics/structured/lib/key_util.h"

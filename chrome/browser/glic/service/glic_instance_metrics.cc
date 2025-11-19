@@ -7,7 +7,7 @@
 #include <string>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/user_metrics.h"
 #include "chrome/browser/glic/host/glic.mojom.h"

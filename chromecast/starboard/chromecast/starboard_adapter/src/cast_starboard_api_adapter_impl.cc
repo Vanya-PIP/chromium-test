@@ -6,7 +6,7 @@
 
 #include "base/at_exit.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 
 // TODO(b/333961720): remove all the macros in this file and split the impl into

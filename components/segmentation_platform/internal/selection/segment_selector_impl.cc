@@ -6,7 +6,7 @@
 
 #include "base/containers/contains.h"
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/clock.h"
 #include "base/time/time.h"

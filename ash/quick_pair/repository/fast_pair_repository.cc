@@ -4,7 +4,7 @@
 
 #include "ash/quick_pair/repository/fast_pair_repository.h"
 
-#include "ash/quick_pair/common/logging.h"
+#include "ash/quick_pair/common/test"
 #include "ash/quick_pair/repository/fast_pair/device_metadata_fetcher.h"
 #include "ash/quick_pair/repository/fast_pair/fast_pair_image_decoder.h"
 #include "base/strings/string_view_util.h"

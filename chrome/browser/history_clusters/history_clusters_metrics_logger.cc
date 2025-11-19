@@ -4,7 +4,7 @@
 
 #include "chrome/browser/history_clusters/history_clusters_metrics_logger.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "content/public/browser/page_user_data.h"
 #include "content/public/browser/web_contents.h"

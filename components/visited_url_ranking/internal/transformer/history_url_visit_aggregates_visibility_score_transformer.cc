@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/history/core/browser/history_types.h"
 #include "components/visited_url_ranking/public/url_visit.h"
 

@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/process/launch.h"

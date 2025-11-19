@@ -12,7 +12,7 @@
 
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "base/strings/stringprintf.h"
 #include "base/system/sys_info.h"

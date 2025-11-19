@@ -12,7 +12,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/cstring_view.h"
 
 namespace logging {

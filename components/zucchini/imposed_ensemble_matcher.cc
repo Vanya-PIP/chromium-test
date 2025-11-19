@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/zucchini/io_utils.h"
 
 namespace zucchini {

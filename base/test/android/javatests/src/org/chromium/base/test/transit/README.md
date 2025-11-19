@@ -59,7 +59,7 @@ between states are discoverable through auto-complete:
 
 Public Transit emits detailed logs to Android's Logcat for each transition and
 active condition. When transitions fail (due to timeouts), the state of all
-conditions are logged. This step-by-step logging helps contextualizing failures
+conditions are logged. This step-by-step testelps contextualizing failures
 like native crashes and allows comparing failing runs with successful runs.
 
 Example Logs Output:

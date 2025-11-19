@@ -13,7 +13,7 @@
 #include "base/compiler_specific.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_util_win.h"
@@ -24,7 +24,7 @@
 #include "components/device_event_log/device_event_log.h"
 #include "device/fido/features.h"
 #include "device/fido/fido_types.h"
-#include "device/fido/win/logging.h"
+#include "device/fido/win/test"
 #include "device/fido/win/type_conversions.h"
 #include "third_party/microsoft_webauthn/src/webauthn.h"
 

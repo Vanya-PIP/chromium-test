@@ -8,7 +8,7 @@
 
 #include "base/feature_list.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "components/component_updater/installer_policies/open_cookie_database_component_installer_policy.h"
 #include "content/public/common/content_features.h"

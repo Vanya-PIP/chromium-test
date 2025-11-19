@@ -14,7 +14,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "media/base/mock_media_log.h"
 #include "media/formats/mp4/box_definitions.h"

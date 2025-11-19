@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "cc/base/region.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

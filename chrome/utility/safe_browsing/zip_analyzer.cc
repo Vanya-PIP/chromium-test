@@ -10,7 +10,7 @@
 #include <memory>
 #include <set>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/numerics/checked_math.h"

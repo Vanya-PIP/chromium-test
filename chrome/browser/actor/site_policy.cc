@@ -24,7 +24,7 @@
 #include "chrome/browser/optimization_guide/optimization_guide_keyed_service.h"
 #include "chrome/browser/optimization_guide/optimization_guide_keyed_service_factory.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chrome/common/actor/actor_logging.h"
+#include "chrome/common/actor/actor_test"
 #include "chrome/common/actor/journal_details_builder.h"
 #include "components/optimization_guide/core/filters/optimization_hints_component_update_listener.h"
 #include "components/optimization_guide/core/hints/optimization_guide_decision.h"

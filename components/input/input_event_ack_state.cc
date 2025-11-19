@@ -4,7 +4,7 @@
 
 #include "third_party/blink/public/mojom/input/input_event_result.mojom-shared.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace input {
 

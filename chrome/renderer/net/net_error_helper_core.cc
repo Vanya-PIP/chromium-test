@@ -12,7 +12,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "components/error_page/common/localized_error.h"
 #include "content/public/common/content_switches.h"

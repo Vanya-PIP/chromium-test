@@ -12,7 +12,7 @@
 #include "base/apple/foundation_util.h"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/task/thread_pool.h"
 

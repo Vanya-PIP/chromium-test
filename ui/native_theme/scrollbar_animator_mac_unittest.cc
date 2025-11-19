@@ -4,7 +4,7 @@
 
 #include "ui/native_theme/scrollbar_animator_mac.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/task_environment.h"
 #include "base/time/time.h"
 #include "testing/gmock/include/gmock/gmock.h"

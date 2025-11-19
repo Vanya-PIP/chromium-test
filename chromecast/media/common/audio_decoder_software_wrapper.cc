@@ -8,10 +8,10 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "chromecast/media/api/decoder_buffer_base.h"
-#include "chromecast/media/common/base/decoder_config_logging.h"
+#include "chromecast/media/common/base/decoder_config_test"
 
 namespace chromecast {
 namespace media {

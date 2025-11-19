@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #import "base/task/single_thread_task_runner.h"
 #include "device/bluetooth/bluetooth_advertisement.h"

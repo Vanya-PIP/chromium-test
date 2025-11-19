@@ -4,7 +4,7 @@
 
 #include "content/public/browser/ax_inspect_factory.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/win/com_init_util.h"
 #include "content/browser/accessibility/accessibility_tree_formatter_blink.h"

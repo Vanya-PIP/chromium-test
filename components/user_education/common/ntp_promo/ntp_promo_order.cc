@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/user_education/common/ntp_promo/ntp_promo_identifier.h"
 #include "components/user_education/common/ntp_promo/ntp_promo_registry.h"
 #include "components/user_education/common/ntp_promo/ntp_promo_specification.h"

@@ -13,7 +13,7 @@
 #include "base/android/jni_android.h"
 #include "base/android/jni_string.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "base/path_service.h"

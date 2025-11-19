@@ -15,7 +15,7 @@
 #include <vector>
 
 #include "base/base_export.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace base {
 

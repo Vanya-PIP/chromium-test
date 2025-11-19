@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/uuid.h"
 #include "components/policy/core/common/cloud/device_management_service.h"
 #include "components/policy/core/common/cloud/dm_auth.h"

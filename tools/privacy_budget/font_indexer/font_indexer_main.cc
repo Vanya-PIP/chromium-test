@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool/thread_pool_instance.h"
 #include "base/test/task_environment.h"
 #include "base/test/test_io_thread.h"

@@ -8,7 +8,7 @@
 #include <memory>
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/task/sequenced_task_runner.h"
 #include "components/omnibox/browser/autocomplete_scoring_model_executor.h"

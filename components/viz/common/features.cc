@@ -10,7 +10,7 @@
 
 #include "base/command_line.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "base/strings/string_split.h"
 #include "base/system/sys_info.h"

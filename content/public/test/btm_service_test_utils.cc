@@ -4,7 +4,7 @@
 
 #include "content/public/test/btm_service_test_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/browser/btm/btm_bounce_detector.h"
 #include "content/public/browser/btm_redirect_info.h"
 

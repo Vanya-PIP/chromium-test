@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "components/zucchini/disassembler.h"
 #include "components/zucchini/element_detection.h"

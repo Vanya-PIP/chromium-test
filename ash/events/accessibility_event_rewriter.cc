@@ -13,7 +13,7 @@
 #include "ash/keyboard/keyboard_util.h"
 #include "ash/public/cpp/accessibility_event_rewriter_delegate.h"
 #include "ash/shell.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/system/sys_info.h"

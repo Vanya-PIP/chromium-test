@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/api/decoder_buffer_base.h"
 #include "chromecast/media/common/media_pipeline_backend_manager.h"
 #include "chromecast/public/media/cast_decoder_buffer.h"

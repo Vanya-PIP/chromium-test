@@ -4,7 +4,7 @@
 
 #include "chromecast/system/reboot/reboot_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "chromecast/public/reboot_shlib.h"
 

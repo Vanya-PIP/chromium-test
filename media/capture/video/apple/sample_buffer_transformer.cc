@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "media/base/video_frame.h"

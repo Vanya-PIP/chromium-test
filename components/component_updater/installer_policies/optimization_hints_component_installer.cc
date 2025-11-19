@@ -10,7 +10,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/values.h"
 #include "base/version.h"

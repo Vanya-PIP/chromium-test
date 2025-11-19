@@ -5,7 +5,7 @@
 #include "components/mirroring/service/rtp_stream.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
 #include "base/test/mock_callback.h"

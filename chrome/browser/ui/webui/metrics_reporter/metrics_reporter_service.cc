@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/webui/metrics_reporter/metrics_reporter_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "content/public/browser/page_user_data.h"
 #include "content/public/browser/render_frame_host.h"

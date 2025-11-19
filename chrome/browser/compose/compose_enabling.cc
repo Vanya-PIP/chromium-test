@@ -13,7 +13,7 @@
 #include "base/containers/flat_set.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/rand_util.h"
 #include "base/strings/string_util.h"

@@ -37,7 +37,7 @@
 #include "chrome/common/chrome_features.h"
 #include "components/services/app_service/public/cpp/icon_info.h"
 #include "components/webapps/browser/install_result_code.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_manager.h"
 #include "components/webapps/common/web_app_id.h"
 #include "components/webapps/common/web_page_metadata.mojom-forward.h"

@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/unsafe_shared_memory_region.h"
 #include "base/time/time.h"
 #include "build/build_config.h"

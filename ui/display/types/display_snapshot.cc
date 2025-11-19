@@ -8,7 +8,7 @@
 
 #include <sstream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"
 

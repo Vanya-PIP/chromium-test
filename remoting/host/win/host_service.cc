@@ -28,7 +28,7 @@
 #include "base/win/scoped_com_initializer.h"
 #include "remoting/base/auto_thread.h"
 #include "remoting/base/cpu_utils.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/scoped_sc_handle_win.h"
 #include "remoting/host/base/host_exit_codes.h"
 #include "remoting/host/branding.h"

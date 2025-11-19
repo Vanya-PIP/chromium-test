@@ -10,7 +10,7 @@
 
 #include "base/check.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/sequence_checker.h"
 #include "base/time/time.h"

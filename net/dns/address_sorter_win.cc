@@ -17,7 +17,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/task/thread_pool.h"
 #include "net/base/ip_address.h"

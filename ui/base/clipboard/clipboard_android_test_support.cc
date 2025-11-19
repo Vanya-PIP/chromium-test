@@ -6,7 +6,7 @@
 #include <string>
 
 #include "base/android/jni_string.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "ui/base/clipboard/clipboard_android.h"
 #include "ui/base/clipboard/clipboard_buffer.h"

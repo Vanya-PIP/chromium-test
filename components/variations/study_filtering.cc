@@ -13,7 +13,7 @@
 #include <string_view>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "components/variations/variations_layers.h"
 #include "components/variations/variations_seed_processor.h"

@@ -10,7 +10,7 @@
 
 #include "base/command_line.h"
 #include "base/environment.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/nix/xdg_util.h"
 #include "base/notimplemented.h"
 #include "ui/base/ui_base_types.h"

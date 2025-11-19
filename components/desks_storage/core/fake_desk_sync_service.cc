@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "components/desks_storage/core/fake_desk_sync_service.h"
-#include "base/logging.h"
+#include "base/test"
 #include "fake_desk_sync_bridge.h"
 #include "fake_desk_sync_service.h"
 

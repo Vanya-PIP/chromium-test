@@ -4,7 +4,7 @@
 
 #include "base/at_exit.h"
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "content/browser/cookie_insight_list/cookie_readiness_list/cookie_readiness_list_parser.h"
 #include "third_party/fuzztest/src/fuzztest/fuzztest.h"
 

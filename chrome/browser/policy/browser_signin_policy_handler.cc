@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/command_line.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/values.h"
 #include "build/build_config.h"
 #include "chrome/common/pref_names.h"

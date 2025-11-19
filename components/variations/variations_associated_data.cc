@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/check_op.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/memory/singleton.h"
 #include "base/metrics/field_trial_param_associator.h"

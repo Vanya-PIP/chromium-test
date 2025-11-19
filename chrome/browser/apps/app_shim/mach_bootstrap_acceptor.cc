@@ -11,7 +11,7 @@
 #include <utility>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/mac/scoped_mach_msg_destroy.h"
 #include "base/strings/strcat.h"
 #include "chrome/common/mac/app_mode_common.h"

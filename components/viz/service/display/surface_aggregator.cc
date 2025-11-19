@@ -14,7 +14,7 @@
 #include "base/check_op.h"
 #include "base/containers/adapters.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/numerics/ranges.h"
 #include "base/strings/to_string.h"

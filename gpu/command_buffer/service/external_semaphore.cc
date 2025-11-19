@@ -5,7 +5,7 @@
 #include "gpu/command_buffer/service/external_semaphore.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "components/viz/common/gpu/vulkan_context_provider.h"
 #include "gpu/vulkan/vulkan_device_queue.h"

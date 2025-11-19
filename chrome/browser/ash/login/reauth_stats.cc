@@ -4,9 +4,9 @@
 
 #include "chrome/browser/ash/login/reauth_stats.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/browser/browser_process.h"
 #include "components/user_manager/known_user.h"
 

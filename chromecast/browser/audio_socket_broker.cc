@@ -11,7 +11,7 @@
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/unix_domain_socket.h"
 #include "base/task/bind_post_task.h"
 #include "base/task/sequenced_task_runner.h"

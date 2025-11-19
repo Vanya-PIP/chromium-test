@@ -8,7 +8,7 @@
 
 #include <string_view>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/koid.h"
 #include "base/fuchsia/scoped_service_binding.h"
 #include "base/fuchsia/test_component_context_for_process.h"

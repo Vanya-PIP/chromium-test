@@ -14,7 +14,7 @@
 #include "base/containers/fixed_flat_map.h"
 #include "base/containers/map_util.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/user_metrics.h"
 #include "base/strings/escape.h"
 #include "base/strings/strcat.h"

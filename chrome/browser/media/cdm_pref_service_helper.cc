@@ -9,7 +9,7 @@
 #include "base/base64.h"
 #include "base/containers/to_value_list.h"
 #include "base/json/values_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/values.h"
 #include "chrome/browser/browser_process.h"

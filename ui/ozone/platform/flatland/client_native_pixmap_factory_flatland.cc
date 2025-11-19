@@ -12,7 +12,7 @@
 
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/koid.h"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"

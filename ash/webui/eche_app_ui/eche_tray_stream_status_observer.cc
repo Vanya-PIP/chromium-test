@@ -9,7 +9,7 @@
 #include "ash/shell.h"
 #include "ash/system/eche/eche_tray.h"
 #include "ash/webui/eche_app_ui/eche_stream_status_change_handler.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "ui/gfx/image/image.h"
 
 namespace ash {

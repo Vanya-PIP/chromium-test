@@ -23,7 +23,7 @@
 #include "base/check_op.h"
 #include "base/containers/contains.h"
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notimplemented.h"
 #include "base/strings/stringprintf.h"

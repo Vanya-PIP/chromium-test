@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/headless/test/bitmap_utils.h"
 #include "pdf/pdf.h"
 #include "printing/units.h"

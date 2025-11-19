@@ -21,7 +21,7 @@
 #include "base/base_switches.h"
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"

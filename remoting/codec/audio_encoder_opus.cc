@@ -6,7 +6,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "media/base/audio_bus.h"
 #include "media/base/audio_sample_types.h"

@@ -17,12 +17,12 @@
 #include <utility>
 #include <vector>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #include "base/synchronization/lock.h"
 #include "crypto/apple/security_framework_lock.h"

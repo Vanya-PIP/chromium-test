@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"

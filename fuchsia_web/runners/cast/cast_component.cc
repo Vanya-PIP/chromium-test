@@ -17,7 +17,7 @@
 
 #include "base/auto_reset.h"
 #include "base/files/file_util.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
 #include "base/path_service.h"
 #include "base/task/current_thread.h"

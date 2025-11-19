@@ -53,7 +53,7 @@ specific_include_rules = {
   ],
   'fast_pair_.*': [
     "+ash/quick_pair",
-    "+components/cross_device/logging/logging.h",
+    "+components/cross_device/logging/test",
   ],
   'input_device_settings_provider\.(cc|h)': [
     '+ash/shell.h',

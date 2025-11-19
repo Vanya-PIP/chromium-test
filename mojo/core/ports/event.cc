@@ -13,7 +13,7 @@
 #include <string.h>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/numerics/safe_math.h"
 #include "mojo/core/ports/user_message.h"

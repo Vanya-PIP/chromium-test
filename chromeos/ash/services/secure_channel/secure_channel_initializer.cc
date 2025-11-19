@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/secure_channel_impl.h"
 #include "device/bluetooth/bluetooth_adapter_factory.h"
 #include "device/bluetooth/dbus/bluez_dbus_manager.h"

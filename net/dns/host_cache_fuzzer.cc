@@ -11,7 +11,7 @@
 #include <optional>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/clamped_math.h"
 #include "base/numerics/ostream_operators.h"
 #include "net/dns/host_cache_fuzzer.pb.h"

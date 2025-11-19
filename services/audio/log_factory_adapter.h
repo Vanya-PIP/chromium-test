@@ -8,7 +8,7 @@
 #include <memory>
 
 #include "base/containers/queue.h"
-#include "media/audio/audio_logging.h"
+#include "media/audio/audio_test"
 #include "media/audio/fake_audio_log_factory.h"
 #include "media/mojo/mojom/audio_logging.mojom.h"
 #include "mojo/public/cpp/bindings/pending_remote.h"

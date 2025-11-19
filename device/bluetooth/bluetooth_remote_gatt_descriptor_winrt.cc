@@ -12,7 +12,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notimplemented.h"
 #include "base/strings/stringprintf.h"

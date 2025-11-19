@@ -19,7 +19,7 @@
 #include "base/files/file_util.h"
 #include "base/json/json_file_value_serializer.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"

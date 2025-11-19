@@ -16,7 +16,7 @@
 #include "base/bits.h"
 #include "base/compiler_specific.h"
 #include "base/dcheck_is_on.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/functional/callback.h"
 #include "base/functional/callback_forward.h"
 #include "base/functional/callback_helpers.h"

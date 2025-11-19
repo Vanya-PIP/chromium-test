@@ -21,7 +21,7 @@
 
 #include "base/check.h"
 #include "base/compiler_specific.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/safe_sprintf.h"
 #include "build/build_config.h"

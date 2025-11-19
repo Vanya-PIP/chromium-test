@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/containers/queue.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "printing/backend/cups_connection.h"
 #include "printing/backend/cups_deleters.h"

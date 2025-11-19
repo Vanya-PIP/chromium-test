@@ -11,7 +11,7 @@
 #include "base/check_deref.h"
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "chromeos/ash/components/account_manager/account_manager_factory.h"
 #include "components/account_manager_core/account.h"

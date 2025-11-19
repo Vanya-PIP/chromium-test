@@ -4,7 +4,7 @@
 
 #include "gpu/command_buffer/service/shared_image/raw_draw_image_backing.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/types/optional_util.h"
 #include "cc/paint/paint_op_buffer.h"

@@ -23,7 +23,7 @@
 #include "base/fuchsia/scoped_service_binding.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/run_loop.h"
 #include "base/strings/strcat.h"

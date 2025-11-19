@@ -5,7 +5,7 @@
 #include "remoting/base/url_loader_network_service_observer.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/task/single_thread_task_runner.h"
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
@@ -15,7 +15,7 @@
 #include "net/ssl/ssl_private_key.h"
 #include "net/url_request/url_request.h"
 #include "remoting/base/certificate_helpers.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "services/network/public/cpp/simple_url_loader.h"
 #include "services/network/public/mojom/shared_storage.mojom.h"

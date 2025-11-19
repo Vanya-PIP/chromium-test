@@ -10,7 +10,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/hash/sha1.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "crypto/hash.h"
 #include "crypto/sha2.h"

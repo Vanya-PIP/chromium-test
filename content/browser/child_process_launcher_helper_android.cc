@@ -18,7 +18,7 @@
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial.h"
 #include "base/process/launch.h"
 #include "base/trace_event/trace_event.h"

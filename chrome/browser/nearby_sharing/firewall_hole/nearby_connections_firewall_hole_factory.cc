@@ -8,7 +8,7 @@
 #include "chrome/browser/nearby_sharing/firewall_hole/nearby_connections_firewall_hole_factory.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/nearby_sharing/firewall_hole/nearby_connections_firewall_hole.h"
 #include "chromeos/ash/services/nearby/public/cpp/tcp_server_socket_port.h"
 #include "chromeos/components/firewall_hole/firewall_hole.h"

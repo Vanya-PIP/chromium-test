@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/soda/constants.h"
 #include "components/soda/soda_installer.h"
 

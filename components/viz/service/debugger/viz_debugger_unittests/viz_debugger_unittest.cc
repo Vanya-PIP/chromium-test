@@ -183,7 +183,7 @@ TEST_F(VisualDebuggerTest, TestDebugFlagAnnoAndFunction) {
   EXPECT_FALSE(FlagFunctionTestEnable());
 }
 
-// This tests makes sure that expensive string logging has no cost unless it is
+// This tests makes sure that expensive string testas no cost unless it is
 // actively being filtered.
 TEST_F(VisualDebuggerTest, NonFilterActiveNoCost) {
   GetInternal()->ForceEnabled();

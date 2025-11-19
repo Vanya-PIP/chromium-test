@@ -9,7 +9,7 @@
 #import "base/apple/foundation_util.h"
 #import "base/apple/scoped_objc_class_swizzler.h"
 #include "base/auto_reset.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/mac/mac_util.h"
 #include "base/metrics/field_trial_params.h"

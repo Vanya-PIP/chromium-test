@@ -12,7 +12,7 @@
 
 #include "base/clang_profiling_buildflags.h"
 #include "base/fuchsia/default_job.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/threading/thread_restrictions.h"
 #include "base/trace_event/trace_event.h"
 

@@ -10,7 +10,7 @@
 #include <cmath>
 #include <cstring>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/decrypt_config.h"
 #include "media/parsers/bit_reader_macros.h"
 

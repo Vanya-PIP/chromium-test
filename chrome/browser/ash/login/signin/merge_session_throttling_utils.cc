@@ -7,7 +7,7 @@
 #include <stdint.h>
 
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/login/signin/oauth2_login_manager.h"

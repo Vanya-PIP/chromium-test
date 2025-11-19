@@ -10,7 +10,7 @@
 #include "media/gpu/v4l2/v4l2_vp9_helpers.h"
 
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 namespace {

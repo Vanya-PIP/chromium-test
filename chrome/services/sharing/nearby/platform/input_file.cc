@@ -11,7 +11,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "third_party/abseil-cpp/absl/time/time.h"
 

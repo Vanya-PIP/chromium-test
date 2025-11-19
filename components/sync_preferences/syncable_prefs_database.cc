@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/sync/base/features.h"
 
 namespace sync_preferences {

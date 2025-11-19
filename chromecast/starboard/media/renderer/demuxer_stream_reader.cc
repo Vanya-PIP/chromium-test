@@ -11,7 +11,7 @@
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "base/task/sequenced_task_runner.h"
 #include "chromecast/base/metrics/cast_metrics_helper.h"

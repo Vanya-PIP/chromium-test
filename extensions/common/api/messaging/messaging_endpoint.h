@@ -8,7 +8,7 @@
 #include <optional>
 #include <string>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "extensions/common/extension_id.h"
 #include "extensions/common/mojom/message_port.mojom-shared.h"
 

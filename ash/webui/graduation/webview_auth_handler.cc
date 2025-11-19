@@ -13,7 +13,7 @@
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/timer/timer.h"
 #include "components/signin/public/base/consent_level.h"

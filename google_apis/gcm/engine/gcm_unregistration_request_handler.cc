@@ -4,7 +4,7 @@
 
 #include "google_apis/gcm/engine/gcm_unregistration_request_handler.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "google_apis/gcm/base/gcm_util.h"
 
 namespace gcm {

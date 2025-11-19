@@ -13,7 +13,7 @@
 
 #include "partition_alloc/build_config.h"
 #include "partition_alloc/buildflags.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_bucket.h"
 #include "partition_alloc/partition_freelist_entry.h"
 #include "partition_alloc/partition_page.h"

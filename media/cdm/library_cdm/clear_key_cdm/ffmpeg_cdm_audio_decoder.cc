@@ -13,7 +13,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/audio_bus.h"
 #include "media/base/audio_timestamp_helper.h"
 #include "media/base/data_buffer.h"

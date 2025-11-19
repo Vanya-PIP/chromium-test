@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/time/time.h"
 #include "ui/base/x/selection_utils.h"
@@ -263,7 +263,7 @@ bool SelectionOwner::ProcessTarget(x11::Atom target,
     return true;
   }
 
-  // I would put error logging here, but GTK ignores TARGETS and spams us
+  // I would put error testere, but GTK ignores TARGETS and spams us
   // looking for its own internal types.
   return false;
 }

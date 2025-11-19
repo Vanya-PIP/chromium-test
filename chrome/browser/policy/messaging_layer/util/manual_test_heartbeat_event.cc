@@ -9,7 +9,7 @@
 #include "base/check_op.h"
 #include "base/feature_list.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/thread_pool.h"
 #include "base/time/time.h"

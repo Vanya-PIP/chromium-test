@@ -12,7 +12,7 @@
 #include "base/containers/span.h"
 #include "base/files/file_util.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/path_service.h"
 #include "base/strings/stringprintf.h"

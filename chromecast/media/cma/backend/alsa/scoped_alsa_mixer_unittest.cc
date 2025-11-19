@@ -11,7 +11,7 @@
 
 #include "base/containers/span.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/mock_log.h"
 #include "base/test/task_environment.h"
 #include "media/audio/alsa/mock_alsa_wrapper.h"

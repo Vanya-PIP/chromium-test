@@ -16,7 +16,7 @@
 #include <tuple>
 #include <type_traits>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "build/build_config.h"
 #include "media/gpu/macros.h"

@@ -19,7 +19,7 @@
 namespace {
 
 // Name of the console logging test page.
-constexpr char kLogTestPageFileName[] = "console_logging.html";
+constexpr char kLogTestPageFileName[] = "console_testtml";
 constexpr char kLogTestPageDebugMessage[] = "This is a debug() message.";
 
 // Debug name to create Frames with, to use as their logging tag.
@@ -106,7 +106,7 @@ TEST_F(WebEngineIntegrationLoggingTest, SetJavaScriptLogLevel_DEBUG) {
 
   // Verify that the message is formatted as expected.
   EXPECT_EQ(NormalizeConsoleLogMessage(logged_message->msg()),
-            base::StringPrintf("[http://127.0.0.1:%s/console_logging.html(8)] "
+            base::StringPrintf("[http://127.0.0.1:%s/console_testtml(8)] "
                                "This is a debug() message.",
                                kNormalizedPortNumber));
 }

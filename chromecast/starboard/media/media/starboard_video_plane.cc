@@ -4,7 +4,7 @@
 
 #include "starboard_video_plane.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace chromecast {
 namespace media {

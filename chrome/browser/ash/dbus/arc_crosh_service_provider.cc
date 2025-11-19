@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "chromeos/ash/components/dbus/arc/arc.pb.h"
 #include "chromeos/ash/experiences/arc/mojom/crosh.mojom.h"

@@ -9,7 +9,7 @@
 #include "base/command_line.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "base/time/time.h"
 #include "base/win/win_util.h"

@@ -5,7 +5,7 @@
 #include "chrome/browser/nearby_sharing/nearby_receive_manager.h"
 
 #include "base/functional/callback_helpers.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 NearbyReceiveManager::NearbyReceiveManager(
     NearbySharingService* nearby_sharing_service)

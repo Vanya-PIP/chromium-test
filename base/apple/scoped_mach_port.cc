@@ -4,7 +4,7 @@
 
 #include "base/apple/scoped_mach_port.h"
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 
 namespace base::apple {
 namespace internal {

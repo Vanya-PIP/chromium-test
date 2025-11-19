@@ -7,9 +7,9 @@
 #include <fuchsia/media/cpp/fidl.h>
 #include <fuchsia/media/drm/cpp/fidl.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/not_fatal_until.h"
 #include "base/task/bind_post_task.h"
 #include "media/base/decoder_buffer.h"

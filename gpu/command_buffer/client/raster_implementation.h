@@ -22,7 +22,7 @@
 #include "gpu/command_buffer/client/context_support.h"
 #include "gpu/command_buffer/client/gpu_control_client.h"
 #include "gpu/command_buffer/client/implementation_base.h"
-#include "gpu/command_buffer/client/logging.h"
+#include "gpu/command_buffer/client/test"
 #include "gpu/command_buffer/client/mapped_memory.h"
 #include "gpu/command_buffer/client/raster_interface.h"
 #include "gpu/command_buffer/client/transfer_buffer.h"

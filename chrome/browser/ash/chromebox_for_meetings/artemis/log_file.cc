@@ -8,7 +8,7 @@
 
 #include <fstream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/scoped_blocking_call.h"
 
 namespace ash::cfm {

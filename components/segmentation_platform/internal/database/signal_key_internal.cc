@@ -16,7 +16,7 @@
 #include "base/containers/span.h"
 #include "base/containers/span_reader.h"
 #include "base/containers/span_writer.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace segmentation_platform {
 

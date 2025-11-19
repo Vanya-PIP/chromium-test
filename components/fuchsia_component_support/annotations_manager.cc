@@ -13,9 +13,9 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/mem_buffer_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/strings/string_number_conversions.h"
 

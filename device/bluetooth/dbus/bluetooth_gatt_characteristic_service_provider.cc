@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/dbus/bluetooth_gatt_characteristic_service_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/bluetooth/dbus/bluetooth_gatt_characteristic_service_provider_impl.h"
 #include "device/bluetooth/dbus/bluez_dbus_manager.h"
 #include "device/bluetooth/dbus/fake_bluetooth_gatt_characteristic_service_provider.h"

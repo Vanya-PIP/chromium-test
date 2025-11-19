@@ -10,7 +10,7 @@
 #include <cerrno>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "sandbox/linux/system_headers/linux_syscalls.h"
 
 namespace sandbox {

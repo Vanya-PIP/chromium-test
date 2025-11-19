@@ -7,7 +7,7 @@
 #include <optional>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "chrome/browser/ash/policy/reporting/metrics_reporting/cros_healthd_metric_sampler.h"
 #include "components/reporting/metrics/sampler.h"

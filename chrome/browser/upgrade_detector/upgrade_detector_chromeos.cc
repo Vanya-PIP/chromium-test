@@ -10,7 +10,7 @@
 #include <optional>
 
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/time/clock.h"
 #include "base/time/default_clock.h"

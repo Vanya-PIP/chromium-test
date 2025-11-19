@@ -31,7 +31,7 @@
 #include "components/keep_alive_registry/scoped_keep_alive.h"
 #include "components/web_package/signed_web_bundles/signed_web_bundle_integrity_block.h"
 #include "components/webapps/browser/install_result_code.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/common/web_app_id.h"
 #include "components/webapps/isolated_web_apps/reading/response_reader_factory.h"
 #include "components/webapps/isolated_web_apps/types/iwa_version.h"

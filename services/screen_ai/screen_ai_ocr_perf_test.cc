@@ -16,7 +16,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/json/json_file_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_split.h"
 #include "base/system/sys_info.h"

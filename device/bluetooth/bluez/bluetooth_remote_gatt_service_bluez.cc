@@ -6,7 +6,7 @@
 #include <utility>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "dbus/property.h"
 #include "device/bluetooth/bluez/bluetooth_adapter_bluez.h"

@@ -7,7 +7,7 @@
 #include <atomic>
 
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "components/reporting/proto/synced/health.pb.h"
 

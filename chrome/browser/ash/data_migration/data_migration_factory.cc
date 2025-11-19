@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/data_migration/data_migration_factory.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/nearby/nearby_process_manager_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chromeos/ash/components/browser_context_helper/browser_context_helper.h"

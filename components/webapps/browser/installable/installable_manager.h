@@ -17,7 +17,7 @@
 #include "base/memory/weak_ptr.h"
 #include "base/task/sequenced_task_runner.h"
 #include "components/webapps/browser/installable/installable_data.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_page_data.h"
 #include "components/webapps/browser/installable/installable_params.h"
 #include "components/webapps/browser/installable/installable_task_queue.h"

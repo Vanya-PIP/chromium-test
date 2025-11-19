@@ -7,7 +7,7 @@
 #include <iterator>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace views::test {
 

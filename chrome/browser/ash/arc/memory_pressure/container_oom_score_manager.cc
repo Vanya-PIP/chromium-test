@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_handle.h"  // For ProcessId.
 #include "chromeos/ash/components/dbus/debug_daemon/debug_daemon_client.h"
 #include "chromeos/ash/experiences/arc/process/arc_process.h"

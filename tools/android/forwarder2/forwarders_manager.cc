@@ -14,7 +14,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/posix/eintr_wrapper.h"
 #include "third_party/abseil-cpp/absl/cleanup/cleanup.h"

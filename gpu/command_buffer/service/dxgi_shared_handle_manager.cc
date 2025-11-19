@@ -9,7 +9,7 @@
 #include <d3d11_1.h>
 
 #include "base/atomic_ref_count.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "gpu/command_buffer/common/constants.h"
 #include "ui/gl/gl_angle_util_win.h"

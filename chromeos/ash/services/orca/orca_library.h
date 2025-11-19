@@ -8,7 +8,7 @@
 #include <memory>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/scoped_native_library.h"
 #include "base/types/expected.h"
 #include "chromeos/ash/services/orca/public/mojom/orca_service.mojom.h"

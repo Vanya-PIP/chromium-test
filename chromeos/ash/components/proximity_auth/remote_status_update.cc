@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/proximity_auth/remote_status_update.h"
 
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace {
 

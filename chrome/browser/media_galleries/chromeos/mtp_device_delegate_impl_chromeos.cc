@@ -21,7 +21,7 @@
 #include "base/files/file_util.h"
 #include "base/files/safe_base_name.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
 #include "base/not_fatal_until.h"

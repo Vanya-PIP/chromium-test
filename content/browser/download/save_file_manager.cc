@@ -10,7 +10,7 @@
 #include "base/containers/contains.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/string_util.h"
 #include "build/build_config.h"

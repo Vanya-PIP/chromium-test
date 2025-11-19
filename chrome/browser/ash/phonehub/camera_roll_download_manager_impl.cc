@@ -27,7 +27,7 @@
 #include "base/task/thread_pool.h"
 #include "base/time/time.h"
 #include "chrome/browser/ui/ash/holding_space/holding_space_keyed_service.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/camera_roll_download_manager.h"
 #include "chromeos/ash/components/phonehub/proto/phonehub_api.pb.h"
 #include "chromeos/ash/services/secure_channel/public/mojom/secure_channel_types.mojom.h"

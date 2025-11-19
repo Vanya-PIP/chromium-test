@@ -11,7 +11,7 @@
 #include "base/android/jni_array.h"
 #include "base/android/jni_string.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/single_thread_task_runner.h"

@@ -22,7 +22,7 @@
 #include "base/test/metrics/histogram_tester.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/test/task_environment.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/test/ash_test_suite.h"
 #include "chromeos/ash/services/secure_channel/public/cpp/client/fake_connection_manager.h"
 #include "mojo/public/cpp/bindings/pending_receiver.h"

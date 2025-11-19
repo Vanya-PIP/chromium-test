@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "net/test/embedded_test_server/websocket_connection.h"
 #include "net/test/embedded_test_server/websocket_handler.h"

@@ -12,7 +12,7 @@
 #include "base/time/time.h"
 #include "chrome/browser/nearby_sharing/fast_initiation/constants.h"
 #include "chrome/browser/nearby_sharing/nearby_share_metrics.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_low_energy_scan_filter.h"
 
 namespace {

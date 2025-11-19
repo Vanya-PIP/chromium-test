@@ -9,7 +9,7 @@
 #include <ostream>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"
 #include "ui/events/ozone/evdev/cursor_delegate_evdev.h"

@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/process/kill.h"
 #include "base/strings/string_util.h"

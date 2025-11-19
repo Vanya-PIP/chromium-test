@@ -13,7 +13,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
 #include "base/containers/to_vector.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/not_fatal_until.h"
 #include "base/rand_util.h"

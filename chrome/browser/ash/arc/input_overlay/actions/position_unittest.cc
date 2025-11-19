@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/arc/input_overlay/actions/position.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "ui/gfx/geometry/test/geometry_util.h"
 

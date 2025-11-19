@@ -9,7 +9,7 @@
 
 #include "chrome/installer/util/set_reg_value_work_item.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/win/registry.h"

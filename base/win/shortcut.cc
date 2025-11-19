@@ -12,7 +12,7 @@
 
 #include "base/files/block_tests_writing_to_special_dirs.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/threading/scoped_blocking_call.h"

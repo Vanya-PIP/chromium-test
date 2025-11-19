@@ -8,7 +8,7 @@
 #include <cmath>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromecast/media/base/slew_volume.h"
 #include "chromecast/media/cma/backend/mixer/post_processor_registry.h"

@@ -4,7 +4,7 @@
 
 #include "ash/webui/eche_app_ui/eche_connector_impl.h"
 
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/components/multidevice/software_feature.h"
 #include "chromeos/ash/components/multidevice/software_feature_state.h"

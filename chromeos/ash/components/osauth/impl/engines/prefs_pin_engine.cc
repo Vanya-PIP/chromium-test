@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "ash/constants/ash_pref_names.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/cryptohome/auth_factor.h"
 #include "chromeos/ash/components/login/auth/public/auth_factors_configuration.h"
 #include "chromeos/ash/components/login/auth/public/key.h"

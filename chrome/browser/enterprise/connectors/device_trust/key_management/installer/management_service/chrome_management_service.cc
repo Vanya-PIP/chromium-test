@@ -15,7 +15,7 @@
 #include "base/files/file_path.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/path_service.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/browser/enterprise/connectors/device_trust/key_management/core/network/mojo_key_network_delegate.h"
 #include "chrome/browser/enterprise/connectors/device_trust/key_management/core/shared_command_constants.h"
 #include "chrome/browser/enterprise/connectors/device_trust/key_management/installer/key_rotation_manager.h"

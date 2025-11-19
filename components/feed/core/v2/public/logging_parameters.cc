@@ -4,7 +4,7 @@
 
 #include "components/feed/core/v2/public/logging_parameters.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/feed/core/proto/v2/store.pb.h"
 #include "components/feed/core/proto/v2/ui.pb.h"
 #include "components/feed/core/v2/config.h"

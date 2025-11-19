@@ -8,7 +8,7 @@
 
 #import "base/check_op.h"
 #import "base/containers/contains.h"
-#import "base/debug/crash_logging.h"
+#import "base/debug/crash_test"
 #import "base/notreached.h"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/web/javascript_flags.h"

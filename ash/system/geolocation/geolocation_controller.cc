@@ -15,7 +15,7 @@
 #include "ash/system/time/time_of_day.h"
 #include "base/check_is_test.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/clock.h"
 #include "chromeos/ash/components/geolocation/geoposition.h"
 #include "chromeos/ash/components/geolocation/simple_geolocation_provider.h"

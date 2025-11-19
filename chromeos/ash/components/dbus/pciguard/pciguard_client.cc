@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/dbus/pciguard/pciguard_client.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "chromeos/ash/components/dbus/pciguard/fake_pciguard_client.h"

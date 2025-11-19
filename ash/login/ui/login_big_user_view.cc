@@ -9,7 +9,7 @@
 #include "ash/session/session_controller_impl.h"
 #include "ash/shell.h"
 #include "ash/wallpaper/wallpaper_controller_impl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/constants/chromeos_features.h"
 #include "components/account_id/account_id.h"
 #include "ui/base/metadata/metadata_impl_macros.h"

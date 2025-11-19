@@ -11,7 +11,7 @@
 
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/test/task_environment.h"
 #include "base/test/test.pb.h"

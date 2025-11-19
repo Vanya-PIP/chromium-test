@@ -5,9 +5,9 @@
 #include "chromeos/ash/services/secure_channel/ble_scanner.h"
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/public/mojom/secure_channel.mojom-shared.h"
 
 namespace ash::secure_channel {

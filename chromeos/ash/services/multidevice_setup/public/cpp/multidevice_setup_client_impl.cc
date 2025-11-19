@@ -11,7 +11,7 @@
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/multidevice_setup/public/mojom/multidevice_setup.mojom.h"
 
 namespace {

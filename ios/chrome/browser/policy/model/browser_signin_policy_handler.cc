@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/strings/string_number_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/values.h"
 #include "components/policy/core/browser/policy_error_map.h"
 #include "components/policy/core/common/policy_map.h"

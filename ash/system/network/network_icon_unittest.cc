@@ -15,7 +15,7 @@
 #include "ash/system/network/active_network_icon.h"
 #include "ash/system/network/tray_network_state_model.h"
 #include "ash/test/ash_test_base.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "chromeos/ash/components/network/network_state_handler.h"
 #include "chromeos/ash/components/network/network_state_test_helper.h"

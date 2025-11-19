@@ -10,7 +10,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/memory/stack_allocated.h"
 #include "base/threading/scoped_blocking_call.h"

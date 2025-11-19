@@ -5,7 +5,7 @@
 #include "chrome/browser/safe_browsing/notification_telemetry/notification_telemetry_service.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/escape.h"
 #include "base/time/time.h"

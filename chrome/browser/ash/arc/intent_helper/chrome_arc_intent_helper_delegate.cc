@@ -8,7 +8,7 @@
 
 #include "ash/constants/ash_pref_names.h"
 #include "ash/system/privacy_hub/privacy_hub_controller.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/arc/session/arc_session_manager.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chromeos/ash/experiences/arc/arc_prefs.h"

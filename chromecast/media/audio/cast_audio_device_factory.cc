@@ -9,7 +9,7 @@
 #include "base/android/bundle_utils.h"
 #include "base/check.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "chromecast/base/bitstream_audio_codecs.h"
 #include "chromecast/base/cast_features.h"

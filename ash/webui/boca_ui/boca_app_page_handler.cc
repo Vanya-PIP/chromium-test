@@ -29,7 +29,7 @@
 #include "base/functional/callback_forward.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/sequence_checker.h"
 #include "base/strings/utf_string_conversions.h"

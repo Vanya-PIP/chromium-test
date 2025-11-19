@@ -10,7 +10,7 @@
 #include "base/json/json_file_value_serializer.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/values.h"
 #include "chromecast/base/path_utils.h"

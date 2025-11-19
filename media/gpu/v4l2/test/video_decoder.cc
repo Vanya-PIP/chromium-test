@@ -15,7 +15,7 @@
 
 #include "base/bits.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/video_types.h"
 #include "media/gpu/v4l2/test/upstream_pix_fmt.h"
 #include "third_party/libyuv/include/libyuv.h"

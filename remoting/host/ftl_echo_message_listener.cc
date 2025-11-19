@@ -6,8 +6,8 @@
 
 #include <string>
 
-#include "base/logging.h"
-#include "remoting/base/logging.h"
+#include "base/test"
+#include "remoting/base/test"
 #include "remoting/proto/ftl/v1/chromoting_message.pb.h"
 #include "remoting/proto/ftl/v1/ftl_messages.pb.h"
 #include "remoting/signaling/signaling_address.h"

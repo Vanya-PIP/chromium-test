@@ -4,7 +4,7 @@
 
 #include "media/gpu/mac/video_toolbox_decompression_session.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/media_log.h"
 
 namespace media {

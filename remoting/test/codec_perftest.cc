@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/simple_test_tick_clock.h"
 #include "base/time/time.h"
 #include "remoting/codec/video_encoder_vpx.h"

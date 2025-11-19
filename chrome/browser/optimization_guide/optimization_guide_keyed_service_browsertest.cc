@@ -9,7 +9,7 @@
 #include "base/base64.h"
 #include "base/command_line.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/strings/escape.h"
 #include "base/test/bind.h"

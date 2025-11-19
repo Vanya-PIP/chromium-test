@@ -8,7 +8,7 @@
 #include <string>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "crypto/sha2.h"
 #include "net/cert/cert_net_fetcher.h"
 #include "third_party/boringssl/src/include/openssl/pki/ocsp.h"

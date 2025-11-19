@@ -4,7 +4,7 @@
 
 #include "components/autofill/core/browser/webdata/payments/payments_sync_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
 #include "components/sync/base/data_type.h"

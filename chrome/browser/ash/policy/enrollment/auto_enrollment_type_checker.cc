@@ -14,7 +14,7 @@
 #include "base/command_line.h"
 #include "base/functional/callback.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "build/branding_buildflags.h"
 #include "chrome/browser/ash/login/configuration_keys.h"

@@ -4,7 +4,7 @@
 
 #include "components/viz/service/display/aggregated_frame.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "base/trace_event/traced_value.h"
 

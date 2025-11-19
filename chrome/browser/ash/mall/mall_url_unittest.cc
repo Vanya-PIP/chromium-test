@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/mall/mall_url.h"
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/test/test_future.h"
 #include "chrome/browser/apps/almanac_api_client/device_info_manager.h"

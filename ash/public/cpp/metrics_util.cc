@@ -6,7 +6,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/time/time.h"
 #include "ui/compositor/scoped_animation_duration_scale_mode.h"

@@ -11,7 +11,7 @@
 #include "base/apple/foundation_util.h"
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/values.h"

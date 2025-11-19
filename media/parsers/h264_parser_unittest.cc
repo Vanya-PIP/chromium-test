@@ -12,7 +12,7 @@
 
 #include "base/command_line.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "media/base/subsample_entry.h"
 #include "media/base/test_data_util.h"

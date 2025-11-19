@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/multidevice/mojom/multidevice_mojom_traits.h"
 
 #include "base/notreached.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "device/bluetooth/public/cpp/bluetooth_address.h"
 #include "mojo/public/cpp/base/time_mojom_traits.h"

@@ -4,7 +4,7 @@
 
 #include "ui/ozone/platform/wayland/host/wayland_seat.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "ui/events/ozone/layout/keyboard_layout_engine_manager.h"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"

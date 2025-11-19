@@ -10,7 +10,7 @@
 #include "base/files/file.h"
 #include "base/files/file_util.h"
 #include "base/json/values_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/test/gmock_callback_support.h"
 #include "base/test/mock_callback.h"

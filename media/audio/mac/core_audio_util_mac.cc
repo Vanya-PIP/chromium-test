@@ -8,7 +8,7 @@
 
 #include <utility>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/containers/heap_array.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"

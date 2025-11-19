@@ -11,7 +11,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/not_fatal_until.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_view_util.h"

@@ -6,7 +6,7 @@
 
 #include <sstream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/borealis/borealis_context.h"
 #include "chrome/browser/ash/borealis/borealis_context_manager.h"
 #include "chrome/browser/ash/borealis/borealis_service.h"

@@ -6,7 +6,7 @@
 
 #include "ash/shell.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "dbus/bus.h"
 #include "dbus/message.h"
 #include "third_party/cros_system_api/dbus/service_constants.h"

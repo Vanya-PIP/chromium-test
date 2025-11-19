@@ -10,7 +10,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "base/strings/strcat_win.h"
 #include "base/strings/string_number_conversions_win.h"

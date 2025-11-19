@@ -13,7 +13,7 @@
 #include "base/android/jni_android.h"
 #include "base/android/scoped_hardware_buffer_fence_sync.h"
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_functions.h"

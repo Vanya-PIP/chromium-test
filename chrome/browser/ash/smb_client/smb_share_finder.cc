@@ -8,7 +8,7 @@
 
 #include "ash/constants/ash_features.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "chrome/browser/ash/smb_client/discovery/mdns_host_locator.h"
 #include "chrome/browser/ash/smb_client/smb_constants.h"

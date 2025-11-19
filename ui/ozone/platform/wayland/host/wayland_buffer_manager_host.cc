@@ -13,7 +13,7 @@
 
 #include "base/functional/bind.h"
 #include "base/i18n/number_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"

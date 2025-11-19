@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/check_op.h"
-#include "content/browser/notifications/devtools_event_logging.h"
+#include "content/browser/notifications/devtools_event_test"
 #include "content/browser/service_worker/service_worker_context_wrapper.h"
 #include "content/public/browser/browser_context.h"
 #include "content/public/browser/browser_task_traits.h"

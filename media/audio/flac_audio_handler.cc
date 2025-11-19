@@ -12,7 +12,7 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/audio_bus.h"
 #include "media/base/audio_fifo.h"
 #include "media/base/audio_sample_types.h"

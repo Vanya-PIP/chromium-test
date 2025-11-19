@@ -4,7 +4,7 @@
 
 #import "ios/chrome/test/earl_grey/chrome_egtest_plugin_client.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "ios/testing/plugin/test_plugin_service.pb.h"
 
 using grpc::Channel;

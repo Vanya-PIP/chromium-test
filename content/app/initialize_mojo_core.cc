@@ -7,7 +7,7 @@
 #include "base/check_op.h"
 #include "base/command_line.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "content/public/common/content_switches.h"
 #include "mojo/core/embedder/configuration.h"

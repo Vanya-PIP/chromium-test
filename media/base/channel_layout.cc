@@ -9,7 +9,7 @@
 #include <array>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 
 namespace media {

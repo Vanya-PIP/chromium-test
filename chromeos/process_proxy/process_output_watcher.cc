@@ -14,7 +14,7 @@
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/third_party/icu/icu_utf.h"

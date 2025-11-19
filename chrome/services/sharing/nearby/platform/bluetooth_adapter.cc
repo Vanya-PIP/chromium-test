@@ -4,7 +4,7 @@
 
 #include "chrome/services/sharing/nearby/platform/bluetooth_adapter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notimplemented.h"
 #include "components/cross_device/nearby/nearby_features.h"

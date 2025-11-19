@@ -12,7 +12,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "extensions/buildflags/buildflags.h"
 #include "net/http/http_request_headers.h"
 #include "net/http/http_util.h"

@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/timer/timer.h"
 #include "content/public/browser/visibility.h"

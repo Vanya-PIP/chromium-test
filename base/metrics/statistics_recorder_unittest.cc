@@ -13,7 +13,7 @@
 
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_base.h"
 #include "base/metrics/histogram_macros.h"
@@ -851,7 +851,7 @@ TEST_P(StatisticsRecorderTest, GlobalCallbackCalled) {
 }
 
 TEST_P(StatisticsRecorderTest, LogOnShutdownNotInitialized) {
-  // Some builds don't have runtime vlogging. See base/logging.h.
+  // Some builds don't have runtime vlogging. See base/test.
   if (!VLOG_IS_ON(0)) {
     GTEST_SKIP();
   }
@@ -865,7 +865,7 @@ TEST_P(StatisticsRecorderTest, LogOnShutdownNotInitialized) {
 }
 
 TEST_P(StatisticsRecorderTest, LogOnShutdownInitializedExplicitly) {
-  // Some builds don't have runtime vlogging. See base/logging.h.
+  // Some builds don't have runtime vlogging. See base/test.
   if (!VLOG_IS_ON(0)) {
     GTEST_SKIP();
   }
@@ -881,7 +881,7 @@ TEST_P(StatisticsRecorderTest, LogOnShutdownInitializedExplicitly) {
 }
 
 TEST_P(StatisticsRecorderTest, LogOnShutdownInitialized) {
-  // Some builds don't have runtime vlogging. See base/logging.h.
+  // Some builds don't have runtime vlogging. See base/test.
   if (!VLOG_IS_ON(0)) {
     GTEST_SKIP();
   }

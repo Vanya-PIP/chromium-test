@@ -4,7 +4,7 @@
 
 #include "content/common/debug_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/numerics/safe_conversions.h"
 

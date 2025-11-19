@@ -11,7 +11,7 @@
 #include <string>
 
 #include "base/component_export.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/time/time.h"
 

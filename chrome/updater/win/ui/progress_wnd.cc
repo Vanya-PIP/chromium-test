@@ -11,7 +11,7 @@
 #include <typeinfo>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/process/launch.h"
 #include "base/strings/string_number_conversions_win.h"

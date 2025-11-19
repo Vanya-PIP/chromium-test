@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/login/oobe_quick_start/connectivity/advertising_id.h"
 #include "chromeos/constants/devicetype.h"
 

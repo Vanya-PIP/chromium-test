@@ -6,11 +6,11 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/timer/timer.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/timer_factory/timer_factory.h"
 #include "chromeos/ash/services/secure_channel/bluetooth_helper.h"
 #include "chromeos/ash/services/secure_channel/error_tolerant_ble_advertisement_impl.h"

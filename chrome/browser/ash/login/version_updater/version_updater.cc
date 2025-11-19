@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/default_tick_clock.h"
 #include "base/time/time.h"

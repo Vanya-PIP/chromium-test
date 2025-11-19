@@ -4,7 +4,7 @@
 
 #include "components/sync/engine/loopback_server/persistent_tombstone_entity.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "components/sync/protocol/entity_specifics.pb.h"
 #include "components/sync/protocol/loopback_server.pb.h"

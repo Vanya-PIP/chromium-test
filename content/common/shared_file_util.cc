@@ -7,7 +7,7 @@
 #include "base/file_descriptor_store.h"
 #include "base/files/memory_mapped_file.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/global_descriptors.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"

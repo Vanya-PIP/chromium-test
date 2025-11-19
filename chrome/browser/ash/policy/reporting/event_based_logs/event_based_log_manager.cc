@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/sequence_checker.h"
 #include "chrome/browser/ash/policy/reporting/event_based_logs/event_observer_base.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/services/sharing/nearby/platform/wifi_lan_socket.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "chrome/services/sharing/nearby/platform/bidirectional_stream.h"
 

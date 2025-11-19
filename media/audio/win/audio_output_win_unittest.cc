@@ -12,7 +12,7 @@
 
 #include "base/base_paths.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/aligned_memory.h"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"

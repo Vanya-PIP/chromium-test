@@ -8,7 +8,7 @@
 #include <cstdint>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"
 #include "services/metrics/public/cpp/ukm_source_id.h"

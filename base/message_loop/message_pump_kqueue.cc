@@ -13,11 +13,11 @@
 
 #include <atomic>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_nsautorelease_pool.h"
 #include "base/auto_reset.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/notreached.h"
 #include "base/posix/eintr_wrapper.h"

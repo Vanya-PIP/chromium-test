@@ -17,7 +17,7 @@
 #include "base/feature_list.h"
 #include "base/features.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "base/win/nt_status.h"

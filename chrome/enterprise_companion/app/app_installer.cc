@@ -7,7 +7,7 @@
 
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "base/time/time.h"
 #include "chrome/enterprise_companion/app/app.h"

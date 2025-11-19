@@ -6,7 +6,7 @@
 #include "base/compiler_specific.h"
 
 #if CHECK_WILL_STREAM()
-#include "base/logging.h"
+#include "base/test"
 #endif  // CHECK_WILL_STREAM()
 
 #ifndef BASE_CHECK_DEREF_H_

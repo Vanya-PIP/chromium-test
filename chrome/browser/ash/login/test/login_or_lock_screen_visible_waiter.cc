@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/login/test/login_or_lock_screen_visible_waiter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/scoped_run_loop_timeout.h"
 #include "base/test/test_timeouts.h"
 

@@ -53,7 +53,7 @@ TEST_F(PageloadForegroundDurationTabHelperTest,
   context.SetIsSameDocument(false);
   context.SetHasCommitted(true);
   web_state_.OnNavigationStarted(&context);
-  // No navigation logging have occurred yet.
+  // No navigation testave occurred yet.
   const auto& navigation_start_navigation_entries =
       test_ukm_recorder_.GetEntriesByName(kPageNavigationUkmEvent);
   ASSERT_EQ(0u, navigation_start_navigation_entries.size());
@@ -86,7 +86,7 @@ TEST_F(PageloadForegroundDurationTabHelperTest,
   context.SetIsSameDocument(true);
   context.SetHasCommitted(true);
   web_state_.OnNavigationStarted(&context);
-  // No navigation logging have occurred yet.
+  // No navigation testave occurred yet.
   const auto& navigation_start_navigation_entries =
       test_ukm_recorder_.GetEntriesByName(kPageNavigationUkmEvent);
   ASSERT_EQ(0u, navigation_start_navigation_entries.size());

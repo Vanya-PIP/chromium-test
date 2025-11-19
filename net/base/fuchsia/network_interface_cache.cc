@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "base/synchronization/lock.h"
 #include "net/base/network_change_notifier.h"

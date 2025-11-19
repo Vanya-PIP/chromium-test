@@ -6,7 +6,7 @@
 
 #include "base/debug/alias.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_util.h"
 

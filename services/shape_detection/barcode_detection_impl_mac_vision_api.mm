@@ -4,7 +4,7 @@
 
 #include "services/shape_detection/barcode_detection_impl_mac_vision_api.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 
 namespace shape_detection {

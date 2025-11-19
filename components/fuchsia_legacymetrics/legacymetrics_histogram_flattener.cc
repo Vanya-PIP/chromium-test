@@ -8,7 +8,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/statistics_recorder.h"
 
 namespace fuchsia_legacymetrics {

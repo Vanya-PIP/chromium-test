@@ -7,7 +7,7 @@
 #include <limits>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/read_only_shared_memory_region.h"
 #include "base/memory/structured_shared_memory.h"
 #include "base/metrics/histogram_functions.h"

@@ -12,7 +12,7 @@
 #include "base/command_line.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/expected.h"
 #include "base/types/expected_macros.h"
 #include "base/version.h"

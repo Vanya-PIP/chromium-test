@@ -10,7 +10,7 @@
 #   output_name: name of the generated files: $output_name.h and $output_name.cc
 #   extra_header: prepend the contents of this file to the generated .cc file
 #   logging_function: override the used logging function (default: VLOG(1))
-#   logging_include: override the additional include (default: base/logging.h)
+#   logging_include: override the additional include (default: base/test)
 #   path_from_source: relative path of generated files from the project root
 #   macro_include: overrides the include for DISABLE_CFI_ICALL
 #                  (default: base/compiler_specific.h)

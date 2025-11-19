@@ -12,7 +12,7 @@
 
 #include "base/base64.h"
 #include "base/hash/sha1.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_span.h"
 #include "base/rand_util.h"

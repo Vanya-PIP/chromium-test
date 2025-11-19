@@ -23,7 +23,7 @@
 
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sys_byteorder.h"
 #include "base/time/time.h"
 #include "net/base/io_buffer.h"

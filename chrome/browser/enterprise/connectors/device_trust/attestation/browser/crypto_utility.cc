@@ -6,7 +6,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "third_party/boringssl/src/include/openssl/bn.h"
 #include "third_party/boringssl/src/include/openssl/bytestring.h"

@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/browser/child_process_host.h"
 #include "content/public/browser/render_process_host.h"
 #include "content/public/browser/site_instance.h"

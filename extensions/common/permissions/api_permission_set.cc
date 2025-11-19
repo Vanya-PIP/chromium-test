@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/stl_util.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/values.h"

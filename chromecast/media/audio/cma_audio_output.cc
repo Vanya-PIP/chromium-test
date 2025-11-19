@@ -8,7 +8,7 @@
 #include <limits>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/base/task_runner_impl.h"
 #include "chromecast/media/api/cma_backend_factory.h"
 #include "chromecast/media/base/cast_decoder_buffer_impl.h"

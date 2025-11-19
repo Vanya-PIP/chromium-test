@@ -16,7 +16,7 @@
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/strings/string_view_util.h"
 #include "base/strings/stringprintf.h"

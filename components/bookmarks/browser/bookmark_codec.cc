@@ -15,7 +15,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
 #include "base/json/json_string_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"

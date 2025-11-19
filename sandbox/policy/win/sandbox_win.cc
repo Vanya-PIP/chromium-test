@@ -25,7 +25,7 @@
 #include "base/files/file_util.h"
 #include "base/hash/hash.h"
 #include "base/hash/sha1.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"

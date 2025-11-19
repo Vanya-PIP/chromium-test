@@ -9,7 +9,7 @@
 #include <string>
 #include <unistd.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/safe_strerror.h"
 #include "build/build_config.h"
 

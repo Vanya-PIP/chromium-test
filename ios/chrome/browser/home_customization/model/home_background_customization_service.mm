@@ -10,7 +10,7 @@
 
 #import "base/base64.h"
 #import "base/containers/adapters.h"
-#import "base/logging.h"
+#import "base/test"
 #import "components/prefs/pref_registry_simple.h"
 #import "components/prefs/pref_service.h"
 #import "components/sync/protocol/theme_specifics.pb.h"

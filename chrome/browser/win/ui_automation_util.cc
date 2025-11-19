@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <iterator>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/win/scoped_safearray.h"

@@ -17,8 +17,8 @@
 
 #include "base/apple/bundle_locations.h"
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
-#include "base/logging.h"
+#include "base/apple/osstatus_test"
+#include "base/test"
 #include "base/mac/scoped_authorizationref.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/string_number_conversions.h"

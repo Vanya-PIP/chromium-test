@@ -8,7 +8,7 @@
 #include <cmath>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "chromecast/starboard/chromecast/starboard_cast_api/cast_starboard_api_types.h"
 

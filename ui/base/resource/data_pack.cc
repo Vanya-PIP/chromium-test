@@ -19,7 +19,7 @@
 #include "base/files/file.h"
 #include "base/files/file_util.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_span.h"
 #include "base/memory/ref_counted_memory.h"

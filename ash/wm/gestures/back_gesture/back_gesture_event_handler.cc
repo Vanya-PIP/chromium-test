@@ -30,7 +30,7 @@
 #include "ash/wm/window_util.h"
 #include "ash/wm/wm_event.h"
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/i18n/rtl.h"
 #include "base/metrics/user_metrics.h"
 #include "base/types/cxx23_to_underlying.h"

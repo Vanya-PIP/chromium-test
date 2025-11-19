@@ -9,7 +9,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/sequence_checker.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/sequenced_task_runner.h"
 #include "chrome/browser/ash/policy/value_validation/onc_user_policy_value_validator.h"
 #include "chromeos/ash/components/dbus/session_manager/policy_descriptor.h"

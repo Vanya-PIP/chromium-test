@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/task/thread_pool.h"
 #include "content/browser/child_process_security_policy_impl.h"

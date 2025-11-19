@@ -4,7 +4,7 @@
 
 #include "media/mojo/services/mojo_cdm_service_context.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/callback_registry.h"
 #include "media/base/cdm_context.h"
 #include "media/base/content_decryption_module.h"

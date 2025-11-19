@@ -13,7 +13,7 @@
 #include <vector>
 
 #include "base/check_op.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/numerics/checked_math.h"

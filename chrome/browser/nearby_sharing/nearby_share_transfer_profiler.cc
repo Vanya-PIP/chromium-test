@@ -6,7 +6,7 @@
 
 #include "base/time/time.h"
 #include "chrome/browser/nearby_sharing/nearby_share_metrics.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 base::TimeDelta ComputeDelta(const base::TimeTicks& start,
                              const base::TimeTicks& end) {

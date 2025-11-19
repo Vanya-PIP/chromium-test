@@ -5,7 +5,7 @@
 #include "chrome/installer/util/work_item_list.h"
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/installer/util/callback_work_item.h"
 #include "chrome/installer/util/copy_tree_work_item.h"
 #include "chrome/installer/util/create_dir_work_item.h"

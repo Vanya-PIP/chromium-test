@@ -8,7 +8,7 @@
 #include <optional>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/task/sequenced_task_runner.h"
 #include "chrome/browser/actor/actor_keyed_service_factory.h"

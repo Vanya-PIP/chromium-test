@@ -5,7 +5,7 @@
 #include "components/cast_streaming/test/cast_streaming_test_sender.h"
 
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
 #include "base/task/sequenced_task_runner.h"

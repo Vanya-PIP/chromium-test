@@ -5,7 +5,7 @@
 #include <mfapi.h>
 #include <wrl/module.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/win/mf_helpers.h"
 
 using Microsoft::WRL::InProc;

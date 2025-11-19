@@ -7,7 +7,7 @@
 
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "components/services/app_service/public/cpp/icon_types.h"
 #include "components/services/app_service/public/cpp/macros.h"

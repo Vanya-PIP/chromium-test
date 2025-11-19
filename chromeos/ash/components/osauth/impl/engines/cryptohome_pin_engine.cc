@@ -10,7 +10,7 @@
 
 #include "ash/constants/ash_pref_names.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/cryptohome/auth_factor.h"
 #include "chromeos/ash/components/login/auth/auth_performer.h"
 #include "chromeos/ash/components/login/auth/public/authentication_error.h"

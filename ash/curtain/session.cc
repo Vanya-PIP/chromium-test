@@ -14,7 +14,7 @@
 #include "ash/system/privacy_hub/camera_privacy_switch_controller.h"
 #include "base/check_deref.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/scoped_observation.h"
 #include "base/time/time.h"
 #include "base/timer/timer.h"

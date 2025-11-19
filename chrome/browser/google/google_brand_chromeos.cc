@@ -7,7 +7,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/task/thread_pool.h"
 #include "chrome/browser/ash/policy/core/browser_policy_connector_ash.h"

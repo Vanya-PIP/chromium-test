@@ -8,7 +8,7 @@
 
 #import "base/base_paths.h"
 #import "base/files/file_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/path_service.h"
 #import "base/strings/stringprintf.h"
 #import "base/task/thread_pool/thread_pool_instance.h"

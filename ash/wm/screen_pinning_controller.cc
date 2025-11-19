@@ -14,7 +14,7 @@
 #include "ash/wm/window_dimmer.h"
 #include "ash/wm/window_state.h"
 #include "base/auto_reset.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/aura/window.h"
 #include "ui/aura/window_observer.h"
 #include "ui/compositor/layer.h"

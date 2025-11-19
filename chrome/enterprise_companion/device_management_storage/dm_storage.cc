@@ -17,7 +17,7 @@
 #include "base/files/file_util.h"
 #include "base/files/important_file_writer.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/sequence_checker.h"
 #include "build/build_config.h"

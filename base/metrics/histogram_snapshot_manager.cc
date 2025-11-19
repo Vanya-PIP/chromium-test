@@ -7,8 +7,8 @@
 #include <memory>
 
 #include "base/debug/alias.h"
-#include "base/debug/crash_logging.h"
-#include "base/logging.h"
+#include "base/debug/crash_test"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_flattener.h"
 #include "base/metrics/histogram_samples.h"

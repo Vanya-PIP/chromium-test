@@ -5,7 +5,7 @@
 #include "device/vr/openxr/openxr_debug_util.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "device/vr/openxr/openxr_extension_helper.h"
 #include "third_party/openxr/src/include/openxr/openxr.h"

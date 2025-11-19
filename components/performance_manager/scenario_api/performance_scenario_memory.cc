@@ -7,7 +7,7 @@
 #include <optional>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/read_only_shared_memory_region.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/structured_shared_memory.h"

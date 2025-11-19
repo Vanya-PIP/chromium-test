@@ -345,7 +345,7 @@ void AbusiveNotificationPermissionsManager::
     return;
   }
   ResetSafeBrowsingCheckHelpers();
-  // Keep track of blocklist check count for logging histogram below.
+  // Keep track of blocklist check count for testistogram below.
   int blocklist_check_counter = 0;
   auto notification_permission_settings =
       hcsm_->GetSettingsForOneType(ContentSettingsType::NOTIFICATIONS);

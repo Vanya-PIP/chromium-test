@@ -11,7 +11,7 @@
 #include <unistd.h>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/process/process_iterator.h"
 #include "base/threading/platform_thread.h"

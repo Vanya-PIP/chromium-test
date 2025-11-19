@@ -12,7 +12,7 @@
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/services/device_sync/proto/cryptauth_api.pb.h"
 #include "chromeos/ash/services/secure_channel/ble_synchronizer_base.h"

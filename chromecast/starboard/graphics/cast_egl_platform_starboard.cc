@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/public/cast_egl_platform.h"
 #include "chromecast/public/cast_egl_platform_shlib.h"
 #include "chromecast/public/graphics_types.h"

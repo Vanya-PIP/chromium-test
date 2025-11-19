@@ -4,7 +4,7 @@
 
 #include "services/network/throttling/scoped_throttling_token.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/unguessable_token.h"
 #include "services/network/throttling/throttling_controller.h"

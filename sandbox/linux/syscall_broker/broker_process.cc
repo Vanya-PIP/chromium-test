@@ -20,7 +20,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/process/process_metrics.h"
 #include "build/build_config.h"

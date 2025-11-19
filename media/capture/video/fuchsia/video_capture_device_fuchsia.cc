@@ -11,7 +11,7 @@
 
 #include <zircon/status.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"
 #include "media/base/video_types.h"

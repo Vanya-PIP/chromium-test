@@ -20,7 +20,7 @@
 #include "ash/wm/window_util.h"
 #include "ash/wm/workspace_controller.h"
 #include "base/check.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/i18n/rtl.h"

@@ -12,7 +12,7 @@
 #include "base/values.h"
 #include "chrome/browser/web_applications/commands/web_app_command.h"
 #include "chrome/browser/web_applications/locks/noop_lock.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/common/web_app_id.h"
 #include "third_party/blink/public/mojom/manifest/manifest.mojom-forward.h"

@@ -7,7 +7,7 @@
 #include "base/base_paths.h"
 #include "base/command_line.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 #include "base/trace_event/trace_event.h"
 #include "ui/gl/gl_bindings.h"

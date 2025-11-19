@@ -9,7 +9,7 @@
 
 #include "base/check_op.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

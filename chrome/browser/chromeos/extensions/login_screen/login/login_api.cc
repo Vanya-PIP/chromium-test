@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/expected.h"
 #include "base/values.h"
 #include "chrome/browser/ash/login/existing_user_controller.h"

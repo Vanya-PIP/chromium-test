@@ -9,7 +9,7 @@
 
 #include "base/feature_list.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"
 #include "build/build_config.h"

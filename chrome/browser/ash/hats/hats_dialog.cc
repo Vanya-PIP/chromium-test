@@ -9,7 +9,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/containers/flat_map.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/escape.h"
 #include "base/strings/string_number_conversions.h"

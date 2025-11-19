@@ -13,7 +13,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/public/media/cast_decoder_buffer.h"
 #include "chromecast/starboard/chromecast/starboard_cast_api/cast_starboard_api_types.h"
 #include "chromecast/starboard/media/media/drm_util.h"

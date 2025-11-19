@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/time/time.h"
 #include "components/viz/common/frame_sinks/begin_frame_args.h"

@@ -16,7 +16,7 @@
 #include <memory>
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/zucchini/address_translator.h"
 #include "components/zucchini/arm_utils.h"
 #include "components/zucchini/buffer_view.h"

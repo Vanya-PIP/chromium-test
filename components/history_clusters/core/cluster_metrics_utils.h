@@ -69,7 +69,7 @@ enum class VisitType {
 };
 
 // Returns the string representation of each enum class used for
-// logging/histograms.
+// testistograms.
 std::string ClusterActionToString(ClusterAction action);
 std::string VisitActionToString(VisitAction action);
 std::string VisitTypeToString(VisitType action);

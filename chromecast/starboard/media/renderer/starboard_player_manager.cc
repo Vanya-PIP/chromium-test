@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chromecast/base/metrics/cast_metrics_helper.h"
 #include "chromecast/starboard/media/media/drm_util.h"

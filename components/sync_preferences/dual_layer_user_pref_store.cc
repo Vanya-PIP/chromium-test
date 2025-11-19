@@ -12,7 +12,7 @@
 #include "base/auto_reset.h"
 #include "base/barrier_closure.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/strings/string_util.h"
 #include "base/values.h"

@@ -4,7 +4,7 @@
 
 #include "components/supervised_user/core/browser/web_content_handler.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "components/supervised_user/core/browser/supervised_user_settings_service.h"
 #include "components/supervised_user/core/common/supervised_user_constants.h"

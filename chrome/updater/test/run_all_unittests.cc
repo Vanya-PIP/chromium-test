@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process.h"
 #include "base/test/launcher/unit_test_launcher.h"
 #include "base/test/test_suite.h"

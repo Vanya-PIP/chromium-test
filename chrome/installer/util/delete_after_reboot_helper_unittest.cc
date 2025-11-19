@@ -17,7 +17,7 @@
 #include <memory>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/win/registry.h"
 #include "testing/gtest/include/gtest/gtest.h"

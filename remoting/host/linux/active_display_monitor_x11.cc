@@ -9,7 +9,7 @@
 #include "base/task/bind_post_task.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/types/cxx23_to_underlying.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "third_party/webrtc/modules/desktop_capture/desktop_geometry.h"
 #include "ui/base/x/x11_display_util.h"
 #include "ui/base/x/x11_util.h"

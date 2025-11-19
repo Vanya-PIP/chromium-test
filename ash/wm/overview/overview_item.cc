@@ -42,7 +42,7 @@
 #include "ash/wm/window_util.h"
 #include "ash/wm/wm_constants.h"
 #include "base/auto_reset.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/memory/raw_ptr.h"

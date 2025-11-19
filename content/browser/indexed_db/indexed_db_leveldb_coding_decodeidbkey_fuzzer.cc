@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/browser/indexed_db/indexed_db_leveldb_coding.h"
 #include "third_party/blink/public/common/indexeddb/indexeddb_key.h"
 

@@ -13,7 +13,7 @@
 #include "ash/quick_pair/fast_pair_handshake/fast_pair_gatt_service_client_lookup_impl.h"
 #include "base/functional/callback.h"
 #include "chromeos/ash/services/quick_pair/public/cpp/decrypted_response.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_adapter.h"
 #include "device/bluetooth/floss/floss_features.h"
 #include "device/bluetooth/public/cpp/bluetooth_address.h"

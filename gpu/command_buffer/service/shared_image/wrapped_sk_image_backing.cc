@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "base/task/single_thread_task_runner.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"

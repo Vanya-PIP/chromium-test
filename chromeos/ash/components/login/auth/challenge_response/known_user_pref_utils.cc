@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 
 namespace ash {

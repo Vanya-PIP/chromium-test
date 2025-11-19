@@ -14,7 +14,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #include "media/base/mac/color_space_util_mac.h"
 #include "media/base/video_frame.h"

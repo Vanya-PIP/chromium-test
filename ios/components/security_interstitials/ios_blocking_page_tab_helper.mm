@@ -4,7 +4,7 @@
 
 #import "ios/components/security_interstitials/ios_blocking_page_tab_helper.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/string_number_conversions.h"
 #import "base/values.h"
 #import "ios/components/security_interstitials/ios_security_interstitial_page.h"

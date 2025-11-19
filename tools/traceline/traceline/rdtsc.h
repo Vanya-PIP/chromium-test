@@ -9,7 +9,7 @@
 
 #include <powrprof.h>
 
-#include "logging.h"
+#include "test"
 
 class RDTSCNormalizer {
  public:

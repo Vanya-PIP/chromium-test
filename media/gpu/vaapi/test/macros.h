@@ -5,7 +5,7 @@
 #ifndef MEDIA_GPU_VAAPI_TEST_MACROS_H_
 #define MEDIA_GPU_VAAPI_TEST_MACROS_H_
 
-#include "base/logging.h"
+#include "base/test"
 
 #define VA_LOG_ASSERT(va_error, name)         \
   LOG_ASSERT((va_error) == VA_STATUS_SUCCESS) \

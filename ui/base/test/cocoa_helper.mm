@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "base/debug/debugger.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/stl_util.h"
 #include "base/strings/sys_string_conversions.h"
 #include "base/test/mock_chrome_application_mac.h"

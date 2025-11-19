@@ -13,7 +13,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/json/json_string_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

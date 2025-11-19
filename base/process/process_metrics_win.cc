@@ -15,7 +15,7 @@
 
 #include "base/byte_count.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/system/sys_info.h"

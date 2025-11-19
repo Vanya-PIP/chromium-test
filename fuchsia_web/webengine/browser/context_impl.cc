@@ -11,7 +11,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/koid.h"
 #include "base/fuchsia/mem_buffer_util.h"
 #include "base/functional/bind.h"

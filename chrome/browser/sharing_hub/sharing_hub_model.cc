@@ -6,7 +6,7 @@
 
 #include "base/base64.h"
 #include "base/check_deref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/user_metrics.h"
 #include "base/strings/escape.h"
 #include "base/strings/utf_string_conversions.h"

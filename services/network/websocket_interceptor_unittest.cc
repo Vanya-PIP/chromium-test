@@ -5,7 +5,7 @@
 #include "services/network/websocket_interceptor.h"
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/task_environment.h"
 #include "services/network/throttling/network_conditions.h"
 #include "services/network/throttling/throttling_controller.h"

@@ -9,7 +9,7 @@
 
 #include <atomic>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/synchronization/lock.h"
 
 namespace grpc {

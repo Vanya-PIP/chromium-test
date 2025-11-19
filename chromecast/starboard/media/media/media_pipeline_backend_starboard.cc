@@ -6,7 +6,7 @@
 
 #include <cast_starboard_api_adapter.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "chromecast/public/graphics_types.h"
 #include "chromecast/starboard/media/media/starboard_api_wrapper.h"

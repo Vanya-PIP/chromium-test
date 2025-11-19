@@ -11,7 +11,7 @@
 
 #include "base/containers/flat_map.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "components/update_client/cancellation.h"
 #include "components/update_client/network.h"

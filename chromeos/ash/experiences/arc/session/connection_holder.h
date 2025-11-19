@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/threading/thread_checker.h"
 #include "chromeos/ash/experiences/arc/session/connection_notifier.h"

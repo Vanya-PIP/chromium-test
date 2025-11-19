@@ -17,7 +17,7 @@
 #include "base/check.h"
 #include "base/files/file_util.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/posix/can_lower_nice_to.h"
 #include "base/process/internal_linux.h"

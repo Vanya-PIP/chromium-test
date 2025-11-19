@@ -14,7 +14,7 @@
 #include "base/timer/timer.h"
 #include "components/webapps/browser/android/add_to_homescreen_params.h"
 #include "components/webapps/browser/android/shortcut_info.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "content/public/browser/web_contents.h"
 #include "third_party/skia/include/core/SkBitmap.h"
 

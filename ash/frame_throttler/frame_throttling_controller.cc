@@ -10,7 +10,7 @@
 #include "ash/public/cpp/window_properties.h"
 #include "ash/shell.h"
 #include "ash/wm/mru_window_tracker.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_number_conversions.h"

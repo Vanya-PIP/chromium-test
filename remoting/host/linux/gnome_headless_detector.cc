@@ -8,7 +8,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/linux/dbus_interfaces/org_freedesktop_systemd1_Manager.h"
 #include "remoting/host/linux/dbus_interfaces/org_freedesktop_systemd1_Service.h"
 #include "remoting/host/linux/dbus_interfaces/org_freedesktop_systemd1_Unit.h"

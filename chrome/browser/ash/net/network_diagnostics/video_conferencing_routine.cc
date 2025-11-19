@@ -8,7 +8,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "chrome/browser/ash/net/network_diagnostics/network_diagnostics_util.h"
 #include "chrome/browser/ash/net/network_diagnostics/udp_prober.h"

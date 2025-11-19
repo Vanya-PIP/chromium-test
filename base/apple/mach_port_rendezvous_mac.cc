@@ -12,14 +12,14 @@
 #include <utility>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_dispatch_object.h"
 #include "base/bits.h"
 #include "base/compiler_specific.h"
 #include "base/containers/buffer_iterator.h"
 #include "base/environment.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/info_plist_data.h"
 #include "base/mac/scoped_mach_msg_destroy.h"
 #include "base/no_destructor.h"

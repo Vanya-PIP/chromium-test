@@ -10,7 +10,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/app_mode/kiosk_app_data_base.h"
 #include "chrome/browser/ash/policy/core/device_local_account.h"
 #include "components/account_id/account_id.h"

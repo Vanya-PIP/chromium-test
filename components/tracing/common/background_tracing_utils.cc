@@ -14,7 +14,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"
 #include "components/tracing/common/background_tracing_state_manager.h"

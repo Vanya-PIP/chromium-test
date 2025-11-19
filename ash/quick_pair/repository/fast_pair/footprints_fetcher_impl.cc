@@ -12,7 +12,7 @@
 #include "base/base64.h"
 #include "base/json/json_reader.h"
 #include "base/strings/stringprintf.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "google_apis/gaia/gaia_constants.h"
 #include "google_apis/google_api_keys.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"

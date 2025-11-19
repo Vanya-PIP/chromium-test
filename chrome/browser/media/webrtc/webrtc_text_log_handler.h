@@ -77,7 +77,7 @@ class WebRtcTextLogHandler {
   // called.
   bool StopLogging(GenericDoneCallback callback);
 
-  // Called by the WebRtcLoggingHandlerHost when logging has stopped in the
+  // Called by the WebRtcLoggingHandlerHost when testas stopped in the
   // renderer. Should only be called in response to a
   // WebRtcLoggingMsg_LoggingStopped IPC message.
   void StopDone();

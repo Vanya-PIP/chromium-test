@@ -10,7 +10,7 @@
 #include "base/files/file.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/utf_string_conversion_utils.h"
 #include "remoting/host/linux/keyboard_layout_monitor_utils.h"

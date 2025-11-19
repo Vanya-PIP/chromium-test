@@ -15,7 +15,7 @@
 #include "chrome/browser/nearby_sharing/common/nearby_share_switches.h"
 #include "chromeos/ash/components/nearby/common/client/nearby_api_call_flow_impl.h"
 #include "chromeos/ash/components/nearby/common/client/nearby_http_result.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/signin/public/base/consent_level.h"
 #include "components/signin/public/identity_manager/access_token_info.h"
 #include "components/signin/public/identity_manager/identity_manager.h"

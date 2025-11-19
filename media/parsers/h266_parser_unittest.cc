@@ -8,7 +8,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/test_data_util.h"
 #include "media/parsers/h266_parser.h"
 #include "media/parsers/h266_poc.h"

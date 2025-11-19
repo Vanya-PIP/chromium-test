@@ -21,7 +21,7 @@
 #include "base/containers/flat_map.h"
 #include "base/feature_list.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/field_trial_params.h"
 #include "base/metrics/histogram_functions.h"

@@ -5,7 +5,7 @@
 #include "chromeos/components/quick_answers/public/cpp/service/spell_check_dictionary.h"
 
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/hunspell/src/hunspell/hunspell.hxx"
 
 namespace quick_answers {

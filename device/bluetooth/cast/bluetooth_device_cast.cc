@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "chromecast/device/bluetooth/bluetooth_util.h"
 #include "chromecast/device/bluetooth/le/remote_characteristic.h"

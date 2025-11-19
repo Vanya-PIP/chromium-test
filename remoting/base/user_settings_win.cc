@@ -4,7 +4,7 @@
 
 #include "remoting/base/user_settings_win.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/win/windows_types.h"

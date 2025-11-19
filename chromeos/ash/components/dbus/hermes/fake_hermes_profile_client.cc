@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/values.h"
 #include "chromeos/ash/components/dbus/hermes/fake_hermes_euicc_client.h"

@@ -10,7 +10,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace upgrade_test {
 

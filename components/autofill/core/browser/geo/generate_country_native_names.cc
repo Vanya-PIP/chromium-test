@@ -15,7 +15,7 @@
 #include "base/i18n/case_conversion.h"
 #include "base/i18n/icu_util.h"
 #include "base/i18n/unicodestring.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "components/autofill/core/browser/geo/country_data.h"
 #include "third_party/icu/source/common/unicode/locid.h"

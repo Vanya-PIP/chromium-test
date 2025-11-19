@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 
 namespace cc {

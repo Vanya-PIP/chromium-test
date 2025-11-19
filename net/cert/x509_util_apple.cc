@@ -10,7 +10,7 @@
 
 #include "base/apple/foundation_util.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "build/build_config.h"

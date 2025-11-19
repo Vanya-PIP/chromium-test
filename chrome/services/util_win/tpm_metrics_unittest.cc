@@ -4,7 +4,7 @@
 
 #include "chrome/services/util_win/tpm_metrics.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 
 using TpmIdentifier = metrics::SystemProfileProto_TpmIdentifier;

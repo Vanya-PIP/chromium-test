@@ -6,7 +6,7 @@
 
 #include "base/check.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromeos/strings/grit/chromeos_strings.h"
 #include "ui/base/l10n/l10n_util.h"

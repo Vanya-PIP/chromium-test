@@ -6,7 +6,7 @@
 
 #include "base/check_is_test.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/trace_event/trace_event.h"

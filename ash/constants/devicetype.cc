@@ -7,7 +7,7 @@
 #include "ash/constants/ash_switches.h"
 #include "base/command_line.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/strings/stringprintf.h"
 #include "base/system/sys_info.h"

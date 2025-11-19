@@ -15,7 +15,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "third_party/perfetto/include/perfetto/tracing/traced_value.h"
 #include "ui/display/types/display_color_management.h"

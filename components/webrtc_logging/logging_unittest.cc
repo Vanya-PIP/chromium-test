@@ -8,15 +8,15 @@
 // cases are more dense than normal.
 
 // We must include Chromium headers before including the overrides header
-// since webrtc's logging.h file may conflict with chromium.
+// since webrtc's test file may conflict with chromium.
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
 #include "build/build_config.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
-#include "third_party/webrtc_overrides/rtc_base/logging.h"
+#include "third_party/webrtc_overrides/rtc_base/test"
 
 namespace {
 
@@ -42,7 +42,7 @@ static const char* AsString(webrtc::LoggingSeverity severity) {
 class WebRtcTextLogTest : public testing::Test {
  public:
   void SetUp() override {
-    // Some builds don't have runtime vlogging. See base/logging.h.
+    // Some builds don't have runtime vlogging. See base/test.
     if (!VLOG_IS_ON(0)) {
       GTEST_SKIP();
     }
@@ -135,7 +135,7 @@ TEST_F(WebRtcTextLogTest, InfoConfiguration) {
   // Also check that the log is proper.
   EXPECT_THAT(contents_of_file, ::testing::HasSubstr("logging_unittest.cc"));
   EXPECT_THAT(contents_of_file,
-              ::testing::Not(::testing::HasSubstr("logging.h")));
+              ::testing::Not(::testing::HasSubstr("test")));
   EXPECT_THAT(contents_of_file,
               ::testing::Not(::testing::HasSubstr("logging.cc")));
 }

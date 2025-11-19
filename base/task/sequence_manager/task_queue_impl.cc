@@ -15,7 +15,7 @@
 #include "base/check.h"
 #include "base/compiler_specific.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/notreached.h"

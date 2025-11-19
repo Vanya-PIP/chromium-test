@@ -5,7 +5,7 @@
 #include "chrome/browser/device_identity/device_identity_provider.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/device_identity/device_oauth2_token_service.h"
 
 namespace {

@@ -15,7 +15,7 @@
 #include "chrome/browser/signin/identity_manager_factory.h"
 #include "chromeos/ash/experiences/arc/app/arc_app_constants.h"
 #include "chromeos/ash/services/quick_pair/public/mojom/quick_pair_service.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/image_fetcher/core/image_fetcher.h"
 #include "components/image_fetcher/core/image_fetcher_impl.h"
 #include "components/services/app_service/public/cpp/types_util.h"

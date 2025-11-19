@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/i18n/string_compare.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 
 namespace autofill::l10n {

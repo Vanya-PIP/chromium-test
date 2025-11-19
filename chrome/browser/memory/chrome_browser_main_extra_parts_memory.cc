@@ -19,7 +19,7 @@
 #include "mojo/public/cpp/bindings/pending_receiver.h"
 
 #if BUILDFLAG(IS_CHROMEOS)
-#include "base/logging.h"
+#include "base/test"
 #include "base/system/sys_info.h"
 #include "chromeos/ash/components/memory/pressure/system_memory_pressure_evaluator.h"
 #endif

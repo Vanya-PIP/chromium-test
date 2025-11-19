@@ -21,7 +21,7 @@
 #include "chrome/test/base/testing_profile.h"
 #include "components/webapps/browser/installable/fake_installable_manager.h"
 #include "components/webapps/browser/installable/installable_data.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_manager.h"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/common/web_app_id.h"

@@ -1421,7 +1421,7 @@ void WebViewGuest::OnDidAddMessageToConsole(
   }
 
   base::Value::Dict args;
-  // Log levels are from base/logging.h: LogSeverity.
+  // Log levels are from base/test: LogSeverity.
   args.Set(webview::kLevel, blink::ConsoleMessageLevelToLogSeverity(log_level));
   args.Set(webview::kMessage, message);
   args.Set(webview::kLine, line_no);

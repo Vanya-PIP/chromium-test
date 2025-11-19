@@ -9,7 +9,7 @@
 #include "base/containers/contains.h"
 #include "base/no_destructor.h"
 #include "base/values.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/device_sync/cryptauth_enrollment_constants.h"
 #include "chromeos/ash/services/device_sync/value_string_encoding.h"
 

@@ -6,7 +6,7 @@
 
 #include <dbus/dbus-protocol.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 
 namespace ash {

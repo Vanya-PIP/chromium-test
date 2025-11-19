@@ -10,7 +10,7 @@
 
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/notreached.h"
 #include "chromeos/ash/components/cryptohome/auth_factor.h"

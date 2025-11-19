@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_handle.h"
 #include "build/build_config.h"
 

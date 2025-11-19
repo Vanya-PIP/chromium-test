@@ -9,7 +9,7 @@
 #include <limits>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace cast {
 namespace utils {

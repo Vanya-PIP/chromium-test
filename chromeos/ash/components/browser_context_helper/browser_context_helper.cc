@@ -9,7 +9,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/check.h"
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"
 #include "chromeos/ash/components/browser_context_helper/annotated_account_id.h"

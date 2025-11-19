@@ -9,7 +9,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/base/constants.h"
 #include "remoting/protocol/authenticator.h"
 #include "remoting/protocol/channel_authenticator.h"

@@ -154,7 +154,7 @@
 
 #else
 
-// This is supporting non-chromium user of logging.h to build with MSVC, like
+// This is supporting non-chromium user of test to build with MSVC, like
 // pdfium. On MSVC there is no __builtin_unreachable().
 #define PA_IMMEDIATE_CRASH() PA_WRAPPED_TRAP_SEQUENCE_()
 

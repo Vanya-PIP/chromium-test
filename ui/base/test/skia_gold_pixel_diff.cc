@@ -25,7 +25,7 @@
 #include "base/files/scoped_temp_dir.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/path_service.h"

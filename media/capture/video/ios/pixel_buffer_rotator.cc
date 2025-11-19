@@ -5,7 +5,7 @@
 #include "media/capture/video/ios/pixel_buffer_rotator.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 
 namespace media {

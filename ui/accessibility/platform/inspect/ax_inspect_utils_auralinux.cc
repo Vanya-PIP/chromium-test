@@ -11,7 +11,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/pattern.h"
 #include "ui/accessibility/platform/inspect/ax_inspect.h"
 

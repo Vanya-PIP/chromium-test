@@ -22,7 +22,7 @@
 
 #include "base/android/android_info.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 #include "base/threading/thread_checker.h"
 #include "base/trace_event/trace_event.h"

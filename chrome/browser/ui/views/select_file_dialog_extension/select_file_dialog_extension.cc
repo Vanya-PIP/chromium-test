@@ -14,7 +14,7 @@
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/no_destructor.h"
 #include "base/strings/stringprintf.h"

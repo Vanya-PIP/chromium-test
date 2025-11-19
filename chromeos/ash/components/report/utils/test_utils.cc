@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/report/utils/test_utils.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash::report::utils {
 

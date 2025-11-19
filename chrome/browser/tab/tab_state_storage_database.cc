@@ -9,7 +9,7 @@
 
 #include "base/check.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "sql/database.h"
 #include "sql/meta_table.h"

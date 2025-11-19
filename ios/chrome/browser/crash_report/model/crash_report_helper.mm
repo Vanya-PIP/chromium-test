@@ -8,7 +8,7 @@
 
 #import "base/check.h"
 #import "base/containers/contains.h"
-#import "base/debug/crash_logging.h"
+#import "base/debug/crash_test"
 #import "ios/chrome/browser/crash_report/model/crash_keys_helper.h"
 #import "ios/chrome/browser/crash_report/model/crash_reporter_url_observer.h"
 #import "ios/chrome/browser/shared/model/utils/mime_type_util.h"

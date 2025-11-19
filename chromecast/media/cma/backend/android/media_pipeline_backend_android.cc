@@ -6,7 +6,7 @@
 
 #include <limits>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "chromecast/base/task_runner_impl.h"
 #include "chromecast/media/cma/backend/android/audio_decoder_android.h"

@@ -11,7 +11,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/memory/ptr_util.h"
 #include "base/memory/weak_ptr.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/linux/dbus_interfaces/org_gnome_Mutter_DisplayConfig.h"
 #include "third_party/webrtc/modules/portal/scoped_glib.h"
 

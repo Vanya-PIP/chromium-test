@@ -11,7 +11,7 @@
 #include "ash/app_list/model/app_list_item.h"
 #include "ash/app_list/model/app_list_model_observer.h"
 #include "ash/public/cpp/app_list/app_list_model_delegate.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 

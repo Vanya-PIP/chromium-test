@@ -6,7 +6,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/vr/openxr/android/openxr_hit_test_manager_android.h"
 #include "device/vr/openxr/android/openxr_plane_manager_android.h"
 #include "device/vr/openxr/openxr_extension_helper.h"

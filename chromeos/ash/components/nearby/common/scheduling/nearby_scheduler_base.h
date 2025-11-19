@@ -13,7 +13,7 @@
 #include "base/time/time.h"
 #include "base/timer/timer.h"
 #include "chromeos/ash/components/nearby/common/scheduling/nearby_scheduler.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "services/network/public/cpp/network_connection_tracker.h"
 
 namespace base {

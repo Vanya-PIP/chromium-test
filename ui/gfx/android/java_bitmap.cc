@@ -9,7 +9,7 @@
 #include "base/android/jni_string.h"
 #include "base/bits.h"
 #include "base/check_op.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "ui/gfx/geometry/size.h"

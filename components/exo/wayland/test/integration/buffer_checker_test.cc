@@ -19,7 +19,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/flat_map.h"
 #include "base/containers/queue.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/test/task_environment.h"
 #include "components/exo/wayland/clients/client_base.h"

@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/scoped_blocking_call.h"
 #include "build/build_config.h"
 

@@ -15,7 +15,7 @@
 #include "base/functional/bind.h"
 #include "base/json/json_string_value_serializer.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/one_shot_event.h"

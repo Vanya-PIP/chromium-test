@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_split.h"
 #include "base/strings/stringprintf.h"

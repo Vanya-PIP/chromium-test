@@ -4,7 +4,7 @@
 
 #import "ios/web/js_features/window_error/script_error_message_handler_java_script_feature.h"
 
-#import "base/debug/crash_logging.h"
+#import "base/debug/crash_test"
 #import "base/debug/dump_without_crashing.h"
 #import "base/feature_list.h"
 #import "base/location.h"

@@ -5,7 +5,7 @@
 #include "base/threading/watchdog.h"
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/threading/platform_thread.h"
 

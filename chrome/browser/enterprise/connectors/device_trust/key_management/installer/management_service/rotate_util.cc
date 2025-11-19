@@ -13,7 +13,7 @@
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/run_loop.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/threading/scoped_blocking_call.h"
 #include "chrome/browser/enterprise/connectors/device_trust/key_management/core/shared_command_constants.h"
 #include "chrome/browser/enterprise/connectors/device_trust/key_management/installer/key_rotation_manager.h"

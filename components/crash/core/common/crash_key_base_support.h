@@ -8,7 +8,7 @@
 namespace crash_reporter {
 
 // This initializes //base to support crash keys via the interface in
-// base/debug/crash_logging.h.
+// base/debug/crash_test.
 void InitializeCrashKeyBaseSupport();
 
 }  // namespace crash_reporter

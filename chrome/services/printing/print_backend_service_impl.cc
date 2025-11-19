@@ -15,7 +15,7 @@
 #include "base/containers/adapters.h"
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"

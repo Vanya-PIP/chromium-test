@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/infobars/simple_alert_infobar_creator.h"
 #include "chrome/common/pref_names.h"

@@ -10,7 +10,7 @@
 
 #include "base/android/android_info.h"
 #include "base/android/jni_android.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/time/time.h"
 #include "base/trace_event/trace_event.h"

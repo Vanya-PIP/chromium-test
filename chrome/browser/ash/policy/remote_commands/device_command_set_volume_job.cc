@@ -11,7 +11,7 @@
 #include "base/check_deref.h"
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/values.h"
 #include "chromeos/ash/components/audio/cras_audio_handler.h"

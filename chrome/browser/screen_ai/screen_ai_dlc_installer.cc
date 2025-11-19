@@ -8,7 +8,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/task/thread_pool.h"
 #include "chrome/browser/screen_ai/screen_ai_install_state.h"

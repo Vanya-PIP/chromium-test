@@ -9,7 +9,7 @@
 #include "base/base64.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/autofill/core/browser/data_model/payments/autofill_offer_data.h"
 #include "components/autofill/core/browser/metrics/autofill_metrics.h"
 #include "components/autofill/core/browser/webdata/autofill_sync_metadata_table.h"

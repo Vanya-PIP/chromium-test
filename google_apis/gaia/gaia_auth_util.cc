@@ -13,7 +13,7 @@
 #include "base/base64url.h"
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"

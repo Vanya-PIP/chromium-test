@@ -5,7 +5,7 @@
 #include "components/subresource_filter/content/browser/profile_interaction_manager.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "build/build_config.h"
 #include "components/content_settings/browser/page_specific_content_settings.h"

@@ -9,7 +9,7 @@
 
 #include <limits>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/angle_conversions.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

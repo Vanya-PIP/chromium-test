@@ -9,7 +9,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/logging_win.h"
 #include "base/time/time.h"
 

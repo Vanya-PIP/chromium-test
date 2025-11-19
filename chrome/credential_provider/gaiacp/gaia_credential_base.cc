@@ -52,7 +52,7 @@
 #include "chrome/credential_provider/gaiacp/gem_device_details_manager.h"
 #include "chrome/credential_provider/gaiacp/grit/gaia_static_resources.h"
 #include "chrome/credential_provider/gaiacp/internet_availability_checker.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/mdm_utils.h"
 #include "chrome/credential_provider/gaiacp/os_gaia_user_manager.h"
 #include "chrome/credential_provider/gaiacp/os_process_manager.h"

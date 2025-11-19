@@ -4,7 +4,7 @@
 
 #include "components/cast_streaming/test/cast_message_port_sender_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/cast_streaming/common/message_serialization.h"
 #include "third_party/openscreen/src/platform/base/error.h"
 

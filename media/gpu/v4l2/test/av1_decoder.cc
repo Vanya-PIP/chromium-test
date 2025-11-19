@@ -12,7 +12,7 @@
 #include <linux/v4l2-controls.h>
 #include <linux/videodev2.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "media/base/video_types.h"

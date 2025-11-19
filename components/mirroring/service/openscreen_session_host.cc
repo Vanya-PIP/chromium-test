@@ -14,7 +14,7 @@
 #include "base/cpu.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/metrics/histogram_functions.h"

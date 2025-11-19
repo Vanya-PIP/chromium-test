@@ -5,7 +5,7 @@
 #import "components/dom_distiller/ios/distiller_page_utils.h"
 
 #import "base/check_op.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/notreached.h"
 #import "third_party/dom_distiller_js/dom_distiller.pb.h"
 #import "third_party/dom_distiller_js/dom_distiller_json_converter.h"

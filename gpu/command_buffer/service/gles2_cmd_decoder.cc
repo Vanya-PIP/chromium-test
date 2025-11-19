@@ -39,7 +39,7 @@
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
 #include "base/hash/legacy_hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/notimplemented.h"

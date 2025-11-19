@@ -6,7 +6,7 @@
 
 #include <android/hardware_buffer.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/unix_domain_socket.h"
 
 namespace base {

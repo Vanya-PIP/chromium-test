@@ -17,7 +17,7 @@
 #include "chrome/browser/nearby_sharing/instantmessaging/token_fetcher.h"
 #include "chrome/browser/nearby_sharing/webrtc_request_builder.h"
 #include "chromeos/ash/components/nearby/common/client/nearby_http_result.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
 #include "net/base/load_flags.h"
 #include "services/network/public/cpp/resource_request.h"

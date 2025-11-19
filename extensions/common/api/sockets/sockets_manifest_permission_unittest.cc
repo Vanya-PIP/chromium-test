@@ -10,7 +10,7 @@
 #include <tuple>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "extensions/common/manifest_constants.h"
 #include "testing/gtest/include/gtest/gtest.h"

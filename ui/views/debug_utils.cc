@@ -6,7 +6,7 @@
 
 #include <ostream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "ui/compositor/layer.h"
 #include "ui/views/view.h"

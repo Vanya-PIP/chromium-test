@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/base/metrics/cast_metrics_helper.h"
 #include "chromecast/media/cdm/cast_cdm_context.h"
 #include "chromecast/media/cma/base/buffering_defs.h"

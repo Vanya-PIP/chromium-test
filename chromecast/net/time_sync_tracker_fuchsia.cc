@@ -7,9 +7,9 @@
 #include <lib/zx/clock.h>
 #include <zircon/utc.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/current_thread.h"
 #include "base/time/time.h"
 

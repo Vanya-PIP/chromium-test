@@ -12,7 +12,7 @@
 
 #include "base/files/file.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/task/thread_pool.h"
 #include "base/threading/scoped_blocking_call.h"

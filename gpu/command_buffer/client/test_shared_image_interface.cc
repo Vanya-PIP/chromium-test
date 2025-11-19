@@ -34,7 +34,7 @@
 #endif
 
 #if BUILDFLAG(IS_FUCHSIA)
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/koid.h"
 #include "base/fuchsia/process_context.h"
 #endif

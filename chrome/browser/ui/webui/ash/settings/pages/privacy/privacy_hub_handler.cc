@@ -11,7 +11,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/synchronization/condition_variable.h"
 #include "chrome/browser/ash/privacy_hub/privacy_hub_util.h"
 #include "chrome/browser/ash/system/timezone_util.h"

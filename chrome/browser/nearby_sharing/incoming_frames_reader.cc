@@ -9,7 +9,7 @@
 #include "base/task/sequenced_task_runner.h"
 #include "chromeos/ash/components/nearby/common/connections_manager/nearby_connection.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_decoder.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace {
 

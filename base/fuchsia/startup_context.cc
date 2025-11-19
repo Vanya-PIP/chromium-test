@@ -14,8 +14,8 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/fuchsia/file_utils.h"
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 
 namespace base {
 

@@ -16,7 +16,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "base/threading/scoped_blocking_call.h"
 #include "crypto/nss_crypto_module_delegate.h"

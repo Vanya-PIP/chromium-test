@@ -10,7 +10,7 @@
 #include "base/strings/string_number_conversions.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process_manager.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_socket.h"
 #include "net/base/io_buffer.h"
 

@@ -6,7 +6,7 @@
 
 #include "base/memory/ptr_util.h"
 #include "base/task/sequenced_task_runner.h"
-#include "chrome/common/actor/actor_logging.h"
+#include "chrome/common/actor/actor_test"
 #include "chrome/common/actor/journal_details_builder.h"
 #include "chrome/common/chrome_features.h"
 #include "content/public/renderer/render_frame.h"

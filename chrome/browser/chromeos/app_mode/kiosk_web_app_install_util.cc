@@ -12,7 +12,7 @@
 #include "base/check_op.h"
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_functions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/browser/web_applications/external_install_options.h"
 #include "chrome/browser/web_applications/mojom/user_display_mode.mojom-shared.h"
 #include "chrome/browser/web_applications/web_app_constants.h"

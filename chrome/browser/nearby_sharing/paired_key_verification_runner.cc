@@ -11,7 +11,7 @@
 #include "chrome/browser/nearby_sharing/certificates/common.h"
 #include "chrome/browser/nearby_sharing/certificates/constants.h"
 #include "chrome/browser/nearby_sharing/nearby_share_metrics.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "third_party/nearby/sharing/proto/rpc_resources.pb.h"
 #include "third_party/nearby/sharing/proto/wire_format.pb.h"
 

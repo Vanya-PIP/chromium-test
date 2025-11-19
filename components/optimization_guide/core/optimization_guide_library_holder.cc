@@ -10,7 +10,7 @@
 #include "base/base_paths.h"
 #include "base/check_is_test.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/path_service.h"
 #include "base/scoped_native_library.h"

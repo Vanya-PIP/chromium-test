@@ -10,7 +10,7 @@
 #include "base/check.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/task/thread_pool.h"
 #include "build/build_config.h"

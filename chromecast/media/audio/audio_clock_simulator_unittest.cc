@@ -12,7 +12,7 @@
 
 #include "base/check_op.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/api/audio_clock_simulator.h"
 #include "media/base/sinc_resampler.h"
 #include "testing/gmock/include/gmock/gmock.h"

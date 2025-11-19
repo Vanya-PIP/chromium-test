@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "third_party/skia/include/core/SkColor.h"
 #include "ui/color/color_id.h"

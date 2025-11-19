@@ -1943,7 +1943,7 @@ absl::AddLogSink(&custom_sink_to_capture_absl_logs);
 
 **Notes:**
 *** promo
-Banned due to overlap with `base/logging.h`. We'd like to drop Chromium's
+Banned due to overlap with `base/test`. We'd like to drop Chromium's
 version and replace with the Abseil one, but no one has looked into how to
 migrate and what impacts (e.g. build time) we'd incur. If you'd like to do this
 work, please contact cxx@.

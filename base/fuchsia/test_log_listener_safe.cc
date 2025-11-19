@@ -12,7 +12,7 @@
 #include <string_view>
 
 #include "base/fuchsia/fuchsia_component_connect.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/callback_helpers.h"
 #include "base/process/process.h"
 #include "base/run_loop.h"

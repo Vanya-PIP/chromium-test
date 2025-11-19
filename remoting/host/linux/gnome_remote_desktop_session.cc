@@ -14,7 +14,7 @@
 #include "base/task/sequenced_task_runner.h"
 #include "base/types/expected.h"
 #include "remoting/base/file_path_util_linux.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/linux/dbus_interfaces/org_gnome_Mutter_RemoteDesktop.h"
 #include "remoting/host/linux/dbus_interfaces/org_gnome_Mutter_ScreenCast.h"
 #include "remoting/host/linux/gnome_desktop_display_info_monitor.h"

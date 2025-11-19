@@ -8,7 +8,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 
 namespace {

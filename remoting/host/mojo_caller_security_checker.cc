@@ -8,7 +8,7 @@
 
 #include "base/containers/fixed_flat_set.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "base/process/process_handle.h"

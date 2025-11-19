@@ -6,8 +6,8 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
-#include "remoting/base/logging.h"
+#include "base/test"
+#include "remoting/base/test"
 #include "remoting/host/remote_open_url/url_forwarder_configurator.h"
 #include "remoting/protocol/message_serialization.h"
 

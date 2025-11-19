@@ -13,7 +13,7 @@
 #import "base/i18n/time_formatting.h"
 #import "base/ios/device_util.h"
 #import "base/location.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/raw_ptr.h"
 #import "base/metrics/field_trial.h"
 #import "base/metrics/histogram_functions.h"

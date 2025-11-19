@@ -5,7 +5,7 @@
 #import <XCTest/XCTest.h>
 
 #import "base/ios/ios_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "base/strings/utf_string_conversions.h"
 #import "base/test/ios/wait_util.h"

@@ -4,7 +4,7 @@
 
 #include "content/browser/media/key_system_support_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/browser/permissions/permission_util.h"
 #include "content/browser/web_contents/web_contents_impl.h"
 #include "content/public/browser/browser_context.h"

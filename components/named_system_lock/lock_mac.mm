@@ -14,10 +14,10 @@
 #include <string>
 #include <utility>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_mach_port.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/threading/platform_thread.h"
 #include "base/time/time.h"

@@ -7,7 +7,7 @@
 #include <string_view>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/spellcheck/renderer/spellcheck_worditerator.h"
 #include "components/spellcheck/renderer/spelling_engine.h"
 

@@ -11,7 +11,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/no_destructor.h"
 #include "base/numerics/safe_conversions.h"

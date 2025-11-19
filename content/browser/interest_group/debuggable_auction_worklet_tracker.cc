@@ -4,7 +4,7 @@
 
 #include "content/browser/interest_group/debuggable_auction_worklet_tracker.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/observer_list.h"
 

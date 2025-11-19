@@ -7,7 +7,7 @@
 #include "ash/public/cpp/tab_cluster/tab_cluster_ui_item.h"
 #include "ash/public/cpp/tab_cluster/undirected_graph.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 

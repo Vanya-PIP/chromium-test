@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/leveldatabase/src/include/leveldb/status.h"
 
 namespace storage {

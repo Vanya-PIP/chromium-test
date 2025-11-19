@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "chromeos/ash/components/data_migration/pending_file_transfer_queue.h"
 #include "chromeos/ash/components/nearby/common/connections_manager/nearby_connection.h"

@@ -10,7 +10,7 @@
 
 #include "base/atomic_sequence_num.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/optional_util.h"
 #include "cc/paint/paint_image_builder.h"
 #include "cc/paint/paint_image_generator.h"

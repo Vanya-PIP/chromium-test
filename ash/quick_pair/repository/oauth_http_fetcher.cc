@@ -6,7 +6,7 @@
 
 #include "ash/quick_pair/common/fast_pair/fast_pair_http_result.h"
 #include "ash/quick_pair/common/quick_pair_browser_delegate.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/signin/public/base/consent_level.h"
 #include "components/signin/public/identity_manager/access_token_info.h"
 #include "components/signin/public/identity_manager/identity_manager.h"

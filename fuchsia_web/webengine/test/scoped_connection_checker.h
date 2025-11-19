@@ -12,7 +12,7 @@
 #include <memory>
 #include <string>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "testing/gtest/include/gtest/gtest.h"
 
 // Verifies that a connection was made, or never attempted, for a given

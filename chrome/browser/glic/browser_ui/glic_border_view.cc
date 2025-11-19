@@ -6,7 +6,7 @@
 
 #include <math.h>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "chrome/browser/actor/ui/actor_border_view_controller.h"
 #include "chrome/browser/glic/public/glic_keyed_service.h"
 #include "chrome/browser/glic/public/glic_keyed_service_factory.h"

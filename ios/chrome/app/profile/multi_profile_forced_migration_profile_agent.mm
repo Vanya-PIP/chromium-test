@@ -4,7 +4,7 @@
 // found in the LICENSE file.
 #import "ios/chrome/app/profile/multi_profile_forced_migration_profile_agent.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/user_metrics.h"
 #import "base/metrics/user_metrics_action.h"
 #import "components/prefs/pref_service.h"

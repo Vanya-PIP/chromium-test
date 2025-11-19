@@ -6,7 +6,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/task_environment.h"
 #include "base/time/time.h"
 #include "build/buildflag.h"

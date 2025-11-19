@@ -19,7 +19,7 @@
 #include "chrome/browser/web_applications/test/web_app_install_test_utils.h"
 #include "chrome/browser/web_applications/test/web_app_test.h"
 #include "components/web_package/test_support/signed_web_bundles/web_bundle_signer.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/web_contents/web_app_url_loader.h"
 #include "components/webapps/isolated_web_apps/scheme.h"
 #include "components/webapps/isolated_web_apps/test_support/signing_keys.h"

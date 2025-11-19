@@ -8,7 +8,7 @@
 #include <array>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/browser/navigation_handle.h"
 #include "content/public/browser/navigation_throttle.h"
 #include "content/public/browser/network_service_instance.h"

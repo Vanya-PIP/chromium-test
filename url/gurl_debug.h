@@ -7,7 +7,7 @@
 
 #include "base/component_export.h"
 #include "base/debug/alias.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 
 // DEBUG_ALIAS_FOR_GURL(var_name, url) copies |url| into a new stack-allocated
 // variable named |<var_name>|.  This helps ensure that the value of |url| gets

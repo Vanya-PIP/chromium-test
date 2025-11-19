@@ -9,7 +9,7 @@
 #include <memory>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "ui/ozone/platform/wayland/test/test_selection_device_manager.h"
 #include "ui/ozone/platform/wayland/test/test_wayland_server_thread.h"

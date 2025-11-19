@@ -7,7 +7,7 @@
 #include <memory>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/common/chromeos/extensions/api/api_features.h"
 #include "chrome/common/chromeos/extensions/api/generated_schemas.h"
 #include "chrome/common/chromeos/extensions/api/manifest_features.h"

@@ -21,7 +21,7 @@
 #include "base/functional/bind.h"
 #include "base/lazy_instance.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/sequence_checker.h"
 #include "base/task/single_thread_task_runner.h"

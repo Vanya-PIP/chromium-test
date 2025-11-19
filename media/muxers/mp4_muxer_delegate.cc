@@ -4,7 +4,7 @@
 
 #include "media/muxers/mp4_muxer_delegate.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/version_info/version_info.h"
 #include "media/base/audio_parameters.h"

@@ -19,7 +19,7 @@
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/path_service.h"
 #include "base/strings/strcat.h"

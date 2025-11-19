@@ -27,7 +27,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/strings/string_util.h"
 #include "base/synchronization/atomic_flag.h"

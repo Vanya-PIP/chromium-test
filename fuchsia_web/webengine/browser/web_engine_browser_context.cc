@@ -13,7 +13,7 @@
 #include "base/command_line.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/notimplemented.h"
 #include "base/path_service.h"
 #include "base/strings/string_split.h"

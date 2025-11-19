@@ -10,7 +10,7 @@
 
 #include "ash/constants/ash_switches.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"

@@ -4,7 +4,7 @@
 
 #include "ui/ozone/platform/x11/vulkan_surface_x11.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "gpu/vulkan/vulkan_function_pointers.h"
 #include "ui/base/x/x11_util.h"
 #include "ui/base/x/x11_xrandr_interval_only_vsync_provider.h"

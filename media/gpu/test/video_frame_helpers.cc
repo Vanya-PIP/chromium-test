@@ -9,7 +9,7 @@
 
 #include "base/bits.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"
 #include "gpu/command_buffer/client/test_shared_image_interface.h"

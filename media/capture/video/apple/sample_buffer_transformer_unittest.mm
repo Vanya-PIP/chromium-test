@@ -12,7 +12,7 @@
 #include <tuple>
 
 #include "base/apple/scoped_cftyperef.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "build/build_config.h"
 #include "media/capture/video/apple/test/pixel_buffer_test_utils.h"

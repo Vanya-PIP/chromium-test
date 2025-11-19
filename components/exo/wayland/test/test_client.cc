@@ -4,7 +4,7 @@
 
 #include "components/exo/wayland/test/test_client.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace exo::wayland::test {
 

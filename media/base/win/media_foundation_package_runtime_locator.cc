@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 #include "base/no_destructor.h"
 #include "base/path_service.h"

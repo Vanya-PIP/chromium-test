@@ -7,7 +7,7 @@
 #include <stdint.h>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "chrome/browser/defaults.h"
 #include "chrome/browser/profiles/profile.h"

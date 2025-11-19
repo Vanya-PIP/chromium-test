@@ -77,7 +77,7 @@ int posix_spawnattr_set_csm_np(const posix_spawnattr_t*, uint32_t)
 #include "base/apple/mach_port_rendezvous.h"
 #include "base/command_line.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/process/environment_internal.h"

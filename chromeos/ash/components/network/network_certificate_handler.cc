@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/network/network_certificate_handler.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "chromeos/ash/components/network/certificate_helper.h"
 #include "net/base/hash_value.h"

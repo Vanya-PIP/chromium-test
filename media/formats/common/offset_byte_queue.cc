@@ -5,7 +5,7 @@
 #include "media/formats/common/offset_byte_queue.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 
 namespace media {

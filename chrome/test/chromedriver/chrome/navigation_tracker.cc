@@ -6,7 +6,7 @@
 
 #include <unordered_map>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker_impl.h"
 #include "base/strings/string_util.h"
 #include "base/uuid.h"

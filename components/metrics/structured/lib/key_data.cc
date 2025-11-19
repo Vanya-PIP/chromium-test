@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/byte_conversions.h"
 #include "base/rand_util.h"

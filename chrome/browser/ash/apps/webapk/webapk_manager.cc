@@ -9,7 +9,7 @@
 #include "base/check.h"
 #include "base/containers/flat_set.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"
 #include "chrome/browser/apps/app_service/app_service_proxy.h"

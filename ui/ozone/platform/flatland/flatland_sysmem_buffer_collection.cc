@@ -11,7 +11,7 @@
 #include <tuple>
 
 #include "base/containers/flat_set.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/koid.h"
 #include "base/task/current_thread.h"
 #include "build/build_config.h"

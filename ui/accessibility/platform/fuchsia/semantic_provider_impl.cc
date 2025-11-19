@@ -11,7 +11,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/fuchsia/fuchsia_component_connect.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "ui/gfx/geometry/transform.h"
 
 namespace ui {

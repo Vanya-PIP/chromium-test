@@ -12,7 +12,7 @@
 #include "ash/utility/lottie_util.h"
 #include "base/check.h"
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"

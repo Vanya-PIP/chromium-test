@@ -7,7 +7,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/task/single_thread_task_runner.h"

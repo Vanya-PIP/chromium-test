@@ -9,7 +9,7 @@
 
 #include "ash/utility/lottie_util.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "cc/paint/skottie_resource_metadata.h"
 #include "cc/paint/skottie_text_property_value.h"
 #include "cc/paint/skottie_transform_property_value.h"

@@ -9,7 +9,7 @@
 #include "base/android/jni_bytebuffer.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/default_tick_clock.h"
 #include "media/audio/audio_manager_base.h"

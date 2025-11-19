@@ -30,7 +30,7 @@
 #include "ash/wm/window_state.h"
 #include "ash/wm/window_state_delegate.h"
 #include "ash/wm/window_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/no_destructor.h"
 #include "base/notreached.h"

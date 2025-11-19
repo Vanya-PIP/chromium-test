@@ -7,7 +7,7 @@
 #include <stdint.h>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/ffmpeg/ffmpeg_common.h"
 #include "media/formats/mp4/box_definitions.h"
 

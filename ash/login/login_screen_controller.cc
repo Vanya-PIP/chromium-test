@@ -31,7 +31,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/single_thread_task_runner.h"
 #include "components/account_id/account_id.h"
 #include "components/prefs/pref_registry_simple.h"

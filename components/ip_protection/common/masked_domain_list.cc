@@ -19,7 +19,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_split.h"

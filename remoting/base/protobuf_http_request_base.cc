@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/containers/fixed_flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/time/time.h"
 #include "base/timer/timer.h"

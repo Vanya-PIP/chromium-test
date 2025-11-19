@@ -7,7 +7,7 @@
 #import <LocalAuthentication/LocalAuthentication.h>
 #import <LocalAuthenticationEmbeddedUI/LocalAuthenticationEmbeddedUI.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #include "base/timer/timer.h"
 #include "chrome/browser/webauthn/local_authentication_token.h"

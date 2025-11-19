@@ -10,7 +10,7 @@
 #include "remoting/host/win/event_trace_data.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/logging_win.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

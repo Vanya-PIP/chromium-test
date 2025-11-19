@@ -24,7 +24,7 @@
 #include "mojo/core/embedder/embedder.h"
 #include "remoting/base/auto_thread_task_runner.h"
 #include "remoting/base/gaia_oauth_client.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/url_request_context_getter.h"
 #include "remoting/host/base/host_exit_codes.h"
 #include "remoting/host/base/switches.h"

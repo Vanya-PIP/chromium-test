@@ -11,7 +11,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/enum_set.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial.h"
 #include "base/metrics/field_trial_params.h"
 #include "base/rand_util.h"

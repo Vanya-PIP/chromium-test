@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/strings/grit/components_strings.h"
 #include "extensions/common/hashed_extension_id.h"
 

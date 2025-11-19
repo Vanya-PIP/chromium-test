@@ -34,7 +34,7 @@
 #include "partition_alloc/partition_alloc_base/bits.h"
 #include "partition_alloc/partition_alloc_base/compiler_specific.h"
 #include "partition_alloc/partition_alloc_base/cpu.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_base/numerics/checked_math.h"
 #include "partition_alloc/partition_alloc_base/rand_util.h"
 #include "partition_alloc/partition_alloc_base/system/sys_info.h"

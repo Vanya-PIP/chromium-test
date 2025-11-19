@@ -31,7 +31,7 @@
 #include "base/functional/concurrent_callbacks.h"
 #include "base/hash/hash.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/numerics/safe_conversions.h"

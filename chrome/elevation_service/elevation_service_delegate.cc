@@ -10,7 +10,7 @@
 
 #include "base/command_line.h"
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/expected.h"
 #include "chrome/common/win/eventlog_messages.h"
 #include "chrome/elevation_service/elevated_recovery_impl.h"

@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/containers/extend.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/browser/ash/fileapi/recent_file.h"
 #include "fake_recent_source.h"

@@ -17,7 +17,7 @@
 #include "base/functional/bind.h"
 #include "base/lazy_instance.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/numerics/safe_conversions.h"

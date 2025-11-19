@@ -12,7 +12,7 @@
 
 #include "partition_alloc/build_config.h"
 #include "partition_alloc/buildflags.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

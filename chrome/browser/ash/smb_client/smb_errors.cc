@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/smb_client/smb_errors.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash::smb_client {
 

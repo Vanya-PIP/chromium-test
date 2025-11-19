@@ -18,7 +18,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/stringprintf.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/thread_pool.h"
 #include "base/values.h"

@@ -16,7 +16,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/test_data_util.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/abseil-cpp/absl/functional/overload.h"

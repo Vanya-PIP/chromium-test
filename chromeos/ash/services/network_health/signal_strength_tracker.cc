@@ -8,7 +8,7 @@
 #include <cstdint>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash::network_health {
 

@@ -5,7 +5,7 @@
 #include "remoting/host/it2me/it2me_helpers.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/values.h"
 #include "remoting/base/name_value_map.h"

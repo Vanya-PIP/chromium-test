@@ -9,7 +9,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/parsers/h264_parser.h"
 
 namespace media {

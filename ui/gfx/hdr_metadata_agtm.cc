@@ -5,7 +5,7 @@
 #include "ui/gfx/hdr_metadata_agtm.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/skia/include/core/SkBitmap.h"
 #include "third_party/skia/include/core/SkData.h"
 #include "ui/gfx/hdr_metadata.h"

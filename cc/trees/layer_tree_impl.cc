@@ -17,7 +17,7 @@
 
 #include "base/containers/adapters.h"
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/json/json_writer.h"
 #include "base/memory/raw_ptr.h"

@@ -6,7 +6,7 @@
 
 #include "base/check.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/base/buildflags.h"
 
 #if BUILDFLAG(REMOTING_INTERNAL)

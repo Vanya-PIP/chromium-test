@@ -12,7 +12,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/kcer/helpers/key_helper.h"
 #include "crypto/nss_util.h"
 #include "crypto/openssl_util.h"

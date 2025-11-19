@@ -11,7 +11,7 @@
 
 #include "ash/public/cpp/message_center_ash.h"
 #include "ash/public/cpp/test/test_new_window_delegate.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chrome/browser/apps/app_service/app_service_proxy.h"
 #include "chrome/browser/apps/app_service/app_service_proxy_factory.h"

@@ -12,7 +12,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "sandbox/linux/bpf_dsl/bpf_dsl.h"
 #include "sandbox/linux/bpf_dsl/policy.h"

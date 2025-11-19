@@ -9,7 +9,7 @@
 
 #include <tuple>
 
-#include "base/logging.h"
+#include "base/test"
 
 // Does initialization and holds state that's shared across all runs.
 class Environment {

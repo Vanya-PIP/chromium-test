@@ -8,7 +8,7 @@
 #include <sstream>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "components/viz/common/frame_sinks/begin_frame_args.h"
 #include "ui/gl/gl_fence.h"

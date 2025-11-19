@@ -9,7 +9,7 @@
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_CHROMEOS)
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "chrome/browser/ash/app_list/arc/arc_app_list_prefs.h"
 #include "chrome/browser/ash/arc/arc_util.h"

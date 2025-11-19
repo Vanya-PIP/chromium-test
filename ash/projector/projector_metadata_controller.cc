@@ -10,7 +10,7 @@
 #include "ash/webui/projector_app/public/cpp/projector_app_constants.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/current_thread.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

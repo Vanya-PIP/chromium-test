@@ -20,7 +20,7 @@
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/i18n/rtl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/notimplemented.h"
 #include "base/strings/sys_string_conversions.h"

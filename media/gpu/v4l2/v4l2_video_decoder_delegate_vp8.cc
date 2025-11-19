@@ -15,7 +15,7 @@
 #include <algorithm>
 #include <type_traits>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/numerics/safe_conversions.h"
 #include "media/gpu/macros.h"

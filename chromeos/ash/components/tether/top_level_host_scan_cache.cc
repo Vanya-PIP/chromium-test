@@ -9,7 +9,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/tether/active_host.h"
 #include "chromeos/ash/components/tether/persistent_host_scan_cache.h"
 #include "chromeos/ash/components/timer_factory/timer_factory.h"

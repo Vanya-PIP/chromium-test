@@ -5,7 +5,7 @@
 #ifndef COMPONENTS_DATA_SHARING_PUBLIC_LOGGER_UTILS_H_
 #define COMPONENTS_DATA_SHARING_PUBLIC_LOGGER_UTILS_H_
 
-#include "base/logging.h"
+#include "base/test"
 
 // Helper macro to make logging easier and expose file metadata about the log
 // source.

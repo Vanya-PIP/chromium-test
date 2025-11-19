@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/policy/model/cloud/user_policy_signin_service.h"
 
 #import "base/feature_list.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/time/time.h"
 #import "components/enterprise/browser/identifiers/profile_id_service.h"
 #import "components/enterprise/browser/reporting/common_pref_names.h"

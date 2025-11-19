@@ -14,7 +14,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/files/important_file_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/mac/scoped_ioobject.h"
 #include "base/memory/scoped_refptr.h"

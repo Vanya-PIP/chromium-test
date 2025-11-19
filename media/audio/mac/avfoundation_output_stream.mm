@@ -7,10 +7,10 @@
 #import <AVFoundation/AVFoundation.h>
 #include <CoreAudio/CoreAudio.h>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/containers/heap_array.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "media/audio/mac/audio_manager_mac.h"

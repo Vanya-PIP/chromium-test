@@ -14,7 +14,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/task/single_thread_task_runner.h"
 #include "components/device_event_log/device_event_log.h"

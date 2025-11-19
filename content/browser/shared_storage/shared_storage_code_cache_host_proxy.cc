@@ -4,7 +4,7 @@
 
 #include "content/browser/shared_storage/shared_storage_code_cache_host_proxy.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace content {
 

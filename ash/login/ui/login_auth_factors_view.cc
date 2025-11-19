@@ -16,7 +16,7 @@
 #include "ash/style/ash_color_id.h"
 #include "ash/style/dark_light_mode_controller_impl.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "chromeos/constants/chromeos_features.h"
 #include "ui/accessibility/ax_enums.mojom.h"

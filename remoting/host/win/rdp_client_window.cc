@@ -12,7 +12,7 @@
 #include "base/auto_reset.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/win/scoped_bstr.h"
 #include "ui/base/win/atl_module.h"

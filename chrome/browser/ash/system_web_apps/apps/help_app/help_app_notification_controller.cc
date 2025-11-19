@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/system_web_apps/apps/help_app/help_app_notification_controller.h"
 
 #include "ash/constants/ash_features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/version.h"
 #include "chrome/browser/ash/release_notes/release_notes_notification.h"
 #include "chrome/browser/profiles/chrome_version_service.h"

@@ -7,7 +7,7 @@
 #include "ash/constants/ash_pref_names.h"
 #include "ash/constants/web_app_id_constants.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/values.h"
 #include "build/build_config.h"

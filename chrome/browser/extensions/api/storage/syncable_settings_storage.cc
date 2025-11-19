@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "chrome/browser/extensions/api/storage/settings_sync_processor.h"
 #include "components/sync/model/model_error.h"

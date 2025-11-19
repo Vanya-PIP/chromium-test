@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/timer/lap_timer.h"
 #include "testing/gtest/include/gtest/gtest.h"

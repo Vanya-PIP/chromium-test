@@ -9,7 +9,7 @@
 #if DCHECK_IS_ON()
 #import <Foundation/Foundation.h>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/stack_trace.h"
 #include "base/immediate_crash.h"
 #include "base/strings/sys_string_conversions.h"

@@ -6,7 +6,7 @@
 
 #include <zircon/rights.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/koid.h"
 #include "base/functional/bind.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"

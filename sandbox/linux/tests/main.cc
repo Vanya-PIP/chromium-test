@@ -10,7 +10,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/test_suite.h"
 #include "base/test/test_timeouts.h"
 #include "build/build_config.h"

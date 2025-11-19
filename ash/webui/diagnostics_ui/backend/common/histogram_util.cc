@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "ash/webui/diagnostics_ui/backend/common/routine_properties.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 

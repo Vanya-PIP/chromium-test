@@ -5,7 +5,7 @@
 #include "chromeos/ash/services/device_sync/value_string_encoding.h"
 
 #include "base/base64url.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash {
 

@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/blink/public/mojom/devtools/console_message.mojom.h"
 
 namespace content {

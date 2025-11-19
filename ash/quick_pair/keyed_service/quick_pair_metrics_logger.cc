@@ -14,7 +14,7 @@
 #include "ash/session/session_controller_impl.h"
 #include "ash/shell.h"
 #include "base/containers/contains.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_service.h"
 #include "device/bluetooth/bluetooth_adapter_factory.h"
 

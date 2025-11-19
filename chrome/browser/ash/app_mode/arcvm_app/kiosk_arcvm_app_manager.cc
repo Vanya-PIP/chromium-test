@@ -13,7 +13,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/app_list/arc/arc_app_list_prefs.h"
 #include "chrome/browser/ash/app_mode/arcvm_app/kiosk_arcvm_app_data.h"
 #include "chrome/browser/ash/app_mode/kiosk_app_manager_base.h"

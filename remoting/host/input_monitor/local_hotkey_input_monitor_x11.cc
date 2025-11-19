@@ -13,7 +13,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/host/input_monitor/local_input_monitor_x11_common.h"
 #include "ui/gfx/x/keysyms/keysyms.h"
 #include "ui/gfx/x/xinput.h"

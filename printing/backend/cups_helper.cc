@@ -9,7 +9,7 @@
 
 #include "printing/backend/cups_helper.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "build/build_config.h"
 

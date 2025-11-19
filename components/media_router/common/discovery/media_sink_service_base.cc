@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "components/media_router/common/media_route.h"
 

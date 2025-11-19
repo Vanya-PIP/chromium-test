@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/app_mode/kiosk_chrome_app_manager.h"
 #include "dbus/message.h"
 #include "third_party/cros_system_api/dbus/service_constants.h"

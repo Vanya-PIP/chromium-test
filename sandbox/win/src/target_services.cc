@@ -15,7 +15,7 @@
 #include <optional>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/access_token.h"
 #include "sandbox/win/src/acl.h"
 #include "sandbox/win/src/crosscall_client.h"

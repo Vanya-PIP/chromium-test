@@ -9,7 +9,7 @@
 #include "base/android/linker/ashmem.h"
 #include "base/bits.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/memory/shared_memory_tracker.h"
 #include "base/metrics/histogram_macros.h"

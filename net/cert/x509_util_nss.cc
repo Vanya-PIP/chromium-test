@@ -19,7 +19,7 @@
 #include <string.h>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_view_util.h"
 #include "base/strings/stringprintf.h"
 #include "crypto/hash.h"

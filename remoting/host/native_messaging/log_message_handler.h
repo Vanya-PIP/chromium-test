@@ -10,7 +10,7 @@
 #include <memory>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/values.h"
 

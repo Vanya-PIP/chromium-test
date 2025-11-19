@@ -13,7 +13,7 @@
 #include "chrome/browser/web_applications/commands/web_app_command.h"
 #include "chrome/browser/web_applications/web_app.h"
 #include "chrome/browser/web_applications/web_app_registrar.h"
-#include "components/webapps/isolated_web_apps/error/uma_logging.h"
+#include "components/webapps/isolated_web_apps/error/uma_test"
 #include "components/webapps/isolated_web_apps/types/iwa_version.h"
 
 namespace web_app {

@@ -13,7 +13,7 @@
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/read_only_shared_memory_region.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/shared_memory_mapping.h"

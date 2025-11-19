@@ -4,7 +4,7 @@
 
 #include "crypto/keypair.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "crypto/openssl_util.h"
 #include "third_party/boringssl/src/include/openssl/bn.h"
 #include "third_party/boringssl/src/include/openssl/bytestring.h"

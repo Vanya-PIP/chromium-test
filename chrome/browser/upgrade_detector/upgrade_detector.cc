@@ -13,7 +13,7 @@
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/observer_list.h"
 #include "base/rand_util.h"

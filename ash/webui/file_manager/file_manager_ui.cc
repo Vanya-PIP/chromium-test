@@ -14,7 +14,7 @@
 #include "ash/webui/file_manager/resources/grit/file_manager_swa_resources_map.h"
 #include "ash/webui/file_manager/url_constants.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/values.h"
 #include "components/user_manager/user_type.h"

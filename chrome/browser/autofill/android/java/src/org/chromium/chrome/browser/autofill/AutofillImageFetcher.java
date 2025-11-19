@@ -216,7 +216,7 @@ public class AutofillImageFetcher {
      * @param bitmap The Bitmap fetched from server.
      * @param resolvedUrl The key against which the treated Bitmap is cached.
      * @param treatImageFunction Imagetreatment function.
-     * @param imageTypeString String representing the type of image, used for logging histograms. It
+     * @param imageTypeString String representing the type of image, used for testistograms. It
      *     corresponds to the "AutofillImage" variant in the histograms.xml file.
      */
     private void treatAndCacheImage(

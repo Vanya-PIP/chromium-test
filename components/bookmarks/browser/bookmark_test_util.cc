@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/bookmarks/browser/bookmark_node.h"
 
 namespace bookmarks {

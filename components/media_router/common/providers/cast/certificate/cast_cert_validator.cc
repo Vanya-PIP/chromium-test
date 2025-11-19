@@ -15,7 +15,7 @@
 #include "base/command_line.h"
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/task/task_traits.h"
 #include "components/media_router/common/providers/cast/certificate/cast_cert_printer.h"

@@ -7,7 +7,7 @@
 #include <cstdint>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 

@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/arc/tracing/arc_cpu_event.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/cxx23_to_underlying.h"
 
 namespace arc {

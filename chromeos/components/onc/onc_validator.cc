@@ -15,7 +15,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/flat_set.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/no_destructor.h"
 #include "base/notreached.h"

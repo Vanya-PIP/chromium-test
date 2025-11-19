@@ -7,7 +7,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/url_matcher/url_matcher_factory.h"
 #include "extensions/common/mojom/event_dispatcher.mojom.h"

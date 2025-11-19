@@ -7,7 +7,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "chromecast/browser/cast_web_contents.h"
 #include "components/cast/message_port/blink_message_port_adapter.h"

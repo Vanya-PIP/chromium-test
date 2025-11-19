@@ -1,6 +1,6 @@
 # Histograms
 
-//tools/metrics/histograms/README.md describes policies about logging histograms.
+//tools/metrics/histograms/README.md describes policies about testistograms.
 Whenever you add code that logs a histogram, or you need to update metadata
 about a histogram, follow the guidelines in that file along with the following
 clarifications:

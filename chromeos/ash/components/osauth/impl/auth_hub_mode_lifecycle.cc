@@ -11,7 +11,7 @@
 #include "base/check_op.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "chromeos/ash/components/osauth/impl/auth_hub_common.h"
 #include "chromeos/ash/components/osauth/public/auth_factor_engine.h"

@@ -12,7 +12,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/uuid.h"
 #include "components/media_router/browser/media_router_metrics.h"

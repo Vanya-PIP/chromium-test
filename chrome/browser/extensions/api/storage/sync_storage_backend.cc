@@ -7,7 +7,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chrome/browser/extensions/api/storage/settings_sync_processor.h"
 #include "chrome/browser/extensions/api/storage/settings_sync_util.h"

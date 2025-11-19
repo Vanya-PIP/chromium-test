@@ -6,7 +6,7 @@
 
 #include <ostream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"
 

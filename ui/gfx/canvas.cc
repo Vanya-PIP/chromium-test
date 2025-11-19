@@ -11,7 +11,7 @@
 #include "base/compiler_specific.h"
 #include "base/feature_list.h"
 #include "base/i18n/rtl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/numerics/safe_conversions.h"
 #include "cc/paint/paint_flags.h"

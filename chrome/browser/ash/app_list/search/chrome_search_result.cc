@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "chrome/browser/ash/app_list/app_context_menu.h"
 #include "ui/base/models/image_model.h"

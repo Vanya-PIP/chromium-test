@@ -11,7 +11,7 @@
 #include "base/files/file.h"
 #include "base/files/file_enumerator.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "base/synchronization/atomic_flag.h"
 #include "base/task/sequenced_task_runner.h"

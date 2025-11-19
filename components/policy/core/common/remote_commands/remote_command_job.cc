@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/strings/stringprintf.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "components/policy/core/common/policy_logger.h"
 #include "components/policy/proto/device_management_backend.pb.h"
 

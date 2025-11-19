@@ -5,7 +5,7 @@
 #include "chrome/browser/android/webapk/webapk_sync_bridge.h"
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/test/bind.h"
 #include "base/test/simple_test_clock.h"

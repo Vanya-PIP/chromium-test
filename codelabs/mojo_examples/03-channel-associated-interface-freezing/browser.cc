@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump.h"
 #include "base/notreached.h"
 #include "base/process/launch.h"

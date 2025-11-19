@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/time/time.h"
 #include "media/base/color_plane_layout.h"

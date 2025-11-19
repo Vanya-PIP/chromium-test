@@ -15,7 +15,7 @@
 
 #include "base/check.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 
 namespace rlz_lib {

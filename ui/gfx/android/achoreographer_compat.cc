@@ -7,7 +7,7 @@
 #include <dlfcn.h>
 
 #include "base/android/android_info.h"
-#include "base/logging.h"
+#include "base/test"
 
 #define LOAD_FUNCTION(lib, func)                             \
   do {                                                       \

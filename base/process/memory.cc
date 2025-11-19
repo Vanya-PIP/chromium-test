@@ -14,7 +14,7 @@
 #include "base/allocator/buildflags.h"
 #include "base/debug/alias.h"
 #include "base/immediate_crash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "partition_alloc/buildflags.h"
 

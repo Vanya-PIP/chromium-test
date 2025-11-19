@@ -4,7 +4,7 @@
 
 #import "ios/chrome/browser/ai_prototyping/ui/ai_prototyping_tab_organization_view_controller.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/raw_ptr.h"
 #import "base/notreached.h"
 #import "base/strings/sys_string_conversions.h"

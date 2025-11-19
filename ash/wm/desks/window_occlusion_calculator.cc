@@ -9,7 +9,7 @@
 
 #include "ash/public/cpp/window_properties.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/trace_event/trace_event.h"
 #include "ui/aura/window_occlusion_change_builder.h"

@@ -13,7 +13,7 @@
 
 #include "base/files/file_util.h"
 #include "base/fuchsia/mem_buffer_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "components/cast/named_message_port_connector/grit/named_message_port_connector_resources.h"
 

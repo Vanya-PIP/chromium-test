@@ -8,9 +8,9 @@
 
 #include "ash/constants/ash_switches.h"
 #include "base/containers/ring_buffer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 
 namespace ui {
 

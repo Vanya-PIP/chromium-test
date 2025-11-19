@@ -12,7 +12,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/json/json_writer.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram.h"
 #include "base/metrics/user_metrics.h"
 #include "base/no_destructor.h"

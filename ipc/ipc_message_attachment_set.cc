@@ -8,7 +8,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "build/build_config.h"
 #include "ipc/ipc_message_attachment.h"

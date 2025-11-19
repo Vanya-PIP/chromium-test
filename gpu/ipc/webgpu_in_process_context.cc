@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/test_simple_task_runner.h"
 #include "gpu/command_buffer/client/shared_memory_limits.h"
 #include "gpu/command_buffer/client/transfer_buffer.h"

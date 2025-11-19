@@ -9,7 +9,7 @@ source_set("common") {
     "client_status_observer.h",
     "frame_consumer_wrapper.cc",
     "frame_consumer_wrapper.h",
-    "logging.h",
+    "test",
     "remoting_client.cc",
     "remoting_client.h",
   ]

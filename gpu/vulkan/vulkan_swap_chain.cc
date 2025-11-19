@@ -5,9 +5,9 @@
 #include "gpu/vulkan/vulkan_swap_chain.h"
 
 #include "base/compiler_specific.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

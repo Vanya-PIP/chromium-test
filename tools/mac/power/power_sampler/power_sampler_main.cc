@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/files/file.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/power_monitor/iopm_power_source_sampling_event_source.h"
 #include "base/power_monitor/timer_sampling_event_source.h"
 #include "base/process/process_handle.h"

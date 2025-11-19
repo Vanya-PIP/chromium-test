@@ -8,7 +8,7 @@
 
 #include <string_view>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/mem_buffer_util.h"
 #include "base/memory/weak_ptr.h"
 #include "base/notreached.h"

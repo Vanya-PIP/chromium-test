@@ -12,7 +12,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/system/sys_info.h"
 #include "base/uuid.h"

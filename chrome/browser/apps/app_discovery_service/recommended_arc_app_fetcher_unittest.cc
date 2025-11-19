@@ -5,7 +5,7 @@
 #include "chrome/browser/apps/app_discovery_service/recommended_arc_app_fetcher.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "chrome/browser/apps/app_discovery_service/play_extras.h"
 #include "chrome/test/base/testing_profile.h"

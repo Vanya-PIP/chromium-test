@@ -8,7 +8,7 @@
 
 #include "base/command_line.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"

@@ -2,13 +2,13 @@
 
 ## Locations
 
-Messages written via the logging macros in [base/logging.h] end up in different
+Messages written via the logging macros in [base/test] end up in different
 locations depending on Chrome's state:
 
 `/var/log/ui/ui.LATEST`
 :   contains data written to stdout and stderr by Chrome (and technically also
     [session_manager]). This generally comprises messages that are written very
-    early in Chrome's startup process, before logging has been initialized.
+    early in Chrome's startup process, before testas been initialized.
 
 `/var/log/chrome/chrome`
 :   contains messages that are written before a user has logged in. It also
@@ -90,6 +90,6 @@ Follow `volume_manager`'s logs:
 (dut)$ tail -F /var/log/chrome/chrome | grep volume_manager
 ```
 
-[base/logging.h]: ../base/logging.h
+[base/test]: ../base/test
 [session_manager]: https://chromium.googlesource.com/chromiumos/platform2/+/main/login_manager/
 [Passing Chrome flags from session_manager]: https://chromium.googlesource.com/chromiumos/platform2/+/main/login_manager/docs/flags.md

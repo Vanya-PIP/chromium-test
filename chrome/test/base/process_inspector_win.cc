@@ -6,7 +6,7 @@
 
 #include <winternl.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process.h"
 #include "base/win/windows_version.h"
 

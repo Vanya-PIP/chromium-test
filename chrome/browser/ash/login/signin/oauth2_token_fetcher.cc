@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/login/signin/oauth2_token_fetcher.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "chromeos/ash/components/network/network_handler.h"
 #include "chromeos/ash/components/network/network_state.h"

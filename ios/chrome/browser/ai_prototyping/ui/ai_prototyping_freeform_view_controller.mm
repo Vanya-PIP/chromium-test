@@ -6,7 +6,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/raw_ptr.h"
 #import "base/strings/sys_string_conversions.h"
 #import "components/optimization_guide/optimization_guide_buildflags.h"

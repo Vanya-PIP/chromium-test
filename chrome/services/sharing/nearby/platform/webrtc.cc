@@ -20,7 +20,7 @@
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
 #include "third_party/nearby/src/internal/platform/count_down_latch.h"
 #include "third_party/nearby/src/internal/platform/future.h"
-#include "third_party/nearby/src/internal/platform/logging.h"
+#include "third_party/nearby/src/internal/platform/test"
 #include "third_party/webrtc/api/async_dns_resolver.h"
 #include "third_party/webrtc/api/create_modular_peer_connection_factory.h"
 #include "third_party/webrtc/api/jsep.h"

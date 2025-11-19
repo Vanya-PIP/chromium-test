@@ -9,7 +9,7 @@
 #include <string_view>
 
 #include "base/auto_reset.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/run_loop.h"
 
 FakeApiBindingsImpl::FakeApiBindingsImpl() = default;

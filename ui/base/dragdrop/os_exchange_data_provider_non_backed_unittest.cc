@@ -8,7 +8,7 @@
 #include <string>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "ui/base/data_transfer_policy/data_transfer_endpoint.h"

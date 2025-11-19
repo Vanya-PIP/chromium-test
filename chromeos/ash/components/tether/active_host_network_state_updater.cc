@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/tether/active_host_network_state_updater.h"
 
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/components/network/network_state_handler.h"
 #include "chromeos/ash/components/tether/active_host.h"

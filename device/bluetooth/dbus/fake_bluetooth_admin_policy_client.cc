@@ -5,7 +5,7 @@
 #include "device/bluetooth/dbus/fake_bluetooth_admin_policy_client.h"
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "device/bluetooth/dbus/fake_bluetooth_adapter_client.h"
 #include "third_party/cros_system_api/dbus/service_constants.h"

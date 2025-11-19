@@ -4,7 +4,7 @@
 
 #include "media/base/video_codecs.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/stringprintf.h"
 

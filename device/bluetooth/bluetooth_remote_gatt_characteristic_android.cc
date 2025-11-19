@@ -12,7 +12,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/task/single_thread_task_runner.h"
 #include "device/bluetooth/bluetooth_adapter_android.h"

@@ -4,7 +4,7 @@
 
 #include "media/gpu/windows/d3d12_fence.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/scoped_blocking_call.h"
 #include "base/win/scoped_handle.h"
 

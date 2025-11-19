@@ -9,7 +9,7 @@
 
 #include "base/files/file_util.h"
 #include "base/files/important_file_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

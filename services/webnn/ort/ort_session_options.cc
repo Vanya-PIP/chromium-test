@@ -10,7 +10,7 @@
 #include "base/strings/strcat.h"
 #include "base/strings/stringprintf.h"
 #include "services/webnn/ort/environment.h"
-#include "services/webnn/ort/logging.h"
+#include "services/webnn/ort/test"
 #include "services/webnn/ort/ort_status.h"
 #include "services/webnn/ort/platform_functions_ort.h"
 #include "services/webnn/public/cpp/webnn_trace.h"

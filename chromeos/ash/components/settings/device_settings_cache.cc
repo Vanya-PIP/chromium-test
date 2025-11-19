@@ -8,7 +8,7 @@
 
 #include "base/base64.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/policy/proto/device_management_backend.pb.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"

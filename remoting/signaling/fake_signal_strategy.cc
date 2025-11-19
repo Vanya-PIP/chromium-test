@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/task/single_thread_task_runner.h"

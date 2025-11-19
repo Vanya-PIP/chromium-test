@@ -32,7 +32,7 @@
 #include "base/i18n/icu_util.h"
 #include "base/lazy_instance.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/shared_memory_hooks.h"
 #include "base/metrics/field_trial.h"
 #include "base/metrics/histogram_base.h"

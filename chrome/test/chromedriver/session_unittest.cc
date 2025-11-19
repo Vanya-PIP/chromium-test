@@ -10,7 +10,7 @@
 
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/test/chromedriver/chrome/status.h"
 #include "chrome/test/chromedriver/chrome/stub_chrome.h"
 #include "chrome/test/chromedriver/chrome/stub_web_view.h"

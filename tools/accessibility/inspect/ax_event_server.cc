@@ -5,7 +5,7 @@
 #include "tools/accessibility/inspect/ax_event_server.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "content/public/browser/ax_inspect_factory.h"
 #include "ui/accessibility/platform/inspect/ax_inspect_scenario.h"

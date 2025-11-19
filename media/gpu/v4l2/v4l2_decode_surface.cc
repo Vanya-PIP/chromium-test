@@ -9,7 +9,7 @@
 #include <poll.h>
 #include <sys/ioctl.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/stringprintf.h"
 #include "media/gpu/macros.h"

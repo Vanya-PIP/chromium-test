@@ -10,7 +10,7 @@
 
 #include "base/check.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/threading/thread_checker.h"
 #include "build/build_config.h"

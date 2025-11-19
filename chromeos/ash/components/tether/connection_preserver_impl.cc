@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/timer/timer.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/network/network_state.h"
 #include "chromeos/ash/components/network/network_state_handler.h"
 #include "chromeos/ash/components/network/network_type_pattern.h"

@@ -5,7 +5,7 @@
 #ifndef URL_URL_CANON_ICU_TEST_HELPERS_H_
 #define URL_URL_CANON_ICU_TEST_HELPERS_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/icu/source/common/unicode/ucnv.h"
 #include "url/url_canon.h"
 

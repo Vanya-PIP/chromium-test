@@ -19,7 +19,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/trace_event/trace_event.h"
 #include "ui/gfx/color_space.h"

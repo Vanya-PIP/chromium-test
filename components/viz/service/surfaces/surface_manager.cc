@@ -14,8 +14,8 @@
 
 #include "base/containers/adapters.h"
 #include "base/containers/queue.h"
-#include "base/debug/crash_logging.h"
-#include "base/logging.h"
+#include "base/debug/crash_test"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/observer_list.h"
 #include "base/task/sequenced_task_runner.h"

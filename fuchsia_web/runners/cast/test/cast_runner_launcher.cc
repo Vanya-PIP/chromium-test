@@ -28,7 +28,7 @@
 #include <utility>
 
 #include "base/command_line.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/run_loop.h"
 #include "fuchsia_web/common/test/test_realm_support.h"

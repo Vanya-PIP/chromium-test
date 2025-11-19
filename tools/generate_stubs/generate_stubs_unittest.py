@@ -308,12 +308,12 @@ int  ferda(char **argv[]) {
     # Make the header.
     outfile = io.StringIO()
     self.writer.WriteImplementationPreamble(module_names, outfile,
-                                            "base/logging.h",
+                                            "base/test",
                                             "my/compiler_specific.h")
     contents = outfile.getvalue()
 
     # Verify includes are included correctly.
-    self.assertTrue(contents.find('#include "base/logging.h"') != -1)
+    self.assertTrue(contents.find('#include "base/test"') != -1)
     self.assertTrue(contents.find('#include "my/compiler_specific.h"') != -1)
 
   def testWriteUmbrellaInitializer(self):

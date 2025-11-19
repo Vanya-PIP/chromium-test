@@ -4,7 +4,7 @@
 
 #include "mojo/core/dispatcher.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/core/configuration.h"
 #include "mojo/core/data_pipe_consumer_dispatcher.h"
 #include "mojo/core/data_pipe_producer_dispatcher.h"

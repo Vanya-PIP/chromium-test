@@ -19,7 +19,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/kill.h"
 #include "base/process/launch.h"
 #include "base/strings/utf_string_conversions.h"

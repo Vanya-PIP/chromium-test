@@ -4,7 +4,7 @@
 
 #include "components/sync/service/data_type_status_table.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/sync/service/data_type_manager.h"
 

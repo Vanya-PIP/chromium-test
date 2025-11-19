@@ -5,7 +5,7 @@
 #include "extensions/browser/api/sockets_udp/test_udp_echo_server.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/run_loop.h"
 #include "base/test/bind.h"

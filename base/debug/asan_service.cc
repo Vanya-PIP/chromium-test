@@ -20,7 +20,7 @@
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_WIN)
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/windows_types.h"
 #endif  // BUILDFLAG(IS_WIN)
 

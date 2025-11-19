@@ -8,7 +8,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/test/task_environment.h"
 #include "components/reporting/client/mock_report_queue.h"

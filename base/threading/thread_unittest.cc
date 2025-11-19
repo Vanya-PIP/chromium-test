@@ -13,7 +13,7 @@
 #include "base/dcheck_is_on.h"
 #include "base/debug/leak_annotations.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"

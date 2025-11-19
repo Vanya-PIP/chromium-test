@@ -5,7 +5,7 @@
 #include "chrome/browser/ui/views/frame/webui_tab_strip_field_trial.h"
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "chrome/browser/metrics/chrome_metrics_service_accessor.h"
 #include "chrome/browser/ui/ui_features.h"

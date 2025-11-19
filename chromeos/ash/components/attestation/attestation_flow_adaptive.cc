@@ -8,7 +8,7 @@
 #include <optional>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/attestation/attestation_flow.h"
 #include "chromeos/ash/components/dbus/constants/attestation_constants.h"
 

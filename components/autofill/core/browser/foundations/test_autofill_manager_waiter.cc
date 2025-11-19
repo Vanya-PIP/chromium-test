@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"

@@ -17,7 +17,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/heap_array.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
 #include "base/scoped_environment_variable_override.h"

@@ -4,8 +4,8 @@
 
 #include "services/network/public/cpp/not_implemented_url_loader_factory.h"
 
-#include "base/debug/crash_logging.h"
-#include "base/logging.h"
+#include "base/debug/crash_test"
+#include "base/test"
 #include "mojo/public/cpp/bindings/remote.h"
 #include "services/network/public/mojom/url_loader.mojom.h"
 

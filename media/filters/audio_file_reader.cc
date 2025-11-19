@@ -16,7 +16,7 @@
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_math.h"
 #include "base/time/time.h"
 #include "media/base/audio_buffer.h"

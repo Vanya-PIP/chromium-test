@@ -7,7 +7,7 @@
 #include <dxgi1_2.h>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_span.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"

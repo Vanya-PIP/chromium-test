@@ -5,7 +5,7 @@
 #include "chrome/browser/webauthn/android/cable_registration_state.h"
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "device/fido/cable/v2_handshake.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/boringssl/src/include/openssl/ec.h"

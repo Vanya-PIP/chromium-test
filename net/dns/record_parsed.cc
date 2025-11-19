@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "net/dns/dns_response.h"
 #include "net/dns/https_record_rdata.h"

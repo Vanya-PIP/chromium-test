@@ -6,7 +6,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/google/core/common/google_util.h"
 #include "components/policy/core/common/policy_pref_names.h"

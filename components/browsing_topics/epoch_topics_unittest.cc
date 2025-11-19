@@ -5,7 +5,7 @@
 #include "components/browsing_topics/epoch_topics.h"
 
 #include "base/json/values_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/test/task_environment.h"

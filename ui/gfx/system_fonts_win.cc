@@ -8,7 +8,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/sys_string_conversions.h"

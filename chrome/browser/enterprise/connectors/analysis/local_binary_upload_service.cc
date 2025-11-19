@@ -10,7 +10,7 @@
 
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/thread_pool.h"
 #include "base/threading/scoped_blocking_call.h"
 #include "chrome/browser/enterprise/connectors/common.h"

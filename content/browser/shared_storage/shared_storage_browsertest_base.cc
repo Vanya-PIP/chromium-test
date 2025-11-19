@@ -17,7 +17,7 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/metrics/histogram_base.h"
 #include "base/metrics/statistics_recorder.h"
 #include "base/run_loop.h"

@@ -4,7 +4,7 @@
 
 #include "components/payments/content/payment_request_web_contents_manager.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/browser/navigation_handle.h"
 
 namespace payments {

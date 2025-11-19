@@ -15,7 +15,7 @@
 #include "chrome/test/base/testing_browser_process.h"
 #include "chrome/test/base/testing_profile_manager.h"
 #include "chromeos/ash/components/local_search_service/public/cpp/local_search_service_proxy.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/fake_phone_hub_manager.h"
 #include "chromeos/ash/components/phonehub/pref_names.h"
 #include "chromeos/ash/services/multidevice_setup/public/cpp/fake_multidevice_setup_client.h"

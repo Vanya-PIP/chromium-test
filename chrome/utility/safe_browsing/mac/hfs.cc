@@ -17,7 +17,7 @@
 
 #include "base/containers/buffer_iterator.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/memory/raw_span.h"

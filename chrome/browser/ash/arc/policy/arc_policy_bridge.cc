@@ -16,7 +16,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_string_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/uuid.h"
 #include "base/values.h"

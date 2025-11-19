@@ -8,7 +8,7 @@
 
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"
 #include "chrome/browser/on_device_translation/pref_names.h"

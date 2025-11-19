@@ -11,7 +11,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/bit_reader.h"
 #include "media/base/limits.h"
 #include "media/formats/mp4/ac3_constants.h"

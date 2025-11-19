@@ -8,7 +8,7 @@
 #include <memory>
 
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/time/clock.h"
 #include "base/time/time.h"

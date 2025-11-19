@@ -5,7 +5,7 @@
 #include "ui/compositor/compositor_animation_observer.h"
 
 #include "base/debug/debugger.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/time/time.h"
 #include "base/time/time_override.h"

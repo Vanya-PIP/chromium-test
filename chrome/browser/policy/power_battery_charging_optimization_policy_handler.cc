@@ -5,7 +5,7 @@
 #include "chrome/browser/policy/power_battery_charging_optimization_policy_handler.h"
 
 #include "ash/constants/ash_pref_names.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/values.h"
 #include "chromeos/dbus/power/power_policy_controller.h"

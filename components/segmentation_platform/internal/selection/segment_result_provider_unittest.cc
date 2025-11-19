@@ -4,7 +4,7 @@
 
 #include "components/segmentation_platform/internal/selection/segment_result_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/test/gmock_callback_support.h"
 #include "base/test/simple_test_clock.h"

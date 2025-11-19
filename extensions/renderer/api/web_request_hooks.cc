@@ -4,7 +4,7 @@
 
 #include "extensions/renderer/api/web_request_hooks.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "content/public/renderer/v8_value_converter.h"
 #include "extensions/common/api/web_request.h"

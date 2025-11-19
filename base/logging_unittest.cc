@@ -7,7 +7,7 @@
 #pragma allow_unsafe_buffers
 #endif
 
-#include "base/logging.h"
+#include "base/test"
 
 #include <sstream>
 #include <string>
@@ -734,7 +734,7 @@ TEST_F(LoggingTest, NestedLogAssertHandlers) {
 
 // Test that defining an operator<< for a type in a namespace doesn't prevent
 // other code in that namespace from calling the operator<<(ostream, wstring)
-// defined by logging.h. This can fail if operator<<(ostream, wstring) can't be
+// defined by test. This can fail if operator<<(ostream, wstring) can't be
 // found by ADL, since defining another operator<< prevents name lookup from
 // looking in the global namespace.
 namespace nested_test {
@@ -889,7 +889,7 @@ TEST_F(LoggingTest, String16) {
 // Tests that we don't VLOG from logging_unittest except when in the scope
 // of the ScopedVmoduleSwitches.
 TEST_F(LoggingTest, ScopedVmoduleSwitches) {
-  // Some builds don't have runtime vlogging. See base/logging.h.
+  // Some builds don't have runtime vlogging. See base/test.
   if (!VLOG_IS_ON(0)) {
     GTEST_SKIP();
   }

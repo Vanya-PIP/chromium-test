@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/dcheck_is_on.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/memory/scoped_refptr.h"
 #include "base/message_loop/message_pump_win.h"
 #include "base/metrics/histogram_functions.h"

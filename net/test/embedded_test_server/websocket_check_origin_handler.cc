@@ -4,7 +4,7 @@
 
 #include "net/test/embedded_test_server/websocket_check_origin_handler.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace net::test_server {
 

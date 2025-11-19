@@ -7,7 +7,7 @@
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_WIN)
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 
 // Needed for GetComputerNameExW/ComputerNameDnsFullyQualified.

@@ -48,7 +48,7 @@
 #include "chrome/browser/web_applications/web_contents/web_app_data_retriever.h"
 #include "chrome/common/chrome_features.h"
 #include "components/webapps/browser/install_result_code.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/browser/web_contents/web_app_url_loader.h"
 #include "components/webapps/common/web_app_id.h"

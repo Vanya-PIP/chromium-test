@@ -9,7 +9,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/system/sys_info.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

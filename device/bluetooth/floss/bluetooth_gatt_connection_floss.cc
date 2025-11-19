@@ -5,7 +5,7 @@
 #include "device/bluetooth/floss/bluetooth_gatt_connection_floss.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "device/bluetooth/bluetooth_adapter.h"
 #include "device/bluetooth/bluetooth_device.h"
 #include "device/bluetooth/floss/floss_dbus_manager.h"

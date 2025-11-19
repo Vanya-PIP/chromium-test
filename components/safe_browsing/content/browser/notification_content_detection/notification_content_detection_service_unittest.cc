@@ -212,7 +212,7 @@ TEST_P(NotificationContentDetectionServiceTest,
           notification_data, GURL(kNonAllowlistedUrl),
           /*is_allowlisted_by_user=*/false, model_verdict_callback_.Get());
 
-  // Check that histograms logging happens as expected.
+  // Check that histograms testappens as expected.
   histogram_tester().ExpectTotalCount(kAllowlistCheckLatencyHistogram, 1);
 }
 
@@ -235,7 +235,7 @@ TEST_P(NotificationContentDetectionServiceTest,
           notification_data, GURL(kAllowlistedUrl),
           /*is_allowlisted_by_user=*/false, model_verdict_callback_.Get());
 
-  // Check that histograms logging happens as expected.
+  // Check that histograms testappens as expected.
   histogram_tester().ExpectTotalCount(kAllowlistCheckLatencyHistogram, 1);
 }
 

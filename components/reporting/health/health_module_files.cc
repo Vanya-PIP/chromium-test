@@ -12,7 +12,7 @@
 #include "base/files/file.h"
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"

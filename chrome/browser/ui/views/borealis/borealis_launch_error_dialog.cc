@@ -8,7 +8,7 @@
 #include "ash/public/cpp/window_properties.h"
 #include "ash/webui/settings/public/constants/routes.mojom.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/borealis/borealis_app_launcher.h"
 #include "chrome/browser/ash/borealis/borealis_features.h"
 #include "chrome/browser/ash/borealis/borealis_metrics.h"

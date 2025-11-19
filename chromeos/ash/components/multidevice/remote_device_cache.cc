@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/multidevice/remote_device_cache.h"
 
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash::multidevice {
 

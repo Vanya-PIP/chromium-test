@@ -17,7 +17,7 @@
 #include <cstring>
 
 #include "partition_alloc/partition_alloc_base/check.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 
 // This is a simplified version of base::mac. Because
 // "base/strings/string_split.h" is unavailable, only provide access to the

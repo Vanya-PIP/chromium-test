@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/skia/include/core/SkColor.h"
 #include "ui/color/color_id.h"
 #include "ui/color/color_mixer.h"

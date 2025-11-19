@@ -5,7 +5,7 @@
 #include <memory>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/base/cast_features.h"
 #include "chromecast/public/cast_media_shlib.h"
 #include "chromecast/public/media/media_capabilities_shlib.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/browser/enterprise/connectors/reporting/telomere_event_router.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "chrome/browser/enterprise/connectors/reporting/telomere_reporting_context.h"
 #include "chrome/browser/profiles/profile.h"

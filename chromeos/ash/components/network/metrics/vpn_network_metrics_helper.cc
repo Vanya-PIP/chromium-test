@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/network/metrics/vpn_network_metrics_helper.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "chromeos/ash/components/network/metrics/network_metrics_helper.h"

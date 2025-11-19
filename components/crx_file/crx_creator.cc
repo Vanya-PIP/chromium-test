@@ -6,7 +6,7 @@
 
 #include "base/files/file.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_view_util.h"

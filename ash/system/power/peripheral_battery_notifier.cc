@@ -17,7 +17,7 @@
 #include "ash/strings/grit/ash_strings.h"
 #include "ash/system/model/system_tray_model.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/utf_string_conversions.h"

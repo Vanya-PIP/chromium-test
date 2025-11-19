@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "crypto/sha2.h"
 #include "net/cert/merkle_tree_leaf.h"

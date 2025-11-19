@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/sync/engine/commit_contribution.h"
 #include "components/sync/engine/commit_contributor.h"

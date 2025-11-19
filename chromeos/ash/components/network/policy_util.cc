@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/values.h"
 #include "chromeos/ash/components/network/network_event_log.h"

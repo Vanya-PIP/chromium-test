@@ -20,7 +20,7 @@
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/path_service.h"
 #include "base/posix/eintr_wrapper.h"
@@ -86,7 +86,7 @@
 #include "base/files/scoped_temp_dir.h"
 #include "base/fuchsia/file_utils.h"
 #include "base/fuchsia/filtered_service_directory.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/test/bind.h"
 #endif

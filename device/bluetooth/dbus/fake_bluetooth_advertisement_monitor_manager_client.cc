@@ -5,7 +5,7 @@
 #include "device/bluetooth/dbus/fake_bluetooth_advertisement_monitor_manager_client.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/observer_list.h"
 #include "third_party/cros_system_api/dbus/service_constants.h"

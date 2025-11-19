@@ -4,7 +4,7 @@
 
 #include "components/autofill/core/browser/webdata/addresses/autofill_profile_sync_difference_tracker.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "components/autofill/core/browser/data_model/addresses/autofill_profile.h"
 #include "components/autofill/core/browser/data_model/addresses/autofill_profile_comparator.h"

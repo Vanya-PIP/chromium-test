@@ -8,7 +8,7 @@
 
 #include <sstream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_math.h"
 #include "ipc/param_traits_utils.h"
 

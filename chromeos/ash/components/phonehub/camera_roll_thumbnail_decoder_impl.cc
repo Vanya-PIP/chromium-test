@@ -8,7 +8,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/memory/weak_ptr.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/camera_roll_item.h"
 #include "chromeos/ash/components/phonehub/proto/phonehub_api.pb.h"
 #include "services/data_decoder/public/cpp/decode_image.h"

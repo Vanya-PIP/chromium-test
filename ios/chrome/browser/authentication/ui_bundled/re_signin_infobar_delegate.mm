@@ -9,7 +9,7 @@
 #import <memory>
 #import <utility>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/ptr_util.h"
 #import "components/infobars/core/infobar_manager.h"
 #import "components/signin/public/base/signin_metrics.h"

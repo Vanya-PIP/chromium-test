@@ -9,7 +9,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "dbus/bus.h"
 #include "dbus/property.h"

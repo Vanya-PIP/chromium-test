@@ -8,7 +8,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/system/sys_info.h"
 
 namespace apps {

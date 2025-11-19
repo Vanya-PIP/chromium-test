@@ -13,7 +13,7 @@
 #include "base/functional/bind.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/utf_string_conversions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/notification.h"
 #include "chromeos/ash/components/phonehub/pref_names.h"
 #include "chromeos/ash/components/phonehub/proto/phonehub_api.pb.h"

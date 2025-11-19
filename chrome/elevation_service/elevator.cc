@@ -15,7 +15,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/process/process.h"

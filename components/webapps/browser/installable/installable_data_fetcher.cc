@@ -5,7 +5,7 @@
 #include "components/webapps/browser/installable/installable_data_fetcher.h"
 
 #include "base/functional/callback.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/common/constants.h"
 #include "content/public/browser/manifest_icon_downloader.h"

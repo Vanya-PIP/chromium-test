@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/containers/unique_ptr_adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/task_environment.h"
 #include "base/time/time.h"
 #include "base/unguessable_token.h"

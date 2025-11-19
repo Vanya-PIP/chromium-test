@@ -6,7 +6,7 @@
 
 #include "ash/constants/ash_pref_names.h"
 #include "base/json/values_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/values.h"
 #include "components/prefs/pref_registry_simple.h"

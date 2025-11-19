@@ -27,7 +27,7 @@
 #include "base/compiler_specific.h"
 #include "base/feature_list.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/notreached.h"

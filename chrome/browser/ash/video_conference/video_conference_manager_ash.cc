@@ -19,7 +19,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/unguessable_token.h"
 #include "chrome/browser/ash/video_conference/video_conference_client_wrapper.h"
 #include "chrome/browser/profiles/profile_manager.h"

@@ -6,7 +6,7 @@
 
 #include <appmenu-client-protocol.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"
 
 namespace ui {

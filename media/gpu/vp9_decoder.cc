@@ -8,7 +8,7 @@
 
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "media/base/limits.h"
 #include "media/base/media_switches.h"

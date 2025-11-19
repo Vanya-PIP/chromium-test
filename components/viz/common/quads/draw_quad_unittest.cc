@@ -11,7 +11,7 @@
 #include <tuple>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/unguessable_token.h"
 #include "cc/base/math_util.h"
 #include "cc/paint/filter_operations.h"

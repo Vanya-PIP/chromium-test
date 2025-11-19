@@ -27,7 +27,7 @@
 #include "ash/webui/diagnostics_ui/mojom/input_data_provider.mojom.h"
 #include "ash/wm/tablet_mode/tablet_mode_controller.h"
 #include "ash/wm/window_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "chromeos/dbus/power/power_manager_client.h"

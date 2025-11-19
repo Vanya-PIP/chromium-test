@@ -9,7 +9,7 @@
 #include "base/bits.h"
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/strings/stringprintf.h"
 #include "base/threading/platform_thread.h"

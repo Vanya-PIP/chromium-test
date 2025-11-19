@@ -27,7 +27,7 @@
 #include <xcb/xcb.h>
 #include <xcb/xcbext.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "ui/gfx/x/connection.h"
 #include "ui/gfx/x/xproto_internal.h"

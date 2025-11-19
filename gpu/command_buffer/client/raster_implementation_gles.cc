@@ -13,7 +13,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "cc/paint/decode_stashing_image_provider.h"
 #include "cc/paint/display_item_list.h"  // nogncheck
 #include "cc/paint/paint_op_buffer_serializer.h"

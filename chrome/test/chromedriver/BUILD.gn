@@ -330,7 +330,7 @@ source_set("lib") {
     "key_converter.h",
     "keycode_text_conversion.h",
     "logging.cc",
-    "logging.h",
+    "test",
     "performance_logger.cc",
     "performance_logger.h",
     "prompt_behavior.cc",

@@ -8,7 +8,7 @@
 #include <optional>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/time/clock.h"
 #include "base/time/time.h"

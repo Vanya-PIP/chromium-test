@@ -17,7 +17,7 @@
 #include "base/memory/ptr_util.h"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_functions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/thread_pool.h"
 #include "base/time/time.h"
 #include "base/values.h"

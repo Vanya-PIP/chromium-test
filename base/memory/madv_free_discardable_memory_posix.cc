@@ -19,7 +19,7 @@
 
 #include "base/bits.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/asan_interface.h"
 #include "base/memory/madv_free_discardable_memory_allocator_posix.h"
 #include "base/memory/page_size.h"

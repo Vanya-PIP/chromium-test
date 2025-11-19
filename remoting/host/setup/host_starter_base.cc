@@ -12,7 +12,7 @@
 #include "base/functional/callback.h"
 #include "base/i18n/icu_string_conversions.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/weak_ptr.h"
 #include "base/strings/string_split.h"

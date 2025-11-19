@@ -29,7 +29,7 @@
 #include "base/android/jni_android.h"
 #include "base/android/jni_array.h"
 #include "base/android/jni_string.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/paint_preview/android/jni_headers/PaintPreviewTabService_jni.h"
 #endif  // BUILDFLAG(IS_ANDROID)
 

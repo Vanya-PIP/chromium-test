@@ -26,7 +26,7 @@
 #include "base/feature_list.h"
 #include "base/files/file_util.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "base/no_destructor.h"
 #include "base/notreached.h"

@@ -6,7 +6,7 @@
 
 #include "base/memory/ptr_util.h"
 #include "base/time/clock.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
 

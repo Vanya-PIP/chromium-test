@@ -8,7 +8,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "components/feed/core/proto/v2/packing.pb.h"
 #include "components/feed/core/proto/v2/wire/chrome_feed_response_metadata.pb.h"

@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"
 #include "components/dom_distiller/core/dom_distiller_features.h"

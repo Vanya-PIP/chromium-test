@@ -14,7 +14,7 @@
 #import "base/barrier_closure.h"
 #import "base/check.h"
 #import "base/check_op.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/weak_ptr.h"
 #import "base/strings/string_util.h"
 #import "base/strings/sys_string_conversions.h"

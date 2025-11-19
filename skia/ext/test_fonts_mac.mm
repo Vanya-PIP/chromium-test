@@ -10,7 +10,7 @@
 #include "base/apple/bridging.h"
 #include "base/apple/foundation_util.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace skia {
 

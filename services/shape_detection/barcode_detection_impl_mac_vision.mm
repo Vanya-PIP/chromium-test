@@ -12,7 +12,7 @@
 #include "base/containers/flat_set.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #include "third_party/skia/include/core/SkBitmap.h"
 

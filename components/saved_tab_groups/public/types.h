@@ -8,7 +8,7 @@
 #include <optional>
 #include <variant>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/token.h"
 #include "base/uuid.h"
 #include "build/build_config.h"

@@ -5,7 +5,7 @@
 #include "chrome/browser/enterprise/watermark/watermark_style_policy_handler.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/expected_macros.h"
 #include "base/values.h"
 #include "components/enterprise/connectors/core/connectors_prefs.h"

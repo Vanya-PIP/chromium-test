@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/settings/ui_bundled/content_settings/block_popups_table_view_controller.h"
 
 #import "base/apple/foundation_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/raw_ptr.h"
 #import "base/strings/sys_string_conversions.h"
 #import "base/values.h"

@@ -15,7 +15,7 @@
 
 #include "base/gtest_prod_util.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/ref_counted.h"
 #include "base/thread_annotations.h"
@@ -29,7 +29,7 @@
 #include "media/base/pipeline_status.h"
 
 #if BUILDFLAG(IS_APPLE)
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #endif  // BUILDFLAG(IS_APPLE)
 
 namespace media {

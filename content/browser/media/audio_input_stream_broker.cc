@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/trace_event/trace_event.h"
 #include "build/build_config.h"
@@ -19,7 +19,7 @@
 #include "content/browser/media/media_internals.h"
 #include "content/public/browser/browser_task_traits.h"
 #include "content/public/browser/browser_thread.h"
-#include "media/audio/audio_logging.h"
+#include "media/audio/audio_test"
 #include "media/base/media_switches.h"
 #include "media/mojo/mojom/audio_processing.mojom.h"
 

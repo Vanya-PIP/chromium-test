@@ -5,7 +5,7 @@
 #ifndef REMOTING_BASE_LOGGING_H_
 #define REMOTING_BASE_LOGGING_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_WIN)

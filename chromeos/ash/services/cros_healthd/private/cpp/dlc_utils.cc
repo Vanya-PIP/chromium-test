@@ -5,7 +5,7 @@
 #include "chromeos/ash/services/cros_healthd/private/cpp/dlc_utils.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/dbus/dlcservice/dlcservice_client.h"
 
 namespace ash::cros_healthd::internal {

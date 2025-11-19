@@ -11,7 +11,7 @@
 
 #include "base/files/file_path.h"
 #include "base/json/json_string_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/clock.h"
 #include "base/time/time.h"
 #include "base/values.h"

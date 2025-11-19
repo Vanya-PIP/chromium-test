@@ -25,7 +25,7 @@
 #include "chrome/browser/ash/login/oobe_quick_start/second_device_auth_broker.h"
 #include "chrome/browser/ash/nearby/quick_start_connectivity_service.h"
 #include "chrome/browser/browser_process.h"
-#include "chromeos/ash/components/quick_start/logging.h"
+#include "chromeos/ash/components/quick_start/test"
 #include "chromeos/ash/components/quick_start/quick_start_metrics.h"
 #include "chromeos/ash/components/quick_start/types.h"
 #include "chromeos/ash/services/nearby/public/mojom/quick_start_decoder_types.mojom.h"

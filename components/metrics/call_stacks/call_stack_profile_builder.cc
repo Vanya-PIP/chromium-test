@@ -15,7 +15,7 @@
 #include "base/check.h"
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/metrics_hashes.h"
 #include "base/no_destructor.h"
 #include "base/time/time.h"

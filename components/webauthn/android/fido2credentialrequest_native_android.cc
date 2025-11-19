@@ -14,7 +14,7 @@
 #include "base/check.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "components/webauthn/json/value_conversions.h"
 #include "third_party/blink/public/mojom/webauthn/authenticator.mojom.h"

@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/strings/string_util.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/values.h"
 #include "build/build_config.h"
 #include "chrome/browser/spellchecker/spellcheck_service.h"

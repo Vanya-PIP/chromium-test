@@ -10,7 +10,7 @@
 #include "ash/shell.h"
 #include "base/values.h"
 #include "chromeos/ash/services/bluetooth_config/public/cpp/device_image_info.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
 #include "components/prefs/scoped_user_pref_update.h"

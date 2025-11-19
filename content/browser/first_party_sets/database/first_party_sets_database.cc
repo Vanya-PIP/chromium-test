@@ -15,7 +15,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/sequence_checker.h"
 #include "base/version.h"

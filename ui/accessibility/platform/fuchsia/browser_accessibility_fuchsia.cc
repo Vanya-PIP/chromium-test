@@ -4,7 +4,7 @@
 
 #include "ui/accessibility/platform/fuchsia/browser_accessibility_fuchsia.h"
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "ui/accessibility/ax_enums.mojom.h"
 #include "ui/accessibility/platform/fuchsia/browser_accessibility_manager_fuchsia.h"
 #include "ui/accessibility/platform/fuchsia/accessibility_bridge_fuchsia_registry.h"

@@ -7,7 +7,7 @@
 #include <string>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "net/base/registry_controlled_domains/registry_controlled_domain.h"
 #include "services/network/public/cpp/is_potentially_trustworthy.h"

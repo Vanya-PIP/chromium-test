@@ -8,7 +8,7 @@
 
 #include "base/command_line.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/win/win_util.h"
 #include "base/win/windows_version.h"
@@ -22,7 +22,7 @@
 #include "chrome/credential_provider/gaiacp/gaia_credential_provider_i.h"
 #include "chrome/credential_provider/gaiacp/gcp_crash_reporting.h"
 #include "chrome/credential_provider/gaiacp/grit/gaia_static_resources.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/mdm_utils.h"
 #include "chrome/credential_provider/gaiacp/reg_utils.h"
 #include "components/crash/core/app/crash_switches.h"

@@ -5,7 +5,7 @@
 // This is a "No Compile Test" suite.
 // https://dev.chromium.org/developers/testing/no-compile-tests
 
-#include "base/logging.h"
+#include "base/test"
 
 // LOG(FATAL) must be understood as [[noreturn]].
 int Foo() {

@@ -5,7 +5,7 @@
 #include "ash/ambient/ui/ambient_animation_resizer.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "ui/gfx/geometry/rect.h"
 #include "ui/gfx/geometry/size.h"

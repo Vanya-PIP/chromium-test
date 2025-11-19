@@ -18,7 +18,7 @@
 #include "content/public/browser/media_observer.h"
 #include "content/public/common/content_client.h"
 #include "media/audio/audio_device_description.h"
-#include "media/audio/audio_logging.h"
+#include "media/audio/audio_test"
 #include "media/mojo/mojom/audio_data_pipe.mojom.h"
 #include "media/mojo/mojom/audio_output_stream.mojom.h"
 

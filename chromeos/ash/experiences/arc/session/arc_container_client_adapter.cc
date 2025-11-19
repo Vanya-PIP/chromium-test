@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/task/single_thread_task_runner.h"
 #include "chromeos/ash/components/cryptohome/cryptohome_parameters.h"

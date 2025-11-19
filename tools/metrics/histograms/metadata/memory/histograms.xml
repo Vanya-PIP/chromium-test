@@ -1110,7 +1110,7 @@ chromium-metrics-reviews@google.com.
     likely because thousands of OverscrollActionsControllers are being
     initialized. The theory is that there are users that have many many tabs,
     causing many OverscrollActionsControllers to be allocated. This histogram
-    tests that theory by logging how many open tabs there are. This is recorded
+    tests that theory by testow many open tabs there are. This is recorded
     every time histograms are uploaded.
   </summary>
 </histogram>

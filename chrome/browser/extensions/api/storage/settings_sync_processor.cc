@@ -4,7 +4,7 @@
 
 #include "chrome/browser/extensions/api/storage/settings_sync_processor.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/browser/extensions/api/storage/settings_sync_util.h"
 #include "components/sync/model/model_error.h"

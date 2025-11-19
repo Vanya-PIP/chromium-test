@@ -6,7 +6,7 @@
 #include <set>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/memory/scoped_refptr.h"
 #include "ui/gfx/codec/png_codec.h"

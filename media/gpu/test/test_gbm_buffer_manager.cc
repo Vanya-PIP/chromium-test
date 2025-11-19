@@ -18,7 +18,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/trace_event/memory_allocator_dump_guid.h"

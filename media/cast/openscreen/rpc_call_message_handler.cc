@@ -5,7 +5,7 @@
 #include "media/cast/openscreen/rpc_call_message_handler.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/demuxer_stream.h"
 #include "media/cast/openscreen/remoting_proto_enum_utils.h"
 #include "media/cast/openscreen/remoting_proto_utils.h"

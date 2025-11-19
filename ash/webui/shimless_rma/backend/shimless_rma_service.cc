@@ -23,7 +23,7 @@
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"
 #include "chromeos/ash/components/dbus/rmad/rmad.pb.h"

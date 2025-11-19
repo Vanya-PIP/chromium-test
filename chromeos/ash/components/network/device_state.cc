@@ -8,7 +8,7 @@
 #include <string>
 
 #include "ash/constants/ash_features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/values.h"
 #include "chromeos/ash/components/network/network_event_log.h"

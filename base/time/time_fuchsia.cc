@@ -9,7 +9,7 @@
 #include <zircon/threads.h>
 
 #include "base/check_op.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/time/time_override.h"
 
 namespace base {

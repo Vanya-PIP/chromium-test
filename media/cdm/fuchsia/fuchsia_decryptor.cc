@@ -5,7 +5,7 @@
 #include "media/cdm/fuchsia/fuchsia_decryptor.h"
 
 #include "base/check.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/location.h"
 #include "base/not_fatal_until.h"
 #include "base/notreached.h"

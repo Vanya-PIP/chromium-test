@@ -8,7 +8,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "third_party/skia/include/core/SkBitmap.h"
 #include "third_party/webrtc/modules/desktop_capture/desktop_frame.h"

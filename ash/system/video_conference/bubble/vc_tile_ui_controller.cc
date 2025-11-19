@@ -15,7 +15,7 @@
 #include "ash/system/video_conference/video_conference_utils.h"
 #include "base/barrier_callback.h"
 #include "base/containers/flat_set.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/utf_string_conversions.h"
 #include "chromeos/ash/components/dbus/dlcservice/dlcservice.pb.h"

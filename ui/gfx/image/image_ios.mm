@@ -10,7 +10,7 @@
 #include <cmath>
 #include <limits>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/resource/resource_scale_factor.h"
 #include "ui/gfx/geometry/size.h"
 #include "ui/gfx/image/image_internal.h"

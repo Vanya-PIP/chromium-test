@@ -4,7 +4,7 @@
 
 #include "components/payments/content/browser_binding/browser_bound_key_deleter_factory.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/no_destructor.h"
 #include "build/build_config.h"

@@ -6,7 +6,7 @@
 
 #include <ostream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gfx/win/window_impl.h"
 
 namespace ui {

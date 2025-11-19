@@ -8,7 +8,7 @@
 #include <string>
 
 #include "base/base_export.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_IOS)

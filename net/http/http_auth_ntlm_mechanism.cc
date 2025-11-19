@@ -8,7 +8,7 @@
 
 #include "base/base64.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "base/time/time.h"
 #include "net/base/net_errors.h"

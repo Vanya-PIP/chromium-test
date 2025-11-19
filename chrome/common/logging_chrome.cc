@@ -47,7 +47,7 @@
 
 #include "base/logging_win.h"
 #include "base/process/process_info.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/win/scoped_handle.h"
 #include "base/win/windows_handle_util.h"
 #include "chrome/common/win/eventlog_messages.h"
@@ -188,7 +188,7 @@ LoggingDestination LoggingDestFromCommandLine(
     }
 #endif  // BUILDFLAG(IS_WIN)
     if (logging_destination != "") {
-      // The browser process should not be called with --enable-logging=handle.
+      // The browser process should not be called with --enable-testandle.
       LOG(ERROR) << "Invalid logging destination: " << logging_destination;
       return kDefaultLoggingMode;
     }

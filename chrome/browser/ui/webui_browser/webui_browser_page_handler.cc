@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "chrome/browser/devtools/devtools_window.h"
 #include "chrome/browser/ui/browser.h"

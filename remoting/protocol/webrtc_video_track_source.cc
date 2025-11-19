@@ -7,9 +7,9 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/protocol/webrtc_video_frame_adapter.h"
 #include "third_party/webrtc/api/video/video_frame.h"
 

@@ -23,7 +23,7 @@
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/browser_tabs_model_provider.h"
 #include "chromeos/ash/components/phonehub/connection_scheduler.h"
 #include "chromeos/ash/components/phonehub/phone_hub_manager.h"

@@ -12,7 +12,7 @@
 #include "base/compiler_specific.h"
 #include "base/win/ntsecapi_shim.h"
 #include "chrome/credential_provider/gaiacp/gcp_utils.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 
 namespace credential_provider {
 

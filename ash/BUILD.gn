@@ -1947,7 +1947,7 @@ component("ash") {
     "system/input_device_settings/input_device_settings_dispatcher.cc",
     "system/input_device_settings/input_device_settings_dispatcher.h",
     "system/input_device_settings/input_device_settings_logging.cc",
-    "system/input_device_settings/input_device_settings_logging.h",
+    "system/input_device_settings/input_device_settings_test",
     "system/input_device_settings/input_device_settings_metadata.cc",
     "system/input_device_settings/input_device_settings_metadata.h",
     "system/input_device_settings/input_device_settings_metadata_manager.cc",

@@ -8,7 +8,7 @@
 #include "ash/root_window_controller.h"
 #include "ash/shell.h"
 #include "ash/system/eche/eche_tray.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash {
 

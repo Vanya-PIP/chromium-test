@@ -7,7 +7,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"

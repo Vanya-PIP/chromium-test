@@ -4,7 +4,7 @@
 
 #include "services/device/time_zone_monitor/time_zone_monitor.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/trace_event/trace_event.h"
 #include "third_party/icu/source/common/unicode/unistr.h"

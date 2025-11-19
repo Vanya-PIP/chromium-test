@@ -13,7 +13,7 @@
 #include "base/check_op.h"
 #include "base/containers/span.h"
 #include "base/containers/span_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/numerics/byte_conversions.h"

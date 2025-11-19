@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/cert/asn1_util.h"
 #include "net/cert/x509_certificate.h"
 #include "net/cert/x509_util.h"

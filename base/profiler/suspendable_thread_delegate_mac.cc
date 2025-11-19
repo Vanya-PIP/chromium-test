@@ -15,7 +15,7 @@
 
 #include <vector>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/check.h"
 #include "base/profiler/profile_builder.h"
 #include "base/profiler/register_context_registers.h"

@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/audio/cros_audio_config_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "base/timer/timer.h"

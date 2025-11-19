@@ -6,7 +6,7 @@
 
 #include "chrome/browser/ash/nearby/presence/credential_storage/metrics/credential_storage_metrics.h"
 #include "chrome/browser/profiles/profile.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "content/public/browser/storage_partition.h"
 
 namespace ash::nearby::presence {

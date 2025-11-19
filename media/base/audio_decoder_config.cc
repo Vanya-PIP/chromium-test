@@ -4,7 +4,7 @@
 
 #include "media/base/audio_decoder_config.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/to_string.h"
 #include "media/base/limits.h"
 #include "media/base/media_util.h"

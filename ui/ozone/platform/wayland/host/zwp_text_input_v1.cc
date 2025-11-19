@@ -14,7 +14,7 @@
 #include "base/check.h"
 #include "base/files/file_util.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_split.h"

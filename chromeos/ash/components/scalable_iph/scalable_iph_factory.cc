@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/scalable_iph/scalable_iph_factory.h"
 
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/browser_context_helper/browser_context_helper.h"
 #include "components/keyed_service/content/browser_context_dependency_manager.h"
 

@@ -16,7 +16,7 @@
 #include <emi.h>
 #include <setupapi.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/memory/ptr_util.h"
 #include "base/threading/scoped_blocking_call.h"

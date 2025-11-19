@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "base/run_loop.h"
 #include "codelabs/mojo_examples/mojom/interface.mojom.h"

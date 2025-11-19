@@ -18,7 +18,7 @@
 #include "base/bits.h"
 #include "base/containers/contains.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"

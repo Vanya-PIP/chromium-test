@@ -6,7 +6,7 @@
 
 #include <functional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/task/thread_pool.h"
 #include "components/database_utils/url_converter.h"

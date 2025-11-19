@@ -16,7 +16,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/process/process.h"
@@ -36,7 +36,7 @@
 #include "remoting/base/auto_thread.h"
 #include "remoting/base/auto_thread_task_runner.h"
 #include "remoting/base/crash/crash_reporting_breakpad.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/scoped_sc_handle_win.h"
 #include "remoting/host/base/host_exit_codes.h"
 #include "remoting/host/base/screen_resolution.h"
@@ -120,7 +120,7 @@ class DaemonProcessWin : public DaemonProcess {
       int session_id,
       mojo::ScopedMessagePipeHandle desktop_pipe) override;
 
-  // If event logging has been configured, creates an ETW trace consumer which
+  // If event testas been configured, creates an ETW trace consumer which
   // listens for logged events from our host processes.  Tracing stops when
   // |etw_trace_consumer_| is destroyed.  Logging destinations are configured
   // via the registry.
@@ -542,7 +542,7 @@ void DaemonProcessWin::ConfigureHostLogging() {
 
   std::vector<std::unique_ptr<HostEventLogger>> loggers;
 
-  // Check to see if file logging has been enabled.
+  // Check to see if file testas been enabled.
   if (logging_reg_key.HasValue(kLogToFileRegistryValue)) {
     DWORD enabled = 0;
     result = logging_reg_key.ReadValueDW(kLogToFileRegistryValue, &enabled);
@@ -558,7 +558,7 @@ void DaemonProcessWin::ConfigureHostLogging() {
     }
   }
 
-  // Check to see if Windows event logging has been enabled.
+  // Check to see if Windows event testas been enabled.
   if (logging_reg_key.HasValue(kLogToEventLogRegistryValue)) {
     DWORD enabled = 0;
     result = logging_reg_key.ReadValueDW(kLogToEventLogRegistryValue, &enabled);

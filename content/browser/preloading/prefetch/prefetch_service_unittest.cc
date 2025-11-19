@@ -8,7 +8,7 @@
 #include <string_view>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/run_loop.h"
 #include "base/strings/string_number_conversions.h"

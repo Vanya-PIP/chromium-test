@@ -10,9 +10,9 @@
 #include <cstdint>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_cftyperef.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/scoped_ioobject.h"
 #include "base/memory/ptr_util.h"
 #include "base/time/time.h"

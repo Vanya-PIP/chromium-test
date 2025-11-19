@@ -4,7 +4,7 @@
 
 #include "chromecast/graphics/gestures/cast_system_gesture_dispatcher.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/default_tick_clock.h"
 
 namespace chromecast {

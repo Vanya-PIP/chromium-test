@@ -32,7 +32,7 @@
 #include "base/files/dir_reader_posix.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/process/environment_internal.h"
 #include "base/process/process.h"

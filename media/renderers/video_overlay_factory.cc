@@ -4,7 +4,7 @@
 
 #include "media/renderers/video_overlay_factory.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "media/base/video_frame.h"
 #include "ui/gfx/geometry/size.h"

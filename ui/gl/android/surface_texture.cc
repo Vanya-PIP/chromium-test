@@ -9,7 +9,7 @@
 #include "base/android/jni_android.h"
 #include "base/check.h"
 #include "base/compiler_specific.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "ui/gl/android/scoped_a_native_window.h"
 #include "ui/gl/android/scoped_java_surface.h"
 #include "ui/gl/android/surface_texture_listener.h"

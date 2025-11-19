@@ -6,7 +6,7 @@
 
 #include <signal.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 #if BUILDFLAG(USE_SECCOMP_BPF)
 #include "base/android/android_info.h"

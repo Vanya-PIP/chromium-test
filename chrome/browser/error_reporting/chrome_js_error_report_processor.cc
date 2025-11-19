@@ -12,7 +12,7 @@
 
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/escape.h"
 #include "base/strings/strcat.h"

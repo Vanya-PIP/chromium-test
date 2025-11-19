@@ -8,7 +8,7 @@
 #include <sstream>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash::quick_start {
 

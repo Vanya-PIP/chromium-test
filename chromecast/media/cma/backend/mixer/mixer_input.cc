@@ -17,7 +17,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/audio/audio_fader.h"
 #include "chromecast/media/audio/audio_log.h"
 #include "chromecast/media/audio/interleaved_channel_mixer.h"

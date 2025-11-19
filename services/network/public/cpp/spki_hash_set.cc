@@ -5,7 +5,7 @@
 #include "services/network/public/cpp/spki_hash_set.h"
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/hash_value.h"
 
 namespace network {

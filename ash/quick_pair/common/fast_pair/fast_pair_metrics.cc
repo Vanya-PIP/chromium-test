@@ -10,7 +10,7 @@
 #include "base/metrics/histogram_macros.h"
 #include "base/metrics/sparse_histogram.h"
 #include "base/strings/string_number_conversions.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/metrics/structured/structured_events.h"
 #include "components/metrics/structured/structured_metrics_client.h"
 

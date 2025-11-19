@@ -11,7 +11,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/memory/singleton.h"
 #include "base/metrics/histogram_functions.h"

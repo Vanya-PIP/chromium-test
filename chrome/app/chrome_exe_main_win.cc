@@ -23,7 +23,7 @@
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/memory.h"
 #include "base/process/process.h"
 #include "base/strings/string_number_conversions.h"

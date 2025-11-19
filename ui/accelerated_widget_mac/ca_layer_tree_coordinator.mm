@@ -6,7 +6,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/trace_event/trace_event.h"

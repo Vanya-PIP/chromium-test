@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "gpu/command_buffer/service/shared_image/shared_image_copy_strategy.h"
 
 namespace gpu {

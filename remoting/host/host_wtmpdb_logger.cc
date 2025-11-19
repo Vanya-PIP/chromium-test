@@ -14,7 +14,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/strings/string_number_conversions.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/host_status_monitor.h"
 #include "sql/database.h"
 #include "sql/statement.h"

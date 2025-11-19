@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notimplemented.h"
 #include "base/synchronization/waitable_event.h"

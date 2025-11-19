@@ -15,7 +15,7 @@
 
 #include "base/base_export.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/values.h"
 

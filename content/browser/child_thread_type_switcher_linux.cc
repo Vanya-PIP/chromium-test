@@ -5,7 +5,7 @@
 #include "content/browser/child_thread_type_switcher_linux.h"
 
 #include "base/linux_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_handle.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/threading/platform_thread.h"

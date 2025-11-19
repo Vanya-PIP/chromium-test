@@ -11,7 +11,7 @@
 #include <string_view>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/audio_bus.h"
 
 struct Environment {

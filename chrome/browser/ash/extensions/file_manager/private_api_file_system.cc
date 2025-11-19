@@ -24,7 +24,7 @@
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/posix/eintr_wrapper.h"

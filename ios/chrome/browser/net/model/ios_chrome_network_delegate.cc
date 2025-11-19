@@ -13,7 +13,7 @@
 #include "base/base_paths.h"
 #include "base/debug/alias.h"
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram.h"
 #include "base/path_service.h"
 #include "ios/web/public/thread/web_task_traits.h"

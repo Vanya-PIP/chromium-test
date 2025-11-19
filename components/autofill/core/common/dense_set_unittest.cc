@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"

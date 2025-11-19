@@ -31,7 +31,7 @@
 #if BUILDFLAG(IS_CHROMEOS)
 #include "chrome/browser/web_applications/isolated_web_apps/commands/copy_bundle_to_cache_command.h"
 #include "chrome/browser/web_applications/isolated_web_apps/policy/isolated_web_app_cache_client.h"
-#include "components/webapps/isolated_web_apps/error/uma_logging.h"
+#include "components/webapps/isolated_web_apps/error/uma_test"
 #endif  // BUILDFLAG(IS_CHROMEOS)
 
 namespace web_app {

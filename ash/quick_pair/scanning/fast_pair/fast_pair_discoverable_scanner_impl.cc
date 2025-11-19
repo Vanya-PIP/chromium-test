@@ -26,7 +26,7 @@
 #include "chromeos/ash/components/network/network_state_handler.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process_manager.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth//bluetooth_adapter.h"
 #include "device/bluetooth/bluetooth_device.h"
 #include "device/bluetooth/floss/floss_features.h"

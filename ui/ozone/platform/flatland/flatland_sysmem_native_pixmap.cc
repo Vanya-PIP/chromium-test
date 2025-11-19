@@ -4,8 +4,8 @@
 
 #include "ui/ozone/platform/flatland/flatland_sysmem_native_pixmap.h"
 
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 #include "ui/gfx/geometry/rect_f.h"
 
 namespace ui {

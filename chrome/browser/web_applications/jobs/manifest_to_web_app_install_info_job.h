@@ -17,7 +17,7 @@
 #include "chrome/browser/web_applications/web_app_icon_operations.h"
 #include "chrome/browser/web_applications/web_app_install_info.h"
 #include "chrome/browser/web_applications/web_app_install_utils.h"
-#include "chrome/browser/web_applications/web_app_logging.h"
+#include "chrome/browser/web_applications/web_app_test"
 #include "chrome/browser/web_applications/web_contents/web_app_data_retriever.h"
 #include "third_party/blink/public/mojom/manifest/manifest.mojom.h"
 

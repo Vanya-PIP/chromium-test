@@ -17,7 +17,7 @@
 #include "ash/public/mojom/input_device_settings.mojom.h"
 #include "ash/shell.h"
 #include "ash/system/input_device_settings/input_device_settings_controller_impl.h"
-#include "ash/system/input_device_settings/input_device_settings_logging.h"
+#include "ash/system/input_device_settings/input_device_settings_test"
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/containers/fixed_flat_map.h"

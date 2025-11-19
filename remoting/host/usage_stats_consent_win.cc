@@ -8,7 +8,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat_win.h"
 #include "base/win/registry.h"
 
@@ -63,7 +63,7 @@ bool GetUsageStatsConsent(bool* allowed, bool* set_by_policy) {
     return true;
   }
 
-  // We do not log the error code here because the logging hasn't been
+  // We do not log the error code here because the testasn't been
   // initialized yet.
   return false;
 }

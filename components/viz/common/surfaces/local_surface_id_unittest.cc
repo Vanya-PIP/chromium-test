@@ -4,7 +4,7 @@
 
 #include "components/viz/common/surfaces/local_surface_id.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 
 // Verifying that Local_Surface_Id::ToString() prints its corresponding

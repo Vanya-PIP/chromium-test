@@ -10,7 +10,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/platform_shared_memory_region.h"
 #include "build/build_config.h"
 #include "mojo/buildflags.h"

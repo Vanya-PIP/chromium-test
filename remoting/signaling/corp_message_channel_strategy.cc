@@ -10,7 +10,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/base/http_status.h"
 #include "remoting/base/internal_headers.h"
 #include "remoting/base/scoped_protobuf_http_request.h"

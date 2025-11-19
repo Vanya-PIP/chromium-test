@@ -14,7 +14,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/browser/ash/net/rollback_network_config/rollback_onc_util.h"
 #include "chrome/browser/ash/policy/core/browser_policy_connector_ash.h"

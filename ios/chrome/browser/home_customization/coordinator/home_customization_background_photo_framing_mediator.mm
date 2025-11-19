@@ -10,7 +10,7 @@
 #import "base/files/file_util.h"
 #import "base/functional/bind.h"
 #import "base/functional/callback_forward.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/task/thread_pool.h"
 #import "base/threading/scoped_blocking_call.h"

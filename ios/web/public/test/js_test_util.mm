@@ -9,7 +9,7 @@
 #import "base/apple/bundle_locations.h"
 #import "base/check.h"
 #import "base/feature_list.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "base/test/ios/wait_util.h"
 #import "ios/web/common/features.h"

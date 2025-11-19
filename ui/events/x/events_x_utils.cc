@@ -11,7 +11,7 @@
 #include <cmath>
 #include <numeric>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/metrics/histogram_macros.h"
 #include "build/build_config.h"

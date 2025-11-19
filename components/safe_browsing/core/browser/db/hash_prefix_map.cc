@@ -7,7 +7,7 @@
 #include <optional>
 #include <string_view>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/files/file_util.h"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ref.h"

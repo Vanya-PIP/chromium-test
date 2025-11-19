@@ -28,7 +28,7 @@
 #include "base/strings/utf_string_conversions.h"
 #include "base/synchronization/lock.h"
 #include "base/time/time.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 
 namespace {
 // Key name containing the HTTP error code within the dictionary returned by the

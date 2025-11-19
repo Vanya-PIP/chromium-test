@@ -14,7 +14,7 @@
 #include <stddef.h>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/win/registry.h"
 #include "chrome/install_static/install_util.h"

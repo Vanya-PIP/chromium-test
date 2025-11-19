@@ -6,7 +6,7 @@
 #include "media/renderers/video_frame_rgba_to_yuva_converter.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/viz/common/gpu/raster_context_provider.h"
 #include "gpu/command_buffer/client/client_shared_image.h"
 #include "gpu/command_buffer/client/raster_interface.h"

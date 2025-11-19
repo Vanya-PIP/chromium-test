@@ -10,7 +10,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "chrome/browser/ash/login/quick_unlock/fake_pin_salt_storage.h"
 #include "chrome/browser/ash/login/quick_unlock/pin_backend.h"

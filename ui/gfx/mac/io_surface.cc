@@ -14,11 +14,11 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/bits.h"
 #include "base/command_line.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/trace_event/trace_event.h"

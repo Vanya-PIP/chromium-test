@@ -14,7 +14,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/power_monitor/cpu_frequency_utils.h"
 #include "base/system/sys_info.h"
 #include "base/timer/elapsed_timer.h"

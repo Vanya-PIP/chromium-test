@@ -6,7 +6,7 @@
 #include "ash/constants/ash_pref_names.h"
 #include "ash/public/cpp/schedule_enums.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/common/pref_names.h"
 #include "components/policy/core/browser/policy_error_map.h"

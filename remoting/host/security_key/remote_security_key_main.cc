@@ -17,7 +17,7 @@
 #include "build/build_config.h"
 #include "mojo/core/embedder/embedder.h"
 #include "mojo/core/embedder/scoped_ipc_support.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/base/host_exit_codes.h"
 #include "remoting/host/chromoting_host_services_client.h"
 #include "remoting/host/security_key/security_key_ipc_client.h"

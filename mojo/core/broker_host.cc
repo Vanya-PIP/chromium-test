@@ -14,7 +14,7 @@
 #include <string_view>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/platform_shared_memory_region.h"
 #include "base/memory/ref_counted.h"
 #include "base/task/single_thread_task_runner.h"

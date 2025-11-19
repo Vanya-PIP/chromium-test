@@ -8,7 +8,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace winhttp {
 

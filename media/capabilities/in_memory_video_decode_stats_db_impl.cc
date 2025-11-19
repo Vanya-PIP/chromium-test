@@ -10,7 +10,7 @@
 #include "base/files/file_path.h"
 #include "base/format_macros.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/sequence_checker.h"
 #include "base/task/bind_post_task.h"

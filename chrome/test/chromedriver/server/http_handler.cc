@@ -18,7 +18,7 @@
 #include "base/functional/callback_forward.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"  // For CHECK macros.
+#include "base/test"  // For CHECK macros.
 #include "base/memory/scoped_refptr.h"
 #include "base/notimplemented.h"
 #include "base/strings/strcat.h"

@@ -4,7 +4,7 @@
 
 #include "ui/views/controls/textarea/textarea.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/ime/text_edit_commands.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/events/event.h"

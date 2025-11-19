@@ -9,7 +9,7 @@
 #include <string>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "components/payments/content/browser_binding/browser_bound_key_metadata.h"
 #include "components/payments/core/secure_payment_confirmation_credential.h"

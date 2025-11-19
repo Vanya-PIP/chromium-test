@@ -5,7 +5,7 @@
 #include "ui/gl/vsync_thread_win.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/memory/stack_allocated.h"
 #include "base/notreached.h"

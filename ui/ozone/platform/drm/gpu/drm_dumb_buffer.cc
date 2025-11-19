@@ -7,7 +7,7 @@
 #include <drm_fourcc.h>
 #include <xf86drmMode.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "skia/ext/legacy_display_globals.h"
 #include "third_party/skia/include/core/SkSurface.h"
 #include "ui/ozone/platform/drm/gpu/drm_device.h"

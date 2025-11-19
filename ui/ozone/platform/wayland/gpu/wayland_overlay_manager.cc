@@ -6,7 +6,7 @@
 
 #include <variant>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/viz/common/resources/shared_image_format_utils.h"
 #include "ui/gfx/geometry/rect_conversions.h"
 #include "ui/gfx/geometry/rect_f.h"

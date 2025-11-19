@@ -15,7 +15,7 @@
 #include "base/files/file.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "chrome/updater/activity_impl_util_posix.h"
 

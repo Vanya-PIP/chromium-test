@@ -8,7 +8,7 @@
 #include "ash/constants/geolocation_access_level.h"
 #include "ash/system/privacy_hub/privacy_hub_controller.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "chrome/browser/ash/system/input_device_settings.h"
 #include "chrome/browser/browser_process.h"

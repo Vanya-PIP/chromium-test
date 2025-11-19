@@ -11,7 +11,7 @@
 #import "base/files/file_util.h"
 #import "base/functional/callback_helpers.h"
 #import "base/location.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/ptr_util.h"
 #import "base/path_service.h"
 #import "base/task/sequenced_task_runner.h"

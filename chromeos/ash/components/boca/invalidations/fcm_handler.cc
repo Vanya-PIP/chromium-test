@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chromeos/ash/components/boca/boca_metrics_util.h"
 #include "components/gcm_driver/gcm_driver.h"

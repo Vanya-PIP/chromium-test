@@ -13,7 +13,7 @@
 #include <array>
 
 #include "base/containers/auto_spanification_helper.h"
-#include "base/logging.h"
+#include "base/test"
 
 // Try to adhere to [1] when adding and using logging.
 // [1]

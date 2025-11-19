@@ -18,7 +18,7 @@
 #include "ash/frame_sink/ui_resource_manager.h"
 #include "ash/test/ash_test_base.h"
 #include "ash/test/ash_test_helper.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "cc/base/math_util.h"
 #include "components/viz/common/quads/compositor_frame.h"

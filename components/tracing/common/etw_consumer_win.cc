@@ -15,7 +15,7 @@
 #include "base/containers/buffer_iterator.h"
 #include "base/containers/fixed_flat_map.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/scoped_blocking_call.h"
 #include "base/time/time.h"
 #include "build/build_config.h"

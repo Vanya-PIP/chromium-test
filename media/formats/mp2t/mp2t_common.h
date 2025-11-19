@@ -5,7 +5,7 @@
 #ifndef MEDIA_FORMATS_MP2T_MP2T_COMMON_H_
 #define MEDIA_FORMATS_MP2T_MP2T_COMMON_H_
 
-#include "base/logging.h"
+#include "base/test"
 
 #define LOG_LEVEL_TS  5
 #define LOG_LEVEL_PES 4

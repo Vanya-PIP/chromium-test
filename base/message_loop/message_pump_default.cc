@@ -5,7 +5,7 @@
 #include "base/message_loop/message_pump_default.h"
 
 #include "base/auto_reset.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/synchronization/waitable_event.h"
 #include "base/time/time.h"
 #include "base/trace_event/trace_event.h"
@@ -14,7 +14,7 @@
 #if BUILDFLAG(IS_APPLE)
 #include <mach/thread_policy.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_mach_port.h"
 #include "base/apple/scoped_nsautorelease_pool.h"
 #include "base/threading/threading_features.h"

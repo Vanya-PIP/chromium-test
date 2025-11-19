@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/process/process_handle.h"
 #include "chromeos/ash/components/dbus/arc/arc_keymaster_client.h"

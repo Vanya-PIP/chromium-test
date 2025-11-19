@@ -11,7 +11,7 @@
 
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/weak_ptr.h"
 #include "base/sequence_checker.h"
@@ -21,7 +21,7 @@
 #include "net/base/net_errors.h"
 #include "remoting/base/http_status.h"
 #include "remoting/base/instance_identity_token.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 
 namespace remoting {

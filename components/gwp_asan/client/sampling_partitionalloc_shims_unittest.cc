@@ -13,7 +13,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/test/gtest_util.h"

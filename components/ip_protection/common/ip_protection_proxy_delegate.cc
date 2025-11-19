@@ -14,7 +14,7 @@
 #include "base/check.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"

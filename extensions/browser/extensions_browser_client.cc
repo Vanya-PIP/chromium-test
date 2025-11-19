@@ -9,7 +9,7 @@
 
 #include "base/files/file_path.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "components/update_client/update_client.h"
 #include "content/public/browser/browser_context.h"

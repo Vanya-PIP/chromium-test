@@ -13,7 +13,7 @@
 #import "base/functional/callback_helpers.h"
 #import "base/ios/block_types.h"
 #import "base/location.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_macros.h"
 #import "base/metrics/user_metrics.h"
 #import "base/strings/sys_string_conversions.h"

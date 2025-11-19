@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "chromecast/base/metrics/cast_metrics_helper.h"
 #include "chromecast/media/cma/base/buffering_state.h"

@@ -18,7 +18,7 @@
 #include "base/containers/span_reader.h"
 #include "base/containers/span_writer.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/strings/string_view_util.h"

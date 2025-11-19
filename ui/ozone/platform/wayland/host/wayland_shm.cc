@@ -4,7 +4,7 @@
 
 #include "ui/ozone/platform/wayland/host/wayland_shm.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/ozone/platform/wayland/host/wayland_buffer_factory.h"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"
 

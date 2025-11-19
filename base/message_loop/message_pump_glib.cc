@@ -8,7 +8,7 @@
 #include <glib.h>
 #include <math.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/message_loop/io_watcher.h"
 #include "base/notreached.h"

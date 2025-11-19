@@ -8,7 +8,7 @@
 #include <string>
 
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"

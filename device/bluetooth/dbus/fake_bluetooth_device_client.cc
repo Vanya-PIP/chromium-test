@@ -20,7 +20,7 @@
 #include "base/containers/to_vector.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/ref_counted.h"
 #include "base/observer_list.h"

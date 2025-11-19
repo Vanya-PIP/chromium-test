@@ -21,7 +21,7 @@
 #include <optional>
 
 #include "base/files/file_util.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/koid.h"
 #include "base/functional/bind.h"
 #include "base/run_loop.h"

@@ -16,7 +16,7 @@
 #include "base/notimplemented.h"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"
 #include "base/values.h"

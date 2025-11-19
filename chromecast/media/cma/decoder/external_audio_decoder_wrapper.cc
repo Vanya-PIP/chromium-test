@@ -17,7 +17,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/scoped_native_library.h"
 #include "base/task/sequenced_task_runner.h"

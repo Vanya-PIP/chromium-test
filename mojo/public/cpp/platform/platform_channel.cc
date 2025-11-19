@@ -10,7 +10,7 @@
 #include <tuple>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/clamped_math.h"
 #include "build/build_config.h"
 #include "mojo/buildflags.h"
@@ -27,7 +27,7 @@
 #include <zircon/process.h>
 #include <zircon/processargs.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #elif BUILDFLAG(IS_POSIX)
 #include <fcntl.h>
 #include <sys/types.h>
@@ -40,7 +40,7 @@
 #if BUILDFLAG(MOJO_USE_APPLE_CHANNEL)
 #include <mach/port.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_mach_port.h"
 #endif
 

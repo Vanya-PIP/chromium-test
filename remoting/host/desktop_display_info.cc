@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "build/build_config.h"
 #include "remoting/base/constants.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/proto/control.pb.h"
 #include "third_party/webrtc/modules/desktop_capture/desktop_capture_types.h"
 

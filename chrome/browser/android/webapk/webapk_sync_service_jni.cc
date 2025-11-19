@@ -11,7 +11,7 @@
 #include "base/android/scoped_java_ref.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/android/webapk/webapk_sync_service.h"
 #include "chrome/browser/android/webapk/webapk_sync_service_factory.h"
 #include "chrome/browser/profiles/profile_manager.h"

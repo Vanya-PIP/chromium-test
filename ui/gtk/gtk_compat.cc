@@ -11,7 +11,7 @@
 #include "base/compiler_specific.h"
 #include "base/debug/leak_annotations.h"
 #include "base/environment.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/nix/xdg_util.h"
 #include "base/no_destructor.h"
 #include "base/strings/string_number_conversions.h"

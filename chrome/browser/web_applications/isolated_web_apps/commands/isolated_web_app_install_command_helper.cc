@@ -41,7 +41,7 @@
 #include "chrome/browser/web_applications/web_contents/web_app_data_retriever.h"
 #include "components/base32/base32.h"
 #include "components/web_package/signed_web_bundles/signed_web_bundle_integrity_block.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_manager.h"
 #include "components/webapps/browser/web_contents/web_app_url_loader.h"
 #include "components/webapps/isolated_web_apps/bundle_operations/bundle_operations.h"

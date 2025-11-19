@@ -16,7 +16,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/pattern.h"
 #include "base/strings/sys_string_conversions.h"
 #include "ui/accessibility/platform/ax_platform_node_cocoa.h"

@@ -13,7 +13,7 @@
 #include "base/containers/flat_map.h"
 #include "base/containers/flat_set.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/stringprintf.h"
 #include "base/trace_event/trace_event.h"

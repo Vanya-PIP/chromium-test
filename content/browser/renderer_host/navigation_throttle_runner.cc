@@ -5,7 +5,7 @@
 #include "content/browser/renderer_host/navigation_throttle_runner.h"
 
 #include "base/check_deref.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/metrics_hashes.h"

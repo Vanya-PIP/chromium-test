@@ -10,7 +10,7 @@
 
 #include "base/check.h"
 #include "base/functional/callback.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/threading/platform_thread.h"
 #include "chrome/browser/enterprise/connectors/device_trust/device_trust_features.h"
 #include "chrome/browser/enterprise/connectors/device_trust/key_management/core/network/key_network_delegate.h"

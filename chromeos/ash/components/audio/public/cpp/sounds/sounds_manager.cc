@@ -9,7 +9,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "chromeos/ash/components/audio/public/cpp/sounds/audio_stream_handler.h"
 #include "media/base/audio_codecs.h"

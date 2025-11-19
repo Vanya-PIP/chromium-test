@@ -6,7 +6,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/base/path_utils.h"
 #include "chromecast/base/process_utils.h"
 #include "chromecast/crash/linux/crash_util.h"

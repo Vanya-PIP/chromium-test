@@ -5,7 +5,7 @@
 #include "chromeos/ash/services/nearby/public/cpp/tcp_server_socket_port.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/rand_util.h"
 

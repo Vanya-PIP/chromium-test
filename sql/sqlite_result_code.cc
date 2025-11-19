@@ -15,7 +15,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/dcheck_is_on.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "sql/sqlite_result_code_values.h"
 #include "third_party/sqlite/sqlite3.h"

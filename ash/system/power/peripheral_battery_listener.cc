@@ -15,7 +15,7 @@
 #include "ash/strings/grit/ash_strings.h"
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"

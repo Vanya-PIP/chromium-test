@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/cast_streaming/common/public/features.h"
 #include "media/base/decoder_buffer.h"
 #include "media/base/media_util.h"

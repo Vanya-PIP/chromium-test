@@ -6,7 +6,7 @@
 
 #include "base/time/time.h"
 #include "base/timer/timer.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/phone_model.h"
 
 namespace ash::phonehub {

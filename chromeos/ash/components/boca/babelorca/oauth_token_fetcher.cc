@@ -14,7 +14,7 @@
 #include "base/functional/callback.h"
 #include "base/functional/callback_forward.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/sequence_checker.h"

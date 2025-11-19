@@ -22,7 +22,7 @@
 #include "base/debug/proc_maps_linux.h"
 #include "base/files/file.h"
 #include "base/files/file_enumerator.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/stringprintf.h"
 #include "base/thread_annotations.h"

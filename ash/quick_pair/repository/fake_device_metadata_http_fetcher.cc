@@ -6,7 +6,7 @@
 
 #include "ash/quick_pair/proto/fastpair.pb.h"
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "chromeos/ash/services/bluetooth_config/public/cpp/device_image_info.h"
 #include "device/bluetooth/bluetooth_device.h"

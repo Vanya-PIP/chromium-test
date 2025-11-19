@@ -7,7 +7,7 @@
 #include <single-pixel-buffer-v1-client-protocol.h>
 #include <wayland-util.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/ozone/platform/wayland/common/wayland_object.h"
 #include "ui/ozone/platform/wayland/common/wayland_util.h"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"

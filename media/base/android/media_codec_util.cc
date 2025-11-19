@@ -13,7 +13,7 @@
 #include "base/android/jni_array.h"
 #include "base/android/jni_string.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/system/sys_info.h"
 #include "media/base/android/media_codec_bridge.h"

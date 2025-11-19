@@ -6,7 +6,7 @@
 
 #import <memory>
 
-#import "base/logging.h"
+#import "base/test"
 #import "ios/net/cookies/cookie_creation_time_manager.h"
 #import "ios/net/ios_net_buildflags.h"
 

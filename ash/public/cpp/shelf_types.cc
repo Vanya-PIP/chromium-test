@@ -6,7 +6,7 @@
 
 #include "base/check_op.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_split.h"
 

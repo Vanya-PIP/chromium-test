@@ -6,7 +6,7 @@
 
 #include <stdint.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 
 namespace IPC {
 namespace internal {

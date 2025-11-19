@@ -9,7 +9,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/test/task_environment.h"
 #include "base/values.h"

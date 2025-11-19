@@ -39,7 +39,7 @@
 #include "services/video_capture/video_capture_service_impl.h"
 
 #if BUILDFLAG(IS_MAC)
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "sandbox/mac/system_services.h"
 #include "sandbox/policy/sandbox.h"
 #endif

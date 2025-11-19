@@ -24,7 +24,7 @@
 #include "base/debug/leak_annotations.h"
 #include "base/environment.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/nix/mime_util_xdg.h"
 #include "base/nix/xdg_util.h"
 #include "base/numerics/safe_conversions.h"

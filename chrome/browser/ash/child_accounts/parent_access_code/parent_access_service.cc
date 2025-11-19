@@ -12,7 +12,7 @@
 #include "base/check_deref.h"
 #include "base/check_op.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/timer/timer.h"
 #include "base/values.h"

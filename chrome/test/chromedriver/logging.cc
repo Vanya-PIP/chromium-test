@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 
-#include "chrome/test/chromedriver/logging.h"
+#include "chrome/test/chromedriver/test"
 
 #include <stddef.h>
 #include <stdint.h>
@@ -17,7 +17,7 @@
 #include "base/command_line.h"
 #include "base/containers/contains.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"
 #include "base/values.h"

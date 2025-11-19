@@ -6,7 +6,7 @@
 
 #include <gestures/gestures.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/timer/timer.h"
 

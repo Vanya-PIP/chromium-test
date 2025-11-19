@@ -4,7 +4,7 @@
 
 #include "components/exo/frame_timing_history.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 
 namespace exo {

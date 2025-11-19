@@ -4,7 +4,7 @@
 
 #include "ash/events/test_event_capturer.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "ui/events/event_utils.h"
 

@@ -18,7 +18,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/message_loop/message_pump_type.h"

@@ -8,7 +8,7 @@
 #include "base/token.h"
 #include "chrome/browser/nearby_sharing/instantmessaging/proto/instantmessaging.pb.h"
 #include "chrome/browser/nearby_sharing/webrtc_request_builder.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 WebRtcSignalingMessenger::WebRtcSignalingMessenger(
     signin::IdentityManager* identity_manager,

@@ -7,7 +7,7 @@
 #include <optional>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 
 namespace ui {

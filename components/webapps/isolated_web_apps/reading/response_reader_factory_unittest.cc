@@ -29,7 +29,7 @@
 #include "components/web_package/signed_web_bundles/signed_web_bundle_signature_verifier.h"
 #include "components/web_package/test_support/mock_web_bundle_parser_factory.h"
 #include "components/web_package/test_support/signed_web_bundles/signature_verifier_test_utils.h"
-#include "components/webapps/isolated_web_apps/error/uma_logging.h"
+#include "components/webapps/isolated_web_apps/error/uma_test"
 #include "components/webapps/isolated_web_apps/error/unusable_swbn_file_error.h"
 #include "components/webapps/isolated_web_apps/identity/iwa_identity_validator.h"
 #include "components/webapps/isolated_web_apps/reading/response_reader.h"

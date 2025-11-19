@@ -12,7 +12,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/one_shot_event.h"
 #include "base/path_service.h"

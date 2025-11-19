@@ -8,7 +8,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/renderer/worker_thread.h"
 #include "extensions/common/extension_api.h"
 #include "extensions/renderer/console.h"

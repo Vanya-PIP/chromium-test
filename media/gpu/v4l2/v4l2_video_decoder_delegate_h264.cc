@@ -17,7 +17,7 @@
 #include <type_traits>
 
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/numerics/safe_conversions.h"
 #include "media/gpu/macros.h"

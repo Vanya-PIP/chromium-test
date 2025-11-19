@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "media/base/encoder_status.h"
 #include "media/base/media_log.h"

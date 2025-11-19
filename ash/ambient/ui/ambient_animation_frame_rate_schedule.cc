@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "ash/utility/lottie_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "base/strings/strcat.h"

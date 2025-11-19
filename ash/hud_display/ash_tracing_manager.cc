@@ -9,7 +9,7 @@
 #include "ash/hud_display/ash_tracing_request.h"
 #include "ash/session/session_controller_impl.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/sequence_checker.h"
 #include "base/strings/stringprintf.h"

@@ -7,7 +7,7 @@
 #include <map>
 #include <tuple>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/stringprintf.h"
 #include "base/threading/platform_thread.h"

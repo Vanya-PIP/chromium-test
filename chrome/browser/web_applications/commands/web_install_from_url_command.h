@@ -14,7 +14,7 @@
 #include "chrome/browser/web_applications/jobs/manifest_to_web_app_install_info_job.h"
 #include "chrome/browser/web_applications/locks/shared_web_contents_lock.h"
 #include "chrome/browser/web_applications/web_app_install_params.h"
-#include "chrome/browser/web_applications/web_app_logging.h"
+#include "chrome/browser/web_applications/web_app_test"
 #include "components/webapps/common/web_app_id.h"
 #include "third_party/blink/public/mojom/manifest/manifest.mojom-forward.h"
 #include "url/gurl.h"

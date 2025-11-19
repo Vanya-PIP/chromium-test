@@ -5,7 +5,7 @@
 #include "device/bluetooth/dbus/fake_bluetooth_profile_manager_client.h"
 
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "dbus/bus.h"
 #include "dbus/message.h"

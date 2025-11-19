@@ -12,7 +12,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/angle_conversions.h"
 #include "base/strings/string_number_conversions.h"

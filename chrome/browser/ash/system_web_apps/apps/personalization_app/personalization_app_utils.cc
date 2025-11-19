@@ -12,7 +12,7 @@
 #include "ash/webui/personalization_app/personalization_app_ui.h"
 #include "base/base64.h"
 #include "base/containers/fixed_flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "chrome/browser/ash/login/demo_mode/demo_session.h"
 #include "chrome/browser/ash/profiles/profile_helper.h"

@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/test/metrics/histogram_tester.h"
 #include "base/test/task_environment.h"

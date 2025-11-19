@@ -16,7 +16,7 @@
 #include "base/containers/flat_set.h"
 #include "base/containers/map_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"

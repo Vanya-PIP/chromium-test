@@ -7,7 +7,7 @@
 #include <tuple>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "content/public/browser/media_service.h"
 #include "content/public/browser/render_process_host.h"

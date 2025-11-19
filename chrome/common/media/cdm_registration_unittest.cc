@@ -9,7 +9,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/json/json_file_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 #include "base/path_service.h"
 #include "base/test/scoped_path_override.h"

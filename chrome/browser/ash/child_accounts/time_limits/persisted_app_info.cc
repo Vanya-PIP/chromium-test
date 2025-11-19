@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/child_accounts/time_limits/persisted_app_info.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "chrome/browser/ash/child_accounts/time_limits/app_time_policy_helpers.h"
 

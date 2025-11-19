@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/tab_ui_helper.h"
 #include "chrome/test/interaction/interactive_browser_test.h"

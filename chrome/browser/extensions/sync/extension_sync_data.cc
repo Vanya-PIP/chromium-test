@@ -5,7 +5,7 @@
 #include "chrome/browser/extensions/sync/extension_sync_data.h"
 
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/stringprintf.h"
 #include "chrome/browser/extensions/extension_service.h"

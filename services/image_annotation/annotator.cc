@@ -17,7 +17,7 @@
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"

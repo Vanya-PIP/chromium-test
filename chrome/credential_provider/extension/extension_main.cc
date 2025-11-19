@@ -5,7 +5,7 @@
 #include "base/at_exit.h"
 #include "base/command_line.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/memory.h"
 #include "base/task/thread_pool/thread_pool_instance.h"
 #include "base/win/process_startup_helper.h"
@@ -18,7 +18,7 @@
 #include "chrome/credential_provider/gaiacp/experiments_fetcher.h"
 #include "chrome/credential_provider/gaiacp/experiments_manager.h"
 #include "chrome/credential_provider/gaiacp/gem_device_details_manager.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/reg_utils.h"
 #include "chrome/credential_provider/gaiacp/user_policies_manager.h"
 

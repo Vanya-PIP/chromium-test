@@ -8,7 +8,7 @@
 #include <limits>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace zucchini {
 

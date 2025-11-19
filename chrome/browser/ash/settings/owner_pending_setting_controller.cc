@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/ownership/owner_settings_service_ash.h"
 #include "chrome/browser/ash/ownership/owner_settings_service_ash_factory.h"
 #include "chrome/browser/ash/settings/device_settings_service.h"

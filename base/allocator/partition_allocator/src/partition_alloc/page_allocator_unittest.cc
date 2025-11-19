@@ -21,7 +21,7 @@
 #include "partition_alloc/buildflags.h"
 #include "partition_alloc/page_allocator_constants.h"
 #include "partition_alloc/partition_alloc_base/cpu.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_base/notreached.h"
 #include "partition_alloc/partition_alloc_config.h"
 #include "partition_alloc/tagging.h"

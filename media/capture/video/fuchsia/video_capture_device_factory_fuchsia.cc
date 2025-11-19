@@ -7,10 +7,10 @@
 #include <lib/sys/cpp/component_context.h>
 
 #include "base/check_op.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/system/system_monitor.h"
 #include "base/time/time.h"

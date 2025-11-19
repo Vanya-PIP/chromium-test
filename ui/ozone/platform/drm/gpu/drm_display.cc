@@ -16,7 +16,7 @@
 #include <memory>
 
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "ui/display/display_features.h"
 #include "ui/display/types/display_color_management.h"

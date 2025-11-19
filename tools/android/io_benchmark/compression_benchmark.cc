@@ -11,7 +11,7 @@
 
 #include "base/files/file.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "third_party/brotli/include/brotli/decode.h"
 #include "third_party/brotli/include/brotli/encode.h"

@@ -10,8 +10,8 @@
 #include <utility>
 
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
-#include "base/logging.h"
+#include "base/debug/crash_test"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notimplemented.h"
 #include "base/numerics/checked_math.h"

@@ -21,7 +21,7 @@
 #include <string>
 
 #include "base/component_export.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/win/scoped_handle.h"
 #include "printing/mojom/print.mojom.h"

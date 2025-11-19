@@ -8,7 +8,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "components/sync/protocol/nigori_local_data.pb.h"
 

@@ -16,7 +16,7 @@
 #include "base/cpu.h"
 #include "base/files/file.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/path_service.h"
 #include "base/process/current_process.h"

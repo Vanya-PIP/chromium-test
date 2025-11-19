@@ -9,7 +9,7 @@
 #include "base/containers/span.h"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/timer/timer.h"
 #include "chrome/browser/ash/attestation/attestation_ca_client.h"
 #include "chromeos/ash/components/attestation/attestation_flow_adaptive.h"

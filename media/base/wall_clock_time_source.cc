@@ -4,7 +4,7 @@
 
 #include "media/base/wall_clock_time_source.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 

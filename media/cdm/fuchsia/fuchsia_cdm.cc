@@ -7,9 +7,9 @@
 #include <optional>
 #include <string_view>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/mem_buffer_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/not_fatal_until.h"
 #include "media/base/callback_registry.h"

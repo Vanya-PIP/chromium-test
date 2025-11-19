@@ -10,7 +10,7 @@
 #include <ostream>
 
 #include "base/containers/adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 
 namespace base::internal {

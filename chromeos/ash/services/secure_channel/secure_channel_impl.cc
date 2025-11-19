@@ -8,7 +8,7 @@
 #include <sstream>
 
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_cache.h"
 #include "chromeos/ash/components/timer_factory/timer_factory_impl.h"
 #include "chromeos/ash/services/secure_channel/active_connection_manager_impl.h"

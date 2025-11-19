@@ -9,7 +9,7 @@
 #include "base/callback_list.h"
 #include "base/containers/flat_tree.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/system/sys_info.h"
 #include "chrome/browser/ash/bruschetta/bruschetta_util.h"
 #include "chrome/browser/ash/guest_os/guest_id.h"

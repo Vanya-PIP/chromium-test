@@ -11,7 +11,7 @@
 #include <string_view>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/scoped_ioplugininterface.h"
 #include "base/trace_event/trace_event.h"
 #include "media/capture/capture_export.h"

@@ -14,7 +14,7 @@
 #include "ash/webui/eche_app_ui/system_info_provider.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/values.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "crypto/sha2.h"
 
 namespace ash {

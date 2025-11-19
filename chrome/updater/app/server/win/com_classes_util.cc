@@ -9,7 +9,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/types/expected_macros.h"
 #include "base/version.h"

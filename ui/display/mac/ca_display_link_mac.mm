@@ -7,7 +7,7 @@
 #import <AppKit/AppKit.h>
 #import <QuartzCore/CADisplayLink.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/trace_event/trace_event.h"

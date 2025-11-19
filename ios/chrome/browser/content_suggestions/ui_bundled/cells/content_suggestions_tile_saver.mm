@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/content_suggestions/ui_bundled/cells/content_suggestions_tile_saver.h"
 
 #import "base/functional/bind.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/string_number_conversions.h"
 #import "base/strings/string_util.h"
 #import "base/strings/sys_string_conversions.h"

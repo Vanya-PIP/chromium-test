@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/test/task_environment.h"
 #include "chromeos/ash/components/network/network_state.h"

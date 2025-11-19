@@ -8,7 +8,7 @@
 #include <wrl.h>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 #include "base/path_service.h"
 #include "base/strings/string_util_win.h"

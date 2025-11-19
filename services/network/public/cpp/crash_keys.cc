@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 
 namespace network::debug {
 

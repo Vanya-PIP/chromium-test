@@ -13,7 +13,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/access_token.h"
 #include "base/win/security_util.h"
 #include "sandbox/win/src/acl.h"

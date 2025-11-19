@@ -5,7 +5,7 @@
 #include "ui/webui/examples/renderer/render_frame_observer.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/guest_contents/renderer/swap_render_frame.h"
 #include "content/public/renderer/render_frame.h"
 #include "content/public/renderer/render_frame_observer.h"

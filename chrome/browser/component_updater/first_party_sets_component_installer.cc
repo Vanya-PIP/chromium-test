@@ -7,7 +7,7 @@
 #include "components/component_updater/installer_policies/first_party_sets_component_installer_policy.h"
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "content/public/browser/first_party_sets_handler.h"
 #include "content/public/common/content_features.h"

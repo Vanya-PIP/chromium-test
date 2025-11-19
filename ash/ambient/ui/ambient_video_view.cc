@@ -17,7 +17,7 @@
 #include "base/check.h"
 #include "base/files/file_path.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 
 #include "base/time/time.h"

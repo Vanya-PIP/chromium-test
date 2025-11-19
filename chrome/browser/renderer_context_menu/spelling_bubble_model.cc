@@ -4,7 +4,7 @@
 
 #include "chrome/browser/renderer_context_menu/spelling_bubble_model.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/scoped_tabbed_browser_displayer.h"

@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/ozone/platform/drm/gpu/drm_device.h"
 #include "ui/ozone/platform/drm/gpu/drm_device_generator.h"
 

@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/bluez/bluetooth_local_gatt_service_bluez.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_util.h"
 #include "base/uuid.h"

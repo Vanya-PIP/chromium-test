@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/test/mock_callback.h"
 #include "base/test/task_environment.h"

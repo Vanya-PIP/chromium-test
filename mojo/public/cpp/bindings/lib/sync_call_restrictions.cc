@@ -6,7 +6,7 @@
 
 #include "base/check_op.h"
 #include "base/debug/leak_annotations.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/synchronization/lock.h"
 #include "base/threading/sequence_local_storage_map.h"

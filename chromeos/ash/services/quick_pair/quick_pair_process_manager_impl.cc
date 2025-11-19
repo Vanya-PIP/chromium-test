@@ -12,7 +12,7 @@
 #include "base/unguessable_token.h"
 #include "chromeos/ash/services/quick_pair/public/mojom/fast_pair_data_parser.mojom.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process_shutdown_controller.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "mojo/public/cpp/bindings/pending_receiver.h"
 #include "mojo/public/cpp/bindings/pending_remote.h"
 

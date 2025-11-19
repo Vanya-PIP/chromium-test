@@ -36,7 +36,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/callback_helpers.h"
 #include "base/functional/function_ref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/path_service.h"
 #include "base/process/kill.h"

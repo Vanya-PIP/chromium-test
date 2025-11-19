@@ -10,7 +10,7 @@
 #include "base/compiler_specific.h"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash::secure_channel::weave {
 

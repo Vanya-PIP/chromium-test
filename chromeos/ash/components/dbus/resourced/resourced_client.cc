@@ -6,7 +6,7 @@
 
 #include "base/byte_count.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/observer_list.h"
 #include "base/process/process_metrics.h"

@@ -7,7 +7,7 @@
 #include <array>
 #include <memory>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/task/thread_pool.h"

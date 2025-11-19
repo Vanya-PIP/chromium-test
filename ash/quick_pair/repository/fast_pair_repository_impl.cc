@@ -26,7 +26,7 @@
 #include "chromeos/ash/components/network/network_state_handler.h"
 #include "chromeos/ash/services/bluetooth_config/public/cpp/device_image_info.h"
 #include "chromeos/ash/services/quick_pair/public/cpp/account_key_filter.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_adapter.h"
 #include "device/bluetooth/bluetooth_adapter_factory.h"
 #include "device/bluetooth/bluetooth_device.h"

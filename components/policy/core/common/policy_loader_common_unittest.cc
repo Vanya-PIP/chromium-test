@@ -6,7 +6,7 @@
 #include <algorithm>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "components/policy/core/common/policy_map.h"
 #include "components/policy/core/common/policy_types.h"

@@ -10,7 +10,7 @@
 #include "ash/public/cpp/shell_window_ids.h"
 #include "ash/shell.h"
 #include "ash/wm/window_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ui/ash/input_method/infolist_window.h"
 #include "ui/base/ime/ash/ime_bridge.h"
 #include "ui/views/widget/widget.h"

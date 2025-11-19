@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/metrics/chrome_metrics_service_accessor.h"
 #include "components/variations/synthetic_trial_registry.h"

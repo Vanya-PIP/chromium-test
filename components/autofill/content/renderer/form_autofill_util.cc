@@ -23,7 +23,7 @@
 #include "base/containers/flat_map.h"
 #include "base/containers/flat_set.h"
 #include "base/containers/span.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/i18n/case_conversion.h"
 #include "base/metrics/field_trial.h"

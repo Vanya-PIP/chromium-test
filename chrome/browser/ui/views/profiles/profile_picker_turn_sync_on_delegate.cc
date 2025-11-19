@@ -8,7 +8,7 @@
 
 #include "base/debug/dump_without_crashing.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/enterprise/util/managed_browser_utils.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/signin/signin_util.h"

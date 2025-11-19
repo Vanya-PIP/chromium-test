@@ -4,7 +4,7 @@
 
 #include "chrome/browser/media/webrtc/delegated_source_list_capturer.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/bind_post_task.h"
 #include "content/public/browser/browser_thread.h"
 #include "content/public/browser/desktop_capture.h"

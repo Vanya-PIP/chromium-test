@@ -8,7 +8,7 @@
 #include <string_view>
 
 #include "base/containers/adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 
 namespace continuous_search {

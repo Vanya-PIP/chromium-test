@@ -9,7 +9,7 @@
 #include "base/base_paths_win.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/win/windows_version.h"
 #include "build/build_config.h"

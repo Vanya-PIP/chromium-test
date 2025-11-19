@@ -5,7 +5,7 @@
 #include "content/browser/renderer_host/input/input_transfer_handler_android.h"
 
 #include "base/android/jni_android.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/trace_event/typed_macros.h"
 #include "components/input/features.h"

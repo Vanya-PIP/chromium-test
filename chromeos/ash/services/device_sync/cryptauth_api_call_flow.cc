@@ -5,7 +5,7 @@
 #include "chromeos/ash/services/device_sync/cryptauth_api_call_flow.h"
 
 #include "base/strings/string_number_conversions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "net/base/url_util.h"
 #include "net/http/http_response_headers.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"

@@ -7,7 +7,7 @@
 #include <type_traits>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/exo/wayland/compatibility_test/client_compatibility_test.h"
 {% for protocol in protocols %}
 #include "components/exo/wayland/compatibility_test/generated-{{ protocol.filename }}-client-helpers.h"

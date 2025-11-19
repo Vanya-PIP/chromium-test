@@ -9,7 +9,7 @@
 
 #include "base/apple/foundation_util.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/no_destructor.h"

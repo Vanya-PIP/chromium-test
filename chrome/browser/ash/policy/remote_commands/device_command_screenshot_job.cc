@@ -15,7 +15,7 @@
 #include "base/json/json_writer.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/stringprintf.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/values.h"
 #include "components/policy/proto/device_management_backend.pb.h"

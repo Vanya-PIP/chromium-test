@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/dbus/fake_bluetooth_agent_service_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/bluetooth/dbus/bluez_dbus_manager.h"
 #include "device/bluetooth/dbus/fake_bluetooth_agent_manager_client.h"
 

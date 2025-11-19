@@ -8,7 +8,7 @@
 #include <ostream>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/stl_util.h"
 #include "extensions/common/error_utils.h"
 #include "extensions/common/url_pattern.h"

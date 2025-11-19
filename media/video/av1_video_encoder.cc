@@ -10,7 +10,7 @@
 #include <iterator>
 
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/strings/stringprintf.h"
 #include "base/time/time.h"

@@ -9,7 +9,7 @@
 #include <memory>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/task_environment.h"
 #include "chromecast/media/base/cast_decoder_buffer_impl.h"
 #include "chromecast/media/cma/base/decoder_buffer_adapter.h"

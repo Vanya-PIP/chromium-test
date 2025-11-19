@@ -11,7 +11,7 @@
 #include "ash/constants/ash_switches.h"
 #include "ash/fast_ink/fast_ink_host_frame_utils.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/trace_event/trace_event.h"
 #include "cc/base/math_util.h"

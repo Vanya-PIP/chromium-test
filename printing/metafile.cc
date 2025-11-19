@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/read_only_shared_memory_region.h"
 #include "base/numerics/safe_conversions.h"
 #include "build/build_config.h"

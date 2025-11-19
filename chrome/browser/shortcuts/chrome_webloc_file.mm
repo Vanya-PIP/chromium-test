@@ -10,7 +10,7 @@
 
 #include "base/apple/foundation_util.h"
 #include "base/files/block_tests_writing_to_special_dirs.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #include "base/threading/scoped_blocking_call.h"
 

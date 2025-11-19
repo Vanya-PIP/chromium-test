@@ -20,7 +20,7 @@
 #include "chromeos/ash/services/quick_pair/public/cpp/battery_notification.h"
 #include "chromeos/ash/services/quick_pair/public/cpp/not_discoverable_advertisement.h"
 #include "chromeos/ash/services/quick_pair/public/mojom/fast_pair_data_parser.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/public/cpp/bluetooth_address.h"
 #include "mojo/public/cpp/bindings/pending_receiver.h"
 

@@ -13,7 +13,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/threading/scoped_blocking_call.h"
 #include "build/build_config.h"

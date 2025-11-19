@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "dbus/bus.h"
 #include "dbus/message.h"
 #include "dbus/object_proxy.h"

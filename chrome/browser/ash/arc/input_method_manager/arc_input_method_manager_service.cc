@@ -16,7 +16,7 @@
 #include "ash/wm/window_util.h"
 #include "base/command_line.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/singleton.h"
 #include "chrome/browser/ash/arc/arc_util.h"

@@ -8,7 +8,7 @@
 #include <lib/async/default.h>
 
 #include "base/fuchsia/fidl_event_handler.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
 #include "base/run_loop.h"
 #include "base/strings/utf_string_conversions.h"

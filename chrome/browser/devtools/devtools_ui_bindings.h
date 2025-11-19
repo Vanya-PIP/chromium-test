@@ -25,7 +25,7 @@
 #include "chrome/browser/devtools/devtools_infobar_delegate.h"
 #include "chrome/browser/devtools/devtools_settings.h"
 #include "chrome/browser/devtools/devtools_targets_ui.h"
-#include "chrome/browser/devtools/visual_logging.h"
+#include "chrome/browser/devtools/visual_test"
 #include "components/prefs/pref_change_registrar.h"
 #include "content/public/browser/devtools_agent_host.h"
 #include "content/public/browser/devtools_frontend_host.h"

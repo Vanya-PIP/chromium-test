@@ -11,7 +11,7 @@
 #include "base/big_endian.h"
 #include "base/containers/span.h"
 #include "base/containers/span_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/safe_conversions.h"

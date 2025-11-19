@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/gpu/macros.h"
 #include "media/gpu/vaapi/test/macros.h"
 

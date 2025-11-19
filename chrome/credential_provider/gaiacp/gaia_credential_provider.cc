@@ -31,7 +31,7 @@
 #include "chrome/credential_provider/gaiacp/gaia_credential.h"
 #include "chrome/credential_provider/gaiacp/gaia_credential_other_user.h"
 #include "chrome/credential_provider/gaiacp/gaia_credential_provider_i.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/mdm_utils.h"
 #include "chrome/credential_provider/gaiacp/os_gaia_user_manager.h"
 #include "chrome/credential_provider/gaiacp/os_user_manager.h"

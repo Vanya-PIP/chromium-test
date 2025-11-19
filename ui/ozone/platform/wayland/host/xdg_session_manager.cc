@@ -15,7 +15,7 @@
 
 #include "base/check_op.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "ui/ozone/platform/wayland/common/wayland_object.h"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"

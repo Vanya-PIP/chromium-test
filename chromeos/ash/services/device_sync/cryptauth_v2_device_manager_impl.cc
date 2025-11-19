@@ -8,12 +8,12 @@
 
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_functions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/device_sync/attestation_certificates_syncer_impl.h"
 #include "chromeos/ash/services/device_sync/cryptauth_client.h"
 #include "chromeos/ash/services/device_sync/cryptauth_device_syncer_impl.h"
 #include "chromeos/ash/services/device_sync/cryptauth_key_registry.h"
-#include "chromeos/ash/services/device_sync/proto/cryptauth_logging.h"
+#include "chromeos/ash/services/device_sync/proto/cryptauth_test"
 #include "chromeos/ash/services/device_sync/synced_bluetooth_address_tracker_impl.h"
 
 namespace ash {

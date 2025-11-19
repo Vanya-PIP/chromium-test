@@ -7,7 +7,7 @@
 #include <jni.h>
 
 #include "base/android/jni_android.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory_jni/MemoryInfoBridge_jni.h"
 #include "base/time/time.h"
 #include "base/task/single_thread_task_runner.h"

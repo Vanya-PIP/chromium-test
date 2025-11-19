@@ -10,8 +10,8 @@
 #include <tuple>
 #include <utility>
 
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 #include "base/notreached.h"
 #include "ui/events/event.h"
 #include "ui/events/fuchsia/input_event_sink.h"

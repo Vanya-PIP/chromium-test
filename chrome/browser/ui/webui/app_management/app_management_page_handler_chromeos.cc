@@ -11,7 +11,7 @@
 #include "base/containers/flat_map.h"
 #include "base/containers/flat_set.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "chrome/browser/apps/app_service/app_service_proxy.h"
 #include "chrome/browser/apps/app_service/app_service_proxy_factory.h"

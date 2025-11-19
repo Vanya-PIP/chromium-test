@@ -9,7 +9,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/synchronization/lock.h"
 #include "testing/gmock/include/gmock/gmock.h"
 

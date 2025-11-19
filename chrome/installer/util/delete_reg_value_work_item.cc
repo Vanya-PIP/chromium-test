@@ -4,7 +4,7 @@
 
 #include "chrome/installer/util/delete_reg_value_work_item.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/win/registry.h"
 

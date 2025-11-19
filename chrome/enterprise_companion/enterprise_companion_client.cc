@@ -11,7 +11,7 @@
 #include "base/command_line.h"
 #include "base/files/file_path.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "base/task/bind_post_task.h"
 #include "base/task/task_traits.h"

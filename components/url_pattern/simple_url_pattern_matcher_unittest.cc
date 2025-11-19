@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/test/gmock_expected_support.h"
 #include "testing/gtest/include/gtest/gtest.h"

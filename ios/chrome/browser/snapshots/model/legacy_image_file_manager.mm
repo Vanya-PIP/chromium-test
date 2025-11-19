@@ -9,7 +9,7 @@
 #import "base/files/file_enumerator.h"
 #import "base/files/file_path.h"
 #import "base/files/file_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/sequence_checker.h"
 #import "base/strings/stringprintf.h"
 #import "base/strings/sys_string_conversions.h"

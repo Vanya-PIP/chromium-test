@@ -10,7 +10,7 @@
 
 #include "base/files/file_path.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/scoped_native_library.h"
 #include "base/values.h"

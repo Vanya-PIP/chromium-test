@@ -9,7 +9,7 @@
 #include "base/debug/alias.h"
 #include "base/feature_list.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"
 #include "build/build_config.h"
@@ -21,7 +21,7 @@
 #endif
 
 #if BUILDFLAG(IS_FUCHSIA)
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #endif
 
 #if BUILDFLAG(IS_WIN)

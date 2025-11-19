@@ -7,7 +7,7 @@
 #include "ash/quick_pair/common/constants.h"
 #include "ash/quick_pair/common/fast_pair/fast_pair_metrics.h"
 #include "base/containers/contains.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_adapter_factory.h"
 #include "device/bluetooth/bluetooth_device.h"
 #include "device/bluetooth/bluetooth_socket.h"

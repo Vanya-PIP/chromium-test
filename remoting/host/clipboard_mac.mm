@@ -12,7 +12,7 @@
 
 #include "base/callback_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/pasteboard_changed_observation.h"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_util.h"

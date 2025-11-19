@@ -37,10 +37,10 @@
 
 #include "partition_alloc/build_config.h"
 #include "partition_alloc/oom.h"
-#include "partition_alloc/partition_alloc_base/apple/mach_logging.h"
+#include "partition_alloc/partition_alloc_base/apple/mach_test"
 #include "partition_alloc/partition_alloc_base/bits.h"
 #include "partition_alloc/partition_alloc_base/compiler_specific.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_check.h"
 #include "partition_alloc/shim/malloc_zone_functions_apple.h"
 #include "partition_alloc/third_party/apple_apsl/CFBase.h"

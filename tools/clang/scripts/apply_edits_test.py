@@ -632,7 +632,7 @@ namespace double_conversion {
     # unconditional part of the file.
     old_contents = '''
 #ifndef NDEBUG
-#include "base/logging.h"
+#include "base/test"
 #endif
 
 void foo();
@@ -641,7 +641,7 @@ void foo();
 #include "new/header.h"
 
 #ifndef NDEBUG
-#include "base/logging.h"
+#include "base/test"
 #endif
 
 void foo();

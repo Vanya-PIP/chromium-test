@@ -12,7 +12,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "components/component_updater/component_updater_service.h"
 #include "components/component_updater/installer_policies/probabilistic_reveal_token_component_installer_policy.h"

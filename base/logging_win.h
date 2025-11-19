@@ -10,7 +10,7 @@
 #include <string>
 
 #include "base/base_export.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/event_trace_provider.h"
 
 namespace base {

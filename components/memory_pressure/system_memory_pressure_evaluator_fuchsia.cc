@@ -6,7 +6,7 @@
 
 #include <lib/sys/cpp/component_context.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/time/time.h"
 #include "components/memory_pressure/memory_pressure_voter.h"

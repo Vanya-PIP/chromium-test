@@ -19,7 +19,7 @@
 #include "base/containers/unique_ptr_adapters.h"
 #include "base/functional/callback_helpers.h"
 #include "base/hash/md5.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"

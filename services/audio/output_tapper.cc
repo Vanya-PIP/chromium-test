@@ -4,7 +4,7 @@
 
 #include "services/audio/output_tapper.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"
 #include "base/time/time.h"

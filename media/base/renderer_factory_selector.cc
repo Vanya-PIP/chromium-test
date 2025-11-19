@@ -4,7 +4,7 @@
 
 #include "media/base/renderer_factory_selector.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 
 namespace media {

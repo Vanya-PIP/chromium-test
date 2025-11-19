@@ -7,7 +7,7 @@
 
 #include "base/feature_list.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "base/test/gtest_util.h"
 #include "base/test/metrics/histogram_tester.h"

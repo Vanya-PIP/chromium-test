@@ -14,7 +14,7 @@
 
 #include "base/check.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "skia/ext/legacy_display_globals.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/skia/include/core/SkCanvas.h"

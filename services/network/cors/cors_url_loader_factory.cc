@@ -7,9 +7,9 @@
 #include <optional>
 #include <utility>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/string_util.h"
 #include "base/time/time.h"

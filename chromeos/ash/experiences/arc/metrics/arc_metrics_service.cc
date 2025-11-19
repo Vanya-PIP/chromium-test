@@ -13,7 +13,7 @@
 #include "ash/public/cpp/app_types_util.h"
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"

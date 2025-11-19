@@ -9,7 +9,7 @@
 #include "ash/webui/eche_app_ui/launch_app_helper.h"
 #include "ash/webui/eche_app_ui/mojom/eche_app.mojom-shared.h"
 #include "base/metrics/histogram_functions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash {
 namespace eche_app {

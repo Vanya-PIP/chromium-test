@@ -8,7 +8,7 @@
 
 #include "ash/public/cpp/schedule_enums.h"
 #include "ash/system/time/time_of_day.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/test/simple_test_clock.h"
 #include "base/time/time.h"

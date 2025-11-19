@@ -6,7 +6,7 @@
 
 #include <android/hardware_buffer.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gfx/android/android_surface_control_compat.h"
 #include "ui/gfx/geometry/size.h"
 

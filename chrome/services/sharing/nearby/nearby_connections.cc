@@ -17,7 +17,7 @@
 #include "chromeos/ash/components/nearby/presence/conversions/nearby_presence_conversions.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_connections_types.mojom.h"
 #include "chromeos/ash/services/nearby/public/mojom/webrtc.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/cross_device/nearby/nearby_features.h"
 #include "services/network/public/mojom/p2p.mojom.h"
 #include "third_party/nearby/src/connections/core.h"

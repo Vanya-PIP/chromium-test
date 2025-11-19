@@ -11,7 +11,7 @@
 
 #include "base/command_line.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "ui/events/event_switches.h"

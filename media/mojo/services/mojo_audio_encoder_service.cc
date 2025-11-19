@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/mojo/common/media_type_converters.h"
 
 namespace media {

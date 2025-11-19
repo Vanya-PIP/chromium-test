@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/sessions/model/web_session_state_cache_factory.h"
 
 #import "base/functional/bind.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/ptr_util.h"
 #import "components/keyed_service/core/keyed_service.h"
 #import "ios/chrome/browser/sessions/model/web_session_state_cache.h"

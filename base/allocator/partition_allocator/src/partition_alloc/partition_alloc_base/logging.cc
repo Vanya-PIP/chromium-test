@@ -7,7 +7,7 @@
 #pragma allow_unsafe_buffers
 #endif
 
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 
 // TODO(crbug.com/40158212): After finishing copying //base files to PA library,
 // remove defined(BASE_CHECK_H_) from here.
@@ -16,7 +16,7 @@
     defined(BASE_CHECK_H_) ||                                                                \
     defined(                                                                                 \
         BASE_ALLOCATOR_PARTITION_ALLOCATOR_SRC_PARTITION_ALLOC_PARTITION_ALLOC_CHECK_H_)
-#error "logging.h should not include check.h"
+#error "test should not include check.h"
 #endif
 
 #include "partition_alloc/build_config.h"

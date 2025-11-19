@@ -9,7 +9,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/tether/active_host.h"
 #include "chromeos/ash/components/tether/asynchronous_shutdown_object_container_impl.h"
 #include "chromeos/ash/components/tether/crash_recovery_manager_impl.h"

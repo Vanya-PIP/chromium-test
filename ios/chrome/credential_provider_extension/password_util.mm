@@ -4,7 +4,7 @@
 
 #import "ios/chrome/credential_provider_extension/password_util.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "ios/chrome/common/app_group/app_group_metrics.h"
 #import "ios/chrome/credential_provider_extension/metrics_util.h"
 #import "ios/components/credential_provider_extension/password_util.h"

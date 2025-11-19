@@ -10,11 +10,11 @@
 #include "base/check_version_internal.h"
 #include "base/debug/alias.h"
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/thread_annotations.h"
 #include "base/types/cxx23_to_underlying.h"
 #include "build/build_config.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 
 namespace logging {
 

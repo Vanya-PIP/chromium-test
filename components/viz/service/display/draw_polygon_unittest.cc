@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "components/viz/service/display/bsp_compare_result.h"
 #include "components/viz/service/display/draw_polygon.h"

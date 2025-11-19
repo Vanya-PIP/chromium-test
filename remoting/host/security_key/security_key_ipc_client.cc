@@ -10,10 +10,10 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "build/build_config.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/chromoting_host_services_client.h"
 #include "remoting/host/security_key/security_key_ipc_constants.h"
 

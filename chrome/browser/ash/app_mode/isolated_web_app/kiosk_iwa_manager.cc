@@ -15,7 +15,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/notreached.h"
 #include "chrome/browser/ash/app_mode/isolated_web_app/kiosk_iwa_data.h"

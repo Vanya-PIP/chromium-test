@@ -4,7 +4,7 @@
 
 #include "components/enterprise/connectors/core/analysis_service_settings_base.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "components/enterprise/connectors/core/common.h"
 #include "components/url_matcher/url_util.h"

@@ -12,7 +12,7 @@
 #include "base/files/file_proxy.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/path_service.h"
 #include "base/sequence_checker.h"

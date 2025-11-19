@@ -11,7 +11,7 @@
 #include "base/metrics/histogram_macros.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/default_clock.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash::secure_channel {
 

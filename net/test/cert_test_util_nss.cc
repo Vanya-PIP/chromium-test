@@ -16,7 +16,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "crypto/nss_key_util.h"
 #include "crypto/nss_util_internal.h"
 #include "crypto/scoped_nss_types.h"

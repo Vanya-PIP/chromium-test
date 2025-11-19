@@ -23,7 +23,7 @@
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "base/posix/eintr_wrapper.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/values.h"
 #include "chrome/browser/enterprise/connectors/device_trust/key_management/core/ec_signing_key.h"
 #include "chrome/browser/enterprise/connectors/device_trust/key_management/core/persistence/metrics_utils.h"

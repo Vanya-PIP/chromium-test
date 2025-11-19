@@ -4,7 +4,7 @@
 
 #import "ios/chrome/browser/ntp/shared/metrics/feed_metrics_utils.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/types/cxx23_to_underlying.h"
 #import "components/prefs/pref_service.h"
 #import "ios/chrome/browser/metrics/model/constants.h"

@@ -28,7 +28,7 @@
 #include "base/i18n/rtl.h"
 #include "base/i18n/string_compare.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "base/strings/strcat.h"
@@ -59,7 +59,7 @@
 #endif
 
 #if BUILDFLAG(IS_WIN)
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/l10n/l10n_util_win.h"
 #endif  // BUILDFLAG(IS_WIN)
 

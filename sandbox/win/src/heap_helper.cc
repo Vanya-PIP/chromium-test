@@ -7,7 +7,7 @@
 #include <windows.h>
 
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/memory/ref_counted.h"
 

@@ -8,7 +8,7 @@
 
 #include "ash/public/cpp/new_window_delegate.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/values.h"
 #include "chromeos/ash/components/growth/campaigns_logger.h"

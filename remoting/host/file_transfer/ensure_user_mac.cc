@@ -9,7 +9,7 @@
 #include <variant>
 
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace remoting {
 

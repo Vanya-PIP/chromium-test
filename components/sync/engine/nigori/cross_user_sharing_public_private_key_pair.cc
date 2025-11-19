@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/boringssl/src/include/openssl/hpke.h"
 
 namespace syncer {

@@ -22,7 +22,7 @@
 #include "base/i18n/rtl.h"
 #include "base/json/json_writer.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
 #include "base/memory/read_only_shared_memory_region.h"

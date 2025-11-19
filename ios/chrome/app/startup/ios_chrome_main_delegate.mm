@@ -4,7 +4,7 @@
 
 #import "ios/chrome/app/startup/ios_chrome_main_delegate.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "third_party/skia/include/core/SkGraphics.h"
 
 IOSChromeMainDelegate::IOSChromeMainDelegate() {}

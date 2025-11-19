@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "net/server/web_socket.h"
 #include "net/socket/stream_socket.h"

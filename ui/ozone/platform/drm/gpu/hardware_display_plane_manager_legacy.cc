@@ -16,7 +16,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/task/thread_pool.h"
 #include "ui/gfx/gpu_fence.h"

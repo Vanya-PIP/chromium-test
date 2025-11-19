@@ -13,7 +13,7 @@
 #include "base/not_fatal_until.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"
-#include "media/audio/audio_logging.h"
+#include "media/audio/audio_test"
 #include "media/audio/audio_manager.h"
 #include "media/audio/audio_output_proxy.h"
 

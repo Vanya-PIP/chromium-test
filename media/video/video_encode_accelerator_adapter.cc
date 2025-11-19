@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/numerics/checked_math.h"
 #include "base/numerics/safe_conversions.h"

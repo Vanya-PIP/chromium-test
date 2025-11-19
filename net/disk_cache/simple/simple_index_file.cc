@@ -13,7 +13,7 @@
 #include "base/files/file.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/pickle.h"
 #include "base/task/sequenced_task_runner.h"

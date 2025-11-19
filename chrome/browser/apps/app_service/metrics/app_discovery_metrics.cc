@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/apps/app_service/metrics/app_platform_metrics_utils.h"
 #include "chrome/browser/ash/borealis/borealis_util.h"

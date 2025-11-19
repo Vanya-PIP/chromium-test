@@ -19,7 +19,7 @@
 #include "net/traffic_annotation/network_traffic_annotation.h"
 #include "remoting/base/constants.h"
 #include "remoting/base/http_status.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/protobuf_http_client.h"
 #include "remoting/base/protobuf_http_request.h"
 #include "remoting/base/protobuf_http_request_config.h"

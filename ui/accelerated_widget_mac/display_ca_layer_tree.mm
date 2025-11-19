@@ -8,7 +8,7 @@
 
 #include "base/apple/scoped_cftyperef.h"
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/trace_event/trace_event.h"
 #include "build/build_config.h"

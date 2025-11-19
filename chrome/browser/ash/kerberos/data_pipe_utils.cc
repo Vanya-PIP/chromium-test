@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/kerberos/data_pipe_utils.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 namespace data_pipe_utils {

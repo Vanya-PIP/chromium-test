@@ -4,7 +4,7 @@
 
 #include "chrome/browser/memory/oom_kills_monitor.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "base/process/process_metrics.h"

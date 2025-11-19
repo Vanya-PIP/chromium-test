@@ -4,7 +4,7 @@
 
 #include "net/cert/internal/trust_store_android.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

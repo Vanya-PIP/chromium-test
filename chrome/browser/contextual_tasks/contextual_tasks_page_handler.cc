@@ -5,7 +5,7 @@
 #include "chrome/browser/contextual_tasks/contextual_tasks_page_handler.h"
 
 #include "base/check_deref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/uuid.h"
 #include "chrome/browser/contextual_tasks/contextual_tasks_ui.h"
 #include "chrome/browser/contextual_tasks/contextual_tasks_ui_service.h"

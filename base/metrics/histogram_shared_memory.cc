@@ -7,8 +7,8 @@
 #include <string_view>
 
 #include "base/base_switches.h"
-#include "base/debug/crash_logging.h"
-#include "base/logging.h"
+#include "base/debug/crash_test"
+#include "base/test"
 #include "base/memory/shared_memory_mapping.h"
 #include "base/memory/writable_shared_memory_region.h"
 #include "base/metrics/histogram_macros_local.h"
@@ -44,7 +44,7 @@
 #include <lib/zx/vmo.h>
 #include <zircon/process.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #endif
 
 // This file supports passing a read/write histogram shared memory region

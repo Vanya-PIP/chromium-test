@@ -13,7 +13,7 @@
 #include "base/files/file_path.h"
 #include "base/no_destructor.h"
 #include "base/path_service.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/sequenced_task_runner.h"
 #include "build/build_config.h"
 #include "chrome/browser/metrics/chrome_metrics_service_accessor.h"

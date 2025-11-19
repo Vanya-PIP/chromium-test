@@ -5,7 +5,7 @@
 #include "chrome/browser/ui/views/dark_mode_manager_linux.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chrome/browser/ui/ui_features.h"
 #include "components/dbus/thread_linux/dbus_thread_linux.h"

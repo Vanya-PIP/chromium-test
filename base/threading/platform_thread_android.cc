@@ -15,7 +15,7 @@
 #include "base/android/android_info.h"
 #include "base/android/jni_android.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/platform_thread_internal_posix.h"
 #include "base/threading/thread_id_name_manager.h"
 

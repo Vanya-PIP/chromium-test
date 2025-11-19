@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "net/base/filename_util.h"
 #include "remoting/base/compound_buffer.h"

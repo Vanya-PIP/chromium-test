@@ -21,7 +21,7 @@
 #include "chrome/browser/web_applications/web_app_install_info.h"
 #include "chrome/browser/web_applications/web_app_install_utils.h"
 #include "components/webapps/browser/installable/installable_data.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_manager.h"
 #include "components/webapps/browser/installable/installable_params.h"
 #include "components/webapps/common/web_app_id.h"

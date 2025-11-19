@@ -10,9 +10,9 @@
 
 #include "base/check.h"
 #include "base/fuchsia/fuchsia_component_connect.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/threading/scoped_blocking_call.h"
 

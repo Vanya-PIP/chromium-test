@@ -9,7 +9,7 @@
 
 #include "base/check.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/strings/strcat.h"

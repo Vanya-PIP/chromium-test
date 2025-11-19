@@ -4,7 +4,7 @@
 
 #include "media/mojo/clients/mojo_media_log_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/media_log_record.h"
 
 namespace media {

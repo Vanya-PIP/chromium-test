@@ -4,7 +4,7 @@
 
 #import "ios/chrome/browser/snapshots/model/legacy_snapshot_generator.h"
 
-#import "base/debug/crash_logging.h"
+#import "base/debug/crash_test"
 #import "base/debug/dump_without_crashing.h"
 #import "base/functional/bind.h"
 #import "build/blink_buildflags.h"

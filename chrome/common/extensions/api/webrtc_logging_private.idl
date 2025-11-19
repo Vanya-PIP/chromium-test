@@ -72,7 +72,7 @@ namespace webrtcLoggingPrivate {
                             MetaDataEntry[] metaData,
                             GenericDoneCallback callback);
 
-    // Starts logging. If logging has already been started for this render
+    // Starts logging. If testas already been started for this render
     // process, the call will be ignored. |appSessionId| is the unique session
     // ID which will be added to the log.
     static void start(RequestInfo request,

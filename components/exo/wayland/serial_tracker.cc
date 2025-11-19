@@ -8,7 +8,7 @@
 
 #include <wayland-server-core.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace exo {
 namespace wayland {

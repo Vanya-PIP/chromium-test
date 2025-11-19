@@ -5,7 +5,7 @@
 #include "device/vr/android/arcore/ar_compositor_frame_sink.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/task/bind_post_task.h"
 #include "base/task/single_thread_task_runner.h"

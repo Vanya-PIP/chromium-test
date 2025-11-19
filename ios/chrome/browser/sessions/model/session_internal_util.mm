@@ -6,7 +6,7 @@
 
 #import "base/apple/foundation_util.h"
 #import "base/files/file_path.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/chrome/browser/sessions/model/session_ios.h"
 #import "ios/chrome/browser/sessions/model/session_window_ios.h"

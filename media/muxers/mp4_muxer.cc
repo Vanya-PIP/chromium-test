@@ -8,7 +8,7 @@
 #include <memory>
 #include <variant>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 namespace media {
 

@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "chromeos/ash/components/dbus/kerberos/fake_kerberos_client.h"
 #include "chromeos/ash/components/dbus/kerberos/kerberos_client.h"

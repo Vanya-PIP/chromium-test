@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/arc/instance_throttle/arc_boot_phase_throttle_observer.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/arc/arc_util.h"

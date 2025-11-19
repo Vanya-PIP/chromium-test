@@ -6,7 +6,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram.h"
 #include "base/metrics/histogram_base.h"
 #include "base/metrics/histogram_functions.h"

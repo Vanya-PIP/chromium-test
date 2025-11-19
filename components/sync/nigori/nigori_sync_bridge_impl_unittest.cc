@@ -8,7 +8,7 @@
 
 #include "base/base64.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/string_util.h"
 #include "base/test/metrics/histogram_tester.h"

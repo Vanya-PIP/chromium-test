@@ -4,7 +4,7 @@
 
 #include "components/viz/common/quads/offset_tag.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "ui/gfx/geometry/rect_f.h"
 #include "ui/gfx/geometry/vector2d_f.h"

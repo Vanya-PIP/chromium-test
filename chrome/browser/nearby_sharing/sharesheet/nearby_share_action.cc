@@ -23,7 +23,7 @@
 #include "chrome/browser/ui/webui/nearby_share/nearby_share_dialog_ui.h"
 #include "chrome/common/webui_url_constants.h"
 #include "chrome/grit/generated_resources.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/services/app_service/public/cpp/intent_util.h"
 #include "content/public/browser/web_contents.h"
 #include "net/base/filename_util.h"

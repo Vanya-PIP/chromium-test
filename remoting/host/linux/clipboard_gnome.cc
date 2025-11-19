@@ -11,7 +11,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "remoting/base/constants.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/linux/dbus_interfaces/org_gnome_Mutter_RemoteDesktop.h"
 #include "remoting/proto/event.pb.h"
 #include "remoting/protocol/clipboard_stub.h"

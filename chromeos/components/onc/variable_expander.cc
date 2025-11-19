@@ -12,7 +12,7 @@
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/values.h"
 
 namespace {

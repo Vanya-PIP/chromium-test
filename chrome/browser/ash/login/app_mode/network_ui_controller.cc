@@ -13,7 +13,7 @@
 #include "base/check_is_test.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/time/time.h"
 #include "chrome/browser/ash/login/screens/app_launch_splash_screen.h"
 #include "chrome/browser/ash/login/screens/network_error.h"

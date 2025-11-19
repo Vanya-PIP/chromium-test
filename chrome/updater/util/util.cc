@@ -30,7 +30,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/callback.h"
 #include "base/functional/function_ref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/strings/escape.h"
 #include "base/strings/strcat.h"

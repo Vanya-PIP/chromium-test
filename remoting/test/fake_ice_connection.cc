@@ -5,7 +5,7 @@
 #include "remoting/test/fake_ice_connection.h"
 
 #include "remoting/base/errors.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/protocol/client_control_dispatcher.h"
 #include "remoting/protocol/host_control_dispatcher.h"
 #include "remoting/protocol/transport_context.h"

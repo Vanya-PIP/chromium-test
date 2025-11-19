@@ -5,7 +5,7 @@
 #include "remoting/host/win/audio_volume_filter_win.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace remoting {
 

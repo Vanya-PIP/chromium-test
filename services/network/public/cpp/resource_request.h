@@ -11,7 +11,7 @@
 #include <string>
 
 #include "base/component_export.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/memory/scoped_refptr.h"
 #include "base/unguessable_token.h"
 #include "mojo/public/cpp/bindings/remote.h"

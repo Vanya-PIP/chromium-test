@@ -11,7 +11,7 @@
 
 #include "base/command_line.h"
 #include "base/debug/stack_trace.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "ui/views/view.h"
 #include "ui/views/views_switches.h"

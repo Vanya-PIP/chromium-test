@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/arc/arc_ui_availability_reporter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chrome/browser/ash/arc/arc_optin_uma.h"
 #include "chromeos/ash/experiences/arc/session/arc_bridge_service.h"

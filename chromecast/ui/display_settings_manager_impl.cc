@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "chromecast/graphics/cast_window_manager.h"
 #include "chromecast/ui/display_settings/brightness_animation.h"

@@ -10,7 +10,7 @@
 #include "base/android/android_info.h"
 #include "base/command_line.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/thread_id_name_manager.h"
 #include "build/build_config.h"
 #include "sandbox/linux/services/thread_helpers.h"

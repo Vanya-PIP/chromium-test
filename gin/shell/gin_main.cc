@@ -9,7 +9,7 @@
 #include "base/functional/bind.h"
 #include "base/i18n/icu_util.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/run_loop.h"
 #include "base/task/single_thread_task_executor.h"

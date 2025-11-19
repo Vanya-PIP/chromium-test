@@ -15,7 +15,7 @@
 #include "ash/wm/desks/templates/saved_desk_util.h"
 #include "ash/wm/work_area_insets.h"
 #include "base/containers/adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/scoped_observation.h"
 #include "components/app_restore/window_properties.h"
 #include "ui/aura/window.h"

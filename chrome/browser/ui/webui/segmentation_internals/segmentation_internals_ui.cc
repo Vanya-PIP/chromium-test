@@ -5,7 +5,7 @@
 #include "chrome/browser/ui/webui/segmentation_internals/segmentation_internals_ui.h"
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/segmentation_platform/segmentation_platform_service_factory.h"
 #include "chrome/browser/ui/webui/segmentation_internals/segmentation_internals_page_handler_impl.h"

@@ -8,7 +8,7 @@
 #include "chromeos/ash/components/network/network_configuration_handler.h"
 #include "chromeos/ash/services/network_config/in_process_instance.h"
 #include "chromeos/services/network_config/public/mojom/cros_network_config.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace {
 

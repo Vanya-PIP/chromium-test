@@ -9,7 +9,7 @@
 
 #include "media/renderers/shared_image_video_frame_test_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/viz/common/resources/shared_image_format.h"
 #include "gpu/command_buffer/client/client_shared_image.h"
 #include "gpu/command_buffer/client/raster_interface.h"

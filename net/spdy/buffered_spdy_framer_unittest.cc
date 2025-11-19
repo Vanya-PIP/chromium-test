@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/log/net_log_with_source.h"
 #include "net/spdy/spdy_test_util_common.h"
 #include "net/third_party/quiche/src/quiche/common/http/http_header_block.h"

@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 #include "chrome/browser/ui/webui/privacy_sandbox/privacy_sandbox_internals_handler.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/content_settings/cookie_settings_factory.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/ui/webui/privacy_sandbox/privacy_sandbox_internals.mojom.h"

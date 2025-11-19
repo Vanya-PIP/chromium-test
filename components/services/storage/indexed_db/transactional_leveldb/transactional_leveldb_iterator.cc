@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "components/services/storage/indexed_db/scopes/leveldb_scope.h"
 #include "components/services/storage/indexed_db/scopes/leveldb_scopes.h"

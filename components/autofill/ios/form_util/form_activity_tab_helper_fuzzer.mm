@@ -4,7 +4,7 @@
 
 #import "components/autofill/ios/form_util/form_activity_tab_helper.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/raw_ptr.h"
 #import "base/rand_util.h"
 #import "base/test/ios/wait_util.h"

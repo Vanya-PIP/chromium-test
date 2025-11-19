@@ -7,7 +7,7 @@
 #include <limits>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/pickle.h"
 #include "base/stl_util.h"
 

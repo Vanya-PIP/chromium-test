@@ -11,7 +11,7 @@
 #include "chrome/browser/nearby_sharing/transfer_metadata.h"
 #include "chrome/browser/nearby_sharing/transfer_metadata_builder.h"
 #include "chromeos/constants/chromeos_features.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 PayloadTracker::PayloadTracker(
     const ShareTarget& share_target,

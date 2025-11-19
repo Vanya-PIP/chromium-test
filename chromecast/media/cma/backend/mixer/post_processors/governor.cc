@@ -9,7 +9,7 @@
 #include <string>
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/ranges.h"
 #include "base/values.h"
 #include "chromecast/media/base/slew_volume.h"

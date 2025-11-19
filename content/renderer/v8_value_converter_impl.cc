@@ -18,7 +18,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/values.h"
 #include "v8/include/v8-array-buffer.h"

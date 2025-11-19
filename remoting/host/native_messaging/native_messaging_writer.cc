@@ -9,7 +9,7 @@
 
 #include "base/containers/span.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 
 namespace {

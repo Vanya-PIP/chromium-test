@@ -33,7 +33,7 @@
 #include "ash/webui/personalization_app/mojom/personalization_app_mojom_traits.h"
 #include "ash/webui/personalization_app/proto/backdrop_wallpaper.pb.h"
 #include "base/containers/span.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"

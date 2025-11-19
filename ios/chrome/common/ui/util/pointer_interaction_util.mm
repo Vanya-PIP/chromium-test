@@ -6,7 +6,7 @@
 
 #import <ostream>
 
-#import "base/logging.h"
+#import "base/test"
 
 namespace {
 // Returns a pointer style with a hover effect with a slight tint and no pointer

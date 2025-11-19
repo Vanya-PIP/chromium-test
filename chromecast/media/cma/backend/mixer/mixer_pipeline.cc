@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/base/audio_device_ids.h"
 #include "chromecast/media/cma/backend/mixer/filter_group.h"
 #include "chromecast/media/cma/backend/mixer/post_processing_pipeline_impl.h"

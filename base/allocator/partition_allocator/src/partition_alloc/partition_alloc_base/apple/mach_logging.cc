@@ -7,7 +7,7 @@
 #pragma allow_unsafe_buffers
 #endif
 
-#include "partition_alloc/partition_alloc_base/apple/mach_logging.h"
+#include "partition_alloc/partition_alloc_base/apple/mach_test"
 
 #include <iomanip>
 #include <string>

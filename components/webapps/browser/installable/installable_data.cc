@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/containers/flat_set.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 
 namespace webapps {
 

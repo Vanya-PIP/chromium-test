@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/strings/stringprintf.h"
 #include "chromeos/ash/components/dbus/hermes/hermes_clients.h"

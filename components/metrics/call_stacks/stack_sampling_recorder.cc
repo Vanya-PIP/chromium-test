@@ -12,7 +12,7 @@
 #include "base/containers/span.h"
 #include "base/files/file.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

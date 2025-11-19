@@ -14,7 +14,7 @@
 #include <utility>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/at_exit.h"
 #include "base/command_line.h"
 #include "base/mac/process_requirement.h"

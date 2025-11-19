@@ -4,7 +4,7 @@
 
 #include "ui/ozone/platform/wayland/host/wayland_shm_buffer.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/platform_shared_memory_region.h"
 #include "base/memory/unsafe_shared_memory_region.h"
 #include "ui/gfx/geometry/skia_conversions.h"

@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/browser/navigation_controller.h"
 #include "content/public/browser/render_process_host.h"
 #include "content/public/browser/web_contents.h"

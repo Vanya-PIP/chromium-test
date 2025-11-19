@@ -17,7 +17,7 @@
 #include "base/json/json_file_value_serializer.h"
 #include "base/json/json_string_value_serializer.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notimplemented.h"
 #include "base/path_service.h"

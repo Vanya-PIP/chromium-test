@@ -9,7 +9,7 @@
 #include "base/command_line.h"
 #include "base/feature_list.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "components/network_session_configurator/common/network_switches.h"
 #include "net/base/features.h"

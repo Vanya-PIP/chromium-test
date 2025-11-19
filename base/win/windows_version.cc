@@ -11,11 +11,11 @@
 #include <utility>
 
 #include "base/check_op.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/file_version_info_win.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"

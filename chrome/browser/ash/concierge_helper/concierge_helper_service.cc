@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/system/sys_info.h"
 #include "chromeos/ash/components/dbus/concierge/concierge_client.h"

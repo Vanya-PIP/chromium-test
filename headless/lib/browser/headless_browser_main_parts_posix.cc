@@ -16,7 +16,7 @@
 #include "base/files/file_descriptor_watcher_posix.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/no_destructor.h"
 #include "base/posix/eintr_wrapper.h"

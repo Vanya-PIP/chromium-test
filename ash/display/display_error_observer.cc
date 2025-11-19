@@ -8,7 +8,7 @@
 
 #include "ash/display/display_util.h"
 #include "ash/strings/grit/ash_strings.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/chromeos/devicetype_utils.h"

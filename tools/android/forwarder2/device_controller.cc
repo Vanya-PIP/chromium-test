@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "third_party/abseil-cpp/absl/cleanup/cleanup.h"
 #include "tools/android/forwarder2/command.h"

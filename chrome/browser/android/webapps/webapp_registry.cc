@@ -6,7 +6,7 @@
 
 #include "base/android/jni_android.h"
 #include "base/android/jni_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/android/browsing_data/url_filter_bridge.h"
 #include "components/sync/protocol/web_apk_specifics.pb.h"
 

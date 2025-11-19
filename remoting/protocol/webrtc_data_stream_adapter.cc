@@ -17,7 +17,7 @@
 #include "base/task/sequenced_task_runner.h"
 #include "net/base/net_errors.h"
 #include "remoting/base/compound_buffer.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/protocol/message_serialization.h"
 #include "third_party/webrtc/api/data_channel_interface.h"
 

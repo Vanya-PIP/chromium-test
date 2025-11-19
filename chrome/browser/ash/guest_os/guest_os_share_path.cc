@@ -11,7 +11,7 @@
 #include "base/barrier_callback.h"
 #include "base/containers/contains.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "chrome/browser/ash/crostini/crostini_manager.h"
 #include "chrome/browser/ash/crostini/crostini_util.h"

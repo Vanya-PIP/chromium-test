@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "base/environment.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/process/process_handle.h"
 #include "base/strings/cstring_view.h"
@@ -26,7 +26,7 @@
 #include <memory>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/scoped_handle.h"
 #include "remoting/host/win/trust_util.h"
 #endif

@@ -14,7 +14,7 @@
 #include "base/functional/bind.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/time/time.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_adapter_factory.h"
 #include "device/bluetooth/bluetooth_low_energy_scan_filter.h"
 

@@ -8,7 +8,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/zucchini/algorithm.h"
 
 namespace zucchini {

@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/multidevice_setup/multidevice_setup_impl.h"
 #include "chromeos/ash/services/multidevice_setup/public/cpp/android_sms_app_helper_delegate.h"
 #include "chromeos/ash/services/multidevice_setup/public/cpp/android_sms_pairing_state_tracker.h"

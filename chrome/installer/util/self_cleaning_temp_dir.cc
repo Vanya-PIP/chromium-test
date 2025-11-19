@@ -7,7 +7,7 @@
 #include <windows.h>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/installer/util/delete_after_reboot_helper.h"
 
 namespace installer {

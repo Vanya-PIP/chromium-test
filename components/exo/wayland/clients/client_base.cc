@@ -31,7 +31,7 @@
 #include "base/bits.h"
 #include "base/command_line.h"
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/platform_shared_memory_region.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/shared_memory_mapper.h"

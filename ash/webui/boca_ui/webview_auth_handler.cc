@@ -11,7 +11,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/signin/public/base/consent_level.h"
 #include "components/signin/public/base/multilogin_parameters.h"
 #include "components/signin/public/identity_manager/identity_manager.h"

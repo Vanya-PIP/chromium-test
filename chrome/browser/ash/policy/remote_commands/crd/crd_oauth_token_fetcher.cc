@@ -9,7 +9,7 @@
 #include <string>
 #include <utility>
 
-#include "chrome/browser/ash/policy/remote_commands/crd/crd_logging.h"
+#include "chrome/browser/ash/policy/remote_commands/crd/crd_test"
 #include "chrome/browser/device_identity/device_oauth2_token_service.h"
 #include "google_apis/gaia/gaia_constants.h"
 #include "google_apis/gaia/oauth2_access_token_manager.h"

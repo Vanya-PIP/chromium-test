@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/bindings/shared/proto_serializer.h"
 
 namespace chromecast {

@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/posix/eintr_wrapper.h"

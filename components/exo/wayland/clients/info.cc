@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"
 #include "components/exo/wayland/clients/client_helper.h"

@@ -16,7 +16,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/path_service.h"
 #include "base/process/launch.h"

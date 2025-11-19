@@ -13,7 +13,7 @@
 #include "base/command_line.h"
 #include "base/debug/dump_without_crashing.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/field_trial_params.h"
 #include "base/metrics/histogram_macros.h"

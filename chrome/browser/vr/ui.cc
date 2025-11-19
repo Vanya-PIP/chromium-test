@@ -12,7 +12,7 @@
 #include "chrome/browser/vr/ui.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/angle_conversions.h"
 #include "base/task/single_thread_task_runner.h"
 #include "build/build_config.h"

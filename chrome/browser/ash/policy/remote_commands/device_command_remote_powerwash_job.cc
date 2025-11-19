@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/time/time.h"
 #include "chromeos/ash/components/dbus/session_manager/session_manager_client.h"

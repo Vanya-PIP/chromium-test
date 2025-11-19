@@ -4,7 +4,7 @@
 
 #include "chrome/browser/password_manager/startup_passwords_import_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/password_manager/startup_passwords_importer.h"
 #include "chrome/browser/profiles/profile.h"
 

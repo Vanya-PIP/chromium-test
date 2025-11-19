@@ -4,7 +4,7 @@
 
 #include "gpu/skia_bindings/gl_bindings_skia_cmd_buffer.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "gpu/command_buffer/client/context_support.h"
 #include "gpu/command_buffer/client/gles2_interface.h"

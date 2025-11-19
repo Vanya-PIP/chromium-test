@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/platform_shared_memory_region.h"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"

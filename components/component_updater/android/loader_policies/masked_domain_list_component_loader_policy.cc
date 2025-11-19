@@ -15,7 +15,7 @@
 #include "base/containers/span.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "base/values.h"
 #include "base/version.h"

@@ -13,7 +13,7 @@
 #include <utility>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/codec/audio_decoder_opus.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

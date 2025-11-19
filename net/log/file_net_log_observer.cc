@@ -16,7 +16,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/numerics/clamped_math.h"
 #include "base/strings/string_number_conversions.h"
@@ -317,7 +317,7 @@ class FileNetLogObserver::FileWriter {
   // Holds the numbered events file where data is currently being written to.
   // The file path of this file is GetEventFilePath(current_event_file_number_).
   // The file may be !IsValid() if an error previously occurred opening the
-  // file, or logging has been stopped.
+  // file, or testas been stopped.
   base::File current_event_file_;
   uint64_t current_event_file_size_;
 

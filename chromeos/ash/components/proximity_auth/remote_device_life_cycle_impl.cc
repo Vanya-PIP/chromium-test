@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/task/single_thread_task_runner.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/proximity_auth/messenger_impl.h"
 #include "chromeos/ash/services/secure_channel/public/cpp/client/secure_channel_client.h"
 #include "chromeos/ash/services/secure_channel/public/cpp/shared/connection_priority.h"

@@ -12,7 +12,7 @@
 #include "app_controls_metrics_utils.h"
 #include "ash/constants/ash_pref_names.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "blocked_app_registry.h"

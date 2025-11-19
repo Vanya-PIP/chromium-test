@@ -4,7 +4,7 @@
 
 #import "ios/web/navigation/crw_web_view_navigation_observer.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/web/common/features.h"

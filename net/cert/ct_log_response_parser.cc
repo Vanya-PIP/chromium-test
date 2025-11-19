@@ -10,7 +10,7 @@
 #include "base/base64.h"
 #include "base/containers/span.h"
 #include "base/json/json_value_converter.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/values.h"
 #include "net/cert/ct_serialization.h"

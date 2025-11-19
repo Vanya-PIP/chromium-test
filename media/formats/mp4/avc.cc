@@ -14,7 +14,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/decrypt_config.h"
 #include "media/formats/mp4/box_definitions.h"
 #include "media/formats/mp4/box_reader.h"

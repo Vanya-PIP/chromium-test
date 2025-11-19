@@ -10,7 +10,7 @@
 #include <string_view>
 
 #include "base/containers/fixed_flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_base.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"

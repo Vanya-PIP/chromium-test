@@ -14,7 +14,7 @@
 #include "base/functional/callback.h"
 #include "base/i18n/message_formatter.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/time/time.h"

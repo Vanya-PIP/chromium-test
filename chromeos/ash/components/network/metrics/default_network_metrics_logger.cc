@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/network/metrics/default_network_metrics_logger.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chromeos/ash/components/network/network_state.h"
 #include "chromeos/ash/components/network/network_state_handler.h"

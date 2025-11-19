@@ -17,7 +17,7 @@
 #include <vector>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/command_line.h"
 #include "base/containers/flat_set.h"

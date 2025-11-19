@@ -4,7 +4,7 @@
 
 #include "ui/gl/gl_fence_win.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "ui/gl/gl_angle_util_win.h"
 

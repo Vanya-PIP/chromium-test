@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "chrome/browser/ash/crostini/ansible/ansible_management_service.h"
 #include "chrome/browser/ash/crostini/ansible/ansible_management_service_factory.h"

@@ -18,7 +18,7 @@
 #include "base/command_line.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "chrome/updater/constants.h"
 #include "chrome/updater/util/util.h"

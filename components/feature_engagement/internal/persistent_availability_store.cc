@@ -12,7 +12,7 @@
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/feature_engagement/internal/proto/availability.pb.h"
 #include "components/feature_engagement/internal/stats.h"
 #include "components/feature_engagement/public/feature_list.h"

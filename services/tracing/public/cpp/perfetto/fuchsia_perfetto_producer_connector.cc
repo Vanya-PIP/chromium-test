@@ -14,7 +14,7 @@
 
 #include "base/files/scoped_file.h"
 #include "base/fuchsia/fuchsia_component_connect.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
 #include "base/memory/platform_shared_memory_region.h"
 #include "base/message_loop/message_pump_type.h"

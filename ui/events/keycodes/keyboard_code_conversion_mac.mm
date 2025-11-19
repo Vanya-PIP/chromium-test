@@ -14,7 +14,7 @@
 #include <algorithm>
 
 #include "base/apple/foundation_util.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/check_op.h"
 #include "base/containers/fixed_flat_map.h"

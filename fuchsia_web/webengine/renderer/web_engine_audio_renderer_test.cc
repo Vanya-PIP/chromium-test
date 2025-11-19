@@ -16,8 +16,8 @@
 #include <optional>
 
 #include "base/containers/queue.h"
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/task/single_thread_task_runner.h"

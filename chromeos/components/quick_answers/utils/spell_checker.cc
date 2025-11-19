@@ -4,7 +4,7 @@
 
 #include "chromeos/components/quick_answers/utils/spell_checker.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/types/expected.h"
 #include "chromeos/components/quick_answers/public/cpp/quick_answers_prefs.h"

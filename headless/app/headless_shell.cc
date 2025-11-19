@@ -16,7 +16,7 @@
 #include "base/command_line.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "base/version_info/version_info.h"
 #include "build/branding_buildflags.h"

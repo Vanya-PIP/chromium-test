@@ -10,7 +10,7 @@
 
 #include "base/command_line.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"

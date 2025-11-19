@@ -7,7 +7,7 @@
 #include "base/at_exit.h"
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/starboard/chromecast/starboard_adapter/public/cast_starboard_api_adapter.h"
 
 namespace chromecast {

@@ -8,7 +8,7 @@
 #include <cstring>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/simple_test_clock.h"
 #include "base/time/time.h"
 #include "components/segmentation_platform/internal/database/signal_key_internal.h"

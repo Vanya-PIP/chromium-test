@@ -9,7 +9,7 @@
 
 #include "base/containers/contains.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "build/build_config.h"
 #include "components/policy/core/common/policy_bundle.h"

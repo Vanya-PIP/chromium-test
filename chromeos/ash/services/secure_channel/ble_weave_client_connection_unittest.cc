@@ -22,7 +22,7 @@
 #include "base/test/test_simple_task_runner.h"
 #include "base/timer/mock_timer.h"
 #include "base/timer/timer.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/components/multidevice/remote_device_test_util.h"
 #include "chromeos/ash/services/secure_channel/ble_weave_packet_generator.h"

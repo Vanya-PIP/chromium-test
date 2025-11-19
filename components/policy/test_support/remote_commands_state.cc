@@ -4,7 +4,7 @@
 
 #include "components/policy/test_support/remote_commands_state.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/policy/proto/device_management_backend.pb.h"
 
 namespace em = enterprise_management;

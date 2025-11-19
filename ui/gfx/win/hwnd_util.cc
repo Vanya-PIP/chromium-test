@@ -9,7 +9,7 @@
 #include <dwmapi.h>  // DWMWA_CLOAKED
 
 #include "base/debug/gdi_debug_util_win.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_util.h"
 #include "base/win/scoped_gdi_object.h"

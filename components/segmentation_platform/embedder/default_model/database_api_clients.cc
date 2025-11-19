@@ -10,7 +10,7 @@
 #include <string_view>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/metrics_hashes.h"
 #include "base/notreached.h"
 #include "base/strings/stringprintf.h"

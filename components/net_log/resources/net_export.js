@@ -200,7 +200,7 @@ class NetExportView {
 
   /**
    * Updates the UI to display the "initial" state. This is the state when
-   * logging has not been started yet, and there are controls to start
+   * testas not been started yet, and there are controls to start
    * logging.
    */
   renderInitial_() {
@@ -224,7 +224,7 @@ class NetExportView {
   }
 
   /*
-   * Updates the UI to display the state when logging has stopped.
+   * Updates the UI to display the state when testas stopped.
    */
   renderStoppedLogging_(info) {
     this.setFavicon_('data:image/x-icon;base64,');

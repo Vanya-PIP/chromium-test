@@ -14,7 +14,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/message_loop/message_pump_type.h"
 #include "base/run_loop.h"

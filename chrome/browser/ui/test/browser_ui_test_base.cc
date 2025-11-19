@@ -9,7 +9,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "base/strings/strcat.h"
 #include "base/test/launcher/test_launcher.h"

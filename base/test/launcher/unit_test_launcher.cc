@@ -20,7 +20,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/i18n/icu_util.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/sequence_checker.h"
 #include "base/strings/strcat.h"

@@ -12,7 +12,7 @@
 #include "base/base64.h"
 #include "base/hash/hash.h"
 #include "base/hash/sha1.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/trace_event/memory_usage_estimator.h"

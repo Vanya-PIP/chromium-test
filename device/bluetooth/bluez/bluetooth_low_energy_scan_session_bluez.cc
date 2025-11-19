@@ -8,7 +8,7 @@
 
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "device/bluetooth/bluez/bluetooth_adapter_bluez.h"
 #include "device/bluetooth/bluez/bluetooth_device_bluez.h"

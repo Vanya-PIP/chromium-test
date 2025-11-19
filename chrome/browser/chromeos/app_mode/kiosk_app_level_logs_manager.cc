@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/browser/ash/app_mode/kiosk_app_types.h"
 #include "chrome/browser/chromeos/app_mode/kiosk_app_level_logs_saver.h"
 #include "chrome/browser/chromeos/app_mode/kiosk_service_workers_logs_collector.h"

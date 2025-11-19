@@ -6,7 +6,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "chromecast/base/bind_to_task_runner.h"
 #include "chromecast/device/bluetooth/le/gatt_client_manager_impl.h"

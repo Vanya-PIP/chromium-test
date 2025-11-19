@@ -12,7 +12,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/containers/adapters.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "chrome/browser/ash/borealis/borealis_prefs.h"
 #include "chrome/browser/ash/bruschetta/bruschetta_pref_names.h"

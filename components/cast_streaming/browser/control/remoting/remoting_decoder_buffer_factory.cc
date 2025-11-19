@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/decoder_buffer.h"
 #include "media/cast/openscreen/remoting_proto_utils.h"
 #include "third_party/openscreen/src/cast/streaming/public/encoded_frame.h"

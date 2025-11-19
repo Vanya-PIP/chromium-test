@@ -9,7 +9,7 @@
 #include "base/command_line.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/test/base/mixin_based_in_process_browser_test.h"
 #include "extensions/common/verifier_formats.h"
 #include "net/test/embedded_test_server/http_request.h"

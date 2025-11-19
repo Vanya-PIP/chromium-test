@@ -6,7 +6,7 @@
 
 #include <sstream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"
 #include "chrome/browser/on_device_translation/language_pack_util.h"

@@ -4,7 +4,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump.h"
 #include "base/rand_util.h"
 #include "base/run_loop.h"

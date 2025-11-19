@@ -27,7 +27,7 @@
 #include "base/containers/span.h"
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/types/expected.h"
 #include "build/branding_buildflags.h"

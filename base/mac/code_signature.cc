@@ -6,7 +6,7 @@
 
 #include <variant>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/mac/info_plist_data.h"
 #include "base/strings/string_view_util.h"

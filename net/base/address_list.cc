@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "net/base/sys_addrinfo.h"
 

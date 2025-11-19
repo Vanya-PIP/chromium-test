@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/json/values_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/time/time.h"
 #include "chrome/browser/prefetch/pref_names.h"

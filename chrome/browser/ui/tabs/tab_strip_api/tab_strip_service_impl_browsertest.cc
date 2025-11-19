@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/tabs/tab_strip_api/tab_strip_service_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/run_loop.h"
 #include "base/strings/string_number_conversions.h"

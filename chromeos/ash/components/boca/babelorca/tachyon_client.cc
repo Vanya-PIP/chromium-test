@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"
 #include "chromeos/ash/components/boca/babelorca/request_data_wrapper.h"

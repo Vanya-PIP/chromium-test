@@ -5,7 +5,7 @@
 #include "chromecast/media/common/media_pipeline_backend_wrapper.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "chromecast/media/common/audio_decoder_wrapper.h"

@@ -5,7 +5,7 @@
 #include "chrome/browser/ui/views/download/bubble/download_bubble_security_view.h"
 
 #include "base/containers/fixed_flat_map.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_functions.h"

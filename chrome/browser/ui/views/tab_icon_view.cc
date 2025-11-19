@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "build/build_config.h"
 #include "chrome/app/chrome_command_ids.h"

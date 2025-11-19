@@ -10,7 +10,7 @@
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
 #include "base/values.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/services/network_config/public/mojom/cros_network_config.mojom.h"
 #include "crypto/sha2.h"
 #include "ui/display/screen.h"

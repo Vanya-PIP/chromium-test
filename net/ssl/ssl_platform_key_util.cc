@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/threading/thread.h"

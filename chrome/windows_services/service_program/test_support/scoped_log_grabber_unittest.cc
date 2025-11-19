@@ -12,7 +12,7 @@
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_view_util.h"
 #include "base/test/mock_callback.h"
 #include "base/test/multiprocess_test.h"

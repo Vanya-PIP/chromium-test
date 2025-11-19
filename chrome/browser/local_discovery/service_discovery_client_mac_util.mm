@@ -5,7 +5,7 @@
 #include "chrome/browser/local_discovery/service_discovery_client_mac_util.h"
 
 #include "base/apple/foundation_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"

@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/extensions/api/image_writer_private/error_constants.h"
 #include "chromeos/ash/components/dbus/image_burner/image_burner_client.h"
 #include "chromeos/ash/components/disks/disk.h"

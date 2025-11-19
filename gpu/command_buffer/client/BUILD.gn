@@ -159,7 +159,7 @@ gles2_implementation_source_files = [
   "implementation_base.cc",
   "implementation_base.h",
   "logging.cc",
-  "logging.h",
+  "test",
   "program_info_manager.cc",
   "program_info_manager.h",
   "query_tracker.cc",

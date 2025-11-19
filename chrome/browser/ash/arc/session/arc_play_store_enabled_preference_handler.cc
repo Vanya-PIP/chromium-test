@@ -8,7 +8,7 @@
 
 #include "base/command_line.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/app_list/arc/arc_app_utils.h"
 #include "chrome/browser/ash/arc/arc_optin_uma.h"
 #include "chrome/browser/ash/arc/arc_util.h"

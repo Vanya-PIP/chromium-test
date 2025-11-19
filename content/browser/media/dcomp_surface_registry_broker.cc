@@ -4,7 +4,7 @@
 
 #include "content/browser/media/dcomp_surface_registry_broker.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/browser/gpu/gpu_process_host.h"
 #include "mojo/public/cpp/bindings/callback_helpers.h"
 

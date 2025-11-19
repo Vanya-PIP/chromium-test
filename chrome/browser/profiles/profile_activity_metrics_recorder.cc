@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/task/sequenced_task_runner.h"

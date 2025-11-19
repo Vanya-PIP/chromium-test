@@ -6,7 +6,7 @@
 
 #include "base/android/jni_android.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 
 namespace base {

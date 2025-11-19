@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/color/color_mixer.h"
 #include "ui/color/color_provider_utils.h"
 

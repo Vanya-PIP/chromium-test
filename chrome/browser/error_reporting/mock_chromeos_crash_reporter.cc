@@ -23,7 +23,7 @@
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/strings/escape.h"
 #include "base/strings/strcat.h"

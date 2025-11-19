@@ -7344,7 +7344,7 @@ extern const NameToFunc g_gles2_function_table[] = {
     """Writes the Pepper OpenGLES interface implementation."""
     with CWriter(filename, self.year) as f:
       f.write("#include \"ppapi/shared_impl/ppb_opengles2_shared.h\"\n\n")
-      f.write("#include \"base/logging.h\"\n")
+      f.write("#include \"base/test\"\n")
       f.write("#include \"gpu/command_buffer/client/gles2_implementation.h\"\n")
       f.write("#include \"ppapi/shared_impl/ppb_graphics_3d_shared.h\"\n")
       f.write("#include \"ppapi/thunk/enter.h\"\n\n")

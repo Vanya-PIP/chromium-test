@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/proxy_chain.h"
 #include "net/base/proxy_delegate.h"
 #include "net/log/net_log.h"

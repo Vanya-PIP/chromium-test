@@ -261,7 +261,7 @@ source_set("authorization") {
 }
 
 source_set("logging") {
-  public = [ "logging.h" ]
+  public = [ "test" ]
 
   sources = [
     "logging.cc",

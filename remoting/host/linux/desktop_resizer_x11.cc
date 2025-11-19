@@ -18,7 +18,7 @@
 #include "base/command_line.h"
 #include "base/system/sys_info.h"
 #include "base/types/cxx23_to_underlying.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/desktop_geometry.h"
 #include "remoting/host/linux/gvariant_ref.h"
 #include "remoting/host/linux/x11_display_util.h"

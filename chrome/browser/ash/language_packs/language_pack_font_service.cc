@@ -15,7 +15,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/strings/string_split.h"
 #include "chromeos/ash/components/language_packs/language_pack_manager.h"

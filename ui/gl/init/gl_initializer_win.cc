@@ -10,7 +10,7 @@
 #include "base/base_paths.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 #include "base/path_service.h"
 #include "base/threading/thread_restrictions.h"

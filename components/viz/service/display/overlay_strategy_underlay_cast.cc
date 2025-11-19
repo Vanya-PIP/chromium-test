@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/containers/adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/unguessable_token.h"
 #include "build/chromecast_buildflags.h"

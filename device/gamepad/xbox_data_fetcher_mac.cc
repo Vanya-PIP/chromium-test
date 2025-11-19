@@ -22,7 +22,7 @@
 
 #include "base/apple/foundation_util.h"
 #include "base/containers/fixed_flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "device/gamepad/gamepad_id_list.h"

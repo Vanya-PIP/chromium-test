@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/stl_util.h"
 #include "base/time/time.h"
 #include "content/public/renderer/render_frame.h"

@@ -28,7 +28,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/functional/function_ref.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_iterator.h"
 #include "base/scoped_generic.h"
 #include "base/strings/cstring_view.h"

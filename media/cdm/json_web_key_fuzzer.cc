@@ -14,7 +14,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 
 // For disabling noisy logging.
 struct Environment {

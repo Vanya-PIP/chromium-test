@@ -15,7 +15,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/trace_event/typed_macros.h"
 #include "components/viz/common/resources/shared_image_format_utils.h"

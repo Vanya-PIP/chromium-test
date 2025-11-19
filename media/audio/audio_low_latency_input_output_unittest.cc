@@ -13,7 +13,7 @@
 #include "base/environment.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/path_service.h"
 #include "base/run_loop.h"

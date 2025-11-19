@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/values.h"
 #include "chromeos/ash/components/policy/weekly_time/weekly_time_checked.h"

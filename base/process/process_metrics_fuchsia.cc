@@ -7,7 +7,7 @@
 #include <lib/fdio/limits.h>
 #include <lib/zx/process.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/memory/ptr_util.h"
 #include "base/trace_event/trace_event.h"
 

@@ -18,7 +18,7 @@
 #include "base/command_line.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/metrics/field_trial_params.h"
 #include "base/metrics/histogram_functions.h"

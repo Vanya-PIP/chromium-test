@@ -7,7 +7,7 @@
 #include <windows.h>
 
 #include "base/clang_profiling_buildflags.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/process/kill.h"
 #include "base/threading/thread_restrictions.h"

@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_util.h"
 #include "base/strings/string_view_util.h"

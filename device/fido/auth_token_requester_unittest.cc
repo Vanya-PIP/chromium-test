@@ -10,7 +10,7 @@
 
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/run_loop.h"
 #include "base/strings/utf_string_conversions.h"

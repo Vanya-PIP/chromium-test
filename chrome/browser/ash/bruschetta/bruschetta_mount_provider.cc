@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/bruschetta/bruschetta_mount_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "chrome/browser/ash/bruschetta/bruschetta_launcher.h"
 #include "chrome/browser/ash/bruschetta/bruschetta_pref_names.h"

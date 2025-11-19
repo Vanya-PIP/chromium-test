@@ -17,7 +17,7 @@
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/path_service.h"
 #include "base/scoped_native_library.h"

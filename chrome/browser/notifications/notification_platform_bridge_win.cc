@@ -23,7 +23,7 @@
 #include "base/functional/bind.h"
 #include "base/hash/hash.h"
 #include "base/i18n/file_util_icu.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/path_service.h"
 #include "base/strings/string_number_conversions.h"

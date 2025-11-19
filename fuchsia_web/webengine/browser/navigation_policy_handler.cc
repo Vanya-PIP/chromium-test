@@ -6,7 +6,7 @@
 
 #include <lib/fidl/cpp/binding.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "content/public/browser/navigation_handle.h"
 #include "fuchsia_web/webengine/browser/navigation_policy_throttle.h"
 

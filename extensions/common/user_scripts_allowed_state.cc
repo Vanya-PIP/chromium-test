@@ -7,7 +7,7 @@
 #include <map>
 
 #include "base/containers/map_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/synchronization/lock.h"
 #include "extensions/common/extension_id.h"

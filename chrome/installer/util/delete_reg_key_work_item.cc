@@ -5,7 +5,7 @@
 #include "chrome/installer/util/delete_reg_key_work_item.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/registry.h"
 #include "base/win/shlwapi.h"
 #include "chrome/installer/util/registry_util.h"

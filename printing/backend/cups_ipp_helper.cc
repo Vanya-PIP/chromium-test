@@ -16,7 +16,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/fixed_flat_map.h"
 #include "base/containers/fixed_flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/clamped_math.h"
 #include "base/strings/string_util.h"
 #include "build/build_config.h"

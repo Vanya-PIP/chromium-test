@@ -18,7 +18,7 @@
 #include "base/functional/bind.h"
 #include "base/json/values_util.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram.h"
 #include "base/notreached.h"

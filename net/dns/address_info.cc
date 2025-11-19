@@ -12,7 +12,7 @@
 #include <memory>
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/sys_byteorder.h"
 #include "build/build_config.h"

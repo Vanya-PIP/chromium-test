@@ -13,7 +13,7 @@
 #include "base/files/file.h"
 #include "base/files/file_path.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/numerics/safe_math.h"

@@ -14,7 +14,7 @@
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/utf_string_conversions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/app_stream_manager.h"
 #include "chromeos/ash/components/phonehub/do_not_disturb_controller.h"
 #include "chromeos/ash/components/phonehub/find_my_device_controller.h"

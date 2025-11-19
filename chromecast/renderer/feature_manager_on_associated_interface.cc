@@ -5,7 +5,7 @@
 #include "chromecast/renderer/feature_manager_on_associated_interface.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromecast/base/cast_features.h"
 #include "chromecast/common/feature_constants.h"

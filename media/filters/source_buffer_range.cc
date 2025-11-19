@@ -13,7 +13,7 @@
 #include <sstream>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/not_fatal_until.h"
 #include "media/base/stream_parser_buffer.h"
 #include "media/base/timestamp_constants.h"

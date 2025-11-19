@@ -20,7 +20,7 @@
 #include "ash/system/scheduled_feature/schedule_utils.h"
 #include "base/functional/bind.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "base/strings/stringprintf.h"

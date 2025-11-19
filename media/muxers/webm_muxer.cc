@@ -18,7 +18,7 @@
 #include "base/containers/circular_deque.h"
 #include "base/containers/span.h"
 #include "base/containers/span_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/numerics/safe_math.h"

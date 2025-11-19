@@ -4,7 +4,7 @@
 
 #include "media/parsers/h264_level_limits.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "media/parsers/h264_parser.h"
 

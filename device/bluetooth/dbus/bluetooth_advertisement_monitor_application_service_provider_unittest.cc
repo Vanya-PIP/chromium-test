@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "dbus/bus.h"
 #include "dbus/message.h"

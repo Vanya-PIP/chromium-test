@@ -15,7 +15,7 @@ source_set("common") {
   ]
   public = [
     "fuchsia_dir_scheme.h",
-    "init_logging.h",
+    "init_test",
     "string_util.h",
   ]
   deps = [

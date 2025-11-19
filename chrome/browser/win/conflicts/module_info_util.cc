@@ -18,7 +18,7 @@
 #include "base/environment.h"
 #include "base/files/file.h"
 #include "base/i18n/case_conversion.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/scoped_generic.h"
 #include "base/strings/strcat_win.h"

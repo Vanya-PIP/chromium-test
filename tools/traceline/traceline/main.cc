@@ -18,7 +18,7 @@
 #include <string>
 
 #include "assembler.h"
-#include "logging.h"
+#include "test"
 #include "rdtsc.h"
 #include "sidestep/mini_disassembler.h"
 #include "sym_resolver.h"

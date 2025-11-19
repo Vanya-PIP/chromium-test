@@ -9,7 +9,7 @@
 #include "ash/style/dark_light_mode_controller_impl.h"
 #include "ash/style/mojom/color_scheme.mojom-shared.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "chromeos/ash/experiences/arc/arc_browser_context_keyed_service_factory_base.h"
 #include "chromeos/ash/experiences/arc/session/arc_bridge_service.h"

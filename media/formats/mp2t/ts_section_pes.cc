@@ -11,7 +11,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "media/base/bit_reader.h"
 #include "media/base/byte_queue.h"

@@ -11,7 +11,7 @@
 #include <optional>
 #include <string>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/callback.h"
 #include "base/location.h"
 

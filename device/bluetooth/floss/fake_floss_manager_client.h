@@ -5,7 +5,7 @@
 #ifndef DEVICE_BLUETOOTH_FLOSS_FAKE_FLOSS_MANAGER_CLIENT_H_
 #define DEVICE_BLUETOOTH_FLOSS_FAKE_FLOSS_MANAGER_CLIENT_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/bluetooth/bluetooth_export.h"
 #include "device/bluetooth/floss/floss_manager_client.h"
 

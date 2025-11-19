@@ -10,7 +10,7 @@
 #include "ash/constants/ash_switches.h"
 #include "base/command_line.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/strings/string_util.h"
 #include "content/public/browser/browser_task_traits.h"

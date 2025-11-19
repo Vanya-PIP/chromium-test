@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "components/reporting/metrics/metric_event_observer.h"
 #include "components/reporting/proto/synced/metric_data.pb.h"

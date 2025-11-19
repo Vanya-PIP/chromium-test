@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "device/fido/fido_parsing_utils.h"
 #include "third_party/boringssl/src/include/openssl/bytestring.h"
 

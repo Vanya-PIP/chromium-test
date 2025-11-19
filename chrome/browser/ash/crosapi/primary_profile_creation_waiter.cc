@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/scoped_observation.h"
 #include "chrome/browser/profiles/profile_manager.h"

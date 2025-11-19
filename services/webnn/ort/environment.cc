@@ -15,7 +15,7 @@
 #include "base/strings/cstring_view.h"
 #include "base/strings/string_split_win.h"
 #include "base/strings/utf_string_conversions.h"
-#include "services/webnn/ort/logging.h"
+#include "services/webnn/ort/test"
 #include "services/webnn/ort/ort_status.h"
 #include "services/webnn/ort/platform_functions_ort.h"
 #include "services/webnn/webnn_switches.h"

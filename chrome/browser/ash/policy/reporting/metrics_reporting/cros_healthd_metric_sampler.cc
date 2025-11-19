@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/services/cros_healthd/public/cpp/service_connection.h"
 
 namespace reporting {

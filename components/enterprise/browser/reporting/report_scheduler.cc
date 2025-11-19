@@ -10,7 +10,7 @@
 
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/time/time.h"
 #include "build/build_config.h"
 #include "components/enterprise/browser/controller/browser_dm_token_storage.h"

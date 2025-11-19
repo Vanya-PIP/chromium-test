@@ -15,7 +15,7 @@
 #include <unistd.h>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/posix/eintr_wrapper.h"
 #include "build/build_config.h"

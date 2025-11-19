@@ -14,7 +14,7 @@
 #include "chrome/browser/nearby_sharing/attachment.h"
 #include "chrome/browser/nearby_sharing/nearby_confirmation_manager.h"
 #include "chrome/browser/ui/webui/nearby_share/nearby_share.mojom-forward.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
 

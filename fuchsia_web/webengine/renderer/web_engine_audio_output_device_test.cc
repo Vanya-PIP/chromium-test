@@ -4,7 +4,7 @@
 
 #include "fuchsia_web/webengine/renderer/web_engine_audio_output_device.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/test/task_environment.h"

@@ -8,9 +8,9 @@
 #include <memory>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 
 namespace remoting {
 

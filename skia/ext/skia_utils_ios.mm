@@ -12,7 +12,7 @@
 #include "base/apple/scoped_cftyperef.h"
 #include "base/compiler_specific.h"
 #include "base/ios/ios_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/skia/include/utils/mac/SkCGUtils.h"
 
 namespace {

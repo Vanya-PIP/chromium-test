@@ -11,8 +11,8 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
-#include "remoting/base/logging.h"
+#include "base/test"
+#include "remoting/base/test"
 #include "remoting/host/security_key/security_key_ipc_client.h"
 #include "remoting/host/security_key/security_key_ipc_constants.h"
 #include "remoting/host/security_key/security_key_message_reader_impl.h"

@@ -11,7 +11,7 @@
 
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "chromeos/ash/components/dbus/cryptohome/rpc.pb.h"
 #include "chromeos/ash/components/dbus/debug_daemon/debug_daemon_client.h"

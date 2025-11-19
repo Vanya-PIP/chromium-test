@@ -7,13 +7,13 @@
 #import <Foundation/Foundation.h>
 
 #import "base/check.h"
-#import "base/debug/crash_logging.h"
+#import "base/debug/crash_test"
 #import "base/debug/dump_without_crashing.h"
 #import "base/feature_list.h"
 #import "base/functional/bind.h"
 #import "base/ios/ios_util.h"
 #import "base/json/json_writer.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_macros.h"
 #import "base/strings/string_split.h"
 #import "base/strings/string_util.h"

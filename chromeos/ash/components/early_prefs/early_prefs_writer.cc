@@ -11,7 +11,7 @@
 
 #include "base/files/file_path.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromeos/ash/components/early_prefs/early_prefs_constants.h"
 

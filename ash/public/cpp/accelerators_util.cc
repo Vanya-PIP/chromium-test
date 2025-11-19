@@ -9,7 +9,7 @@
 
 #include "ash/public/cpp/accelerator_keycode_lookup_cache.h"
 #include "base/containers/fixed_flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversions.h"

@@ -17,7 +17,7 @@
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"
 #include "base/path_service.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/time/default_clock.h"
 #include "base/values.h"

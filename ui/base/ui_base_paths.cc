@@ -5,7 +5,7 @@
 #include "ui/base/ui_base_paths.h"
 
 #include "base/command_line.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/path_service.h"

@@ -8,7 +8,7 @@
 #include <optional>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "chrome/browser/apps/app_service/app_icon/app_icon_factory.h"
 #include "chrome/browser/apps/app_service/app_service_proxy.h"

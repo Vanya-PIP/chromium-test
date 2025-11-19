@@ -8,7 +8,7 @@
 #import <dlfcn.h>
 #import <libkern/OSAtomicQueue.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/components/order_file/order_file_common.h"
 

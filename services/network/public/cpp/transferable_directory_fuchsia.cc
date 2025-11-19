@@ -7,7 +7,7 @@
 #include "base/check.h"
 #include "base/files/file_util.h"
 #include "base/fuchsia/file_utils.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/strings/stringprintf.h"
 #include "base/unguessable_token.h"
 #include "services/network/public/cpp/transferable_directory.h"

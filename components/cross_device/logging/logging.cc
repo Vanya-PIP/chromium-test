@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "base/command_line.h"
 
 CrossDeviceScopedLogMessage::CrossDeviceScopedLogMessage(

@@ -8,7 +8,7 @@
 #include <variant>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/numerics/safe_conversions.h"
 #include "media/base/audio_buffer.h"

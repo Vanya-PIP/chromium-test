@@ -15,7 +15,7 @@
 #include "base/containers/adapters.h"
 #include "base/containers/heap_array.h"
 #include "base/containers/span_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "media/base/decrypt_config.h"
 #include "media/base/encryption_pattern.h"

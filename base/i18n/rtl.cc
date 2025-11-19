@@ -15,7 +15,7 @@
 #include "base/containers/fixed_flat_set.h"
 #include "base/files/file_path.h"
 #include "base/i18n/base_i18n_switches.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"
 #include "base/strings/sys_string_conversions.h"
@@ -27,7 +27,7 @@
 #include "third_party/icu/source/i18n/unicode/coll.h"
 
 #if BUILDFLAG(IS_IOS)
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/ios/ios_util.h"
 #endif
 

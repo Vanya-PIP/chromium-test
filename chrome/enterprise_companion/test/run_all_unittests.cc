@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/launcher/unit_test_launcher.h"
 #include "base/test/test_suite.h"
 

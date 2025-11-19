@@ -8,7 +8,7 @@
 #include <set>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "google_apis/gaia/google_service_auth_error.h"
 

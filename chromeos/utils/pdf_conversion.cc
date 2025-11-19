@@ -6,7 +6,7 @@
 
 #include "base/check.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "printing/units.h"
 #include "third_party/skia/include/codec/SkCodec.h"
 #include "third_party/skia/include/codec/SkJpegDecoder.h"

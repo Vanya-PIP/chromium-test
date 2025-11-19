@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "components/affiliations/core/browser/affiliation_service.h"
 #import "components/password_manager/core/common/password_manager_features.h"
 #import "components/ukm/ios/ukm_url_recorder.h"

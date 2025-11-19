@@ -11,7 +11,7 @@
 #include "base/barrier_closure.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/task/single_thread_task_runner.h"
 #include "build/build_config.h"

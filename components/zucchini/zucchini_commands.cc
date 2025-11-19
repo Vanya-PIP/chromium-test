@@ -16,7 +16,7 @@
 #include "base/files/file.h"
 #include "base/files/file_path.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/zucchini/buffer_view.h"
 #include "components/zucchini/crc32.h"
 #include "components/zucchini/encoded_view.h"

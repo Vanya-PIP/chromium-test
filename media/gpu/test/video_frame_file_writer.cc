@@ -14,7 +14,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/stringprintf.h"
 #include "build/build_config.h"

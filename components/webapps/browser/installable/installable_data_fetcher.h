@@ -8,7 +8,7 @@
 #include "base/functional/callback.h"
 #include "base/memory/weak_ptr.h"
 #include "components/webapps/browser/installable/installable_icon_fetcher.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_page_data.h"
 #include "components/webapps/common/web_page_metadata.mojom.h"
 #include "components/webapps/common/web_page_metadata_agent.mojom.h"

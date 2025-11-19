@@ -36,7 +36,7 @@
 #include <EGL/eglext_angle.h>
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "ui/gfx/extension_set.h"
 #include "ui/gl/gl_export.h"

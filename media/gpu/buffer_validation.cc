@@ -10,7 +10,7 @@
 #include <algorithm>
 #include <cstdint>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/numerics/safe_conversions.h"
 #include "build/build_config.h"

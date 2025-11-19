@@ -14,7 +14,7 @@
 
 #if BUILDFLAG(ENABLE_LOGGING_OVERRIDE)
 #if !defined(DVLOG)
-#error This file must be included after base/logging.h.
+#error This file must be included after base/test.
 #endif
 
 #if BUILDFLAG(IS_FUCHSIA)

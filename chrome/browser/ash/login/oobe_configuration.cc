@@ -7,7 +7,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/login/configuration_keys.h"
 #include "chromeos/ash/components/dbus/oobe_config/oobe_configuration_client.h"
 #include "ui/base/ime/ash/input_method_manager.h"

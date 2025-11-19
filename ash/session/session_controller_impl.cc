@@ -27,7 +27,7 @@
 #include "ash/wm/lock_state_controller.h"
 #include "ash/wm/mru_window_tracker.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "components/account_id/account_id.h"
 #include "components/pref_registry/pref_registry_syncable.h"

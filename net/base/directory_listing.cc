@@ -7,7 +7,7 @@
 #include "base/byte_count.h"
 #include "base/i18n/time_formatting.h"
 #include "base/json/string_escape.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/strings/escape.h"
 #include "base/strings/strcat.h"

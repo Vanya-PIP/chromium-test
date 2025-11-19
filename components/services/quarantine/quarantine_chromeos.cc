@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/dbus/dlp/dlp_client.h"
 #include "chromeos/dbus/dlp/dlp_service.pb.h"
 #include "url/gurl.h"

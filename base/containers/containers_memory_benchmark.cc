@@ -61,7 +61,7 @@
 #include "base/allocator/dispatcher/dispatcher.h"
 #include "base/allocator/dispatcher/notification_data.h"
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/safe_sprintf.h"
 #include "base/unguessable_token.h"
 #include "base/values.h"

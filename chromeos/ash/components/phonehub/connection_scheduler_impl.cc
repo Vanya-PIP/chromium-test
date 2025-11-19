@@ -7,7 +7,7 @@
 #include "base/functional/bind.h"
 #include "base/notreached.h"
 #include "base/task/sequenced_task_runner.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/feature_status.h"
 #include "chromeos/ash/components/phonehub/phone_hub_structured_metrics_logger.h"
 #include "chromeos/ash/services/secure_channel/public/cpp/client/connection_manager.h"

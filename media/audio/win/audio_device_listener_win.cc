@@ -6,7 +6,7 @@
 
 #include <Audioclient.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/system/system_monitor.h"
 #include "base/time/default_tick_clock.h"

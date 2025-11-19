@@ -7,7 +7,7 @@
 
 #include "base/base_export.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "build/build_config.h"
 

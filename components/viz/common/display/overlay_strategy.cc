@@ -4,7 +4,7 @@
 
 #include "components/viz/common/display/overlay_strategy.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "components/viz/common/buildflags.h"
 

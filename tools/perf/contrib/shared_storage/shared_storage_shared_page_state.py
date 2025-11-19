@@ -42,7 +42,7 @@ class SharedStorageSharedPageState(shared_page_state.SharedPageState):
       f.write('{}')
 
   def RunStory(self, results):
-    # We use a print statement instead of logging here so that we can display
+    # We use a print statement instead of testere so that we can display
     # the run index (i.e. which pageset repeat we are on) even if the logging
     # level is non-verbose. Also, it's not necessary to persist to logs, as the
     # index number is used in the directory path in which the log artifact is

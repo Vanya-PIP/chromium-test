@@ -17,7 +17,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/queue.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "content/public/browser/browser_task_traits.h"
 #include "content/public/browser/browser_thread.h"

@@ -9,7 +9,7 @@
 #include <cstdint>
 #include <limits>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "third_party/abseil-cpp/absl/functional/overload.h"

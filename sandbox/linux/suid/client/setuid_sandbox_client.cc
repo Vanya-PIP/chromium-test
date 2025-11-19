@@ -15,7 +15,7 @@
 
 #include "base/environment.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/cstring_view.h"

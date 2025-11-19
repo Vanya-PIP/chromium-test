@@ -8,7 +8,7 @@
 
 #include "ash/constants/ash_features.h"
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chromeos/ash/components/login/login_state/login_state.h"
 #include "chromeos/ash/components/network/managed_network_configuration_handler.h"

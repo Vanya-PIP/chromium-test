@@ -11,7 +11,7 @@
 #include "base/atomicops.h"
 #include "base/bits.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/discardable_memory.h"
 #include "base/memory/discardable_memory_internal.h"
 #include "base/memory/page_size.h"
@@ -43,7 +43,7 @@
 #include <lib/zx/vmar.h>
 #include <zircon/types.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #endif
 
 #include "base/trace_event/memory_allocator_dump.h"

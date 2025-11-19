@@ -8,7 +8,7 @@
 #include <iterator>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"
 #include "net/test/embedded_test_server/http_request.h"

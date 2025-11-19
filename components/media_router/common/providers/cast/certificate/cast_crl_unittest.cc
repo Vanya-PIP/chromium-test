@@ -5,7 +5,7 @@
 #include "components/media_router/common/providers/cast/certificate/cast_crl.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "components/media_router/common/providers/cast/certificate/cast_cert_reader.h"
 #include "components/media_router/common/providers/cast/certificate/cast_cert_test_helpers.h"

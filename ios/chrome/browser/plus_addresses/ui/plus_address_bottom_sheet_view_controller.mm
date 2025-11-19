@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/plus_addresses/ui/plus_address_bottom_sheet_view_controller.h"
 
 #import "base/functional/bind.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/user_metrics.h"
 #import "base/strings/sys_string_conversions.h"
 #import "base/time/time.h"

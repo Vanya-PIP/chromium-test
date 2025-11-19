@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/gmock_callback_support.h"
 #include "media/base/test_helpers.h"
 #include "media/formats/hls/media_playlist_test_builder.h"

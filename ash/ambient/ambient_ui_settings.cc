@@ -13,7 +13,7 @@
 #include "ash/webui/personalization_app/mojom/personalization_app.mojom-shared.h"
 #include "base/check.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "components/prefs/pref_service.h"
 

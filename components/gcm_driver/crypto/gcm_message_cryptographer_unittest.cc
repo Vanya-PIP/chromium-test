@@ -12,7 +12,7 @@
 #include "base/base64url.h"
 #include "base/big_endian.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/gcm_driver/crypto/message_payload_parser.h"
 #include "components/gcm_driver/crypto/p256_key_util.h"
 #include "crypto/keypair.h"

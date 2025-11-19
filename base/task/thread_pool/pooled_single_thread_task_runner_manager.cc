@@ -41,7 +41,7 @@
 #if BUILDFLAG(IS_WIN)
 #include <windows.h>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/win/scoped_com_initializer.h"
 #endif  // BUILDFLAG(IS_WIN)
 

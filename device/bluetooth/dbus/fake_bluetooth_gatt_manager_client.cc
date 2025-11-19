@@ -8,7 +8,7 @@
 #include <string>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "third_party/cros_system_api/dbus/service_constants.h"
 

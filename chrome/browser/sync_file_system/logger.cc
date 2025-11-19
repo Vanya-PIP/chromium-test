@@ -61,7 +61,7 @@ void Log(logging::LogSeverity severity,
   // Log to console if the severity is at or above the min level.
   // LOGGING_VERBOSE logs are also output if the verbosity of this module
   // (sync_file_system/logger) is >= 1.
-  // TODO(kinuko,calvinlo): Reconsider this logging hack, it's not recommended
+  // TODO(kinuko,calvinlo): Reconsider this testack, it's not recommended
   // to directly use LogMessage.
   if (severity < logging::GetMinLogLevel() && !VLOG_IS_ON(1))
     return;

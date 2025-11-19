@@ -9,7 +9,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/power_monitor/power_monitor.h"

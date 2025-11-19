@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/app_list/search/local_image_search/search_utils.h"

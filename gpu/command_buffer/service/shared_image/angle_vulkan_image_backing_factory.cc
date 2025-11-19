@@ -4,7 +4,7 @@
 
 #include "gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "components/viz/common/gpu/vulkan_context_provider.h"
 #include "gpu/command_buffer/common/shared_image_usage.h"

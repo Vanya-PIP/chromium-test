@@ -4,7 +4,7 @@
 
 #include <wayland-server-core.h>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/environment.h"
 #include "base/i18n/number_formatting.h"
 #include "base/nix/xdg_util.h"

@@ -11,7 +11,7 @@
 #include "ash/public/cpp/ambient/ambient_ui_model.h"
 #include "ash/shell.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"
 

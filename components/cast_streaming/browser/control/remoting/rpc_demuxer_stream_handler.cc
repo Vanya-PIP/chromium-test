@@ -7,7 +7,7 @@
 #include <sstream>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "media/cast/openscreen/remoting_message_factories.h"
 #include "third_party/openscreen/src/cast/streaming/remoting.pb.h"

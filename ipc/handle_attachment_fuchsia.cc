@@ -7,7 +7,7 @@
 #include <zircon/syscalls.h>
 #include <zircon/types.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 
 namespace IPC {
 namespace internal {

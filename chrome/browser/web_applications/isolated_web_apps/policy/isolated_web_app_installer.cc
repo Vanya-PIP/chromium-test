@@ -33,7 +33,7 @@
 #include "chrome/browser/web_applications/isolated_web_apps/commands/get_bundle_cache_path_command.h"
 #include "chrome/browser/web_applications/isolated_web_apps/policy/isolated_web_app_cache_client.h"
 #include "chromeos/components/mgs/managed_guest_session_utils.h"
-#include "components/webapps/isolated_web_apps/error/uma_logging.h"
+#include "components/webapps/isolated_web_apps/error/uma_test"
 #endif  // BUILDFLAG(IS_CHROMEOS)
 
 namespace web_app {

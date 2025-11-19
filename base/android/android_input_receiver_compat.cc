@@ -8,7 +8,7 @@
 
 #include "base/android/android_info.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace base {
 

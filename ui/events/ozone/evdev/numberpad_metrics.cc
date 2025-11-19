@@ -4,7 +4,7 @@
 
 #include "ui/events/ozone/evdev/numberpad_metrics.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 
 #include <linux/input.h>

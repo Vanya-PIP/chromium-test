@@ -19,7 +19,7 @@
 #include "base/test/task_environment.h"
 #include "base/timer/mock_timer.h"
 #include "chrome/browser/ash/secure_channel/fake_nearby_endpoint_finder.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/nearby/public/cpp/mock_nearby_connections.h"
 #include "chromeos/ash/services/secure_channel/public/mojom/nearby_connector.mojom-shared.h"
 #include "chromeos/ash/services/secure_channel/public/mojom/nearby_connector.mojom.h"

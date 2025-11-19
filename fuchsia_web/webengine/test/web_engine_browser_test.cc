@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/command_line.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/fuchsia/test_component_context_for_process.h"
 #include "base/run_loop.h"

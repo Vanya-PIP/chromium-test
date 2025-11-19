@@ -8,7 +8,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/system/sys_info.h"
 #include "remoting/base/cpu_utils.h"

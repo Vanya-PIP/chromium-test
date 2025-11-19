@@ -14,7 +14,7 @@
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_functions.h"
 #include "chromeos/ash/components/multidevice/expiring_remote_device_cache.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device.h"
 #include "chromeos/ash/services/device_sync/public/mojom/device_sync.mojom.h"
 

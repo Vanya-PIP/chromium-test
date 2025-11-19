@@ -9,7 +9,7 @@
 
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/values.h"
 #include "build/chromeos_buildflags.h"

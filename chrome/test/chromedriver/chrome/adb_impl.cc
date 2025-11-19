@@ -15,7 +15,7 @@
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
 #include "base/json/string_escape.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"

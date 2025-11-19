@@ -9,7 +9,7 @@
 #include "ash/style/ash_color_id.h"
 #include "ash/style/ash_color_provider.h"
 #include "base/functional/bind.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/camera_roll_manager.h"
 #include "chromeos/ash/components/phonehub/user_action_recorder.h"
 #include "third_party/skia/include/core/SkRRect.h"

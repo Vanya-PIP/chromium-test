@@ -6,7 +6,7 @@
 
 #include <array>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"
 #include "ui/gfx/buffer_format_util.h"

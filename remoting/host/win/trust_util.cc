@@ -8,7 +8,7 @@
 
 #include <softpub.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/wintrust_shim.h"
 
 namespace remoting {

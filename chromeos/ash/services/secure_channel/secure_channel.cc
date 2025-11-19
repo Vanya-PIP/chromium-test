@@ -9,7 +9,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/secure_message_delegate_impl.h"
 #include "chromeos/ash/services/secure_channel/file_transfer_update_callback.h"
 #include "chromeos/ash/services/secure_channel/public/mojom/nearby_connector.mojom-shared.h"

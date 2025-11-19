@@ -7,7 +7,7 @@
 #include <fuchsia/ui/views/cpp/fidl.h>
 #include <fuchsia/web/cpp/fidl.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/run_loop.h"
 #include "content/public/browser/render_widget_host_view.h"
 #include "fuchsia_web/common/test/frame_test_util.h"

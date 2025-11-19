@@ -8,7 +8,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "ash/quick_pair/common/logging.h"
+#include "ash/quick_pair/common/test"
 #include "base/command_line.h"
 #include "base/functional/callback_helpers.h"
 #include "base/no_destructor.h"

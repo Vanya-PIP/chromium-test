@@ -11,7 +11,7 @@
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/system/sys_info.h"
 #include "base/task/single_thread_task_runner.h"

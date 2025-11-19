@@ -9,12 +9,12 @@
 #include "ash/constants/ash_features.h"
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"
 #include "base/strings/to_string.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/time/time.h"
 
 namespace growth {

@@ -16,7 +16,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "build/build_config.h"
 #include "mojo/buildflags.h"

@@ -13,7 +13,7 @@
 #include "base/values.h"
 #include "build/build_config.h"
 #include "chromeos/ash/components/dbus/session_manager/session_manager_client.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace proximity_auth {
 namespace {

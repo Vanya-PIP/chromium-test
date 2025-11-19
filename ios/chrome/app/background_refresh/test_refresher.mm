@@ -4,7 +4,7 @@
 
 #import "ios/chrome/app/background_refresh/test_refresher.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/strings/sys_string_conversions.h"
 #import "base/time/time.h"

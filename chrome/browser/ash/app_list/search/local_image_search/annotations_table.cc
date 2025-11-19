@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/app_list/search/local_image_search/sql_database.h"
 #include "sql/statement.h"
 

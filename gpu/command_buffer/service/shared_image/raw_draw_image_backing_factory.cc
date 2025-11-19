@@ -4,7 +4,7 @@
 
 #include "gpu/command_buffer/service/shared_image/raw_draw_image_backing_factory.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "gpu/command_buffer/common/shared_image_usage.h"
 #include "gpu/command_buffer/service/shared_image/raw_draw_image_backing.h"
 

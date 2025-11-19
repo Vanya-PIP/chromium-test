@@ -4,7 +4,7 @@
 
 #include "media/audio/apple/scoped_audio_unit.h"
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 
 namespace media {
 

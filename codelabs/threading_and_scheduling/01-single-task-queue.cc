@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump.h"
 #include "base/run_loop.h"
 #include "base/task/sequence_manager/sequence_manager.h"

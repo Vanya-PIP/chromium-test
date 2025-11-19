@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/floss/floss_gatt_manager_client.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 
 namespace floss {

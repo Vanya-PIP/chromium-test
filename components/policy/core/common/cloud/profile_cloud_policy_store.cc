@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "build/build_config.h"
 #include "components/policy/core/common/cloud/cloud_policy_constants.h"

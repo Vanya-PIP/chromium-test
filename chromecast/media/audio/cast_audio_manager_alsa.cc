@@ -12,7 +12,7 @@
 #include <string_view>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/notimplemented.h"
 #include "base/strings/string_view_util.h"

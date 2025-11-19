@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/mock_callback.h"
 #include "base/test/task_environment.h"
 #include "chromeos/components/cdm_factory_daemon/mojom/cdm_storage.mojom.h"

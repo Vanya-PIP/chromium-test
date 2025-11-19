@@ -4,7 +4,7 @@
 
 #include "services/tracing/public/cpp/perfetto/histogram_samples_data_source.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/metrics_hashes.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/trace_event/trace_event.h"

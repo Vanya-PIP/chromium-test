@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/web/model/choose_file/choose_file_java_script_feature.h"
 
 #import "base/feature_list.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/no_destructor.h"
 #import "base/strings/utf_string_conversions.h"

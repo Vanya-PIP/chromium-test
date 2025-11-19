@@ -10,7 +10,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/hash/sha1.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

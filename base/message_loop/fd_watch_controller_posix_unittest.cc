@@ -8,7 +8,7 @@
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/message_loop/message_pump_for_io.h"
 #include "base/posix/eintr_wrapper.h"

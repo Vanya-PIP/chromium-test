@@ -9,7 +9,7 @@
 #include "base/containers/contains.h"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_macros.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/timer_factory/timer_factory.h"
 #include "chromeos/ash/services/secure_channel/authenticated_channel_impl.h"
 #include "chromeos/ash/services/secure_channel/ble_advertiser_impl.h"

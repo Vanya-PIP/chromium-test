@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/policy/handlers/lock_to_single_user_manager.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/ash/crostini/crostini_manager.h"
 #include "chrome/browser/ash/plugin_vm/plugin_vm_manager.h"

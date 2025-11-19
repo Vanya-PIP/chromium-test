@@ -17,7 +17,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/i18n/rtl.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_macros.h"

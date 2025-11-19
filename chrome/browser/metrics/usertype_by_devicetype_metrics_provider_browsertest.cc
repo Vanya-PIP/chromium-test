@@ -8,7 +8,7 @@
 
 #include "ash/constants/ash_switches.h"
 #include "ash/public/cpp/login_screen_test_api.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/test/metrics/histogram_tester.h"
 #include "build/build_config.h"

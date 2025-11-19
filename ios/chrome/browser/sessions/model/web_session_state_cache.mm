@@ -13,7 +13,7 @@
 #import "base/files/file_path.h"
 #import "base/files/file_util.h"
 #import "base/functional/bind.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/observer_list.h"
 #import "base/path_service.h"
 #import "base/sequence_checker.h"

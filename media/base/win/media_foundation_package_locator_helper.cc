@@ -8,7 +8,7 @@
 
 #include <appmodel.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 

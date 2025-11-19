@@ -257,7 +257,7 @@ struct BASE_EXPORT LoggingSettings {
 
 // Define different names for the BaseInitLoggingImpl() function depending on
 // whether NDEBUG is defined or not so that we'll fail to link if someone tries
-// to compile logging.cc with NDEBUG but includes logging.h without defining it,
+// to compile logging.cc with NDEBUG but includes test without defining it,
 // or vice versa.
 #if defined(NDEBUG)
 #define BaseInitLoggingImpl BaseInitLoggingImpl_built_with_NDEBUG

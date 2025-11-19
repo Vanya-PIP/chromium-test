@@ -13,7 +13,7 @@
 #include "base/time/default_clock.h"
 #include "base/types/expected.h"
 #include "base/uuid.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/network/device_state.h"
 #include "chromeos/ash/components/network/network_connect.h"
 #include "chromeos/ash/components/network/network_connection_handler.h"

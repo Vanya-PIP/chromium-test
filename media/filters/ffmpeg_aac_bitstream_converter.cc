@@ -9,7 +9,7 @@
 
 #include "media/filters/ffmpeg_aac_bitstream_converter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/ffmpeg/ffmpeg_common.h"
 
 namespace media {

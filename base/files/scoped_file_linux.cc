@@ -13,7 +13,7 @@
 #include "base/compiler_specific.h"
 #include "base/debug/stack_trace.h"
 #include "base/immediate_crash.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace {
 

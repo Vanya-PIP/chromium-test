@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/gpu/vp9_picture.h"
 #include "media/gpu/vp9_reference_frame_vector.h"
 #include "media/parsers/vp9_parser.h"

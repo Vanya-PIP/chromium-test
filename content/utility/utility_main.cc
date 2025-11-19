@@ -93,7 +93,7 @@
 #endif
 
 #if BUILDFLAG(IS_WIN)
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/native_library.h"
 #include "base/rand_util.h"
 #include "base/strings/utf_string_conversions.h"

@@ -6,7 +6,7 @@
 
 #include <lib/fidl/cpp/binding.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "mojo/public/cpp/bindings/receiver.h"
 #include "net/cookies/canonical_cookie.h"

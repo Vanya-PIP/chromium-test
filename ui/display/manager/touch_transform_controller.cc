@@ -8,7 +8,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/display/display.h"
 #include "ui/display/display_layout.h"
 #include "ui/display/manager/display_manager.h"

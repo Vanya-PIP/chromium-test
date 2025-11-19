@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/color/new_tab_page_color_mixer.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/to_string.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/color/chrome_color_provider_utils.h"

@@ -5,7 +5,7 @@
 #include "chrome/updater/setup.h"
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/task/thread_pool.h"
 #include "chrome/updater/posix/setup.h"

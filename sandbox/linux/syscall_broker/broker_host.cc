@@ -26,7 +26,7 @@
 #include <utility>
 
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"

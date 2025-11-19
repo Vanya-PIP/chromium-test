@@ -11,7 +11,7 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/debug/gdi_debug_util_win.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/win/scoped_gdi_object.h"
 #include "base/win/win_util.h"

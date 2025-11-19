@@ -4,7 +4,7 @@
 
 #include "chrome/browser/actor/ui/actor_ui_state_manager.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/trace_event/trace_event.h"
 #include "chrome/browser/actor/actor_keyed_service.h"

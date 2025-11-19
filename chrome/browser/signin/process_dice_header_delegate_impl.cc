@@ -9,7 +9,7 @@
 #include "base/command_line.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/signin/dice_tab_helper.h"

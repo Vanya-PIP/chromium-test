@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chromeos/ash/services/network_health/in_process_instance.h"
 #include "chromeos/ash/services/network_health/network_health_service.h"

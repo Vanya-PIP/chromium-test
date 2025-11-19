@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/config/chromebox_for_meetings/buildflags.h"
 #include "build/config/cuttlefish/buildflags.h"
 #include "build/config/squid/buildflags.h"

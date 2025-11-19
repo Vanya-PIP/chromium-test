@@ -11,7 +11,7 @@
 #include "ash/public/cpp/login_screen.h"
 #include "ash/public/cpp/system_tray.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/default_clock.h"
 #include "chrome/browser/ash/login/error_screens_histogram_helper.h"
 #include "chrome/browser/ash/login/helper.h"

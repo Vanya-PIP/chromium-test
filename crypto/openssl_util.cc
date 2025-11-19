@@ -9,7 +9,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/boringssl/src/include/openssl/err.h"
 
 namespace crypto {

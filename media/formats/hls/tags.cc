@@ -8,7 +8,7 @@
 #include <type_traits>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/time/time.h"
 #include "media/base/mime_util.h"

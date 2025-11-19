@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "device/vr/public/mojom/xr_session.mojom-shared.h"
 #include "device/vr/util/stage_utils.h"

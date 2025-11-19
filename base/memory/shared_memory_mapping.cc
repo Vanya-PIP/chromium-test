@@ -9,7 +9,7 @@
 
 #include "base/bits.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/shared_memory_security_policy.h"
 #include "base/memory/shared_memory_tracker.h"
 #include "base/system/sys_info.h"

@@ -9,7 +9,7 @@
 #include <string>
 #include "base/at_exit.h"
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 #include "components/url_matcher/url_matcher.h"
 #include "url/gurl.h"

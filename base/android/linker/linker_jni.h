@@ -25,7 +25,7 @@
 #include "third_party/jni_zero/jni_zero.h"
 
 // Set this to 1 to enable debug traces to the Android log.
-// Note that LOG() from "base/logging.h" cannot be used, since it is
+// Note that LOG() from "base/test" cannot be used, since it is
 // in base/ which hasn't been loaded yet.
 #define DEBUG 0
 

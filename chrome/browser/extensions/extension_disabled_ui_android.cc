@@ -4,7 +4,7 @@
 
 #include "chrome/browser/extensions/extension_disabled_ui.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 
 namespace extensions {

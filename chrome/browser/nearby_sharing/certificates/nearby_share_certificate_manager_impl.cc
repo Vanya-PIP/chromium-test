@@ -27,7 +27,7 @@
 #include "chromeos/ash/components/nearby/common/client/nearby_http_result.h"
 #include "chromeos/ash/components/nearby/common/scheduling/nearby_scheduler_factory.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_share_settings.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/leveldb_proto/public/proto_database_provider.h"
 #include "components/prefs/pref_service.h"
 #include "device/bluetooth/bluetooth_adapter_factory.h"

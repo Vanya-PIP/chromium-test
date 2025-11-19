@@ -9,7 +9,7 @@
 #include "ash/wallpaper/sea_pen_wallpaper_manager.h"
 #include "ash/wallpaper/wallpaper_constants.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/account_id/account_id.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

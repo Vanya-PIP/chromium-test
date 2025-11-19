@@ -10,7 +10,7 @@
 #include "base/at_exit.h"
 #include "base/command_line.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "content/public/browser/ax_inspect_factory.h"
 #include "tools/accessibility/inspect/ax_tree_server.h"

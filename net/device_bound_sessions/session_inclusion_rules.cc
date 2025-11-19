@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/containers/adapters.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_util.h"
 #include "net/base/registry_controlled_domains/registry_controlled_domain.h"

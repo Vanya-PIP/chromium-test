@@ -32,7 +32,7 @@
 #pragma clang diagnostic ignored "-Winteger-overflow"
 #endif
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/numerics/safe_math.h"
 #include "base/numerics/wrapping_math.h"

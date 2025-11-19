@@ -7,7 +7,7 @@
 #import "base/apple/foundation_util.h"
 #import "base/files/file_path.h"
 #import "base/files/file_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/ptr_util.h"
 #import "base/metrics/histogram_macros.h"
 #import "base/path_service.h"

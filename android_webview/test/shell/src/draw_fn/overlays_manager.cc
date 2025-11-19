@@ -8,7 +8,7 @@
 #include "android_webview/test/shell/src/draw_fn/allocator.h"
 #include "base/android/android_info.h"
 #include "base/android/jni_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
 

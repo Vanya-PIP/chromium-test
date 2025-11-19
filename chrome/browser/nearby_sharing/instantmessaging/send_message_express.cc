@@ -13,7 +13,7 @@
 #include "chrome/browser/nearby_sharing/instantmessaging/proto/instantmessaging.pb.h"
 #include "chrome/browser/nearby_sharing/instantmessaging/token_fetcher.h"
 #include "chromeos/ash/components/nearby/common/client/nearby_http_result.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "net/base/load_flags.h"
 #include "services/network/public/cpp/resource_request.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"

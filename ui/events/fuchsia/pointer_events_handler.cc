@@ -10,8 +10,8 @@
 #include <limits>
 #include <memory>
 
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/trace_event/trace_event.h"

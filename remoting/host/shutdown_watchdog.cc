@@ -6,7 +6,7 @@
 
 #include <stdlib.h>  // For _exit() on Windows.
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_POSIX)

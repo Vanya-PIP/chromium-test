@@ -12,7 +12,7 @@
 #include "base/containers/contains.h"
 #include "base/debug/leak_annotations.h"
 #include "base/json/string_escape.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram.h"
 #include "base/metrics/histogram_snapshot_manager.h"

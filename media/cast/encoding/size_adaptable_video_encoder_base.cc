@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/video_encoder_metrics_provider.h"
 #include "media/base/video_frame.h"
 #include "media/cast/common/sender_encoded_frame.h"

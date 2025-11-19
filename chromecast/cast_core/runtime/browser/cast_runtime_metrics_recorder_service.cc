@@ -4,7 +4,7 @@
 
 #include "chromecast/cast_core/runtime/browser/cast_runtime_metrics_recorder_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/cast_core/runtime/browser/cast_runtime_action_recorder.h"
 #include "chromecast/cast_core/runtime/browser/cast_runtime_histogram_flattener.h"
 #include "chromecast/cast_core/runtime/browser/cast_runtime_metrics_recorder.h"

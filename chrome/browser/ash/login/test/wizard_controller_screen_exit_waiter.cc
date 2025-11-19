@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/login/test/wizard_controller_screen_exit_waiter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "chrome/browser/ash/login/wizard_controller.h"
 #include "testing/gtest/include/gtest/gtest.h"

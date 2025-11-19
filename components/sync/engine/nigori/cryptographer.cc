@@ -5,7 +5,7 @@
 #include "components/sync/engine/nigori/cryptographer.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/sync/protocol/encryption.pb.h"
 
 namespace syncer {

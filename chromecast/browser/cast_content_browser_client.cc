@@ -21,7 +21,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/i18n/rtl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/path_service.h"
 #include "base/strings/string_number_conversions.h"

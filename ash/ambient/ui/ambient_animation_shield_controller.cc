@@ -5,7 +5,7 @@
 #include "ash/ambient/ui/ambient_animation_shield_controller.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/views/view.h"
 
 namespace ash {

@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "media/base/format_utils.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 

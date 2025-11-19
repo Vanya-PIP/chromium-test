@@ -13,7 +13,7 @@
 #include <vector>
 
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "base/time/time.h"
 #include "base/values.h"

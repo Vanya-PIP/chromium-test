@@ -8,7 +8,7 @@
 #include <memory>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/audio/audio_handler.h"
 #include "media/audio/flac_audio_handler.h"
 #include "media/base/audio_bus.h"

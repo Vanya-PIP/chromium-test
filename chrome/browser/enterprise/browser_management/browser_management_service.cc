@@ -5,7 +5,7 @@
 #include "chrome/browser/enterprise/browser_management/browser_management_service.h"
 
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process.h"

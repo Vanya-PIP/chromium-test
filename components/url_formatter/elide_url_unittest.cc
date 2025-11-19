@@ -8,7 +8,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/strings/escape.h"
 #include "base/strings/utf_string_conversions.h"

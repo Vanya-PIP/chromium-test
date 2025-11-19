@@ -7,7 +7,7 @@
 #include <map>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/apps/app_service/app_icon/app_icon_factory.h"
 #include "chrome/browser/apps/app_service/app_icon/dip_px_util.h"
 #include "chrome/browser/apps/app_service/promise_apps/promise_app.h"

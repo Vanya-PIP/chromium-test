@@ -20,7 +20,7 @@
 #include "base/containers/heap_array.h"
 #include "base/containers/to_vector.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/time/time.h"
 #include "media/base/android/media_codec_util.h"

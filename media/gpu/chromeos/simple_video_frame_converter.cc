@@ -4,7 +4,7 @@
 
 #include "media/gpu/chromeos/simple_video_frame_converter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/video_frame.h"
 #include "media/gpu/chromeos/video_frame_resource.h"
 #include "media/gpu/macros.h"

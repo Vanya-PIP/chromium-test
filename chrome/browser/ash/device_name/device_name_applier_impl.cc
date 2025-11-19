@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/device_name/device_name_applier_impl.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 
 namespace ash {

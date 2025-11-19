@@ -23,7 +23,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/strings/stringprintf.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"

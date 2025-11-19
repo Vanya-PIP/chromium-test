@@ -10,7 +10,7 @@
 #include "base/containers/flat_set.h"
 #include "base/containers/span.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"
 #include "chromeos/ash/components/dbus/dlcservice/dlcservice_client.h"

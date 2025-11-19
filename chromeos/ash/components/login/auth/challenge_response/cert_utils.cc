@@ -7,7 +7,7 @@
 #include <string>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "net/cert/asn1_util.h"
 #include "net/cert/x509_certificate.h"
 #include "net/cert/x509_util.h"

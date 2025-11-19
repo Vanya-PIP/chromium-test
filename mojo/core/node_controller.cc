@@ -16,7 +16,7 @@
 #include "base/containers/queue.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_handle.h"
 #include "base/rand_util.h"
 #include "base/task/current_thread.h"

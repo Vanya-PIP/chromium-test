@@ -14,7 +14,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/user_metrics.h"
 #include "base/notimplemented.h"
 #include "base/observer_list.h"

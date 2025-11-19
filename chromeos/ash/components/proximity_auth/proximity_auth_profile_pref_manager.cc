@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/values.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/proximity_auth/proximity_auth_pref_names.h"
 #include "chromeos/ash/services/multidevice_setup/public/cpp/multidevice_setup_client.h"
 #include "chromeos/ash/services/multidevice_setup/public/cpp/prefs.h"

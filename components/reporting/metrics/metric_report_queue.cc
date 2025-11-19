@@ -5,7 +5,7 @@
 #include "components/reporting/metrics/metric_report_queue.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/reporting/client/report_queue.h"
 #include "components/reporting/metrics/metric_rate_controller.h"
 #include "components/reporting/metrics/reporting_settings.h"

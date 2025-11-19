@@ -10,7 +10,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gfx/buffer_types.h"
 #include "ui/gfx/linux/drm_util_linux.h"
 #include "ui/ozone/platform/wayland/host/wayland_buffer_factory.h"

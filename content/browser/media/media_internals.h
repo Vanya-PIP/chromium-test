@@ -26,7 +26,7 @@
 #include "content/public/browser/render_process_host_creation_observer.h"
 #include "content/public/browser/render_process_host_observer.h"
 #include "ipc/constants.mojom.h"
-#include "media/audio/audio_logging.h"
+#include "media/audio/audio_test"
 #include "media/base/media_log.h"
 #include "media/capture/video/video_capture_device_descriptor.h"
 #include "media/capture/video_capture_types.h"

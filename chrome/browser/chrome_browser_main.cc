@@ -229,7 +229,7 @@
 
 #if (BUILDFLAG(IS_MAC) && defined(ARCH_CPU_X86_64)) || \
     BUILDFLAG(CHROME_FOR_TESTING)
-#include "base/logging.h"
+#include "base/test"
 #endif
 
 #if BUILDFLAG(IS_WIN)

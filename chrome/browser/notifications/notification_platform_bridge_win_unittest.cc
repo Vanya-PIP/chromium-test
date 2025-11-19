@@ -14,7 +14,7 @@
 #include <vector>
 
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/win/scoped_com_initializer.h"

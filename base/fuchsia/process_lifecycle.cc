@@ -9,7 +9,7 @@
 #include <zircon/processargs.h>
 
 #include "base/check.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 
 namespace base {
 

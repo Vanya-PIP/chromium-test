@@ -5,7 +5,7 @@
 #include "chrome/browser/password_manager/startup_passwords_import_service_factory.h"
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/buildflag.h"
 #include "chrome/browser/affiliations/affiliation_service_factory.h"
 #include "chrome/browser/password_manager/account_password_store_factory.h"

@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 
 #include <fidl/base.testfidl/cpp/fidl.h>
 #include <fidl/fuchsia.logger/cpp/fidl.h>
@@ -16,7 +16,7 @@
 #include "base/fuchsia/scoped_fx_logger.h"
 #include "base/fuchsia/test_component_context_for_process.h"
 #include "base/fuchsia/test_log_listener_safe.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/scoped_logging_settings.h"
 #include "base/test/task_environment.h"
 #include "testing/gmock/include/gmock/gmock.h"

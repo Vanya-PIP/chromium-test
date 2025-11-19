@@ -8,7 +8,7 @@
 
 #include <string_view>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "chromecast/crash/fuchsia/constants.h"
 
 namespace chromecast {

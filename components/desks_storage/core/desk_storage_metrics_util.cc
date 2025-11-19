@@ -4,7 +4,7 @@
 
 #include "components/desks_storage/core/desk_storage_metrics_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 
 namespace desks_storage {

@@ -10,7 +10,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "printing/buildflags/buildflags.h"
 #include "printing/metafile.h"

@@ -11,7 +11,7 @@
 #include "base/apple/scoped_cftyperef.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/sys_string_conversions.h"

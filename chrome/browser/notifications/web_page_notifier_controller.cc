@@ -8,7 +8,7 @@
 
 #include "ash/public/cpp/notifier_metadata.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/cancelable_task_tracker.h"
 #include "chrome/browser/content_settings/generated_permission_prompting_behavior_pref.h"

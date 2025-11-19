@@ -6,7 +6,7 @@
 
 #include "components/webrtc/thread_wrapper.h"
 #include "remoting/base/errors.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/protocol/transport_context.h"
 
 namespace remoting {

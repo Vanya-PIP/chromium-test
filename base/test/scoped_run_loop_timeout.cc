@@ -9,7 +9,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/time/time.h"
 #include "testing/gtest/include/gtest/gtest.h"

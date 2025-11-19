@@ -8,7 +8,7 @@
 #include <memory>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/metrics_hashes.h"
 #include "base/test/metrics/histogram_tester.h"
 #include "base/test/simple_test_tick_clock.h"

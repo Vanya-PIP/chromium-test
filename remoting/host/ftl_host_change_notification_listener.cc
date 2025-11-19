@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "remoting/proto/ftl/v1/chromoting_message.pb.h"
 #include "remoting/proto/ftl/v1/ftl_messages.pb.h"

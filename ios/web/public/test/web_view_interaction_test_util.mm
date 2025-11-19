@@ -6,7 +6,7 @@
 
 #import "base/functional/bind.h"
 #import "base/json/string_escape.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/stringprintf.h"
 #import "base/strings/sys_string_conversions.h"
 #import "base/strings/utf_string_conversions.h"

@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "chromeos/ash/components/dbus/shill/shill_third_party_vpn_observer.h"
 #include "dbus/object_proxy.h"

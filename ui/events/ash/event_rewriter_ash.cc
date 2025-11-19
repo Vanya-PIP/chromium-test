@@ -19,7 +19,7 @@
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/metrics/user_metrics.h"
 #include "base/strings/string_number_conversions.h"

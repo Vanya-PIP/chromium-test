@@ -6,7 +6,7 @@
 
 #include "ash/constants/ash_features.h"
 #include "base/timer/timer.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash::eche_app {
 

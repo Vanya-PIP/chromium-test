@@ -21,7 +21,7 @@
 #include "base/task/thread_pool.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/secure_channel/nearby_endpoint_finder.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/public/mojom/nearby_connector.mojom-shared.h"
 #include "chromeos/ash/services/secure_channel/public/mojom/secure_channel_types.mojom.h"
 #include "chromeos/ash/services/secure_channel/util/histogram_util.h"

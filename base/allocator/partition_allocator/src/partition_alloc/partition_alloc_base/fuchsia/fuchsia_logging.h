@@ -16,7 +16,7 @@
 #include "partition_alloc/build_config.h"
 #include "partition_alloc/buildflags.h"
 #include "partition_alloc/partition_alloc_base/component_export.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 
 // Use the PA_ZX_LOG family of macros along with a zx_status_t containing a
 // Zircon error. The error value will be decoded so that logged messages explain

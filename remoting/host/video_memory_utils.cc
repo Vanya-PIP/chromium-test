@@ -4,7 +4,7 @@
 
 #include "remoting/host/video_memory_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 
 #if BUILDFLAG(IS_WIN)

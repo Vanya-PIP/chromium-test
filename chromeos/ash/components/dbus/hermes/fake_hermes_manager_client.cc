@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/dbus/hermes/fake_hermes_manager_client.h"
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/values.h"

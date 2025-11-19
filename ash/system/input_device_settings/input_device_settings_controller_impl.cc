@@ -27,7 +27,7 @@
 #include "ash/system/input_device_settings/input_device_key_alias_manager.h"
 #include "ash/system/input_device_settings/input_device_notifier.h"
 #include "ash/system/input_device_settings/input_device_settings_defaults.h"
-#include "ash/system/input_device_settings/input_device_settings_logging.h"
+#include "ash/system/input_device_settings/input_device_settings_test"
 #include "ash/system/input_device_settings/input_device_settings_metadata.h"
 #include "ash/system/input_device_settings/input_device_settings_metadata_manager.h"
 #include "ash/system/input_device_settings/input_device_settings_notification_controller.h"

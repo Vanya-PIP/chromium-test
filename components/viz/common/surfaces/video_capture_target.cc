@@ -6,7 +6,7 @@
 
 #include <variant>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace viz {
 

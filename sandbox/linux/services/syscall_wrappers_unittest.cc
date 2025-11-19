@@ -17,7 +17,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/system/sys_info.h"

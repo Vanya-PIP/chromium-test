@@ -5,7 +5,7 @@
 #include "components/memory_pressure/unnecessary_discard_monitor.h"
 
 #include "base/byte_count.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 
 namespace memory_pressure {

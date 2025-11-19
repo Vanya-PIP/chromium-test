@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/login/screens/enable_adb_sideloading_screen.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/ash/login/screens/enable_adb_sideloading_screen.h"

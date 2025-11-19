@@ -10,7 +10,7 @@
 #include "base/apple/foundation_util.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/sys_string_conversions.h"
 #include "base/task/bind_post_task.h"

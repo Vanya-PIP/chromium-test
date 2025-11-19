@@ -8,7 +8,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/flat_set.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "base/strings/strcat.h"

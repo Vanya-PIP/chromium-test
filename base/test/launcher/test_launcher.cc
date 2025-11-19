@@ -36,7 +36,7 @@
 #include "base/hash/hash.h"
 #include "base/lazy_instance.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
@@ -99,7 +99,7 @@
 #include "base/atomic_sequence_num.h"
 #include "base/fuchsia/default_job.h"
 #include "base/fuchsia/file_utils.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #endif
 
 #if BUILDFLAG(IS_IOS)

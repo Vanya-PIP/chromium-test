@@ -10,7 +10,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/task/single_thread_task_runner.h"
 #include "components/user_education/common/session/user_education_session_manager.h"

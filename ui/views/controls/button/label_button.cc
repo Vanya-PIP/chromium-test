@@ -12,7 +12,7 @@
 #include <variant>
 
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "ui/accessibility/ax_enums.mojom.h"
 #include "ui/accessibility/ax_node_data.h"

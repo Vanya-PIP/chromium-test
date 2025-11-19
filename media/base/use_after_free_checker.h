@@ -5,7 +5,7 @@
 #ifndef MEDIA_BASE_USE_AFTER_FREE_CHECKER_H_
 #define MEDIA_BASE_USE_AFTER_FREE_CHECKER_H_
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/notreached.h"
 #include "media/base/media_export.h"

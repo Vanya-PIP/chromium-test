@@ -11,7 +11,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/notreached.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/protocol/network_settings.h"
 #include "remoting/protocol/transport_context.h"
 

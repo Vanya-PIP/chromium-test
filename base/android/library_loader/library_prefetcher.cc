@@ -26,7 +26,7 @@
 #include "base/containers/span.h"
 #include "base/feature_list.h"
 #include "base/features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/posix/eintr_wrapper.h"

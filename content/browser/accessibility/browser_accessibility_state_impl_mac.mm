@@ -8,7 +8,7 @@
 
 #include <memory>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #import "base/mac/mac_util.h"
 #include "base/metrics/histogram_macros.h"
 #include "content/browser/web_contents/web_contents_impl.h"

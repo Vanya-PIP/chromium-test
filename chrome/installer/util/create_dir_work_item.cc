@@ -5,7 +5,7 @@
 #include "chrome/installer/util/create_dir_work_item.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 CreateDirWorkItem::~CreateDirWorkItem() = default;
 

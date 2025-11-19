@@ -19,7 +19,7 @@
 #include "ash/system/power/dual_role_notification.h"
 #include "base/command_line.h"
 #include "base/i18n/number_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/numerics/ranges.h"

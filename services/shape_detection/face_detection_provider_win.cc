@@ -7,7 +7,7 @@
 #include <windows.media.faceanalysis.h>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/scoped_generic.h"
 #include "base/win/core_winrt_util.h"
 #include "base/win/post_async_results.h"

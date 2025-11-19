@@ -9,7 +9,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "build/build_config.h"
 #include "chromecast/base/cast_paths.h"

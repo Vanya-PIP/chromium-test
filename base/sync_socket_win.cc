@@ -12,7 +12,7 @@
 #include "base/check.h"
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/rand_util.h"
 #include "base/threading/scoped_blocking_call.h"

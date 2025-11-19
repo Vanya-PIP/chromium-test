@@ -6,7 +6,7 @@
 
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_handle.h"
 #include "build/build_config.h"
 

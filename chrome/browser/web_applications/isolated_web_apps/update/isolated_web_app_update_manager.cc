@@ -53,7 +53,7 @@
 #include "components/prefs/pref_service.h"
 #include "components/web_package/signed_web_bundles/signed_web_bundle_id.h"
 #include "components/webapps/common/web_app_id.h"
-#include "components/webapps/isolated_web_apps/error/uma_logging.h"
+#include "components/webapps/isolated_web_apps/error/uma_test"
 #include "components/webapps/isolated_web_apps/iwa_key_distribution_info_provider.h"
 #include "components/webapps/isolated_web_apps/types/storage_location.h"
 #include "components/webapps/isolated_web_apps/types/update_channel.h"

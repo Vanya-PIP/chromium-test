@@ -5,7 +5,7 @@
 #ifndef MEDIA_BASE_REENTRANCY_CHECKER_H_
 #define MEDIA_BASE_REENTRANCY_CHECKER_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/synchronization/lock.h"
 #include "base/thread_annotations.h"

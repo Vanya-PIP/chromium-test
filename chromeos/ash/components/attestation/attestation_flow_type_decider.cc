@@ -10,7 +10,7 @@
 #include "chromeos/ash/components/attestation/attestation_flow.h"
 #include "chromeos/ash/components/attestation/attestation_flow_status_reporter.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 namespace attestation {

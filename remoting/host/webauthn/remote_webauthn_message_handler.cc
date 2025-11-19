@@ -11,7 +11,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "remoting/host/mojom/webauthn_proxy.mojom.h"
 #include "remoting/host/webauthn/remote_webauthn_state_change_notifier.h"

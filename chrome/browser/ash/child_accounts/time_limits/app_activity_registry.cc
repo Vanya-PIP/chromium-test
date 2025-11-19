@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/default_tick_clock.h"
 #include "base/unguessable_token.h"
 #include "base/values.h"

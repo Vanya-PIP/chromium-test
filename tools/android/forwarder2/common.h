@@ -12,7 +12,7 @@
 #include <stdio.h>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 
 // Preserving errno for Close() is important because the function is very often

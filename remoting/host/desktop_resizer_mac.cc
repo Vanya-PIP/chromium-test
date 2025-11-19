@@ -12,7 +12,7 @@
 #include "base/mac/mac_util.h"
 #include "base/memory/ptr_util.h"
 #include "base/notimplemented.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 
 namespace {
 // TODO(jamiewalch): Use the correct DPI for the mode: http://crbug.com/172405.

@@ -8,7 +8,7 @@
 
 #include "base/bit_cast.h"
 #include "base/format_macros.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/metrics_hashes.h"
 #include "base/notreached.h"
 #include "base/strings/stringprintf.h"

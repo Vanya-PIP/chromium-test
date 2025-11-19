@@ -6,7 +6,7 @@
 
 #include "ash/constants/ash_switches.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/system/sys_info.h"
 #include "components/device_event_log/device_event_log.h"

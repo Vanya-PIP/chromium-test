@@ -7,7 +7,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/task/single_thread_task_runner.h"
 #include "net/base/net_errors.h"

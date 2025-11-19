@@ -13,7 +13,7 @@
 namespace extensions {
 class ScriptContext;
 
-// Exposes logging.h macros to JavaScript bindings.
+// Exposes test macros to JavaScript bindings.
 class LoggingNativeHandler : public ObjectBackedNativeHandler {
  public:
   explicit LoggingNativeHandler(ScriptContext* context);

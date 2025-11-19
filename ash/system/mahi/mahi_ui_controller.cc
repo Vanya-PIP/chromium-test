@@ -12,7 +12,7 @@
 #include "ash/system/mahi/mahi_panel_widget.h"
 #include "ash/system/mahi/mahi_ui_update.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "chromeos/components/mahi/public/cpp/mahi_manager.h"

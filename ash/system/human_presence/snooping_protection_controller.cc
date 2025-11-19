@@ -15,7 +15,7 @@
 #include "ash/system/human_presence/snooping_protection_notification_blocker.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "base/timer/timer.h"

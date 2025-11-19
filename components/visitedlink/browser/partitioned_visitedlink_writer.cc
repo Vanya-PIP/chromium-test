@@ -8,7 +8,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/read_only_shared_memory_region.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/shared_memory_mapping.h"

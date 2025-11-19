@@ -9,7 +9,7 @@
 
 #include "base/check.h"
 #include "base/containers/to_vector.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "components/prefs/pref_service.h"

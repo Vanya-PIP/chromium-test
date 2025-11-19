@@ -9,7 +9,7 @@ component("logging") {
     "log_buffer.cc",
     "log_buffer.h",
     "logging.cc",
-    "logging.h",
+    "test",
   ]
 
   public_deps = [ "//base" ]

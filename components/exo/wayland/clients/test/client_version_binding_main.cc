@@ -4,7 +4,7 @@
 
 #include <limits>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/exo/wayland/clients/test/client_version_test.h"
 
 int main(int argc, char* argv[]) {

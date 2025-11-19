@@ -10,7 +10,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/services/ime/constants.h"
 #include "chromeos/ash/services/ime/ime_shared_library_wrapper.h"
 #include "sandbox/linux/syscall_broker/broker_command.h"

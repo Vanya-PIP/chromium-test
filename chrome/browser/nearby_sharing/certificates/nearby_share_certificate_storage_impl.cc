@@ -20,7 +20,7 @@
 #include "chrome/browser/nearby_sharing/certificates/constants.h"
 #include "chrome/browser/nearby_sharing/certificates/nearby_share_private_certificate.h"
 #include "chrome/browser/nearby_sharing/common/nearby_share_prefs.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/leveldb_proto/public/proto_database_provider.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"

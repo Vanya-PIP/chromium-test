@@ -14,7 +14,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_metrics.h"
 #include "base/strings/string_number_conversions.h"
 #include "chromeos/ash/services/cros_healthd/public/cpp/service_connection.h"

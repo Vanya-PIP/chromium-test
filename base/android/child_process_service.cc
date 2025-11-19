@@ -12,7 +12,7 @@
 #include "base/android/self_compaction_manager.h"
 #include "base/debug/dump_without_crashing.h"
 #include "base/file_descriptor_store.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/global_descriptors.h"
 
 // Must come after all headers that specialize FromJniType() / ToJniType().

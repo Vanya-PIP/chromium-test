@@ -12,7 +12,7 @@
 
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 
 namespace media {

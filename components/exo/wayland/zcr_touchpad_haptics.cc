@@ -12,7 +12,7 @@
 
 #include "ash/constants/ash_features.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "components/exo/wayland/server_util.h"
 #include "ui/events/devices/haptic_touchpad_effects.h"

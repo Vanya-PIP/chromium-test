@@ -11,7 +11,7 @@
 #include <cstring>
 
 #include "base/bits.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "media/base/decrypt_config.h"

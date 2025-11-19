@@ -9,7 +9,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/types/pass_key.h"
 #include "net/base/network_isolation_key.h"

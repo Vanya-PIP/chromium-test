@@ -24,7 +24,7 @@
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/test/scoped_path_override.h"
 #include "base/test/test_reg_util_win.h"
 #include "base/win/atl.h"

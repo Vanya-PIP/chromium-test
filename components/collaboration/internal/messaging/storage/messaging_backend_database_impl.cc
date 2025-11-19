@@ -6,7 +6,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 
 namespace collaboration::messaging {

@@ -12,7 +12,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/updater/constants.h"
 #include "chrome/updater/util/util.h"
 

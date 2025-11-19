@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "chrome/browser/ash/logging/logging.h"
+#include "chrome/browser/ash/logging/test"
 
 #include <cstdio>
 
@@ -11,7 +11,7 @@
 #include "base/files/platform_file.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/system/sys_info.h"
 #include "base/task/thread_pool.h"

@@ -6,7 +6,7 @@
 
 #include "ash/ambient/ambient_ui_settings.h"
 #include "ash/webui/personalization_app/mojom/personalization_app.mojom-shared.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 

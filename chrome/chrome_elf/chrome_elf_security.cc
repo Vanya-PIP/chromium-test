@@ -16,7 +16,7 @@
 
 #include "base/check.h"
 #include "base/file_version_info.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/thread_checker.h"
 #include "base/win/current_module.h"
 #include "chrome/chrome_elf/chrome_elf_constants.h"

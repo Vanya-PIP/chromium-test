@@ -10,7 +10,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/mem_buffer_util.h"
 #include "components/cast/message_port/fuchsia/message_port_fuchsia.h"
 

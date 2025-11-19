@@ -6,7 +6,7 @@
 
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "testing/perf/perf_result_reporter.h"
 #include "ui/gl/gpu_timing.h"
 

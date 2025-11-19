@@ -4,7 +4,7 @@
 
 #include "media/cast/common/encoded_frame.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 namespace cast {

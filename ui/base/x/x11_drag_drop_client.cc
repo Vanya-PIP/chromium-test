@@ -5,7 +5,7 @@
 #include "ui/base/x/x11_drag_drop_client.h"
 
 #include "base/containers/flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 #include "ui/base/clipboard/clipboard_constants.h"

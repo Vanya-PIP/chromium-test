@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "content/public/browser/browser_main_runner.h"
 

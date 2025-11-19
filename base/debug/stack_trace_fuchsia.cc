@@ -29,7 +29,7 @@
 #include "base/atomic_sequence_num.h"
 #include "base/debug/elf_reader.h"
 #include "base/debug/stack_trace.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace base {
 namespace debug {

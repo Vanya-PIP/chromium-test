@@ -5,7 +5,7 @@
 #include <memory>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/numerics/clamped_math.h"
 #include "base/time/time.h"

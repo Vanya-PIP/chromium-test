@@ -5,7 +5,7 @@
 #include "ash/public/cpp/message_center_ash.h"
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 

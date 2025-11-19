@@ -9,7 +9,7 @@
 
 #include "base/containers/heap_array.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/disk_cache/disk_cache.h"
 
 namespace disk_cache {

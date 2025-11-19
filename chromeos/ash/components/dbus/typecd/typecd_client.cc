@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/dbus/typecd/typecd_client.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "chromeos/ash/components/dbus/typecd/fake_typecd_client.h"

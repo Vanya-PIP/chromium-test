@@ -5,7 +5,7 @@
 #include "chrome/browser/chromeos/extensions/system_log/system_log_api.h"
 
 #include "base/strings/stringprintf.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/common/extensions/api/system_log.h"
 #include "chromeos/ash/components/browser_context_helper/browser_context_types.h"

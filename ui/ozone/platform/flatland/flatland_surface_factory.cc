@@ -10,7 +10,7 @@
 #include <memory>
 
 #include "base/containers/contains.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"

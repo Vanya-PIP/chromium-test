@@ -16,7 +16,7 @@
 
 #include <iterator>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "tools/android/common/net.h"
 

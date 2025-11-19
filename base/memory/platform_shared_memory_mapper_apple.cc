@@ -6,9 +6,9 @@
 
 #include <mach/vm_map.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace base {
 

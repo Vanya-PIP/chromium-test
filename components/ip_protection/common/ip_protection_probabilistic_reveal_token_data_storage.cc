@@ -12,7 +12,7 @@
 #include "base/check_op.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "components/ip_protection/common/ip_protection_data_types.h"
 #include "sql/database.h"

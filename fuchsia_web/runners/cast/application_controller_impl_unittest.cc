@@ -11,8 +11,8 @@
 #include <string>
 #include <utility>
 
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 #include "base/test/task_environment.h"
 #include "base/test/test_future.h"
 #include "fuchsia_web/runners/cast/application_controller_impl.h"

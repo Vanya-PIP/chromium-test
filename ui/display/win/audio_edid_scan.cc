@@ -14,7 +14,7 @@
 #include <oleauto.h>
 #include <string.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/scoped_bstr.h"
 #include "base/win/scoped_variant.h"
 #include "base/win/wmi.h"

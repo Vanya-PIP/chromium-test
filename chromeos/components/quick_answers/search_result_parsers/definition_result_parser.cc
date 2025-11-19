@@ -7,7 +7,7 @@
 #include <optional>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chromeos/components/quick_answers/quick_answers_model.h"
 #include "chromeos/components/quick_answers/utils/quick_answers_utils.h"

@@ -12,7 +12,7 @@
 #include <utility>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gfx/linux/drm_util_linux.h"
 #include "ui/gfx/linux/gbm_buffer.h"
 #include "ui/ozone/platform/drm/common/drm_util.h"

@@ -12,7 +12,7 @@
 #include <utility>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/synchronization/waitable_event.h"
 #include "base/task/bind_post_task.h"

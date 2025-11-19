@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/dummy_histogram.h"
 #include "base/metrics/histogram.h"
 #include "base/metrics/histogram_base.h"

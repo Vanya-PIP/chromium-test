@@ -7,7 +7,7 @@
 #include "ash/shell.h"
 #include "ash/webui/eche_app_ui/proto/exo_messages.pb.h"
 #include "base/strings/utf_string_conversions.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash::eche_app {
 

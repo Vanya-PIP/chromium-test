@@ -7,7 +7,7 @@
 #include <limits>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/aligned_memory.h"
 #include "base/numerics/safe_conversions.h"
 #include "chromecast/media/audio/mixer_service/mixer_service_transport.pb.h"

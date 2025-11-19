@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/run_loop.h"
 #include "fuchsia_web/common/test/fake_feedback_service.h"
 #include "fuchsia_web/common/test/test_realm_support.h"

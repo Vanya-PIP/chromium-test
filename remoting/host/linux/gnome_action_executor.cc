@@ -7,7 +7,7 @@
 #include <tuple>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/host/linux/dbus_interfaces/org_gnome_ScreenSaver.h"
 #include "remoting/proto/action.pb.h"
 

@@ -11,7 +11,7 @@
 
 #include <atomic>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/trace_event/trace_event.h"
 #include "media/audio/audio_io.h"

@@ -14,7 +14,7 @@
 #include <vector>
 
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/bucket_ranges.h"
 #include "base/metrics/dummy_histogram.h"

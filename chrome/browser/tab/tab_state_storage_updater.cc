@@ -7,7 +7,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/tab/storage_update_unit.h"
 #include "chrome/browser/tab/tab_state_storage_database.h"
 

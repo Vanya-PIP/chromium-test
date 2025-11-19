@@ -17,7 +17,7 @@
 #include "base/time/default_clock.h"
 #include "base/timer/timer.h"
 #include "base/unguessable_token.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/secure_message_delegate_impl.h"
 #include "chromeos/ash/services/device_sync/attestation_certificates_syncer_impl.h"
 #include "chromeos/ash/services/device_sync/cryptauth_client_impl.h"

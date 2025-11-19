@@ -8,7 +8,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/task_environment.h"
 #include "base/time/time.h"
 #include "components/metrics/structured/lib/arena_persistent_proto.h"

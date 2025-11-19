@@ -5,7 +5,7 @@
 #include "chromeos/ash/components/tether/network_configuration_remover.h"
 
 #include "base/functional/bind.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/network/managed_network_configuration_handler.h"
 
 namespace {

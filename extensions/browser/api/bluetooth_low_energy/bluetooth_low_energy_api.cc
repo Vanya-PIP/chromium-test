@@ -16,7 +16,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/types/cxx23_to_underlying.h"
 #include "base/types/expected_macros.h"

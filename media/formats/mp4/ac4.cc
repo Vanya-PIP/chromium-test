@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <array>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "media/base/bit_reader.h"
 #include "media/formats/mp4/rcheck.h"

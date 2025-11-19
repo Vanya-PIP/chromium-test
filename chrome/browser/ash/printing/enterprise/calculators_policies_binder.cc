@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chrome/browser/ash/printing/enterprise/bulk_printers_calculator.h"
 #include "chrome/browser/ash/printing/enterprise/bulk_printers_calculator_factory.h"

@@ -4,7 +4,7 @@
 
 #include "components/gwp_asan/client/lightweight_detector/partitionalloc_shims.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/test/multiprocess_test.h"
 #include "base/test/test_timeouts.h"

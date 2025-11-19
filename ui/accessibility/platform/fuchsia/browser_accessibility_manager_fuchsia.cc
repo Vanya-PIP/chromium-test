@@ -6,7 +6,7 @@
 
 #include <lib/inspect/component/cpp/component.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "ui/accessibility/ax_event_generator.h"
 #include "ui/accessibility/ax_node.h"
 #include "ui/accessibility/platform/ax_platform_tree_manager_delegate.h"

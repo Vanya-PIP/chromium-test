@@ -15,7 +15,7 @@
 #include <memory>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/run_loop.h"
 #include "base/strings/stringprintf.h"

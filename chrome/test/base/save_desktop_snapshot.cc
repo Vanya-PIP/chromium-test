@@ -12,7 +12,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/stringprintf.h"
 #include "base/test/test_future.h"

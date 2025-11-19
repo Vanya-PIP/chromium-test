@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/time/time.h"
 #include "chromeos/ash/components/boca/babelorca/proto/tachyon.pb.h"

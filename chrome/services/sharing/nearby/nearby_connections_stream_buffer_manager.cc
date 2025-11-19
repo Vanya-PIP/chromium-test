@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/containers/contains.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "third_party/nearby/src/internal/platform/exception.h"
 #include "third_party/nearby/src/internal/platform/input_stream.h"
 

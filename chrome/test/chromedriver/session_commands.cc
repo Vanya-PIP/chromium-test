@@ -15,7 +15,7 @@
 #include "base/functional/callback.h"
 #include "base/json/json_reader.h"
 #include "base/location.h"
-#include "base/logging.h"  // For CHECK macros.
+#include "base/test"  // For CHECK macros.
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"
@@ -43,7 +43,7 @@
 #include "chrome/test/chromedriver/chrome_launcher.h"
 #include "chrome/test/chromedriver/command_listener.h"
 #include "chrome/test/chromedriver/constants/version.h"
-#include "chrome/test/chromedriver/logging.h"
+#include "chrome/test/chromedriver/test"
 #include "chrome/test/chromedriver/net/sync_websocket.h"
 #include "chrome/test/chromedriver/net/sync_websocket_factory.h"
 #include "chrome/test/chromedriver/session.h"

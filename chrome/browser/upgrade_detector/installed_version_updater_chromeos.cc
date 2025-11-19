@@ -5,7 +5,7 @@
 #include "chrome/browser/upgrade_detector/installed_version_updater_chromeos.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/upgrade_detector/build_state.h"
 #include "chromeos/ash/components/dbus/update_engine/update_engine_client.h"

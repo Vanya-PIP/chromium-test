@@ -747,7 +747,7 @@ void ReadAnythingAppModel::ResetTextSize() {
 
 void ReadAnythingAppModel::OnScroll(bool on_selection,
                                     bool from_reading_mode) const {
-  // Enum for logging how a scroll occurs.
+  // Enum for testow a scroll occurs.
   // These values are persisted to logs. Entries should not be renumbered and
   // numeric values should never be reused.
   //

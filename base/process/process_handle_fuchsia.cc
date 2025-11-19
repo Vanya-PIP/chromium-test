@@ -8,7 +8,7 @@
 #include <zircon/process.h>
 
 #include "base/fuchsia/koid.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace base {
 

@@ -5,7 +5,7 @@
 #include "skia/ext/draw_gainmap_image.h"
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "skia/ext/geometry.h"
 #include "third_party/skia/include/core/SkCanvas.h"
 #include "third_party/skia/include/core/SkColorSpace.h"

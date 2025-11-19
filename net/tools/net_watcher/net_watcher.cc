@@ -18,7 +18,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/run_loop.h"
 #include "base/strings/string_split.h"

@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/thread_checker.h"
 #include "base/trace_event/trace_event.h"
 #include "net/base/load_flags.h"

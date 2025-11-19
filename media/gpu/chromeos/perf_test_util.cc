@@ -7,7 +7,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_util.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gtest/include/gtest/gtest.h"
 
 namespace media {

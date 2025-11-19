@@ -8,7 +8,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/memory_pressure_listener.h"
 #include "base/memory/scoped_refptr.h"
 #include "chrome/common/chrome_features.h"

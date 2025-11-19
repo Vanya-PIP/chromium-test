@@ -4,7 +4,7 @@
 
 #include "ui/accessibility/platform/ax_platform_node.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/no_destructor.h"
 #include "build/build_config.h"
 #include "ui/accessibility/ax_node_data.h"

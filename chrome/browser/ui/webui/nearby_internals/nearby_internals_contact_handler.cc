@@ -13,7 +13,7 @@
 #include "chrome/browser/nearby_sharing/logging/proto_to_dictionary_conversion.h"
 #include "chrome/browser/nearby_sharing/nearby_sharing_service.h"
 #include "chrome/browser/nearby_sharing/nearby_sharing_service_factory.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace {
 

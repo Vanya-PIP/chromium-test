@@ -18,7 +18,7 @@
 #include "base/time/time.h"
 #include "chrome/common/actor.mojom-shared.h"
 #include "chrome/common/actor/action_result.h"
-#include "chrome/common/actor/actor_logging.h"
+#include "chrome/common/actor/actor_test"
 #include "chrome/common/actor/journal_details_builder.h"
 #include "chrome/common/chrome_features.h"
 #include "chrome/renderer/actor/click_tool.h"

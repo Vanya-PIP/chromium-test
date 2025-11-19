@@ -7,7 +7,7 @@
 #include <optional>
 
 #include "ash/constants/ash_features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"

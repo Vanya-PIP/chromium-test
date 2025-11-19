@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/phonehub/notification_interaction_handler_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/phonehub/notification.h"
 
 namespace ash::phonehub {

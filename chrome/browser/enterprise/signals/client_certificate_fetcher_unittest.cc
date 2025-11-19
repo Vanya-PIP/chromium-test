@@ -6,7 +6,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/test/test_future.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"

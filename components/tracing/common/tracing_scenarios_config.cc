@@ -13,7 +13,7 @@
 #include "base/command_line.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/task_traits.h"
 #include "components/tracing/common/tracing_switches.h"
 #include "third_party/perfetto/protos/perfetto/config/chrome/histogram_samples.gen.h"

@@ -5,7 +5,7 @@
 #include "components/mirroring/service/media_remoter.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "components/mirroring/service/remoting_sender.h"
 #include "components/mirroring/service/rpc_dispatcher.h"

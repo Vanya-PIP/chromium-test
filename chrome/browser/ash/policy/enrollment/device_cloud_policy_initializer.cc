@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/policy/core/device_cloud_policy_client_factory_ash.h"
 #include "chrome/browser/ash/policy/core/device_cloud_policy_manager_ash.h"
 #include "chrome/browser/ash/policy/core/device_cloud_policy_store_ash.h"

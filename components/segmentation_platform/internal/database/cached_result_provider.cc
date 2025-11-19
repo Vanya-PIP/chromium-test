@@ -4,8 +4,8 @@
 
 #include "components/segmentation_platform/internal/database/cached_result_provider.h"
 
-#include "base/logging.h"
-#include "components/segmentation_platform/internal/logging.h"
+#include "base/test"
+#include "components/segmentation_platform/internal/test"
 #include "components/segmentation_platform/internal/metadata/metadata_utils.h"
 #include "components/segmentation_platform/internal/stats.h"
 #include "components/segmentation_platform/public/config.h"

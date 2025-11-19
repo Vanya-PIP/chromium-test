@@ -19,7 +19,7 @@
 #include "base/containers/span.h"
 #include "base/files/file.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/strings/stringprintf.h"

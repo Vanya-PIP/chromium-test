@@ -8,7 +8,7 @@
 
 #include "base/command_line.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "gpu/config/gpu_feature_info.h"
 #include "gpu/config/gpu_switches.h"

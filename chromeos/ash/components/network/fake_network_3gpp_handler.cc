@@ -13,7 +13,7 @@
 
 #include "base/containers/circular_deque.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/task/task_runner.h"
 #include "base/values.h"

@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"
 #include "ui/base/l10n/l10n_util.h"

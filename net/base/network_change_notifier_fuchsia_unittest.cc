@@ -15,7 +15,7 @@
 
 #include "base/auto_reset.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/test/task_environment.h"
 #include "base/threading/sequence_bound.h"

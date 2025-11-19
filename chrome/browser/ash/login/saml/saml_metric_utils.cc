@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"
 #include "net/cert/x509_certificate.h"

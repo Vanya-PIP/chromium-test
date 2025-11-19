@@ -19,7 +19,7 @@
 #include "base/containers/flat_set.h"
 #include "base/containers/map_util.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"
 #include "base/types/expected.h"

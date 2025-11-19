@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/public/cpp/base/file_path_mojom_traits.h"
 
 namespace mojo {

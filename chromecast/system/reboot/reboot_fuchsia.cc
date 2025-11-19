@@ -13,7 +13,7 @@
 #include "base/files/file.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/no_destructor.h"
 #include "chromecast/public/reboot_shlib.h"

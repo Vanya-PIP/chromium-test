@@ -11,7 +11,7 @@
 #include <string>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/stringprintf.h"

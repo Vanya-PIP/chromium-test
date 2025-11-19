@@ -19,7 +19,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/process_requirement.h"
 #include "base/message_loop/message_pump_type.h"
 #include "base/metrics/field_trial.h"

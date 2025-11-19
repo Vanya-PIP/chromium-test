@@ -10,7 +10,7 @@
 #include "base/containers/contains.h"
 #include "base/files/file_path.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/ref_counted.h"
 #include "base/synchronization/waitable_event.h"

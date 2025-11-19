@@ -26,7 +26,7 @@
 #include "base/containers/span.h"
 #include "base/files/file.h"
 #include "base/format_macros.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "build/build_config.h"
 

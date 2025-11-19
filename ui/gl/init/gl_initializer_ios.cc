@@ -4,7 +4,7 @@
 
 #include "ui/gl/init/gl_initializer.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gl/gl_bindings.h"
 #include "ui/gl/gl_context.h"
 #include "ui/gl/gl_display.h"

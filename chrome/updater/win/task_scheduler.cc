@@ -23,7 +23,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/callback.h"
 #include "base/functional/function_ref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/native_library.h"
 #include "base/notreached.h"

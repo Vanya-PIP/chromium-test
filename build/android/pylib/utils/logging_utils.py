@@ -85,7 +85,7 @@ class ColorStreamHandler(logging.StreamHandler):
   @staticmethod
   def MakeDefault(force_color=False):
     """
-     Replaces the default logging handlers with a coloring handler. To use
+     Replaces the default testandlers with a coloring handler. To use
      a colorizing handler at the same time as others, either register them
      after this call, or add the ColorStreamHandler on the logger using
      Logger.addHandler()

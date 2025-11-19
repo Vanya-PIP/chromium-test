@@ -6,7 +6,7 @@
 
 #include <windows.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/task/single_thread_task_runner.h"
 #include "remoting/host/client_session_control.h"

@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/floss/bluetooth_pairing_floss.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/bluetooth/bluetooth_device.h"
 #include "device/bluetooth/floss/bluetooth_device_floss.h"
 

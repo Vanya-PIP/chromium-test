@@ -9,7 +9,7 @@
 #include <memory>
 
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/trace_event/trace_event.h"
 #include "content/public/app/content_main.h"

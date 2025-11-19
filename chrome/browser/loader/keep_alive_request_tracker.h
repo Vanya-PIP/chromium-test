@@ -20,7 +20,7 @@
 // ChromeKeepAliveRequestTracker is responsible for recording browser-side
 // metrics for an eligible fetch keepalive request.
 //
-// The UKM event logging happens only once when this tracker is about to be
+// The UKM event testappens only once when this tracker is about to be
 // destroyed.
 //
 // See

@@ -20,7 +20,7 @@
 #include "base/hash/hash.h"
 #include "base/json/json_file_value_serializer.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/metrics/histogram.h"
 #include "base/metrics/histogram_macros.h"

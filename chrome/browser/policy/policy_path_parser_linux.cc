@@ -12,7 +12,7 @@
 
 #include "chrome/browser/policy/policy_path_parser.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace policy {
 

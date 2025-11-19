@@ -22,7 +22,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/authorization_util.h"
 #include "base/mac/scoped_authorizationref.h"
 #include "base/memory/scoped_refptr.h"

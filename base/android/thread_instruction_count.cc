@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/threading/thread_local_storage.h"

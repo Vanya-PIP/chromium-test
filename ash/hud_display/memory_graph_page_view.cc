@@ -11,7 +11,7 @@
 #include "ash/hud_display/hud_constants.h"
 #include "ash/hud_display/reference_lines.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversions.h"
 #include "ui/base/metadata/metadata_impl_macros.h"

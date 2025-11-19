@@ -7,7 +7,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/sequence_bound.h"
 #include "base/time/time.h"
 

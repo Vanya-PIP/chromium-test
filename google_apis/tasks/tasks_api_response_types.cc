@@ -10,7 +10,7 @@
 #include <string_view>
 
 #include "base/json/json_value_converter.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/values.h"
 #include "google_apis/common/parser_util.h"

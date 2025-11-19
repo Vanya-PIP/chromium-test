@@ -9,7 +9,7 @@
 #include "base/containers/span.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/no_destructor.h"
 #include "base/task/task_traits.h"

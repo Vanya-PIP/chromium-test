@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/check_op.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/json/json_writer.h"
 #include "base/notreached.h"
 #include "build/build_config.h"

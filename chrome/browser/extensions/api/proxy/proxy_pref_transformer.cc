@@ -7,7 +7,7 @@
 #include <optional>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/values.h"
 #include "chrome/browser/extensions/api/proxy/proxy_api_constants.h"

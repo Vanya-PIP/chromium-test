@@ -11,7 +11,7 @@
 #include "base/memory/ptr_util.h"
 #include "base/memory/weak_ptr.h"
 #include "base/task/sequenced_task_runner.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/action_executor.h"
 #include "remoting/host/audio_capturer.h"
 #include "remoting/host/curtain_mode.h"

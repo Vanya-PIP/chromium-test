@@ -5,7 +5,7 @@
 #include "services/audio/output_device_mixer_manager.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/trace_event/trace_event.h"

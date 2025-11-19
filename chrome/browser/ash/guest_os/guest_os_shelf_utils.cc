@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_util.h"
 #include "chrome/browser/ash/borealis/borealis_window_manager.h"

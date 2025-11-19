@@ -7,12 +7,12 @@
 #include <memory>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/browser/devtools/devtools_dispatch_http_request_params.h"
 #include "chrome/browser/devtools/devtools_settings.h"
 #include "chrome/browser/devtools/features.h"
-#include "chrome/browser/devtools/visual_logging.h"
+#include "chrome/browser/devtools/visual_test"
 
 namespace {
 

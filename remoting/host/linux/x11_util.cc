@@ -8,7 +8,7 @@
 #include "base/functional/bind.h"
 #include "base/strings/string_util.h"
 #include "base/types/cxx23_to_underlying.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "ui/gfx/x/future.h"
 #include "ui/gfx/x/randr.h"
 #include "ui/gfx/x/xinput.h"

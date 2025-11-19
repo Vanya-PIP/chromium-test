@@ -9,7 +9,7 @@
 
 #include "ash/webui/shimless_rma/backend/shimless_rma_delegate.h"
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "content/public/browser/web_contents_observer.h"

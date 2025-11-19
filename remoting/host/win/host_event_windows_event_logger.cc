@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/stringprintf.h"
 #include "remoting/host/win/event_trace_data.h"

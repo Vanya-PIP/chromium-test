@@ -9,7 +9,7 @@
 #include <winspool.h>
 #include <winsvc.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/scoped_handle.h"
 
 namespace printing::internal {

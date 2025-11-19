@@ -6,7 +6,7 @@
 
 #include <set>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/segmentation_platform/internal/database/segment_info_database.h"
 #include "components/segmentation_platform/internal/database/signal_storage_config.h"
 #include "components/segmentation_platform/internal/database/storage_service.h"

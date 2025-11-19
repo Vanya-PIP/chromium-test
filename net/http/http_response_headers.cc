@@ -18,7 +18,7 @@
 
 #include "base/byte_count.h"
 #include "base/format_macros.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/pickle.h"
 #include "base/strings/escape.h"

@@ -8,7 +8,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "chromeos/ash/experiences/arc/session/arc_bridge_service.h"
 #include "chromeos/ash/experiences/arc/session/arc_service_manager.h"

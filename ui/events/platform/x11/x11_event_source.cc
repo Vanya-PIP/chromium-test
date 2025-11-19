@@ -6,7 +6,7 @@
 #include <memory>
 #include <type_traits>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/memory/ref_counted_memory.h"
 #include "base/metrics/histogram_macros.h"

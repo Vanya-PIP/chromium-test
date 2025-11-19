@@ -12,7 +12,7 @@
 #include "base/apple/bridging.h"
 #include "base/apple/foundation_util.h"
 #include "base/apple/scoped_cftyperef.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"

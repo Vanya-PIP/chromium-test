@@ -7,7 +7,7 @@
 #include <linux/input.h>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 
 #if BUILDFLAG(IS_CHROMEOS)
 #include "ash/constants/ash_features.h"

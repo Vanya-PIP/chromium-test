@@ -6,7 +6,7 @@
 
 #include <tuple>
 
-#include "base/logging.h"
+#include "base/test"
 #include "gpu/vulkan/vulkan_function_pointers.h"
 
 namespace gpu {

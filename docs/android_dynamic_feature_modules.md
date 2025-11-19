@@ -522,7 +522,7 @@ Add a stub implementation in
 `//chrome/browser/foo/internal/android/foo_impl.cc`:
 
 ```c++
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/foo/internal/jni_headers/FooImpl_jni.h"
 
 static int JNI_FooImpl_Execute(JNIEnv* env) {

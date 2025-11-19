@@ -16,7 +16,7 @@
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/path_service.h"
 #include "base/process/launch.h"
@@ -26,7 +26,7 @@
 #include "base/time/time.h"
 #include "base/win/scoped_handle.h"
 #include "base/win/windows_types.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/base/switches.h"
 #include "remoting/host/win/wts_session_change_observer.h"
 

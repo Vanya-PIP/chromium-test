@@ -5,7 +5,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/chrome/test/wpt/cwt_request_handler.h"
 #import "net/base/port_util.h"

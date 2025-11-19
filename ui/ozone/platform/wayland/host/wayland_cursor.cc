@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "third_party/skia/include/core/SkBitmap.h"
 #include "ui/gfx/geometry/point.h"
 #include "ui/gfx/geometry/skia_conversions.h"

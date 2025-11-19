@@ -4,7 +4,7 @@
 
 #include "media/gpu/vp8_decoder.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "media/base/limits.h"
 #include "ui/gfx/hdr_metadata.h"

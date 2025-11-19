@@ -8,8 +8,8 @@
 
 #include <string_view>
 
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/time/time.h"

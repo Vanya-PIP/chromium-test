@@ -5,7 +5,7 @@
 #include "ash/wm/scoped_windows_mover.h"
 
 #include "ash/wm/window_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/aura/window.h"
 
 namespace ash {

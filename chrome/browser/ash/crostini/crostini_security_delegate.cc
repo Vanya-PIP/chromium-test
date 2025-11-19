@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/crostini/crostini_security_delegate.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chrome/browser/ash/crostini/crostini_features.h"
 #include "chromeos/ui/base/window_properties.h"

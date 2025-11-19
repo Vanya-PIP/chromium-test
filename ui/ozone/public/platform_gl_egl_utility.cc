@@ -4,7 +4,7 @@
 
 #include "ui/ozone/public/platform_gl_egl_utility.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 
 namespace ui {

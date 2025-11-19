@@ -8,7 +8,7 @@
 #include "base/component_export.h"
 #include "base/containers/queue.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/dbus/featured/featured.pb.h"
 #include "chromeos/ash/components/dbus/featured/featured_client.h"
 

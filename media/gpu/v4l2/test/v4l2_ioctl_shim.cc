@@ -22,7 +22,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/pattern.h"

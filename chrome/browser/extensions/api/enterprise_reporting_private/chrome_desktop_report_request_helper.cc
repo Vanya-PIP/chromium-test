@@ -7,7 +7,7 @@
 #include "base/base64.h"
 #include "base/base_paths.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/path_service.h"
 #include "base/rand_util.h"

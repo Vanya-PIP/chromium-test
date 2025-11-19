@@ -18,7 +18,7 @@
 #include "chrome/browser/ash/multidevice_setup/oobe_completion_tracker_factory.h"
 #include "chrome/browser/ash/profiles/profile_helper.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/multidevice_setup/multidevice_setup_service.h"
 #include "chromeos/ash/services/multidevice_setup/public/cpp/prefs.h"
 #include "chromeos/ash/services/multidevice_setup/public/mojom/multidevice_setup.mojom.h"

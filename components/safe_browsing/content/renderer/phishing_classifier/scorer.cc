@@ -11,7 +11,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/read_only_shared_memory_region.h"
 #include "base/memory/shared_memory_mapping.h"
 #include "base/metrics/histogram_functions.h"

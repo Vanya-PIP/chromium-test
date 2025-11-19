@@ -9,7 +9,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gfx/geometry/rect.h"
 #include "ui/views/animation/animation_builder.h"
 

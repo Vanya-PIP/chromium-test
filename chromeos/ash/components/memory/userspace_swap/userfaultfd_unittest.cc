@@ -15,7 +15,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/rand_util.h"

@@ -18,7 +18,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notimplemented.h"
 #include "base/threading/platform_thread_internal_posix.h"

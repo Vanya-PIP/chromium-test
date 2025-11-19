@@ -4,7 +4,7 @@
 
 #include "chromecast/ui/display_settings/screen_power_controller_default.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 namespace chromecast {

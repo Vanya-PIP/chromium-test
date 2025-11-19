@@ -23,7 +23,7 @@
 #include "base/check_op.h"
 #include "base/containers/linked_list.h"
 #include "base/debug/stack_trace.h"
-#include "base/logging.h"
+#include "base/test"
 #endif  // ENABLE_LEAK_TRACKER
 
 // LeakTracker is a helper to verify that all instances of a class

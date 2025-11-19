@@ -10,7 +10,7 @@
 #include "base/check.h"
 #include "base/containers/contains.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/win/scoped_handle.h"
 #include "device/vr/openxr/openxr_api_wrapper.h"

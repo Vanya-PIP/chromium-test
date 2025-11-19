@@ -5,7 +5,7 @@
 #include "chrome/browser/ui/ash/login/input_events_blocker.h"
 
 #include "ash/shell.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/events/event.h"
 
 namespace ash {

@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/task/single_thread_task_runner.h"
 #include "device/bluetooth/dbus/bluez_dbus_manager.h"

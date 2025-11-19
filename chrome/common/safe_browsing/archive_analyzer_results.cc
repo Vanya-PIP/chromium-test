@@ -9,7 +9,7 @@
 
 #include "base/files/file.h"
 #include "base/i18n/streaming_utf8_validator.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_view_util.h"

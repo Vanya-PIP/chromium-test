@@ -12,7 +12,7 @@
 #include "base/check_op.h"
 #include "base/containers/contains.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/notreached.h"
 #include "base/numerics/safe_math.h"

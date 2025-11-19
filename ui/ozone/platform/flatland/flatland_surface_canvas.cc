@@ -12,7 +12,7 @@
 #include <fuchsia/sysmem2/cpp/fidl.h>
 #include <fuchsia/ui/composition/cpp/fidl.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
 #include "base/location.h"
 #include "base/memory/weak_ptr.h"

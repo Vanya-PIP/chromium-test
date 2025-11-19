@@ -12,7 +12,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/strings/string_view_util.h"
 #include "base/strings/utf_string_conversions.h"

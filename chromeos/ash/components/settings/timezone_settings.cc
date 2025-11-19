@@ -15,7 +15,7 @@
 #include "base/functional/bind.h"
 #include "base/i18n/unicodestring.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/singleton.h"
 #include "base/observer_list.h"

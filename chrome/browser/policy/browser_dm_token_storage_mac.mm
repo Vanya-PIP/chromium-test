@@ -24,7 +24,7 @@
 #include "base/strings/string_util.h"
 #include "base/strings/sys_string_conversions.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/thread_pool.h"
 #include "base/threading/scoped_blocking_call.h"
 #include "chrome/common/chrome_paths.h"

@@ -12,7 +12,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/notimplemented.h"
 #include "base/rand_util.h"
@@ -24,7 +24,7 @@
 #include "net/base/net_errors.h"
 #include "net/log/net_log_source.h"
 #include "net/socket/udp_server_socket.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/session_options.h"
 #include "remoting/protocol/session_options_provider.h"
 #include "remoting/protocol/socket_util.h"

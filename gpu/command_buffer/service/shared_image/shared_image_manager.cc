@@ -11,9 +11,9 @@
 #include <utility>
 
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/stack_allocated.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/stringprintf.h"

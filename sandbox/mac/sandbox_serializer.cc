@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-#include "sandbox/mac/sandbox_logging.h"
+#include "sandbox/mac/sandbox_test"
 #include "sandbox/mac/seatbelt.h"
 
 

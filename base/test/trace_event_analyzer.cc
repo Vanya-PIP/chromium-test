@@ -12,7 +12,7 @@
 
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/ref_counted_memory.h"
 #include "base/run_loop.h"

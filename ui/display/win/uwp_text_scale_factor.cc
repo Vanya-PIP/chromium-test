@@ -12,7 +12,7 @@
 #include <memory>
 
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/thread_checker.h"
 #include "base/win/core_winrt_util.h"
 #include "base/win/scoped_com_initializer.h"

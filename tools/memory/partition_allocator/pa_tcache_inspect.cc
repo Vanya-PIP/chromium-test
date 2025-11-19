@@ -29,7 +29,7 @@
 #include "base/files/file_enumerator.h"
 #include "base/files/scoped_file.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/string_number_conversions.h"

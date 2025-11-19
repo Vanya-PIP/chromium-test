@@ -5,7 +5,7 @@
 #include "chrome/browser/metrics/structured/cros_events_processor.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace metrics::structured::cros_event {
 

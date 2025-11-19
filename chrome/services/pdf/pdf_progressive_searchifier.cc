@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/services/pdf/public/mojom/pdf_progressive_searchifier.mojom.h"
 #include "chrome/services/pdf/public/mojom/pdf_service.mojom.h"
 #include "mojo/public/cpp/bindings/pending_remote.h"

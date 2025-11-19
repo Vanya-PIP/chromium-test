@@ -8,7 +8,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/ozone/platform/wayland/host/wayland_connection.h"
 #include "ui/ozone/platform/wayland/host/wayland_data_source.h"
 #include "ui/ozone/platform/wayland/host/wayland_seat.h"

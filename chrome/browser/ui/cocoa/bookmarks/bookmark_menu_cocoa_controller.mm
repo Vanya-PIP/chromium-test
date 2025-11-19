@@ -5,7 +5,7 @@
 #import "chrome/browser/ui/cocoa/bookmarks/bookmark_menu_cocoa_controller.h"
 
 #import "base/apple/foundation_util.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/user_metrics.h"

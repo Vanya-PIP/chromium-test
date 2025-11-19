@@ -2,13 +2,13 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "components/peripherals/logging/logging.h"
+#include "components/peripherals/logging/test"
 
 #include <string_view>
 
 #include "ash/constants/ash_features.h"
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 
 PeripheralsScopedLogMessage::PeripheralsScopedLogMessage(

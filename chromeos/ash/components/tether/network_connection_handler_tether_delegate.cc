@@ -7,7 +7,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/tether/active_host.h"
 #include "chromeos/ash/components/tether/tether_connector.h"
 #include "chromeos/ash/components/tether/tether_disconnector.h"

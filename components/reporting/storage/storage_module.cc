@@ -10,7 +10,7 @@
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/types/expected.h"
 #include "components/reporting/compression/compression_module.h"

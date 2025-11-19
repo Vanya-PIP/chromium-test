@@ -14,7 +14,7 @@
 #include "ash/display/screen_orientation_controller_test_api.h"
 #include "ash/shell.h"
 #include "base/bit_cast.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "base/strings/stringprintf.h"

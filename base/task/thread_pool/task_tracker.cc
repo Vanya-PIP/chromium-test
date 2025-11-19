@@ -15,7 +15,7 @@
 #include "base/debug/alias.h"
 #include "base/functional/callback.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/notreached.h"

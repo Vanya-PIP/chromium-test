@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/encrypted_messages/encrypted_message.pb.h"
 #include "crypto/aead.h"
 #include "crypto/hkdf.h"

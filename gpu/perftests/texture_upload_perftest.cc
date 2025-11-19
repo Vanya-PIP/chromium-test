@@ -13,7 +13,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/flat_map.h"
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/strings/stringprintf.h"
 #include "gpu/perftests/measurements.h"

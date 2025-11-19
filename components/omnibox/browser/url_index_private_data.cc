@@ -18,7 +18,7 @@
 
 #include "base/containers/flat_set.h"
 #include "base/containers/stack.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/i18n/case_conversion.h"
 #include "base/memory/raw_ptr.h"

@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "base/test/gtest_util.h"
 #include "chrome/browser/renderer_context_menu/render_view_context_menu.h"

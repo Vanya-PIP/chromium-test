@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/aura/window.h"
 
 #define LOG_WINDOW_INFO(top_level, window)                                 \

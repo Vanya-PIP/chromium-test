@@ -12,7 +12,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 
 namespace remoting {

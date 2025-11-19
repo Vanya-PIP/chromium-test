@@ -4,7 +4,7 @@
 
 #include "gpu/command_buffer/service/shared_image/android_image_backing.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "ui/gl/gl_utils.h"
 

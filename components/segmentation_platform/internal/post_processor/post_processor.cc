@@ -8,7 +8,7 @@
 #include "components/segmentation_platform/internal/metadata/metadata_utils.h"
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/segmentation_platform/public/result.h"
 

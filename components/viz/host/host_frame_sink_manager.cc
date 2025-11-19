@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/observer_list.h"

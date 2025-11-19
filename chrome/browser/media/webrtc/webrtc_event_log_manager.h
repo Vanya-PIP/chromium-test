@@ -168,7 +168,7 @@ class WebRtcEventLogManager final
       const base::Time& delete_end,
       base::OnceClosure reply);
 
-  // Get the logging history (relevant only to remote-bound logs). This includes
+  // Get the testistory (relevant only to remote-bound logs). This includes
   // information such as when logs were captured, when they were uploaded,
   // and what their ID in the remote server was.
   // Must be called on the UI thread.
@@ -495,7 +495,7 @@ class WebRtcEventLogManager final
   raw_ptr<WebRtcRemoteEventLogsObserver> remote_logs_observer_;
 
   // Manages local-bound logs - logs stored on the local filesystem when
-  // logging has been explicitly enabled by the user.
+  // testas been explicitly enabled by the user.
   WebRtcLocalEventLogManager local_logs_manager_;
 
   // Manages remote-bound logs - logs which will be sent to a remote server.

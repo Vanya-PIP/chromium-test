@@ -74,7 +74,7 @@ source_set("util") {
     "internet_availability_checker.cc",
     "internet_availability_checker.h",
     "logging.cc",
-    "logging.h",
+    "test",
     "os_gaia_user_manager.cc",
     "os_gaia_user_manager.h",
     "os_user_manager.cc",

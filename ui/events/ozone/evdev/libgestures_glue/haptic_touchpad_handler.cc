@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "ui/events/ozone/evdev/input_device_settings_evdev.h"
 

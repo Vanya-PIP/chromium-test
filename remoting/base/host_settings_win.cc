@@ -7,11 +7,11 @@
 #include <string>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/win/registry.h"
 #include "base/win/windows_types.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 
 namespace remoting {
 

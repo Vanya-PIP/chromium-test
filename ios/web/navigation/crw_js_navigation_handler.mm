@@ -5,7 +5,7 @@
 #import "ios/web/navigation/crw_js_navigation_handler.h"
 
 #import "base/json/string_escape.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/web/history_state_util.h"
 #import "ios/web/navigation/navigation_context_impl.h"

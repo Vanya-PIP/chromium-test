@@ -4,7 +4,7 @@
 
 #include "components/metrics/system_session_analyzer/system_session_analyzer_win.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 namespace metrics {

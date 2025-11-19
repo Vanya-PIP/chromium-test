@@ -6,7 +6,7 @@
 #include <utility>
 
 #include "base/command_line.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/test/launcher/test_launcher.h"
 #include "base/test/test_suite.h"
 #include "content/public/common/content_switches.h"

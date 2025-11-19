@@ -10,9 +10,9 @@
 
 #include "ash/ash_export.h"
 #include "ash/public/mojom/input_device_settings.mojom.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
-#include "components/peripherals/logging/logging.h"
+#include "components/peripherals/logging/test"
 
 namespace ash {
 

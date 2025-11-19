@@ -18,7 +18,7 @@
 #include "base/apple/scoped_cftyperef.h"
 #include "base/apple/scoped_objc_class_swizzler.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/test/task_environment.h"

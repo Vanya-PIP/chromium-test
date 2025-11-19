@@ -16,7 +16,7 @@
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/escape.h"
 #include "base/strings/string_util.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/version.h"
 #include "build/branding_buildflags.h"
 #include "build/build_config.h"

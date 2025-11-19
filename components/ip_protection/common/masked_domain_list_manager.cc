@@ -20,7 +20,7 @@
 #include "base/files/file.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/trace_event/memory_usage_estimator.h"
 #include "components/ip_protection/common/ip_protection_data_types.h"

@@ -11,7 +11,7 @@
 #include "base/check_op.h"
 #include "base/feature_list.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/strings/sys_string_conversions.h"
 #include "ui/gfx/geometry/rect.h"

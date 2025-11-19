@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "components/policy/core/common/policy_map.h"
 #include "components/policy/core/common/policy_types.h"

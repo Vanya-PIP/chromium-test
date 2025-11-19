@@ -8,7 +8,7 @@
 #include <memory>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/memory/raw_ref.h"

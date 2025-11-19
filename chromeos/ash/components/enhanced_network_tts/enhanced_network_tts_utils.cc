@@ -9,7 +9,7 @@
 
 #include "base/base64.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_util.h"
 #include "chromeos/ash/components/enhanced_network_tts/enhanced_network_tts_constants.h"

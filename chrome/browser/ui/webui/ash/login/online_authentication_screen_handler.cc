@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/webui/ash/login/online_authentication_screen_handler.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/login/oobe_screen.h"
 #include "chrome/browser/ash/login/screens/online_authentication_screen.h"
 #include "chrome/grit/generated_resources.h"

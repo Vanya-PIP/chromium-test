@@ -6,7 +6,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/feed/core/v2/config.h"
 #include "components/feed/core/v2/prefs.h"
 #include "components/prefs/pref_service.h"

@@ -7,7 +7,7 @@
 
 #include "base/functional/callback.h"
 #include "base/memory/weak_ptr.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_page_data.h"
 #include "components/webapps/browser/installable/installable_params.h"
 #include "third_party/blink/public/mojom/manifest/manifest.mojom.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/browser/tab_contents/navigation_metrics_recorder.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process.h"

@@ -9,7 +9,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chrome/browser/ui/ash/input_method/candidate_window_constants.h"
 #include "ui/base/l10n/l10n_util.h"

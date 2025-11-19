@@ -15,7 +15,7 @@
 #include <utility>
 
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/platform_shared_memory_region.h"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"

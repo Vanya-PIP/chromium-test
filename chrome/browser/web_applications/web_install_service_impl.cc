@@ -34,7 +34,7 @@
 #include "components/webapps/browser/banners/app_banner_manager.h"
 #include "components/webapps/browser/banners/installable_web_app_check_result.h"
 #include "components/webapps/browser/install_result_code.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/browser/installable/installable_params.h"
 #include "components/webapps/browser/installable/ml_install_operation_tracker.h"

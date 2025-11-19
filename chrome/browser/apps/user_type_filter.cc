@@ -4,7 +4,7 @@
 
 #include "chrome/browser/apps/user_type_filter.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "build/build_config.h"
 #include "chrome/browser/policy/profile_policy_connector.h"  // nogncheck crbug.com/1420759

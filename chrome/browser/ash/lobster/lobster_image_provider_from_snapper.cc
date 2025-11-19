@@ -11,7 +11,7 @@
 #include "ash/strings/grit/ash_strings.h"
 #include "base/barrier_callback.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_view_util.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

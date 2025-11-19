@@ -17,7 +17,7 @@
 #include "ash/style/icon_button.h"
 #include "ash/style/style_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/utf_string_conversions.h"
 #include "chromeos/constants/chromeos_features.h"

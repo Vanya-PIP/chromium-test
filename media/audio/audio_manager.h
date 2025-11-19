@@ -15,7 +15,7 @@
 #include "base/threading/thread_checker.h"
 #include "build/build_config.h"
 #include "media/audio/audio_device_description.h"
-#include "media/audio/audio_logging.h"
+#include "media/audio/audio_test"
 #include "media/audio/audio_thread.h"
 #include "media/base/audio_parameters.h"
 

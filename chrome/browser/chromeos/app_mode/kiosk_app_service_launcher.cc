@@ -13,7 +13,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
 #include "base/metrics/histogram_functions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/types/cxx23_to_underlying.h"
 #include "build/buildflag.h"
 #include "chrome/browser/apps/app_service/app_launch_params.h"

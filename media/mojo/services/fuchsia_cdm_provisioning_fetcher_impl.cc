@@ -4,11 +4,11 @@
 
 #include "media/mojo/services/fuchsia_cdm_provisioning_fetcher_impl.h"
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/mem_buffer_util.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 

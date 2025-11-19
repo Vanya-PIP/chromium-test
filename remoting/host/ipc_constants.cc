@@ -4,7 +4,7 @@
 
 #include "remoting/host/ipc_constants.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/path_service.h"
 #include "base/strings/stringprintf.h"

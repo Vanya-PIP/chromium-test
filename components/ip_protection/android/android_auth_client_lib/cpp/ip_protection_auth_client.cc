@@ -7,7 +7,7 @@
 #include "base/android/jni_array.h"
 #include "base/android/jni_string.h"
 #include "base/android/scoped_java_ref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "components/ip_protection/android/android_auth_client_lib/cpp/bind_callback_listener.h"
 #include "components/ip_protection/android/android_auth_client_lib/cpp/byte_array_callback_listener.h"

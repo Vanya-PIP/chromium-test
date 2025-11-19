@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "crypto/keypair.h"
 #include "third_party/boringssl/src/include/openssl/evp.h"
 #include "third_party/boringssl/src/include/openssl/mem.h"

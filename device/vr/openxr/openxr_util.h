@@ -5,7 +5,7 @@
 #ifndef DEVICE_VR_OPENXR_OPENXR_UTIL_H_
 #define DEVICE_VR_OPENXR_OPENXR_UTIL_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/vr/public/mojom/pose.h"
 #include "device/vr/public/mojom/vr_service.mojom-forward.h"
 #include "device/vr/public/mojom/xr_session.mojom-forward.h"

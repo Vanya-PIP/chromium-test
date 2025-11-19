@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/string_split.h"
 #include "base/strings/utf_string_conversions.h"

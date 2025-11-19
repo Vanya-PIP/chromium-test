@@ -11,7 +11,7 @@
 #include <string>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/strings/stringprintf.h"
 #include "base/task/current_thread.h"

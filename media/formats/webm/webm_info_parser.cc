@@ -5,7 +5,7 @@
 #include "media/formats/webm/webm_info_parser.h"
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/formats/webm/webm_constants.h"
 
 namespace media {

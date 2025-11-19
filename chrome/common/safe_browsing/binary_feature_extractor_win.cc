@@ -12,7 +12,7 @@
 
 #include "base/containers/span.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/threading/scoped_thread_priority.h"
 #include "base/win/pe_image_reader.h"

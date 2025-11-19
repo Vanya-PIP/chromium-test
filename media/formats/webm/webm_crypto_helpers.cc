@@ -9,7 +9,7 @@
 
 #include "base/containers/span.h"
 #include "base/containers/span_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/safe_conversions.h"
 #include "media/base/decrypt_config.h"

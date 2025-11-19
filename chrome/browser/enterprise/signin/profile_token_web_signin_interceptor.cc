@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/new_tab_page/chrome_colors/selected_colors_info.h"
 #include "chrome/browser/profiles/profile_attributes_entry.h"

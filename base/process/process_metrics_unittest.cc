@@ -55,7 +55,7 @@
 #if BUILDFLAG(IS_MAC)
 #include <mach/mach.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/mach_port_rendezvous.h"
 #include "base/apple/scoped_mach_port.h"
 #include "base/process/port_provider_mac.h"

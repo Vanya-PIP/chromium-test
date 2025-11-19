@@ -7,7 +7,7 @@
 
 #include <ostream>
 
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/win/windows_types.h"
 
 namespace credential_provider {

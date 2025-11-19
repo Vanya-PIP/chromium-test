@@ -4,7 +4,7 @@
 
 #import "ios/testing/earl_grey/system_alert_handler.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/testing/earl_grey/earl_grey_test.h"
 #import "ios/testing/system_alert_handler.h"

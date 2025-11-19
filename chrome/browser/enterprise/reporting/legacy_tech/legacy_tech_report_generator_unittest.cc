@@ -6,7 +6,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/enterprise/common/proto/synced/legacy_tech_events.pb.h"
 #include "content/public/browser/legacy_tech_cookie_issue_details.h"
 #include "testing/gtest/include/gtest/gtest.h"

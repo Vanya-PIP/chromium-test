@@ -11,7 +11,7 @@
 
 #include "base/apple/foundation_util.h"
 #include "base/apple/scoped_cftyperef.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #include "net/base/host_port_pair.h"
 #include "net/base/proxy_chain.h"

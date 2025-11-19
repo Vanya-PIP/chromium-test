@@ -7,7 +7,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/app_list/chrome_app_list_item.h"
 
 ////////////////////////////////////////////////////////////////////////////////

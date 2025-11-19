@@ -9,7 +9,7 @@
 #include <string>
 
 #include "base/android/scoped_java_ref.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "third_party/skia/include/core/SkBitmap.h"
 

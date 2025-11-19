@@ -18,7 +18,7 @@
 #include "base/files/file.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/run_loop.h"
 #include "base/test/task_environment.h"

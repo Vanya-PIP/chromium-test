@@ -7,7 +7,7 @@
 #include "base/notreached.h"
 #include "ui/ozone/platform_object.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace ui {
 

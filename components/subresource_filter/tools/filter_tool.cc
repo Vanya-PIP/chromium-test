@@ -15,7 +15,7 @@
 
 #include "base/check.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/values.h"
 #include "components/subresource_filter/core/common/constants.h"

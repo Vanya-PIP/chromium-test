@@ -15,7 +15,7 @@
 #include <algorithm>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "media/gpu/vaapi/fuzzers/jpeg_decoder/jpeg_decoder_fuzzer_input.pb.h"
 #include "media/gpu/vaapi/vaapi_jpeg_decoder.h"

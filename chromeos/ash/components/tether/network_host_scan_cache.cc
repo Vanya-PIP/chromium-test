@@ -6,7 +6,7 @@
 
 #include "base/containers/contains.h"
 #include "base/notimplemented.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/network/network_state.h"
 #include "chromeos/ash/components/network/network_state_handler.h"
 #include "chromeos/ash/components/tether/device_id_tether_network_guid_map.h"

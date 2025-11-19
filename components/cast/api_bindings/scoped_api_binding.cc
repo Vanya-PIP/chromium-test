@@ -8,7 +8,7 @@
 #include <string_view>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/cast/api_bindings/manager.h"
 
 namespace cast_api_bindings {

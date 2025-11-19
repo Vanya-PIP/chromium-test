@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/kcer/attributes.pb.h"
 #include "chromeos/constants/pkcs11_definitions.h"
 #include "third_party/cros_system_api/dbus/chaps/dbus-constants.h"

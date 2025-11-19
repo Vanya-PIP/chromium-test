@@ -14,7 +14,7 @@
 #import "base/command_line.h"
 #import "base/files/file_path.h"
 #import "base/files/file_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/string_number_conversions.h"
 #import "base/strings/string_split.h"
 #import "base/strings/sys_string_conversions.h"

@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/dbus/bluetooth_gatt_characteristic_delegate_wrapper.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/bluetooth/bluez/bluetooth_local_gatt_characteristic_bluez.h"
 
 namespace bluez {

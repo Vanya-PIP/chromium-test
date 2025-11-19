@@ -7,7 +7,7 @@
 #include "base/strings/string_number_conversions.h"
 #include "chrome/services/sharing/nearby/nearby_shared_remotes.h"
 #include "chromeos/ash/components/nearby/presence/conversions/nearby_presence_conversions.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "third_party/abseil-cpp/absl/status/status.h"
 #include "third_party/nearby/internal/proto/credential.pb.h"

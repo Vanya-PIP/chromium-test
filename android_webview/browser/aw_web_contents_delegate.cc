@@ -21,7 +21,7 @@
 #include "base/check.h"
 #include "base/feature_list.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/no_destructor.h"
 #include "base/strings/string_util.h"

@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "media/audio/audio_logging.h"
+#include "media/audio/audio_test"
 #include "media/mojo/mojom/audio_logging.mojom.h"
 #include "mojo/public/cpp/bindings/remote.h"
 

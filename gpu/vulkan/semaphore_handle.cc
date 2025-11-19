@@ -4,7 +4,7 @@
 
 #include "gpu/vulkan/semaphore_handle.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_POSIX)
@@ -13,7 +13,7 @@
 #endif
 
 #if BUILDFLAG(IS_FUCHSIA)
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #endif
 
 #if BUILDFLAG(IS_WIN)

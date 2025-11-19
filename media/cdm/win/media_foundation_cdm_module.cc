@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/not_fatal_until.h"
 #include "base/strings/utf_string_conversions.h"

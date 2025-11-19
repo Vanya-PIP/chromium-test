@@ -8,7 +8,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/threading/thread_restrictions.h"
 #include "chrome/browser/ash/login/enrollment/mock_enrollment_launcher.h"

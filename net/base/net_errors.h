@@ -8,7 +8,7 @@
 #include <string>
 
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/net_export.h"
 
 namespace net {

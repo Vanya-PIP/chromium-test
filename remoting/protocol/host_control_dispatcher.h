@@ -7,7 +7,7 @@
 
 #include <cstddef>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "remoting/protocol/channel_dispatcher_base.h"
 #include "remoting/protocol/client_stub.h"

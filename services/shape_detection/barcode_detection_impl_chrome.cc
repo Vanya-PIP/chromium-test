@@ -12,7 +12,7 @@
 
 #include "base/containers/span.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "services/shape_detection/features.h"
 #include "services/shape_detection/public/mojom/barcodedetection.mojom-shared.h"

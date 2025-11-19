@@ -5,7 +5,7 @@
 #include "remoting/host/it2me/reconnect_params.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/uuid.h"
 #include "remoting/host/it2me/it2me_constants.h"
 #include "remoting/signaling/signaling_id_util.h"

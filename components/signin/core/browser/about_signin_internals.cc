@@ -13,7 +13,7 @@
 #include "base/command_line.h"
 #include "base/hash/hash.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/observer_list.h"
 #include "base/strings/stringprintf.h"
 #include "base/trace_event/trace_event.h"

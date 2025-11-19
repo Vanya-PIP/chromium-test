@@ -8,7 +8,7 @@
 
 #include "base/containers/span.h"
 #include "base/dcheck_is_on.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/synchronization/lock_subtle.h"
 #include "base/timer/elapsed_timer.h"

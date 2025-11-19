@@ -8,7 +8,7 @@
 #include <memory>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/gwp_asan/crash_handler/crash.pb.h"
 #include "components/gwp_asan/crash_handler/crash_analyzer.h"
 #include "third_party/crashpad/crashpad/minidump/minidump_user_extension_stream_data_source.h"

@@ -12,7 +12,7 @@
 #include "ash/public/cpp/ambient/ambient_ui_model.h"
 #include "ash/utility/lottie_util.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/strcat.h"
 #include "base/time/time.h"

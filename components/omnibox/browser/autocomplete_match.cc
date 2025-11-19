@@ -14,7 +14,7 @@
 #include "base/feature_list.h"
 #include "base/hash/hash.h"
 #include "base/i18n/case_conversion.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/no_destructor.h"
 #include "base/notreached.h"

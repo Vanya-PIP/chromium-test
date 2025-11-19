@@ -22,7 +22,7 @@
 #include "base/feature_list.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/posix/eintr_wrapper.h"

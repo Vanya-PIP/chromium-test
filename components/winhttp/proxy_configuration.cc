@@ -7,7 +7,7 @@
 #include <optional>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/sys_string_conversions.h"
 #include "base/win/scoped_handle.h"

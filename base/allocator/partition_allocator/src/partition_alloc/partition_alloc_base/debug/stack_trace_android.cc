@@ -14,7 +14,7 @@
 
 #include <cstring>
 
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_base/strings/safe_sprintf.h"
 
 namespace partition_alloc::internal::base::debug {

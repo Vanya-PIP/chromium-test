@@ -5,7 +5,7 @@
 #include "base/task/thread_pool/pooled_task_runner_delegate.h"
 
 #include "base/debug/task_trace.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace base::internal {
 

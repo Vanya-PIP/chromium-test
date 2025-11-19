@@ -21,7 +21,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/memory_pressure_monitor.h"
 #include "base/memory/ptr_util.h"
 #include "base/path_service.h"

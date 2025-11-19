@@ -6,7 +6,7 @@
 
 #include <cmath>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/assist_ranker/example_preprocessing.h"
 #include "components/assist_ranker/ranker_example_util.h"
 

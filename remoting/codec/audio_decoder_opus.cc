@@ -8,7 +8,7 @@
 #include <cstdint>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/time/time.h"
 #include "remoting/proto/audio.pb.h"

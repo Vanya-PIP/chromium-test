@@ -4,7 +4,7 @@
 
 #include "components/user_manager/user_manager.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/account_id/account_id.h"
 #include "components/pref_registry/pref_registry_syncable.h"
 #include "components/prefs/pref_registry_simple.h"

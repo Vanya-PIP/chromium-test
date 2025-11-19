@@ -4,7 +4,7 @@
 
 #include "ui/gfx/gpu_fence.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/time/time.h"
 #include "build/build_config.h"

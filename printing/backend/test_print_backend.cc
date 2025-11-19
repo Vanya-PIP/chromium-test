@@ -11,7 +11,7 @@
 #include "base/check.h"
 #include "base/containers/contains.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "printing/backend/print_backend.h"
 #include "printing/mojom/print.mojom.h"

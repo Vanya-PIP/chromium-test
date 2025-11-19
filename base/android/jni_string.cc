@@ -8,7 +8,7 @@
 #include <string_view>
 
 #include "base/android/jni_android.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/utf_string_conversions.h"
 

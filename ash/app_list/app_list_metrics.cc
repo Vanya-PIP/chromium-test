@@ -20,7 +20,7 @@
 #include "ash/public/cpp/app_list/app_list_types.h"
 #include "ash/public/cpp/app_menu_constants.h"
 #include "ash/shell.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/notreached.h"

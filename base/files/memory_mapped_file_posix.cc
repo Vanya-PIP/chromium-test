@@ -12,7 +12,7 @@
 #include <unistd.h>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/threading/scoped_blocking_call.h"
 #include "build/build_config.h"

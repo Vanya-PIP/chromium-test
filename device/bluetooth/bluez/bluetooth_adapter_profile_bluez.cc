@@ -10,7 +10,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "dbus/bus.h"
 #include "dbus/object_path.h"

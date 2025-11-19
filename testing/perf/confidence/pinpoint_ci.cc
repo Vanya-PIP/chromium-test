@@ -19,7 +19,7 @@
 
 #include "base/containers/span.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "base/strings/safe_sprintf.h"
 #include "base/strings/string_split.h"

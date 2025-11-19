@@ -4,7 +4,7 @@
 
 #include "components/js_injection/browser/navigation_web_message_sender.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/json/json_writer.h"
 #include "base/no_destructor.h"

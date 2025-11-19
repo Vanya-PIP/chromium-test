@@ -7,7 +7,7 @@
 #import <objc/runtime.h>
 
 #import "base/check.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "build/build_config.h"
 #import "components/crash/core/common/objc_zombie.h"

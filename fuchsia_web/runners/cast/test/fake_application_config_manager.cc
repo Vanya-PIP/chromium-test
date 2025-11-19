@@ -13,8 +13,8 @@
 #include <string_view>
 #include <utility>
 
-#include "base/fuchsia/fuchsia_logging.h"
-#include "base/logging.h"
+#include "base/fuchsia/fuchsia_test"
+#include "base/test"
 
 constexpr char FakeApplicationConfigManager::kFakeAgentUrl[] =
     "fuchsia-pkg://fuchsia.com/fake_agent#meta/fake_agent.cmx";

@@ -12,7 +12,7 @@
 #include <utility>
 
 #include "base/files/file.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/utf_string_conversions.h"
 

@@ -8,7 +8,7 @@
 
 #include "base/command_line.h"
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "ui/gl/gl_bindings.h"
 #include "ui/gl/gl_display_manager.h"

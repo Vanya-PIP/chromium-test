@@ -5,7 +5,7 @@
 #include "chromecast/browser/cast_http_user_agent_settings.h"
 
 #include "base/i18n/rtl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "chromecast/app/grit/chromecast_settings.h"
 #include "chromecast/common/user_agent.h"

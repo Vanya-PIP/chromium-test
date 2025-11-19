@@ -9,7 +9,7 @@
 #import <string_view>
 
 #import "base/json/json_writer.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/string_util.h"
 #import "base/strings/utf_string_conversions.h"
 #import "base/values.h"

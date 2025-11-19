@@ -17,7 +17,7 @@
 #include "chrome/browser/web_applications/web_contents/web_app_data_retriever.h"
 #include "chrome/browser/web_applications/web_contents/web_app_icon_downloader.h"
 #include "chrome/browser/web_applications/web_contents/web_contents_manager.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/web_contents/web_app_url_loader.h"
 #include "components/webapps/common/web_page_metadata.mojom-forward.h"
 #include "third_party/blink/public/mojom/manifest/manifest.mojom.h"

@@ -7,7 +7,7 @@
 #include <optional>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "chrome/browser/ash/policy/skyvault/policy_utils.h"
 

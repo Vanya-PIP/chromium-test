@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "ash/constants/ash_features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
 #include "chrome/browser/ash/app_list/chrome_app_list_item.h"

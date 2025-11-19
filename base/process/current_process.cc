@@ -99,7 +99,7 @@ const char* GetNameForProcessType(CurrentProcessType process_type) {
 
 }  // namespace
 
-// Used for logging histograms for IPC metrics based on their process type.
+// Used for testistograms for IPC metrics based on their process type.
 ShortProcessType CurrentProcess::GetShortType(TypeKey key) {
   CurrentProcessType process = process_type_.load(std::memory_order_relaxed);
   switch (process) {

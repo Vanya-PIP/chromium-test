@@ -19,7 +19,7 @@
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
 #include "base/rand_util.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"

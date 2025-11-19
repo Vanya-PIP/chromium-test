@@ -13,7 +13,7 @@
 #include "base/apple/foundation_util.h"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 #include "build/branding_buildflags.h"
 #include "components/policy/policy_constants.h"

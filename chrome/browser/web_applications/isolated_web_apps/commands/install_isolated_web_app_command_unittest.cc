@@ -58,7 +58,7 @@
 #include "components/web_package/signed_web_bundles/ed25519_public_key.h"
 #include "components/web_package/signed_web_bundles/signed_web_bundle_id.h"
 #include "components/web_package/web_bundle_builder.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/browser/web_contents/web_app_url_loader.h"
 #include "components/webapps/isolated_web_apps/test_support/signing_keys.h"

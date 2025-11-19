@@ -17,7 +17,7 @@
 
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/memory/raw_ptr_exclusion.h"
 #include "base/notreached.h"
 #include "base/numerics/clamped_math.h"

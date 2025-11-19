@@ -17,7 +17,7 @@
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/message_loop/message_pump_for_io.h"
 #include "base/message_loop/message_pump_type.h"

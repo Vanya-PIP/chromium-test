@@ -5,7 +5,7 @@
 #ifndef CHROME_BROWSER_ASH_POLICY_REMOTE_COMMANDS_CRD_CRD_LOGGING_H_
 #define CHROME_BROWSER_ASH_POLICY_REMOTE_COMMANDS_CRD_CRD_LOGGING_H_
 
-#include "base/logging.h"
+#include "base/test"
 
 // Add a common prefix to all our logs, to make them easy to find.
 #define CRD_VLOG(level) VLOG(level) << "CRD: "

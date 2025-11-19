@@ -10,7 +10,7 @@
 #include "device/bluetooth/bluetooth_remote_gatt_characteristic_mac.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notimplemented.h"
 #include "base/strings/sys_string_conversions.h"

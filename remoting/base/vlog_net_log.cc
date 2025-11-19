@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/values.h"
 #include "net/log/net_log.h"

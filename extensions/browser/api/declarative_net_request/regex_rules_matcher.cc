@@ -8,7 +8,7 @@
 #include <optional>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"

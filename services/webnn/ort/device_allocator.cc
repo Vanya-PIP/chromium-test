@@ -4,7 +4,7 @@
 
 #include "services/webnn/ort/device_allocator.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/cstring_view.h"
 #include "services/webnn/ort/environment.h"
 #include "services/webnn/ort/ort_status.h"

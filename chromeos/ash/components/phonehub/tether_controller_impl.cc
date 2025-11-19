@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/phonehub/tether_controller_impl.h"
 
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/phone_status_model.h"
 #include "chromeos/ash/components/phonehub/user_action_recorder.h"
 #include "chromeos/ash/components/phonehub/util/histogram_util.h"

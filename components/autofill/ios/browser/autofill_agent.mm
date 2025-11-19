@@ -18,7 +18,7 @@
 #import "base/apple/foundation_util.h"
 #import "base/check_op.h"
 #import "base/containers/map_util.h"
-#import "base/debug/crash_logging.h"
+#import "base/debug/crash_test"
 #import "base/feature_list.h"
 #import "base/format_macros.h"
 #import "base/functional/bind.h"

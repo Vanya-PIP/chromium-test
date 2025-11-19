@@ -4,7 +4,7 @@
 
 #include "components/enterprise/connectors/core/reporting_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/utf_string_conversions.h"

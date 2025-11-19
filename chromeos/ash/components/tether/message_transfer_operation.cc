@@ -9,7 +9,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/tether/message_wrapper.h"
 #include "chromeos/ash/components/timer_factory/timer_factory_impl.h"
 

@@ -9,7 +9,7 @@
 #include "base/allocator/partition_alloc_features.h"
 #include "base/feature_list.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/safe_sprintf.h"
 #include "base/strings/strcat.h"

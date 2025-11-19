@@ -8,7 +8,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "chromeos/ash/components/dbus/dlcservice/dlcservice.pb.h"
 #include "third_party/cros_system_api/dbus/dlcservice/dbus-constants.h"

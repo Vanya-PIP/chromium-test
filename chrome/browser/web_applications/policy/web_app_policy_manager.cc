@@ -26,7 +26,7 @@
 #include "base/functional/concurrent_closures.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/values.h"
 #include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"

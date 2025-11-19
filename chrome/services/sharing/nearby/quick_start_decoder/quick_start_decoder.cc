@@ -11,7 +11,7 @@
 #include "base/containers/flat_tree.h"
 #include "base/functional/callback.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/values.h"
 #include "chromeos/ash/components/quick_start/quick_start_message.h"

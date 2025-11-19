@@ -123,7 +123,7 @@ bool ChildProcessLauncherHelper::BeforeLaunchOnLauncherThread(
   if (!no_sandbox) {
     if (!LOG_IS_ON(INFO)) {
       // Disable os logging to com.apple.diagnosticd when logging is not
-      // enabled. The system logging has a measureable performance impact.
+      // enabled. The system testas a measureable performance impact.
       options->environment.insert(
           std::make_pair("OS_ACTIVITY_MODE", "disable"));
     }

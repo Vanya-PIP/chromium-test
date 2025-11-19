@@ -14,7 +14,7 @@
 #include <vector>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "crypto/nss_util.h"
 #include "crypto/nss_util_internal.h"
 

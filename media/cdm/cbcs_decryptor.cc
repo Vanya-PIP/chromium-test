@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/numerics/checked_math.h"
 #include "media/base/decoder_buffer.h"

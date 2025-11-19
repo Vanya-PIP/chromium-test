@@ -4,7 +4,7 @@
 
 #include "base/files/file_util.h"
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/test/icu_test_util.h"
 #include "build/build_config.h"

@@ -659,7 +659,7 @@ void AccessCodeCastSinkService::OnStoredDevicesValidated(
   // Record in all instances, even if the number of saved devices is zero.
   AccessCodeCastMetrics::RecordRememberedDevicesCount(validated_devices.size());
   if (validated_devices.empty()) {
-    // We don't need anymore logging here since it is already handled in the
+    // We don't need anymore testere since it is already handled in the
     // ValidateStoredDevices function.
     return;
   }

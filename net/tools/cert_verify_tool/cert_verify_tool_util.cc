@@ -7,7 +7,7 @@
 #include <iostream>
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/stringprintf.h"
 #include "build/build_config.h"

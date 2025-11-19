@@ -9,7 +9,7 @@
 
 #include "media/formats/mp2t/es_parser.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/byte_queue.h"
 #include "media/base/stream_parser_buffer.h"
 #include "media/base/timestamp_constants.h"

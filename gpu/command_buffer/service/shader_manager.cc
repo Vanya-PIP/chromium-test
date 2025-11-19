@@ -8,7 +8,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "ui/gl/progress_reporter.h"
 

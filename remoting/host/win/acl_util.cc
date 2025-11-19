@@ -6,7 +6,7 @@
 
 #include <windows.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/security_descriptor.h"
 
 namespace remoting {

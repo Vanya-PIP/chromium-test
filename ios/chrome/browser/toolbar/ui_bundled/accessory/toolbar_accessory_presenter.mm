@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/toolbar/ui_bundled/accessory/toolbar_accessory_presenter.h"
 
 #import "base/i18n/rtl.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/raw_ptr.h"
 #import "ios/chrome/browser/omnibox/model/omnibox_position/omnibox_position_browser_agent.h"
 #import "ios/chrome/browser/presenters/ui_bundled/contained_presenter_delegate.h"

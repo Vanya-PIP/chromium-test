@@ -11,7 +11,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/not_fatal_until.h"
 #include "base/numerics/safe_conversions.h"

@@ -17,7 +17,7 @@
 
 #include "base/command_line.h"
 #include "base/files/platform_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "base/strings/string_split.h"
 #include "base/test/multiprocess_test.h"

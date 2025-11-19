@@ -17,7 +17,7 @@
 
 #include "base/command_line.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "ui/events/ozone/evdev/event_device_info.h"
 #include "ui/events/ozone/evdev/touch_filter/neural_stylus_palm_detection_filter_model.h"

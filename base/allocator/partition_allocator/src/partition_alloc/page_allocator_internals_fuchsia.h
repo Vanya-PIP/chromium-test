@@ -26,7 +26,7 @@
 #include <cstdint>
 
 #include "partition_alloc/page_allocator.h"
-#include "partition_alloc/partition_alloc_base/fuchsia/fuchsia_logging.h"
+#include "partition_alloc/partition_alloc_base/fuchsia/fuchsia_test"
 #include "partition_alloc/partition_alloc_base/no_destructor.h"
 #include "partition_alloc/partition_alloc_base/notreached.h"
 #include "partition_alloc/partition_alloc_check.h"

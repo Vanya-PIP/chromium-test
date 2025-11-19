@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/autofill/ui_bundled/manual_fill/manual_fill_action_cell.h"
 
 #import "base/check.h"
-#import "base/logging.h"
+#import "base/test"
 #import "ios/chrome/browser/autofill/ui_bundled/manual_fill/manual_fill_cell_button.h"
 #import "ios/chrome/browser/shared/ui/list_model/list_model.h"
 #import "ios/chrome/common/ui/colors/semantic_color_names.h"

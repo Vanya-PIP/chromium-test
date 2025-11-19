@@ -17,7 +17,7 @@
 #include <unistd.h>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "base/posix/safe_strerror.h"
 #include "tools/android/common/net.h"

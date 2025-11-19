@@ -9,7 +9,7 @@
 
 #include "base/containers/heap_array.h"
 #include "base/environment.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/zucchini/buffer_sink.h"
 #include "components/zucchini/buffer_view.h"
 #include "components/zucchini/fuzzers/file_pair.pb.h"

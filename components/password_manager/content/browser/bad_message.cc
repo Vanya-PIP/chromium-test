@@ -4,9 +4,9 @@
 
 #include "components/password_manager/content/browser/bad_message.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "components/password_manager/core/browser/password_form.h"
 #include "content/public/browser/child_process_security_policy.h"
 #include "content/public/browser/render_frame_host.h"

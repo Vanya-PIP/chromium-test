@@ -7,7 +7,7 @@
 #include <windows.h>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/synchronization/waitable_event.h"
 #include "base/threading/thread.h"

@@ -14,7 +14,7 @@
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
 #include "base/memory/scoped_refptr.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/common/web_page_metadata.mojom.h"
 #include "third_party/blink/public/mojom/manifest/manifest.mojom-forward.h"
 #include "third_party/skia/include/core/SkBitmap.h"

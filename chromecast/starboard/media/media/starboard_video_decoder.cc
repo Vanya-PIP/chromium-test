@@ -8,7 +8,7 @@
 #include "base/check_op.h"
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/public/graphics_types.h"
 #include "chromecast/public/media/cast_decoder_buffer.h"
 #include "chromecast/starboard/media/media/drm_util.h"

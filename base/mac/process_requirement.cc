@@ -13,15 +13,15 @@
 #include <algorithm>
 #include <optional>
 
-#include "base/apple/mach_logging.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/mach_test"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/check_op.h"
 #include "base/containers/span.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/code_signature.h"
 #include "base/mac/code_signature_spi.h"
 #include "base/mac/info_plist_data.h"

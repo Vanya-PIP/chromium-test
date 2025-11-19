@@ -8,7 +8,7 @@
 #include <iterator>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/host/win/core_resource.h"
 
 namespace remoting {

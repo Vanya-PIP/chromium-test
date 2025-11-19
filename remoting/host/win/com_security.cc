@@ -7,7 +7,7 @@
 #include <objidl.h>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/host/win/security_descriptor.h"
 
 namespace remoting {

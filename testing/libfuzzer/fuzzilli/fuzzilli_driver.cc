@@ -11,7 +11,7 @@
 
 #include "base/containers/span.h"
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/thread_restrictions.h"
 #include "v8/src/fuzzilli/cov.h"
 

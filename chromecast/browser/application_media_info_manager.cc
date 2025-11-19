@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/base/metrics/cast_metrics_helper.h"
 #include "chromecast/browser/cast_renderer_block_data.h"
 #include "chromecast/browser/cast_session_id_map.h"

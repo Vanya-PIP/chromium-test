@@ -6,7 +6,7 @@
 #define CHROMEOS_ASH_SERVICES_SECURE_CHANNEL_PUBLIC_CPP_CLIENT_CONNECTION_ATTEMPT_H_
 
 #include "base/memory/raw_ptr.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/public/mojom/secure_channel.mojom.h"
 
 namespace ash::secure_channel {

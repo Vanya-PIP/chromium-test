@@ -7,7 +7,7 @@
 #include <optional>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/base/metrics/cast_metrics_helper.h"
 
 namespace chromecast {

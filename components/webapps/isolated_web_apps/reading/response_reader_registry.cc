@@ -23,7 +23,7 @@
 #include "components/web_package/signed_web_bundles/identity_validator.h"
 #include "components/web_package/signed_web_bundles/signed_web_bundle_id.h"
 #include "components/webapps/isolated_web_apps/client.h"
-#include "components/webapps/isolated_web_apps/error/uma_logging.h"
+#include "components/webapps/isolated_web_apps/error/uma_test"
 #include "components/webapps/isolated_web_apps/iwa_key_distribution_info_provider.h"
 #include "components/webapps/isolated_web_apps/reading/response_reader.h"
 #include "components/webapps/isolated_web_apps/reading/response_reader_factory.h"

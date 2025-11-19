@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/services/recording/recording_encoder.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/services/recording/public/mojom/recording_service.mojom-shared.h"
 
 namespace recording {

@@ -11,7 +11,7 @@
 #include "base/strings/string_util.h"
 #include "google_apis/google_api_keys.h"
 #include "net/url_request/url_request_context_getter.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/signaling/signaling_address.h"
 
 namespace remoting {

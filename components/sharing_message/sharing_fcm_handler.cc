@@ -5,7 +5,7 @@
 #include "components/sharing_message/sharing_fcm_handler.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notimplemented.h"
 #include "base/strings/strcat.h"

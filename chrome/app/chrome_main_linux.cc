@@ -11,7 +11,7 @@
 #include "base/command_line.h"
 #include "base/environment.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_tokenizer.h"
 #include "base/strings/string_util.h"
 #include "chrome/common/channel_info.h"

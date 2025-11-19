@@ -16,7 +16,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/strings/abseil_string_number_conversions.h"
 #include "base/strings/string_number_conversions.h"

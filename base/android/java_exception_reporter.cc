@@ -9,7 +9,7 @@
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 
 // Must come after all headers that specialize FromJniType() / ToJniType().

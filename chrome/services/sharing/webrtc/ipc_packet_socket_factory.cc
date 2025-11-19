@@ -18,7 +18,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "base/sequence_checker.h"
 #include "base/strings/stringprintf.h"

@@ -33,7 +33,7 @@
 #include "base/check_op.h"
 #include "base/functional/bind.h"
 #include "base/i18n/rtl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "ui/base/l10n/l10n_util.h"

@@ -17,7 +17,7 @@
 
 #include "base/check_is_test.h"
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/notreached.h"
 #include "base/task/bind_post_task.h"
 #include "base/task/thread_pool.h"

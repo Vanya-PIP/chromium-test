@@ -8,7 +8,7 @@
 #include <string_view>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace gpu {
 

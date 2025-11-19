@@ -8,7 +8,7 @@
 
 #include <mfapi.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/video_color_space.h"
 
 namespace media {

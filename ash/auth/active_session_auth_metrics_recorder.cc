@@ -11,7 +11,7 @@
 #include "ash/public/cpp/auth/active_session_auth_controller.h"
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "base/timer/elapsed_timer.h"

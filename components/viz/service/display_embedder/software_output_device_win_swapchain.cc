@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/stringprintf.h"
 #include "components/viz/service/gl/exit_code.h"

@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/nix/mime_util_xdg.h"
 #include "base/strings/string_util.h"
 #include "base/task/thread_pool.h"

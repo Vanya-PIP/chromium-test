@@ -14,7 +14,7 @@
 #include "android_webview/common/aw_descriptors.h"
 #include "android_webview/common/aw_features.h"
 #include "base/android/scoped_java_ref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/stringprintf.h"
 #include "components/crash/content/browser/crash_metrics_reporter_android.h"

@@ -4,7 +4,7 @@
 
 #include "components/optimization_guide/core/optimization_guide_logger.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/observer_list.h"
 #include "base/strings/strcat.h"

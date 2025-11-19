@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "media/base/media_log.h"
 #include "media/base/media_track.h"

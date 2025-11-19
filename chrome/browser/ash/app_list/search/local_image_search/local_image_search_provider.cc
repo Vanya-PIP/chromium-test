@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/app_list/search/local_image_search/local_image_search_provider.h"
 
 #include "base/i18n/rtl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/string_util.h"
 #include "chrome/browser/ash/app_list/search/files/file_result.h"

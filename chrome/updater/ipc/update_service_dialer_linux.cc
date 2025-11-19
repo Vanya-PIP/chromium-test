@@ -13,7 +13,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "chrome/updater/constants.h"
 #include "chrome/updater/linux/ipc_constants.h"

@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/app/vector_icons/vector_icons.h"
 #include "chrome/browser/ui/chrome_pages.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"

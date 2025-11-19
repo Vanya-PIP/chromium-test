@@ -19,7 +19,7 @@
 
 #include "base/files/file.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/aligned_memory.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/strings/stringprintf.h"

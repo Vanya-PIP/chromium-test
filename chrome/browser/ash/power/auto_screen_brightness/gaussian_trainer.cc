@@ -9,7 +9,7 @@
 #include <limits>
 
 #include "ash/constants/ash_features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "chrome/browser/ash/power/auto_screen_brightness/utils.h"
 

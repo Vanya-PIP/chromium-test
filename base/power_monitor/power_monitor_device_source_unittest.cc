@@ -8,7 +8,7 @@
 #include <android/api-level.h>
 #endif
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/power_monitor/power_monitor.h"
 #include "base/power_monitor/power_monitor_source.h"
 #include "build/build_config.h"

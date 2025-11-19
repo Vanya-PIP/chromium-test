@@ -12,7 +12,7 @@
 #include "base/containers/span.h"
 #include "base/functional/callback_forward.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/message_loop/message_pump_type.h"
 #include "base/numerics/safe_conversions.h"

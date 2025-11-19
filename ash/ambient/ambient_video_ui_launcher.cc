@@ -18,7 +18,7 @@
 #include "base/check.h"
 #include "base/files/file_path.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 
 #include "components/prefs/pref_service.h"
 

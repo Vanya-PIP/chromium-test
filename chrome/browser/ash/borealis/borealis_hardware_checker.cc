@@ -7,7 +7,7 @@
 #include "ash/constants/ash_features.h"
 #include "base/cpu.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"
 #include "base/system/sys_info.h"

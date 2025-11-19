@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "components/autofill/core/browser/data_manager/addresses/address_data_manager.h"

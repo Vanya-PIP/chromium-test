@@ -14,7 +14,7 @@
 #include <string>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/threading/platform_thread.h"
 #include "base/time/time.h"

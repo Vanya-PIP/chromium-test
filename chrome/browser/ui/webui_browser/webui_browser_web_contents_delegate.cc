@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/webui_browser/webui_browser_web_contents_delegate.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/webui_browser/webui_browser_window.h"
 #include "chrome/common/chrome_render_frame.mojom.h"

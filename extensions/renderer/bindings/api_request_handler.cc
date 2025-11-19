@@ -5,7 +5,7 @@
 #include "extensions/renderer/bindings/api_request_handler.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/strcat.h"
 #include "base/values.h"

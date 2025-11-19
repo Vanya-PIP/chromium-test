@@ -19,7 +19,7 @@
 #include "ash/system/phonehub/task_continuation_view.h"
 #include "ash/system/phonehub/ui_constants.h"
 #include "ash/system/tray/tray_constants.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/multidevice_feature_access_manager.h"
 #include "chromeos/ash/components/phonehub/phone_hub_manager.h"
 #include "chromeos/ash/components/phonehub/ping_manager.h"

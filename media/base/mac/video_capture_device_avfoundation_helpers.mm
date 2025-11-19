@@ -4,7 +4,7 @@
 
 #include "media/base/mac/video_capture_device_avfoundation_helpers.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/feature_list.h"
 #include "build/build_config.h"

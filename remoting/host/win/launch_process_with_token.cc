@@ -8,7 +8,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/scoped_handle.h"
 #include "base/win/scoped_process_information.h"
 #include "base/win/startup_information.h"

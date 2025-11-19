@@ -5,7 +5,7 @@
 #include "chromecast/media/cma/backend/alsa/scoped_alsa_mixer.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/current_thread.h"
 #include "base/types/fixed_array.h"
 

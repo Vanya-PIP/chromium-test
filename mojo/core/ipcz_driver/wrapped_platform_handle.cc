@@ -19,14 +19,14 @@
 #include <lib/fdio/fd.h>
 #include <lib/zx/handle.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #endif
 
 #if BUILDFLAG(IS_APPLE)
 #include <mach/mach.h>
 #include <sys/fileport.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_mach_port.h"
 #endif
 

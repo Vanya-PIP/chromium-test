@@ -9,7 +9,7 @@
 #include "base/task/single_thread_task_runner.h"
 #include "chrome/credential_provider/extension/os_service_manager.h"
 #include "chrome/credential_provider/extension/task_manager.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 
 namespace credential_provider {
 namespace extension {

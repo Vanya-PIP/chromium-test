@@ -11,7 +11,7 @@
 
 #include "base/check.h"
 #include "base/dcheck_is_on.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/time/time.h"

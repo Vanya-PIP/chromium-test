@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "components/devtools/simple_devtools_protocol_client/simple_devtools_protocol_client.h"
 #include "content/public/browser/web_contents.h"

@@ -4,7 +4,7 @@
 
 #include "media/fuchsia/common/stream_processor_helper.h"
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
 #include "media/base/timestamp_constants.h"
 

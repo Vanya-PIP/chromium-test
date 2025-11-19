@@ -10,7 +10,7 @@
 #include "base/android/java_exception_reporter.h"
 #include "base/at_exit.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/threading/thread.h"

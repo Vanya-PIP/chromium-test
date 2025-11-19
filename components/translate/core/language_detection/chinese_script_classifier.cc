@@ -8,7 +8,7 @@
 #include <memory>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "third_party/icu/source/common/unicode/uniset.h"
 #include "third_party/icu/source/common/unicode/unistr.h"

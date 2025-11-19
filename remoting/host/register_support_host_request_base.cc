@@ -4,7 +4,7 @@
 
 #include "remoting/host/register_support_host_request_base.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringize_macros.h"
 #include "remoting/base/errors.h"
 #include "remoting/base/http_status.h"

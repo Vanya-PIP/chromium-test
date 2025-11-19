@@ -5,7 +5,7 @@
 #include "components/feed/core/v2/types.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "components/feed/core/v2/persistent_key_value_store_impl.h"
 #include "testing/gtest/include/gtest/gtest.h"

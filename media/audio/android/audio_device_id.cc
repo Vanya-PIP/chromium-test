@@ -8,7 +8,7 @@
 #include <optional>
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "media/audio/audio_device_description.h"
 

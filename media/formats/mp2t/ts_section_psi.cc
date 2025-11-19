@@ -11,7 +11,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/bit_reader.h"
 #include "media/base/byte_queue.h"
 #include "media/formats/mp2t/mp2t_common.h"

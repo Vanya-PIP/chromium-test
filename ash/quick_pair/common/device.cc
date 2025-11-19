@@ -7,7 +7,7 @@
 #include <ostream>
 
 #include "ash/quick_pair/common/protocol.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 
 namespace {

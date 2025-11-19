@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/install_static/install_util.h"
 
 namespace {

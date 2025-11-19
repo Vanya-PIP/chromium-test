@@ -14,7 +14,7 @@
 #include <vector>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/task/single_thread_task_runner.h"

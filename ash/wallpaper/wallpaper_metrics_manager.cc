@@ -14,7 +14,7 @@
 #include "ash/shell_delegate.h"
 #include "ash/wallpaper/wallpaper_constants.h"
 #include "ash/wallpaper/wallpaper_controller_impl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "base/strings/strcat.h"

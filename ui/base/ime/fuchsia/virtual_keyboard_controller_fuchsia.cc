@@ -13,7 +13,7 @@
 
 #include "base/check.h"
 #include "base/fuchsia/fuchsia_component_connect.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "ui/base/ime/text_input_client.h"
 
 namespace ui {

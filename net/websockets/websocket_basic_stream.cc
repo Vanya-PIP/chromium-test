@@ -17,7 +17,7 @@
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/values.h"
 #include "build/build_config.h"

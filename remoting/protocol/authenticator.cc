@@ -5,7 +5,7 @@
 #include "remoting/protocol/authenticator.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/base/constants.h"
 #include "third_party/libjingle_xmpp/xmllite/xmlelement.h"
 

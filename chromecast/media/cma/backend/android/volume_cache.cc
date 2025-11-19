@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <cmath>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace chromecast {
 namespace media {

@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/uuid.h"
 #include "chrome/browser/ash/policy/core/browser_policy_connector_ash.h"

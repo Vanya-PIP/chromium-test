@@ -14,7 +14,7 @@
 #include <string>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "device/bluetooth/bluetooth_export.h"
 #include "device/bluetooth/bluetooth_remote_gatt_characteristic_winrt.h"

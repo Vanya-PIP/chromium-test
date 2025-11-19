@@ -5,7 +5,7 @@
 #include "chrome/test/chromedriver/chrome/devtools_client.h"
 #include "chrome/test/chromedriver/chrome/status.h"
 #include "chrome/test/chromedriver/command_listener_proxy.h"
-#include "chrome/test/chromedriver/logging.h"
+#include "chrome/test/chromedriver/test"
 
 CommandListenerProxy::CommandListenerProxy(
     CommandListener* command_listener) : command_listener_(command_listener) {

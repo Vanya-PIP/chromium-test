@@ -20,7 +20,7 @@
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/memory_pressure_monitor.h"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/field_trial.h"
@@ -228,7 +228,7 @@
 #include <lib/zx/job.h>
 
 #include "base/fuchsia/default_job.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #endif  // BUILDFLAG(IS_FUCHSIA)
 
 #if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC)

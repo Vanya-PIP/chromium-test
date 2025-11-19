@@ -10,7 +10,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "storage/browser/file_system/quota/open_file_handle.h"
 #include "storage/browser/file_system/quota/open_file_handle_context.h"

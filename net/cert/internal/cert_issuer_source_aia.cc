@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/cert/cert_net_fetcher.h"
 #include "net/cert/x509_util.h"
 #include "third_party/boringssl/src/pki/cert_errors.h"

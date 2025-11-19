@@ -6,7 +6,7 @@
 
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/ozone/platform_list.h"
 #include "ui/ozone/public/ozone_switches.h"
 

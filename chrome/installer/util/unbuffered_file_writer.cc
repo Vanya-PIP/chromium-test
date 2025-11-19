@@ -14,7 +14,7 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/numerics/checked_math.h"
 #include "base/process/memory.h"

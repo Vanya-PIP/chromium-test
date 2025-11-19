@@ -7,7 +7,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/concurrent_closures.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/task/bind_post_task.h"
 #include "base/task/thread_pool.h"

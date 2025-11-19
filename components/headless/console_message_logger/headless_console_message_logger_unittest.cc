@@ -4,7 +4,7 @@
 
 #include "components/headless/console_message_logger/headless_console_message_logger.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/test/scoped_logging_settings.h"
 #include "build/build_config.h"

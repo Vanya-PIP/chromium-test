@@ -13,7 +13,7 @@
 #include "ash/shell.h"
 #include "base/check_op.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "components/input/native_web_keyboard_event.h"
 #include "components/permissions/permission_request_manager.h"

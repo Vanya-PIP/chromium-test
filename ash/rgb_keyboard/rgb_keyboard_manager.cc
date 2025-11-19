@@ -14,7 +14,7 @@
 #include "ash/rgb_keyboard/rgb_keyboard_util.h"
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/system/sys_info.h"
 #include "chromeos/ash/components/dbus/rgbkbd/rgbkbd_client.h"
 

@@ -15,7 +15,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/flat_set.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "components/cdm/common/buildflags.h"
 #include "components/cdm/renderer/external_clear_key_key_system_info.h"

@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/settings/stats_reporting_controller.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/settings/cros_settings.h"
 #include "chromeos/ash/components/settings/cros_settings_names.h"
 #include "components/prefs/pref_registry_simple.h"

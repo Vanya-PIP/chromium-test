@@ -6,7 +6,7 @@
 
 #include <Cocoa/Cocoa.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/sys_string_conversions.h"
 
 namespace {

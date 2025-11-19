@@ -12,7 +12,7 @@
 #include "base/check.h"
 #include "base/containers/to_vector.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/scoped_blocking_call.h"
 #include "base/win/access_control_list.h"
 #include "base/win/scoped_handle.h"

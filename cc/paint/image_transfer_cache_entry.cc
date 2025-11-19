@@ -11,7 +11,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/checked_math.h"
 #include "base/numerics/safe_conversions.h"

@@ -11,7 +11,7 @@
 #include <optional>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chromecast/cast_core/grpc/grpc_status_or.h"
 

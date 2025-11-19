@@ -19,7 +19,7 @@
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/string_util.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/browser/chromeos/app_mode/chrome_kiosk_external_loader_broker.h"
 #include "chrome/browser/chromeos/app_mode/startup_app_launcher_update_checker.h"
 #include "chrome/browser/extensions/forced_extensions/install_stage_tracker.h"

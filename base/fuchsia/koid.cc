@@ -4,7 +4,7 @@
 
 #include "base/fuchsia/koid.h"
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 
 namespace base {
 

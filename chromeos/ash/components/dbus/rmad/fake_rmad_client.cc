@@ -6,7 +6,7 @@
 
 #include "base/files/file_path.h"
 #include "base/functional/callback_forward.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 
 namespace ash {

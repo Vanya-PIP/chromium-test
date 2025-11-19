@@ -14,7 +14,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/test/test_mock_time_task_runner.h"
 #include "base/time/time.h"

@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "media/base/capture_version.h"
 #include "mojo/public/cpp/base/time_mojom_traits.h"

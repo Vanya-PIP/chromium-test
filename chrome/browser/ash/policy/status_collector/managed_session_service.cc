@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/policy/status_collector/managed_session_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "chrome/browser/ash/app_mode/kiosk_app_launch_error.h"
 #include "chrome/browser/ash/app_mode/kiosk_controller.h"

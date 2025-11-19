@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/policy/skyvault/odfs_file_deleter.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "chrome/browser/ash/file_manager/delete_io_task.h"
 #include "chrome/browser/ash/file_manager/fileapi_util.h"

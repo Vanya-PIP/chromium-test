@@ -21,7 +21,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"

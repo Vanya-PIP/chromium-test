@@ -12,7 +12,7 @@
 #include "base/containers/flat_map.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "base/version.h"
 #include "components/component_updater/android/component_loader_policy.h"

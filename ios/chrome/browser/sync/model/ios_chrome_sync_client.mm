@@ -7,7 +7,7 @@
 #import <utility>
 
 #import "base/functional/bind.h"
-#import "base/logging.h"
+#import "base/test"
 #import "components/browser_sync/browser_sync_switches.h"
 #import "components/browser_sync/sync_engine_factory_impl.h"
 #import "components/keyed_service/core/service_access_type.h"

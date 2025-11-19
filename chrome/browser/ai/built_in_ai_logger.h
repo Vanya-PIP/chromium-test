@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/optimization_guide/core/optimization_guide_logger.h"
 
 // Wrapper that logs a stream to OptimizationGuideLogger during destruction.

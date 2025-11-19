@@ -22,7 +22,7 @@
 #include "base/i18n/base_i18n_switches.h"
 #include "base/i18n/break_iterator.h"
 #include "base/i18n/char_iterator.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/not_fatal_until.h"
 #include "base/numerics/safe_conversions.h"

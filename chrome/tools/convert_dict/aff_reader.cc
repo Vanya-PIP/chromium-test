@@ -11,7 +11,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_util.h"
 #include "base/i18n/icu_string_conversions.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_split.h"
 #include "base/strings/stringprintf.h"
 #include "base/strings/utf_string_conversions.h"

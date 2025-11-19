@@ -24,11 +24,11 @@
 #include <vector>
 
 #include "base/apple/bundle_locations.h"
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/launch_application.h"
 #include "base/path_service.h"
 #include "base/posix/eintr_wrapper.h"

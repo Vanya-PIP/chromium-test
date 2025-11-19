@@ -9,7 +9,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "build/buildflag.h"
 #include "chrome/common/trusted_vault_encryption_keys_extension.mojom.h"

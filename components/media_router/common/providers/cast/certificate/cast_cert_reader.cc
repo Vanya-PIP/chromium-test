@@ -5,7 +5,7 @@
 #include "components/media_router/common/providers/cast/certificate/cast_cert_reader.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "net/cert/x509_util.h"
 #include "third_party/boringssl/src/pki/common_cert_errors.h"

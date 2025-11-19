@@ -9,7 +9,7 @@
 #include "base/time/time.h"
 #include "chrome/browser/ash/attestation/soft_bind_attestation_flow.h"
 #include "chrome/browser/ash/profiles/profile_helper.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/network/network_handler.h"
 #include "chromeos/ash/components/network/network_state_handler.h"
 #include "chromeos/ash/services/device_sync/cryptauth_key_registry_impl.h"

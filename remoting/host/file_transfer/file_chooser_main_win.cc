@@ -12,7 +12,7 @@
 
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/run_loop.h"
 #include "base/task/thread_pool/thread_pool_instance.h"

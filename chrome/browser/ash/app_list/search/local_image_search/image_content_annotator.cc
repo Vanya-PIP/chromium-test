@@ -6,7 +6,7 @@
 
 #include "base/files/file_path.h"
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/notreached.h"
 #include "chrome/browser/ash/app_list/search/local_image_search/search_utils.h"

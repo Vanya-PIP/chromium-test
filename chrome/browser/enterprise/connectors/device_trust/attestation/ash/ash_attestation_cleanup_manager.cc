@@ -5,7 +5,7 @@
 #include "chrome/browser/enterprise/connectors/device_trust/attestation/ash/ash_attestation_cleanup_manager.h"
 
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/attestation/tpm_challenge_key_subtle.h"
 #include "chrome/browser/enterprise/connectors/device_trust/attestation/ash/ash_attestation_service_impl.h"
 #include "chromeos/ash/components/dbus/attestation/attestation_ca.pb.h"

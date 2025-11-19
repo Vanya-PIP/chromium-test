@@ -5,7 +5,7 @@
 #include "chromeos/ash/services/secure_channel/active_connection_manager_impl.h"
 
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/multiplexed_channel_impl.h"
 
 namespace ash::secure_channel {

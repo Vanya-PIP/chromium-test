@@ -13,7 +13,7 @@
 #include "base/android/scoped_java_ref.h"
 #include "base/feature_list.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "gpu/config/gpu_finch_features.h"
 #include "gpu/ipc/common/gpu_surface_lookup.h"

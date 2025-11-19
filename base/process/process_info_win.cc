@@ -8,7 +8,7 @@
 
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/process/process.h"
 #include "base/win/access_token.h"

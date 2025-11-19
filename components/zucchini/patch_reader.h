@@ -13,7 +13,7 @@
 #include <vector>
 
 #include "base/debug/stack_trace.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "components/zucchini/buffer_source.h"
 #include "components/zucchini/buffer_view.h"

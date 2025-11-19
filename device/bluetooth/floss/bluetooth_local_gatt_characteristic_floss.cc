@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/floss/bluetooth_local_gatt_characteristic_floss.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/rand_util.h"
 #include "base/strings/stringprintf.h"

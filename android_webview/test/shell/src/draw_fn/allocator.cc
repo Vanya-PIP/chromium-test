@@ -5,7 +5,7 @@
 #include "android_webview/test/shell/src/draw_fn/allocator.h"
 
 #include "android_webview/public/browser/draw_fn.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/notreached.h"
 

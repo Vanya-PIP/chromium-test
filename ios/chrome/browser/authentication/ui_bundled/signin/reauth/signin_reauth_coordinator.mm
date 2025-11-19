@@ -8,7 +8,7 @@
 #import <variant>
 
 #import "absl/functional/overload.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "components/signin/public/base/signin_metrics.h"
 #import "components/signin/public/identity_manager/account_info.h"

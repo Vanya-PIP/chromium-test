@@ -5,8 +5,8 @@
 #include "chromeos/ash/services/secure_channel/ble_connection_manager.h"
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "base/test"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/services/secure_channel/authenticated_channel.h"
 

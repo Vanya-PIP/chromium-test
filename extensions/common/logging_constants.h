@@ -5,9 +5,9 @@
 #ifndef EXTENSIONS_COMMON_LOGGING_CONSTANTS_H_
 #define EXTENSIONS_COMMON_LOGGING_CONSTANTS_H_
 
-#include "base/logging.h"
+#include "base/test"
 
-// Separate from constants.h to avoid pulling base/logging.h into many files.
+// Separate from constants.h to avoid pulling base/test into many files.
 
 namespace extension_misc {
 

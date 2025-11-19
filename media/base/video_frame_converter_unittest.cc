@@ -5,7 +5,7 @@
 #include "media/base/video_frame_converter.h"
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/test_helpers.h"
 #include "media/base/video_frame.h"
 #include "media/base/video_util.h"

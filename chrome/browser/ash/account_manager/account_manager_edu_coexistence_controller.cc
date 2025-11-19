@@ -9,7 +9,7 @@
 
 #include "ash/constants/ash_pref_names.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/account_manager/account_manager_util.h"
 #include "chrome/browser/ash/child_accounts/edu_coexistence_tos_store_utils.h"
 #include "chrome/browser/profiles/profile.h"

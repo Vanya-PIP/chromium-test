@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/containers/to_vector.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_macros.h"

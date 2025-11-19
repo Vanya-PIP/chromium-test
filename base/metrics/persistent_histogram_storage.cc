@@ -14,7 +14,7 @@
 
 #include "base/files/file_util.h"
 #include "base/files/important_file_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/persistent_histogram_allocator.h"
 #include "base/metrics/persistent_memory_allocator.h"
 #include "base/process/memory.h"

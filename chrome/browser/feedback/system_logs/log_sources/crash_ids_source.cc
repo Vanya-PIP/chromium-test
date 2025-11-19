@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "build/build_config.h"
 #include "chrome/browser/crash_upload_list/crash_upload_list.h"

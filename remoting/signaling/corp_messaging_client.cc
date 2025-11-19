@@ -8,7 +8,7 @@
 
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/uuid.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"

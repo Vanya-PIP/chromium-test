@@ -5,7 +5,7 @@
 #include "chromecast/starboard/media/renderer/client_stats_tracker.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "chromecast/base/metrics/cast_metrics_helper.h"
 

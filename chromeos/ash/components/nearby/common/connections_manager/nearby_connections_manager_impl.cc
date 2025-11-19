@@ -18,7 +18,7 @@
 #include "chromeos/ash/components/nearby/presence/conversions/proto_conversions.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_connections_types.mojom.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_presence.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/cross_device/nearby/nearby_features.h"
 #include "crypto/random.h"
 #include "mojo/public/cpp/bindings/pending_remote.h"

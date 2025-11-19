@@ -15,7 +15,7 @@
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/process/process_metrics.h"
 #include "base/profiler/thread_group_profiler.h"

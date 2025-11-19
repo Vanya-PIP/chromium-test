@@ -10,7 +10,7 @@
 
 #include "base/apple/bridging.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/media_log.h"
 #include "media/base/video_types.h"
 #include "media/gpu/mac/video_toolbox_decompression_metadata.h"

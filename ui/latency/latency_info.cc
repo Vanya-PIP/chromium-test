@@ -12,7 +12,7 @@
 #include <utility>
 
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/no_destructor.h"
 #include "base/trace_event/trace_event.h"

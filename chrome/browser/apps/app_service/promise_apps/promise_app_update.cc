@@ -6,7 +6,7 @@
 
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "chrome/browser/apps/app_service/promise_apps/promise_app.h"
 #include "components/services/app_service/public/cpp/macros.h"

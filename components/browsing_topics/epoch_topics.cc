@@ -7,7 +7,7 @@
 #include "base/containers/contains.h"
 #include "base/hash/legacy_hash.h"
 #include "base/json/values_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "components/browsing_topics/common/semantic_tree.h"
 #include "components/browsing_topics/util.h"

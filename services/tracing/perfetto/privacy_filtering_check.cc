@@ -11,7 +11,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "services/tracing/perfetto/privacy_filtered_fields-inl.h"
 #include "third_party/perfetto/include/perfetto/protozero/proto_utils.h"
 #include "third_party/perfetto/protos/perfetto/trace/interned_data/interned_data.pbzero.h"

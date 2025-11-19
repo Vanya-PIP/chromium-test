@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 
 #include "base/apple/bridging.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/mac/color_space_util_mac.h"
 #include "ui/gfx/hdr_metadata_mac.h"
 

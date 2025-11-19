@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/task/sequenced_task_runner.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash {
 namespace eche_app {

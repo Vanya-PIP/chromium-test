@@ -12,7 +12,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/strings/string_util.h"
 #include "base/strings/sys_string_conversions.h"

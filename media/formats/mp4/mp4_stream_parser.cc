@@ -14,7 +14,7 @@
 
 #include "base/containers/to_vector.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/checked_math.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/time/time.h"

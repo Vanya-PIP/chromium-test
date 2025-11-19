@@ -7,7 +7,7 @@
 
 #include "base/component_export.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/public/cpp/bindings/lib/send_validation_type.h"
 
 namespace mojo {

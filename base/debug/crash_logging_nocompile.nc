@@ -5,7 +5,7 @@
 // This is a "No Compile Test" suite.
 // http://dev.chromium.org/developers/testing/no-compile-tests
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 
 namespace base {
 

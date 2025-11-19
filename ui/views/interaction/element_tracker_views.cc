@@ -12,7 +12,7 @@
 
 #include "base/auto_reset.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/no_destructor.h"
 #include "base/scoped_multi_source_observation.h"

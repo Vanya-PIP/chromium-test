@@ -8,7 +8,7 @@
 #include "ash/session/session_controller_impl.h"
 #include "ash/shell.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "cc/metrics/frame_sequence_metrics.h"
 #include "chromeos/ash/components/login/login_state/login_state.h"

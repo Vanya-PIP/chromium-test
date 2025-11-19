@@ -7,7 +7,7 @@
 #include <ostream>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/services/app_service/public/cpp/macros.h"
 
 namespace apps {

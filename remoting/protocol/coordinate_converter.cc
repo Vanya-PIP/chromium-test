@@ -9,7 +9,7 @@
 
 #include "base/check.h"
 #include "base/numerics/safe_conversions.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/proto/control.pb.h"
 #include "remoting/proto/coordinates.pb.h"
 #include "third_party/webrtc/modules/desktop_capture/desktop_geometry.h"

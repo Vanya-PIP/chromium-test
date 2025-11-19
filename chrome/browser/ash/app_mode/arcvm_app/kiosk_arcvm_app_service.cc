@@ -12,7 +12,7 @@
 #include "ash/public/cpp/app_list/app_list_config.h"
 #include "base/check_deref.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/browser/ash/app_list/arc/arc_app_list_prefs.h"
 #include "chrome/browser/ash/app_list/arc/arc_app_utils.h"

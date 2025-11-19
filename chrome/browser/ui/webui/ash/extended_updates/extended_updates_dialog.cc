@@ -7,7 +7,7 @@
 #include <string>
 
 #include "ash/system/extended_updates/extended_updates_metrics.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/extended_updates/extended_updates_controller.h"
 #include "chrome/browser/profiles/profile_manager.h"
 #include "chrome/browser/ui/ash/login/oobe_dialog_size_utils.h"

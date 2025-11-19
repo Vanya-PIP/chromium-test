@@ -9,7 +9,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/scoped_blocking_call.h"
 #include "build/build_config.h"
 #include "components/viz/common/gpu/vulkan_context_provider.h"

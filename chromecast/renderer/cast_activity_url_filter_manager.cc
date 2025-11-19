@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/renderer/render_frame.h"
 #include "third_party/blink/public/web/web_local_frame.h"
 

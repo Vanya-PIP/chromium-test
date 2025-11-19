@@ -4,7 +4,7 @@
 
 #include "ui/gtk/window_frame_provider_gtk.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "third_party/skia/include/core/SkRRect.h"
 #include "ui/gfx/canvas.h"

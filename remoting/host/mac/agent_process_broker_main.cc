@@ -12,7 +12,7 @@
 #include "base/task/thread_pool/thread_pool_instance.h"
 #include "mojo/core/embedder/embedder.h"
 #include "mojo/core/embedder/scoped_ipc_support.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/host/mac/agent_process_broker.h"
 
 namespace remoting {

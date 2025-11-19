@@ -4,7 +4,7 @@
 
 #include "chromecast/starboard/media/renderer/chromium_starboard_conversions.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/synchronization/lock.h"
 #include "base/thread_annotations.h"

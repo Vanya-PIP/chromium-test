@@ -125,7 +125,7 @@ If this crash key is more permanent, then there is an alternate API in //base
 that can be used. This API is used by the //content module to set its permanent
 crash key information. Note however that the base-level API is more limited in
 terms of features and flexibility. See the header documentation in
-[//base/debug/crash_logging.h](https://cs.chromium.org/chromium/src/base/debug/crash_logging.h)
+[//base/debug/crash_test](https://cs.chromium.org/chromium/src/base/debug/crash_test)
 for usage examples.
 
 ## Advanced Topics: Stack Traces
@@ -146,7 +146,7 @@ recommended.
 #### 2. Set the Crash Key
 
 To set a stack trace to a crash key, use the `SetCrashKeyStringToStackTrace()`
-function in crash_logging.h:
+function in crash_test:
 
     Usemeafterfree::~Usemeafterfree() {
       static crash_reporter::CrashKeyString<1024> trace_key(

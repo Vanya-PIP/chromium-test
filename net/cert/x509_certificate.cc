@@ -15,7 +15,7 @@
 #include "base/containers/contains.h"
 #include "base/containers/span.h"
 #include "base/containers/to_vector.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/pickle.h"

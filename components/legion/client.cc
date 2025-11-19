@@ -9,7 +9,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace legion {
 

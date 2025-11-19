@@ -23,7 +23,7 @@
 #include "base/check_deref.h"
 #include "base/command_line.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
 #include "base/memory/scoped_refptr.h"

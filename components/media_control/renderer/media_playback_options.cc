@@ -9,14 +9,14 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/media_control/renderer/media_control_buildflags.h"
 #include "content/public/renderer/render_frame.h"
 #include "third_party/blink/public/common/associated_interfaces/associated_interface_registry.h"
 
 #if BUILDFLAG(ENABLE_MEDIA_CONTROL_LOGGING_OVERRIDE)
 #if !defined(DVLOG)
-#error This file must be included after base/logging.h.
+#error This file must be included after base/test.
 #endif
 #undef DVLOG
 #define DVLOG(verboselevel) LOG(INFO)

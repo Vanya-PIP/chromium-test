@@ -45,7 +45,7 @@
 #include "base/notreached.h"
 #include "base/time/default_tick_clock.h"
 #include "base/time/time.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "components/account_id/account_id.h"
 #include "components/session_manager/session_manager_types.h"
 #include "components/vector_icons/vector_icons.h"

@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/arc/file_system_watcher/arc_file_system_watcher_util.h"
 
 #include "base/containers/fixed_flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 
 namespace arc {

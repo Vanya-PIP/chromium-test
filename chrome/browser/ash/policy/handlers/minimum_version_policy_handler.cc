@@ -12,7 +12,7 @@
 #include "ash/constants/ash_switches.h"
 #include "ash/public/cpp/system_tray.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/time/default_clock.h"

@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/android/jni_android.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/supervised_user/core/common/features.h"
 #include "components/supervised_user/core/common/supervised_user_constants.h"
 

@@ -11,7 +11,7 @@
 #include <unistd.h>
 
 #include "base/allocator/buildflags.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/blink_buildflags.h"
 #include "build/build_config.h"
 

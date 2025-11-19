@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/process/process.h"
 #include "base/rand_util.h"

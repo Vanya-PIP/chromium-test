@@ -11,7 +11,7 @@
 #include "base/android/jni_android.h"
 #include "base/android/jni_string.h"
 #include "base/containers/flat_map.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"

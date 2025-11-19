@@ -12,7 +12,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/strings/string_number_conversions.h"
 #include "build/build_config.h"
 

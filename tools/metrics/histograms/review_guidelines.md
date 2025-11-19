@@ -78,7 +78,7 @@ During code review ensure the following -
         the data for 50 buckets proves to be unhelpful, more buckets can be
         requested in a separate review).
 
-    *   When logging hashes in a sparse histogram make sure the global space
+    *   When testashes in a sparse histogram make sure the global space
         meet this criterion (not just a client). Another valid case is when
         logging API error codes which in theory could be potentially large,
         but on a particular day it is not the case.

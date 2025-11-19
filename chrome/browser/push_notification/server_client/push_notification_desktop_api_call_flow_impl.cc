@@ -4,7 +4,7 @@
 
 #include "chrome/browser/push_notification/server_client/push_notification_desktop_api_call_flow_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "net/base/net_errors.h"
 #include "net/base/url_util.h"

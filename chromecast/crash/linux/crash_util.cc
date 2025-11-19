@@ -10,7 +10,7 @@
 #include "base/files/file_enumerator.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/threading/thread_restrictions.h"
 #include "base/time/time.h"
 #include "build/chromecast_buildflags.h"

@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/component_export.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/scoped_feature_list.h"
 #include "skia/ext/skcolorspace_trfn.h"
 #include "testing/gtest/include/gtest/gtest.h"

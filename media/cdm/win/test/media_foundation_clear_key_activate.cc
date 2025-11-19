@@ -7,7 +7,7 @@
 #include <wrl/client.h>
 #include <wrl/implements.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "media/base/win/mf_helpers.h"
 #include "media/cdm/win/test/media_foundation_clear_key_content_enabler.h"

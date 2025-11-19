@@ -9,7 +9,7 @@
 #include <memory>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "base/time/time.h"
 #include "base/win/atl.h"

@@ -29,7 +29,7 @@
 #include "base/files/file_enumerator.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/notimplemented.h"
 #include "base/strings/utf_string_conversions.h"

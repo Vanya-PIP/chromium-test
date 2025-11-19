@@ -38,7 +38,7 @@
 #include "base/files/file_path.h"
 #include "base/lazy_instance.h"
 #include "base/linux_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/posix/eintr_wrapper.h"
 #include "base/posix/global_descriptors.h"

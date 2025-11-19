@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/mock_media_log.h"
 #include "media/base/test_data_util.h"
 #include "media/formats/dts/dts_util.h"

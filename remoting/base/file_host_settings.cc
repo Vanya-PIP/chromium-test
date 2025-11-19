@@ -8,10 +8,10 @@
 #include "base/files/important_file_writer.h"
 #include "base/json/json_file_value_serializer.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/values.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 
 namespace remoting {
 

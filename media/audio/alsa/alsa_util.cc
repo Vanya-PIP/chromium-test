@@ -9,7 +9,7 @@
 #include <functional>
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "media/audio/alsa/alsa_wrapper.h"
 

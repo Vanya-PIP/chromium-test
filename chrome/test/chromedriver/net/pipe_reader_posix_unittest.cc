@@ -11,7 +11,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/test/task_environment.h"

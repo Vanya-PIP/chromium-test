@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/arc/idle_manager/arc_idle_manager.h"
 
 #include "ash/shell.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/arc/idle_manager/arc_background_service_observer.h"

@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/system/sys_info.h"
 #include "build/build_config.h"
 #include "gpu/config/gpu_info.h"

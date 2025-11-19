@@ -6,7 +6,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "components/gcm_driver/instance_id/fake_gcm_driver_for_instance_id.h"
 #include "components/sync/base/time.h"

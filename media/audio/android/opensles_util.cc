@@ -4,7 +4,7 @@
 
 #include "media/audio/android/opensles_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace media {
 

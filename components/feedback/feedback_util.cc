@@ -14,7 +14,7 @@
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "build/build_config.h"
 #include "components/feedback/feedback_report.h"

@@ -18,7 +18,7 @@
 #include <limits>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/cma/backend/mixer/post_processors/post_processor_wrapper.h"
 
 namespace chromecast {

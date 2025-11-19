@@ -30,7 +30,7 @@
 #include "base/format_macros.h"
 #include "base/functional/callback_helpers.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/path_service.h"
 #include "base/process/launch.h"

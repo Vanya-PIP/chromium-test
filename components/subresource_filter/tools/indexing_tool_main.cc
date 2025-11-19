@@ -9,7 +9,7 @@
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/subresource_filter/tools/indexing_tool.h"
 
 const char kHelpMsg[] = R"(

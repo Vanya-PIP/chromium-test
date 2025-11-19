@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/atomic_sequence_num.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/types/cxx23_to_underlying.h"

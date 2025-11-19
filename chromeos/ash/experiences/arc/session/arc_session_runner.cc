@@ -9,7 +9,7 @@
 
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/task/task_runner.h"
 #include "chromeos/ash/experiences/arc/arc_util.h"

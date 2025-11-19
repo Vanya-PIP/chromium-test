@@ -15,7 +15,7 @@
 #include "base/feature_list.h"
 #include "base/format_macros.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"

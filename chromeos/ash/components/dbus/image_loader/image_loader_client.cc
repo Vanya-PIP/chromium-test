@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "chromeos/ash/components/dbus/image_loader/fake_image_loader_client.h"
 #include "dbus/bus.h"

@@ -10,7 +10,7 @@
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
 #include "base/metrics/histogram_macros.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chrome/grit/branded_strings.h"
 #include "components/enterprise/browser/controller/browser_dm_token_storage.h"
 #include "ui/base/l10n/l10n_util.h"

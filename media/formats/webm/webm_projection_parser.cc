@@ -5,7 +5,7 @@
 #include "media/formats/webm/webm_projection_parser.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/formats/webm/webm_constants.h"
 
 namespace {

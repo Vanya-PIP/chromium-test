@@ -7,7 +7,7 @@
 #include <mferror.h>
 #include <windows.foundation.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/sequenced_task_runner.h"
 #include "base/time/time.h"
 #include "base/win/core_winrt_util.h"

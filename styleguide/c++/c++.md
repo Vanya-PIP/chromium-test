@@ -117,7 +117,7 @@ to track down a specific bug. This should be a rare exception, and you should
 have a plan for how to manually collect/use the logged data. Afterwards you
 should remove the logging. Note that logs are not present in crashes. Use
 `base::debug::ScopedCrashKeyString`
-([link](https://chromium.googlesource.com/chromium/src/+/main/base/debug/crash_logging.h))
+([link](https://chromium.googlesource.com/chromium/src/+/main/base/debug/crash_test))
 for that.
 
 For the rare case when logging needs to stay in the codebase for a while,

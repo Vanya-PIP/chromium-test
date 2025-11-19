@@ -4,7 +4,7 @@
 
 #import "ios/chrome/app/profile/identity_confirmation_profile_agent.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/field_trial_params.h"
 #import "base/metrics/histogram_functions.h"
 #import "base/strings/sys_string_conversions.h"

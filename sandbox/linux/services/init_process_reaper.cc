@@ -13,7 +13,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 
 namespace sandbox {

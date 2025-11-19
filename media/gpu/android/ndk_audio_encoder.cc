@@ -14,7 +14,7 @@
 
 #include "base/containers/heap_array.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/sequence_checker.h"
 #include "base/strings/stringprintf.h"

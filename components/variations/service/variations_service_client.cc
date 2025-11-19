@@ -10,7 +10,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/system/sys_info.h"
 #include "build/config/chromebox_for_meetings/buildflags.h"

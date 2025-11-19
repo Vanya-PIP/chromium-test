@@ -9,7 +9,7 @@
 #import <memory>
 
 #import "base/ios/ios_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/memory/raw_ptr.h"
 #import "base/test/ios/wait_util.h"
 #import "base/test/metrics/histogram_tester.h"

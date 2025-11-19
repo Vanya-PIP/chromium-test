@@ -5,7 +5,7 @@
 #include "media/video/video_encoder_fallback.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/ref_counted.h"
 #include "base/sequence_checker.h"

@@ -9,7 +9,7 @@
 #include <string_view>
 
 #include "base/component_export.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 namespace quick_pair {

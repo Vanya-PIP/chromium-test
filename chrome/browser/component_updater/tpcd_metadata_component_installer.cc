@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "components/component_updater/installer_policies/tpcd_metadata_component_installer_policy.h"
 #include "components/tpcd/metadata/browser/parser.h"

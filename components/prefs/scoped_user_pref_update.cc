@@ -13,7 +13,7 @@
 
 // TODO(crbug.com/40895218): The following two can be removed after resolving
 // the problem.
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/types/cxx23_to_underlying.h"
 

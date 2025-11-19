@@ -23,7 +23,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/rand_util.h"
 #include "base/run_loop.h"
@@ -570,7 +570,7 @@ void BrowserTestBase::SetUp() {
   // test crashes or times out.
   StartupTracingController::GetInstance().SetUsingTemporaryFile(
       StartupTracingController::TempFilePolicy::kWriteDirectly);
-  // Set a logging handler to flush a trace before crashing the test when
+  // Set a testandler to flush a trace before crashing the test when
   // hitting a DCHECK / LOG(FATAL).
   if (base::CommandLine::ForCurrentProcess()->HasSwitch(
           switches::kEnableTracing)) {

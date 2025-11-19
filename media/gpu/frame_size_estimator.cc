@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/gpu/h264_rate_control_util.h"
 
 namespace media {

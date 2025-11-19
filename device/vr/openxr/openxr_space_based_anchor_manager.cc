@@ -7,7 +7,7 @@
 #include <utility>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/vr/openxr/openxr_util.h"
 #include "device/vr/public/mojom/pose.h"
 #include "third_party/abseil-cpp/absl/container/flat_hash_map.h"

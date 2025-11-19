@@ -13,7 +13,7 @@
 #include "base/command_line.h"
 #include "base/files/file_util.h"
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/read_only_shared_memory_region.h"
 #include "base/memory/shared_memory_switch.h"
 #include "base/no_destructor.h"

@@ -16,7 +16,7 @@
 #include "base/files/file_util.h"
 #include "base/files/platform_file.h"
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/public/c/system/types.h"
 
 namespace arc {

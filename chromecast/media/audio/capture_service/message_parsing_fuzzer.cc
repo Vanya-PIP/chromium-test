@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/media/audio/capture_service/message_parsing_utils.h"
 
 struct Environment {

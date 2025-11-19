@@ -28,7 +28,7 @@
 #include "base/files/scoped_file.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/rand_util.h"
 #include "base/scoped_environment_variable_override.h"

@@ -5,7 +5,7 @@
 #include "remoting/host/linux/gnome_desktop_display_info_monitor.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/base/constants.h"
 #include "remoting/host/desktop_display_info.h"
 #include "remoting/host/linux/gnome_display_config.h"

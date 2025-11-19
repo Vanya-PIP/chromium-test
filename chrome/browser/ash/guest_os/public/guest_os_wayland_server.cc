@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/borealis/borealis_security_delegate.h"
 #include "chrome/browser/ash/crostini/crostini_security_delegate.h"
 #include "chrome/browser/ash/guest_os/guest_os_security_delegate.h"

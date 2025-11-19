@@ -35,7 +35,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/address_family.h"
 #include "net/base/net_errors.h"
 #include "net/quic/address_utils.h"

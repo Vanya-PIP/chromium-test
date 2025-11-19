@@ -7,7 +7,7 @@
 #include "base/check_deref.h"
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_functions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/types/expected.h"
 #include "chrome/browser/apps/app_service/app_service_proxy_factory.h"
 #include "chrome/browser/apps/app_service/chrome_app_deprecation/chrome_app_deprecation.h"

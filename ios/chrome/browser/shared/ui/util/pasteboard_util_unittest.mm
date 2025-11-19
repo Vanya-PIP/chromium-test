@@ -6,7 +6,7 @@
 
 #import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "base/test/task_environment.h"
 #import "testing/gtest/include/gtest/gtest.h"

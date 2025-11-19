@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/file_system_provider/content_cache/cache_file_context.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash::file_system_provider {
 

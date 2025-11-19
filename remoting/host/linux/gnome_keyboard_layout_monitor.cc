@@ -4,7 +4,7 @@
 
 #include "remoting/host/linux/gnome_keyboard_layout_monitor.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversion_utils.h"
 #include "remoting/host/linux/ei_keymap.h"
 #include "remoting/host/linux/keyboard_layout_monitor_utils.h"

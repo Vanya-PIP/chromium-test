@@ -9,7 +9,7 @@
 #include <queue>
 #include <utility>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/lazy_instance.h"
 #include "base/memory/raw_ptr.h"

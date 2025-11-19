@@ -6,7 +6,7 @@
 
 #include <unknwn.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace remoting {
 

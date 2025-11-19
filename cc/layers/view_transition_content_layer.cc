@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "cc/layers/view_transition_content_layer_impl.h"
 #include "cc/trees/layer_tree_host.h"
 

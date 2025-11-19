@@ -6,7 +6,7 @@
 
 #include "ash/constants/ash_features.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace exo {
 

@@ -4,7 +4,7 @@
 
 #include "services/webnn/public/cpp/webnn_trace.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "base/trace_event/trace_id_helper.h"
 #include "third_party/perfetto/include/perfetto/tracing/track.h"

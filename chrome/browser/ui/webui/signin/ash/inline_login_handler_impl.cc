@@ -15,7 +15,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/uuid.h"
 #include "base/values.h"

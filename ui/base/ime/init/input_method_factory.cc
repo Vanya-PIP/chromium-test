@@ -5,7 +5,7 @@
 #include "ui/base/ime/init/input_method_factory.h"
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "build/build_config.h"
 #include "ui/base/ime/mock_input_method.h"

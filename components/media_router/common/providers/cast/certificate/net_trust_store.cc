@@ -10,7 +10,7 @@
 #include "base/containers/span.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/media_router/common/providers/cast/certificate/net_parsed_certificate.h"
 #include "net/cert/x509_util.h"

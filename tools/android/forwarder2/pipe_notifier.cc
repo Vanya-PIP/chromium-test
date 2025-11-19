@@ -11,7 +11,7 @@
 #include <sys/types.h>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 
 namespace forwarder2 {

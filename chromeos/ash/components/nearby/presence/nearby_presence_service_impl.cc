@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/components/nearby/presence/conversions/nearby_presence_conversions.h"
 #include "chromeos/ash/components/nearby/presence/credentials/nearby_presence_credential_manager_impl.h"
 #include "chromeos/ash/components/nearby/presence/metrics/nearby_presence_metrics.h"
@@ -15,7 +15,7 @@
 #include "chromeos/ash/components/nearby/presence/nearby_presence_service_enum_coversions.h"
 #include "chromeos/ash/components/nearby/presence/prefs/nearby_presence_prefs.h"
 #include "chromeos/ash/services/nearby/public/mojom/nearby_presence.mojom.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "components/prefs/pref_service.h"
 #include "components/push_notification/push_notification_service.h"
 #include "components/signin/public/identity_manager/identity_manager.h"

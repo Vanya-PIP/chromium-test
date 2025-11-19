@@ -13,7 +13,7 @@
 #include "base/functional/callback.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "chromeos/dbus/constants/dbus_switches.h"
 

@@ -14,7 +14,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/containers/flat_set.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/histogram_macros.h"

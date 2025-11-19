@@ -14,7 +14,7 @@
 #include <stddef.h>
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions_win.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/uuid.h"

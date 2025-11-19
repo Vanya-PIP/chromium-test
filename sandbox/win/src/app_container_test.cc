@@ -18,7 +18,7 @@
 #include "base/files/file_util.h"
 #include "base/format_macros.h"
 #include "base/hash/sha1.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/path_service.h"
 #include "base/process/process_info.h"

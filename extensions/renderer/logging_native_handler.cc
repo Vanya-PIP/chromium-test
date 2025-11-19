@@ -7,7 +7,7 @@
 #include <algorithm>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "extensions/common/extension.h"
 #include "extensions/renderer/script_context.h"
 #include "v8/include/v8-function-callback.h"

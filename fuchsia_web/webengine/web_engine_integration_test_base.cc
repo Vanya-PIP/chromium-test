@@ -12,7 +12,7 @@
 #include "base/files/file_enumerator.h"
 #include "base/files/file_path.h"
 #include "base/fuchsia/file_utils.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/process_context.h"
 #include "base/path_service.h"
 #include "fuchsia_web/common/test/frame_test_util.h"

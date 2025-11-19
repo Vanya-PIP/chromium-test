@@ -4,7 +4,7 @@
 
 #include "chromecast/renderer/native_bindings_helper.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/renderer/render_frame.h"
 #include "gin/converter.h"
 #include "third_party/blink/public/platform/scheduler/web_agent_group_scheduler.h"

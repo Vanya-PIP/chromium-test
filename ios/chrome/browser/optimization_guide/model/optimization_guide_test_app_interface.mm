@@ -7,7 +7,7 @@
 #import <vector>
 
 #import "base/command_line.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "components/optimization_guide/core/filters/hints_component_info.h"
 #import "components/optimization_guide/core/filters/hints_component_util.h"

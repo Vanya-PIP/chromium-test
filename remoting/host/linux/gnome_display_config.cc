@@ -10,10 +10,10 @@
 
 #include "base/check_op.h"
 #include "base/hash/hash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/types/cxx23_to_underlying.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "third_party/webrtc/modules/portal/scoped_glib.h"
 #include "ui/gfx/geometry/rect.h"
 

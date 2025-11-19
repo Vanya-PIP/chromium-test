@@ -9,7 +9,7 @@
 
 #include "base/apple/scoped_cftyperef.h"
 #include "base/apple/scoped_objc_class_swizzler.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/mac_util.h"
 #include "base/run_loop.h"
 #include "chrome/app/chrome_command_ids.h"

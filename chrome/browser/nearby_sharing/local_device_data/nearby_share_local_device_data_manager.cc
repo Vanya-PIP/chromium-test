@@ -5,7 +5,7 @@
 #include "chrome/browser/nearby_sharing/local_device_data/nearby_share_local_device_data_manager.h"
 
 #include "base/strings/to_string.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 const size_t kNearbyShareDeviceNameMaxLength = 32;
 

@@ -5,7 +5,7 @@
 #include "content/browser/log_console_message.h"
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "content/public/browser/console_message.h"
 #include "content/public/common/content_features.h"

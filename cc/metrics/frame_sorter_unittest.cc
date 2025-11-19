@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/time/time.h"
 #include "cc/metrics/custom_metrics_recorder.h"

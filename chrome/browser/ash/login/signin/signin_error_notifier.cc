@@ -12,7 +12,7 @@
 #include "ash/public/cpp/notification_utils.h"
 #include "ash/webui/settings/public/constants/routes.mojom.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "build/build_config.h"
 #include "chrome/browser/ash/account_manager/account_manager_util.h"

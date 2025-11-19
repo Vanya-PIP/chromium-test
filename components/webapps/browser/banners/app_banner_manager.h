@@ -18,7 +18,7 @@
 #include "components/webapps/browser/banners/install_banner_config.h"
 #include "components/webapps/browser/banners/installable_web_app_check_result.h"
 #include "components/webapps/browser/banners/web_app_banner_data.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_params.h"
 #include "components/webapps/browser/pwa_install_path_tracker.h"
 #include "components/webapps/common/web_page_metadata.mojom.h"

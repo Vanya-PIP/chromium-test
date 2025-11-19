@@ -8,7 +8,7 @@
 
 #include "base/functional/callback_helpers.h"
 #include "base/time/time.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_adapter.h"
 
 namespace {

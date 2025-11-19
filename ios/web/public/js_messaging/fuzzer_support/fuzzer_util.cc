@@ -5,7 +5,7 @@
 #import "ios/web/public/js_messaging/fuzzer_support/fuzzer_util.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "ios/web/public/js_messaging/fuzzer_support/js_message.pb.h"
 #include "ios/web/public/js_messaging/script_message.h"

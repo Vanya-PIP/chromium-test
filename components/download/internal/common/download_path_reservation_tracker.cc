@@ -16,7 +16,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/strings/string_util.h"

@@ -9,7 +9,7 @@
 #include <string_view>
 
 #include "base/check_op.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "components/crash/core/common/crash_key.h"
 
 #if BUILDFLAG(USE_CRASHPAD_ANNOTATION)

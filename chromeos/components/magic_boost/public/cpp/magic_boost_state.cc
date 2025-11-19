@@ -7,7 +7,7 @@
 #include <cstdint>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/constants/chromeos_features.h"
 
 namespace {

@@ -5,7 +5,7 @@
 #include "services/cert_verifier/cert_verifier_service.h"
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"

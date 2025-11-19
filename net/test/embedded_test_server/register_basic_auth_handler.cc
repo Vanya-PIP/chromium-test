@@ -7,7 +7,7 @@
 #include <ios>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"
 #include "net/http/http_status_code.h"

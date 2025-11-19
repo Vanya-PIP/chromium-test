@@ -4,7 +4,7 @@
 
 #include "components/visited_url_ranking/public/fetcher_config.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/clock.h"
 #include "components/url_deduplication/url_deduplication_helper.h"
 

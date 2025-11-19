@@ -14,7 +14,7 @@
 #include <utility>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/threading/scoped_blocking_call.h"
 #include "crypto/nss_crypto_module_delegate.h"

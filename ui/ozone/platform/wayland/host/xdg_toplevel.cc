@@ -12,7 +12,7 @@
 
 #include "base/bit_cast.h"
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"

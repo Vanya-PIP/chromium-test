@@ -17,7 +17,7 @@
 #include "ash/wm/tablet_mode/tablet_mode_multitask_cue_controller.h"
 #include "ash/wm/tablet_mode/tablet_mode_multitask_menu_controller.h"
 #include "ash/wm/window_state.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "chromeos/ui/frame/multitask_menu/multitask_menu_metrics.h"
 #include "chromeos/ui/frame/multitask_menu/multitask_menu_view.h"
 #include "chromeos/ui/frame/multitask_menu/split_button_view.h"

@@ -15,7 +15,7 @@
 #include "base/base64.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/browser/ash/crosapi/keystore_service_ash.h"
 #include "chrome/browser/ash/crosapi/keystore_service_factory_ash.h"

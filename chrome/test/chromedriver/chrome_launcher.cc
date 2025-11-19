@@ -20,7 +20,7 @@
 #include "base/format_macros.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/kill.h"
 #include "base/process/launch.h"
 #include "base/process/process.h"

@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/network/portal_detector/network_portal_detector.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/device_event_log/device_event_log.h"
 
 namespace ash {

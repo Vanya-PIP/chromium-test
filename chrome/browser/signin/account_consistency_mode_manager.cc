@@ -7,7 +7,7 @@
 #include <string>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/string_util.h"

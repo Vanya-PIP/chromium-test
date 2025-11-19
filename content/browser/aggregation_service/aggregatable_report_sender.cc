@@ -15,7 +15,7 @@
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/metrics/histogram_functions.h"

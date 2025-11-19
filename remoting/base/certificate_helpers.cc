@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "crypto/crypto_buildflags.h"
 #include "net/cert/x509_certificate.h"

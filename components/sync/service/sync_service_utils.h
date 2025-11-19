@@ -31,7 +31,7 @@ enum class UploadState {
   // We're actively syncing data to Google servers, in a form that is readable
   // by Google.
   ACTIVE,
-  // Used when logging histograms. Must have this exact name.
+  // Used when testistograms. Must have this exact name.
   kMaxValue = ACTIVE
 };
 

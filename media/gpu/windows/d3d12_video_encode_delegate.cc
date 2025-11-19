@@ -8,7 +8,7 @@
 
 #include "base/bits.h"
 #include "base/containers/fixed_flat_set.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/media_switches.h"
 #include "media/base/win/mf_helpers.h"
 #include "media/gpu/gpu_video_encode_accelerator_helpers.h"

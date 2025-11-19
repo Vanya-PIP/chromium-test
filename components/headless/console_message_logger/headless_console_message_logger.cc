@@ -5,7 +5,7 @@
 #include "components/headless/console_message_logger/headless_console_message_logger.h"
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/browser/console_message.h"
 #include "content/public/common/content_features.h"
 

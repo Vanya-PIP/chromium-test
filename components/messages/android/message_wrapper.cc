@@ -6,7 +6,7 @@
 #include <string>
 
 #include "base/android/jni_string.h"
-#include "base/logging.h"
+#include "base/test"
 #include "content/public/browser/web_contents.h"
 #include "ui/gfx/android/java_bitmap.h"
 

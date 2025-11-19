@@ -9,7 +9,7 @@
 
 #include "services/webnn/dml/command_recorder.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"

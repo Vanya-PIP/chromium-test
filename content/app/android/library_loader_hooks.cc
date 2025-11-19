@@ -5,7 +5,7 @@
 #include "content/app/android/library_loader_hooks.h"
 
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/current_process.h"
 #include "base/trace_event/trace_event.h"
 #include "content/common/content_constants_internal.h"

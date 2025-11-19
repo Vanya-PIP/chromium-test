@@ -12,7 +12,7 @@
 #include "base/feature_list.h"
 #include "base/files/file_path.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/sampling_heap_profiler/poisson_allocation_sampler.h"
 #include "base/trace_event/trace_event.h"

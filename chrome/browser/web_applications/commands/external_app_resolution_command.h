@@ -25,9 +25,9 @@
 #include "chrome/browser/web_applications/web_app_constants.h"
 #include "chrome/browser/web_applications/web_app_install_info.h"
 #include "chrome/browser/web_applications/web_app_install_utils.h"
-#include "chrome/browser/web_applications/web_app_logging.h"
+#include "chrome/browser/web_applications/web_app_test"
 #include "components/services/app_service/public/cpp/app_launch_util.h"
-#include "components/webapps/browser/installable/installable_logging.h"
+#include "components/webapps/browser/installable/installable_test"
 #include "components/webapps/browser/installable/installable_metrics.h"
 #include "components/webapps/browser/uninstall_result_code.h"
 

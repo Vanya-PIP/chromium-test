@@ -8,7 +8,7 @@
 
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/feature_setup_connection_operation.h"
 
 namespace ash::phonehub {

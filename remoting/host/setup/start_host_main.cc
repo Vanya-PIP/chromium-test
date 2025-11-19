@@ -29,7 +29,7 @@
 #include "net/ssl/client_cert_store.h"
 #include "net/url_request/url_request_context_getter.h"
 #include "remoting/base/certificate_helpers.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/url_request_context_getter.h"
 #include "remoting/host/setup/cloud_host_starter.h"
 #include "remoting/host/setup/corp_host_starter.h"

@@ -7,7 +7,7 @@
 #include "ash/frame_sink/frame_sink_host.h"
 #include "ash/frame_sink/ui_resource.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "cc/paint/display_item_list.h"
 #include "components/viz/common/gpu/context_provider.h"

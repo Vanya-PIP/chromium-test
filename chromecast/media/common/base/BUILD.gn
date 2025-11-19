@@ -9,7 +9,7 @@ import("//chromecast/chromecast.gni")
 cast_source_set("base") {
   sources = [
     "decoder_config_logging.cc",
-    "decoder_config_logging.h",
+    "decoder_config_test",
   ]
 
   public_deps = [ "//chromecast/public/media" ]

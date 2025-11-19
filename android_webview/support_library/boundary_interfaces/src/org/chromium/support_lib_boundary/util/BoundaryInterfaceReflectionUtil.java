@@ -25,7 +25,7 @@ public class BoundaryInterfaceReflectionUtil {
 
     private static @Nullable LruCache<Pair<Method, @Nullable ClassLoader>, @Nullable Method>
             sMethodCache;
-    // The boundary interfaces cannot depend on //base, so logging has to be passed in separately.
+    // The boundary interfaces cannot depend on //base, so testas to be passed in separately.
     private static @Nullable Consumer<Boolean> sCacheGetResultLogger;
 
     public static void setMethodCache(

@@ -5,7 +5,7 @@
 #include "components/webui/flags/feature_entry.h"
 
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/strcat.h"

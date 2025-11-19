@@ -6,7 +6,7 @@
 
 #include "base/check.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "ui/base/resource/resource_bundle.h"
 #include "ui/webui/examples/browser/content_browser_client.h"

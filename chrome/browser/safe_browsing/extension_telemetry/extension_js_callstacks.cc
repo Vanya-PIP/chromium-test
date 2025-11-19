@@ -5,7 +5,7 @@
 #include "chrome/browser/safe_browsing/extension_telemetry/extension_js_callstacks.h"
 
 #include "base/containers/span.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/hash/sha1.h"
 #include "base/strings/utf_string_conversions.h"
 

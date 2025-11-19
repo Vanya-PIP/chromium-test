@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/shared_memory_mapping.h"
 #include "pdf/pdf.h"
 #include "third_party/skia/include/core/SkBitmap.h"

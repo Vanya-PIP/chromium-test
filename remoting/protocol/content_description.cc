@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/base64.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/strings/string_number_conversions.h"
 #include "remoting/base/constants.h"

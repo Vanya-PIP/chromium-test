@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/tabs/tab_strip_api/testing/toy_tab_strip.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace tabs_api::testing {
 

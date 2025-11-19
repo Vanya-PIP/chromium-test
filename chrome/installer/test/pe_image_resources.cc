@@ -12,7 +12,7 @@
 
 #include "chrome/installer/test/pe_image_resources.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/pe_image.h"
 
 namespace {

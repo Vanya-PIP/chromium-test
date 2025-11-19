@@ -7,12 +7,12 @@
 #include <memory>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "remoting/base/corp_auth_util.h"
 #include "remoting/base/corp_logging_service_client.h"
 #include "remoting/base/http_status.h"
 #include "remoting/base/internal_headers.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/oauth_token_getter_proxy.h"
 #include "remoting/base/session_policies.h"
 #include "remoting/protocol/authenticator.h"

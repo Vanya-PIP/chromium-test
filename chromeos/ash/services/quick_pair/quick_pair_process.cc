@@ -12,7 +12,7 @@
 #include "chromeos/ash/services/quick_pair/public/cpp/not_discoverable_advertisement.h"
 #include "chromeos/ash/services/quick_pair/public/mojom/fast_pair_data_parser.mojom.h"
 #include "chromeos/ash/services/quick_pair/quick_pair_process_manager.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace ash {
 namespace quick_pair {

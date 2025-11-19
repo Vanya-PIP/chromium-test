@@ -14,7 +14,7 @@
 #include <vector>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "base/time/time.h"
 #include "testing/gtest/include/gtest/gtest.h"

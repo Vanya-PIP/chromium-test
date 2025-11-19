@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/core/core.h"
 #include "mojo/core/embedder/embedder.h"
 #include "mojo/core/test/mojo_test_base.h"

@@ -10,7 +10,7 @@
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "chrome/browser/nearby_sharing/fast_initiation/constants.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_advertisement.h"
 
 namespace {

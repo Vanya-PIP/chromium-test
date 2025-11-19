@@ -21,7 +21,7 @@
 #include "chrome/common/chrome_version.h"
 #include "chrome/credential_provider/gaiacp/experiments_manager.h"
 #include "chrome/credential_provider/gaiacp/gcp_utils.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/reg_utils.h"
 
 namespace credential_provider {

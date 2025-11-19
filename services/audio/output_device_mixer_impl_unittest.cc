@@ -6,7 +6,7 @@
 
 #include <array>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/test/task_environment.h"
 #include "testing/gmock/include/gmock/gmock.h"

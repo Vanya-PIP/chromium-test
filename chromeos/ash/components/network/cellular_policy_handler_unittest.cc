@@ -9,7 +9,7 @@
 #include <queue>
 
 #include "ash/constants/ash_features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/rand_util.h"
 #include "base/run_loop.h"
 #include "base/strings/stringprintf.h"

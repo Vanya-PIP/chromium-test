@@ -8,7 +8,7 @@
 #include <optional>
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 namespace quick_pair {

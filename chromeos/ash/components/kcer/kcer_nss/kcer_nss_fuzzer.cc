@@ -14,7 +14,7 @@
 #include "base/command_line.h"
 #include "base/hash/hash.h"
 #include "base/hash/sha1.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/memory/raw_span.h"
 #include "base/strings/string_util.h"

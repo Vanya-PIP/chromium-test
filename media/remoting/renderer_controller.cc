@@ -6,7 +6,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/default_tick_clock.h"
 #include "base/time/tick_clock.h"
 #include "base/time/time.h"

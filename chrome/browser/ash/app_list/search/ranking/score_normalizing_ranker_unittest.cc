@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/app_list/search/ranking/score_normalizing_ranker.h"
 
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/task_environment.h"
 #include "chrome/browser/ash/app_list/search/chrome_search_result.h"
 #include "chrome/browser/ash/app_list/search/search_controller.h"

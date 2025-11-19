@@ -7,7 +7,7 @@
 #include <array>
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_span.h"
 #include "base/types/cxx23_to_underlying.h"

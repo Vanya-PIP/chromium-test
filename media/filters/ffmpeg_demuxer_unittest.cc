@@ -17,7 +17,7 @@
 #include "base/functional/bind.h"
 #include "base/i18n/time_formatting.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/path_service.h"
 #include "base/run_loop.h"

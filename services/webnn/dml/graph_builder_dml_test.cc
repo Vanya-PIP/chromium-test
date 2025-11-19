@@ -4,7 +4,7 @@
 
 #include "services/webnn/dml/graph_builder_dml.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "services/webnn/dml/adapter.h"
 #include "services/webnn/dml/tensor_desc.h"
 #include "services/webnn/dml/test_base.h"

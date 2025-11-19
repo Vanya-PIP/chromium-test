@@ -15,7 +15,7 @@
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
 #include "base/strings/stringprintf.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "chromeos/ash/components/cryptohome/auth_factor.h"
 #include "chromeos/ash/components/cryptohome/cryptohome_parameters.h"
 #include "chromeos/ash/components/dbus/userdataauth/userdataauth_client.h"

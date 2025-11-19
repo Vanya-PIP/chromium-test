@@ -4,7 +4,7 @@
 
 #include "components/safe_browsing/content/browser/safe_browsing_navigation_observer_manager_util.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "testing/gtest/include/gtest/gtest.h"
 

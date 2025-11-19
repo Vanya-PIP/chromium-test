@@ -8,7 +8,7 @@
 
 #include "base/strings/string_number_conversions.h"
 #include "chrome/browser/nearby_sharing/certificates/common.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 std::optional<base::Time>
 NearbyShareCertificateStorage::NextPrivateCertificateExpirationTime() {

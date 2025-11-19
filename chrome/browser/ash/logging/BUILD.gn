@@ -9,7 +9,7 @@ assert(is_chromeos)
 static_library("logging") {
   sources = [
     "logging.cc",
-    "logging.h",
+    "test",
   ]
 
   deps = [

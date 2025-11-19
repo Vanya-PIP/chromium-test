@@ -5,7 +5,7 @@
 #include "ui/gl/gl_fence_android_native_fence_sync.h"
 
 #include "base/files/scoped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/time/time.h"
 #include "build/build_config.h"

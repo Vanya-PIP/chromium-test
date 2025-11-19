@@ -7,7 +7,7 @@
 #include <Carbon/Carbon.h>
 #include <CoreFoundation/CoreFoundation.h>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 
 extern "C" {
 OSStatus SetApplicationIsDaemon(Boolean isDaemon);

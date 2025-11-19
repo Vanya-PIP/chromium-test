@@ -8,7 +8,7 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/parsers/h266_parser.h"
 
 namespace media {

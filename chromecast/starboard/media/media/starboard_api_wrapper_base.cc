@@ -15,7 +15,7 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/starboard/chromecast/starboard_adapter/public/cast_starboard_api_adapter.h"
 #include "chromecast/starboard/media/media/starboard_api_wrapper.h"
 

@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/app_list/search/search_session_metrics_manager.h"
 
 #include "ash/public/cpp/app_list/app_list_controller.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"
 #include "chrome/browser/ash/app_list/search/common/keyword_util.h"

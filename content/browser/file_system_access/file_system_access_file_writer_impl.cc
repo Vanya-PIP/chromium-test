@@ -6,7 +6,7 @@
 
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/weak_ptr.h"
 #include "content/browser/file_system_access/file_system_access_error.h"
 #include "content/browser/file_system_access/file_system_access_manager_impl.h"

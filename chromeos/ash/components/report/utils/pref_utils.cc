@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/report/utils/pref_utils.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chromeos/ash/components/dbus/private_computing/private_computing_service.pb.h"
 #include "chromeos/ash/components/report/prefs/fresnel_pref_names.h"

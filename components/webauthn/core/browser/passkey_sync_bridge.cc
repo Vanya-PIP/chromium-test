@@ -17,7 +17,7 @@
 #include "base/containers/span.h"
 #include "base/feature_list.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/time/clock.h"
 #include "base/time/time.h"

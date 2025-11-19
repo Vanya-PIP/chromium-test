@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/values.h"
 #include "chrome/browser/ash/settings/device_settings_provider.h"

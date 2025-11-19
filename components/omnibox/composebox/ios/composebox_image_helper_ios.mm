@@ -6,7 +6,7 @@
 
 #include "base/apple/foundation_util.h"
 #include "base/containers/to_vector.h"
-#include "base/logging.h"
+#include "base/test"
 #include "components/lens/lens_bitmap_processing.h"
 #include "ui/gfx/geometry/size.h"
 

@@ -14,7 +14,7 @@
 #include "base/files/scoped_file.h"
 #include "base/functional/callback_helpers.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "base/process/launch.h"
 #include "base/strings/string_number_conversions.h"

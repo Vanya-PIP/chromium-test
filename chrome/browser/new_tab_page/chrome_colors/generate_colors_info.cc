@@ -5,7 +5,7 @@
 #include "base/base64.h"
 #include "base/compiler_specific.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "chrome/browser/new_tab_page/chrome_colors/selected_colors_info.h"

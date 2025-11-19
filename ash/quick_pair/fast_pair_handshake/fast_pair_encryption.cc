@@ -15,7 +15,7 @@
 #include "base/compiler_specific.h"
 #include "base/types/fixed_array.h"
 #include "chromeos/ash/services/quick_pair/public/cpp/fast_pair_message_type.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "third_party/boringssl/src/include/openssl/aes.h"
 #include "third_party/boringssl/src/include/openssl/base.h"
 #include "third_party/boringssl/src/include/openssl/ec.h"

@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/debug/alias.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/page_size.h"
 #include "base/time/time.h"
 #include "tools/memory/simulator/contiguous_memory_holder.h"

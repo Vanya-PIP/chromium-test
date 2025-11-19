@@ -4,7 +4,7 @@
 
 #include "content/browser/preloading/preload_serving_metrics_holder.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 
 namespace content {

@@ -7,7 +7,7 @@
 #include "base/at_exit.h"
 #include "base/command_line.h"
 #include "base/strings/string_number_conversions.h"
-#include "base/syslog_logging.h"
+#include "base/syslog_test"
 #include "base/task/single_thread_task_executor.h"
 #include "base/threading/thread.h"
 #include "chrome/browser/enterprise/connectors/device_trust/key_management/core/shared_command_constants.h"

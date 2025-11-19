@@ -7,7 +7,7 @@
 
 #include <sstream>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/peripherals/logging/log_buffer.h"
 
 // Use the PR_LOG() macro for all logging related to Peripherals Features so

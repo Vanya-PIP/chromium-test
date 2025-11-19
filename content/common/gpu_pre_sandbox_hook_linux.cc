@@ -20,7 +20,7 @@
 #include "base/files/file_path.h"
 #include "base/files/scoped_file.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/strings/stringprintf.h"
 #include "build/build_config.h"

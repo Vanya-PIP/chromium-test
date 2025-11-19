@@ -15,7 +15,7 @@
 #include <string_view>
 
 #include "base/fuchsia/fuchsia_component_connect.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/fuchsia/scheduler.h"
 #include "base/no_destructor.h"
 #include "base/threading/platform_thread_internal_posix.h"

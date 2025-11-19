@@ -7,7 +7,7 @@
 #include <utility>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/power_monitor/power_monitor.h"
 #include "base/task/sequenced_task_runner.h"
 

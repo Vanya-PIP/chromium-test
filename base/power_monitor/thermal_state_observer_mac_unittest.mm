@@ -12,7 +12,7 @@
 #include <queue>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/power_monitor/power_monitor.h"
 #include "base/power_monitor/power_monitor_source.h"
 #include "base/synchronization/waitable_event.h"

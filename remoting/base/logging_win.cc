@@ -6,9 +6,9 @@
 
 #include <guiddef.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/logging_win.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 
 namespace remoting {
 

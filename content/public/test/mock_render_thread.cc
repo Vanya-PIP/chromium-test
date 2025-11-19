@@ -7,7 +7,7 @@
 #include <memory>
 #include <tuple>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/unguessable_token.h"
 #include "build/build_config.h"

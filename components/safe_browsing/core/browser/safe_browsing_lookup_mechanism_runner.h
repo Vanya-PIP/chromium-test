@@ -27,7 +27,7 @@ class SafeBrowsingLookupMechanismRunner {
   // lookup. |complete_check_callback| is the callback that will be called if
   // the run does not complete synchronously; its |result| parameter will only
   // be populated if the run did not time out. |performed_check_suffix| is a
-  // suffix used for a metric logging how long the check took to run.
+  // suffix used for a metric testow long the check took to run.
   SafeBrowsingLookupMechanismRunner(
       std::unique_ptr<SafeBrowsingLookupMechanism> lookup_mechanism,
       const std::string& performed_check_suffix,
@@ -60,7 +60,7 @@ class SafeBrowsingLookupMechanismRunner {
   // The lookup mechanism responsible for running the check and returning the
   // relevant results.
   std::unique_ptr<SafeBrowsingLookupMechanism> lookup_mechanism_;
-  // Suffix used for a metric logging how long the check took to run
+  // Suffix used for a metric testow long the check took to run
   // (SafeBrowsing.CheckUrl.TimeTaken.*).
   std::string performed_check_suffix_;
   // The callback passed in through the constructor that should be called either

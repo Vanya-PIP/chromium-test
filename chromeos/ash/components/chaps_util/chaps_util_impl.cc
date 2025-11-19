@@ -20,7 +20,7 @@
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "chromeos/ash/components/chaps_util/chaps_slot_session.h"
 #include "crypto/chaps_support.h"

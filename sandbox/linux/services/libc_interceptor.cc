@@ -29,7 +29,7 @@
 #include "base/compiler_specific.h"
 #include "base/debug/dump_without_crashing.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/safe_conversions.h"
 #include "base/pickle.h"
 #include "base/posix/eintr_wrapper.h"

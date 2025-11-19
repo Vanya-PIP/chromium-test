@@ -4,7 +4,7 @@
 
 #include "extensions/test/result_catcher.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "content/public/test/test_utils.h"
 #include "testing/gtest/include/gtest/gtest.h"

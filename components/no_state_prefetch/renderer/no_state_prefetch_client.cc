@@ -4,7 +4,7 @@
 
 #include "components/no_state_prefetch/renderer/no_state_prefetch_client.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/no_state_prefetch/renderer/no_state_prefetch_helper.h"
 #include "content/public/renderer/render_frame.h"
 #include "third_party/blink/public/web/web_frame.h"

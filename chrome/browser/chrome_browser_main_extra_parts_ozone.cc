@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "chrome/browser/lifetime/application_lifetime_desktop.h"
 #include "content/public/browser/browser_task_traits.h"

@@ -5,7 +5,7 @@
 #include "chromeos/ash/services/multidevice_setup/public/cpp/multidevice_setup_client.h"
 
 #include "base/check.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 
 namespace ash {
 

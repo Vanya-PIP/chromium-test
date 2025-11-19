@@ -5,7 +5,7 @@
 #include "components/enterprise/content/copy_prevention_settings_policy_handler.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/expected_macros.h"
 #include "base/values.h"
 #include "components/enterprise/content/pref_names.h"

@@ -10,7 +10,7 @@
 #include <string_view>
 
 #include "base/bits.h"
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/memory/page_size.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_util.h"

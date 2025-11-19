@@ -5,7 +5,7 @@
 #include "remoting/host/zombie_host_detector.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/network_change_notifier.h"
 
 namespace {

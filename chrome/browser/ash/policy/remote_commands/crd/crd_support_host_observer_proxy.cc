@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/policy/remote_commands/crd/crd_support_host_observer_proxy.h"
 
 #include "base/functional/bind.h"
-#include "chrome/browser/ash/policy/remote_commands/crd/crd_logging.h"
+#include "chrome/browser/ash/policy/remote_commands/crd/crd_test"
 #include "chrome/browser/ash/policy/remote_commands/crd/crd_session_observer.h"
 #include "chrome/browser/ash/policy/remote_commands/crd/public/crd_session_result_codes.h"
 #include "remoting/base/errors.h"

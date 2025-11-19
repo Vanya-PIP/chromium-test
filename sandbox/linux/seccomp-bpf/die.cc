@@ -14,7 +14,7 @@
 #include <string>
 #include <tuple>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/eintr_wrapper.h"
 #include "sandbox/linux/seccomp-bpf/syscall.h"
 #include "sandbox/linux/services/syscall_wrappers.h"

@@ -8,7 +8,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/task/sequenced_task_runner.h"
 #include "media/mojo/common/mojo_pipe_read_write_util.h"

@@ -10,7 +10,7 @@
 #include "base/functional/bind.h"
 #include "base/memory/ptr_util.h"
 #include "base/memory/weak_ptr.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/remote_device_ref.h"
 #include "chromeos/ash/services/secure_channel/ble_synchronizer_base.h"
 #include "chromeos/ash/services/secure_channel/public/cpp/shared/ble_constants.h"

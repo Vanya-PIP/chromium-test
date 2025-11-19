@@ -6,8 +6,8 @@
 
 #include <algorithm>
 
-#include "base/logging.h"
-#include "remoting/base/logging.h"
+#include "base/test"
+#include "remoting/base/test"
 #include "remoting/proto/event.pb.h"
 
 namespace remoting::protocol {

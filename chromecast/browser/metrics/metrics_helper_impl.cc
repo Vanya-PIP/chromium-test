@@ -4,7 +4,7 @@
 
 #include "chromecast/browser/metrics/metrics_helper_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/base/metrics/cast_metrics_helper.h"
 #include "mojo/public/cpp/bindings/remote.h"
 

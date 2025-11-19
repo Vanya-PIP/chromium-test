@@ -11,7 +11,7 @@
 #include "base/containers/adapters.h"
 #include "base/containers/contains.h"
 #include "base/debug/alias.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/notreached.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/types/optional_util.h"

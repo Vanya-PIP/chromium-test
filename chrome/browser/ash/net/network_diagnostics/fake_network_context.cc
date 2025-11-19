@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "services/network/public/mojom/host_resolver.mojom.h"
 

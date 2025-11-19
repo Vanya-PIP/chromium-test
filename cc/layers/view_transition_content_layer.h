@@ -7,7 +7,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "cc/cc_export.h"
 #include "cc/layers/layer.h"
 #include "components/viz/common/view_transition_element_resource_id.h"

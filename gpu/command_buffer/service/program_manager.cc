@@ -19,7 +19,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/numerics/safe_math.h"
 #include "base/strings/string_number_conversions.h"

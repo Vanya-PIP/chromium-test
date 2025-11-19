@@ -4,7 +4,7 @@
 
 #include "ui/base/x/x11_drag_context.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted_memory.h"
 #include "ui/base/dragdrop/drag_drop_types.h"
 #include "ui/base/x/x11_drag_drop_client.h"

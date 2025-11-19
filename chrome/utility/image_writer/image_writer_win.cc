@@ -16,7 +16,7 @@
 #include <winioctl.h>
 
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/utility/image_writer/error_message_strings.h"
 
 namespace image_writer {

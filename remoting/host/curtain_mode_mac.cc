@@ -14,11 +14,11 @@
 #include <Security/Security.h>
 #include <unistd.h>
 
-#include "base/apple/osstatus_logging.h"
+#include "base/apple/osstatus_test"
 #include "base/apple/scoped_cftyperef.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/mac/login_util.h"
 #include "base/memory/ptr_util.h"
 #include "base/strings/stringprintf.h"

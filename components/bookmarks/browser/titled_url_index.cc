@@ -13,7 +13,7 @@
 
 #include "base/i18n/case_conversion.h"
 #include "base/i18n/unicodestring.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/stl_util.h"
 #include "base/strings/utf_offset_string_conversions.h"
 #include "base/trace_event/memory_usage_estimator.h"

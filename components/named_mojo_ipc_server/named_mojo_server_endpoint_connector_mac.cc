@@ -12,7 +12,7 @@
 #include <memory>
 
 #include "base/apple/dispatch_source.h"
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_mach_port.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"

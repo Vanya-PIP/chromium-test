@@ -7,7 +7,7 @@
 #pragma allow_unsafe_buffers
 #endif
 
-#include "partition_alloc/partition_alloc_base/fuchsia/fuchsia_logging.h"
+#include "partition_alloc/partition_alloc_base/fuchsia/fuchsia_test"
 
 #include <zircon/status.h>
 

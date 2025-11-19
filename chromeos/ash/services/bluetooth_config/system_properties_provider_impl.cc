@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/services/bluetooth_config/system_properties_provider_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "components/session_manager/core/session_manager.h"
 #include "components/user_manager/user_manager.h"

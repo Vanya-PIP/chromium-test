@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/singleton.h"
 #include "base/numerics/checked_math.h"
 #include "base/thread_annotations.h"

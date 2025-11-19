@@ -20,7 +20,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/json/json_writer.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/message_loop/message_pump_type.h"
 #include "base/no_destructor.h"

@@ -4,7 +4,7 @@
 
 #include "base/win/scoped_process_information.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/win/scoped_handle.h"
 
 namespace base {

@@ -15,7 +15,7 @@
 #include "ash/system/accessibility/mouse_keys/mouse_keys_bubble_controller.h"
 #include "ash/wm/window_util.h"
 #include "base/containers/flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/accessibility/accessibility_features.h"
 #include "ui/aura/client/cursor_client.h"
 #include "ui/aura/window.h"

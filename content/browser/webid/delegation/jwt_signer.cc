@@ -13,7 +13,7 @@
 #include "base/functional/callback.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "content/browser/webid/delegation/sd_jwt.h"
 #include "crypto/ecdsa_utils.h"

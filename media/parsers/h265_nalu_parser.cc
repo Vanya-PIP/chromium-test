@@ -10,7 +10,7 @@
 #include <cmath>
 #include <cstring>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/to_address.h"
 #include "media/base/decrypt_config.h"
 

@@ -13,11 +13,11 @@
 
 #include "base/allocator/partition_alloc_support.h"
 #include "base/containers/flat_set.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/functional/callback_helpers.h"
 #include "base/functional/function_ref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/field_trial_params.h"
 #include "base/no_destructor.h"
 #include "base/numerics/safe_math.h"

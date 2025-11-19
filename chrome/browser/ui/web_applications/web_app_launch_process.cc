@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ui/web_applications/web_app_launch_process.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/files/file_path.h"
 #include "base/functional/callback_forward.h"

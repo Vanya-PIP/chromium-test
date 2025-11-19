@@ -7,7 +7,7 @@
 #include <string_view>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/macros/concat.h"
 #include "base/strings/strcat.h"
 #include "base/strings/stringprintf.h"

@@ -9,7 +9,7 @@
 #include "ash/quick_pair/feature_status_tracker/bluetooth_enabled_provider.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 
 namespace ash::quick_pair {
 

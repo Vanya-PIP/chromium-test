@@ -8,7 +8,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "net/base/io_buffer.h"
 #include "third_party/protobuf/src/google/protobuf/io/coded_stream.h"
 #include "third_party/protobuf/src/google/protobuf/wire_format_lite.h"

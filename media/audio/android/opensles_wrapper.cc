@@ -32,7 +32,7 @@
 #include <stddef.h>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 
 // The constants used in chromium. SLInterfaceID is actually a pointer to

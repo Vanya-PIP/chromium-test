@@ -10,7 +10,7 @@
 #include <vector>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 
 namespace ash::schedule_utils {

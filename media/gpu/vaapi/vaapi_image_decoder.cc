@@ -6,7 +6,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/gpu/macros.h"
 #include "media/gpu/vaapi/vaapi_utils.h"
 #include "media/gpu/vaapi/vaapi_wrapper.h"

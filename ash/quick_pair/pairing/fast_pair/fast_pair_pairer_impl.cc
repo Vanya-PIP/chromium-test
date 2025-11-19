@@ -27,7 +27,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "chromeos/ash/services/quick_pair/public/cpp/fast_pair_message_type.h"
-#include "components/cross_device/logging/logging.h"
+#include "components/cross_device/logging/test"
 #include "device/bluetooth/bluetooth_adapter.h"
 #include "device/bluetooth/bluetooth_device.h"
 #include "device/bluetooth/floss/floss_features.h"

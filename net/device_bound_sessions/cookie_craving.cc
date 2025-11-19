@@ -9,7 +9,7 @@
 #include "base/check.h"
 #include "base/containers/contains.h"
 #include "base/containers/fixed_flat_set.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/dump_without_crashing.h"
 #include "base/strings/strcat.h"
 #include "net/base/url_util.h"

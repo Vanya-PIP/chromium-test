@@ -14,7 +14,7 @@
 #include <utility>
 
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "components/zucchini/buffer_view.h"
 #include "components/zucchini/mapped_file.h"

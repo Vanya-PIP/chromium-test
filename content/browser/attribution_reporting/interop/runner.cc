@@ -24,7 +24,7 @@
 #include "base/functional/bind.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ref.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/sequence_checker.h"

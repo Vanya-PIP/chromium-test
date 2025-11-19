@@ -12,7 +12,7 @@
 #include <ios>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/thread_pool.h"
 #include "components/tracing/common/etw_consumer_win.h"
 #include "third_party/perfetto/include/perfetto/ext/tracing/core/trace_writer.h"

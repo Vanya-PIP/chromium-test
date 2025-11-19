@@ -4,7 +4,7 @@
 
 #include "ui/views/focus/focus_search.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 #include "ui/views/accessibility/view_accessibility.h"
 #include "ui/views/focus/focus_manager.h"

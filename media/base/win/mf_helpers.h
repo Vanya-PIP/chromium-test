@@ -11,7 +11,7 @@
 #include <wrl/client.h>
 
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "media/base/audio_decoder_config.h"
 #include "media/base/channel_layout.h"

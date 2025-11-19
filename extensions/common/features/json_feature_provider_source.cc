@@ -5,7 +5,7 @@
 #include "extensions/common/features/json_feature_provider_source.h"
 
 #include "base/json/json_reader.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/resource/resource_bundle.h"
 
 namespace extensions {

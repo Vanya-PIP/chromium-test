@@ -7,7 +7,7 @@
 #include "base/time/time.h"
 #include "chromeos/dbus/power/power_manager_client.h"
 
-#include "base/logging.h"
+#include "base/test"
 
 namespace ash {
 namespace quick_unlock {

@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "base/base64url.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/escape.h"
 #include "base/strings/string_split.h"
 #include "base/strings/string_util.h"

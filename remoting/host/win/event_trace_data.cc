@@ -11,7 +11,7 @@
 
 #include "base/check.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/logging_win.h"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"

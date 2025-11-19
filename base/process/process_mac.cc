@@ -16,7 +16,7 @@
 #include <optional>
 #include <utility>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/feature_list.h"
 #include "base/memory/free_deleter.h"
 

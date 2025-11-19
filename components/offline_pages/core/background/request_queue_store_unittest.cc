@@ -11,7 +11,7 @@
 #include "base/files/file_path.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/test/test_mock_time_task_runner.h"
 #include "components/offline_pages/core/background/request_queue.h"

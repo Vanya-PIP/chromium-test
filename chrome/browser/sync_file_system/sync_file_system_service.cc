@@ -14,7 +14,7 @@
 #include "base/check_deref.h"
 #include "base/format_macros.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/ref_counted.h"

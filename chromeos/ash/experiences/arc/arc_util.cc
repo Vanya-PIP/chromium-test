@@ -16,7 +16,7 @@
 #include "base/compiler_specific.h"
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/launch.h"
 #include "base/process/process_metrics.h"
 #include "base/strings/string_number_conversions.h"

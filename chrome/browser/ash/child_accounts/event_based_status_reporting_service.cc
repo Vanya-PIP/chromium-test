@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/child_accounts/event_based_status_reporting_service.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/trace_event/trace_event.h"
 #include "chrome/browser/ash/child_accounts/child_status_reporting_service.h"

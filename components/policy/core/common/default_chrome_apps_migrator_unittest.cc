@@ -7,7 +7,7 @@
 #include <map>
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "components/policy/policy_constants.h"
 #include "components/strings/grit/components_strings.h"
 #include "testing/gtest/include/gtest/gtest.h"

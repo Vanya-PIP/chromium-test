@@ -14,7 +14,7 @@
 #include "base/android/android_info.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/sequence_checker.h"
 #include "base/time/time.h"

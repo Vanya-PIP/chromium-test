@@ -10,7 +10,7 @@
 #include "base/android/jni_android.h"
 #include "base/android/jni_array.h"
 #include "base/android/jni_string.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/metrics/histogram_functions.h"
 #include "components/android_autofill/browser/android_autofill_bridge_factory.h"

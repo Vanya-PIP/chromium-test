@@ -11,7 +11,7 @@
 #include <utility>
 
 #include "base/features.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "components/history/core/browser/features.h"
 

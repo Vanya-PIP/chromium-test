@@ -49,7 +49,7 @@ enum class AutofillErrorDialogType {
   kBnplTemporaryError = 11,
   // Error shown when the server returns a permanent error for a BNPL flow.
   kBnplPermanentError = 12,
-  // kMaxValue is required for logging histograms.
+  // kMaxValue is required for testistograms.
   kMaxValue = kBnplPermanentError,
 };
 

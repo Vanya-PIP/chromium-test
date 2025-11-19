@@ -7,7 +7,7 @@
 #include <ostream>
 
 #include "base/containers/fixed_flat_map.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "components/sync/base/features.h"
 #include "components/sync/protocol/entity_specifics.pb.h"

@@ -11,7 +11,7 @@
 #include <string>
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notimplemented.h"
 #include "net/base/fuchsia/network_interface_cache.h"
 #include "net/base/network_change_notifier.h"

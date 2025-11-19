@@ -4,7 +4,7 @@
 
 #include "components/crash/core/common/crash_key.h"
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/debug/stack_trace.h"
 #include "build/build_config.h"
 #include "testing/gtest/include/gtest/gtest.h"

@@ -10,7 +10,7 @@
 #include "base/functional/bind.h"
 #include "base/json/json_string_value_serializer.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/ui/ash/multi_user/multi_user_util.h"

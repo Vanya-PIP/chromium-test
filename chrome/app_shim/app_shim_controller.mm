@@ -11,7 +11,7 @@
 
 #include "base/apple/bundle_locations.h"
 #include "base/apple/foundation_util.h"
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/base_switches.h"
 #include "base/command_line.h"
 #include "base/debug/leak_annotations.h"

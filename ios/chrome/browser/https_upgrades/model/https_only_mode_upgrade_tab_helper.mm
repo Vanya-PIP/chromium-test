@@ -6,7 +6,7 @@
 
 #import "base/functional/bind.h"
 #import "base/functional/callback.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/strings/string_number_conversions.h"
 #import "base/task/sequenced_task_runner.h"

@@ -10,7 +10,7 @@
 #include "base/check_is_test.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_shared_memory.h"
 #include "base/metrics/persistent_histogram_allocator.h"
 #include "chrome/browser/apps/app_shim/app_shim_host_bootstrap_mac.h"

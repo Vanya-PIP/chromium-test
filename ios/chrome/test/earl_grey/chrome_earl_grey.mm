@@ -10,7 +10,7 @@
 #import "base/apple/foundation_util.h"
 #import "base/format_macros.h"
 #import "base/json/json_reader.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/strings/sys_string_conversions.h"
 #import "base/test/ios/wait_util.h"
 #import "components/omnibox/browser/omnibox_pref_names.h"

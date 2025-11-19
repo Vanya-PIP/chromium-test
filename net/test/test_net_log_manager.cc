@@ -6,7 +6,7 @@
 
 #include "base/command_line.h"
 #include "base/files/file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
 #include "base/strings/utf_string_conversions.h"

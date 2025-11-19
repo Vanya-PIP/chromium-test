@@ -31,7 +31,7 @@ class CpuHistogramLogger {
   void StartLogging(content::BrowserChildProcessHost* utility_process_host,
                     base::RepeatingCallback<bool()> poll_embedder_running);
 
-  // Stop logging histogram usage after the next update. Note that if the child
+  // Stop testistogram usage after the next update. Note that if the child
   // process exits, 0 CPU usage will be recorded for the rest of the interval.
   void StopLoggingAfterNextUpdate();
 

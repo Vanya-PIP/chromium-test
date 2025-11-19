@@ -5,7 +5,7 @@
 #include "chrome/browser/performance_manager/policies/discard_page_with_crashed_subframe_policy.h"
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/performance_manager/policies/discard_eligibility_policy.h"
 #include "components/performance_manager/public/graph/frame_node.h"

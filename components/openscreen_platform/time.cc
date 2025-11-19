@@ -5,7 +5,7 @@
 #include "third_party/openscreen/src/platform/api/time.h"
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 
 using std::chrono::microseconds;

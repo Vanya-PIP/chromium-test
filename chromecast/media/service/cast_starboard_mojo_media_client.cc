@@ -8,7 +8,7 @@
 #include <utility>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromecast/base/metrics/cast_metrics_helper.h"
 #include "chromecast/starboard/media/media/starboard_api_wrapper.h"
 #include "chromecast/starboard/media/renderer/starboard_renderer.h"

@@ -35,7 +35,7 @@
 #include "partition_alloc/partition_alloc-inl.h"
 #include "partition_alloc/partition_alloc.h"
 #include "partition_alloc/partition_alloc_base/cpu.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_base/numerics/checked_math.h"
 #include "partition_alloc/partition_alloc_config.h"
 #include "partition_alloc/partition_alloc_constants.h"

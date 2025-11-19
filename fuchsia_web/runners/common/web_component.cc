@@ -11,9 +11,9 @@
 
 #include <string_view>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "fuchsia_web/runners/common/web_content_runner.h"
 
 WebComponent::WebComponent(std::string_view debug_name,

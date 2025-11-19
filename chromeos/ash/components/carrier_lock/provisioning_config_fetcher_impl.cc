@@ -8,7 +8,7 @@
 #include "base/json/json_reader.h"
 #include "base/json/json_string_value_serializer.h"
 #include "base/json/json_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/task/task_runner.h"

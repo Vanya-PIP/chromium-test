@@ -13,7 +13,7 @@
 #include "ash/wm/toplevel_window_event_handler.h"
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "components/exo/data_source.h"

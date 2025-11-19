@@ -5,7 +5,7 @@
 #include "chrome/installer/util/delete_tree_work_item.h"
 
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 DeleteTreeWorkItem::DeleteTreeWorkItem(const base::FilePath& root_path,
                                        const base::FilePath& temp_path)

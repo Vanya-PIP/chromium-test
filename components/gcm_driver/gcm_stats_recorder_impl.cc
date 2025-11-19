@@ -7,7 +7,7 @@
 
 #include "base/containers/circular_deque.h"
 #include "base/format_macros.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/string_util.h"
 #include "base/strings/stringprintf.h"

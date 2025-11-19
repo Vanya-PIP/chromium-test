@@ -10,7 +10,7 @@
 #include <utility>
 
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/values.h"
 #include "build/build_config.h"

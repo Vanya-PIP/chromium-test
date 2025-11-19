@@ -10,7 +10,7 @@
 #include <memory>
 
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/bind.h"
 #include "remoting/base/http_status.h"
 

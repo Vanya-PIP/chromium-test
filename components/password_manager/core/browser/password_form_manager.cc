@@ -15,7 +15,7 @@
 
 #include "base/check.h"
 #include "base/containers/lru_cache.h"
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/i18n/case_conversion.h"
 #include "base/memory/ptr_util.h"

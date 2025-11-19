@@ -8,7 +8,7 @@
 #include <array>
 #include <optional>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/values.h"
 

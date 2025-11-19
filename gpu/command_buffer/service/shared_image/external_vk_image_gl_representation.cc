@@ -6,7 +6,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "gpu/command_buffer/service/texture_manager.h"
 #include "gpu/vulkan/vulkan_util.h"

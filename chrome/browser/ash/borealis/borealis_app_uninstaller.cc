@@ -4,7 +4,7 @@
 
 #include "chrome/browser/ash/borealis/borealis_app_uninstaller.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "chrome/browser/ash/borealis/borealis_app_launcher.h"
 #include "chrome/browser/ash/borealis/borealis_installer.h"

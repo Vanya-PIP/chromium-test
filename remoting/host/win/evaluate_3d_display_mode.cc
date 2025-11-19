@@ -12,7 +12,7 @@
 #include <iostream>
 
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/native_library.h"
 #include "base/scoped_native_library.h"
 #include "base/strings/string_util.h"

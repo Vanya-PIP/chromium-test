@@ -24,7 +24,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/task/single_thread_task_runner.h"

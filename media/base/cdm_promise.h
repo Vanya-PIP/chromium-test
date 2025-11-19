@@ -10,7 +10,7 @@
 #include <string>
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/cdm_key_information.h"
 #include "media/base/media_export.h"
 

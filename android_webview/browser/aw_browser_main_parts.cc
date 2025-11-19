@@ -35,7 +35,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/callback_helpers.h"
 #include "base/i18n/rtl.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/message_loop/message_pump_type.h"
 #include "base/path_service.h"
 #include "base/task/current_thread.h"

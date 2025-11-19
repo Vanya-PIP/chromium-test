@@ -6,7 +6,7 @@
 
 #include <tuple>
 
-#include "base/logging.h"
+#include "base/test"
 #include "build/build_config.h"
 
 #if BUILDFLAG(IS_WIN)
@@ -18,11 +18,11 @@
 #include <unistd.h>
 #include <zircon/status.h>
 
-#include "base/fuchsia/fuchsia_logging.h"
+#include "base/fuchsia/fuchsia_test"
 #elif BUILDFLAG(IS_APPLE)
 #include <mach/vm_map.h>
 
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #include "base/apple/scoped_mach_port.h"
 #endif
 

@@ -4,7 +4,7 @@
 
 #include "ui/message_center/public/cpp/notifier_id.h"
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 
 namespace message_center {

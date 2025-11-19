@@ -12,7 +12,7 @@
 
 #include "partition_alloc/partition_alloc_base/check.h"
 #include "partition_alloc/partition_alloc_base/compiler_specific.h"
-#include "partition_alloc/partition_alloc_base/logging.h"
+#include "partition_alloc/partition_alloc_base/test"
 #include "partition_alloc/partition_alloc_base/rand_util.h"
 #include "partition_alloc/partition_alloc_base/time/time.h"
 #include "testing/gtest/include/gtest/gtest.h"

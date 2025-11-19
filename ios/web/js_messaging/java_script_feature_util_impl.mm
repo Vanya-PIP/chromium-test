@@ -8,7 +8,7 @@
 
 #import "base/check.h"
 #import "base/ios/ios_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/no_destructor.h"
 #import "base/strings/sys_string_conversions.h"
 #import "ios/components/enterprise/data_controls/features.h"

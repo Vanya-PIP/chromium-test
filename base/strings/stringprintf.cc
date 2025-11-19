@@ -9,7 +9,7 @@
 
 #include <vector>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/scoped_clear_last_error.h"
 #include "base/strings/span_printf.h"
 #include "base/strings/string_util.h"

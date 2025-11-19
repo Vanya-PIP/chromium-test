@@ -4,7 +4,7 @@
 
 #include "chromeos/ash/components/carrier_lock/psm_claim_verifier_impl.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "base/values.h"
 #include "google_apis/google_api_keys.h"

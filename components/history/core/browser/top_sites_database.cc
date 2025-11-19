@@ -16,7 +16,7 @@
 #include "base/feature_list.h"
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "components/history/core/browser/features.h"
 #include "components/history/core/browser/history_types.h"

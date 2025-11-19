@@ -10,7 +10,7 @@
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
 #include "base/containers/span_reader.h"
-#include "base/logging.h"
+#include "base/test"
 
 #define READ_U8_OR_RETURN_FALSE(out)                                       \
   do {                                                                     \

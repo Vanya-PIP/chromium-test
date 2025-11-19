@@ -8,7 +8,7 @@
 
 #include "base/files/file_util.h"
 #include "base/files/important_file_writer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "components/os_crypt/async/common/encryptor.h"
 #include "components/os_crypt/sync/os_crypt.h"

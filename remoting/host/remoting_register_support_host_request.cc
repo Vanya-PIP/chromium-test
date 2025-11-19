@@ -4,7 +4,7 @@
 
 #include "remoting/host/remoting_register_support_host_request.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "net/traffic_annotation/network_traffic_annotation.h"
 #include "remoting/base/http_status.h"
 #include "remoting/base/oauth_token_getter.h"

@@ -9,7 +9,7 @@
 #include <string_view>
 
 #include "base/hash/md5.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/rand_util.h"
 #include "base/strings/string_number_conversions.h"

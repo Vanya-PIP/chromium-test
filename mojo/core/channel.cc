@@ -20,7 +20,7 @@
 #include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/metrics/histogram_macros.h"
@@ -37,7 +37,7 @@
 #include "mojo/core/ipcz_driver/envelope.h"
 
 #if BUILDFLAG(MOJO_USE_APPLE_CHANNEL)
-#include "base/apple/mach_logging.h"
+#include "base/apple/mach_test"
 #elif BUILDFLAG(IS_WIN)
 #include "base/win/win_util.h"
 #endif

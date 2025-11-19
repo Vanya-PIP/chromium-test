@@ -8,7 +8,7 @@
 
 #include "base/check.h"
 #include "base/check_deref.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/trace_event.h"
 #include "build/build_config.h"
 #include "components/session_manager/core/session.h"

@@ -10,7 +10,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "components/cronet/android/cronet_context_adapter.h"
 #include "components/cronet/android/io_buffer_with_byte_buffer.h"

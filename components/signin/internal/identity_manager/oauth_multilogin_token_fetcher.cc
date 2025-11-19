@@ -10,7 +10,7 @@
 #include "base/containers/contains.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_macros.h"
 #include "components/signin/internal/identity_manager/oauth_multilogin_token_request.h"
 #include "components/signin/internal/identity_manager/oauth_multilogin_token_response.h"

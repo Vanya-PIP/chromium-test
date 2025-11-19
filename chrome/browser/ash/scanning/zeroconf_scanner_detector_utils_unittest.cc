@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/scanning/zeroconf_scanner_detector.h"
 #include "net/base/ip_address.h"
 #include "testing/gmock/include/gmock/gmock.h"

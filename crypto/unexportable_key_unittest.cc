@@ -7,7 +7,7 @@
 #include <optional>
 #include <tuple>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/test/scoped_feature_list.h"
 #include "base/time/time.h"
 #include "build/build_config.h"

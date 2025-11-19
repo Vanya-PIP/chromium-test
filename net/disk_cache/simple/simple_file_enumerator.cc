@@ -6,7 +6,7 @@
 
 #include "base/files/file.h"
 #include "base/files/file_util.h"
-#include "base/logging.h"
+#include "base/test"
 
 // We have an optimized implementation for POSIX, and a fallback
 // implementation for other platforms.

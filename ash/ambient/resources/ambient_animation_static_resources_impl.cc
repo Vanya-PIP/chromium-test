@@ -16,7 +16,7 @@
 #include "ash/webui/personalization_app/mojom/personalization_app.mojom-shared.h"
 #include "base/check.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "cc/paint/skottie_wrapper.h"
 #include "ui/base/resource/resource_bundle.h"
 #include "ui/gfx/image/image_skia.h"

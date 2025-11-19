@@ -6,7 +6,7 @@
 
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/formats/webm/webm_constants.h"
 
 namespace media {

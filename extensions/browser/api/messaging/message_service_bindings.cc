@@ -4,7 +4,7 @@
 
 #include <optional>
 
-#include "base/debug/crash_logging.h"
+#include "base/debug/crash_test"
 #include "base/feature_list.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/types/optional_util.h"

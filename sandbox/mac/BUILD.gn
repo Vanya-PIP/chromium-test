@@ -14,7 +14,7 @@ component("seatbelt") {
     "sandbox_crash_message.cc",
     "sandbox_crash_message.h",
     "sandbox_logging.cc",
-    "sandbox_logging.h",
+    "sandbox_test",
     "sandbox_serializer.cc",
     "sandbox_serializer.h",
     "seatbelt.cc",

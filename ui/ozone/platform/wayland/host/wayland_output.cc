@@ -6,7 +6,7 @@
 
 #include <xdg-output-unstable-v1-client-protocol.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "ui/display/display.h"
 #include "ui/gfx/color_space.h"

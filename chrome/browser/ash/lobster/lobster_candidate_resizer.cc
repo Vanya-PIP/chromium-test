@@ -10,7 +10,7 @@
 #include "ash/public/cpp/lobster/lobster_image_candidate.h"
 #include "ash/strings/grit/ash_strings.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/lobster/lobster_image_fetcher.h"
 #include "ui/base/l10n/l10n_util.h"
 

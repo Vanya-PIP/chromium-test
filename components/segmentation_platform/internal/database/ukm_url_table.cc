@@ -8,7 +8,7 @@
 
 #include "base/containers/span.h"
 #include "base/hash/md5.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/numerics/byte_conversions.h"
 #include "components/database_utils/url_converter.h"
 #include "sql/database.h"

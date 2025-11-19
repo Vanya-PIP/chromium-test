@@ -4,7 +4,7 @@
 
 #include "mojo/public/cpp/bindings/pipe_control_message_handler.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/public/cpp/bindings/interface_id.h"
 #include "mojo/public/cpp/bindings/lib/serialization.h"
 #include "mojo/public/cpp/bindings/lib/validation_context.h"

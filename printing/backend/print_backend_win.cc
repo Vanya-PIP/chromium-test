@@ -15,7 +15,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/heap_array.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/free_deleter.h"
 #include "base/numerics/safe_conversions.h"
 #include "base/strings/string_number_conversions.h"

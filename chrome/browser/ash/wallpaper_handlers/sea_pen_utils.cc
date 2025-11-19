@@ -10,7 +10,7 @@
 #include "ash/wallpaper/wallpaper_utils/sea_pen_metadata_utils.h"
 #include "ash/wallpaper/wallpaper_utils/sea_pen_utils_generated.h"
 #include "ash/webui/common/mojom/sea_pen.mojom.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "components/manta/proto/manta.pb.h"
 #include "ui/display/display.h"

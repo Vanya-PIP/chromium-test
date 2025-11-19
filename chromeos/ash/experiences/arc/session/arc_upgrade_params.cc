@@ -7,7 +7,7 @@
 #include "ash/constants/ash_switches.h"
 #include "base/command_line.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/experiences/arc/arc_features.h"
 
 namespace arc {

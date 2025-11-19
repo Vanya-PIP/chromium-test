@@ -18,7 +18,7 @@
 #include <vector>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "base/task/single_thread_task_runner.h"
 #include "base/trace_event/memory_dump_manager.h"

@@ -6,7 +6,7 @@
 
 #include "base/compiler_specific.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/persistent_histogram_allocator.h"
 #include "base/metrics/statistics_recorder.h"

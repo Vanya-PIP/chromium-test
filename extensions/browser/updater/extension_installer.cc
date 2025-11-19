@@ -11,7 +11,7 @@
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "components/update_client/update_client_errors.h"
 #include "content/public/browser/browser_task_traits.h"

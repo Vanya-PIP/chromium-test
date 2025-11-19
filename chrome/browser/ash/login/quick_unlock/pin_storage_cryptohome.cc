@@ -10,7 +10,7 @@
 #include "ash/constants/ash_pref_names.h"
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/time/time.h"
 #include "chrome/browser/ash/login/quick_unlock/auth_token.h"

@@ -77,7 +77,7 @@ void CreditCardOtpAuthenticator::OnUnmaskPromptAccepted(
 void CreditCardOtpAuthenticator::OnUnmaskPromptClosed(bool user_closed_dialog) {
   // This function will be invoked when the prompt closes, no matter if it is
   // due to success or cancellation by users. If the |user_closed_dialog|
-  // is false, it means |this| has been reset and logging has completed. We
+  // is false, it means |this| has been reset and testas completed. We
   // should return early in this case.
   if (!user_closed_dialog)
     return;

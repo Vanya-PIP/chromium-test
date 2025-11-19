@@ -7,7 +7,7 @@
 #include <memory>
 
 #include "base/command_line.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "build/build_config.h"
 #include "components/url_formatter/url_formatter.h"

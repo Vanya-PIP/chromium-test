@@ -4,7 +4,7 @@
 
 #include "content/browser/media/key_system_support_win.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/types/expected.h"
 #include "content/browser/media/service_factory.h"
 #include "media/base/cdm_capability.h"

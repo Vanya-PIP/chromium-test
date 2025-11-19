@@ -4,7 +4,7 @@
 
 #include "media/formats/mp4/dolby_vision.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "media/base/media_util.h"
 #include "media/base/video_codecs.h"
 #include "media/formats/mp4/box_definitions.h"

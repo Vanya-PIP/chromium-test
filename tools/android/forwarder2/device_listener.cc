@@ -10,7 +10,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "tools/android/forwarder2/command.h"
 #include "tools/android/forwarder2/forwarder.h"

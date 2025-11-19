@@ -9,7 +9,7 @@
 #include <utility>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/uuid.h"
 #include "components/sync/base/data_type_histogram.h"
 #include "components/sync/base/passphrase_enums.h"

@@ -6,7 +6,7 @@
 
 #include "base/notreached.h"
 #include "remoting/base/directory_service_client.h"
-#include "remoting/base/logging.h"
+#include "remoting/base/test"
 #include "remoting/base/oauth_token_getter_impl.h"
 #include "remoting/base/protobuf_http_client.h"
 #include "remoting/host/host_details.h"

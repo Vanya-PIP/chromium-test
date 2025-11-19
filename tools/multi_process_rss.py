@@ -117,17 +117,17 @@ def count_statm(pids):
 
 
 def main(argv):
-  logging_handler = logging.StreamHandler()
-  logging_handler.setLevel(logging.WARNING)
-  logging_handler.setFormatter(logging.Formatter(
+  testandler = logging.StreamHandler()
+  testandler.setLevel(logging.WARNING)
+  testandler.setFormatter(logging.Formatter(
       '%(asctime)s:%(name)s:%(levelname)s:%(message)s'))
 
   _LOGGER.setLevel(logging.WARNING)
-  _LOGGER.addHandler(logging_handler)
+  _LOGGER.addHandler(testandler)
 
   if sys.platform.startswith('linux'):
     logging.getLogger('procfs').setLevel(logging.WARNING)
-    logging.getLogger('procfs').addHandler(logging_handler)
+    logging.getLogger('procfs').addHandler(testandler)
     pids = list_pids(argv)
     pageframes = count_pageframes(pids)
   else:

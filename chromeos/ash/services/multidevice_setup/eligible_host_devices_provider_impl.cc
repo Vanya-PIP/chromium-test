@@ -8,7 +8,7 @@
 #include "base/feature_list.h"
 #include "base/memory/ptr_util.h"
 #include "base/time/time.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/multidevice/software_feature.h"
 #include "chromeos/ash/components/multidevice/software_feature_state.h"
 

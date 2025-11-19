@@ -8,7 +8,7 @@
 #include <memory>
 
 #include "base/compiler_specific.h"
-#include "media/audio/audio_logging.h"
+#include "media/audio/audio_test"
 #include "media/base/media_export.h"
 
 namespace media {

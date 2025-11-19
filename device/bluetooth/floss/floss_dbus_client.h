@@ -17,7 +17,7 @@
 
 #include "base/containers/contains.h"
 #include "base/functional/callback.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "base/strings/strcat.h"
 #include "base/task/single_thread_task_runner.h"

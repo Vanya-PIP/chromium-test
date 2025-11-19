@@ -7,7 +7,7 @@
 #import "base/allocator/partition_alloc_support.h"
 #import "base/apple/bundle_locations.h"
 #import "base/at_exit.h"
-#import "base/debug/crash_logging.h"
+#import "base/debug/crash_test"
 #import "base/memory/page_size.h"
 #import "base/memory/safety_checks.h"
 #import "base/strings/sys_string_conversions.h"

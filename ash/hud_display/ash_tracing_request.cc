@@ -18,7 +18,7 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/i18n/time_formatting.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/posix/safe_strerror.h"
 #include "base/strings/stringprintf.h"
 #include "base/task/task_traits.h"

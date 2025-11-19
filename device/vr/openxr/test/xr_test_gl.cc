@@ -10,7 +10,7 @@
 #include <GLES2/gl2ext.h>
 #include <dlfcn.h>
 
-#include "base/logging.h"
+#include "base/test"
 
 #define LOAD_GL_FN(name, upper_name) \
   name##_fn =                        \

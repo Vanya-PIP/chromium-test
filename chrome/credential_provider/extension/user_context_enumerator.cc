@@ -13,7 +13,7 @@
 #include "chrome/credential_provider/extension/task.h"
 #include "chrome/credential_provider/extension/user_device_context.h"
 #include "chrome/credential_provider/gaiacp/gcp_utils.h"
-#include "chrome/credential_provider/gaiacp/logging.h"
+#include "chrome/credential_provider/gaiacp/test"
 #include "chrome/credential_provider/gaiacp/reg_utils.h"
 
 namespace credential_provider {

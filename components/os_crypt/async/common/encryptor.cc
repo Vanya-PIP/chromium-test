@@ -11,7 +11,7 @@
 
 #include "base/check.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/utf_string_conversions.h"
 #include "build/buildflag.h"

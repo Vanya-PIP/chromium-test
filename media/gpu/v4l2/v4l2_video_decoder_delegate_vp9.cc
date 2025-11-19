@@ -11,7 +11,7 @@
 
 #include <linux/v4l2-controls.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/numerics/safe_math.h"
 #include "media/gpu/macros.h"

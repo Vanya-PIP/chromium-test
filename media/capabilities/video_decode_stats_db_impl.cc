@@ -11,7 +11,7 @@
 #include "base/debug/alias.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/metrics/field_trial_params.h"
 #include "base/metrics/histogram_functions.h"

@@ -6,7 +6,7 @@
 
 #include <string_view>
 
-#include "base/logging.h"
+#include "base/test"
 #include "crypto/hash.h"
 #include "crypto/scoped_capi_types.h"
 #include "crypto/sha2.h"

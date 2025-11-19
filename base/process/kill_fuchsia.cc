@@ -6,7 +6,7 @@
 
 #include <zircon/syscalls.h>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/process/process_iterator.h"
 #include "base/threading/platform_thread.h"
 

@@ -5,7 +5,7 @@
 #ifndef CHROME_COMMON_ACTOR_ACTOR_LOGGING_H_
 #define CHROME_COMMON_ACTOR_ACTOR_LOGGING_H_
 
-#include "base/logging.h"
+#include "base/test"
 
 // Logging utility for actor framework. See chrome/{browser|renderer}/actor for
 // details.

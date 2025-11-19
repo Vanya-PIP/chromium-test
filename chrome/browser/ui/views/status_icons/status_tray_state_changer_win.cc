@@ -8,7 +8,7 @@
 
 #include <utility>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 
 namespace {
@@ -141,7 +141,7 @@ std::unique_ptr<NOTIFYITEM> StatusTrayStateChangerWin::RegisterCallback() {
   // RegisterCallbackWin8 or RegisterCallbackLegacy.
   DCHECK(!notify_item_);
 
-  // TODO(dewittj): Add UMA logging here to report if either of our strategies
+  // TODO(dewittj): Add UMA testere to report if either of our strategies
   // has a tendency to fail on particular versions of Windows.
   switch (interface_version_) {
     case INTERFACE_VERSION_WIN8:

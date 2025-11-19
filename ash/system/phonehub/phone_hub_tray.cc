@@ -45,7 +45,7 @@
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/time/default_clock.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/components/phonehub/icon_decoder.h"
 #include "chromeos/ash/components/phonehub/phone_hub_manager.h"
 #include "chromeos/ash/components/phonehub/phone_model.h"

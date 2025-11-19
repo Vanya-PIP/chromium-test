@@ -20,7 +20,7 @@
 #include "base/compiler_specific.h"
 #include "base/debug/asan_service.h"
 #include "base/immediate_crash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ptr_asan_bound_arg_tracker.h"
 #include "base/memory/raw_ptr_asan_hooks.h"

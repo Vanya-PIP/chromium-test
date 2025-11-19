@@ -9,7 +9,7 @@
 
 #include "base/functional/callback_forward.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "base/task/thread_pool.h"
 #include "base/test/bind.h"

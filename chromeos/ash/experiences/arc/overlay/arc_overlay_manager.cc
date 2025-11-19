@@ -6,7 +6,7 @@
 
 #include "ash/public/cpp/app_types_util.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chromeos/ash/experiences/arc/overlay/arc_overlay_controller_impl.h"
 #include "components/exo/shell_surface_base.h"
 #include "components/exo/shell_surface_util.h"

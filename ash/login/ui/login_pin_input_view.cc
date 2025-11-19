@@ -14,7 +14,7 @@
 #include "ash/strings/grit/ash_strings.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/utf_string_conversions.h"
 #include "chromeos/ash/components/login/auth/auth_events_recorder.h"
 #include "ui/accessibility/ax_enums.mojom-shared.h"

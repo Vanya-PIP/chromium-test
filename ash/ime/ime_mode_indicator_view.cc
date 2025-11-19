@@ -7,7 +7,7 @@
 #include "ash/public/cpp/shell_window_ids.h"
 #include "ash/shell.h"
 #include "ash/wm/window_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/base/mojom/dialog_button.mojom.h"
 #include "ui/display/display.h"

@@ -4,7 +4,7 @@
 
 #include "chrome/browser/nearby_sharing/tachyon_ice_config_fetcher.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/test/bind.h"
 #include "base/test/metrics/histogram_tester.h"

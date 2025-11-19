@@ -12,7 +12,7 @@
 #include <stdint.h>
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/time/time.h"
 #include "base/win/win_util.h"
 #include "media/base/timestamp_constants.h"

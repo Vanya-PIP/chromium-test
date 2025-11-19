@@ -10,7 +10,7 @@
 
 #include "base/containers/contains.h"
 #include "base/containers/stack.h"
-#include "base/logging.h"
+#include "base/test"
 #include "ui/display/types/display_constants.h"
 
 namespace display {

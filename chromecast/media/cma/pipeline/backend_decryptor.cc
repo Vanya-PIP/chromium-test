@@ -6,7 +6,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "chromecast/base/task_runner_impl.h"
 #include "chromecast/media/cma/pipeline/decrypt_util.h"

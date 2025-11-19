@@ -4,7 +4,7 @@
 
 #import "ios/web/web_state/ui/crw_wk_ui_handler.h"
 
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/sequence_checker.h"
 #import "base/strings/sys_string_conversions.h"

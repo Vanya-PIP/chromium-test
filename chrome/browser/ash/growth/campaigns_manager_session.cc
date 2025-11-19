@@ -16,7 +16,7 @@
 #include "base/check.h"
 #include "base/check_deref.h"
 #include "base/check_is_test.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "base/time/time.h"
 #include "base/timer/timer.h"

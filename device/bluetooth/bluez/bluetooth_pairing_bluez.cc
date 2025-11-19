@@ -4,7 +4,7 @@
 
 #include "device/bluetooth/bluez/bluetooth_pairing_bluez.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "device/bluetooth/bluetooth_device.h"
 #include "device/bluetooth/bluez/bluetooth_device_bluez.h"
 

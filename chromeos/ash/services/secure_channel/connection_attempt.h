@@ -13,7 +13,7 @@
 #include "base/memory/raw_ptr.h"
 #include "base/time/clock.h"
 #include "base/time/time.h"
-#include "chromeos/ash/components/multidevice/logging/logging.h"
+#include "chromeos/ash/components/multidevice/logging/test"
 #include "chromeos/ash/services/secure_channel/authenticated_channel.h"
 #include "chromeos/ash/services/secure_channel/client_connection_parameters.h"
 #include "chromeos/ash/services/secure_channel/connection_attempt_delegate.h"

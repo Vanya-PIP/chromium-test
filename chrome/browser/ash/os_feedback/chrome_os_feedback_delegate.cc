@@ -21,7 +21,7 @@
 #include "ash/webui/os_feedback_ui/mojom/os_feedback_ui.mojom.h"
 #include "ash/webui/system_apps/public/system_web_app_type.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ref_counted.h"
 #include "base/memory/ref_counted_memory.h"
 #include "base/strings/strcat.h"

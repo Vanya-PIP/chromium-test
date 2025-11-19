@@ -4,7 +4,7 @@
 
 #include "components/webui/flags/pref_service_flags_storage.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "build/build_config.h"
 #include "components/pref_registry/pref_registry_syncable.h"

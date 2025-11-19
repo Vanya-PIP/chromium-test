@@ -9,7 +9,7 @@
 
 #include "base/functional/bind.h"
 #include "base/location.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/task/single_thread_task_runner.h"
 #include "ui/display/types/display_mode.h"
 #include "ui/display/types/display_snapshot.h"

@@ -12,7 +12,7 @@
 #include <algorithm>
 #include <array>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "media/parsers/h265_parser.h"
 

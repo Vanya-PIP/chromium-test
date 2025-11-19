@@ -13,7 +13,7 @@
 #include "ash/webui/diagnostics_ui/mojom/input_data_provider.mojom.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/run_loop.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"

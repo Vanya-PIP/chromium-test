@@ -9,7 +9,7 @@
 #include <tuple>
 
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/trace_event/memory_usage_estimator.h"
 #include "net/base/features.h"
 #include "net/base/host_port_pair.h"

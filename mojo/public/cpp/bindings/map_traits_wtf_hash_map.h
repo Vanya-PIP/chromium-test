@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_MAP_TRAITS_WTF_HASH_MAP_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_MAP_TRAITS_WTF_HASH_MAP_H_
 
-#include "base/logging.h"
+#include "base/test"
 #include "mojo/public/cpp/bindings/map_traits.h"
 #include "third_party/blink/renderer/platform/wtf/hash_map.h"
 

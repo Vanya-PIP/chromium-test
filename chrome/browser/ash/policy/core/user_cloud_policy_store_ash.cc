@@ -9,7 +9,7 @@
 #include "base/debug/dump_without_crashing.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/sequence_checker.h"
 #include "base/task/sequenced_task_runner.h"
 #include "chrome/browser/ash/policy/core/cached_policy_key_loader.h"

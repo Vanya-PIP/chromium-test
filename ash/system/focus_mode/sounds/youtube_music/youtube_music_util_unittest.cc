@@ -8,7 +8,7 @@
 #include <memory>
 
 #include "ash/system/focus_mode/sounds/youtube_music/youtube_music_types.h"
-#include "base/logging.h"
+#include "base/test"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "url/gurl.h"

@@ -16,7 +16,7 @@
 #include "ash/shell.h"
 #include "ash/wm/container_finder.h"
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_number_conversions.h"
 #include "ui/accessibility/ax_enums.mojom.h"
 #include "ui/aura/client/cursor_client.h"

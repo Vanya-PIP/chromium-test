@@ -12,7 +12,7 @@
 #include <array>
 #include <memory>
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/scoped_refptr.h"
 #include "base/strings/stringprintf.h"
 #include "base/test/scoped_feature_list.h"

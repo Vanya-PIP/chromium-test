@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 #include "extensions/browser/management_policy.h"
-#include "base/logging.h"
+#include "base/test"
 
 namespace extensions {
 

@@ -16,7 +16,7 @@
 #include <set>
 
 #include "base/files/memory_mapped_file.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/ref_counted.h"
 #include "ui/gfx/geometry/size.h"

@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// This file provides integration with Google-style "base/logging.h" assertions
+// This file provides integration with Google-style "base/test" assertions
 // for Skia SkASSERT. If you don't want this, you can link with another file
 // that provides integration with the logging of your choice.
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/stringprintf.h"
 #include "third_party/skia/include/core/SkTypes.h"
 

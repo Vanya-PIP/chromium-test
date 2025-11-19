@@ -4,7 +4,7 @@
 
 #include "chrome/browser/metrics/usertype_by_devicetype_metrics_provider.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "chrome/browser/ash/login/demo_mode/demo_session.h"
 #include "chrome/browser/ash/policy/core/browser_policy_connector_ash.h"

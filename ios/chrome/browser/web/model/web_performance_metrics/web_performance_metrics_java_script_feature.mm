@@ -5,7 +5,7 @@
 #import "ios/chrome/browser/web/model/web_performance_metrics/web_performance_metrics_java_script_feature.h"
 
 #import "base/ios/ios_util.h"
-#import "base/logging.h"
+#import "base/test"
 #import "base/metrics/histogram_functions.h"
 #import "base/no_destructor.h"
 #import "base/strings/strcat.h"

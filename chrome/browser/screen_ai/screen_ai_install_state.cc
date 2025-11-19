@@ -9,7 +9,7 @@
 #include "base/check_is_test.h"
 #include "base/cpu.h"
 #include "base/files/file_path.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/metrics/histogram_functions.h"
 #include "base/time/time.h"
 #include "build/build_config.h"

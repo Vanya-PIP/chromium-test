@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "base/functional/bind.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/values.h"
 #include "chrome/browser/ash/certificate_provider/certificate_provider_service.h"
 #include "chrome/browser/ash/certificate_provider/certificate_provider_service_factory.h"

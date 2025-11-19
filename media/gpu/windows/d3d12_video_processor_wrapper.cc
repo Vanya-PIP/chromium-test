@@ -5,7 +5,7 @@
 #include "media/gpu/windows/d3d12_video_processor_wrapper.h"
 
 #include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "media/gpu/windows/d3d12_helpers.h"
 #include "ui/gfx/color_space_win.h"

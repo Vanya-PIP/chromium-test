@@ -5,7 +5,7 @@
 #include "chrome/browser/ash/net/rollback_network_config/rollback_network_config_service.h"
 
 #include "base/check.h"
-#include "base/logging.h"
+#include "base/test"
 #include "chrome/browser/ash/net/rollback_network_config/rollback_network_config.h"
 #include "chromeos/ash/components/network/network_handler.h"
 #include "chromeos/ash/services/rollback_network_config/public/mojom/rollback_network_config.mojom.h"

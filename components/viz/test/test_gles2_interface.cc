@@ -10,7 +10,7 @@
 #include "base/containers/span.h"
 #include "base/functional/bind.h"
 #include "base/lazy_instance.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/ptr_util.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/numerics/safe_conversions.h"

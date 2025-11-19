@@ -4,7 +4,7 @@
 
 #include "chrome/browser/glic/browser_ui/glic_vector_icon_manager.h"
 
-#include "base/logging.h"
+#include "base/test"
 #include "base/no_destructor.h"
 #include "chrome/browser/glic/resources/glic_resources.h"
 #include "content/public/browser/browser_thread.h"

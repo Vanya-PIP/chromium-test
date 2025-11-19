@@ -30,7 +30,7 @@
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
 #include "base/immediate_crash.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/notreached.h"

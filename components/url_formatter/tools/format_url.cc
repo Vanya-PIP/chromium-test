@@ -17,7 +17,7 @@
 #include "base/command_line.h"
 #include "base/compiler_specific.h"
 #include "base/i18n/icu_util.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"

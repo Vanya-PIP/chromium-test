@@ -14,7 +14,7 @@
 #include "base/debug/debugging_buildflags.h"
 #include "base/debug/stack_trace.h"
 #include "base/feature_list.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/strings/string_util.h"
 #include "build/build_config.h"
 #include "build/robolectric_buildflags.h"

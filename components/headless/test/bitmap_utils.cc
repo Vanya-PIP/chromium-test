@@ -6,7 +6,7 @@
 
 #include <cstdlib>
 
-#include "base/logging.h"
+#include "base/test"
 #include "ui/gfx/geometry/point.h"
 #include "ui/gfx/geometry/rect.h"
 #include "ui/gfx/geometry/size.h"

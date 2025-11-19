@@ -9,7 +9,7 @@
 
 #include "base/metrics/histogram_functions.h"
 #include "base/timer/elapsed_timer.h"
-#include "chromeos/ash/components/quick_start/logging.h"
+#include "chromeos/ash/components/quick_start/test"
 #include "components/metrics/structured/structured_events.h"
 #include "components/metrics/structured/structured_metrics_client.h"
 #include "google_apis/gaia/google_service_auth_error.h"

@@ -10,7 +10,7 @@
 
 #include "base/base64.h"
 #include "base/containers/span.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/notreached.h"
 #include "base/strings/string_util.h"
 #include "base/values.h"

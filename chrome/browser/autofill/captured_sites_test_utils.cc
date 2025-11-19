@@ -19,7 +19,7 @@
 #include "base/functional/callback_forward.h"
 #include "base/json/json_reader.h"
 #include "base/json/json_string_value_serializer.h"
-#include "base/logging.h"
+#include "base/test"
 #include "base/path_service.h"
 #include "base/process/launch.h"
 #include "base/strings/strcat.h"
