@@ -8,14 +8,8 @@
 #include <memory>
 #include <utility>
 
-<<<<<<< HEAD
-#include "base/test"
-||||||| b30439823e517
-#include "base/logging.h"
-=======
 #include "base/logging.h"
 #include "base/types/to_address.h"
->>>>>>> 144.0.7500.0~1
 #include "media/base/decrypt_config.h"
 #include "media/base/media_switches.h"
 #include "media/formats/mp4/box_definitions.h"

@@ -11,12 +11,6 @@
 #include <vector>
 
 #include "base/containers/contains.h"
-<<<<<<< HEAD
-#include "base/debug/crash_test"
-||||||| b30439823e517
-#include "base/debug/crash_logging.h"
-=======
->>>>>>> 144.0.7500.0~1
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
