@@ -287,8 +287,6 @@ ExtensionsMenuViewPlatformDelegateViews::
       toolbar_model_(ToolbarActionsModel::Get(browser_->profile())) {
   browser_->tab_strip_model()->AddObserver(this);
   toolbar_model_observation_.Observe(toolbar_model_.get());
-  permissions_manager_observation_.Observe(
-      PermissionsManager::Get(browser_->profile()));
 }
 
 // Note: No need to call TabStripModel::RemoveObserver(), because it's handled
@@ -327,7 +325,7 @@ void ExtensionsMenuViewPlatformDelegateViews::OnHostAccessRequestAddedOrUpdated(
   main_page->MaybeShowRequestsSection();
 }
 
-void ExtensionsMenuViewPlatformDelegateViews::OnAccessRequestRemoved(
+void ExtensionsMenuViewPlatformDelegateViews::OnHostAccessRequestRemoved(
     const extensions::ExtensionId& extension_id) {
   CHECK(current_page_);
 
@@ -341,7 +339,7 @@ void ExtensionsMenuViewPlatformDelegateViews::OnAccessRequestRemoved(
   main_page->MaybeShowRequestsSection();
 }
 
-void ExtensionsMenuViewPlatformDelegateViews::OnAccessRequestsCleared() {
+void ExtensionsMenuViewPlatformDelegateViews::OnHostAccessRequestsCleared() {
   // Site access requests only affect the main page.
   ExtensionsMenuMainPageView* main_page = GetMainPage(current_page_.view());
   if (!main_page) {
@@ -352,8 +350,9 @@ void ExtensionsMenuViewPlatformDelegateViews::OnAccessRequestsCleared() {
   main_page->MaybeShowRequestsSection();
 }
 
-void ExtensionsMenuViewPlatformDelegateViews::OnAccessRequestDismissedByUser(
-    const extensions::ExtensionId& extension_id) {
+void ExtensionsMenuViewPlatformDelegateViews::
+    OnHostAccessRequestDismissedByUser(
+        const extensions::ExtensionId& extension_id) {
   CHECK(current_page_);
 
   // Site access requests only affect the main page.
@@ -364,6 +363,25 @@ void ExtensionsMenuViewPlatformDelegateViews::OnAccessRequestDismissedByUser(
 
   main_page->RemoveExtensionRequestingAccess(extension_id);
   main_page->MaybeShowRequestsSection();
+}
+
+void ExtensionsMenuViewPlatformDelegateViews::
+    OnShowHostAccessRequestsInToolbarChanged(
+        const extensions::ExtensionId& extension_id,
+        bool can_show_requests) {
+  CHECK(current_page_);
+
+  // Changing whether an extension can show requests access in the toolbar only
+  // affects the site permissions page ...
+  auto* site_permissions_page = GetSitePermissionsPage(current_page_.view());
+  if (!site_permissions_page) {
+    return;
+  }
+
+  // ... of that extension.
+  if (site_permissions_page->extension_id() == extension_id) {
+    site_permissions_page->UpdateShowRequestsToggle(can_show_requests);
+  }
 }
 
 void ExtensionsMenuViewPlatformDelegateViews::OnActionAdded(
@@ -378,6 +396,33 @@ void ExtensionsMenuViewPlatformDelegateViews::OnActionAdded(
 
   int index = FindIndex(*toolbar_model_, action_id);
   InsertMenuItemMainPage(main_page, action_id, index);
+}
+
+void ExtensionsMenuViewPlatformDelegateViews::OnPermissionsSettingsChanged() {
+  CHECK(current_page_);
+
+  if (GetSitePermissionsPage(current_page_.view())) {
+    // Site permissions page can only be opened when site setting is set to
+    // "customize by extension". Thus, when site settings changed, we have to
+    // return to main page.
+    DCHECK_NE(PermissionsManager::Get(browser_->profile())
+                  ->GetUserSiteSetting(GetActiveWebContents()
+                                           ->GetPrimaryMainFrame()
+                                           ->GetLastCommittedOrigin()),
+              PermissionsManager::UserSiteSetting::kCustomizeByExtension);
+    OpenMainPage();
+    return;
+  }
+
+  ExtensionsMenuMainPageView* main_page = GetMainPage(current_page_.view());
+  CHECK(main_page);
+  UpdateMainPage(main_page, GetActiveWebContents());
+
+  // TODO(crbug.com/40879945): Update the "highlighted section" based on the
+  // `site_setting` and whether a page refresh is needed.
+
+  // TODO(crbug.com/40879945): Run blocked actions for extensions that only have
+  // blocked actions that don't require a page refresh to run.
 }
 
 void ExtensionsMenuViewPlatformDelegateViews::OpenMainPage() {
@@ -760,48 +805,6 @@ void ExtensionsMenuViewPlatformDelegateViews::OnToolbarPinnedActionsChanged() {
   }
 }
 
-void ExtensionsMenuViewPlatformDelegateViews::OnUserPermissionsSettingsChanged(
-    const PermissionsManager::UserPermissionsSettings& settings) {
-  DCHECK(current_page_);
-
-  if (GetSitePermissionsPage(current_page_.view())) {
-    // Site permissions page can only be opened when site setting is set to
-    // "customize by extension". Thus, when site settings changed, we have to
-    // return to main page.
-    DCHECK_NE(PermissionsManager::Get(browser_->profile())
-                  ->GetUserSiteSetting(GetActiveWebContents()
-                                           ->GetPrimaryMainFrame()
-                                           ->GetLastCommittedOrigin()),
-              PermissionsManager::UserSiteSetting::kCustomizeByExtension);
-    OpenMainPage();
-    return;
-  }
-
-  ExtensionsMenuMainPageView* main_page = GetMainPage(current_page_.view());
-  DCHECK(main_page);
-  UpdateMainPage(main_page, GetActiveWebContents());
-
-  // TODO(crbug.com/40879945): Update the "highlighted section" based on the
-  // `site_setting` and whether a page refresh is needed.
-
-  // TODO(crbug.com/40879945): Run blocked actions for extensions that only have
-  // blocked actions that don't require a page refresh to run.
-}
-
-void ExtensionsMenuViewPlatformDelegateViews::
-    OnShowAccessRequestsInToolbarChanged(
-        const extensions::ExtensionId& extension_id,
-        bool can_show_requests) {
-  DCHECK(current_page_);
-
-  // Changing whether an extension can show requests access in the toolbar only
-  // affects the site permissions page for such extension.
-  auto* site_permissions_page = GetSitePermissionsPage(current_page_.view());
-  if (site_permissions_page &&
-      site_permissions_page->extension_id() == extension_id) {
-    site_permissions_page->UpdateShowRequestsToggle(can_show_requests);
-  }
-}
 
 ExtensionsMenuMainPageView*
 ExtensionsMenuViewPlatformDelegateViews::GetMainPageViewForTesting() {

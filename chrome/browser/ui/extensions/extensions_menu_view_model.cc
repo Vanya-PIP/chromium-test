@@ -283,7 +283,7 @@ void ExtensionsMenuViewModel::OnHostAccessRequestUpdated(
         extension_id, GetActiveWebContents());
   } else {
     // Otherwise, remove the request if existent.
-    platform_delegate_->OnAccessRequestRemoved(extension_id);
+    platform_delegate_->OnHostAccessRequestRemoved(extension_id);
   }
 }
 
@@ -297,7 +297,7 @@ void ExtensionsMenuViewModel::OnHostAccessRequestRemoved(
     return;
   }
 
-  platform_delegate_->OnAccessRequestRemoved(extension_id);
+  platform_delegate_->OnHostAccessRequestRemoved(extension_id);
 }
 
 void ExtensionsMenuViewModel::OnHostAccessRequestsCleared(int tab_id) {
@@ -308,7 +308,7 @@ void ExtensionsMenuViewModel::OnHostAccessRequestsCleared(int tab_id) {
     return;
   }
 
-  platform_delegate_->OnAccessRequestsCleared();
+  platform_delegate_->OnHostAccessRequestsCleared();
 }
 
 void ExtensionsMenuViewModel::OnHostAccessRequestDismissedByUser(
@@ -322,7 +322,19 @@ void ExtensionsMenuViewModel::OnHostAccessRequestDismissedByUser(
     return;
   }
 
-  platform_delegate_->OnAccessRequestDismissedByUser(extension_id);
+  platform_delegate_->OnHostAccessRequestDismissedByUser(extension_id);
+}
+
+void ExtensionsMenuViewModel::OnShowAccessRequestsInToolbarChanged(
+    const extensions::ExtensionId& extension_id,
+    bool can_show_requests) {
+  platform_delegate_->OnShowHostAccessRequestsInToolbarChanged(
+      extension_id, can_show_requests);
+}
+
+void ExtensionsMenuViewModel::OnUserPermissionsSettingsChanged(
+    const extensions::PermissionsManager::UserPermissionsSettings& settings) {
+  platform_delegate_->OnPermissionsSettingsChanged();
 }
 
 void ExtensionsMenuViewModel::OnToolbarActionAdded(

@@ -24,6 +24,7 @@
 #include "chrome/browser/glic/public/glic_keyed_service.h"
 #include "chrome/browser/glic/public/glic_keyed_service_factory.h"
 #include "chrome/browser/glic/service/glic_ui_embedder.h"
+#include "chrome/browser/glic/service/glic_ui_types.h"
 #include "chrome/browser/glic/widget/glic_floating_ui.h"
 #include "chrome/browser/glic/widget/glic_inactive_side_panel_ui.h"
 #include "chrome/browser/glic/widget/glic_side_panel_ui.h"
@@ -170,6 +171,10 @@ GlicInstanceImpl::~GlicInstanceImpl() {
   host_.Shutdown();
 }
 
+glic::GlicInstanceMetrics* GlicInstanceImpl::instance_metrics() {
+  return &instance_metrics_;
+}
+
 bool GlicInstanceImpl::IsShowing() const {
   return active_embedder_key_.has_value();
 }
@@ -231,12 +236,13 @@ void GlicInstanceImpl::Detach(tabs::TabInterface* tab) {
 }
 
 void GlicInstanceImpl::Close(EmbedderKey key) {
-  instance_metrics_.OnClose();
   auto* embedder = GetEmbedderForKey(key);
-  if (embedder) {
-    embedder->Close();
+  if (!embedder) {
+    return;
   }
-  MaybeDeactivateEmbedderAndCloseHostUi(key);
+  instance_metrics_.OnClose();
+  embedder->Close();
+  MaybeDeactivateEmbedder(key);
 }
 
 bool GlicInstanceImpl::Toggle(ShowOptions&& options,
@@ -421,7 +427,6 @@ void GlicInstanceImpl::RemoveStateObserver(PanelStateObserver* observer) {
 
 void GlicInstanceImpl::UnbindEmbedder(EmbedderKey key) {
   instance_metrics_.OnUnbindEmbedder(key);
-  MaybeDeactivateEmbedderAndCloseHostUi(key);
   if ((base::FeatureList::IsEnabled(features::kGlicDaisyChainNewTabs) ||
        base::FeatureList::IsEnabled(
            features::kGlicDefaultToLastActiveConversation)) &&
@@ -429,6 +434,8 @@ void GlicInstanceImpl::UnbindEmbedder(EmbedderKey key) {
     auto* tab = std::get<tabs::TabInterface*>(key);
     sharing_manager().UnpinTabs({tab->GetHandle()});
   }
+
+  Close(key);
   embedders_.erase(key);
 }
 
@@ -542,7 +549,17 @@ void GlicInstanceImpl::DeactivateCurrentEmbedder() {
     return;
   }
 
-  auto it = embedders_.find(active_embedder_key_.value());
+  EmbedderKey key = active_embedder_key_.value();
+  // If SidePanel has focus when it's being closed, focus tab's webcontents.
+  if (old_embedder->HasFocus() &&
+      std::holds_alternative<tabs::TabInterface*>(key)) {
+    auto* tab = std::get<tabs::TabInterface*>(key);
+    if (auto* web_contents = (tab ? tab->GetContents() : nullptr)) {
+      web_contents->Focus();
+    }
+  }
+
+  auto it = embedders_.find(key);
   CHECK(it != embedders_.end());
   // Avoid use-after-free.
   host_.SetDelegate(&empty_embedder_delegate_);
@@ -660,7 +677,7 @@ void GlicInstanceImpl::SwitchConversation(
   }
 }
 
-void GlicInstanceImpl::MaybeDeactivateEmbedderAndCloseHostUi(EmbedderKey key) {
+void GlicInstanceImpl::MaybeDeactivateEmbedder(EmbedderKey key) {
   if (active_embedder_key_.has_value() && active_embedder_key_.value() == key) {
     // TODO: Figure out what else should go into host_.PanelWasClosed() and
     // maybe call it here.
@@ -715,7 +732,7 @@ GlicInstanceImpl::EmbedderEntry& GlicInstanceImpl::BindTab(
 }
 
 void GlicInstanceImpl::WillCloseFor(EmbedderKey key) {
-  MaybeDeactivateEmbedderAndCloseHostUi(key);
+  MaybeDeactivateEmbedder(key);
 }
 
 void GlicInstanceImpl::WebUiStateChanged(mojom::WebUiState state) {
@@ -843,4 +860,24 @@ void GlicInstanceImpl::OnWebClientCleared() {
   actor_task_manager_->CancelTask();
   NotifyPanelWillOpen(mojom::InvocationSource::kDefaultValue);
 }
+
+void GlicInstanceImpl::CloseAllEmbeddersForTesting() {
+  // Copy the keys before iterating because Close() might modify `embedders_`.
+  std::vector<EmbedderKey> keys;
+  for (auto& [key, entry] : embedders_) {
+    keys.push_back(key);
+  }
+  for (const auto& key : keys) {
+    Close(key);
+  }
+}
+
+views::View* GlicInstanceImpl::GetActiveEmbedderGlicViewForTesting() {
+  auto* embedder = GetActiveEmbedder();
+  if (!embedder) {
+    return nullptr;
+  }
+  return embedder->GetView().get();
+}
+
 }  // namespace glic

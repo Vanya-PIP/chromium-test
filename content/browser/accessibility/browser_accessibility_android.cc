@@ -715,7 +715,7 @@ const char* BrowserAccessibilityAndroid::GetClassName() const {
   // TODO(crbug.com/447360631): Once auditing role conversions is completed,
   // consider refactoring this function and `AXRoleToAndroidClassName` for
   // better readability of type conversions.
-  if (role == ax::mojom::Role::kImage && IsClickable()) {
+  if (ui::IsImage(role) && IsClickable()) {
     return ui::kAXImageButtonClassname;
   }
 
@@ -1545,6 +1545,7 @@ std::u16string BrowserAccessibilityAndroid::GetRoleDescription() const {
     case ax::mojom::Role::kStrong:
     case ax::mojom::Role::kSubscript:
     case ax::mojom::Role::kSuperscript:
+    case ax::mojom::Role::kSvgRoot:
     case ax::mojom::Role::kSwitch:
     case ax::mojom::Role::kTable:
     case ax::mojom::Role::kTextField:
@@ -1559,6 +1560,7 @@ std::u16string BrowserAccessibilityAndroid::GetRoleDescription() const {
     case ax::mojom::Role::kMenuItemSeparator:
     case ax::mojom::Role::kPdfActionableHighlight:
     case ax::mojom::Role::kPdfRoot:
+    case ax::mojom::Role::kWebView:
       NOTREACHED();
 
     case ax::mojom::Role::kFigure:

@@ -397,6 +397,7 @@ public class NewTabPageLayout extends LinearLayout
                                                 R.dimen.omnibox_search_engine_logo_composed_size)
                                 / 2));
         mDseIconView.setClipToOutline(true);
+        mSearchEngineUtils.addIconObserver(this);
         ImageViewCompat.setImageTintList(mDseIconView, null);
         setDseIconViewVisibility(shouldShowDesIconView);
     }
@@ -1132,10 +1133,9 @@ public class NewTabPageLayout extends LinearLayout
                     isLensButtonVisible || isComposeplateButtonVisible);
         }
 
-        ComposeplateMetricsUtils.recordFakeSearchBoxImpression();
-        if (isComposeplateButtonVisible) {
-            ComposeplateMetricsUtils.recordFakeSearchBoxComposeplateButtonImpression();
-        }
+        ComposeplateMetricsUtils.recordFakeSearchBoxImpression2();
+        ComposeplateMetricsUtils.recordFakeSearchBoxComposeplateButtonImpression2(
+                isComposeplateButtonVisible);
 
         mPreviousVoiceSearchButtonVisible = isVoiceSearchButtonVisible;
         mPreviousLensButtonVisible = isLensButtonVisible;
@@ -1236,9 +1236,14 @@ public class NewTabPageLayout extends LinearLayout
     private void unifyElementWidths() {
         View searchBoxView = getSearchBoxView();
         final int width = getMeasuredWidth();
-        measureExactly(
-                searchBoxView, width - mSearchBoxTwoSideMargin, searchBoxView.getMeasuredHeight());
+        int searchBoxWidth = width - mSearchBoxTwoSideMargin;
+        measureExactly(searchBoxView, searchBoxWidth, searchBoxView.getMeasuredHeight());
+
         if (mLogoCoordinator != null) mLogoCoordinator.measureExactlyLogoView(width);
+
+        if (mComposeplateCoordinator != null) {
+            mComposeplateCoordinator.measureExactlyComposeplateView(searchBoxWidth);
+        }
     }
 
     /**

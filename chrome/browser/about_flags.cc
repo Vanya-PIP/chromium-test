@@ -4255,7 +4255,6 @@ const FeatureEntry::FeatureVariation kServiceWorkerAutoPreloadVariations[] = {
      std::size(kServiceWorkerAutoPreload_SWNotRunningOnly), nullptr},
 };
 
-// LINT.IfChange(FingerprintingProtectionFilterFeatureParams)
 const FeatureEntry::FeatureParam
     kEnableFingerprintingProtectionFilter_WithLogging[] = {
         {"activation_level", "enabled"},
@@ -4285,7 +4284,6 @@ const FeatureEntry::FeatureVariation
          std::size(
              kEnableFingerprintingProtectionFilterInIncognito_WithLogging),
          nullptr}};
-// LINT.ThenChange(//ios/chrome/browser/flags/about_flags.mm:FingerprintingProtectionFilterFeatureParams)
 
 #if !BUILDFLAG(IS_ANDROID)
 const FeatureEntry::FeatureParam kMerchantTrustEnabledWithSampleData[] = {
@@ -5264,6 +5262,9 @@ const FeatureEntry kFeatureEntries[] = {
      flag_descriptions::kWebTransportDeveloperModeName,
      flag_descriptions::kWebTransportDeveloperModeDescription, kOsAll,
      SINGLE_VALUE_TYPE(switches::kWebTransportDeveloperMode)},
+    {"structured-dns-errors", flag_descriptions::kStructuredDnsErrorsName,
+     flag_descriptions::kStructuredDnsErrorsDescription, kOsAll,
+     FEATURE_VALUE_TYPE(net::features::kUseStructuredDnsErrors)},
     {"disable-javascript-harmony-shipping",
      flag_descriptions::kJavascriptHarmonyShippingName,
      flag_descriptions::kJavascriptHarmonyShippingDescription, kOsAll,
@@ -8793,19 +8794,10 @@ const FeatureEntry kFeatureEntries[] = {
      SINGLE_VALUE_TYPE(switches::kEnableWebGPUDeveloperFeatures)},
 
 #if BUILDFLAG(IS_CHROMEOS)
-    {"game-dashboard-game-pwas", flag_descriptions::kGameDashboardGamePWAs,
-     flag_descriptions::kGameDashboardGamePWAsDescription, kOsCrOS,
-     FEATURE_VALUE_TYPE(ash::features::kGameDashboardGamePWAs)},
-
     {"game-dashboard-gamepad-support",
      flag_descriptions::kGameDashboardGamepadSupport,
      flag_descriptions::kGameDashboardGamepadSupport, kOsCrOS,
      FEATURE_VALUE_TYPE(ash::features::kGameDashboardGamepadSupport)},
-
-    {"game-dashboard-games-in-test",
-     flag_descriptions::kGameDashboardGamesInTest,
-     flag_descriptions::kGameDashboardGamesInTestDescription, kOsCrOS,
-     FEATURE_VALUE_TYPE(ash::features::kGameDashboardGamesInTest)},
 
     {"game-dashboard-utilities", flag_descriptions::kGameDashboardUtilities,
      flag_descriptions::kGameDashboardUtilitiesDescription, kOsCrOS,
@@ -10454,11 +10446,6 @@ const FeatureEntry kFeatureEntries[] = {
      flag_descriptions::kCompressionDictionaryTTLDescription, kOsAll,
      FEATURE_VALUE_TYPE(network::features::kCompressionDictionaryTTL)},
 
-    {"enable-container-type-no-layout-containment",
-     flag_descriptions::kContainerTypeNoLayoutContainmentName,
-     flag_descriptions::kContainerTypeNoLayoutContainmentDescription, kOsAll,
-     FEATURE_VALUE_TYPE(blink::features::kContainerTypeNoLayoutContainment)},
-
 #if BUILDFLAG(IS_ANDROID)
     {"deprecated-external-picker-function",
      flag_descriptions::kDeprecatedExternalPickerFunctionName,
@@ -11095,7 +11082,6 @@ const FeatureEntry kFeatureEntries[] = {
      FEATURE_VALUE_TYPE(net::features::kReduceIPAddressChangeNotification)},
 #endif  // BUILDFLAG(IS_MAC)
 
-    // LINT.IfChange(FingerprintingProtectionFilterFeatureEntries)
     {"enable-fingerprinting-protection-blocklist",
      flag_descriptions::kEnableFingerprintingProtectionBlocklistName,
      flag_descriptions::kEnableFingerprintingProtectionBlocklistDescription,
@@ -11116,7 +11102,6 @@ const FeatureEntry kFeatureEntries[] = {
              kEnableFingerprintingProtectionFilterInIncognito,
          kEnableFingerprintingProtectionFilterInIncognitoVariations,
          "EnableFingerprintingProtectionFilterInIncognito")},
-    // LINT.ThenChange(//ios/chrome/browser/flags/about_flags.mm:FingerprintingProtectionFeatureEntries)
 
     {"enable-standard-device-bound-session-credentials",
      flag_descriptions::kEnableStandardBoundSessionCredentialsName,

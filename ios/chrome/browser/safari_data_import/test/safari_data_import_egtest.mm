@@ -5,7 +5,7 @@
 #import "components/strings/grit/components_strings.h"
 #import "ios/chrome/browser/autofill/ui_bundled/autofill_app_interface.h"
 #import "ios/chrome/browser/bookmarks/model/bookmark_storage_type.h"
-#import "ios/chrome/browser/bookmarks/ui_bundled/bookmark_earl_grey.h"
+#import "ios/chrome/browser/bookmarks/test/bookmark_earl_grey.h"
 #import "ios/chrome/browser/passwords/model/password_manager_app_interface.h"
 #import "ios/chrome/browser/safari_data_import/public/utils.h"
 #import "ios/chrome/browser/safari_data_import/test/safari_data_import_app_interface.h"
@@ -14,6 +14,7 @@
 #import "ios/chrome/browser/settings/ui_bundled/settings_table_view_controller_constants.h"
 #import "ios/chrome/browser/shared/public/features/features.h"
 #import "ios/chrome/browser/shared/ui/symbols/symbols.h"
+#import "ios/chrome/common/ui/button_stack/button_stack_constants.h"
 #import "ios/chrome/common/ui/confirmation_alert/constants.h"
 #import "ios/chrome/common/ui/promo_style/constants.h"
 #import "ios/chrome/grit/ios_strings.h"
@@ -167,8 +168,8 @@ NSString* const kInvalidPasswordUsername = @"Superman";
                    @"Safari data import workflow is not displayed.");
     [[EarlGrey selectElementWithMatcher:
                    grey_accessibilityID(
-                       kConfirmationAlertTertiaryActionAccessibilityIdentifier)]
-        assertWithMatcher:grey_nil()];
+                       kButtonStackTertiaryActionAccessibilityIdentifier)]
+        assertWithMatcher:grey_notVisible()];
     /// Also verify that swipe would not be supported.
     [[EarlGrey selectElementWithMatcher:
                    grey_accessibilityID(

@@ -843,22 +843,6 @@ BASE_FEATURE(kFlexFirmwareUpdate, base::FEATURE_ENABLED_BY_DEFAULT);
 // and if we show the user selectable UI when the policy is enabled.
 BASE_FEATURE(kFloatingSso, base::FEATURE_ENABLED_BY_DEFAULT);
 
-// Enables or disables Floating Workspace V2 feature on ChromeOS
-BASE_FEATURE(kFloatingWorkspaceV2, base::FEATURE_DISABLED_BY_DEFAULT);
-
-// Maximum delay to wait for restoring Floating Workspace V2 after login.
-constexpr base::FeatureParam<base::TimeDelta>
-    kFloatingWorkspaceV2MaxTimeAvailableForRestoreAfterLogin{
-        &kFloatingWorkspaceV2, "MaxTimeAvailableForRestoreAfterLoginV2",
-        base::Seconds(30)};
-
-// Time interval to capture current desk as desk template and upload template to
-// server.
-constexpr base::FeatureParam<base::TimeDelta>
-    kFloatingWorkspaceV2PeriodicJobIntervalInSeconds{
-        &kFloatingWorkspaceV2, "PeriodicJobIntervalInSeconds",
-        base::Seconds(30)};
-
 // If enabled, makes the Projector app use server side speech
 // recognition instead of on-device speech recognition.
 BASE_FEATURE(kForceEnableServerSideSpeechRecognition,
@@ -907,12 +891,6 @@ BASE_FEATURE(kGaiaRecordAccountCreation, base::FEATURE_ENABLED_BY_DEFAULT);
 
 // Enables Gamepad Support.
 BASE_FEATURE(kGameDashboardGamepadSupport, base::FEATURE_DISABLED_BY_DEFAULT);
-
-// Enables the Game Dashboard for additional PWA games.
-BASE_FEATURE(kGameDashboardGamePWAs, base::FEATURE_ENABLED_BY_DEFAULT);
-
-// Enables additional games being evaluated for the Game Dashboard.
-BASE_FEATURE(kGameDashboardGamesInTest, base::FEATURE_DISABLED_BY_DEFAULT);
 
 // Enables the Game Dashboard Main Menu utility views.
 BASE_FEATURE(kGameDashboardUtilities, base::FEATURE_DISABLED_BY_DEFAULT);
@@ -1249,9 +1227,6 @@ BASE_FEATURE(kJupiterScreensaver, base::FEATURE_ENABLED_BY_DEFAULT);
 // dialog should be checked by default.
 BASE_FEATURE(kKerberosRememberPasswordByDefault,
              base::FEATURE_ENABLED_BY_DEFAULT);
-
-// Enables IME button in the floating accessibility menu for the Kiosk session.
-BASE_FEATURE(kKioskEnableImeButton, base::FEATURE_ENABLED_BY_DEFAULT);
 
 // Enables automatic downloading and installing fonts via language packs, based
 // on the user's preferences.
@@ -2847,10 +2822,6 @@ bool IsFloatingSsoAllowed() {
   return base::FeatureList::IsEnabled(kFloatingSso);
 }
 
-bool IsFloatingWorkspaceV2Enabled() {
-  return base::FeatureList::IsEnabled(kFloatingWorkspaceV2);
-}
-
 bool ShouldForceEnableServerSideSpeechRecognition() {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   return base::FeatureList::IsEnabled(kForceEnableServerSideSpeechRecognition);
@@ -3132,14 +3103,6 @@ bool IsLockScreenHideSensitiveNotificationsSupported() {
 
 bool IsGameDashboardGamepadSupportEnabled() {
   return base::FeatureList::IsEnabled(kGameDashboardGamepadSupport);
-}
-
-bool IsGameDashboardGamePWAsEnabled() {
-  return base::FeatureList::IsEnabled(kGameDashboardGamePWAs);
-}
-
-bool IsGameDashboardGamesInTestEnabled() {
-  return base::FeatureList::IsEnabled(kGameDashboardGamesInTest);
 }
 
 bool AreGameDashboardUtilitiesEnabled() {

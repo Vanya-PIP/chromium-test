@@ -1182,7 +1182,7 @@
     {
         "name": "lottie",
         "group": "com.airbnb.android",
-        "version": "6.6.10"
+        "version": "6.7.0"
     },
     {
         "name": "sqlite4java",
@@ -1193,11 +1193,6 @@
         "name": "extensions-xr",
         "group": "com.android.extensions.xr",
         "version": "1.1.0"
-    },
-    {
-        "name": "support-annotations",
-        "group": "com.android.support",
-        "version": "28.0.0"
     },
     {
         "name": "layoutlib-api",

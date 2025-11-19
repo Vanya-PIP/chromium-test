@@ -359,7 +359,13 @@ std::optional<SessionService::DeferralParams> SessionServiceImpl::ShouldDefer(
   const base::flat_map<SessionKey, RefreshResult>& previous_deferrals =
       request->device_bound_session_deferrals();
   for (const auto& [_, session] : GetSessionsForSite(site)) {
-    if (session->ShouldDeferRequest(request, first_party_set_metadata)) {
+    if (!session->IsInScope(request)) {
+      continue;
+    }
+
+    base::TimeDelta minimum_lifetime =
+        session->MinimumBoundCookieLifetime(request, first_party_set_metadata);
+    if (minimum_lifetime.is_zero()) {
       SessionKey session_key{site, session->id()};
       auto previous_deferrals_it = previous_deferrals.find(session_key);
       if (previous_deferrals_it != previous_deferrals.end()) {
@@ -402,7 +408,7 @@ void SessionServiceImpl::DeferRequestForRefresh(
 
   SessionKey session_key{SchemefulSite(request->url()), *deferral.session_id};
   // For the first deferring request, create a new vector and add the request.
-  auto [it, inserted] = deferred_requests_.try_emplace(session_key.id);
+  auto [it, inserted] = deferred_requests_.try_emplace(session_key);
   // Add the request callback to the deferred list.
   it->second.emplace_back(std::move(callback));
 
@@ -475,13 +481,13 @@ void SessionServiceImpl::OnRefreshRequestCompletion(
 }
 
 // Continue or restart all deferred requests for the session and remove the
-// session_id key in the map.
+// session key in the map.
 void SessionServiceImpl::UnblockDeferredRequests(
     const SessionKey& session_key,
     RefreshResult result,
     std::optional<bool> is_proactive_refresh_candidate,
     std::optional<base::TimeDelta> minimum_proactive_refresh_threshold) {
-  auto it = deferred_requests_.find(session_key.id);
+  auto it = deferred_requests_.find(session_key);
   if (it == deferred_requests_.end()) {
     return;
   }
@@ -930,12 +936,9 @@ bool SessionServiceImpl::RefreshQuotaExceeded(const SchemefulSite& site) {
     return false;
   }
 
-  it->second.erase(std::remove_if(it->second.begin(), it->second.end(),
-                                  [](base::TimeTicks time) {
-                                    return base::TimeTicks::Now() - time >=
-                                           kRefreshQuotaInterval;
-                                  }),
-                   it->second.end());
+  std::erase_if(it->second, [](base::TimeTicks time) {
+    return base::TimeTicks::Now() - time >= kRefreshQuotaInterval;
+  });
 
   size_t refresh_count = it->second.size();
   if (refresh_count == 0) {

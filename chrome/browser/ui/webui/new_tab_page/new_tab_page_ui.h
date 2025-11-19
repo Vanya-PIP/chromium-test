@@ -310,8 +310,13 @@ class NewTabPageUI
   void OnTileTypesChanged();
   // Callback for when the value of the pref for showing the NTP tiles changes.
   void OnTilesVisibilityPrefChanged();
+  // Called when the enterprise shortcuts policy may have changed.
+  void OnEnterpriseShortcutsPolicyChanged();
   // Called when the NTP (re)loads. Sets mutable load time data.
   void OnLoad();
+
+  // Called to maybe enable enterprise shortcuts visibility by default.
+  void MaybeEnableEnterpriseShortcutsVisibility();
 
   // Based on the current profile and NTP promo controller, determine which
   // type of NTP promos can be shown, if any.

@@ -12,10 +12,12 @@
 #import "components/optimization_guide/core/hints/optimization_guide_decision.h"
 #import "components/optimization_guide/core/hints/optimization_metadata.h"
 #import "components/optimization_guide/proto/contextual_cueing_metadata.pb.h"
+#import "ios/chrome/browser/optimization_guide/mojom/zero_state_suggestions_service.mojom.h"
 #import "ios/web/public/web_state_observer.h"
 #import "ios/web/public/web_state_user_data.h"
 
 @protocol BWGCommands;
+@protocol LocationBarBadgeCommands;
 @protocol SnackbarCommands;
 
 // Tab helper controlling the BWG feature and its current state for a given tab.
@@ -73,6 +75,9 @@ class BwgTabHelper : public web::WebStateObserver,
   // Set the snackbar commands handler for presenting snackbars.
   void SetSnackbarCommandsHandler(id<SnackbarCommands> handler);
 
+  // Set the location bar badge commands handler.
+  void SetLocationBarBadgeCommandsHandler(id<LocationBarBadgeCommands> handler);
+
   // Sets the state of `is_first_run`.
   void SetIsFirstRun(bool is_first_run);
 
@@ -91,6 +96,7 @@ class BwgTabHelper : public web::WebStateObserver,
   void WasHidden(web::WebState* web_state) override;
   void DidFinishNavigation(web::WebState* web_state,
                            web::NavigationContext* navigation_context) override;
+  void DidStartLoading(web::WebState* web_state) override;
   void PageLoaded(
       web::WebState* web_state,
       web::PageLoadCompletionStatus load_completion_status) override;
@@ -130,6 +136,11 @@ class BwgTabHelper : public web::WebStateObserver,
   // present and not expired, from storage.
   std::optional<std::string> GetURLOnLastInteraction();
 
+  // Parses the response of a zero state suggestions execution.
+  void ParseSuggestionsResponse(
+      base::OnceCallback<void(NSArray<NSString*>*)> callback,
+      ai::mojom::ZeroStateSuggestionsResponseResultPtr result);
+
   // WebState this tab helper is attached to.
   raw_ptr<web::WebState> web_state_ = nullptr;
 
@@ -146,10 +157,14 @@ class BwgTabHelper : public web::WebStateObserver,
   bool is_bwg_session_active_in_background_ = false;
 
   // Commands handler for BWG commands.
-  __weak id<BWGCommands> bwg_commands_handler_ = nil;
+  __weak id<BWGCommands> bwg_commands_handler_ = nullptr;
 
   // Commands handler for snackbars.
-  __weak id<SnackbarCommands> snackbar_commands_handler_ = nil;
+  __weak id<SnackbarCommands> snackbar_commands_handler_ = nullptr;
+
+  // Commands handler for location bar badge.
+  __weak id<LocationBarBadgeCommands> location_bar_badge_commands_handler_ =
+      nullptr;
 
   // The observation of the Web State.
   base::ScopedObservation<web::WebState, web::WebStateObserver>
@@ -175,6 +190,9 @@ class BwgTabHelper : public web::WebStateObserver,
 
   // The zero-state suggestions service.
   std::unique_ptr<ZeroStateSuggestionsService> zero_state_suggestions_service_;
+
+  // The zero-state suggestions for the current page.
+  std::optional<std::vector<std::string>> zero_state_suggestions_;
 
   base::WeakPtrFactory<BwgTabHelper> weak_ptr_factory_{this};
 };

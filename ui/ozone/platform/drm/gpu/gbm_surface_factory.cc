@@ -413,7 +413,7 @@ scoped_refptr<gfx::NativePixmap>
 GbmSurfaceFactory::CreateNativePixmapFromHandleInternal(
     gfx::AcceleratedWidget widget,
     gfx::Size size,
-    gfx::BufferFormat format,
+    viz::SharedImageFormat format,
     gfx::NativePixmapHandle handle) {
   if (handle.planes.size() > GBM_MAX_PLANES) {
     return nullptr;
@@ -422,7 +422,8 @@ GbmSurfaceFactory::CreateNativePixmapFromHandleInternal(
   std::unique_ptr<GbmBuffer> buffer;
   scoped_refptr<DrmFramebuffer> framebuffer;
   drm_thread_proxy_->CreateBufferFromHandle(
-      widget, size, format, std::move(handle), &buffer, &framebuffer);
+      widget, size, viz::SharedImageFormatToBufferFormat(format),
+      std::move(handle), &buffer, &framebuffer);
   if (!buffer)
     return nullptr;
   return base::MakeRefCounted<GbmPixmap>(this, std::move(buffer),
@@ -445,16 +446,15 @@ GbmSurfaceFactory::CreateNativePixmapFromHandle(
       return protected_pixmap;
   }
 
-  return CreateNativePixmapFromHandleInternal(
-      widget, size, viz::SharedImageFormatToBufferFormat(format),
-      std::move(handle));
+  return CreateNativePixmapFromHandleInternal(widget, size, format,
+                                              std::move(handle));
 }
 
 scoped_refptr<gfx::NativePixmap>
 GbmSurfaceFactory::CreateNativePixmapForProtectedBufferHandle(
     gfx::AcceleratedWidget widget,
     gfx::Size size,
-    gfx::BufferFormat format,
+    viz::SharedImageFormat format,
     gfx::NativePixmapHandle handle) {
   // Create a new NativePixmap without querying the external service for any
   // existing mappings.

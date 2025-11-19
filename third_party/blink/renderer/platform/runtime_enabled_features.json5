@@ -1192,10 +1192,6 @@
       status: "experimental",
     },
     {
-      name: "ContainerTypeNoLayoutContainment",
-      status: "stable",
-    },
-    {
       name: "ContentIndex",
       status:  {"Android": "stable", "default": "experimental"},
     },
@@ -1286,6 +1282,7 @@
       // An update of anchor positioning (primarily how scrolling affects
       // layout, but includes other inter-connected changes).
       name: "CSSAnchorUpdate",
+      status: "stable",
     },
     {
       // Let transforms affect anchor() and anchor-size() functions.
@@ -1367,14 +1364,13 @@
     },
     {
       // https://drafts.csswg.org/css-borders-4/#corner-shaping
-      name: "CSSCornerShape",
-      status: "stable",
+      name: "CSSCornerShapeInsetBoxShadowFollowsContour",
+      status: "test",
     },
     {
       // https://drafts.csswg.org/css-borders-4/#corner-shaping
       name: "CSSCornersShorthand",
       status: "experimental",
-      depends_on: ["CSSCornerShape"],
     },
     {
       // Unprefixed cross-fade() (in addition to the existing -webkit-cross-fade()).
@@ -1619,7 +1615,7 @@
     {
       // https://drafts.csswg.org/css-conditional-5/#scrolled
       name: "CSSScrolledContainerQueries",
-      status: "experimental",
+      status: "stable",
     },
     {
       // https://drafts.csswg.org/css-scroll-snap-2#scroll-initial-target
@@ -2075,6 +2071,13 @@
     },
     {
       name: "DOMPartsAPIMinimal",
+    },
+    {
+      // Enable drag and drop delegation to child frames in HTMLPlugInElements
+      // (object/embed elements). Fixes drag and drop from text inputs/textareas
+      // to elements inside object frames.
+      name: "DragAndDropPluginElementSupport",
+      status: "stable",
     },
     {
       // See https://crbug.com/379170477
@@ -3176,6 +3179,12 @@
       status: "stable",
     },
     {
+      // Enables skipping <mtr> wrapping during ancestor wrapping in
+      // serialization. When enabled duplicate <mtr> wrapping are absent.
+      name: "MathMLSkipMtrTagInAncestorWrapping",
+      status: "stable",
+    },
+    {
       name:"MeasureMemory",
       status:"stable",
     },
@@ -4211,7 +4220,7 @@
     },
     {
       name: "ResponsiveIframes",
-      status: "test",
+      status: "experimental",
     },
     {
       name: "RestrictGamepadAccess",
@@ -4221,10 +4230,6 @@
     },
     {
       name: "RestrictOwnAudio",
-      status: "stable",
-    },
-    {
-      name: "RestrictTabFocusForHiddenSVGElements",
       status: "stable",
     },
     {
@@ -4528,6 +4533,12 @@
       name: "SelectionSetBaseAndExtentNonNullNode",
       status: "experimental",
       settable_from_internals: true,
+    },
+    {
+      // Enables skipping user-select: none content
+      // in DOMSelection::toString()
+      name: "SelectionToStringSkipsUserSelectNone",
+      status: "stable",
     },
     {
       // See https://crbug.com/395544401

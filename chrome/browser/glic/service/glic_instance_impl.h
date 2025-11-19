@@ -175,6 +175,7 @@ class GlicInstanceImpl : public GlicInstance,
   void OnWebClientCleared() override;
   void PrepareForOpen() override;
   void OnInteractionModeChange(mojom::WebClientMode new_mode) override;
+  glic::GlicInstanceMetrics* instance_metrics() override;
 
   // GlicUiEmbedder::Delegate:
   void OnEmbedderWindowActivationChanged(bool has_focus) override;
@@ -203,6 +204,10 @@ class GlicInstanceImpl : public GlicInstance,
                         const tabs::TabInterface::Handle& tab_handle) override;
 
   glic::GlicInstanceMetrics* metrics() { return &instance_metrics_; }
+
+  // Test support.
+  void CloseAllEmbeddersForTesting();
+  views::View* GetActiveEmbedderGlicViewForTesting();
 
  private:
   struct EmbedderEntry {
@@ -245,7 +250,7 @@ class GlicInstanceImpl : public GlicInstance,
       mojom::WebClientHandler::GetZeroStateSuggestionsForFocusedTabCallback
           callback,
       std::vector<std::string> returned_suggestions);
-  void MaybeDeactivateEmbedderAndCloseHostUi(EmbedderKey key);
+  void MaybeDeactivateEmbedder(EmbedderKey key);
 
   void MaybeActivateForegroundEmbedder();
   EmbedderEntry& BindTab(tabs::TabInterface* tab);

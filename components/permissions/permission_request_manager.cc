@@ -119,20 +119,20 @@ bool ShouldShowQuietRequestAgainIfPreempted(
 }
 
 bool IsMediaRequest(RequestType type) {
-#if !BUILDFLAG(IS_ANDROID)
+#if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
   if (type == RequestType::kCameraPanTiltZoom) {
     return true;
   }
-#endif
+#endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
   return type == RequestType::kMicStream || type == RequestType::kCameraStream;
 }
 
-#if !BUILDFLAG(IS_ANDROID)
+#if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
 bool IsExclusiveAccessRequest(RequestType type) {
   return type == RequestType::kPointerLock ||
          type == RequestType::kKeyboardLock;
 }
-#endif
+#endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
 
 bool ShouldGroupRequests(PermissionRequest* a, PermissionRequest* b) {
   if (a->requesting_origin() != b->requesting_origin()) {
@@ -142,12 +142,12 @@ bool ShouldGroupRequests(PermissionRequest* a, PermissionRequest* b) {
   if (IsMediaRequest(a->request_type()) && IsMediaRequest(b->request_type())) {
     return true;
   }
-#if !BUILDFLAG(IS_ANDROID)
+#if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
   if (IsExclusiveAccessRequest(a->request_type()) &&
       IsExclusiveAccessRequest(b->request_type())) {
     return true;
   }
-#endif
+#endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
   return false;
 }
 
@@ -609,7 +609,7 @@ void PermissionRequestManager::Accept() {
     PermissionGrantedIncludingDuplicates(request.get(),
                                          /*is_one_time=*/false);
 
-#if !BUILDFLAG(IS_ANDROID)
+#if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
     std::optional<ContentSettingsType> content_settings_type =
         RequestTypeToContentSettingsType(request->request_type());
     if (content_settings_type.has_value()) {
@@ -618,7 +618,7 @@ void PermissionRequestManager::Accept() {
           PermissionSourceUI::PROMPT, web_contents()->GetBrowserContext(),
           base::Time::Now());
     }
-#endif
+#endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
   }
 
   NotifyRequestDecided(action);
@@ -1191,10 +1191,9 @@ void PermissionRequestManager::CurrentRequestsDecided(
 
     PermissionUmaUtil::RecordEmbargoStatus(RecordActionAndGetEmbargoStatus(
         browser_context, request.get(), permission_action));
+    PermissionActionsHistory* actions_history =
+        PermissionsClient::Get()->GetPermissionActionsHistory(browser_context);
     if (request->IsEligibleForHeuristicAutoGrant()) {
-      PermissionActionsHistory* actions_history =
-          PermissionsClient::Get()->GetPermissionActionsHistory(
-              browser_context);
       if (permission_action == PermissionAction::GRANTED_ONCE) {
         actions_history->RecordTemporaryGrant(
             request->requesting_origin(), request->GetContentSettingsType());
@@ -1204,6 +1203,30 @@ void PermissionRequestManager::CurrentRequestsDecided(
       }
       // TODO(crbug.com/446603274): Record metrics of geolocation PEPC
       // request.
+    }
+
+    if (permission_action == PermissionAction::GRANTED_ONCE) {
+      ContentSettingsType content_settings_type =
+          request->GetContentSettingsType();
+
+      if (content_settings_type == ContentSettingsType::GEOLOCATION ||
+          content_settings_type == ContentSettingsType::MEDIASTREAM_CAMERA ||
+          content_settings_type == ContentSettingsType::MEDIASTREAM_MIC) {
+        actions_history->RecordOneTimeGrant(request->requesting_origin(),
+                                            content_settings_type);
+      }
+    } else if (permission_action == PermissionAction::GRANTED) {
+      ContentSettingsType content_settings_type =
+          request->GetContentSettingsType();
+
+      if (content_settings_type == ContentSettingsType::GEOLOCATION ||
+          content_settings_type == ContentSettingsType::MEDIASTREAM_CAMERA ||
+          content_settings_type == ContentSettingsType::MEDIASTREAM_MIC) {
+        actions_history->RecordOTPCountForGrant(
+            content_settings_type,
+            actions_history->GetOneTimeGrantCount(request->requesting_origin(),
+                                                  content_settings_type));
+      }
     }
   }
 
@@ -1611,12 +1634,12 @@ void PermissionRequestManager::DoAutoResponseForTesting() {
 }
 
 bool PermissionRequestManager::IsCurrentRequestExclusiveAccess() const {
-#if !BUILDFLAG(IS_ANDROID)
+#if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
   return IsRequestInProgress() &&
          IsExclusiveAccessRequest(requests_[0]->request_type());
 #else
   return false;
-#endif
+#endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
 }
 
 bool PermissionRequestManager::ShouldFinalizeRequestAfterDecided(

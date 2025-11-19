@@ -66,6 +66,11 @@ chromium-metrics-reviews@google.com.
   <variant name="WebView"/>
 </variants>
 
+<variants name="SidePanelType">
+  <variant name="SidePanel" summary="content height side panel"/>
+  <variant name="ToolbarHeightSidePanel" summary="toolbar height side panel"/>
+</variants>
+
 <!-- LINT.IfChange(SpareProcessMaybeTakeAction) -->
 
 <variants name="SpareProcessMaybeTakeAction">
@@ -94,7 +99,7 @@ chromium-metrics-reviews@google.com.
 </variants>
 
 <histogram name="Browser.Actions.PinnedActionsCount" units="actions"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>corising@chromium.org</owner>
   <owner>top-chrome-desktop-ui@google.com</owner>
   <summary>
@@ -268,7 +273,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Browser.ERP.EnqueueFailureDestination"
-    enum="EnterpriseCloudReportingDestination" expires_after="2026-02-22">
+    enum="EnterpriseCloudReportingDestination" expires_after="2026-04-26">
   <owner>djzhang@google.com</owner>
   <owner>jdudder@google.com</owner>
   <owner>cros-reporting-team@google.com</owner>
@@ -280,7 +285,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Browser.ERP.EnqueueSuccessDestination"
-    enum="EnterpriseCloudReportingDestination" expires_after="2026-02-22">
+    enum="EnterpriseCloudReportingDestination" expires_after="2026-04-26">
   <owner>djzhang@google.com</owner>
   <owner>jdudder@google.com</owner>
   <owner>cros-reporting-team@google.com</owner>
@@ -304,7 +309,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Browser.ERP.EventEnqueueResult.{Destination}"
-    enum="EnterpriseCloudReportingStatusCode" expires_after="2026-02-22">
+    enum="EnterpriseCloudReportingStatusCode" expires_after="2026-04-26">
   <owner>djzhang@google.com</owner>
   <owner>jdudder@google.com</owner>
   <owner>cros-reporting-team@google.com</owner>
@@ -547,7 +552,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Browser.ERP.TimeSpentRetryingEnqueueRecord" units="ms"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>djzhang@google.com</owner>
   <owner>jdudder@google.com</owner>
   <owner>cros-reporting-team@google.com</owner>
@@ -697,7 +702,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Browser.MainThreadsCongestion.LowMemory" units="janks"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>vovoy@chromium.org</owner>
   <owner>chromeos-memory@google.com</owner>
   <improvement direction="LOWER_IS_BETTER"/>
@@ -784,7 +789,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Browser.MainThreadsCongestion{UsageScenario}" units="janks"
-    expires_after="2026-02-22">
+    expires_after="2026-04-26">
   <owner>pmonette@chromium.org</owner>
   <owner>catan-team@chromium.org</owner>
   <improvement direction="LOWER_IS_BETTER"/>
@@ -1153,7 +1158,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Browser.Tabs.TabSwitchResult3{TabSwitchingType}"
-    enum="TabSwitchResult2" expires_after="2026-02-22">
+    enum="TabSwitchResult2" expires_after="2026-04-26">
   <owner>fdoray@chromium.org</owner>
   <owner>joenotcharles@google.com</owner>
   <owner>catan-team@chromium.org</owner>
@@ -1179,7 +1184,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="Browser.Tabs.TotalSwitchDuration3{TabSwitchingType}"
-    units="ms" expires_after="2026-02-22">
+    units="ms" expires_after="2026-04-26">
   <owner>jonross@chromium.org</owner>
   <owner>joenotcharles@google.com</owner>
   <owner>catan-team@chromium.org</owner>
@@ -1369,7 +1374,7 @@ chromium-metrics-reviews@google.com.
 
 <histogram
     name="BrowserRenderProcessHost.ExistingRendererIsInitializedAndNotDead"
-    enum="Boolean" expires_after="2026-02-22">
+    enum="Boolean" expires_after="2026-04-26">
   <owner>cduvall@chromium.org</owner>
   <owner>swarm-team@google.com</owner>
   <summary>
@@ -1621,7 +1626,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="BrowserRenderProcessHost.SpareRendererDispatchResult"
-    enum="SpareRendererDispatchResult" expires_after="2026-02-22">
+    enum="SpareRendererDispatchResult" expires_after="2026-04-26">
   <owner>gjc@google.com</owner>
   <owner>chrome-loading@google.com</owner>
   <summary>
@@ -2099,38 +2104,6 @@ chromium-metrics-reviews@google.com.
   </summary>
 </histogram>
 
-<histogram name="SidePanel.OpenDuration" units="ms" expires_after="2026-03-22">
-  <owner>corising@chromium.org</owner>
-  <owner>top-chrome-desktop-ui@google.com</owner>
-  <summary>
-    Records how long the side panel was open for (capped at 1 hour) starting
-    when the side panel is triggered to be opened. Note this might be different
-    than when the side panel becomes visible due to delays for loading content.
-    Recorded when the side panel is closed.
-  </summary>
-</histogram>
-
-<histogram name="SidePanel.OpenOrChangeEntryTrigger"
-    enum="SidePanelOpenTrigger" expires_after="2026-03-15">
-  <owner>corising@chromium.org</owner>
-  <owner>top-chrome-desktop-ui@google.com</owner>
-  <summary>
-    Logs the UI location from which the side panel is triggered to be opened or
-    to change the entry shown. Recorded when the side panel is shown or the
-    entry changed and a trigger is provided.
-  </summary>
-</histogram>
-
-<histogram name="SidePanel.OpenTrigger" enum="SidePanelOpenTrigger"
-    expires_after="2026-03-22">
-  <owner>corising@chromium.org</owner>
-  <owner>top-chrome-desktop-ui@google.com</owner>
-  <summary>
-    Logs the UI location from which the side panel is triggered to be opened.
-    Recorded when the side panel is shown and a trigger is provided.
-  </summary>
-</histogram>
-
 <histogram name="SidePanel.ResizedWidth" units="px" expires_after="2026-04-05">
   <owner>emshack@chromium.org</owner>
   <owner>top-chrome-desktop-ui@google.com</owner>
@@ -2195,19 +2168,6 @@ chromium-metrics-reviews@google.com.
   <token key="SidePanelEntry" variants="SidePanelEntry"/>
 </histogram>
 
-<histogram name="SidePanel.{SidePanelEntry}.ShowTriggered"
-    enum="SidePanelOpenTrigger" expires_after="2026-03-22">
-  <owner>corising@chromium.org</owner>
-  <owner>top-chrome-desktop-ui@google.com</owner>
-  <summary>
-    Records how a side panel entry is triggered to be shown. (i.e. by toolbar
-    button, by commbobox selection). This is recorded when a new side panel
-    entry is triggered to be shown regardless any side panel entry is currently
-    open.
-  </summary>
-  <token key="SidePanelEntry" variants="SidePanelEntry"/>
-</histogram>
-
 <histogram name="SidePanel.{SidePanelEntry}.TimeFromEntryTriggerToShown"
     units="ms" expires_after="2026-03-01">
   <owner>corising@chromium.org</owner>
@@ -2216,6 +2176,57 @@ chromium-metrics-reviews@google.com.
     Records elapsed time between when the {SidePanelEntry} side panel entry
     triggered to be shown and when it was shown.
   </summary>
+  <token key="SidePanelEntry" variants="SidePanelEntry"/>
+</histogram>
+
+<histogram name="{SidePanelType}.OpenDuration" units="ms"
+    expires_after="2026-03-22">
+  <owner>corising@chromium.org</owner>
+  <owner>top-chrome-desktop-ui@google.com</owner>
+  <summary>
+    Records how long the {SidePanelType} was open for (capped at 1 hour)
+    starting when the {SidePanelType} is triggered to be opened. Note this might
+    be different than when the {SidePanelType} becomes visible due to delays for
+    loading content. Recorded when the {SidePanelType} is closed.
+  </summary>
+  <token key="SidePanelType" variants="SidePanelType"/>
+</histogram>
+
+<histogram name="{SidePanelType}.OpenOrChangeEntryTrigger"
+    enum="SidePanelOpenTrigger" expires_after="2026-03-15">
+  <owner>corising@chromium.org</owner>
+  <owner>top-chrome-desktop-ui@google.com</owner>
+  <summary>
+    Logs the UI location from which the {SidePanelType} is triggered to be
+    opened or to change the entry shown. Recorded when the {SidePanelType} is
+    shown or the entry changed and a trigger is provided.
+  </summary>
+  <token key="SidePanelType" variants="SidePanelType"/>
+</histogram>
+
+<histogram name="{SidePanelType}.OpenTrigger" enum="SidePanelOpenTrigger"
+    expires_after="2026-03-22">
+  <owner>corising@chromium.org</owner>
+  <owner>top-chrome-desktop-ui@google.com</owner>
+  <summary>
+    Logs the UI location from which the {SidePanelType} is triggered to be
+    opened. Recorded when the {SidePanelType} is shown and a trigger is
+    provided.
+  </summary>
+  <token key="SidePanelType" variants="SidePanelType"/>
+</histogram>
+
+<histogram name="{SidePanelType}.{SidePanelEntry}.ShowTriggered"
+    enum="SidePanelOpenTrigger" expires_after="2026-03-22">
+  <owner>corising@chromium.org</owner>
+  <owner>top-chrome-desktop-ui@google.com</owner>
+  <summary>
+    Records how a {SidePanelType} entry is triggered to be shown. (i.e. by
+    toolbar button, by commbobox selection). This is recorded when a new
+    {SidePanelType} entry is triggered to be shown regardless any
+    {SidePanelType} entry is currently open.
+  </summary>
+  <token key="SidePanelType" variants="SidePanelType"/>
   <token key="SidePanelEntry" variants="SidePanelEntry"/>
 </histogram>
 

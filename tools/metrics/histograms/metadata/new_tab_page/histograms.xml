@@ -83,6 +83,7 @@ chromium-metrics-reviews@google.com.
   <variant name=".microsoft_files" summary="Module ID for Microsoft Files"/>
   <variant name=".outlook_calendar" summary="Module ID for Outlook Calendar"/>
   <variant name=".shopping_tasks" summary="Module ID for Shopping Tasks"/>
+  <variant name=".tab_groups" summary="Module ID for Tab Group"/>
   <variant name=".tab_resumption" summary="Module ID for Tab Resumption"/>
 </variants>
 
@@ -695,7 +696,7 @@ chromium-metrics-reviews@google.com.
   </token>
 </histogram>
 
-<histogram name="NewTabPage.Count" units="count" expires_after="2026-02-22">
+<histogram name="NewTabPage.Count" units="count" expires_after="2026-04-26">
   <owner>kawasin@google.com</owner>
   <owner>clank-performance-team@google.com</owner>
   <summary>
@@ -705,7 +706,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="NewTabPage.Customization.BottomSheet.Shown"
-    enum="NtpCustomizationBottomSheetType" expires_after="2026-02-22">
+    enum="NtpCustomizationBottomSheetType" expires_after="2026-04-26">
   <owner>hanxi@chromium.org</owner>
   <owner>yanlinghu@google.com</owner>
   <owner>clank-start@google.com</owner>
@@ -731,7 +732,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="NewTabPage.Customization.OpenBottomSheetEntry"
-    enum="NtpCustomizationEntryPoint" expires_after="2026-02-22">
+    enum="NtpCustomizationEntryPoint" expires_after="2026-04-26">
   <owner>hanxi@chromium.org</owner>
   <owner>xinyiji@chromium.org</owner>
   <owner>yanlinghu@google.com</owner>
@@ -796,7 +797,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="NewTabPage.CustomizeChromeSidePanelAction"
-    enum="NTPCustomizeChromeSidePanelAction" expires_after="2026-02-22">
+    enum="NTPCustomizeChromeSidePanelAction" expires_after="2026-04-26">
   <owner>pauladedeji@google.com</owner>
   <owner>tiborg@chromium.org</owner>
   <owner>rtatum@google.com</owner>
@@ -902,18 +903,18 @@ chromium-metrics-reviews@google.com.
   </summary>
 </histogram>
 
-<histogram name="NewTabPage.FakeSearchBox.ComposeplateButton.Impression"
-    units="count" expires_after="2026-04-05">
+<histogram name="NewTabPage.FakeSearchBox.ComposeplateButton.Impression2"
+    enum="BooleanVisible" expires_after="2026-04-05">
   <owner>hanxi@chromium.org</owner>
   <owner>xinyiji@chromium.org</owner>
   <summary>
     Record the total number of impressions of the fake search box composeplate
-    button on the New Tab Page. The histogram is logged on New tab page and is
+    view on the New Tab Page. The histogram is logged on New tab page and is
     Android-only.
   </summary>
 </histogram>
 
-<histogram name="NewTabPage.FakeSearchBox.Impression" units="count"
+<histogram name="NewTabPage.FakeSearchBox.Impression2" enum="BooleanVisible"
     expires_after="2026-04-05">
   <owner>hanxi@chromium.org</owner>
   <owner>xinyiji@chromium.org</owner>
@@ -2452,7 +2453,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="NewTabPage.TabResumption.Visit.ClickSource"
-    enum="NtpURLVisitAggregateTypes" expires_after="2026-02-22">
+    enum="NtpURLVisitAggregateTypes" expires_after="2026-04-26">
   <owner>mfacey@google.com</owner>
   <owner>romanarora@google.com</owner>
   <owner>chrome-desktop-ntp@google.com</owner>
@@ -2693,7 +2694,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="NewTabPage.WallpaperSearch.Status"
-    enum="NtpWallpaperSearchStatus" expires_after="2026-02-22">
+    enum="NtpWallpaperSearchStatus" expires_after="2026-04-26">
   <owner>pauladedeji@google.com</owner>
   <owner>tiborg@chromium.org</owner>
   <owner>rtatum@google.com</owner>
