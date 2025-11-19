@@ -512,7 +512,7 @@ void ExecutionEngine::SafetyChecksForNextAction() {
 
   // Asynchronously check if we can act on the tab.
   ActorKeyedService::Get(profile_)->GetPolicyChecker().MayActOnTab(
-      *tab, *journal_, task_->id(),
+      *tab, *journal_, task_->id(), allowed_navigation_origins_,
       base::BindOnce(
           &ExecutionEngine::DidFinishAsyncSafetyChecks, GetWeakPtr(),
           tab->GetContents()->GetPrimaryMainFrame()->GetLastCommittedOrigin()));
@@ -635,14 +635,13 @@ void ExecutionEngine::FinishedToolInvoke(mojom::ActionResultPtr result) {
     return;
   }
 
-  base::TimeTicks end_time = base::TimeTicks::Now();
   if (!IsOk(*result)) {
-    action_results_.emplace_back(action_start_time_, end_time, result->Clone());
     CompleteActions(std::move(result), InProgressActionIndex());
     return;
   }
 
   CHECK(result->execution_end_time);
+  base::TimeTicks end_time = base::TimeTicks::Now();
   RecordToolTimings(GetInProgressAction().Name(), end_time - action_start_time_,
                     end_time - *result->execution_end_time);
   action_results_.emplace_back(action_start_time_, end_time, std::move(result));
@@ -675,6 +674,13 @@ void ExecutionEngine::CompleteActions(mojom::ActionResultPtr result,
   TRACE_EVENT0("actor", "ExecutionEngine::CompleteActions");
   CHECK(!action_sequence_.empty());
   CHECK(act_callback_);
+
+  // If we have not yet appended the action_results for the failed index,
+  // append it now.
+  if (action_index && action_results_.size() == *action_index) {
+    action_results_.emplace_back(action_start_time_, base::TimeTicks::Now(),
+                                 result->Clone());
+  }
 
   SetState(State::kComplete);
 

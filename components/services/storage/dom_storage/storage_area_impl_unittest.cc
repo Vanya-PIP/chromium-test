@@ -28,8 +28,8 @@
 #include "base/threading/thread.h"
 #include "base/trace_event/memory_allocator_dump_guid.h"
 #include "components/services/storage/dom_storage/async_dom_storage_database.h"
-#include "components/services/storage/dom_storage/dom_storage_batch_operation_leveldb.h"
 #include "components/services/storage/dom_storage/dom_storage_database.h"
+#include "components/services/storage/dom_storage/leveldb/dom_storage_batch_operation_leveldb.h"
 #include "components/services/storage/dom_storage/storage_area_test_util.h"
 #include "mojo/public/cpp/bindings/remote.h"
 #include "storage/common/database/db_status.h"
@@ -179,7 +179,7 @@ class StorageAreaImplTest : public testing::Test,
                         const std::vector<uint8_t>& value) {
     base::RunLoop loop;
     db_->database().PostTaskWithThisObject(
-        base::BindLambdaForTesting([&](DomStorageDatabase* db) {
+        base::BindLambdaForTesting([&](DomStorageDatabaseLevelDB* db) {
           ASSERT_TRUE(db->Put(key, value).ok());
           loop.Quit();
         }));
@@ -194,7 +194,7 @@ class StorageAreaImplTest : public testing::Test,
     std::vector<uint8_t> value;
     base::RunLoop loop;
     db_->database().PostTaskWithThisObject(
-        base::BindLambdaForTesting([&](const DomStorageDatabase& db) {
+        base::BindLambdaForTesting([&](const DomStorageDatabaseLevelDB& db) {
           ASSERT_TRUE(db.Get(ToBytes(key), &value).ok());
           loop.Quit();
         }));
@@ -206,7 +206,7 @@ class StorageAreaImplTest : public testing::Test,
     base::RunLoop loop;
     DbStatus status;
     db_->database().PostTaskWithThisObject(
-        base::BindLambdaForTesting([&](const DomStorageDatabase& db) {
+        base::BindLambdaForTesting([&](const DomStorageDatabaseLevelDB& db) {
           std::vector<uint8_t> value;
           status = db.Get(ToBytes(key), &value);
           loop.Quit();
@@ -218,7 +218,7 @@ class StorageAreaImplTest : public testing::Test,
   void ClearDatabase() {
     base::RunLoop loop;
     db_->database().PostTaskWithThisObject(
-        base::BindLambdaForTesting([&](DomStorageDatabase* db) {
+        base::BindLambdaForTesting([&](DomStorageDatabaseLevelDB* db) {
           std::unique_ptr<DomStorageBatchOperationLevelDB> batch =
               db->CreateBatchOperation();
           ASSERT_TRUE(batch->DeletePrefixed({}).ok());

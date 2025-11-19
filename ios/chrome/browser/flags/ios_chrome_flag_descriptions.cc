@@ -544,20 +544,6 @@ const char kEnableFeedHeaderSettingsName[] =
 const char kEnableFeedHeaderSettingsDescription[] =
     "When enabled, some UI elements of the feed header can be modified.";
 
-const char kEnableFingerprintingProtectionBlocklistInIncognitoName[] =
-    "Enable Fingerprinting Protection Blocklist In Incognito";
-const char kEnableFingerprintingProtectionBlocklistInIncognitoDescription[] =
-    "Enable Fingerprinting Protection which may block fingerprinting "
-    "resources from loading in a 3p context. This flag applies only in "
-    "Incognito mode.";
-
-const char kEnableFingerprintingProtectionBlocklistName[] =
-    "Enable Fingerprinting Protection Blocklist In Regular Browsing";
-const char kEnableFingerprintingProtectionBlocklistDescription[] =
-    "Enable Fingerprinting Protection which may block fingerprinting "
-    "resources from loading in a 3p context. This flag applies only outside of "
-    "Incognito mode.";
-
 const char kEnableIdentityInAuthErrorName[] = "Enable Identities in Auth Error";
 const char kEnableIdentityInAuthErrorDescription[] =
     "Enable identities in auth error state.";
@@ -672,6 +658,11 @@ const char kGeminiLoadingStateRedesignDescription[] =
 const char kGeminiOnboardingCardsName[] = "GeminiOnboardingCards";
 const char kGeminiOnboardingCardsDescription[] =
     "Enables the discovery onboarding cards for new Gemini users.";
+
+const char kHandleMdmErrorsForDasherAccountsName[] =
+    "Mdm error handling for dasher accounts";
+const char kHandleMdmErrorsForDasherAccountsDescription[] =
+    "Enables the mdm error handling feature for dasher accounts";
 
 const char kHideToolbarsInOverflowMenuName[] = "Hide Toolbars in Overflow menu";
 const char kHideToolbarsInOverflowMenuDescription[] =
@@ -1713,10 +1704,9 @@ const char kWebPageTextZoomIPadName[] = "Enable text zoom on iPad";
 const char kWebPageTextZoomIPadDescription[] =
     "When enabled, text zoom works again on iPad";
 
-const char kWelcomeBackInFirstRunName[] = "Enable Welcome Back screen";
-const char kWelcomeBackInFirstRunDescription[] =
-    "When enabled, returning users will see the Welcome Back screen after the "
-    "First Run sequence.";
+const char kWelcomeBackName[] = "Enable Welcome Back screen";
+const char kWelcomeBackDescription[] =
+    "When enabled, returning users will see the Welcome Back screen.";
 
 const char kYoutubeIncognitoName[] =
     "Enable the opening of links from Youtube incognito in Chrome incognito";

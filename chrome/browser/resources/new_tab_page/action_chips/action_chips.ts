@@ -2,6 +2,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'chrome://resources/cr_elements/cr_button/cr_button.js';
+
+import {ComposeboxMode} from 'chrome://resources/cr_components/composebox/contextual_entrypoint_and_carousel.js';
 import {CrLitElement} from 'chrome://resources/lit/v3_0/lit.rollup.js';
 
 import {getCss} from './action_chips.css.js';
@@ -23,8 +26,17 @@ export class ActionChipsElement extends CrLitElement {
     return getHtml.bind(this)();
   }
 
-  static override get properties() {
-    return {};
+  protected onCreateImageClick_() {
+    this.onActionChipClick_('Create an image ', ComposeboxMode.CREATE_IMAGE);
+  }
+
+  protected onDeepSearchClick_() {
+    this.onActionChipClick_('Help me research ', ComposeboxMode.DEEP_SEARCH);
+  }
+
+  private onActionChipClick_(query: string, mode: ComposeboxMode) {
+    this.fire(
+        'action-chip-click', {searchboxText: query, contextFiles: [], mode});
   }
 }
 

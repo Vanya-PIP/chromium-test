@@ -96,6 +96,11 @@ public class MultiColumnSettings extends PreferenceHeaderFragmentCompat {
         return mHeaderView;
     }
 
+    /** Whether the detail panel is open. */
+    public boolean isLayoutOpen() {
+        return getSlidingPaneLayout().isOpen();
+    }
+
     @Override
     public void onResume() {
         // Update the detail pane, if the intent is specified.
@@ -299,7 +304,7 @@ public class MultiColumnSettings extends PreferenceHeaderFragmentCompat {
         }
 
         @Override
-        public void onFragmentStarted(@NonNull FragmentManager fm, @NonNull Fragment f) {
+        public void onFragmentResumed(@NonNull FragmentManager fm, @NonNull Fragment f) {
             if (f instanceof MainSettings) {
                 // Skip main settings which is visible in the header pane.
                 return;

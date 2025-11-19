@@ -177,9 +177,14 @@
       // Reader chip coordinator isn't needed for setting visibility.
       [self readerModeChipCoordinator:nil didSetReaderModeChipHidden:hidden];
       break;
+    case LocationBarBadgeType::kAskGeminiChip:
+      [self setLocationBarBadgeHidden:hidden];
+      break;
   }
 }
 
+// TODO(crbug.com/448422022): Trigger visibility refresh when a new badge comes
+// in and store the badge for multi-badge setup.
 - (void)setBadgeConfig:(LocationBarBadgeConfiguration*)config {
   if (!config) {
     return;
@@ -291,7 +296,7 @@
   button.layer.masksToBounds = NO;
 
   [button addTarget:self
-                action:@selector(userTappedEntrypoint)
+                action:@selector(userTappedBadge)
       forControlEvents:UIControlEventTouchUpInside];
 
   return button;
@@ -465,8 +470,14 @@
 // that the animation to transition to a small entrypoint has completed.
 - (void)didCompleteTransitionToSmallEntrypoint {
   [self refreshVoiceOverBoundingBoxIfFocused];
-  [self.contextualPanelEntryPointMutator
-          didCompleteTransitionToSmallEntrypoint];
+  if (_badgeConfig.badgeType == LocationBarBadgeType::kContextualPanel) {
+    [self.contextualPanelEntryPointMutator
+            didCompleteTransitionToSmallEntrypoint];
+  }
+
+  if (_badgeConfig.shouldHideBadgeAfterChipCollapse) {
+    [self hideEntrypoint];
+  }
 }
 
 // Sets the proper visual features depending on current infobar badges status
@@ -537,15 +548,15 @@
                                   _buttonContainer);
 }
 
-// Notify that a user tapped the entrypoint.
-- (void)userTappedEntrypoint {
+// Notify that a user tapped the badge.
+- (void)userTappedBadge {
   _badgeTapped = YES;
   [self refreshEntrypointVisualElements];
   [self transitionToSmallEntrypoint];
   if (_badgeConfig.badgeType == LocationBarBadgeType::kContextualPanel) {
     [self.contextualPanelEntryPointMutator entrypointTapped];
   } else {
-    [self.mutator entrypointTapped];
+    [self.mutator badgeTapped:_badgeConfig.badgeType];
   }
 }
 
@@ -573,6 +584,12 @@
 
 - (void)setEntrypointConfig:(ContextualPanelItemConfiguration*)config {
   if (IsAskGeminiChipEnabled()) {
+    // TODO(crbug.com/448422022): Store Contextual Panel Entrypoint badges
+    // instead of preventing them.
+    if (_locationBarBadgeShouldBeVisible) {
+      return;
+    }
+
     NSString* accessibilityLabel =
         base::SysUTF8ToNSString(config->accessibility_label);
 
@@ -642,11 +659,11 @@
 }
 
 - (void)showEntrypoint {
-  [self refreshEntrypointVisualElements];
-
   if (_locationBarBadgeShouldBeVisible) {
     return;
   }
+
+  [self refreshEntrypointVisualElements];
 
   _locationBarBadgeShouldBeVisible = YES;
 

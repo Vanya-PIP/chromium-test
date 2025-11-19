@@ -43,7 +43,6 @@ import org.chromium.components.browser_ui.bottomsheet.BottomSheetObserver;
 import org.chromium.components.browser_ui.bottomsheet.EmptyBottomSheetObserver;
 import org.chromium.components.browser_ui.util.motion.MotionEventInfo;
 import org.chromium.components.browser_ui.widget.gesture.BackPressHandler;
-import org.chromium.ui.base.DeviceFormFactor;
 import org.chromium.ui.modelutil.PropertyModel;
 
 import java.util.List;
@@ -156,6 +155,7 @@ public class TabSwitcherPaneMediator
     private final Callback<Integer> mOnTabClickCallback;
     private final TabIndexLookup mTabIndexLookup;
     private final BottomSheetController mBottomSheetController;
+    private final Runnable mAddOnLayoutChangedAfterInitialScrollListener;
     private @Nullable ObservableSupplier<TabListEditorController> mTabListEditorControllerSupplier;
     private @Nullable TransitiveObservableSupplier<TabListEditorController, Boolean>
             mCurrentTabListEditorControllerBackSupplier;
@@ -189,7 +189,8 @@ public class TabSwitcherPaneMediator
             ObservableSupplier<Boolean> isAnimatingSupplier,
             Callback<Integer> onTabClickCallback,
             TabIndexLookup tabIndexLookup,
-            BottomSheetController bottomSheetController) {
+            BottomSheetController bottomSheetController,
+            Runnable addOnLayoutChangedAfterInitialScrollListener) {
         mResetHandler = resetHandler;
         mTabIndexLookup = tabIndexLookup;
         mOnTabClickCallback = onTabClickCallback;
@@ -222,6 +223,8 @@ public class TabSwitcherPaneMediator
         isAnimatingSupplier.addObserver(mOnAnimatingChanged);
         mBottomSheetController = bottomSheetController;
         mBottomSheetController.addObserver(mBottomSheetObserver);
+        mAddOnLayoutChangedAfterInitialScrollListener =
+                addOnLayoutChangedAfterInitialScrollListener;
 
         notifyBackPressStateChangedInternal();
     }
@@ -328,6 +331,7 @@ public class TabSwitcherPaneMediator
 
     @Override
     public void scrollToTab(int tabIndexInModel) {
+        mAddOnLayoutChangedAfterInitialScrollListener.run();
         mContainerViewModel.set(INITIAL_SCROLL_INDEX, tabIndexInModel);
     }
 
@@ -403,15 +407,15 @@ public class TabSwitcherPaneMediator
     void maybeTranslatePinnedStrip(
             Activity activity,
             ObservableSupplierImpl<Boolean> hubSearchBoxVisibilitySupplier,
-            boolean show) {
+            boolean show,
+            boolean forced) {
         Configuration config = activity.getResources().getConfiguration();
         FrameLayout pinnedTabsContainer = mContainerView.findViewById(R.id.pinned_tabs_container);
-        boolean isTabletOrLandscape =
-                DeviceFormFactor.isNonMultiDisplayContextOnTablet(activity)
-                        || HubUtils.isScreenWidthTablet(config.screenWidthDp);
+        boolean isTabletOrLandscape = HubUtils.isScreenWidthTablet(config.screenWidthDp);
         boolean shouldShow = show && !isTabletOrLandscape;
         if (hubSearchBoxVisibilitySupplier.get() != null
-                && shouldShow == hubSearchBoxVisibilitySupplier.get()) {
+                && shouldShow == hubSearchBoxVisibilitySupplier.get()
+                && !forced) {
             // Early out.
             return;
         }
@@ -443,7 +447,8 @@ public class TabSwitcherPaneMediator
      * @param isTabletOrLandscape Whether the device is a tablet or landscape.
      */
     void setSearchBoxSpace(boolean isTabletOrLandscape) {
-        mContainerViewModel.set(TabListContainerProperties.SEARCH_BOX_PADDING, isTabletOrLandscape);
+        mContainerViewModel.set(
+                TabListContainerProperties.IS_TABLET_OR_LANDSCAPE, isTabletOrLandscape);
     }
 
     private boolean ableToOpenDialog(Tab tab) {

@@ -69,6 +69,7 @@ import org.chromium.chrome.browser.tab_ui.TabSwitcherGroupSuggestionService;
 import org.chromium.chrome.browser.tab_ui.TabSwitcherGroupSuggestionService.SuggestionUiEvent;
 import org.chromium.chrome.browser.tabmodel.TabGroupModelFilter;
 import org.chromium.chrome.browser.tabmodel.TabList;
+import org.chromium.chrome.browser.tabmodel.TabModelObserver;
 import org.chromium.chrome.browser.tasks.tab_management.PriceWelcomeMessageController.PriceMessageUpdateObserver;
 import org.chromium.chrome.browser.tasks.tab_management.TabGridContextMenuCoordinator.ShowTabListEditor;
 import org.chromium.chrome.browser.tasks.tab_management.TabGridDialogMediator.DialogController;
@@ -158,6 +159,39 @@ public class TabSwitcherPaneCoordinator implements BackPressHandler {
                 public void onLowMemory() {}
             };
 
+    private final TabModelObserver mTabModelObserver =
+            new TabModelObserver() {
+                @Override
+                public void didChangePinState(Tab tab) {
+                    if (mPinnedTabsCoordinator == null
+                            || mHubSearchBoxVisibilitySupplier.get() == null) {
+                        return;
+                    }
+                    if (isAnyTabPinned()) {
+                        if (mHubSearchBoxVisibilitySupplier.get()) {
+                            // If search box is visible either we are at the start of the recycler
+                            // view or we had no pinned tabs.
+                            updatePinnedTabsStripOnScroll(/* show= */ true, /* forced= */ true);
+                        } else {
+                            mPinnedTabsCoordinator.onScrolled();
+                        }
+                    } else {
+                        mHubSearchBoxVisibilitySupplier.set(true);
+                    }
+                }
+            };
+    private final View.OnLayoutChangeListener mOnLayoutChangedAfterInitialScrollListener =
+            new View.OnLayoutChangeListener() {
+                @Override
+                public void onLayoutChange(
+                        View view, int i, int i1, int i2, int i3, int i4, int i5, int i6, int i7) {
+                    if (mPinnedTabsCoordinator != null) {
+                        updatePinnedTabsStripOnScroll(true, true);
+                    }
+                    mTabListCoordinator.getContainerView().removeOnLayoutChangeListener(this);
+                }
+            };
+
     private final TabGridItemLongPressOrchestrator.OnLongPressTabItemEventListener
             mLongPressItemEventListener = this::onLongPressOnTabCard;
     private final Activity mActivity;
@@ -203,14 +237,11 @@ public class TabSwitcherPaneCoordinator implements BackPressHandler {
 
     private @Nullable Function<Integer, View> mFetchViewByIndex;
     private @Nullable Supplier<Pair<Integer, Integer>> mGetVisibleIndex;
-
     private EdgeToEdgePadAdjuster mEdgeToEdgePadAdjuster;
-
     private TabListCoordinator.@Nullable DragObserver mDragObserver;
     private @Nullable TabSwitcherGroupSuggestionService mTabSwitcherGroupSuggestionService;
     private @Nullable PinnedTabStripCoordinator mPinnedTabsCoordinator;
     private @Nullable DirectionalScrollListener mSearchBoxVisibilityScrollListener;
-
     private int mEdgeToEdgeBottomInsets;
 
     /**
@@ -359,7 +390,8 @@ public class TabSwitcherPaneCoordinator implements BackPressHandler {
                             isAnimatingSupplier,
                             onTabClickCallback,
                             this::getNthTabIndexInModel,
-                            bottomSheetController);
+                            bottomSheetController,
+                            this::addOnLayoutChangedAfterInitialScrollListener);
 
             mMultiThumbnailCardProvider =
                     new MultiThumbnailCardProvider(
@@ -466,10 +498,16 @@ public class TabSwitcherPaneCoordinator implements BackPressHandler {
                 mSearchBoxVisibilityScrollListener =
                         new DirectionalScrollListener(
                                 () -> { // Scroll up.
-                                    updatePinnedTabsStripOnScroll(/* show= */ true);
+                                    if (isAnyTabPinned()) {
+                                        updatePinnedTabsStripOnScroll(
+                                                /* show= */ true, /* forced= */ false);
+                                    }
                                 },
                                 () -> { // Scroll down.
-                                    updatePinnedTabsStripOnScroll(/* show= */ false);
+                                    if (isAnyTabPinned()) {
+                                        updatePinnedTabsStripOnScroll(
+                                                /* show= */ false, /* forced= */ false);
+                                    }
                                 });
                 // While the DirectionalScrollListener handles continuous scrolling, this is needed
                 // to notify the PinnedTabStripCoordinator of the final scroll position once a
@@ -483,13 +521,16 @@ public class TabSwitcherPaneCoordinator implements BackPressHandler {
 
                                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
                                     assert mPinnedTabsCoordinator != null;
-                                    mPinnedTabsCoordinator.onScrolled();
+                                    if (isAnyTabPinned()) {
+                                        mPinnedTabsCoordinator.onScrolled();
+                                    }
                                 }
                             }
                         };
                 recyclerView.addOnScrollListener(mSearchBoxVisibilityScrollListener);
                 recyclerView.addOnScrollListener(scrollStateChangedListener);
             }
+            mTabGroupModelFilterSupplier.get().getTabModel().addObserver(mTabModelObserver);
             mContainerViewChangeProcessor =
                     PropertyModelChangeProcessor.create(
                             containerViewModel, recyclerView, TabListContainerViewBinder::bind);
@@ -620,6 +661,12 @@ public class TabSwitcherPaneCoordinator implements BackPressHandler {
         }
         if (mTabSwitcherGroupSuggestionService != null) {
             mTabSwitcherGroupSuggestionService.destroy();
+        }
+        if (ChromeFeatureList.sAndroidPinnedTabs.isEnabled()) {
+            if (mTabGroupModelFilterSupplier.get() != null
+                    && mTabGroupModelFilterSupplier.get().getTabModel() != null) {
+                mTabGroupModelFilterSupplier.get().getTabModel().removeObserver(mTabModelObserver);
+            }
         }
         if (mPinnedTabsCoordinator != null) {
             mPinnedTabsCoordinator.destroy();
@@ -993,6 +1040,10 @@ public class TabSwitcherPaneCoordinator implements BackPressHandler {
         return mTabGridDialogCoordinator;
     }
 
+    public ComponentCallbacks getComponentsCallbacksForTesting() {
+        return mComponentsCallbacks;
+    }
+
     void showQuickDeleteAnimation(Runnable onAnimationEnd, List<Tab> tabs) {
         mTabListCoordinator.showQuickDeleteAnimation(onAnimationEnd, tabs);
     }
@@ -1063,28 +1114,43 @@ public class TabSwitcherPaneCoordinator implements BackPressHandler {
                         showTabListEditor);
     }
 
-    private void updatePinnedTabsStripOnScroll(boolean show) {
+    private void addOnLayoutChangedAfterInitialScrollListener() {
+        mTabListCoordinator
+                .getContainerView()
+                .addOnLayoutChangeListener(mOnLayoutChangedAfterInitialScrollListener);
+    }
+
+    private void updatePinnedTabsStripOnScroll(boolean show, boolean forced) {
         assert mPinnedTabsCoordinator != null;
-        mMediator.maybeTranslatePinnedStrip(mActivity, mHubSearchBoxVisibilitySupplier, show);
+        mMediator.maybeTranslatePinnedStrip(
+                mActivity, mHubSearchBoxVisibilitySupplier, show, forced);
         mPinnedTabsCoordinator.onScrolled();
     }
 
     private void maybeMakeSpaceForSearchBar() {
         Configuration config = mActivity.getResources().getConfiguration();
-        boolean isTabletOrLandscape =
-                DeviceFormFactor.isNonMultiDisplayContextOnTablet(mActivity)
-                        || HubUtils.isScreenWidthTablet(config.screenWidthDp);
+        boolean isTabletOrLandscape = HubUtils.isScreenWidthTablet(config.screenWidthDp);
         mMediator.setSearchBoxSpace(isTabletOrLandscape);
         if (isTabletOrLandscape) {
             if (mPinnedTabsCoordinator != null) {
                 mMediator.maybeTranslatePinnedStrip(
-                        mActivity, mHubSearchBoxVisibilitySupplier, false);
+                        mActivity,
+                        mHubSearchBoxVisibilitySupplier,
+                        /* show= */ false,
+                        /* forced= */ true);
             }
         } else {
             if (mPinnedTabsCoordinator != null) {
                 mMediator.maybeTranslatePinnedStrip(
-                        mActivity, mHubSearchBoxVisibilitySupplier, true);
+                        mActivity,
+                        mHubSearchBoxVisibilitySupplier,
+                        /* show= */ true,
+                        /* forced= */ true);
             }
         }
+    }
+
+    private boolean isAnyTabPinned() {
+        return mTabGroupModelFilterSupplier.get().getTabModel().getPinnedTabsCount() > 0;
     }
 }

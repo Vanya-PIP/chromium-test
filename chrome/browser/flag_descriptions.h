@@ -347,12 +347,6 @@ inline constexpr char kConnectionAllowlistsDescription[] =
     "Enables a prototype implementation of `Connection-Allowlist` header "
     "parsing and enforcement. See https://github.com/mikewest/anti-exfil/";
 
-inline constexpr char kContainerTypeNoLayoutContainmentName[] =
-    "Enables the container-type property to have no layout containment";
-inline constexpr char kContainerTypeNoLayoutContainmentDescription[] =
-    "The container-type property was recently changed to not add layout "
-    "containment, this allows users to temporarily disable this change.";
-
 inline constexpr char kCrosSwitcherName[] = "ChromeOS Switcher feature.";
 inline constexpr char kCrosSwitcherDescription[] =
     "Enable/Disable ChromeOS Switcher feature.";
@@ -7445,15 +7439,6 @@ inline constexpr char kFuseBoxDebugDescription[] =
 inline constexpr char kGameDashboardGamepadSupport[] =
     "Game Dashboard gamepad support.";
 
-inline constexpr char kGameDashboardGamePWAs[] = "Game Dashboard Game PWAs";
-inline constexpr char kGameDashboardGamePWAsDescription[] =
-    "Enables Game Dashboard for an additional set of game PWAs.";
-
-inline constexpr char kGameDashboardGamesInTest[] =
-    "Game Dashboard Games In Test";
-inline constexpr char kGameDashboardGamesInTestDescription[] =
-    "Enables Game Dashboard for a set of games being further evaluated.";
-
 inline constexpr char kGameDashboardUtilities[] = "Game Dashboard Utilities";
 inline constexpr char kGameDashboardUtilitiesDescription[] =
     "Enables utility features in the Game Dashboard.";
@@ -7782,6 +7767,13 @@ inline constexpr char kSchedulerConfigurationConservative[] =
     "Disables Hyper-Threading on relevant CPUs.";
 inline constexpr char kSchedulerConfigurationPerformance[] =
     "Enables Hyper-Threading on relevant CPUs.";
+
+inline constexpr char kStructuredDnsErrorsName[] = "Structured DNS Errors";
+inline constexpr char kStructuredDnsErrorsDescription[] =
+    "When enabled, signals support for Structured DNS Errors when sending DNS "
+    "requests, renders Extended DNS Error codes on the net error page when "
+    "applicable, and interprets filtering details provided via "
+    "draft-nottingham-public-resolver-errors-02";
 
 inline constexpr char kMediaDynamicCgroupName[] = "Media Dynamic Cgroup";
 inline constexpr char kMediaDynamicCgroupDescription[] =

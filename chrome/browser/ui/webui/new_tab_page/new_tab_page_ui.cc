@@ -25,6 +25,8 @@
 #include "chrome/browser/browser_features.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/buildflags.h"
+#include "chrome/browser/contextual_search/contextual_search_service_factory.h"
+#include "chrome/browser/contextual_search/contextual_search_web_contents_helper.h"
 #include "chrome/browser/enterprise/util/managed_browser_utils.h"
 #include "chrome/browser/new_tab_page/feature_promo_helper/new_tab_page_feature_promo_helper.h"
 #include "chrome/browser/new_tab_page/modules/file_suggestion/drive_service.h"
@@ -36,8 +38,6 @@
 #include "chrome/browser/new_tab_page/modules/v2/most_relevant_tab_resumption/most_relevant_tab_resumption_page_handler.h"
 #include "chrome/browser/new_tab_page/modules/v2/tab_groups/tab_groups_page_handler.h"
 #include "chrome/browser/new_tab_page/new_tab_page_util.h"
-#include "chrome/browser/omnibox/contextual_session_service_factory.h"
-#include "chrome/browser/omnibox/contextual_session_web_contents_helper.h"
 #include "chrome/browser/page_image_service/image_service_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/search/background/ntp_custom_background_service_factory.h"
@@ -86,17 +86,17 @@
 #include "chrome/grit/theme_resources.h"
 #include "components/commerce/core/commerce_feature_list.h"
 #include "components/content_settings/core/common/content_settings_pattern.h"
+#include "components/contextual_search/contextual_search_service.h"
 #include "components/favicon_base/favicon_url_parser.h"
 #include "components/google/core/common/google_util.h"
 #include "components/grit/components_scaled_resources.h"
 #include "components/history_clusters/core/features.h"
 #include "components/ntp_tiles/features.h"
 #include "components/ntp_tiles/most_visited_sites.h"
+#include "components/ntp_tiles/pref_names.h"
 #include "components/ntp_tiles/tile_type.h"
 #include "components/omnibox/browser/aim_eligibility_service.h"
 #include "components/omnibox/browser/omnibox_prefs.h"
-#include "components/omnibox/composebox/composebox_query_controller.h"
-#include "components/omnibox/composebox/contextual_session_service.h"
 #include "components/page_image_service/image_service.h"
 #include "components/page_image_service/image_service_handler.h"
 #include "components/prefs/pref_registry_simple.h"
@@ -767,6 +767,10 @@ NewTabPageUI::NewTabPageUI(content::WebUI* web_ui)
       ntp_prefs::kNtpShortcutsVisible,
       base::BindRepeating(&NewTabPageUI::OnTilesVisibilityPrefChanged,
                           weak_ptr_factory_.GetWeakPtr()));
+  pref_change_registrar_.Add(
+      ntp_tiles::prefs::kEnterpriseShortcutsPolicyList,
+      base::BindRepeating(&NewTabPageUI::OnEnterpriseShortcutsPolicyChanged,
+                          weak_ptr_factory_.GetWeakPtr()));
 
   // Store basic theme info in load time data to make the background color and
   // background image available as soon as the page loads to prevent a potential
@@ -906,17 +910,16 @@ void NewTabPageUI::BindInterface(
   // contextual search if realbox next is enabled.
   if (ntp_realbox::IsNtpRealboxNextEnabled(profile_)) {
     // Create a contextual session for this WebContents if one does not exist.
-    if (auto* contextual_session_web_contents_helper =
-            ContextualSessionWebContentsHelper::GetOrCreateForWebContents(
+    if (auto* contextual_search_web_contents_helper =
+            ContextualSearchWebContentsHelper::GetOrCreateForWebContents(
                 web_contents());
-        !contextual_session_web_contents_helper->session_handle()) {
-      auto* contextual_session_service =
-          ContextualSessionServiceFactory::GetForProfile(profile_);
-      auto contextual_session_handle =
-          contextual_session_service->CreateSession(
-              ntp_composebox::CreateQueryControllerConfigParams(),
-              kComposeboxMetricsReporterMetricSource);
-      contextual_session_web_contents_helper->set_session_handle(
+        !contextual_search_web_contents_helper->session_handle()) {
+      auto* contextual_search_service =
+          ContextualSearchServiceFactory::GetForProfile(profile_);
+      auto contextual_session_handle = contextual_search_service->CreateSession(
+          ntp_composebox::CreateQueryControllerConfigParams(),
+          kComposeboxMetricsReporterMetricSource);
+      contextual_search_web_contents_helper->set_session_handle(
           std::move(contextual_session_handle));
     }
   }
@@ -1120,16 +1123,16 @@ void NewTabPageUI::CreatePageHandler(
   DCHECK(pending_page.is_valid());
 
   // Create a contextual session for this WebContents if one does not exist.
-  if (auto* contextual_session_web_contents_helper =
-          ContextualSessionWebContentsHelper::GetOrCreateForWebContents(
+  if (auto* contextual_search_web_contents_helper =
+          ContextualSearchWebContentsHelper::GetOrCreateForWebContents(
               web_contents());
-      !contextual_session_web_contents_helper->session_handle()) {
-    auto* contextual_session_service =
-        ContextualSessionServiceFactory::GetForProfile(profile_);
-    auto contextual_session_handle = contextual_session_service->CreateSession(
+      !contextual_search_web_contents_helper->session_handle()) {
+    auto* contextual_search_service =
+        ContextualSearchServiceFactory::GetForProfile(profile_);
+    auto contextual_session_handle = contextual_search_service->CreateSession(
         ntp_composebox::CreateQueryControllerConfigParams(),
         kComposeboxMetricsReporterMetricSource);
-    contextual_session_web_contents_helper->set_session_handle(
+    contextual_search_web_contents_helper->set_session_handle(
         std::move(contextual_session_handle));
   }
 
@@ -1246,7 +1249,13 @@ void NewTabPageUI::OnTilesVisibilityPrefChanged() {
   }
 }
 
+void NewTabPageUI::OnEnterpriseShortcutsPolicyChanged() {
+  MaybeEnableEnterpriseShortcutsVisibility();
+  OnTileTypesChanged();
+}
+
 void NewTabPageUI::OnLoad() {
+  MaybeEnableEnterpriseShortcutsVisibility();
   base::Value::Dict update;
   update.Set("navigationStartTime",
              navigation_start_time_.InMillisecondsFSinceUnixEpoch());
@@ -1259,6 +1268,25 @@ void NewTabPageUI::OnLoad() {
 
   content::WebUIDataSource::Update(profile_, chrome::kChromeUINewTabPageHost,
                                    std::move(update));
+}
+
+void NewTabPageUI::MaybeEnableEnterpriseShortcutsVisibility() {
+  // If enterprise shortcuts feature or mixing is disabled, do nothing.
+  if (!base::FeatureList::IsEnabled(ntp_tiles::kNtpEnterpriseShortcuts) ||
+      !ntp_tiles::kNtpEnterpriseShortcutsAllowMixingParam.Get()) {
+    return;
+  }
+  // If enterprise shortcuts are available by policy and the user
+  // has not previously set the visibility preference, then enable enterprise
+  // shortcuts by default.
+  if (!profile_->GetPrefs()
+           ->GetList(ntp_tiles::prefs::kEnterpriseShortcutsPolicyList)
+           .empty() &&
+      !profile_->GetPrefs()->HasPrefPath(
+          ntp_prefs::kNtpEnterpriseShortcutsVisible)) {
+    profile_->GetPrefs()->SetBoolean(ntp_prefs::kNtpEnterpriseShortcutsVisible,
+                                     true);
+  }
 }
 
 // static

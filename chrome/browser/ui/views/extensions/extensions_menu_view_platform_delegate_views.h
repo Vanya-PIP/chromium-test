@@ -38,8 +38,7 @@ class ExtensionsMenuViewPlatformDelegateViews
     : public ExtensionsMenuViewPlatformDelegate,
       public ExtensionsMenuHandler,
       public TabStripModelObserver,
-      public ToolbarActionsModel::Observer,
-      public extensions::PermissionsManager::Observer {
+      public ToolbarActionsModel::Observer {
  public:
   ExtensionsMenuViewPlatformDelegateViews(
       Browser* browser,
@@ -57,12 +56,16 @@ class ExtensionsMenuViewPlatformDelegateViews
   void OnHostAccessRequestAddedOrUpdated(
       const extensions::ExtensionId& extension_id,
       content::WebContents* web_contents) override;
-  void OnAccessRequestRemoved(
+  void OnHostAccessRequestRemoved(
       const extensions::ExtensionId& extension_id) override;
-  void OnAccessRequestsCleared() override;
-  void OnAccessRequestDismissedByUser(
+  void OnHostAccessRequestsCleared() override;
+  void OnHostAccessRequestDismissedByUser(
       const extensions::ExtensionId& extension_id) override;
+  void OnShowHostAccessRequestsInToolbarChanged(
+      const extensions::ExtensionId& extension_id,
+      bool can_show_requests) override;
   void OnActionAdded(const ToolbarActionsModel::ActionId& action_id) override;
+  void OnPermissionsSettingsChanged() override;
 
   // ExtensionsMenuHandler:
   void OpenMainPage() override;
@@ -104,14 +107,6 @@ class ExtensionsMenuViewPlatformDelegateViews
       const ToolbarActionsModel::ActionId& action_id) override;
   void OnToolbarModelInitialized() override;
   void OnToolbarPinnedActionsChanged() override;
-
-  // PermissionsManager::Observer:
-  void OnUserPermissionsSettingsChanged(
-      const extensions::PermissionsManager::UserPermissionsSettings& settings)
-      override;
-  void OnShowAccessRequestsInToolbarChanged(
-      const extensions::ExtensionId& extension_id,
-      bool can_show_requests) override;
 
   // Accessors used by tests:
   // Returns the main page iff it's the `current_page_` one.
@@ -166,10 +161,6 @@ class ExtensionsMenuViewPlatformDelegateViews
   const raw_ptr<ToolbarActionsModel> toolbar_model_;
   base::ScopedObservation<ToolbarActionsModel, ToolbarActionsModel::Observer>
       toolbar_model_observation_{this};
-
-  base::ScopedObservation<extensions::PermissionsManager,
-                          extensions::PermissionsManager::Observer>
-      permissions_manager_observation_{this};
 
   // The current page visible in `bubble_contents_`.
   views::ViewTracker current_page_;

@@ -644,6 +644,34 @@ ci.thin_tester(
             "gpu_samsung_s23_stable",
             "limited_capacity_bot",
         ],
+        per_test_modifications = {
+            # Work around failure to clear tombstones on non-rooted devices.
+            "angle_unittests": targets.mixin(
+                args = [
+                    "--do-not-store-tombstones",
+                ],
+            ),
+            "gl_tests_passthrough": targets.mixin(
+                args = [
+                    "--do-not-store-tombstones",
+                ],
+            ),
+            "gl_tests_validating": targets.mixin(
+                args = [
+                    "--do-not-store-tombstones",
+                ],
+            ),
+            "gl_unittests": targets.mixin(
+                args = [
+                    "--do-not-store-tombstones",
+                ],
+            ),
+            "gpu_unittests": targets.mixin(
+                args = [
+                    "--do-not-store-tombstones",
+                ],
+            ),
+        },
     ),
     targets_settings = targets.settings(
         browser_config = targets.browser_config.ANDROID_CHROMIUM,
@@ -1379,8 +1407,7 @@ ci.thin_tester(
         # only be running 'gpu_noop_sleep_telemetry_test'. Otherwise, this
         # should be running the same tests as 'Linux FYI Release (NVIDIA)'.
         targets = [
-            "gpu_fyi_linux_release_gtests",
-            "gpu_fyi_linux_release_vulkan_telemetry_tests",
+            "gpu_noop_sleep_telemetry_test",
         ],
         mixins = [
             "limited_capacity_bot",
@@ -1392,10 +1419,10 @@ ci.thin_tester(
         os_type = targets.os_type.LINUX,
     ),
     # Uncomment this entry when this experimental tester is actually in use.
-    console_view_entry = consoles.console_view_entry(
-        category = "Linux|Nvidia",
-        short_name = "exp",
-    ),
+    # console_view_entry = consoles.console_view_entry(
+    #     category = "Linux|Nvidia",
+    #     short_name = "exp",
+    # ),
     list_view = "chromium.gpu.experimental",
 )
 

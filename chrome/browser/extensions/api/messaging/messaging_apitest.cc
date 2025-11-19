@@ -713,6 +713,54 @@ IN_PROC_BROWSER_TEST_F(
       << message_;
 }
 
+// Tests that when there are multiple listener functions that are registered as
+// `async functions` the faster function (promise) to resolve is used as the
+// response to the sender.
+IN_PROC_BROWSER_TEST_F(
+    OnMessagePromiseReturnMessagingApiTest,
+    OnMessageMultiPromiseReturnResolvesBehavior_MultipleAsyncFunctionsRace) {
+  ExtensionTestMessageListener faster_async_function_called(
+      "faster async function called");
+  ExtensionTestMessageListener slower_async_function_called(
+      "slower async function called");
+  const GURL url = embedded_test_server()->GetURL("/extensions/test_file.html");
+  ASSERT_TRUE(RunExtensionTest(
+      "messaging/on_message_return_promise_as_multiple_async_functions",
+      {.page_url = url.spec().c_str(), .use_extensions_root_dir = true}))
+      << message_;
+
+  // Confirm that all async functions are called and can respond to the message.
+  {
+    SCOPED_TRACE("waiting to confirm that both async functions were called");
+    EXPECT_TRUE(faster_async_function_called.WaitUntilSatisfied());
+    EXPECT_TRUE(slower_async_function_called.WaitUntilSatisfied());
+  }
+}
+
+// Tests that when there are multiple listener functions that are registered as
+// `async functions` the faster function (promise) to resolve (even if it's not
+// the first registered function) is used as the response to the sender.
+IN_PROC_BROWSER_TEST_F(
+    OnMessagePromiseReturnMessagingApiTest,
+    OnMessageMultiPromiseReturnResolvesBehavior_LaterRegisteredAsyncFunctionsCanRespond) {
+  ExtensionTestMessageListener faster_async_function_called(
+      "faster async function called");
+  ExtensionTestMessageListener slower_async_function_called(
+      "slower async function called");
+  const GURL url = embedded_test_server()->GetURL("/extensions/test_file.html");
+  ASSERT_TRUE(RunExtensionTest(
+      "messaging/on_message_return_promise_as_later_registered_async_function",
+      {.page_url = url.spec().c_str(), .use_extensions_root_dir = true}))
+      << message_;
+
+  // Confirm that all async functions are called and can respond to the message.
+  {
+    SCOPED_TRACE("waiting to confirm that both async functions were called");
+    EXPECT_TRUE(faster_async_function_called.WaitUntilSatisfied());
+    EXPECT_TRUE(slower_async_function_called.WaitUntilSatisfied());
+  }
+}
+
 IN_PROC_BROWSER_TEST_F(OnMessagePromiseReturnMessagingApiTest,
                        OnMessagePromiseReturnRejectsBehavior) {
   const GURL url = embedded_test_server()->GetURL("/extensions/test_file.html");
@@ -788,8 +836,6 @@ IN_PROC_BROWSER_TEST_F(PolyfillSupportMessagingApiTest,
   }
 }
 
-#endif  // BUILDFLAG(ENABLE_EXTENSIONS)
-
 // Test class that supports running tests with the
 // extensions_features::kRuntimeOnMessageWebExtensionPolyfillSupport feature
 // enabled and disabled. It also sets `chrome.test.getConfig()`'s 'customArg'
@@ -846,6 +892,40 @@ IN_PROC_BROWSER_TEST_P(PolyfillSupportMessagingErrorsApiTest,
       << message_;
 }
 
+// Test the sender's promise behavior when there is one listener that replies
+// and then throws an error immediately afterward.
+IN_PROC_BROWSER_TEST_P(PolyfillSupportMessagingErrorsApiTest,
+                       ListenerErrorHandlingWhenOneListenerResponseIsFirst) {
+  const GURL url = embedded_test_server()->GetURL("/extensions/test_file.html");
+  ASSERT_TRUE(RunExtensionTest(
+      "messaging/one_time_message_handler_send_response_first_same_listener",
+      {.page_url = url.spec().c_str(), .use_extensions_root_dir = true}))
+      << message_;
+}
+
+// Test the sender's promise behavior when there is one listener that throws an
+// error immediately.
+IN_PROC_BROWSER_TEST_P(PolyfillSupportMessagingErrorsApiTest,
+                       ListenerErrorHandlingWhenOneListenerErrorFirst) {
+  const GURL url = embedded_test_server()->GetURL("/extensions/test_file.html");
+  ASSERT_TRUE(RunExtensionTest(
+      "messaging/one_time_message_handler_error_first_same_listener",
+      {.page_url = url.spec().c_str(), .use_extensions_root_dir = true}))
+      << message_;
+}
+
+// Test the sender's promise behavior when there are two listeners and:
+// 1) the first registered responds asynchronously (with `return true`)
+// 2) the second registered throws a synchronous error
+IN_PROC_BROWSER_TEST_P(PolyfillSupportMessagingErrorsApiTest,
+                       ListenerErrorHandlingWhenAsyncResponseIsFirst) {
+  const GURL url = embedded_test_server()->GetURL("/extensions/test_file.html");
+  ASSERT_TRUE(RunExtensionTest(
+      "messaging/one_time_message_handler_send_async_response_first",
+      {.page_url = url.spec().c_str(), .use_extensions_root_dir = true}))
+      << message_;
+}
+
 // Test the sender's promise behavior when there are two listeners and:
 // 1) the first registered throws an error synchronously
 // 2) the second registered also throws an error synchronously
@@ -858,15 +938,22 @@ IN_PROC_BROWSER_TEST_P(PolyfillSupportMessagingErrorsApiTest,
       << message_;
 }
 
+// Test the sender's promise behavior when there is a single listener that
+// throws a variety of error types.
+IN_PROC_BROWSER_TEST_P(PolyfillSupportMessagingErrorsApiTest,
+                       ListenerErrorHandlingForManySyncErrorTypesThrown) {
+  const GURL url = embedded_test_server()->GetURL("/extensions/test_file.html");
+  ASSERT_TRUE(RunExtensionTest(
+      "messaging/one_time_message_handler_many_error_types_same_listener",
+      {.page_url = url.spec().c_str(), .use_extensions_root_dir = true}))
+      << message_;
+}
+
 INSTANTIATE_FEATURE_OVERRIDE_TEST_SUITE(PolyfillSupportMessagingErrorsApiTest);
 
-class UnserializableOneTimeMessageResponseMessagingApiTest
-    : public MessagingApiTest {
+class PolyfillFeatureEnabledMessagingApiTest : public MessagingApiTest {
  public:
-  UnserializableOneTimeMessageResponseMessagingApiTest() {
-    // The tests for when the feature is disabled are in
-    // PolyfillSupportMessagingApiTest.SendMessageListenerBehavior_Asynchronous
-    // since they require extra logic to test.
+  PolyfillFeatureEnabledMessagingApiTest() {
     scoped_feature_list_.InitAndEnableFeature(
         extensions_features::kRuntimeOnMessageWebExtensionPolyfillSupport);
   }
@@ -874,6 +961,36 @@ class UnserializableOneTimeMessageResponseMessagingApiTest
  private:
   base::test::ScopedFeatureList scoped_feature_list_;
 };
+
+// Test the sender's promise behavior when there are two listeners and:
+// 1) the first registered responds by returning a promise that resolves
+// 2) the second registered throws a synchronous error
+IN_PROC_BROWSER_TEST_F(PolyfillFeatureEnabledMessagingApiTest,
+                       ListenerErrorHandlingWhenPromiseResolveIsFirst) {
+  const GURL url = embedded_test_server()->GetURL("/extensions/test_file.html");
+  ASSERT_TRUE(RunExtensionTest(
+      "messaging/one_time_message_handler_promise_resolve_first",
+      {.page_url = url.spec().c_str(), .use_extensions_root_dir = true}))
+      << message_;
+}
+
+// Test the sender's promise behavior when there are two listeners and:
+// 1) the first registered responds by returning a promise that rejects
+// 2) the second registered throws a synchronous error
+IN_PROC_BROWSER_TEST_F(PolyfillFeatureEnabledMessagingApiTest,
+                       ListenerErrorHandlingWhenPromiseRejectIsFirst) {
+  const GURL url = embedded_test_server()->GetURL("/extensions/test_file.html");
+  ASSERT_TRUE(RunExtensionTest(
+      "messaging/one_time_message_handler_promise_reject_first",
+      {.page_url = url.spec().c_str(), .use_extensions_root_dir = true}))
+      << message_;
+}
+
+// The tests for when the feature is disabled are in
+// PolyfillSupportMessagingApiTest.SendMessageListenerBehavior_Asynchronous
+// since they require extra logic to test.
+using UnserializableOneTimeMessageResponseMessagingApiTest =
+    PolyfillFeatureEnabledMessagingApiTest;
 
 // Tests similar behavior to PolyfillSupportMessagingApiTest, but specifically
 // when the message listener attempts to send unserializable data back to the
@@ -946,6 +1063,8 @@ INSTANTIATE_TEST_SUITE_P(All,
                          OnMessageMultiListenerMessagingApiTest,
                          // extensions_features::kUserScriptUserExtensionToggle
                          testing::Bool());
+
+#endif  // BUILDFLAG(ENABLE_EXTENSIONS)
 
 class ServiceWorkerMessagingApiTest : public MessagingApiTest {
  protected:

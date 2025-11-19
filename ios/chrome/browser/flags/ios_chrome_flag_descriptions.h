@@ -317,13 +317,6 @@ extern const char kEnableFeedCardMenuSignInPromoDescription[];
 extern const char kEnableFeedHeaderSettingsName[];
 extern const char kEnableFeedHeaderSettingsDescription[];
 
-extern const char kEnableFingerprintingProtectionBlocklistInIncognitoName[];
-extern const char
-    kEnableFingerprintingProtectionBlocklistInIncognitoDescription[];
-
-extern const char kEnableFingerprintingProtectionBlocklistName[];
-extern const char kEnableFingerprintingProtectionBlocklistDescription[];
-
 extern const char kEnableIdentityInAuthErrorName[];
 extern const char kEnableIdentityInAuthErrorDescription[];
 
@@ -398,6 +391,9 @@ extern const char kGeminiLoadingStateRedesignDescription[];
 
 extern const char kGeminiOnboardingCardsName[];
 extern const char kGeminiOnboardingCardsDescription[];
+
+extern const char kHandleMdmErrorsForDasherAccountsName[];
+extern const char kHandleMdmErrorsForDasherAccountsDescription[];
 
 extern const char kHideToolbarsInOverflowMenuName[];
 extern const char kHideToolbarsInOverflowMenuDescription[];
@@ -1013,8 +1009,8 @@ extern const char kWebPageDefaultZoomFromDynamicTypeDescription[];
 extern const char kWebPageTextZoomIPadName[];
 extern const char kWebPageTextZoomIPadDescription[];
 
-extern const char kWelcomeBackInFirstRunName[];
-extern const char kWelcomeBackInFirstRunDescription[];
+extern const char kWelcomeBackName[];
+extern const char kWelcomeBackDescription[];
 
 extern const char kYoutubeIncognitoName[];
 extern const char kYoutubeIncognitoDescription[];

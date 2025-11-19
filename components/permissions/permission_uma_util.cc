@@ -33,7 +33,11 @@
 #include "components/permissions/prediction_service/prediction_common.h"
 #include "components/permissions/prediction_service/prediction_request_features.h"
 #include "components/permissions/request_type.h"
+#include "components/prefs/pref_service.h"
 #include "components/safety_check/safety_check.h"
+#include "components/unified_consent/pref_names.h"
+#include "components/user_prefs/user_prefs.h"
+#include "content/public/browser/browser_context.h"
 #include "content/public/browser/render_frame_host.h"
 #include "content/public/browser/web_contents.h"
 #include "printing/buildflags/buildflags.h"
@@ -1216,12 +1220,45 @@ void PermissionUmaUtil::PermissionPromptResolved(
         gesture_suffix = ".NoGesture";
       }
 
-      std::string histogram_name = base::StrCat(
-          {"Permissions.PredictionService.", permission_type, gesture_suffix});
+      PrefService* prefs =
+          user_prefs::UserPrefs::Get(web_contents->GetBrowserContext());
+      const bool is_msbb_enabled = prefs->GetBoolean(
+          unified_consent::prefs::kUrlKeyedAnonymizedDataCollectionEnabled);
+
+      std::string histogram_name;
+      if (is_msbb_enabled) {
+        histogram_name = base::StrCat({"Permissions.PredictionService.",
+                                       permission_type, gesture_suffix});
+      } else {
+        histogram_name = base::StrCat({"Permissions.PredictionService.NoMSBB.",
+                                       permission_type, gesture_suffix});
+      }
+
       base::UmaHistogramEnumeration(
           histogram_name,
           ConvertPredictionGrantLikelihoodToPermissionRequestLikelihood(
               predicted_grant_likelihood.value()));
+    }
+  }
+
+  if (requests[0]->request_type() == RequestType::kGeolocation ||
+      requests[0]->request_type() == RequestType::kNotifications) {
+    PermissionRequestGestureType gesture_type =
+        requests.size() == 1 ? requests[0]->GetGestureType()
+                             : PermissionRequestGestureType::UNKNOWN;
+    if (gesture_type != PermissionRequestGestureType::UNKNOWN) {
+      std::string gesture_suffix;
+      if (gesture_type == PermissionRequestGestureType::GESTURE) {
+        gesture_suffix = ".Gesture";
+      } else {
+        gesture_suffix = ".NoGesture";
+      }
+      const char* prominence_string = GetProminenceString(ui_disposition);
+      std::string histogram_name = base::StrCat(
+          {"Permissions.PredictionService.Action.", permission_type,
+           gesture_suffix, ".", prominence_string});
+      base::UmaHistogramEnumeration(histogram_name, permission_action,
+                                    PermissionAction::NUM);
     }
   }
 }  // namespace permissions

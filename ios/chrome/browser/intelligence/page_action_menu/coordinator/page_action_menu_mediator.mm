@@ -304,6 +304,7 @@ const CGFloat kFeatureRowIconSize = 20;
                                                        kFeatureRowIconSize)
                  actionType:PageActionMenuButtonAction];
     translateFeature.subtitle = [self translateLanguagePair];
+    translateFeature.actionType = PageActionMenuSettingsAction;
     translateFeature.actionText = l10n_util::GetNSString(
         IDS_IOS_AI_HUB_TRANSLATE_SHOW_ORIGINAL_BUTTON_LABEL);
     [features addObject:translateFeature];
@@ -560,8 +561,8 @@ std::string GetTargetLanguageCode(ChromeIOSTranslateClient* translate_client) {
   }
 
   tabHelper->ExecuteZeroStateSuggestions(
-      base::BindOnce(^(NSArray<NSString*>* suggestions) {
-        ios::provider::SetZeroStateSuggestions(suggestions);
+      base::BindOnce(^(NSArray<NSString*>* suggestions){
+          // No-op.
       }));
 }
 

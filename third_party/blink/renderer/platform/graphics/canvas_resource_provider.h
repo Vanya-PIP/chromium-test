@@ -60,7 +60,6 @@ namespace blink {
 
 PLATFORM_EXPORT BASE_DECLARE_FEATURE(kCanvas2DAutoFlushParams);
 PLATFORM_EXPORT BASE_DECLARE_FEATURE(kCanvas2DReclaimUnusedResources);
-PLATFORM_EXPORT BASE_DECLARE_FEATURE(kUseCRPSIForLowLatencyOnWindows);
 
 class CanvasResource;
 class CanvasResourceSharedImage;
@@ -122,7 +121,7 @@ class PLATFORM_EXPORT CanvasResourceProvider
     kSharedImage = 5,
     kDirectGpuMemoryBuffer [[deprecated]] = 6,
     kPassThrough [[deprecated]] = 7,
-    kSwapChain = 8,
+    kSwapChain [[deprecated]] = 8,
     kSkiaDawnSharedImage [[deprecated]] = 9,
     kMaxValue = kSkiaDawnSharedImage,
   };
