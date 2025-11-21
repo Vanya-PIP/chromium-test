@@ -23,8 +23,6 @@
 
 BASE_FEATURE(kTestFeature, base::FEATURE_DISABLED_BY_DEFAULT);
 
-BASE_FEATURE(kSafetyCheckMagicStack, base::FEATURE_ENABLED_BY_DEFAULT);
-
 BASE_FEATURE(kSafetyCheckAutorunByManagerKillswitch,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
@@ -56,9 +54,6 @@ const char kSafetyCheckAllowSafeBrowsingNotifications[] =
 
 const char kSafetyCheckAllowUpdateChromeNotifications[] =
     "SafetyCheckAllowUpdateChromeNotifications";
-
-const char kSafetyCheckMagicStackAutorunHoursThreshold[] =
-    "SafetyCheckMagicStackAutorunHoursThreshold";
 
 const char kSafetyCheckNotificationsProvisionalEnabled[] =
     "SafetyCheckNotificationsProvisionalEnabled";
@@ -112,14 +107,6 @@ const base::TimeDelta InactiveThresholdForSafetyCheckNotifications() {
       kSafetyCheckNotifications, kSafetyCheckNotificationsUserInactiveThreshold,
       /*default_value=*/
       kSafetyCheckNotificationDefaultDelay);
-}
-
-// How many hours between each autorun of the Safety Check in the Magic Stack.
-const base::TimeDelta TimeDelayForSafetyCheckAutorun() {
-  int delay = base::GetFieldTrialParamByFeatureAsInt(
-      kSafetyCheckMagicStack, kSafetyCheckMagicStackAutorunHoursThreshold,
-      /*default_value=*/720);
-  return base::Hours(delay);
 }
 
 BASE_FEATURE(kHideToolbarsInOverflowMenu, base::FEATURE_DISABLED_BY_DEFAULT);
@@ -227,6 +214,12 @@ const char kAIMPrototypeTabPickerParamOnFlightAPC[] =
 
 // Feature flag for the tab picker in the aim prototype.
 BASE_FEATURE(kAIMPrototypeTabPicker, base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsAimPrototypeTabPickerCachedAPCEnabled() {
+  std::string param = base::GetFieldTrialParamValueByFeature(
+      kAIMPrototypeTabPicker, kAIMPrototypeTabPickerParam);
+  return param == kAIMPrototypeTabPickerParamCachedAPC;
+}
 
 BASE_FEATURE(kOmniboxDRSPrototype, base::FEATURE_DISABLED_BY_DEFAULT);
 
@@ -336,10 +329,6 @@ BASE_FEATURE(kOnlyAccessClipboardAsync, base::FEATURE_ENABLED_BY_DEFAULT);
 
 bool IsSafetyCheckAutorunByManagerEnabled() {
   return base::FeatureList::IsEnabled(kSafetyCheckAutorunByManagerKillswitch);
-}
-
-bool IsSafetyCheckMagicStackEnabled() {
-  return base::FeatureList::IsEnabled(kSafetyCheckMagicStack);
 }
 
 bool ShouldHideSafetyCheckModuleIfNoIssues() {
@@ -1180,8 +1169,41 @@ bool IsSyncedSetUpEnabled() {
 
 BASE_FEATURE(kMultilineBrowserOmnibox, base::FEATURE_DISABLED_BY_DEFAULT);
 
+const char kMultilineOmniboxParam[] = "kMultilineOmniboxParam";
+const char kMultilineOmniboxAllText[] = "kMultilineOmniboxAllText";
+const char kMultilineOmniboxNoPeeking[] = "kMultilineOmniboxNoPeeking";
+const char kMultilineOmniboxHalfLinePeeking[] =
+    "kMultilineOmniboxHalfLinePeeking";
+const char kMultilineOmniboxFullLineAndPeeking[] =
+    "kMultilineOmniboxFullLineAndPeeking";
+
 bool IsMultilineBrowserOmniboxEnabled() {
   return base::FeatureList::IsEnabled(kMultilineBrowserOmnibox);
+}
+
+// Peeking values for MultilineOmnibox.
+const float kMultilineOmniboxNoPeekingValue = 0.0f;
+const float kMultilineOmniboxHalfLinePeekingValue = 0.5f;
+const float kMultilineOmniboxFullLineAndPeekingValue = 1.5f;
+
+CGFloat GetMultilineOmniboxAutocompleteHeight() {
+  if (!base::FeatureList::IsEnabled(kMultilineBrowserOmnibox)) {
+    return CGFLOAT_MAX;
+  }
+
+  std::string param_value = base::GetFieldTrialParamByFeatureAsString(
+      kMultilineBrowserOmnibox, kMultilineOmniboxParam,
+      kMultilineOmniboxAllText);
+
+  if (param_value == kMultilineOmniboxNoPeeking) {
+    return kMultilineOmniboxNoPeekingValue;
+  } else if (param_value == kMultilineOmniboxHalfLinePeeking) {
+    return kMultilineOmniboxHalfLinePeekingValue;
+  } else if (param_value == kMultilineOmniboxFullLineAndPeeking) {
+    return kMultilineOmniboxFullLineAndPeekingValue;
+  }
+  // Default case if the param is not recognized or is kMultilineOmniboxAllText.
+  return CGFLOAT_MAX;
 }
 
 BASE_FEATURE(kIOSAutoOpenRemoteTabGroupsSettings,

@@ -40,7 +40,6 @@ class SkiaPaintCanvas;
 
 namespace gpu {
 
-struct Mailbox;
 struct SyncToken;
 
 namespace gles2 {
@@ -344,9 +343,6 @@ class PLATFORM_EXPORT CanvasResourceProvider
 
   virtual void RasterRecord(cc::PaintRecord) = 0;
   void UnacceleratedRasterRecord(cc::PaintRecord);
-  void AcceleratedRasterRecord(cc::PaintRecord last_recording,
-                               bool needs_clear,
-                               gpu::Mailbox mailbox);
 
   CanvasImageProvider* GetOrCreateCanvasImageProvider();
 
@@ -400,7 +396,6 @@ class PLATFORM_EXPORT CanvasResourceProvider
       cc::PaintImage::kInvalidContentId;
   uint32_t snapshot_sk_image_id_ = 0u;
 
-  bool oopr_uses_dmsaa_ = false;
   bool always_enable_raster_timers_for_testing_ = false;
 
   // The maximum number of draw ops executed on the canvas, after which the
@@ -639,6 +634,7 @@ class PLATFORM_EXPORT CanvasResourceProviderSharedImage
       cc::PaintImage::kInvalidContentId;
 
   bool notified_context_lost_ = false;
+  bool oopr_uses_dmsaa_ = false;
   base::WeakPtrFactory<CanvasResourceProviderSharedImage> weak_ptr_factory_{
       this};
 };
