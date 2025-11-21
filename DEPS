@@ -32,6 +32,8 @@
 # which is a bit incomplete but the best documentation we have at the
 # moment.
 
+TEST
+
 # We expect all git dependencies specified in this file to be in sync with git
 # submodules (gitlinks).
 git_dependencies = 'SYNC'
