@@ -7,17 +7,11 @@
 
 #include <string>
 
-<<<<<<< HEAD
-#include "base/test"
-||||||| 3ec080c8b46cc
-#include "base/logging.h"
-=======
 #include "base/logging.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/strings/strcat.h"
 #include "base/time/time.h"
 #include "content/browser/indexed_db/status.h"
->>>>>>> 144.0.7503.0~1
 #include "third_party/leveldatabase/src/include/leveldb/status.h"
 
 namespace storage {
