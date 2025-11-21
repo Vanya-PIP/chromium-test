@@ -139,20 +139,6 @@ gfx::GpuMemoryBufferType GetNativeBufferType() {
 #endif
 }
 
-bool WillGetGmbConfigFromGpu() {
-#if BUILDFLAG(IS_OZONE)
-  // Ozone/X11 requires gpu initialization to be done before it can determine
-  // what formats gmb can use. This limitation comes from the requirement to
-  // have GLX bindings initialized. The buffer formats will be passed through
-  // gpu extra info.
-  return ui::OzonePlatform::GetInstance()
-      ->GetPlatformProperties()
-      .fetch_buffer_formats_for_gmb_on_gpu;
-#else
-  return false;
-#endif
-}
-
 }  // namespace
 
 SharedImageFactory::SharedImageFactory(
@@ -394,19 +380,23 @@ bool SharedImageFactory::IsNativeBufferSupported(
     viz::SharedImageFormat format,
     gfx::BufferUsage usage,
     const gfx::GpuExtraInfo& gpu_extra_info) {
-  if (WillGetGmbConfigFromGpu()) {
 #if BUILDFLAG(IS_OZONE_X11)
+  // Ozone/X11 requires gpu initialization to be done before it can determine
+  // what formats gmb can use. This limitation comes from the requirement to
+  // have GLX bindings initialized. The buffer formats will be passed through
+  // gpu extra info.
+  if (ui::OzonePlatform::GetInstance()
+          ->GetPlatformProperties()
+          .fetch_buffer_formats_for_gmb_on_gpu) {
     return base::Contains(
         gpu_extra_info.gpu_memory_buffer_support_x11,
         gfx::BufferUsageAndFormat(
             usage, viz::SharedImageFormatToBufferFormat(format)));
-#else
-    return false;
-#endif  // BUILDFLAG(IS_OZONE_X11)
-  } else {
-    return gpu::GpuMemoryBufferSupport::
-        IsNativeGpuMemoryBufferConfigurationSupported(format, usage);
   }
+#endif  // BUILDFLAG(IS_OZONE_X11)
+
+  return gpu::GpuMemoryBufferSupport::
+      IsNativeGpuMemoryBufferConfigurationSupported(format, usage);
 }
 
 bool SharedImageFactory::CreateSharedImage(const Mailbox& mailbox,
@@ -640,40 +630,6 @@ bool SharedImageFactory::IsD3DSharedImageSupported() const {
 
   return D3DImageBackingFactory::IsD3DSharedImageSupported(
       context_state_->GetD3D11Device().Get(), gpu_preferences_);
-}
-
-bool SharedImageFactory::CreateSwapChain(const Mailbox& front_buffer_mailbox,
-                                         const Mailbox& back_buffer_mailbox,
-                                         viz::SharedImageFormat format,
-                                         const gfx::Size& size,
-                                         const gfx::ColorSpace& color_space,
-                                         GrSurfaceOrigin surface_origin,
-                                         SkAlphaType alpha_type,
-                                         gpu::SharedImageUsageSet usage) {
-  if (!D3DImageBackingFactory::IsSwapChainSupported(
-          gpu_preferences_, context_state_->dawn_context_provider())) {
-    return false;
-  }
-
-  auto backings = d3d_backing_factory_->CreateSwapChain(
-      front_buffer_mailbox, back_buffer_mailbox, format, size, color_space,
-      surface_origin, alpha_type, usage);
-  return RegisterBacking(std::move(backings.front_buffer)) &&
-         RegisterBacking(std::move(backings.back_buffer));
-}
-
-bool SharedImageFactory::PresentSwapChain(const Mailbox& mailbox) {
-  if (!D3DImageBackingFactory::IsSwapChainSupported(
-          gpu_preferences_, context_state_->dawn_context_provider())) {
-    return false;
-  }
-  auto* shared_image = GetFactoryRef(mailbox);
-  if (!shared_image) {
-    DLOG(ERROR) << "PresentSwapChain: Could not find shared image mailbox";
-    return false;
-  }
-  shared_image->PresentSwapChain();
-  return true;
 }
 #endif  // BUILDFLAG(IS_WIN)
 

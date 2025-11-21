@@ -4,10 +4,13 @@
 
 #import "ios/chrome/browser/synced_set_up/ui/synced_set_up_view_controller.h"
 
+#import "base/time/time.h"
 #import "ios/chrome/browser/shared/ui/util/uikit_ui_util.h"
 #import "ios/chrome/common/ui/colors/semantic_color_names.h"
 #import "ios/chrome/common/ui/util/constraints_ui_util.h"
 #import "ios/chrome/grit/ios_strings.h"
+#import "ios/public/provider/chrome/browser/lottie/lottie_animation_api.h"
+#import "ios/public/provider/chrome/browser/lottie/lottie_animation_configuration.h"
 #import "ui/base/l10n/l10n_util.h"
 
 namespace {
@@ -24,6 +27,12 @@ const CGFloat kSubtitleMinTopMargin = 10.0;
 const CGFloat kSubtitlePreferredTopMargin = 122.0;
 // Padding on the left and right sides of the main content view.
 const CGFloat kHorizontalPadding = 20.0;
+// The vertical translation offset for the subtitle's entrance animation.
+const CGFloat kSubtitleAnimationTranslateY = 10.0;
+// The duration of the subtitle's fade-in and slide animation.
+constexpr base::TimeDelta kSubtitleAnimationDuration = base::Seconds(0.8);
+// The delay before the subtitle animation begins.
+constexpr base::TimeDelta kSubtitleAnimationDelay = base::Seconds(1.5);
 // Accessibility identifier for the avatar image view.
 NSString* const kSyncedSetUpAvatarAccessibilityID =
     @"kSyncedSetUpAvatarAccessibilityID";
@@ -33,6 +42,8 @@ NSString* const kSyncedSetUpTitleAccessibilityID =
 // Accessibility identifier for the subtitle label.
 NSString* const kSyncedSetUpSubtitleAccessibilityID =
     @"kSyncedSetUpSubtitleAccessibilityID";
+// Lottie animation file name.
+NSString* const kSpinAnimationName = @"synced_set_up_spin";
 
 // Helper function to configure common label properties.
 static void ConfigureCommonLabelProperties(UILabel* label) {
@@ -64,6 +75,10 @@ static void ConfigureCommonLabelProperties(UILabel* label) {
   // The avatar image to display. Stored in case it is set before the view
   // loads.
   UIImage* _avatarImage;
+  // Tracks if the subtitle has been animated.
+  BOOL _subtitleHasAnimated;
+  // The Lottie animation that plays to reveal the avatar.
+  id<LottieAnimation> _spinAnimation;
 }
 
 #pragma mark - UIViewController
@@ -73,13 +88,28 @@ static void ConfigureCommonLabelProperties(UILabel* label) {
 
   self.view.backgroundColor = [UIColor colorNamed:kBackgroundColor];
 
+  _spinAnimation = [self createAnimation:kSpinAnimationName];
+
   [self setupViews];
   [self setupConstraints];
+
+  // Set the initial state for the subtitle animation.
+  _subtitleLabel.alpha = 0.0;
+  _subtitleHasAnimated = NO;
 
   // Update the UI elements with the current state (which may have been set
   // before `-viewDidLoad`).
   [self updateTitleLabel];
   [self updateAvatarImageView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+
+  if (!_subtitleHasAnimated) {
+    [self animateSubtitleIn];
+    [_spinAnimation play];
+  }
 }
 
 #pragma mark - SyncedSetUpConsumer
@@ -109,6 +139,18 @@ static void ConfigureCommonLabelProperties(UILabel* label) {
 }
 
 #pragma mark - Private
+
+// Creates a Lottie animation view.
+- (id<LottieAnimation>)createAnimation:(NSString*)animationName {
+  LottieAnimationConfiguration* config =
+      [[LottieAnimationConfiguration alloc] init];
+  config.animationName = animationName;
+  config.shouldLoop = NO;
+  id<LottieAnimation> animation =
+      ios::provider::GenerateLottieAnimation(config);
+  animation.animationView.translatesAutoresizingMaskIntoConstraints = NO;
+  return animation;
+}
 
 // Updates the title label based on `_welcomeMessage`.
 - (void)updateTitleLabel {
@@ -211,6 +253,9 @@ static void ConfigureCommonLabelProperties(UILabel* label) {
   [_stackView setCustomSpacing:kTitleTopMargin afterView:_avatarImageView];
 
   [_contentView addSubview:_stackView];
+
+  // Add animation view on top of all other views.
+  [self.view addSubview:_spinAnimation.animationView];
 }
 
 // Configures constraints to support the scroll view structure.
@@ -232,6 +277,7 @@ static void ConfigureCommonLabelProperties(UILabel* label) {
   contentHeightConstraint.active = YES;
 
   AddSameCenterConstraints(_stackView, _contentView);
+  AddSameConstraints(_avatarImageView, _spinAnimation.animationView);
 
   [NSLayoutConstraint activateConstraints:@[
     [_stackView.topAnchor
@@ -245,6 +291,34 @@ static void ConfigureCommonLabelProperties(UILabel* label) {
         constraintLessThanOrEqualToAnchor:_contentView.trailingAnchor
                                  constant:-kHorizontalPadding],
   ]];
+}
+
+// Animates the subtitle label with a fade-in and upward slide effect.
+- (void)animateSubtitleIn {
+  // A slight downward translation is applied to create the upward animation.
+  _subtitleLabel.transform =
+      CGAffineTransformMakeTranslation(0, kSubtitleAnimationTranslateY);
+
+  __weak __typeof(_subtitleLabel) weakSubtitleLabel = _subtitleLabel;
+  __weak __typeof(self) weakSelf = self;
+  [UIView animateWithDuration:kSubtitleAnimationDuration.InSecondsF()
+      delay:kSubtitleAnimationDelay.InSecondsF()
+      options:UIViewAnimationOptionCurveEaseInOut
+      animations:^{
+        weakSubtitleLabel.alpha = 1.0;
+        weakSubtitleLabel.transform = CGAffineTransformIdentity;
+      }
+      completion:^(BOOL finished) {
+        if (finished) {
+          [weakSelf markSubtitleAnimationAsCompleted];
+        }
+      }];
+}
+
+// Updates `_subtitleHasAnimated` to indicate the initial subtitle animation has
+// finished.
+- (void)markSubtitleAnimationAsCompleted {
+  _subtitleHasAnimated = YES;
 }
 
 @end

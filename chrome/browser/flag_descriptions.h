@@ -5176,18 +5176,6 @@ inline constexpr char kAutomotiveBackButtonBarStreamlineDescription[] =
     "If enabled, streamline the Android Automotive back button bar on CaRMA "
     "devices when not in full screen.";
 
-inline constexpr char kAuxiliaryNavigationStaysInBrowserName[] =
-    "Prevent app opening for auxiliary navigations that start in the browser";
-inline constexpr char kAuxiliaryNavigationStaysInBrowserDescription[] =
-    "If enabled, any new auxiliary browsing context navigation started in "
-    "the browser will open in a new tab.";
-
-inline constexpr char kAuxiliaryNavigationStaysInPWAName[] =
-    "Prevent app opening for auxiliary navigations that start in a PWA";
-inline constexpr char kAuxiliaryNavigationStaysInPWADescription[] =
-    "If enabled, any new auxiliary browsing context navigation started in "
-    "any PWA will open a new tab in the same PWA.";
-
 inline constexpr char kBackgroundNotPerceptibleBindingName[] =
     "Enable not perceptible binding without cpu priority boosting";
 inline constexpr char kBackgroundNotPerceptibleBindingDescription[] =
@@ -5694,17 +5682,6 @@ inline constexpr char kRelatedSearchesSwitchName[] =
 inline constexpr char kRelatedSearchesSwitchDescription[] =
     "Enables requesting related searches suggestions.";
 
-inline constexpr char kReparentAuxiliaryNavigationFromPWAName[] =
-    "Reparent Auxiliary Navigation From PWA";
-inline constexpr char kReparentAuxiliaryNavigationFromPWADescription[] =
-    "Opens a new browser tab every time a new auxiliary navigation "
-    "starts in a PWA.";
-inline constexpr char kReparentTopLevelNavigationFromPWAName[] =
-    "Reparent Top Level Navigation From PWA";
-inline constexpr char kReparentTopLevelNavigationFromPWADescription[] =
-    "Opens a new browser tab when a new top level navigation "
-    "that starts in a PWA has no specialized handler.";
-
 inline constexpr char kRightEdgeGoesForwardGestureNavName[] =
     "RightEdgeGoesForwardGestureNav";
 inline constexpr char kRightEdgeGoesForwardGestureNavDescription[] =
@@ -6078,6 +6055,11 @@ inline constexpr char kReadAnythingReadAloudTsTextSegmentationName[] =
 inline constexpr char kReadAnythingReadAloudTsTextSegmentationDescription[] =
     "Enables the experimental text segmentation method for reading "
     "mode.";
+
+inline constexpr char kReadAnythingOmniboxChipName[] =
+    "Reading Mode Omnibox Chip";
+inline constexpr char kReadAnythingOmniboxChipDescription[] =
+    "Enables the omnibox chip entry point for Reading mode";
 
 inline constexpr char kReadAnythingReadAloudPhraseHighlightingName[] =
     "Reading Mode Read Aloud Phrase Highlighting";
@@ -6510,6 +6492,12 @@ inline constexpr char kRetryGetVideoCaptureDeviceInfosDescription[] =
     "Enables retries when enumerating the available video capture devices "
     "after a crash. The capture service is restarted without loading external "
     "DAL plugins which could have caused the crash.";
+
+inline constexpr char kUnexportableKeyDeletionName[] =
+    "Enable Unexportable Key Deletion";
+inline constexpr char kUnexportableKeyDeletionDescription[] =
+    "Enables the garbage collection and deletion of obsolete cryptographic "
+    "keys used for Device Bound Session Credentials.";
 
 inline constexpr char kUseAdHocSigningForWebAppShimsName[] =
     "Use Ad-hoc Signing for Web App Shims";
