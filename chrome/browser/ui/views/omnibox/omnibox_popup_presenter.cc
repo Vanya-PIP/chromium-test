@@ -13,7 +13,7 @@
 #include "base/strings/stringprintf.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
-#include "chrome/browser/ui/omnibox/features.h"
+#include "chrome/browser/ui/omnibox/omnibox_next_features.h"
 #include "chrome/browser/ui/omnibox/omnibox_view.h"
 #include "chrome/browser/ui/views/location_bar/location_bar_view.h"
 #include "chrome/browser/ui/views/omnibox/omnibox_popup_webui_content.h"
@@ -54,7 +54,7 @@ void OmniboxPopupPresenter::Show() {
     const views::Widget* parent_widget = location_bar_view_->GetWidget();
     views::Widget::InitParams params(
         views::Widget::InitParams::CLIENT_OWNS_WIDGET,
-        views::Widget::InitParams::TYPE_POPUP);
+        views::Widget::InitParams::TYPE_WINDOW_FRAMELESS);
 #if BUILDFLAG(IS_WIN)
     // On Windows use the software compositor to ensure that we don't block
     // the UI thread during command buffer creation. See http://crbug.com/125248
@@ -63,10 +63,6 @@ void OmniboxPopupPresenter::Show() {
     params.opacity = views::Widget::InitParams::WindowOpacity::kTranslucent;
     params.parent = parent_widget->GetNativeView();
     params.context = parent_widget->GetNativeWindow();
-
-    if (base::FeatureList::IsEnabled(omnibox::kWebUIOmniboxFullPopup)) {
-      params.type = views::Widget::InitParams::TYPE_WINDOW_FRAMELESS;
-    }
 
     RoundedOmniboxResultsFrame::OnBeforeWidgetInit(&params, widget_.get());
 

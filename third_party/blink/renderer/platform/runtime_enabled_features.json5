@@ -1079,7 +1079,7 @@
     // https://chromestatus.com/feature/5162372125818880
     {
       name: "ColorSpaceDisplayP3Linear",
-      status: "experimental",
+      status: "stable",
     },
     // Enable the srgb-linear and display-p3-linear color spaces in
     // PredefinedColorSpace.
@@ -1923,6 +1923,11 @@
       origin_trial_allows_insecure: true,
       origin_trial_allows_third_party: true,
       base_feature: "none",
+    },
+    {
+      // Disables removeFormat command on Plaintext-only content editable div
+      name: "DisableRemoveFormatForPlainTextOnlyEditableDiv",
+      status: "stable",
     },
     {
       // `kHidden` and `kHiddenButPainting` visibility states are treated as
