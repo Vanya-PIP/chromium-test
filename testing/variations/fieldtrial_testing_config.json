@@ -911,28 +911,9 @@
             ],
             "experiments": [
                 {
-                    "name": "EnabledBoth_20250704",
-                    "enable_features": [
-                        "InputScenarioPriorityBoost",
-                        "RaiseDisplayCriticalThreadPriority"
-                    ]
-                },
-                {
-                    "name": "EnabledRaiseDisplayCriticalThreadPriority_20250704",
+                    "name": "Enabled_20251001",
                     "enable_features": [
                         "RaiseDisplayCriticalThreadPriority"
-                    ]
-                },
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "RaiseDisplayCriticalThreadPriority"
-                    ]
-                },
-                {
-                    "name": "EnabledInputScenarioPriorityBoost_20250704",
-                    "enable_features": [
-                        "InputScenarioPriorityBoost"
                     ]
                 }
             ]
@@ -2280,33 +2261,6 @@
             ]
         }
     ],
-    "AutofillAiI18n": [
-        {
-            "platforms": [
-                "chromeos",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "params": {
-                        "autofill_ai_geo_ip_blocklist": "IN"
-                    },
-                    "enable_features": [
-                        "AutofillAiIgnoreCapabilityCheck",
-                        "AutofillAiIgnoreGeoIp",
-                        "AutofillAiIgnoreLocale",
-                        "AutofillAiIgnoreWhetherUserHasAddressOrPaymentsDataForIph",
-                        "AutofillAiKnownTravelerNumber",
-                        "AutofillAiNationalIdCard",
-                        "AutofillAiRedressNumber"
-                    ]
-                }
-            ]
-        }
-    ],
     "AutofillAiVoteForFormatStringsForAffixes": [
         {
             "platforms": [
@@ -2661,27 +2615,6 @@
                     "name": "Enabled",
                     "enable_features": [
                         "AutofillEnableLabelPrecedenceForTurkishAddresses"
-                    ]
-                }
-            ]
-        }
-    ],
-    "AutofillEnableMultipleRequestInVirtualCardDownstreamEnrollment": [
-        {
-            "platforms": [
-                "android",
-                "ios",
-                "chromeos",
-                "chromeos_lacros",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "AutofillEnableMultipleRequestInVirtualCardDownstreamEnrollment"
                     ]
                 }
             ]
@@ -9504,6 +9437,21 @@
             ]
         }
     ],
+    "DumpOnOOBFontDataServiceCache": [
+        {
+            "platforms": [
+                "windows"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "DumpOnOOBFontDataServiceCache"
+                    ]
+                }
+            ]
+        }
+    ],
     "DwaFeature": [
         {
             "platforms": [
@@ -10648,6 +10596,7 @@
                 "android",
                 "android_webview",
                 "chromeos",
+                "ios",
                 "linux",
                 "mac",
                 "windows"
@@ -11253,6 +11202,21 @@
                     "enable_features": [
                         "GmsCoreLocationRequestParamOverride",
                         "UseFusedLocationProvider"
+                    ]
+                }
+            ]
+        }
+    ],
+    "FuturePoliciesOnDesktopAndroid": [
+        {
+            "platforms": [
+                "android"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "FuturePoliciesOnDesktopAndroid"
                     ]
                 }
             ]
@@ -16500,6 +16464,21 @@
             ]
         }
     ],
+    "NoPreReadMainDllStartup": [
+        {
+            "platforms": [
+                "windows"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "NoPreReadMainDllStartup"
+                    ]
+                }
+            ]
+        }
+    ],
     "NoThrottlingVisibleAgent": [
         {
             "platforms": [
@@ -16668,6 +16647,23 @@
                     "enable_features": [
                         "ComposeboxUsesChromeComposeClient",
                         "NtpComposebox"
+                    ]
+                }
+            ]
+        }
+    ],
+    "NtpCustomizeChromeAutoOpen": [
+        {
+            "platforms": [
+                "linux",
+                "mac",
+                "windows"
+            ],
+            "experiments": [
+                {
+                    "name": "Control",
+                    "disable_features": [
+                        "NtpCustomizeChromeAutoOpen"
                     ]
                 }
             ]
@@ -18296,6 +18292,8 @@
                         "MacCriticalDiskSpacePressureThresholdMB": "250"
                     },
                     "enable_features": [
+                        "AndroidBcivBottomControls",
+                        "AndroidBrowserControlsInViz",
                         "AsyncSetCookie",
                         "AvoidCloneArgsOnExtensionFunctionDispatch",
                         "AvoidUnnecessaryGetMinimizeButtonOffset",
@@ -19732,9 +19730,27 @@
             ],
             "experiments": [
                 {
-                    "name": "Enabled",
-                    "enable_features": [
+                    "name": "Control",
+                    "disable_features": [
                         "ProfileCreationDeclineSigninCTAExperiment"
+                    ]
+                }
+            ]
+        }
+    ],
+    "ProfileExperimentsM0": [
+        {
+            "platforms": [
+                "linux",
+                "mac",
+                "windows"
+            ],
+            "experiments": [
+                {
+                    "name": "Control",
+                    "disable_features": [
+                        "ProfilePickerTextVariations",
+                        "ShowProfilePickerToAllUsersExperiment"
                     ]
                 }
             ]
@@ -20646,37 +20662,6 @@
                     "name": "Enabled",
                     "enable_features": [
                         "ReduceAcceptLanguage"
-                    ]
-                }
-            ]
-        }
-    ],
-    "ReduceAcceptLanguageCount": [
-        {
-            "platforms": [
-                "android",
-                "chromeos",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled_5",
-                    "params": {
-                        "MaxAcceptLanguage": "5"
-                    },
-                    "enable_features": [
-                        "ReduceAcceptLanguageCount"
-                    ]
-                },
-                {
-                    "name": "Enabled_10",
-                    "params": {
-                        "MaxAcceptLanguage": "10"
-                    },
-                    "enable_features": [
-                        "ReduceAcceptLanguageCount"
                     ]
                 }
             ]
@@ -24673,6 +24658,24 @@
             ]
         }
     ],
+    "SupportOpeningDraggedLinksInSameTab": [
+        {
+            "platforms": [
+                "chromeos",
+                "linux",
+                "mac",
+                "windows"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "SupportOpeningDraggedLinksInSameTab"
+                    ]
+                }
+            ]
+        }
+    ],
     "SuppressMemoryListeners": [
         {
             "platforms": [
@@ -25152,6 +25155,21 @@
                     },
                     "enable_features": [
                         "IPH_TabSearch"
+                    ]
+                }
+            ]
+        }
+    ],
+    "TabStorageSqlitePrototype": [
+        {
+            "platforms": [
+                "android"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "TabStorageSqlitePrototype"
                     ]
                 }
             ]

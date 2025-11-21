@@ -829,10 +829,7 @@ For more settings that use data to improve your Chrome experience, go to <ph nam
         System default
       </message>
       <message name="IDS_THEMES_SYSTEM_DEFAULT_SUMMARY" desc="Summary for the System Default option.">
-        Turn on dark theme when your device's Battery Saver is on
-      </message>
-      <message name="IDS_THEMES_SYSTEM_DEFAULT_SUMMARY_API_29" desc="Summary for the System Default option (Android Q+).">
-        Turn on dark theme when your device's dark theme or Battery Saver is on
+        Turn on dark theme when your device’s dark theme is on
       </message>
       <message name="IDS_DARKEN_WEBSITES" desc="Title for the option to apply auto-darken to websites. If a website has opt-out from auto-darken, the content will stay the same.">
         Apply dark theme to sites, when possible
@@ -4219,6 +4216,12 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Chrome d
       <message name="IDS_MENU_EXTENSIONS" desc="Menu item for opening the 'Extensions' page that allows the user to manage installed extensions. [CHAR_LIMIT=27]">
         Extensions
       </message>
+      <message name="IDS_MENU_MANAGE_EXTENSIONS" desc="Menu item for opening the 'Extensions' page that allows the user to manage installed extensions. [CHAR_LIMIT=27]">
+        Manage Extensions
+      </message>
+      <message name="IDS_MENU_CHROME_WEBSTORE" desc="Menu item for opening the chrome webstore that allows the user to install extensions. [CHAR_LIMIT=27]">
+        Visit Chrome Web Store
+      </message>
       <message name="IDS_MENU_TINKER_TANK" desc="Menu item for opening the tinker tank bottom sheet. [CHAR_LIMIT=27]" translateable="false">
         Tinker tank
       </message>
@@ -5155,6 +5158,27 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Chrome d
       </message>
       <message name="IDS_ACCESSIBILITY_OMNIBOX_REMOVE_SUGGESTION" desc="Accessibility announcement when the close button for the suggestion is clicked.">
         Remove suggestion
+      </message>
+      <message name="IDS_ACCESSIBILITY_OMNIBOX_OPEN_OR_CLOSE_CONTEXT_POPUP" desc="Accessibility announcement when the 'Add context' button in the omnibox is highlighted.">
+        Open or Close the context popup
+      </message>
+      <message name="IDS_ACCESSIBILITY_OMNIBOX_ENABLE_AI_MODE" desc="Accessibility announcement when the 'AI Mode' option in the Omnibox 'Add context' popup is highlighted.">
+        Enable AI Mode
+      </message>
+      <message name="IDS_ACCESSIBILITY_OMNIBOX_RESET_MODE" desc="Accessibility announcement when the 'Reset mode' button in the omnibox is highlighted.">
+        Reset current mode <ph name="MODE_NAME">%1$s<ex>AI Mode</ex></ph> to Search
+      </message>
+      <message name="IDS_ACCESSIBILITY_OMNIBOX_ADD_FILES" desc="Accessibility announcement when the 'Files' option in the Omnibox 'Add context' popup is highlighted.">
+        Attach files
+      </message>
+      <message name="IDS_ACCESSIBILITY_OMNIBOX_ADD_IMAGES" desc="Accessibility announcement when the 'Gallery' option in the Omnibox 'Add context' popup is highlighted.">
+        Attach images from gallery
+      </message>
+      <message name="IDS_ACCESSIBILITY_OMNIBOX_ADD_CAMERA_PICTURE" desc="Accessibility announcement when the 'Camera' option in the Omnibox 'Add context' popup is highlighted.">
+        Attach camera picture
+      </message>
+      <message name="IDS_ACCESSIBILITY_OMNIBOX_ADD_TABS" desc="Accessibility announcement when the 'Tabs' option in the Omnibox 'Add context' popup is highlighted.">
+        Attach tabs
       </message>
 
       <message name="IDS_ACCESSIBILITY_SHARE_SELECTED_ITEMS" desc="Content description for the button to share selected items. [ICU Syntax]">

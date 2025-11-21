@@ -803,6 +803,11 @@
     "expiry_milestone": 145
   },
   {
+    "name": "auto-revoke-suspicious-notification",
+    "owners": ["skrakowi@google.com","minap@google.com","chrome-counter-abuse-alerts@google.com"],
+    "expiry_milestone": 147
+  },
+  {
     "name": "autofill-across-iframes",
     "owners": [
       "vincb@google.com",
@@ -3961,7 +3966,7 @@
   {
     "name": "enable-mac-pwas-notification-attribution",
     "owners": [ "mek@chromium.org", "pwa-team@google.com" ],
-    "expiry_milestone": 144
+    "expiry_milestone": 150
   },
   {
     "name": "enable-machine-learning-model-loader-web-platform-api",
@@ -7171,6 +7176,14 @@
     "expiry_milestone": 140
   },
   {
+    "name": "ntp-background-color-slider",
+    "owners": [
+      "pabouchard@google.com",
+      "bling-mony-pod@google.com"
+    ],
+    "expiry_milestone": 146
+  },
+  {
     "name": "ntp-background-customization",
     "owners": [
       "pabouchard@google.com",
@@ -8916,12 +8929,12 @@
   {
     "name": "robust-window-management",
     "owners": [ "aishwaryarj@google.com", "rathomas@google.com", "clank-large-form-factors@google.com" ],
-    "expiry_milestone": 143
+    "expiry_milestone": 146
   },
   {
     "name": "robust-window-management-experimental",
     "owners": [ "aishwaryarj@google.com", "rathomas@google.com", "clank-large-form-factors@google.com" ],
-    "expiry_milestone": 143
+    "expiry_milestone": 146
   },
   {
     "name": "root-scrollbar-follows-browser-theme",
@@ -9434,11 +9447,6 @@
     "name": "signature-based-sri",
     "owners": [ "mkwst@chromium.org" ],
     "expiry_milestone": 150
-  },
-  {
-    "name": "simplified-tab-drag-ui",
-    "owners": [ "max@igalia.com", "nickdiego@igalia.com", "thomasanderson@chromium.org"],
-    "expiry_milestone": 138
   },
   {
     "name": "single-ca-cert-verification-phase-0",
@@ -10157,7 +10165,7 @@
       "markrowe@chromium.org",
       "chrome-platform-security@google.com"
     ],
-    "expiry_milestone": 145
+    "expiry_milestone": 150
   },
   {
     "name": "use-ahardwarebuffer-usage-flags-from-vulkan",

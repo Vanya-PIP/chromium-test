@@ -200,7 +200,7 @@ export class SettingsYourSavedInfoPageElement extends
         {
           type: DataType.FLIGHT_RESERVATION,
           label: this.i18n('yourSavedInfoFlightReservationsChip'),
-          icon: 'firstLevelTopics20:travel',
+          icon: 'settings20:travel',
           isAvailable: true,
         },
         {
@@ -212,7 +212,7 @@ export class SettingsYourSavedInfoPageElement extends
         {
           type: DataType.VEHICLE,
           label: this.i18n('yourSavedInfoVehiclesChip'),
-          icon: 'firstLevelTopics20:directions-car',
+          icon: 'settings20:directions-car',
           isAvailable: true,
         },
       ],
@@ -417,8 +417,7 @@ export class SettingsYourSavedInfoPageElement extends
    * Shows the manage identity sub page.
    */
   private onIdentityManagerClick_() {
-    // TODO(crbug.com/438666322): Update routing once the Identity docs subpage is created.
-    Router.getInstance().navigateTo(routes.BASIC);
+    Router.getInstance().navigateTo(routes.YOUR_SAVED_INFO_IDENTITY_DOCS);
   }
 
   /**

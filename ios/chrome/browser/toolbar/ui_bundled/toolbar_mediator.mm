@@ -69,9 +69,6 @@
   BOOL _isNTP;
   /// Last trait collection of the toolbars.
   UITraitCollection* _toolbarTraitCollection;
-  /// Preferred toolbar to contain the omnibox.
-  ToolbarType _preferredOmniboxPosition;
-
   /// Whether SafariSwitcher should be checked on FRE.
   BOOL _shouldCheckSafariSwitcherOnFRE;
   /// Whether the NTP was shown in FRE.
@@ -243,6 +240,10 @@
   }
 
   if (omnibox::ForceBottomOmniboxInEditState()) {
+    if (IsCompactHeight(_toolbarTraitCollection)) {
+      return ToolbarType::kPrimary;
+    }
+
     return ToolbarType::kSecondary;
   }
 

@@ -32,6 +32,7 @@
 #include "third_party/blink/public/common/features.h"
 #include "third_party/blink/public/common/features_generated.h"
 #include "ui/android/ui_android_features.h"
+#include "ui/base/ui_base_features.h"
 #include "ui/gl/gl_features.h"
 #include "ui/gl/gl_switches.h"
 
@@ -112,6 +113,11 @@ void AwFieldTrials::RegisterFeatureOverrides(base::FeatureList* feature_list) {
 
   // Disable scrollbar-width on WebView.
   aw_feature_overrides.DisableFeature(blink::features::kScrollbarWidth);
+
+  // TODO(crbug.com/402144902): Remove this once webview experiment has
+  // concluded.
+  aw_feature_overrides.DisableFeature(
+      ::features::kSendEmptyGestureScrollUpdate);
 
   // Disable Populating the VisitedLinkDatabase on WebView.
   aw_feature_overrides.DisableFeature(history::kPopulateVisitedLinkDatabase);
@@ -286,10 +292,6 @@ void AwFieldTrials::RegisterFeatureOverrides(base::FeatureList* feature_list) {
   // Partitioned :visited links history is not supported on WebView.
   aw_feature_overrides.DisableFeature(
       blink::features::kPartitionVisitedLinkDatabaseWithSelfLinks);
-
-  // Disable draw cutout edge-to-edge on WebView. Safe area insets are not
-  // handled correctly when WebView is drawing edge-to-edge.
-  aw_feature_overrides.DisableFeature(features::kDrawCutoutEdgeToEdge);
 
   // Explicitly disable PrefetchProxy instead of relying only on passing an
   // empty URL.

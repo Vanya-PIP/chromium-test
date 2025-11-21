@@ -4,6 +4,8 @@
 
 package org.chromium.chrome.browser.ui;
 
+import static org.chromium.build.NullUtil.assumeNonNull;
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.ComponentName;
@@ -13,6 +15,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Browser;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +48,7 @@ import org.chromium.chrome.browser.ActivityTabProvider;
 import org.chromium.chrome.browser.ActivityUtils;
 import org.chromium.chrome.browser.ChromeActionModeHandler;
 import org.chromium.chrome.browser.IntentHandler;
+import org.chromium.chrome.browser.IntentHandler.TabOpenType;
 import org.chromium.chrome.browser.app.tabmodel.ArchivedTabModelOrchestrator;
 import org.chromium.chrome.browser.app.tabwindow.TabWindowManagerSingleton;
 import org.chromium.chrome.browser.automotivetoolbar.AutomotiveBackButtonToolbarCoordinator;
@@ -136,12 +140,16 @@ import org.chromium.chrome.browser.tab.TabLaunchType;
 import org.chromium.chrome.browser.tab.TabLoadIfNeededCaller;
 import org.chromium.chrome.browser.tab.TabObscuringHandler;
 import org.chromium.chrome.browser.tab.TabObscuringHandlerSupplier;
+import org.chromium.chrome.browser.tab.TabSelectionType;
 import org.chromium.chrome.browser.tab_ui.RecyclerViewPosition;
 import org.chromium.chrome.browser.tab_ui.TabContentManager;
 import org.chromium.chrome.browser.tab_ui.TabSwitcher;
 import org.chromium.chrome.browser.tabmodel.TabCreator;
 import org.chromium.chrome.browser.tabmodel.TabCreatorManager;
+import org.chromium.chrome.browser.tabmodel.TabModel;
 import org.chromium.chrome.browser.tabmodel.TabModelSelector;
+import org.chromium.chrome.browser.tabmodel.TabModelUtils;
+import org.chromium.chrome.browser.tabwindow.TabWindowInfo;
 import org.chromium.chrome.browser.theme.TopUiThemeColorProvider;
 import org.chromium.chrome.browser.toolbar.ToolbarIntentMetadata;
 import org.chromium.chrome.browser.toolbar.ToolbarManager;
@@ -156,7 +164,10 @@ import org.chromium.chrome.browser.ui.appmenu.AppMenuCoordinator;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuCoordinatorFactory;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuDelegate;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuHandler;
+import org.chromium.chrome.browser.ui.appmenu.AppMenuItemProperties;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuObserver;
+import org.chromium.chrome.browser.ui.appmenu.AppMenuSubmenuHeaderItemProperties;
+import org.chromium.chrome.browser.ui.appmenu.AppMenuUtil;
 import org.chromium.chrome.browser.ui.browser_window.ChromeAndroidTask;
 import org.chromium.chrome.browser.ui.desktop_windowing.AppHeaderUtils;
 import org.chromium.chrome.browser.ui.edge_to_edge.EdgeToEdgeController;
@@ -212,10 +223,14 @@ import org.chromium.ui.base.PageTransition;
 import org.chromium.ui.display.DisplayAndroid;
 import org.chromium.ui.display.DisplayUtil;
 import org.chromium.ui.edge_to_edge.EdgeToEdgeManager;
+import org.chromium.ui.hierarchicalmenu.HierarchicalMenuController;
+import org.chromium.ui.hierarchicalmenu.HierarchicalMenuController.SubmenuHeaderFactory;
 import org.chromium.ui.modaldialog.ModalDialogManager;
 import org.chromium.ui.modaldialog.ModalDialogManager.ModalDialogManagerObserver;
+import org.chromium.ui.modelutil.MVCListAdapter.ListItem;
 import org.chromium.ui.modelutil.PropertyModel;
 import org.chromium.ui.widget.Toast;
+import org.chromium.url.GURL;
 
 import java.lang.ref.WeakReference;
 import java.util.function.BooleanSupplier;
@@ -1684,7 +1699,7 @@ public class RootUiCoordinator
                                 quickDeleteController.showDialog();
                             },
                             TabWindowManagerSingleton::getInstance,
-                            IntentHandler::bringTabToFront);
+                            this::bringTabToFront);
 
             mToolbarManager =
                     new ToolbarManager(
@@ -1843,6 +1858,22 @@ public class RootUiCoordinator
         // TODO(crbug.com/40613711): Revisit this as part of the broader
         // discussion around activity-specific UI customizations.
         if (mSupportsAppMenuSupplier.getAsBoolean()) {
+            SubmenuHeaderFactory submenuHeaderFactory =
+                    (clickedItem, backRunnable) -> {
+                        PropertyModel.Builder builder =
+                                new PropertyModel.Builder(
+                                        AppMenuSubmenuHeaderItemProperties.ALL_KEYS);
+                        HierarchicalMenuController.populateDefaultHeaderProperties(
+                                builder,
+                                new AppMenuUtil.AppMenuKeyProvider(),
+                                clickedItem.model.get(AppMenuItemProperties.TITLE),
+                                backRunnable);
+                        builder.with(
+                                AppMenuItemProperties.MENU_ITEM_ID, R.id.submenu_header_menu_id);
+                        return new ListItem(
+                                AppMenuHandler.AppMenuItemType.SUBMENU_HEADER, builder.build());
+                    };
+
             mAppMenuCoordinator =
                     AppMenuCoordinatorFactory.createAppMenuCoordinator(
                             mActivity,
@@ -1856,7 +1887,8 @@ public class RootUiCoordinator
                                     .findViewById(R.id.menu_anchor_stub),
                             this::getAppRectOnScreen,
                             mWindowAndroid,
-                            mBrowserControlsManager);
+                            mBrowserControlsManager,
+                            submenuHeaderFactory);
             AppMenuCoordinatorFactory.setExceptionReporter(
                     ChromePureJavaExceptionReporter::reportJavaException);
 
@@ -2348,6 +2380,29 @@ public class RootUiCoordinator
         if (ChromeFeatureList.isEnabled(ChromeFeatureList.BOARDING_PASS_DETECTOR)) {
             mBoardingPassController = new BoardingPassController(mActivityTabProvider);
         }
+    }
+
+    private void bringTabToFront(TabWindowInfo tabWindowInfo, GURL url) {
+        TabModel tabModel = tabWindowInfo.tabModel;
+        int tabId = tabWindowInfo.tab.getId();
+
+        // Switch to the tab directly if it is in same TabModel.
+        if (assumeNonNull(mTabModelSelectorSupplier.get()).getCurrentModel() == tabModel) {
+            int tabIndex = TabModelUtils.getTabIndexById(tabModel, tabId);
+            // In the event the user deleted the tab as part during the interaction with the
+            // Omnibox, reject the switch to tab action.
+            if (tabIndex == TabModel.INVALID_TAB_INDEX) return;
+            tabModel.setIndex(tabIndex, TabSelectionType.FROM_OMNIBOX);
+            return;
+        }
+
+        Intent intent = new Intent(mActivity, mActivity.getClass());
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url.getSpec()));
+        intent.putExtra(Browser.EXTRA_APPLICATION_ID, mActivity.getPackageName());
+        intent.putExtra(TabOpenType.REUSE_TAB_MATCHING_ID_STRING, tabId);
+        IntentHandler.setTabLaunchType(intent, TabLaunchType.FROM_OMNIBOX);
+        MultiWindowUtils.launchIntentInMaybeClosedWindow(mActivity, intent, tabWindowInfo.windowId);
     }
 
     // Testing methods
