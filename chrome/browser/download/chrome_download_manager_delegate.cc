@@ -70,7 +70,7 @@
 #include "components/offline_pages/buildflags/buildflags.h"
 #include "components/pdf/common/constants.h"
 #include "components/pdf/common/pdf_util.h"
-#include "components/policy/content/policy_blocklist_service.h"
+#include "components/policy/core/browser/url_list/policy_blocklist_service.h"
 #include "components/policy/core/common/policy_pref_names.h"
 #include "components/pref_registry/pref_registry_syncable.h"
 #include "components/prefs/pref_member.h"
@@ -1261,7 +1261,8 @@ void ChromeDownloadManagerDelegate::OpenDownload(DownloadItem* download) {
   }
 
   Browser* browser = chrome::ScopedTabbedBrowserDisplayer(profile_).browser();
-  CHECK(browser && browser->CanSupportWindowFeature(Browser::FEATURE_TABSTRIP));
+  CHECK(browser && browser->CanSupportWindowFeature(
+                       Browser::WindowFeature::kFeatureTabStrip));
   content::OpenURLParams params(
       net::FilePathToFileURL(download->GetTargetFilePath()),
       content::Referrer(), WindowOpenDisposition::NEW_FOREGROUND_TAB,

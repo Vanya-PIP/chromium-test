@@ -6105,10 +6105,6 @@ const FeatureEntry kFeatureEntries[] = {
      flag_descriptions::kPulseaudioLoopbackForScreenShareDescription, kOsLinux,
      FEATURE_VALUE_TYPE(media::kPulseaudioLoopbackForScreenShare)},
 
-    {"simplified-tab-drag-ui", flag_descriptions::kSimplifiedTabDragUIName,
-     flag_descriptions::kSimplifiedTabDragUIDescription, kOsLinux,
-     FEATURE_VALUE_TYPE(features::kAllowWindowDragUsingSystemDragDrop)},
-
     {"wayland-per-window-scaling",
      flag_descriptions::kWaylandPerWindowScalingName,
      flag_descriptions::kWaylandPerWindowScalingDescription, kOsLinux,
@@ -8079,6 +8075,12 @@ const FeatureEntry kFeatureEntries[] = {
      kOsAndroid,
      FEATURE_VALUE_TYPE(
          chrome::android::kAnnotatedPageContentsVirtualStructure)},
+
+    {"auto-revoke-suspicious-notification",
+     flag_descriptions::kAutoRevokeSuspiciousNotificationName,
+     flag_descriptions::kAutoRevokeSuspiciousNotificationDescription,
+     kOsAndroid,
+     FEATURE_VALUE_TYPE(safe_browsing::kAutoRevokeSuspiciousNotification)},
 
 #endif  // BUILDFLAG(IS_ANDROID)
 

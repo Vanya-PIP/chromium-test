@@ -265,23 +265,12 @@ export class ComposeboxElement extends I18nMixinLit
     const changedPrivateProperties =
         changedProperties as Map<PropertyKey, unknown>;
 
-    let showDropdownUpdated = changedPrivateProperties.has('showDropdown_');
     // When the result initially gets set check if dropdown should show.
     if (changedPrivateProperties.has('input_') ||
         changedPrivateProperties.has('result_') ||
         changedPrivateProperties.has('contextFilesSize_') ||
         changedPrivateProperties.has('errorScrimVisible_')) {
-      const prevValue = this.showDropdown_;
       this.showDropdown_ = this.computeShowDropdown_();
-      showDropdownUpdated ||= this.showDropdown_ !== prevValue;
-    }
-    if (this.ntpRealboxNextEnabled && showDropdownUpdated) {
-      this.dispatchEvent(
-          new CustomEvent('composebox-dropdown-visible-changed', {
-            bubbles: true,
-            composed: true,
-            detail: {value: this.showDropdown_},
-          }));
     }
   }
 
@@ -804,7 +793,7 @@ export class ComposeboxElement extends I18nMixinLit
     // If the composebox is expandable, collapse it and clear the input after
     // submitting.
     if (this.isCollapsible) {
-      this.setText('');
+      this.clearAllInputs();
       this.$.input.blur();
       this.submitEnabled_ = false;
     }
@@ -949,6 +938,14 @@ export class ComposeboxElement extends I18nMixinLit
     }
     this.lastQueriedInput_ = this.input_;
     this.searchboxHandler_.queryAutocomplete(this.input_, false);
+  }
+
+  private clearAllInputs() {
+    this.input_ = '';
+    this.$.context.resetContextFiles();
+    this.contextFilesSize_ = 0;
+    this.smartComposeInlineHint_ = '';
+    this.searchboxHandler_.clearFiles();
   }
 }
 

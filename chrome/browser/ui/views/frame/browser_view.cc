@@ -553,7 +553,8 @@ bool ShouldShowWindowIcon(const Browser* browser,
     return false;
   }
 #endif
-  return browser->SupportsWindowFeature(Browser::FEATURE_TITLEBAR);
+  return browser->SupportsWindowFeature(
+      Browser::WindowFeature::kFeatureTitleBar);
 }
 
 #if BUILDFLAG(IS_MAC)
@@ -1253,7 +1254,8 @@ bool BrowserView::GetTabStripVisible() const {
 bool BrowserView::ShouldDrawTabStrip() const {
   // Return false if this window does not normally display a tabstrip or if the
   // tabstrip is currently hidden, e.g. because we're in fullscreen.
-  if (!browser_->SupportsWindowFeature(Browser::FEATURE_TABSTRIP)) {
+  if (!browser_->SupportsWindowFeature(
+          Browser::WindowFeature::kFeatureTabStrip)) {
     return false;
   }
 
@@ -1320,7 +1322,8 @@ WebContents* BrowserView::GetActiveWebContents() {
 }
 
 bool BrowserView::GetSupportsTabStrip() const {
-  return browser_->CanSupportWindowFeature(Browser::FEATURE_TABSTRIP);
+  return browser_->CanSupportWindowFeature(
+      Browser::WindowFeature::kFeatureTabStrip);
 }
 
 bool BrowserView::GetIsNormalType() const {
@@ -2341,7 +2344,8 @@ TabDragDelegate* BrowserView::GetTabDragDelegate(
 void BrowserView::OnLockedForOnTaskUpdated() {
   bool locked_for_on_task = browser()->IsLockedForOnTask();
   // Use immersive mode for tabbed PWA.
-  if (browser()->CanSupportWindowFeature(Browser::FEATURE_TABSTRIP)) {
+  if (browser()->CanSupportWindowFeature(
+          Browser::WindowFeature::kFeatureTabStrip)) {
     GetNativeWindow()->SetProperty(chromeos::kUseImmersiveInTrustedPinned,
                                    locked_for_on_task);
   }
@@ -2925,7 +2929,8 @@ void BrowserView::MaybeShowTabStripToolbarButtonIPH() {
 }
 
 bool BrowserView::IsBookmarkBarVisible() const {
-  if (!browser_->SupportsWindowFeature(Browser::FEATURE_BOOKMARKBAR)) {
+  if (!browser_->SupportsWindowFeature(
+          Browser::WindowFeature::kFeatureBookmarkBar)) {
     return false;
   }
   if (!bookmark_bar_view_) {
@@ -2979,8 +2984,10 @@ bool BrowserView::IsToolbarVisible() const {
   // It's possible to reach here before we've been notified of being added to a
   // widget, so |toolbar_| is still null.  Return false in this case so callers
   // don't assume they can access the toolbar yet.
-  return (browser_->SupportsWindowFeature(Browser::FEATURE_TOOLBAR) ||
-          browser_->SupportsWindowFeature(Browser::FEATURE_LOCATIONBAR)) &&
+  return (browser_->SupportsWindowFeature(
+              Browser::WindowFeature::kFeatureToolbar) ||
+          browser_->SupportsWindowFeature(
+              Browser::WindowFeature::kFeatureLocationBar)) &&
          toolbar_;
 }
 
@@ -2989,7 +2996,8 @@ bool BrowserView::IsToolbarShowing() const {
 }
 
 bool BrowserView::IsLocationBarVisible() const {
-  return browser_->SupportsWindowFeature(Browser::FEATURE_LOCATIONBAR) &&
+  return browser_->SupportsWindowFeature(
+             Browser::WindowFeature::kFeatureLocationBar) &&
          GetLocationBarView()->GetVisible();
 }
 
@@ -4018,18 +4026,38 @@ BrowserView::GetNativeViewHostsForTopControlsSlide() {
   return results;
 }
 
+void BrowserView::ReparentTopContainerForStartOfImmersive() {
+  top_container()->SetPaintToLayer();
+  top_container()->layer()->SetFillsBoundsOpaquely(false);
+
+#if BUILDFLAG(IS_MAC)
+  if (!UsesImmersiveFullscreenTabbedMode()) {
+    top_container()->AddChildViewAt(tab_strip_region_view_.get(), 0);
+  }
+#endif  // BUILDFLAG(IS_MAC)
+
+#if BUILDFLAG(IS_CHROMEOS)
+  top_container()->SetBackground(
+      views::CreateSolidBackground(ui::kColorFrameActive));
+  top_container()->AddChildViewAt(tab_strip_region_view_.get(), 0);
+#endif  // BUILDFLAG(IS_CHROMEOS)
+
+  if (web_app_frame_toolbar_) {
+    top_container()->AddChildView(web_app_frame_toolbar_);
+  }
+  if (web_app_window_title_) {
+    top_container()->AddChildView(web_app_window_title_);
+  }
+
+  CHECK(overlay_view_tracker_);
+  overlay_view_tracker_.view()->AddChildView(top_container());
+
+  overlay_view_tracker_.view()->SetVisible(true);
+}
+
 void BrowserView::ReparentTopContainerForEndOfImmersive() {
   if (top_container()->parent() == main_container_ &&
       tab_strip_view()->parent() == this) {
-    return;
-  }
-  // TODO(crbug.com/442255944): In the case top_container() is not a child of
-  // main_container_, we expect the overlay widget and overlay view to still be
-  // present. Investigate why this may not always be the case on Mac and remove
-  // this check.
-  if (!overlay_view_tracker_) {
-    LOG(ERROR) << "ReparentTopContainerForEndOfImmersive() called after "
-                  "overlay_view_ destroyed.";
     return;
   }
 
@@ -4099,7 +4127,8 @@ bool BrowserView::ShouldShowWindowTitle() const {
   }
 #endif
 
-  return browser_->SupportsWindowFeature(Browser::FEATURE_TITLEBAR);
+  return browser_->SupportsWindowFeature(
+      Browser::WindowFeature::kFeatureTitleBar);
 }
 
 bool BrowserView::ShouldShowWindowIcon() const {
@@ -5282,7 +5311,8 @@ void BrowserView::InfoBarContainerStateChanged(bool is_animating) {
 void BrowserView::MaybeInitializeWebUITabStrip() {
 #if BUILDFLAG(ENABLE_WEBUI_TAB_STRIP)
   TRACE_EVENT0("ui", "BrowserView::MaybeInitializeWebUITabStrip");
-  if (browser_->CanSupportWindowFeature(Browser::FEATURE_TABSTRIP) &&
+  if (browser_->CanSupportWindowFeature(
+          Browser::WindowFeature::kFeatureTabStrip) &&
       WebUITabStripContainerView::UseTouchableTabStrip(browser_.get())) {
     if (!webui_tab_strip_) {
       // We use |contents_container_| here so that enabling or disabling
@@ -5399,7 +5429,8 @@ ContentsLayoutManager* BrowserView::GetContentsLayoutManager() const {
 
 bool BrowserView::MaybeShowBookmarkBar(WebContents* contents) {
   const bool show_bookmark_bar =
-      contents && browser_->SupportsWindowFeature(Browser::FEATURE_BOOKMARKBAR);
+      contents && browser_->SupportsWindowFeature(
+                      Browser::WindowFeature::kFeatureBookmarkBar);
   if (!show_bookmark_bar && !bookmark_bar_view_.get()) {
     return false;
   }
@@ -5777,7 +5808,8 @@ void BrowserView::UpdateAcceleratorMetrics(const ui::Accelerator& accelerator,
                               BookmarkEntryPoint::kAccelerator);
   }
   if (command_id == IDC_NEW_TAB &&
-      browser_->SupportsWindowFeature(Browser::FEATURE_TABSTRIP)) {
+      browser_->SupportsWindowFeature(
+          Browser::WindowFeature::kFeatureTabStrip)) {
     TabStripModel* const model = browser_->tab_strip_model();
     const auto group_id = model->GetTabGroupForTab(model->active_index());
     if (group_id.has_value()) {
@@ -6015,16 +6047,6 @@ Profile* BrowserView::GetProfile() {
 
 ///////////////////////////////////////////////////////////////////////////////
 // BrowserView, ImmersiveModeController::Observer implementation:
-void BrowserView::OnImmersiveRevealStarted() {
-  CHECK(overlay_view_tracker_);
-  overlay_view_tracker_.view()->SetVisible(true);
-}
-
-void BrowserView::OnImmersiveRevealEnded() {
-  CHECK(overlay_view_tracker_);
-  overlay_view_tracker_.view()->SetVisible(false);
-}
-
 void BrowserView::OnImmersiveFullscreenEntered() {
   AppMenuButton* app_menu_button =
       toolbar_button_provider()->GetAppMenuButton();
@@ -6032,30 +6054,10 @@ void BrowserView::OnImmersiveFullscreenEntered() {
     app_menu_button->CloseMenu();
   }
 
-  top_container()->SetPaintToLayer();
-  top_container()->layer()->SetFillsBoundsOpaquely(false);
+  ReparentTopContainerForStartOfImmersive();
 
-#if BUILDFLAG(IS_MAC)
-  if (!UsesImmersiveFullscreenTabbedMode()) {
-    top_container()->AddChildViewAt(tab_strip_region_view_.get(), 0);
-  }
-#endif  // BUILDFLAG(IS_MAC)
-
-#if BUILDFLAG(IS_CHROMEOS)
-  top_container()->SetBackground(
-      views::CreateSolidBackground(ui::kColorFrameActive));
-  top_container()->AddChildViewAt(tab_strip_region_view_.get(), 0);
-#endif  // BUILDFLAG(IS_CHROMEOS)
-
-  if (web_app_frame_toolbar_) {
-    top_container()->AddChildView(web_app_frame_toolbar_);
-  }
-  if (web_app_window_title_) {
-    top_container()->AddChildView(web_app_window_title_);
-  }
-
-  CHECK(overlay_view_tracker_);
-  overlay_view_tracker_.view()->AddChildView(top_container());
+  InvalidateLayout();
+  GetWidget()->GetRootView()->DeprecatedLayoutImmediately();
 }
 
 void BrowserView::OnImmersiveFullscreenExited() {
@@ -6071,7 +6073,9 @@ void BrowserView::OnImmersiveFullscreenExited() {
 #endif  // BUILDFLAG(IS_CHROMEOS)
 
   ReparentTopContainerForEndOfImmersive();
-  OnImmersiveRevealEnded();
+
+  InvalidateLayout();
+  GetWidget()->GetRootView()->DeprecatedLayoutImmediately();
 }
 
 void BrowserView::OnImmersiveModeControllerDestroyed() {

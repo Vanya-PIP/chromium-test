@@ -8,21 +8,22 @@ import static org.chromium.build.NullUtil.assumeNonNull;
 
 import android.os.SystemClock;
 
-import org.chromium.base.Log;
 import org.chromium.base.ObserverList;
 import org.chromium.base.Token;
+import org.chromium.base.metrics.RecordHistogram;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.tab.CollectionSaveForwarder;
+import org.chromium.chrome.browser.tab.StorageLoadedData;
+import org.chromium.chrome.browser.tab.StorageLoadedData.LoadedTabState;
 import org.chromium.chrome.browser.tab.Tab;
 import org.chromium.chrome.browser.tab.TabId;
 import org.chromium.chrome.browser.tab.TabState;
 import org.chromium.chrome.browser.tab.TabStateAttributes;
 import org.chromium.chrome.browser.tab.TabStateAttributes.DirtinessState;
 import org.chromium.chrome.browser.tab.TabStateStorageService;
-import org.chromium.chrome.browser.tab.TabStateStorageService.LoadedTabState;
 import org.chromium.chrome.browser.tabmodel.TabCreatorManager;
 import org.chromium.chrome.browser.tabmodel.TabGroupModelFilter;
 import org.chromium.chrome.browser.tabmodel.TabGroupModelFilterObserver;
@@ -333,15 +334,15 @@ public class TabStateStore implements TabPersistentStore {
 
     private void loadAllTabsFromService() {
         long loadStartTime = SystemClock.elapsedRealtime();
-        mTabStateStorageService.loadAllTabs(
-                (loadedTabStates) -> onTabsLoaded(loadedTabStates, loadStartTime));
+        mTabStateStorageService.loadAllData(data -> onDataLoaded(data, loadStartTime));
     }
 
-    private void onTabsLoaded(LoadedTabState[] loadedTabStates, long loadStartTime) {
+    private void onDataLoaded(StorageLoadedData data, long loadStartTime) {
+        LoadedTabState[] loadedTabStates = data.getLoadedTabStates();
         long duration = SystemClock.elapsedRealtime() - loadStartTime;
-        Log.i(TAG, "Loaded %d tabs in %dms", loadedTabStates.length, duration);
-        mRestoredTabCount = loadedTabStates.length;
+        RecordHistogram.recordTimesHistogram("Tabs.TabStateStore.LoadAllTabsDuration", duration);
 
+        mRestoredTabCount = loadedTabStates.length;
         for (TabPersistentStoreObserver observer : mObservers) {
             observer.onInitialized(mRestoredTabCount);
         }
@@ -374,6 +375,7 @@ public class TabStateStore implements TabPersistentStore {
         for (TabPersistentStoreObserver observer : mObservers) {
             observer.onStateLoaded();
         }
+
         if (!ChromeFeatureList.sTabStorageSqlitePrototypeAuthoritativeReadSource.getValue()) {
             // When we aren't the authoritative source we don't trust ourselves to be correct.
             // Raze the db and rebuild from the loaded tab state to ensure we are in a known good
@@ -382,6 +384,7 @@ public class TabStateStore implements TabPersistentStore {
             clearState();
             catchUpAndBeginTracking();
         }
+        data.destroy();
     }
 
     private @Nullable Tab resolveTab(TabState tabState, @TabId int tabId, int index) {

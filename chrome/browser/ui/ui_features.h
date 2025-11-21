@@ -20,10 +20,6 @@ namespace features {
 // All features in alphabetical order. The features should be documented
 // alongside the definition of their values in the .cc file.
 
-// TODO(crbug.com/40598679): Remove this when the tab dragging
-// interactive_ui_tests pass on Wayland.
-BASE_DECLARE_FEATURE(kAllowWindowDragUsingSystemDragDrop);
-
 BASE_DECLARE_FEATURE(kAllowEyeDropperWGCScreenCapture);
 
 BASE_DECLARE_FEATURE(kCloseOmniboxPopupOnInactiveAreaClick);
@@ -224,6 +220,8 @@ BASE_DECLARE_FEATURE(kSideBySideKeyboardShortcut);
 
 bool IsSideBySideKeyboardShortcutEnabled();
 
+BASE_DECLARE_FEATURE(kTabbedBrowserUseNewLayout);
+
 BASE_DECLARE_FEATURE(kTabDuplicateMetrics);
 
 BASE_DECLARE_FEATURE(kTabScrollingButtonPosition);
@@ -345,8 +343,6 @@ BASE_DECLARE_FEATURE(kEnterpriseBadgingForNtpFooter);
 BASE_DECLARE_FEATURE(kNTPFooterBadgingPolicies);
 BASE_DECLARE_FEATURE(kEnterpriseManagementDisclaimerUsesCustomLabel);
 BASE_DECLARE_FEATURE(kManagedProfileRequiredInterstitial);
-
-BASE_DECLARE_FEATURE(kUseNewTabbedBrowserLayout);
 
 BASE_DECLARE_FEATURE(kWebUITabStrip);
 
