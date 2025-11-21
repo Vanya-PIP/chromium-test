@@ -7,14 +7,8 @@
 #include "base/time/time.h"
 #include "base/types/expected.h"
 #include "chrome/common/actor/action_result.h"
-<<<<<<< HEAD
-#include "chrome/common/actor/actor_test"
-||||||| 3ec080c8b46cc
-#include "chrome/common/actor/actor_logging.h"
-=======
 #include "chrome/common/actor/actor_logging.h"
 #include "chrome/common/chrome_features.h"
->>>>>>> 144.0.7503.0~1
 #include "chrome/renderer/actor/tool_utils.h"
 #include "content/public/renderer/render_frame.h"
 #include "third_party/abseil-cpp/absl/strings/str_format.h"
