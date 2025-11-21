@@ -6,14 +6,6 @@
 
 #include <optional>
 
-<<<<<<< HEAD
-#include "base/debug/crash_test"
-#include "base/debug/dump_without_crashing.h"
-||||||| ff3e023445af7
-#include "base/debug/crash_logging.h"
-#include "base/debug/dump_without_crashing.h"
-=======
->>>>>>> 144.0.7501.0~1
 #include "components/content_settings/core/browser/host_content_settings_map.h"
 #include "components/prefs/pref_service.h"
 #include "components/signin/public/identity_manager/identity_manager.h"
