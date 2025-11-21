@@ -8,19 +8,9 @@
 #include <wrl.h>
 
 #include "base/command_line.h"
-<<<<<<< HEAD
-#include "base/test"
-#include "base/native_library.h"
-#include "base/path_service.h"
-||||||| ff3e023445af7
-#include "base/logging.h"
-#include "base/native_library.h"
-#include "base/path_service.h"
-=======
 #include "base/files/file_path.h"
 #include "base/logging.h"
 #include "base/strings/cstring_view.h"
->>>>>>> 144.0.7501.0~1
 #include "base/strings/string_util_win.h"
 #include "services/webnn/public/cpp/platform_functions_win.h"
 #include "services/webnn/webnn_switches.h"

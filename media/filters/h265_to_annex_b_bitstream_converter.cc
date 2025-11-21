@@ -6,15 +6,9 @@
 
 #include <stddef.h>
 
-<<<<<<< HEAD
-#include "base/test"
-||||||| ff3e023445af7
-#include "base/logging.h"
-=======
 #include "base/check_op.h"
 #include "base/containers/span_reader.h"
 #include "base/logging.h"
->>>>>>> 144.0.7501.0~1
 #include "media/formats/mp4/box_definitions.h"
 #include "media/formats/mp4/hevc.h"
 #include "media/parsers/h265_nalu_parser.h"
