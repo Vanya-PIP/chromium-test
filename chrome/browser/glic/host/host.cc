@@ -435,6 +435,12 @@ void Host::SendViewChangeRequest(mojom::ViewChangeRequestPtr change_request) {
   }
 }
 
+void Host::NotifyInstanceActivationChanged(bool is_active) {
+  if (handler_info_ && handler_info_->web_client) {
+    handler_info_->web_client->NotifyInstanceActivationChanged(is_active);
+  }
+}
+
 void Host::NotifyAdditionalContext(mojom::AdditionalContextPtr context) {
   if (auto* client = GetPrimaryWebClient()) {
     client->NotifyAdditionalContext(std::move(context));
@@ -592,7 +598,7 @@ Host* HostManager::WebUIPageHandlerAdded(GlicPageHandler* page_handler) {
   // In multi-instance mode, no instance is used for now. We should consider
   // just creating new instances for these hosts.
   GlicInstance* glic_instance = nullptr;
-  if (!base::FeatureList::IsEnabled(features::kGlicMultiInstance)) {
+  if (!GlicEnabling::IsMultiInstanceEnabledByFlags()) {
     glic_instance =
         static_cast<GlicWindowControllerInterface*>(window_controller_.get());
   }

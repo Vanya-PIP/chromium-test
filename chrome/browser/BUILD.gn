@@ -1912,6 +1912,7 @@ static_library("browser") {
     "//chrome/browser/legion",
     "//chrome/browser/lifetime:termination_notification",
     "//chrome/browser/media:access_handler",
+    "//chrome/browser/media:access_handler_impl",
     "//chrome/browser/media/prefs",
     "//chrome/browser/media/router",
     "//chrome/browser/media/router:media_router_feature",
@@ -1935,6 +1936,7 @@ static_library("browser") {
     "//chrome/browser/page_info:impl",
     "//chrome/browser/passage_embeddings",
     "//chrome/browser/password_manager",
+    "//chrome/browser/payments/browser_binding:browser_bound_key_deleter",
     "//chrome/browser/permissions",
     "//chrome/browser/persisted_state_db",
     "//chrome/browser/picture_in_picture",
@@ -2318,7 +2320,6 @@ static_library("browser") {
     "//components/password_manager/core/browser/sharing",
     "//components/password_manager/core/common",
     "//components/payments/content:utils",
-    "//components/payments/content/browser_binding:browser_bound_key_deleter",
     "//components/payments/core",
     "//components/pdf/common:constants",
     "//components/pdf/common:util",
@@ -2912,6 +2913,8 @@ static_library("browser") {
       "android/site_settings/chrome_site_settings_delegate.cc",
       "android/startup_bridge.cc",
       "android/startup_bridge.h",
+      "android/storage_loaded_data_android.cc",
+      "android/storage_loaded_data_android.h",
       "android/tab_android.cc",
       "android/tab_android.h",
       "android/tab_android_data_provider.h",
@@ -3751,25 +3754,6 @@ static_library("browser") {
       "data_sharing/desktop/data_sharing_sdk_delegate_desktop.h",
       "data_sharing/desktop/data_sharing_ui_delegate_desktop.cc",
       "data_sharing/desktop/data_sharing_ui_delegate_desktop.h",
-      "device_api/device_attribute_api.cc",
-      "device_api/device_attribute_api.h",
-      "device_api/device_service_impl.cc",
-      "device_api/device_service_impl.h",
-      "device_api/managed_configuration_api.cc",
-      "device_api/managed_configuration_api.h",
-      "device_api/managed_configuration_api_factory.cc",
-      "device_api/managed_configuration_api_factory.h",
-      "device_api/managed_configuration_service.cc",
-      "device_api/managed_configuration_service.h",
-      "device_api/managed_configuration_store.cc",
-      "device_api/managed_configuration_store.h",
-      "device_identity/device_identity_provider.cc",
-      "device_identity/device_identity_provider.h",
-      "device_identity/device_oauth2_token_service.cc",
-      "device_identity/device_oauth2_token_service.h",
-      "device_identity/device_oauth2_token_service_factory.cc",
-      "device_identity/device_oauth2_token_service_factory.h",
-      "device_identity/device_oauth2_token_store.h",
       "diagnostics/diagnostics_controller.cc",
       "diagnostics/diagnostics_controller.h",
       "diagnostics/diagnostics_model.cc",
@@ -4313,18 +4297,14 @@ static_library("browser") {
       "webauthn/unexportable_key_utils.h",
     ]
 
-    if (use_aura) {
-      sources += [
-        "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service.cc",
-        "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service.h",
-        "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service_delegate.cc",
-        "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service_delegate.h",
-        "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service_factory.cc",
-        "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service_factory.h",
-      ]
-
-      deps += [ "//ui/aura" ]
-    }
+    sources += [
+      "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service.cc",
+      "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service.h",
+      "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service_delegate.cc",
+      "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service_delegate.h",
+      "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service_factory.cc",
+      "web_applications/isolated_web_apps/window_management/isolated_web_apps_opened_tabs_counter_service_factory.h",
+    ]
 
     #!is_android
     public_deps += [ "//ui/base/mojom:ui_base_types" ]
@@ -4348,6 +4328,9 @@ static_library("browser") {
       "//chrome/browser/contextual_cueing:impl",
       "//chrome/browser/contextual_tasks:ui",
       "//chrome/browser/contextual_tasks:ui_impl",
+      "//chrome/browser/device_api",
+      "//chrome/browser/device_api:impl",
+      "//chrome/browser/device_identity",
       "//chrome/browser/device_notifications",
       "//chrome/browser/device_notifications:impl",
       "//chrome/browser/error_reporting",
@@ -4403,6 +4386,7 @@ static_library("browser") {
       "//chrome/browser/ui/promos:impl",
       "//chrome/browser/ui/promos:utils",
       "//chrome/browser/ui/qrcode_generator",
+      "//chrome/browser/ui/read_anything",
       "//chrome/browser/ui/search",
       "//chrome/browser/ui/send_tab_to_self",
       "//chrome/browser/ui/signin",
@@ -4601,6 +4585,7 @@ static_library("browser") {
       "//chrome/browser/smart_card",
 
       # TODO(crbug.com/345487716): Remove this circular dependency.
+      "//chrome/browser/ui/read_anything",
       "//chrome/browser/ui/views/side_panel",
 
       # TODO(crbug/com/387527798): Remove circular dependencies.
@@ -4725,6 +4710,11 @@ static_library("browser") {
       # - c/b/taskbar/taskbar_decorator_win.h
       # gets componentized.
       "//chrome/browser/badging:impl",
+
+      # TODO(crbug.com/353332589): Remove this circular dependency when:
+      # - c/b/browser_process_platform_part.h
+      # - c/b/net/system_network_context_manager.h
+      "//chrome/browser/device_api:impl",
     ]
 
     #!is_android
@@ -4734,8 +4724,6 @@ static_library("browser") {
         "accessibility/soda_installer_impl.h",
         "component_updater/screen_ai_component_installer.cc",
         "component_updater/screen_ai_component_installer.h",
-        "device_identity/device_oauth2_token_store_desktop.cc",
-        "device_identity/device_oauth2_token_store_desktop.h",
         "download/bubble/download_bubble_accessible_alerts_map.cc",
         "download/bubble/download_bubble_accessible_alerts_map.h",
         "download/bubble/download_bubble_display_info.cc",
@@ -4905,10 +4893,6 @@ static_library("browser") {
       "component_updater/metadata_table_chromeos.h",
       "component_updater/smart_dim_component_installer.cc",
       "component_updater/smart_dim_component_installer.h",
-      "device_identity/chromeos/device_oauth2_token_store_chromeos.cc",
-      "device_identity/chromeos/device_oauth2_token_store_chromeos.h",
-      "device_identity/chromeos/token_encryptor.cc",
-      "device_identity/chromeos/token_encryptor.h",
       "device_reauth/chromeos/authenticator_chromeos.cc",
       "device_reauth/chromeos/authenticator_chromeos.h",
       "device_reauth/chromeos/device_authenticator_chromeos.cc",
@@ -7559,9 +7543,6 @@ static_library("browser") {
       "signin/bound_session_credentials/bound_session_request_throttled_handler_browser_impl.h",
       "signin/bound_session_credentials/bound_session_switches.cc",
       "signin/bound_session_credentials/bound_session_switches.h",
-      "signin/bound_session_credentials/keyed_unexportable_key_service.h",
-      "signin/bound_session_credentials/keyed_unexportable_key_service_impl.cc",
-      "signin/bound_session_credentials/keyed_unexportable_key_service_impl.h",
       "signin/bound_session_credentials/session_binding_helper.cc",
       "signin/bound_session_credentials/session_binding_helper.h",
       "signin/bound_session_credentials/throttled_gaia_auth_fetcher.cc",
@@ -7658,8 +7639,6 @@ static_library("browser") {
       "browsing_data/counters/hosted_apps_counter.h",
       "clipboard/chrome_clipboard_permission_context_delegate.cc",
       "clipboard/chrome_clipboard_permission_context_delegate.h",
-      "controlled_frame/controlled_frame_media_access_handler.cc",
-      "controlled_frame/controlled_frame_media_access_handler.h",
       "guest_view/app_view/chrome_app_view_guest_delegate.cc",
       "guest_view/app_view/chrome_app_view_guest_delegate.h",
       "guest_view/chrome_guest_view_manager_delegate.cc",
@@ -7836,6 +7815,8 @@ static_library("browser") {
     ]
     deps += [
       "//apps",
+      "//chrome/browser/controlled_frame:media_access_handler",
+      "//chrome/browser/controlled_frame:media_access_handler_impl",
       "//chrome/browser/policy:policy_migrator",
       "//chrome/browser/ui/web_applications",
       "//chrome/browser/web_applications/extensions",
@@ -9061,6 +9042,7 @@ static_library("test_support") {
     "//build:chromeos_buildflags",
     "//chrome/app/theme:theme_resources",
     "//chrome/browser/history",
+    "//chrome/browser/payments/browser_binding:test_support",
     "//chrome/browser/policy/messaging_layer/proto:crd_event_proto",
     "//chrome/browser/search_engine_choice",
     "//chrome/browser/search_engines",

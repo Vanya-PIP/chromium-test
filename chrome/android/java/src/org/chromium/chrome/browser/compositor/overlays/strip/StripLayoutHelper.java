@@ -77,6 +77,7 @@ import org.chromium.chrome.browser.compositor.overlays.strip.StripLayoutGroupTit
 import org.chromium.chrome.browser.compositor.overlays.strip.StripLayoutView.StripLayoutViewOnClickHandler;
 import org.chromium.chrome.browser.compositor.overlays.strip.StripLayoutView.StripLayoutViewOnKeyboardFocusHandler;
 import org.chromium.chrome.browser.compositor.overlays.strip.StripTabModelActionListener.ActionType;
+import org.chromium.chrome.browser.compositor.overlays.strip.TabContextMenuCoordinator.AnchorInfo;
 import org.chromium.chrome.browser.compositor.overlays.strip.TabLoadTracker.TabLoadTrackerCallback;
 import org.chromium.chrome.browser.compositor.overlays.strip.TabStripIphController.IphType;
 import org.chromium.chrome.browser.compositor.overlays.strip.reorder.ReorderDelegate;
@@ -401,6 +402,7 @@ public class StripLayoutHelper
                     StripLayoutTab stripTab = findTabById(tab.getId());
                     assumeNonNull(stripTab);
                     stripTab.setIsPinned(isPinned);
+                    mPinnedTabsBoundarySupplier.set(getPinnedTabsBoundary());
                     setAccessibilityDescription(stripTab, tab);
 
                     // Compute each view's ideal position to get ready for the tab move animation
@@ -532,6 +534,9 @@ public class StripLayoutHelper
      * space on the tab strip. Constricted by MIN_TAB_WIDTH_DP and MAX_TAB_WIDTH_DP.
      */
     private final ObservableSupplierImpl<Float> mCachedTabWidthSupplier =
+            new ObservableSupplierImpl<>(0f);
+
+    private final ObservableSupplierImpl<Float> mPinnedTabsBoundarySupplier =
             new ObservableSupplierImpl<>(0f);
 
     // Reorder State
@@ -1292,6 +1297,7 @@ public class StripLayoutHelper
                     stripTab.setIsPinned(tab.getIsPinned());
                 }
             }
+            mPinnedTabsBoundarySupplier.set(getPinnedTabsBoundary());
 
             RecordHistogram.recordCount1000Histogram(
                     PLACEHOLDER_LEFTOVER_TABS_HISTOGRAM_NAME, numLeftoverPlaceholders);
@@ -1336,6 +1342,7 @@ public class StripLayoutHelper
                 mTabStripDragHandler,
                 mActionConfirmationManager,
                 mCachedTabWidthSupplier,
+                mPinnedTabsBoundarySupplier,
                 mGroupIdToHideSupplier,
                 mToolbarContainerView);
 
@@ -1613,7 +1620,7 @@ public class StripLayoutHelper
             bringSelectedTabToVisibleArea(0, false);
         } else {
             clearLastHoveredTab();
-            finishCloseAnimations();
+            finishAnimations();
             mCloseButtonMenu.dismiss();
         }
     }
@@ -1682,6 +1689,7 @@ public class StripLayoutHelper
      * @param newIndex The new index of the tab in the {@link TabModel}.
      */
     public void tabMoved(int id, int oldIndex, int newIndex) {
+        finishAnimations();
         StripLayoutTab tab = findTabById(id);
         if (tab == null || oldIndex == newIndex) return;
 
@@ -2429,7 +2437,7 @@ public class StripLayoutHelper
                             mWindowAndroid,
                             mContext,
                             (ids, toLeft) -> {
-                                assert ids.size() == 1
+                                assert ids.getAllTabIds().size() == 1
                                         : "Expected to only be able to reorder individual tabs";
                                 // Don't use anchorTab here, since that will be the anchor of the
                                 // first-opened tab context menu (it won't change when a new context
@@ -2439,7 +2447,7 @@ public class StripLayoutHelper
                                         mStripViews,
                                         mStripGroupTitles,
                                         mStripTabs,
-                                        assumeNonNull(findTabById(ids.get(0))),
+                                        assumeNonNull(findTabById(ids.getAnchorTabId())),
                                         toLeft);
                             });
         }
@@ -2447,7 +2455,8 @@ public class StripLayoutHelper
         anchorTab.getAnchorRect(anchorRectProvider.getRect());
         getAdjustedAnchorRect(anchorRectProvider);
         StripLayoutUtils.performHapticFeedback(mToolbarContainerView);
-        mTabContextMenuCoordinator.showMenu(anchorRectProvider, tabIds);
+        mTabContextMenuCoordinator.showMenu(
+                anchorRectProvider, new AnchorInfo(anchorTab.getTabId(), tabIds));
     }
 
     /**
@@ -3629,8 +3638,20 @@ public class StripLayoutHelper
 
     @Override
     public void finishAnimations() {
+        finishAnimations(/* startQueuedCloseAnimations= */ true);
+    }
+
+    /**
+     * Finishes any outstanding animations.
+     *
+     * @param startQueuedCloseAnimations True iff we should try to queue any close animations.
+     *     Should only be false when calling from the closure flow. Most, if not all, other
+     *     call-sites want this to be true to avoid interacting with stale StripLayoutTab state.
+     */
+    private void finishAnimations(boolean startQueuedCloseAnimations) {
         // Start any queued animations. This will ensure that their end state is reached, and any
         // listeners are triggered accordingly.
+        if (startQueuedCloseAnimations) queueCloseAnimationsIfAny();
         startQueuedAnimationsIfAny();
         // Force any outstanding animations to finish. Need to recurse as some animations (like the
         // multi-step tab close animation) kick off another animation once the first ends.
@@ -3679,20 +3700,23 @@ public class StripLayoutHelper
     }
 
     private void requestCloseAnimations() {
-        if (!mSelected) {
-            finishCloseAnimations();
-            return;
-        }
-        finishAnimations();
         mCloseAnimationsRequested = true;
-        mUpdateHost.requestUpdate();
+        if (!mSelected) {
+            // Intentionally called after mCloseAnimationsRequested is set to true. This is so the
+            // #queueCloseAnimationsIfAny call in #finishAnimations will succeed in queueing the
+            // close animations. They are then immediately finished in the same #finishAnimations
+            // call. This resets mCloseAnimationsRequested back to false as expected.
+            finishAnimations();
+        } else {
+            // Passes startQueuedCloseAnimations as false to prevent clobbering the close animations
+            // for any other simultaneously removed views.
+            finishAnimations(/* startQueuedCloseAnimations= */ false);
+            mUpdateHost.requestUpdate();
+        }
     }
 
     private void queueCloseAnimationsIfAny() {
-        if (mCloseAnimationsRequested) queueCloseAnimations();
-    }
-
-    private void queueCloseAnimations() {
+        if (!mCloseAnimationsRequested) return;
         mCloseAnimationsRequested = false;
 
         // TODO(crbug.com/450076798): Unify closing tabs + closing group titles logic.
@@ -3733,11 +3757,6 @@ public class StripLayoutHelper
         clearPendingMouseTabClosureState();
         mClosingTabs.clear();
         mClosingGroupTitles.clear();
-    }
-
-    private void finishCloseAnimations() {
-        queueCloseAnimations();
-        finishAnimations();
     }
 
     private AnimatorSet getAnimatorSet(

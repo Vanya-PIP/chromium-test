@@ -449,6 +449,8 @@ BASE_FEATURE(kGlicActorToctouValidation, base::FEATURE_ENABLED_BY_DEFAULT);
 
 BASE_FEATURE(kGlicActorInternalPopups, base::FEATURE_DISABLED_BY_DEFAULT);
 
+BASE_FEATURE(kGlicActorCoordinateScrollTool, base::FEATURE_ENABLED_BY_DEFAULT);
+
 // Controls whether the actor framework searches for an interaction point when
 // when the center of the target element is obscured.
 BASE_FEATURE(kGlicActorIterativeInteractionPointDiscovery,
@@ -459,6 +461,9 @@ const base::FeatureParam<size_t>
     kGlicActorInterationPointDiscoveryMaxIterations{
         &kGlicActorIterativeInteractionPointDiscovery,
         "interaction-discovery-max-iterations", 0};
+
+// Whether to use modifiers to mouse actions during the drag and release tool.
+BASE_FEATURE(kGlicActorUseDragModifiers, base::FEATURE_ENABLED_BY_DEFAULT);
 
 // Controls whether the Glic's act-on-web capability is checked for managed
 // trial clients.
@@ -829,7 +834,7 @@ const base::FeatureParam<int> kGlicTabFocusDataMaxDebounces{
 // Kill switch for activateTab API.
 BASE_FEATURE(kGlicActivateTabApi, base::FEATURE_ENABLED_BY_DEFAULT);
 // Kill switch for getTabById API.
-BASE_FEATURE(kGlicGetTabByIdApi, base::FEATURE_ENABLED_BY_DEFAULT);
+BASE_FEATURE(kGlicGetTabByIdApi, base::FEATURE_DISABLED_BY_DEFAULT);
 
 BASE_FEATURE(kGlicAssetsV2, base::FEATURE_ENABLED_BY_DEFAULT);
 
@@ -837,7 +842,7 @@ BASE_FEATURE(kGlicFaviconDataUrls, base::FEATURE_DISABLED_BY_DEFAULT);
 
 BASE_FEATURE(kGlicExtensions, base::FEATURE_ENABLED_BY_DEFAULT);
 
-BASE_FEATURE(kGlicMultitabUnderlines, base::FEATURE_DISABLED_BY_DEFAULT);
+BASE_FEATURE(kGlicMultitabUnderlines, base::FEATURE_ENABLED_BY_DEFAULT);
 
 BASE_FEATURE(kGlicWindowDragRegions, base::FEATURE_DISABLED_BY_DEFAULT);
 
@@ -1753,8 +1758,7 @@ BASE_FEATURE(kWebAppManifestIconUpdating, base::FEATURE_DISABLED_BY_DEFAULT);
 
 BASE_FEATURE(kWebAppUsePrimaryIcon, base::FEATURE_ENABLED_BY_DEFAULT);
 
-BASE_FEATURE(kWebAppPeriodicPreinstallUpdate,
-             base::FEATURE_DISABLED_BY_DEFAULT);
+BASE_FEATURE(kWebAppPeriodicPreinstallUpdate, base::FEATURE_ENABLED_BY_DEFAULT);
 
 BASE_FEATURE(kWebAppMigratePreinstalledChat, base::FEATURE_DISABLED_BY_DEFAULT);
 #endif  // !BUILDFLAG(IS_ANDROID)

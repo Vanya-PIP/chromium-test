@@ -35,7 +35,7 @@ GlicSidePanelCoordinator::GlicSidePanelCoordinator(
     tabs::TabInterface* tab,
     SidePanelRegistry* side_panel_registry)
     : tab_(tab), side_panel_registry_(side_panel_registry) {
-  CHECK(base::FeatureList::IsEnabled(features::kGlicMultiInstance));
+  CHECK(GlicEnabling::IsMultiInstanceEnabledByFlags());
   auto* glic_service = GlicKeyedServiceFactory::GetGlicKeyedService(
       tab->GetBrowserWindowInterface()->GetProfile());
   on_glic_enabled_changed_subscription_ =
@@ -95,10 +95,10 @@ void GlicSidePanelCoordinator::Show() {
 
 void GlicSidePanelCoordinator::Close() {
   auto* window_side_panel_coordinator = GetWindowSidePanelCoordinator();
-  if (!window_side_panel_coordinator || !IsShowing()) {
+  if (!window_side_panel_coordinator || !IsShowing() || !entry_) {
     return;
   }
-  window_side_panel_coordinator->Close();
+  window_side_panel_coordinator->Close(entry_->type());
 }
 
 bool GlicSidePanelCoordinator::IsShowing() const {

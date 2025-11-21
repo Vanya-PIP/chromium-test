@@ -174,11 +174,6 @@ void OffsetX(int x_offset, std::vector<gfx::Rect>* rects) {
   }
 }
 
-bool IsWindowDragUsingSystemDragDropAllowed() {
-  return base::FeatureList::IsEnabled(
-      features::kAllowWindowDragUsingSystemDragDrop);
-}
-
 void UpdateSystemDnDDragImage(TabDragContext* attached_context,
                               const gfx::ImageSkia& image) {
 #if BUILDFLAG(IS_LINUX)
@@ -1044,8 +1039,7 @@ TabDragController::Liveness TabDragController::DragBrowserToNewTabStrip(
 }
 
 bool TabDragController::ShouldDragWindowUsingSystemDnD() {
-  return IsWindowDragUsingSystemDragDropAllowed() &&
-         !GetAttachedBrowserWidget()->IsMoveLoopSupported();
+  return !GetAttachedBrowserWidget()->IsMoveLoopSupported();
 }
 
 void TabDragController::RequestTabThumbnail() {
@@ -1098,7 +1092,7 @@ void TabDragController::OnTabThumbnailAvailable(
 TabDragController::Liveness TabDragController::StartSystemDnDSessionIfNecessary(
     TabDragContext* context,
     gfx::Point point_in_screen) {
-  CHECK(IsWindowDragUsingSystemDragDropAllowed());
+  CHECK(ShouldDragWindowUsingSystemDnD());
   CHECK(ui::ResourceBundle::HasSharedInstance());
   current_state_ = DragState::kDraggingUsingSystemDnD;
 
@@ -2622,7 +2616,8 @@ bool TabDragController::CanAttachTo(gfx::NativeWindow window) {
 #endif  // BUILDFLAG(USE_AURA)
 
   // We don't allow drops on windows that don't have tabstrips.
-  if (!other_browser->SupportsWindowFeature(Browser::FEATURE_TABSTRIP)) {
+  if (!other_browser->SupportsWindowFeature(
+          Browser::WindowFeature::kFeatureTabStrip)) {
     return false;
   }
 

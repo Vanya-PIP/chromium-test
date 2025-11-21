@@ -59,6 +59,7 @@
 #include "chrome/browser/glic/widget/glic_window_controller.h"
 #include "chrome/browser/media/audio_ducker.h"
 #include "chrome/browser/permissions/system/mock_platform_handle.h"
+#include "chrome/browser/policy/profile_policy_connector.h"
 #include "chrome/browser/resource_coordinator/lifecycle_unit_state.mojom.h"
 #include "chrome/browser/resource_coordinator/tab_lifecycle_unit_external.h"
 #include "chrome/browser/signin/identity_manager_factory.h"
@@ -74,8 +75,11 @@
 #include "components/content_settings/core/common/content_settings_types.h"
 #include "components/metrics/metrics_service.h"
 #include "components/optimization_guide/content/browser/page_content_proto_provider.h"
+#include "components/policy/core/browser/browser_policy_connector.h"
 #include "components/policy/core/common/management/management_service.h"
 #include "components/policy/core/common/management/scoped_management_service_override_for_testing.h"
+#include "components/policy/core/common/mock_configuration_policy_provider.h"
+#include "components/policy/policy_constants.h"
 #include "components/prefs/pref_service.h"
 #include "components/signin/public/identity_manager/identity_manager.h"
 #include "components/signin/public/identity_manager/identity_test_utils.h"
@@ -146,7 +150,7 @@ std::vector<std::string> GetTestSuiteNames() {
       "GlicApiTestRuntimeFeatureOff",
       "GlicApiTestWithWebActuationSettingDisabled",
       "GlicApiTestWithWebActuationSettingEnabled",
-      "GlicApiTestWithActorEnabled",
+      "GlicApiTestWithGeminiActOnWebPolicy",
   };
 }
 
@@ -502,14 +506,49 @@ class GlicApiTestWithFastTimeout : public GlicApiTest {
   base::test::ScopedFeatureList features2_;
 };
 
-class GlicApiTestWithActorEnabled : public GlicApiTestWithOneTab {
+class GlicApiTestWithGeminiActOnWebPolicy : public GlicApiTestWithOneTab {
  public:
-  GlicApiTestWithActorEnabled() {
-    scoped_feature_list_.InitAndEnableFeature(features::kGlicActor);
+  GlicApiTestWithGeminiActOnWebPolicy() {
+    scoped_feature_list_.InitAndEnableFeatureWithParameters(
+        features::kGlicActor,
+        {{features::kGlicActorEnterprisePrefDefault.name,
+          features::kGlicActorEnterprisePrefDefault.GetName(
+              features::GlicActorEnterprisePrefDefault::kDisabledByDefault)}});
   }
-  ~GlicApiTestWithActorEnabled() override = default;
+  ~GlicApiTestWithGeminiActOnWebPolicy() override = default;
+
+  void SetUpInProcessBrowserTestFixture() override {
+    GlicApiTestWithOneTab::SetUpInProcessBrowserTestFixture();
+    policy_provider_.SetDefaultReturns(
+        /*is_initialization_complete_return=*/true,
+        /*is_first_policy_load_complete_return=*/true);
+    policy::BrowserPolicyConnector::SetPolicyProviderForTesting(
+        &policy_provider_);
+  }
+
+  void SetUpOnMainThread() override {
+    GlicApiTestWithOneTab::SetUpOnMainThread();
+    policy_provider_.SetupPolicyServiceForPolicyUpdates(
+        browser()->profile()->GetProfilePolicyConnector()->policy_service());
+  }
+
+  void TearDownOnMainThread() override {
+    policy_provider_.SetupPolicyServiceForPolicyUpdates(nullptr);
+    GlicApiTestWithOneTab::TearDownOnMainThread();
+  }
+
+  void UpdateGeminiActOnWebPolicy(
+      glic::prefs::GlicActuationOnWebPolicyState value) {
+    policy::PolicyMap policies;
+    policies.Set(policy::key::kGeminiActOnWebSettings,
+                 policy::POLICY_LEVEL_MANDATORY, policy::POLICY_SCOPE_USER,
+                 policy::POLICY_SOURCE_ENTERPRISE_DEFAULT,
+                 base::Value(base::to_underlying(value)), nullptr);
+    policy_provider_.UpdateChromePolicy(policies);
+  }
 
  private:
+  ::testing::NiceMock<policy::MockConfigurationPolicyProvider> policy_provider_;
   base::test::ScopedFeatureList scoped_feature_list_;
 };
 
@@ -1875,11 +1914,10 @@ IN_PROC_BROWSER_TEST_P(GlicApiTestSystemSettingsTest,
 }
 
 IN_PROC_BROWSER_TEST_P(GlicApiTest, testNavigateToDifferentClientPage) {
-  TODO_SKIP_BROKEN_MULTI_INSTANCE_TEST();
   base::HistogramTester histogram_tester;
-  WebUIStateListener listener(GetHost());
   RunTestSequence(OpenGlicWindow(GlicWindowMode::kDetached,
                                  GlicInstrumentMode::kHostAndContents));
+  WebUIStateListener listener(GetHost());
   listener.WaitForWebUiState(mojom::WebUiState::kReady);
   ExecuteJsTest({.params = base::Value(0)});  // test run count: 0.
   listener.WaitForWebUiState(mojom::WebUiState::kBeginLoad);
@@ -1892,12 +1930,11 @@ IN_PROC_BROWSER_TEST_P(GlicApiTest, testNavigateToDifferentClientPage) {
 }
 
 IN_PROC_BROWSER_TEST_P(GlicApiTestWithFastTimeout, testNavigateToAboutBlank) {
-  TODO_SKIP_BROKEN_MULTI_INSTANCE_TEST();
   // Client loads, and navigates to a new URL. We try to load the client again,
   // but it fails.
-  WebUIStateListener listener(GetHost());
   RunTestSequence(OpenGlicWindow(GlicWindowMode::kDetached,
                                  GlicInstrumentMode::kHostAndContents));
+  WebUIStateListener listener(GetHost());
   listener.WaitForWebUiState(mojom::WebUiState::kReady);
   ExecuteJsTest();
   listener.WaitForWebUiState(mojom::WebUiState::kError);
@@ -1911,15 +1948,14 @@ IN_PROC_BROWSER_TEST_P(GlicApiTestWithFastTimeout, testNavigateToAboutBlank) {
 #endif
 IN_PROC_BROWSER_TEST_P(GlicApiTestWithFastTimeout,
                        MAYBE_testNavigateToBadPage) {
-  TODO_SKIP_BROKEN_MULTI_INSTANCE_TEST();
 #if defined(SLOW_BINARY)
   GTEST_SKIP() << "skip timeout test for slow binary";
 #else
   // Client loads, and navigates to a new URL. We try to load the client again,
   // but it fails.
-  WebUIStateListener listener(GetHost());
   RunTestSequence(OpenGlicWindow(GlicWindowMode::kDetached,
                                  GlicInstrumentMode::kHostAndContents));
+  WebUIStateListener listener(GetHost());
   listener.WaitForWebUiState(mojom::WebUiState::kReady);
   ExecuteJsTest({.params = base::Value(0)});
   listener.WaitForWebUiState(mojom::WebUiState::kBeginLoad);
@@ -2818,27 +2854,21 @@ IN_PROC_BROWSER_TEST_P(GlicApiTestWithOneTab,
   ContinueJsTest();
 }
 
-IN_PROC_BROWSER_TEST_P(GlicApiTestWithActorEnabled,
+IN_PROC_BROWSER_TEST_P(GlicApiTestWithGeminiActOnWebPolicy,
                        testNotifyActOnWebCapabilityChanged) {
-  // Ensure that the profile is not managed. This allows us to turn on/off the
-  // act on web capability via the pref.
-  auto* management_service_factory =
-      policy::ManagementServiceFactory::GetInstance();
-  auto* browser_management_service =
-      management_service_factory->GetForProfile(GetProfile());
-  ASSERT_TRUE(!browser_management_service ||
-              !browser_management_service->IsManaged());
-  // Defaults to enabled.
-  PrefService* prefs = browser()->profile()->GetPrefs();
-  ASSERT_EQ(prefs->GetInteger(glic::prefs::kGlicActuationOnWeb),
-            base::to_underlying(
-                glic::prefs::GlicActuationOnWebPolicyState::kEnabled));
+  policy::ScopedManagementServiceOverrideForTesting
+      scoped_management_service_override(
+          policy::ManagementServiceFactory::GetForProfile(GetProfile()),
+          policy::EnterpriseManagementAuthority::CLOUD);
+
+  UpdateGeminiActOnWebPolicy(
+      glic::prefs::GlicActuationOnWebPolicyState::kEnabled);
+
   // Runs the JS test until the first `advanceToNextStep()`.
   ExecuteJsTest();
   // Disable the capability.
-  prefs->SetInteger(glic::prefs::kGlicActuationOnWeb,
-                    base::to_underlying(
-                        glic::prefs::GlicActuationOnWebPolicyState::kDisabled));
+  UpdateGeminiActOnWebPolicy(
+      glic::prefs::GlicActuationOnWebPolicyState::kDisabled);
   ContinueJsTest();
 }
 
@@ -2922,7 +2952,7 @@ INSTANTIATE_TEST_SUITE_P(,
                          DefaultTestParamSet(),
                          &WithTestParams::PrintTestVariant);
 INSTANTIATE_TEST_SUITE_P(,
-                         GlicApiTestWithActorEnabled,
+                         GlicApiTestWithGeminiActOnWebPolicy,
                          DefaultTestParamSet(),
                          &WithTestParams::PrintTestVariant);
 

@@ -97,7 +97,7 @@ base::TimeDelta GetWarmingDelay() {
 }
 
 bool UseDefaultWindowController() {
-  return !base::FeatureList::IsEnabled(features::kGlicMultiInstance);
+  return !GlicEnabling::IsMultiInstanceEnabledByFlags();
 }
 
 std::unique_ptr<GlicWindowController> CreateWindowController(
@@ -224,7 +224,7 @@ GlicKeyedService* GlicKeyedService::Get(content::BrowserContext* context) {
 }
 
 void GlicKeyedService::Shutdown() {
-  if (base::FeatureList::IsEnabled(features::kGlicMultiInstance)) {
+  if (GlicEnabling::IsMultiInstanceEnabledByFlags()) {
     window_controller().Shutdown();
     fre_controller_->Shutdown();
   } else {
@@ -286,7 +286,7 @@ void GlicKeyedService::OpenFreDialogInNewTab(BrowserWindowInterface* bwi,
 }
 
 void GlicKeyedService::CloseAndShutdown() {
-  CHECK(!base::FeatureList::IsEnabled(features::kGlicMultiInstance));
+  CHECK(!GlicEnabling::IsMultiInstanceEnabledByFlags());
   window_controller().Shutdown();
   host_manager().Shutdown();
   fre_controller_->Shutdown();
@@ -628,7 +628,7 @@ void GlicKeyedService::OnMemoryPressure(base::MemoryPressureLevel level) {
       (this == GlicProfileManager::GetInstance()->GetLastActiveGlic())) {
     return;
   }
-  if (!base::FeatureList::IsEnabled(features::kGlicMultiInstance)) {
+  if (!GlicEnabling::IsMultiInstanceEnabledByFlags()) {
     CloseAndShutdown();
   }
   // TODO(crbug.com/453747043): Handle Multi Instance.
@@ -726,6 +726,15 @@ void GlicKeyedService::OnWebClientCleared() {
 
 void GlicKeyedService::OnInteractionModeChange(mojom::WebClientMode new_mode) {
   // Unused in single instance mode.
+}
+
+bool GlicKeyedService::IsActive() {
+  // The `browser_is_active` signal was changed to `instance_is_active`. This
+  // the logic that originally backed `browser_is_active` for single-instance.
+  // This function will only be called from `GlicPageHandler` when in
+  // single-instance, and should be deleted when single-instance is deleted and
+  // GKS no longer implements `Host::InstanceDelegate`.
+  return sharing_manager().GetFocusedBrowser();
 }
 
 }  // namespace glic

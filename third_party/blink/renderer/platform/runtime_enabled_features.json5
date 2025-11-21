@@ -779,7 +779,7 @@
     // https://chromestatus.com/feature/5176753681203200
     {
       name: "BorderRadiusCorrectionCoverageFactor",
-      status: "stable",
+      status: "test",
     },
     // crbug.com/1147998: Mouse and Pointer boundary event dispatch (i.e. dispatch
     // of enter, leave, over, out events) tracks DOM node removal to fix event
@@ -1985,6 +1985,13 @@
       origin_trial_feature_name: "DocumentIsolationPolicy",
       origin_trial_os: ["win", "mac", "linux", "chromeos"],
       base_feature: "none",
+    },
+    {
+      // Fix iframe unload events not firing during document.open()
+      // https://crbug.com/40947017
+      // Lands in M144; remove this flag in M146 after the milestone rolls.
+      name: "DocumentOpenIframeUnloadEvents",
+      status: "stable",
     },
     {
       name: "DocumentOpenOriginAliasRemoval",
@@ -3304,6 +3311,12 @@
       },
     },
     {
+      // This feature helps to add memory consumer to NGShapeCache, so that
+      // the cached shape results would be cleared once exceeding the memory limit.
+      name: "MemoryConsumerForNGShapeCache",
+      status: "test",
+    },
+    {
       name: "MenuElements",
       status: "experimental",
     },
@@ -3686,7 +3699,7 @@
       // Killswitch M142. Overrides the above to enable PaintOffsetTranslation
       // for all composited LayoutObjects.
       name: "PaintOffsetTranslationForComposited",
-      status: "stable",
+      status: "test",
     },
     {
       name: "PaintTimingMixin",
@@ -5983,6 +5996,12 @@
     {
       name: "WordSpacingWhiteSpacePre",
       status: "stable",
+    },
+    {
+      // Moving to the Rust parser requires deprecation of the niche feature
+      // of synchronously including external entities.
+      // https://crbug.com/455813733
+      name: "XMLNoExternalEntities",
     },
     {
       name: "XMLSerializerConsistentDefaultNsDeclMatching",
