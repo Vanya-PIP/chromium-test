@@ -209,13 +209,6 @@ class PLATFORM_EXPORT CanvasResourceProvider
       gpu::SharedImageUsageSet shared_image_usage_flags = {},
       Delegate* delegate = nullptr);
 
-  static std::unique_ptr<CanvasResourceProvider> CreateSwapChainProvider(
-      gfx::Size size,
-      const Canvas2DColorParams& color_params,
-      ShouldInitialize initialize_provider,
-      base::WeakPtr<WebGraphicsContext3DProviderWrapper>,
-      Delegate* delegate = nullptr);
-
   // Use Snapshot() for capturing a frame that is intended to be displayed via
   // the compositor. Cases that are destined to be transferred via a
   // TransferableResource should call ProduceCanvasResource() instead.
@@ -634,7 +627,6 @@ class PLATFORM_EXPORT CanvasResourceProviderSharedImage
       cc::PaintImage::kInvalidContentId;
 
   bool notified_context_lost_ = false;
-  bool oopr_uses_dmsaa_ = false;
   base::WeakPtrFactory<CanvasResourceProviderSharedImage> weak_ptr_factory_{
       this};
 };

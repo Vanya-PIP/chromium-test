@@ -58,6 +58,7 @@
 #include "chrome/browser/ui/passwords/ui_utils.h"
 #include "chrome/browser/ui/profiles/profile_picker.h"
 #include "chrome/browser/ui/profiles/profile_view_utils.h"
+#include "chrome/browser/ui/read_anything/read_anything_controller.h"
 #include "chrome/browser/ui/singleton_tabs.h"
 #include "chrome/browser/ui/startup/default_browser_prompt/default_browser_prompt_manager.h"
 #include "chrome/browser/ui/startup/default_browser_prompt/default_browser_prompt_prefs.h"
@@ -69,7 +70,6 @@
 #include "chrome/browser/ui/tabs/tab_strip_user_gesture_details.h"
 #include "chrome/browser/ui/toolbar/chrome_labs/chrome_labs_utils.h"
 #include "chrome/browser/ui/ui_features.h"
-#include "chrome/browser/ui/views/side_panel/read_anything/read_anything_controller.h"
 #include "chrome/browser/ui/views/side_panel/side_panel_entry_id.h"
 #include "chrome/browser/ui/views/side_panel/side_panel_ui.h"
 #include "chrome/browser/ui/web_applications/app_browser_controller.h"
@@ -1415,11 +1415,13 @@ void BrowserCommandController::TabRestoreServiceLoaded(
 // BrowserCommandController, private:
 
 bool BrowserCommandController::IsShowingMainUI() {
-  return browser_->SupportsWindowFeature(Browser::FEATURE_TABSTRIP);
+  return browser_->SupportsWindowFeature(
+      Browser::WindowFeature::kFeatureTabStrip);
 }
 
 bool BrowserCommandController::IsShowingLocationBar() {
-  return browser_->SupportsWindowFeature(Browser::FEATURE_LOCATIONBAR);
+  return browser_->SupportsWindowFeature(
+      Browser::WindowFeature::kFeatureLocationBar);
 }
 
 void BrowserCommandController::InitCommandState() {
@@ -1625,7 +1627,7 @@ void BrowserCommandController::InitCommandState() {
 
   // Tab management commands
   const bool supports_tabs =
-      browser_->SupportsWindowFeature(Browser::FEATURE_TABSTRIP);
+      browser_->SupportsWindowFeature(Browser::WindowFeature::kFeatureTabStrip);
   command_updater_.UpdateCommandEnabled(IDC_SELECT_NEXT_TAB, supports_tabs);
   command_updater_.UpdateCommandEnabled(IDC_SELECT_PREVIOUS_TAB, supports_tabs);
   command_updater_.UpdateCommandEnabled(IDC_MOVE_TAB_NEXT, supports_tabs);
@@ -2126,8 +2128,8 @@ void BrowserCommandController::UpdateCommandsForLockedFullscreenMode() {
     // within a webpage if the webapp is locked for OnTask
     // (only relevant for non-web browser scenarios).
     if (browser_->IsLockedForOnTask()) {
-      bool supports_tabs =
-          browser_->SupportsWindowFeature(Browser::FEATURE_TABSTRIP);
+      bool supports_tabs = browser_->SupportsWindowFeature(
+          Browser::WindowFeature::kFeatureTabStrip);
       command_updater_.UpdateCommandEnabled(IDC_SELECT_NEXT_TAB, supports_tabs);
       command_updater_.UpdateCommandEnabled(IDC_SELECT_PREVIOUS_TAB,
                                             supports_tabs);

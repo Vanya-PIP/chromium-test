@@ -2606,9 +2606,11 @@ RenderFrameHostImpl::RenderFrameHostImpl(
   // of overrides.
   idle_manager_ = std::make_unique<IdleManagerImpl>(this);
 
+#if BUILDFLAG(IS_ANDROID)
   // The renderer process priority has been set in the RenderWidgetHost so
   // it is safe to remove to spare renderer priority here.
   site_instance->GetProcess()->GraduateSpareToNormalRendererPriority();
+#endif
 
   SiteInstanceGroupId sig_id = site_instance_->group()->GetId();
   bool rfh_in_bfcache =
@@ -8007,11 +8009,6 @@ void RenderFrameHostImpl::UpdateSubresourceLoaderFactories() {
       isolated_worlds_requiring_separate_url_loader_factory_.empty()) {
     return;
   }
-
-  // TODO(crbug.com/40061679): Remove the crash key logging after the
-  // ad-hoc bug investigation is no longer needed.
-  SCOPED_CRASH_KEY_STRING256("rfhi-uslf", "frame->ToDebugString",
-                             ToDebugString());
 
   // The `subresource_loader_factories_config` of the new factories might need
   // to depend on the pending (rather than the last committed) navigation,

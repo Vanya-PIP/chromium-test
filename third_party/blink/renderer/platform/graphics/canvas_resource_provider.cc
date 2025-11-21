@@ -202,9 +202,6 @@ CanvasResourceProviderSharedImage::CanvasResourceProviderSharedImage(
               ->ContextProvider()
               .GetCapabilities()
               .gpu_rasterization);
-    const auto& caps =
-        ContextProviderWrapper()->ContextProvider().GetCapabilities();
-    oopr_uses_dmsaa_ = !caps.msaa_is_slow && !caps.avoid_stencil_buffers;
   }
 
   if (raster_context_provider_) {
@@ -912,13 +909,15 @@ void CanvasResourceProviderSharedImage::RasterRecord(
   gfx::Vector2dF post_scale(1.f, 1.f);
 
   const bool can_use_lcd_text = GetAlphaType() == kOpaque_SkAlphaType;
-  ri->BeginRasterCHROMIUM(background_color, needs_clear,
-                          /*msaa_sample_count=*/oopr_uses_dmsaa_ ? 1 : 0,
-                          oopr_uses_dmsaa_ ? gpu::raster::MsaaMode::kDMSAA
-                                           : gpu::raster::MsaaMode::kNoMSAA,
-                          can_use_lcd_text, /*visible=*/true, GetColorSpace(),
-                          /*hdr_headroom=*/0.f,
-                          resource()->GetClientSharedImage()->mailbox().name);
+  const auto& caps =
+      ContextProviderWrapper()->ContextProvider().GetCapabilities();
+  bool use_msaa = !caps.msaa_is_slow && !caps.avoid_stencil_buffers;
+  ri->BeginRasterCHROMIUM(
+      background_color, needs_clear,
+      /*msaa_sample_count=*/use_msaa ? 1 : 0,
+      use_msaa ? gpu::raster::MsaaMode::kDMSAA : gpu::raster::MsaaMode::kNoMSAA,
+      can_use_lcd_text, /*visible=*/true, GetColorSpace(),
+      /*hdr_headroom=*/0.f, resource()->GetClientSharedImage()->mailbox().name);
 
   ri->RasterCHROMIUM(
       list.get(), GetOrCreateCanvasImageProvider(), size, full_raster_rect,
@@ -1105,6 +1104,12 @@ CanvasResourceProvider::CreateSharedImageProvider(
           gpu::SHARED_IMAGE_USAGE_CONCURRENT_READ_WRITE);
 #endif
 
+#if BUILDFLAG(IS_LINUX)
+  // WebGpu preferred canvas on linux is RGBA and interop (vk on gl) is
+  // dependent on canvas copies being RGBA (not BGRA).
+  should_force_bgra8_to_rgba = true;
+#endif
+
   if (is_accelerated && format != viz::SinglePlaneFormat::kRGBA_F16 &&
       should_force_bgra8_to_rgba) {
     format = viz::SinglePlaneFormat::kRGBA_8888;
@@ -1217,16 +1222,12 @@ CanvasResourceProvider::CreateSwapChainProvider(
   if (!SharedGpuContext::IsGpuCompositingEnabled() || !context_provider_wrapper)
     return nullptr;
 
-  const auto& capabilities =
-      context_provider_wrapper->ContextProvider().GetCapabilities();
   const auto& shared_image_capabilities =
       context_provider_wrapper->ContextProvider()
           .SharedImageInterface()
           ->GetCapabilities();
 
-  if (size.width() > capabilities.max_texture_size ||
-      size.height() > capabilities.max_texture_size ||
-      !shared_image_capabilities.shared_image_swap_chain) {
+  if (!shared_image_capabilities.shared_image_swap_chain) {
     return nullptr;
   }
 
@@ -1847,19 +1848,6 @@ CanvasResourceProvider::CreateWebGPUImageProvider(
   return CreateWebGPUImageProvider(
       size, color_params.GetSharedImageFormat(), color_params.GetAlphaType(),
       color_params.GetGfxColorSpace(), shared_image_usage_flags, delegate);
-}
-
-std::unique_ptr<CanvasResourceProvider>
-CanvasResourceProvider::CreateSwapChainProvider(
-    gfx::Size size,
-    const Canvas2DColorParams& color_params,
-    ShouldInitialize initialize_provider,
-    base::WeakPtr<WebGraphicsContext3DProviderWrapper> context_provider_wrapper,
-    Delegate* delegate) {
-  return CreateSwapChainProvider(
-      size, color_params.GetSharedImageFormat(), color_params.GetAlphaType(),
-      color_params.GetGfxColorSpace(), initialize_provider,
-      std::move(context_provider_wrapper), delegate);
 }
 
 }  // namespace blink

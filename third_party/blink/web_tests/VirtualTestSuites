@@ -1177,11 +1177,11 @@
     ],
     "bases": [
       "wpt_internal/fenced_frame",
-      "wpt_internal/shared-worker/back-forward-cache/shared-worker-with-fenced-frame-client.tentative.https.window.js"
+      "wpt_internal/shared-worker/back-forward-cache/shared-worker-with-fenced-frame-client.https.window.js"
     ],
     "exclusive_tests": [
       "wpt_internal/fenced_frame",
-      "wpt_internal/shared-worker/back-forward-cache/shared-worker-with-fenced-frame-client.tentative.https.window.js"
+      "wpt_internal/shared-worker/back-forward-cache/shared-worker-with-fenced-frame-client.https.window.js"
     ],
     "args": [
       "--enable-features=PrivacySandboxAdsAPIsOverride,Fledge,AdInterestGroupAPI,FencedFramesEnforceFocus,FencedFramesLocalUnpartitionedDataAccess,ExemptUrlFromNetworkRevocationForTesting,FencedFramesCrossOriginEventReportingAllTraffic,FencedFramesReportEventHeaderChanges,FencedFramesDefaultMode"
@@ -4868,6 +4868,17 @@
     ],
     "args": [
       "--disable-features=DeprecateUnload"
+    ],
+    "exclusive_tests": [
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/001.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/002.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/003.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/004.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/005.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/unload/004.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/unload/007.html",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/unload/unload-main-frame-same-origin.window.js",
+      "external/wpt/html/browsers/browsing-the-web/unloading-documents/unload/unload-main-frame-cross-origin.window.js"
     ],
     "expires": "Jun 1, 2026",
     "owners": [

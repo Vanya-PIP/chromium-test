@@ -63,7 +63,6 @@
 #include "chrome/browser/custom_handlers/protocol_handler_registry_factory.h"
 #include "chrome/browser/data_sharing/data_sharing_service_factory.h"
 #include "chrome/browser/data_sharing/personal_collaboration_data/personal_collaboration_data_service_factory.h"
-#include "chrome/browser/device_api/managed_configuration_api_factory.h"
 #include "chrome/browser/device_reauth/chrome_device_authenticator_factory.h"
 #include "chrome/browser/digital_credentials/digital_credentials_keyed_service.h"
 #include "chrome/browser/dom_distiller/dom_distiller_service_factory.h"
@@ -144,6 +143,7 @@
 #include "chrome/browser/password_manager/password_change_service_factory.h"
 #include "chrome/browser/password_manager/password_manager_settings_service_factory.h"
 #include "chrome/browser/password_manager/profile_password_store_factory.h"
+#include "chrome/browser/payments/browser_binding/browser_bound_key_deleter_service_factory.h"
 #include "chrome/browser/performance_manager/persistence/site_data/site_data_cache_facade_factory.h"
 #include "chrome/browser/permissions/notifications_engagement_service_factory.h"
 #include "chrome/browser/permissions/one_time_permissions_tracker_factory.h"
@@ -267,12 +267,11 @@
 #include "components/optimization_guide/machine_learning_tflite_buildflags.h"
 #include "components/password_manager/content/browser/password_manager_log_router_factory.h"
 #include "components/password_manager/content/browser/password_requirements_service_factory.h"
-#include "components/payments/content/browser_binding/browser_bound_key_deleter_factory.h"
 #include "components/payments/content/has_enrolled_instrument_query_factory.h"
 #include "components/permissions/features.h"
 #include "components/policy/content/password_manager_blocklist_policy.h"
-#include "components/policy/content/policy_blocklist_service.h"
 #include "components/policy/content/safe_search_service.h"
+#include "components/policy/core/browser/url_list/policy_blocklist_service.h"
 #include "components/safe_browsing/buildflags.h"
 #include "components/safe_browsing/core/common/features.h"
 #include "components/services/on_device_translation/buildflags/buildflags.h"
@@ -330,6 +329,7 @@
 #include "chrome/browser/apps/app_service/app_service_proxy_factory.h"
 #include "chrome/browser/badging/badge_manager_factory.h"
 #include "chrome/browser/contextual_tasks/contextual_tasks_context_service_factory.h"
+#include "chrome/browser/device_api/managed_configuration_api_factory.h"
 #include "chrome/browser/devtools/device/devtools_android_bridge.h"
 #include "chrome/browser/download/offline_item_model_manager_factory.h"
 #include "chrome/browser/feedback/feedback_uploader_factory_chrome.h"
@@ -365,11 +365,11 @@
 #include "chrome/browser/ui/media_router/media_router_ui_service_factory.h"
 #include "chrome/browser/ui/performance_controls/performance_controls_hats_service_factory.h"
 #include "chrome/browser/ui/promos/ios_promo_trigger_service_factory.h"
+#include "chrome/browser/ui/read_anything/read_anything_service_factory.h"
 #include "chrome/browser/ui/safety_hub/password_status_check_service_factory.h"
 #include "chrome/browser/ui/safety_hub/safety_hub_hats_service_factory.h"
 #include "chrome/browser/ui/tabs/organization/tab_organization_service_factory.h"
 #include "chrome/browser/ui/views/profiles/avatar_toolbar_button_state_manager.h"
-#include "chrome/browser/ui/views/side_panel/read_anything/read_anything_service_factory.h"
 #include "chrome/browser/ui/waap/waap_ui_metrics_service_factory.h"
 #include "chrome/browser/usb/usb_connection_tracker_factory.h"
 #include "chrome/browser/user_education/user_education_service_factory.h"
@@ -1075,7 +1075,7 @@ void ChromeBrowserMainExtraPartsProfiles::
 #if !BUILDFLAG(IS_ANDROID)
   MicrosoftAuthServiceFactory::GetInstance();
 #endif
-#if !BUILDFLAG(IS_ANDROID) && defined(USE_AURA)
+#if !BUILDFLAG(IS_ANDROID)
   web_app::IsolatedWebAppsOpenedTabsCounterServiceFactory::GetInstance();
 #endif
   NavigationPredictorKeyedServiceFactory::GetInstance();
@@ -1170,7 +1170,7 @@ void ChromeBrowserMainExtraPartsProfiles::
 #if !BUILDFLAG(IS_ANDROID)
   PasswordStatusCheckServiceFactory::GetInstance();
 #endif
-  payments::BrowserBoundKeyDeleterFactory::GetInstance();
+  payments::BrowserBoundKeyDeleterServiceFactory::GetInstance();
   payments::HasEnrolledInstrumentQueryFactory::GetInstance();
 #if !BUILDFLAG(IS_ANDROID)
   payments::PaymentRequestDisplayManagerFactory::GetInstance();

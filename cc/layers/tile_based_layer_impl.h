@@ -39,11 +39,6 @@ class CC_EXPORT TileBasedLayerImpl : public LayerImpl {
  protected:
   TileBasedLayerImpl(LayerTreeImpl* tree_impl, int id);
 
-  // Appends a solid-color quad with color `color`.
-  void AppendSolidQuad(viz::CompositorRenderPass* render_pass,
-                       AppendQuadsData* append_quads_data,
-                       SkColor4f color);
-
   std::optional<SkColor4f> solid_color() const { return solid_color_; }
 
  private:
@@ -53,7 +48,15 @@ class CC_EXPORT TileBasedLayerImpl : public LayerImpl {
   virtual void AppendQuadsSpecialization(
       const AppendQuadsContext& context,
       viz::CompositorRenderPass* render_pass,
-      AppendQuadsData* append_quads_data) = 0;
+      AppendQuadsData* append_quads_data,
+      viz::SharedQuadState* shared_quad_state) = 0;
+
+  virtual float GetMaximumContentsScaleForUseInAppendQuads() = 0;
+
+  // Appends a solid-color quad with color `color`.
+  void AppendSolidQuad(viz::CompositorRenderPass* render_pass,
+                       AppendQuadsData* append_quads_data,
+                       SkColor4f color);
 
   bool is_backdrop_filter_mask_ : 1 = false;
   std::optional<SkColor4f> solid_color_;

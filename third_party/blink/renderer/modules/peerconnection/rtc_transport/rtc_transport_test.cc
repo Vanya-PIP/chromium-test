@@ -172,7 +172,8 @@ TEST_F(RtcTransportTest, AddInvalidRemoteCandidateBeforeInitialization) {
   ASSERT_FALSE(exception_state.HadException());
 
   auto* init = RtcTransportICECandidateInit::Create();
-  init->setAddress("1.2.3.4");
+  init->setType(V8RTCIceCandidateType(V8RTCIceCandidateType::Enum::kHost));
+  init->setAddress("invalidAddress");
   init->setPort(1234);
   init->setUsernameFragment("username");
   init->setPassword("password");
@@ -181,7 +182,7 @@ TEST_F(RtcTransportTest, AddInvalidRemoteCandidateBeforeInitialization) {
   EXPECT_TRUE(exception_state.HadException());
   EXPECT_EQ(exception_state.Code(),
             static_cast<int>(DOMExceptionCode::kSyntaxError));
-  EXPECT_EQ("Missing type", exception_state.Message());
+  EXPECT_EQ("Invalid address", exception_state.Message());
 }
 
 TEST_F(RtcTransportTest, SendPackets) {
@@ -372,70 +373,6 @@ TEST_F(RtcTransportTest, SetRemoteDtlsParameters) {
   transport_->setRemoteDtlsParameters(params);
 }
 
-TEST_F(RtcTransportTest, AddRemoteCandidateMissingType) {
-  CreateInitializedTransport();
-  auto* init = RtcTransportICECandidateInit::Create();
-  init->setAddress("1.2.3.4");
-  init->setPort(1234);
-  init->setUsernameFragment("username");
-  init->setPassword("password");
-
-  DummyExceptionStateForTesting exception_state;
-  transport_->addRemoteCandidate(init, exception_state);
-  EXPECT_TRUE(exception_state.HadException());
-  EXPECT_EQ(exception_state.Code(),
-            static_cast<int>(DOMExceptionCode::kSyntaxError));
-  EXPECT_EQ("Missing type", exception_state.Message());
-}
-
-TEST_F(RtcTransportTest, AddRemoteCandidateMissingAddress) {
-  CreateInitializedTransport();
-  auto* init = RtcTransportICECandidateInit::Create();
-  init->setType(V8RTCIceCandidateType(V8RTCIceCandidateType::Enum::kHost));
-  init->setPort(1234);
-  init->setUsernameFragment("username");
-  init->setPassword("password");
-
-  DummyExceptionStateForTesting exception_state;
-  transport_->addRemoteCandidate(init, exception_state);
-  EXPECT_TRUE(exception_state.HadException());
-  EXPECT_EQ(exception_state.Code(),
-            static_cast<int>(DOMExceptionCode::kSyntaxError));
-  EXPECT_EQ("Missing Address", exception_state.Message());
-}
-
-TEST_F(RtcTransportTest, AddRemoteCandidateMissingUsernameFragment) {
-  CreateInitializedTransport();
-  auto* init = RtcTransportICECandidateInit::Create();
-  init->setType(V8RTCIceCandidateType(V8RTCIceCandidateType::Enum::kHost));
-  init->setAddress("1.2.3.4");
-  init->setPort(1234);
-  init->setPassword("password");
-
-  DummyExceptionStateForTesting exception_state;
-  transport_->addRemoteCandidate(init, exception_state);
-  EXPECT_TRUE(exception_state.HadException());
-  EXPECT_EQ(exception_state.Code(),
-            static_cast<int>(DOMExceptionCode::kSyntaxError));
-  EXPECT_EQ("Missing usernameFragment", exception_state.Message());
-}
-
-TEST_F(RtcTransportTest, AddRemoteCandidateMissingPassword) {
-  CreateInitializedTransport();
-  auto* init = RtcTransportICECandidateInit::Create();
-  init->setType(V8RTCIceCandidateType(V8RTCIceCandidateType::Enum::kHost));
-  init->setAddress("1.2.3.4");
-  init->setPort(1234);
-  init->setUsernameFragment("username");
-
-  DummyExceptionStateForTesting exception_state;
-  transport_->addRemoteCandidate(init, exception_state);
-  EXPECT_TRUE(exception_state.HadException());
-  EXPECT_EQ(exception_state.Code(),
-            static_cast<int>(DOMExceptionCode::kSyntaxError));
-  EXPECT_EQ("Missing Password", exception_state.Message());
-}
-
 TEST_F(RtcTransportTest, AddRemoteCandidateInvalidAddress) {
   CreateInitializedTransport();
   auto* init = RtcTransportICECandidateInit::Create();
@@ -547,13 +484,16 @@ TEST_F(RtcTransportMultithreadedTest, SendPackets) {
 
   size_t packets_sent = 0;
   base::RunLoop run_loop;
-  EXPECT_CALL(*mock_sync_connection_, SendPacket(_))
-      .WillRepeatedly(testing::InvokeWithoutArgs([&]() {
-        if (++packets_sent == kPacketCount) {
+  EXPECT_CALL(*mock_sync_connection_, SendPackets(_))
+      .WillRepeatedly([&](webrtc::ArrayView<
+                          webrtc::DatagramConnection::PacketSendParameters>
+                              packet_payloads) {
+        packets_sent += packet_payloads.size();
+        if (packets_sent == kPacketCount) {
           run_loop.Quit();
         }
         return true;
-      }));
+      });
 
   HeapVector<Member<RtcSendPacketParameters>> packets;
   for (size_t i = 0; i < kPacketCount; i++) {

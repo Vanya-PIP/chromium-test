@@ -29,7 +29,6 @@
 #include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/chrome_pages.h"
-#include "chrome/browser/ui/find_bar/find_bar_host_unittest_util.h"
 #include "chrome/browser/ui/frame/window_frame_util.h"
 #include "chrome/browser/ui/location_bar/location_bar.h"
 #include "chrome/browser/ui/omnibox/omnibox_controller.h"
@@ -679,7 +678,7 @@ IN_PROC_BROWSER_TEST_F(BrowserFocusTest, NavigateFromOmniboxIntoNewTab) {
 
   // Navigate to url.
   NavigateParams p(browser(), url, ui::PAGE_TRANSITION_LINK);
-  p.window_action = NavigateParams::SHOW_WINDOW;
+  p.window_action = NavigateParams::WindowAction::kShowWindow;
   p.disposition = WindowOpenDisposition::CURRENT_TAB;
   Navigate(&p);
 

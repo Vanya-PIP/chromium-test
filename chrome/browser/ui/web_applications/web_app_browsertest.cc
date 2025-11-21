@@ -984,7 +984,7 @@ IN_PROC_BROWSER_TEST_F(WebAppBrowserTest, DesktopPWAsOpenLinksInNewTab) {
 
   NavigateParams param(app_browser, GURL("http://www.google.com/"),
                        ui::PAGE_TRANSITION_LINK);
-  param.window_action = NavigateParams::SHOW_WINDOW;
+  param.window_action = NavigateParams::WindowAction::kShowWindow;
   param.disposition = WindowOpenDisposition::NEW_FOREGROUND_TAB;
 
   ui_test_utils::NavigateToURL(&param);
@@ -2322,15 +2322,15 @@ IN_PROC_BROWSER_TEST_F(WebAppBrowserTest, PopupLocationBar) {
   popup_browser->window()->Show();
   ui_test_utils::WaitUntilBrowserBecomeActive(popup_browser);
 
-  EXPECT_TRUE(
-      popup_browser->CanSupportWindowFeature(Browser::FEATURE_LOCATIONBAR));
-  EXPECT_TRUE(
-      popup_browser->SupportsWindowFeature(Browser::FEATURE_LOCATIONBAR));
+  EXPECT_TRUE(popup_browser->CanSupportWindowFeature(
+      Browser::WindowFeature::kFeatureLocationBar));
+  EXPECT_TRUE(popup_browser->SupportsWindowFeature(
+      Browser::WindowFeature::kFeatureLocationBar));
 
   ui_test_utils::ToggleFullscreenModeAndWait(popup_browser);
 
-  EXPECT_TRUE(
-      popup_browser->CanSupportWindowFeature(Browser::FEATURE_LOCATIONBAR));
+  EXPECT_TRUE(popup_browser->CanSupportWindowFeature(
+      Browser::WindowFeature::kFeatureLocationBar));
 }
 
 // Make sure chrome://web-app-internals page loads fine.

@@ -797,23 +797,6 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram
-    name="Enterprise.DeviceRemoteCommand.Crd.{Enterprise_CrdSessionType}.{Enterprise_UserSessionType}.SessionDuration"
-    units="minutes" expires_after="2025-11-01">
-  <owner>macinashutosh@google.com</owner>
-  <owner>chromeos-commercial-crd@google.com</owner>
-  <summary>
-    Reports duration of a successful session completed for the
-    {Enterprise_CrdSessionType} and {Enterprise_UserSessionType}
-  </summary>
-  <token key="Enterprise_CrdSessionType" variants="Enterprise_CrdSessionType">
-    <variant name=""/>
-  </token>
-  <token key="Enterprise_UserSessionType" variants="Enterprise_UserSessionType">
-    <variant name=""/>
-  </token>
-</histogram>
-
-<histogram
     name="Enterprise.DeviceRemoteCommand.Executed{Enterprise_RemoteCommandType}"
     enum="RemoteCommandExecutionStatus" expires_after="2026-11-01">
   <owner>asumaneev@google.com</owner>
@@ -4076,7 +4059,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="EnterpriseCheck.InvalidPoliciesDetected"
-    units="disabled policies" expires_after="2025-12-05">
+    units="disabled policies" expires_after="2026-10-01">
   <owner>pastarmovj@chromium.org</owner>
   <owner>zmin@chomium.org</owner>
   <summary>
@@ -4142,7 +4125,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="EnterpriseCheck.IsLocalUser" enum="Boolean"
-    expires_after="2025-12-01">
+    expires_after="2026-10-01">
   <owner>zmin@chromium.org</owner>
   <owner>pastarmovj@chromium.org</owner>
   <summary>
@@ -4187,7 +4170,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="EnterpriseCheck.Mac.IsCurrentUserDomainUser" enum="Boolean"
-    expires_after="2025-12-01">
+    expires_after="2026-10-01">
   <owner>pastarmovj@chromium.org</owner>
   <owner>zmin@chromium.org</owner>
   <summary>
@@ -4207,7 +4190,7 @@ chromium-metrics-reviews@google.com.
 </histogram>
 
 <histogram name="EnterpriseCheck.Mac.IsDeviceMDMEnrolledNew"
-    enum="EnterpriseMacMDMStatusNew" expires_after="2025-12-01">
+    enum="EnterpriseMacMDMStatusNew" expires_after="2026-10-01">
   <owner>pastarmovj@chromium.org</owner>
   <owner>zmin@chromium.org</owner>
   <summary>

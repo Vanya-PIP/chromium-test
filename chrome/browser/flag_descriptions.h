@@ -267,6 +267,11 @@ inline constexpr char kAriaElementReflectionDescription[] =
     "Enable setting ARIA relationship attributes that reference other elements "
     "directly without an IDREF";
 
+inline constexpr char kAutoRevokeSuspiciousNotificationName[] =
+    "Auto-revoke suspicious notification";
+inline constexpr char kAutoRevokeSuspiciousNotificationDescription[] =
+    "Auto-revoke notification permission with suspicious content.";
+
 inline constexpr char kAutomaticUsbDetachName[] =
     "Automatically detach USB kernel drivers";
 inline constexpr char kAutomaticUsbDetachDescription[] =
@@ -8216,12 +8221,6 @@ inline constexpr char kPulseaudioLoopbackForScreenShareName[] =
     "Linux System Audio Loopback for Screen Sharing (pulseaudio)";
 inline constexpr char kPulseaudioLoopbackForScreenShareDescription[] =
     "Enable system audio sharing when screen sharing on Linux with pulseaudio.";
-
-inline constexpr char kSimplifiedTabDragUIName[] =
-    "Simplified tab dragging UI mode";
-inline constexpr char kSimplifiedTabDragUIDescription[] =
-    "Enable simplified tab dragging UI mode as a fallback if the graphical "
-    "environment does not support the classic UI.";
 
 inline constexpr char kWaylandLinuxDrmSyncobjName[] =
     "Wayland linux-drm-syncobj explicit sync";

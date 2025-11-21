@@ -4,6 +4,7 @@
 # found in the LICENSE file.
 """Unittests for the metrics module."""
 
+import datetime
 import unittest
 from unittest import mock
 
@@ -37,17 +38,24 @@ class MergeAndUploadMetricsUnittest(unittest.TestCase):
             git_revision='test_revision',
             bucket='test-bucket',
             build_id='123',
+            builder='test_builder',
+            builder_group='test_builder_group',
+            build_number=1,
         )
         self.mock_create_dashboard_json.assert_called_once_with(
             [],
             'test_revision',
             '123',
+            'test_builder',
         )
         self.mock_upload_dashboard_json.assert_called_once_with(
             {
                 'foo': 'bar',
             },
             'test-bucket',
+            'test_builder',
+            'test_builder_group',
+            1,
         )
 
     def test_upload_fails(self):
@@ -58,6 +66,9 @@ class MergeAndUploadMetricsUnittest(unittest.TestCase):
                 git_revision='test_revision',
                 bucket='test-bucket',
                 build_id='123',
+                builder='test_builder',
+                builder_group='test_builder_group',
+                build_number=1,
             )
             self.assertIn('Error occurred while uploading to bucket',
                           cm.output[0])
@@ -89,6 +100,7 @@ class CreateDashboardJsonUnittest(unittest.TestCase):
             iteration_metrics=[],
             git_revision='test_revision',
             build_id='123',
+            builder='test_builder',
         )
         self.assertEqual(
             dashboard_json, {
@@ -96,6 +108,10 @@ class CreateDashboardJsonUnittest(unittest.TestCase):
                 1,
                 'git_hash':
                 'test_revision',
+                'key': {
+                    'benchmark': 'gcli_prompt_eval',
+                    'bot': 'test_builder',
+                },
                 'results': [
                     {
                         'key': {
@@ -311,19 +327,27 @@ class UploadDashboardJsonUnittest(fake_filesystem_unittest.TestCase):
         self.mock_run = self.run_patcher.start()
         self.addCleanup(self.run_patcher.stop)
 
+        self.datetime_patcher = mock.patch('metrics.datetime')
+        self.mock_dt_module = self.datetime_patcher.start()
+        self.addCleanup(self.datetime_patcher.stop)
+
     def test_success(self):
-        metrics._upload_dashboard_json({}, 'test-bucket')
+        self.mock_dt_module.datetime.now.return_value = datetime.datetime(
+            2025, 10, 29, 12, 30, 0, tzinfo=datetime.timezone.utc)
+        metrics._upload_dashboard_json({}, 'test-bucket', 'test_builder',
+                                       'test_builder_group', 1)
         self.mock_run.assert_called_once()
         self.assertIn('/path/to/gsutil.py', self.mock_run.call_args[0][0])
         self.assertRegex(
             self.mock_run.call_args[0][0][-1],
-            r'gs://test-bucket/chromium_prompt_eval/\d{4}/\d{2}/'
-            r'\d{2}/\d{2}/[a-f0-9]{40}\.json')
+            r'gs://test-bucket/ingest/2025/10/29/12/test_builder_group/'
+            r'test_builder/1/[a-f0-9]{40}\.json')
 
     def test_no_gsutil(self):
         self.mock_which.return_value = None
         with self.assertRaisesRegex(RuntimeError, 'Unable to find gsutil.py'):
-            metrics._upload_dashboard_json({}, 'test-bucket')
+            metrics._upload_dashboard_json({}, 'test-bucket', 'test_builder',
+                                           'test_builder_group', 1)
 
 
 if __name__ == '__main__':

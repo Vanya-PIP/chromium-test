@@ -113,6 +113,10 @@
 #include "ui/base/page_transition_types.h"
 #include "ui/gfx/range/range.h"
 
+#if BUILDFLAG(ENABLE_GLIC)
+#include "chrome/browser/glic/public/glic_enabling.h"
+#endif
+
 using base::UserMetricsAction;
 using content::WebContents;
 
@@ -811,9 +815,10 @@ gfx::Range TabStripModel::InsertDetachedCollectionImpl(
   selection.new_contents = GetActiveWebContents();
   TabStripModelChange::Insert insert;
 
-  for (tabs::TabInterface* tab : *collection) {
-    int index_of_tab = GetIndexOfTab(tab);
+  for (int index_of_tab = GetIndexOfTab(*(collection->begin()));
+       tabs::TabInterface* tab : *collection) {
     insert.contents.push_back({tab, tab->GetContents(), index_of_tab});
+    index_of_tab++;
   }
   TabStripModelChange change(std::move(insert));
   OnChange(change, selection);
@@ -2849,7 +2854,7 @@ void TabStripModel::ExecuteContextMenuCommand(int context_index,
       }
       if (command_id == CommandGlicStartShare) {
         CHECK(delegate_->GlicPinTabs(tab_handles));
-        if (!base::FeatureList::IsEnabled(features::kGlicMultiInstance)) {
+        if (!glic::GlicEnabling::IsMultiInstanceEnabledByFlags()) {
           delegate_->OpenGlicWindowFromSharedTab();
         }
       } else {

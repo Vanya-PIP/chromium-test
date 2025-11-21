@@ -62,8 +62,8 @@ using ReauthenticationEvent::kSuccess;
 
 int PrimaryActionStringIdFromSuggestion(FormSuggestion* suggestion) {
   return suggestion.metadata.is_single_username_form
-             ? IDS_IOS_PASSWORD_BOTTOM_SHEET_CONTINUE
-             : IDS_IOS_PASSWORD_BOTTOM_SHEET_USE_PASSWORD;
+             ? IDS_IOS_CREDENTIAL_BOTTOM_SHEET_CONTINUE
+             : IDS_IOS_CREDENTIAL_BOTTOM_SHEET_USE_PASSWORD;
 }
 
 // Makes a query to retrieve suggestions from a FormSuggestionProvider from the
@@ -579,7 +579,7 @@ NSArray<FormSuggestion*>* SetParamsAndProviderInSuggestions(
     int currentDismissCount =
         _prefService->GetInteger(prefs::kIosPasswordBottomSheetDismissCount);
     if (currentDismissCount <
-        AutofillBottomSheetTabHelper::kPasswordBottomSheetMaxDismissCount) {
+        AutofillBottomSheetTabHelper::kCredentialBottomSheetMaxDismissCount) {
       _prefService->SetInteger(prefs::kIosPasswordBottomSheetDismissCount,
                                currentDismissCount + 1);
     }
