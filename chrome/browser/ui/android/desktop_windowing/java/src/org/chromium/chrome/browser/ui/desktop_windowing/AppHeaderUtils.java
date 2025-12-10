@@ -19,7 +19,6 @@ import org.chromium.base.metrics.RecordHistogram;
 import org.chromium.base.shared_preferences.SharedPreferencesManager;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
-import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.lifecycle.ActivityLifecycleDispatcher;
 import org.chromium.chrome.browser.lifecycle.ActivityLifecycleDispatcher.ActivityState;
 import org.chromium.chrome.browser.preferences.ChromePreferenceKeys;
@@ -59,7 +58,6 @@ public class AppHeaderUtils {
         DesktopWindowHeuristicResult.WIDEST_UNOCCLUDED_RECT_EMPTY,
         DesktopWindowHeuristicResult.DISALLOWED_ON_EXTERNAL_DISPLAY,
         DesktopWindowHeuristicResult.COMPLEX_UNOCCLUDED_REGION,
-        DesktopWindowHeuristicResult.BELOW_MIN_HEIGHT_THRESHOLD,
         DesktopWindowHeuristicResult.NUM_ENTRIES,
     })
     public @interface DesktopWindowHeuristicResult {
@@ -70,10 +68,9 @@ public class AppHeaderUtils {
         int WIDEST_UNOCCLUDED_RECT_EMPTY = 4;
         int DISALLOWED_ON_EXTERNAL_DISPLAY = 5;
         int COMPLEX_UNOCCLUDED_REGION = 6;
-        int BELOW_MIN_HEIGHT_THRESHOLD = 7;
 
         // Be sure to also update enums.xml when updating these values.
-        int NUM_ENTRIES = 8;
+        int NUM_ENTRIES = 7;
     }
 
     // These values are persisted to logs. Entries should not be renumbered and
@@ -155,7 +152,7 @@ public class AppHeaderUtils {
             @DesktopWindowHeuristicResult int result) {
         assert result != DesktopWindowHeuristicResult.UNKNOWN;
         RecordHistogram.recordEnumeratedHistogram(
-                "Android.DesktopWindowHeuristicResult5",
+                "Android.DesktopWindowHeuristicResult4",
                 result,
                 DesktopWindowHeuristicResult.NUM_ENTRIES);
     }
@@ -356,11 +353,7 @@ public class AppHeaderUtils {
                             && EXTERNAL_DISPLAY_OEM_DENYLIST.contains(
                                     Build.MANUFACTURER.toLowerCase(Locale.US));
         }
-        if (sHeaderCustomizationDisallowedOnExternalDisplayForOem) {
-            return false;
-        }
-
-        return ChromeFeatureList.sTabStripLayoutOptimizationOnExternalDisplay.getValue();
+        return !sHeaderCustomizationDisallowedOnExternalDisplayForOem;
     }
 
     /**

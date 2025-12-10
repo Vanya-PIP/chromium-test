@@ -8022,6 +8022,9 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_NTP_SHOW_MORE_BUTTON_LABEL" desc="Label for a button that allows the user to see more most visited tiles on the New Tab Page.">
         Show more
       </message>
+      <message name="IDS_NTP_SHOW_LESS_BUTTON_LABEL" desc="Label for a button that allows the user to see fewer most visited tiles on the New Tab Page.">
+        Show less
+      </message>
       <message name="IDS_NTP_WEBSTORE_SHOPPING_CATEOGRY_LABEL" desc="The message displayed on the button that redirects users to the 'shopping' category page of the Chrome webstore.">
         Find coupons
       </message>
@@ -10140,6 +10143,9 @@ Keep your key file in a safe place. You will need it to create new versions of y
       </message>
       <message name="IDS_SPLIT_VIEW_TAB_SWITCH_COMPLETION_IPH_BODY" desc="The body for completion of quick tab switch split view IPH tutorial.">
         You can now use split view to compare, multitask, and more
+      </message>
+      <message name="IDS_SPLIT_VIEW_TOOLBAR_BUTTON_STEP_IPH_BODY" desc="The body for second step of quick tab switch split view IPH tutorial.">
+        Click here to separate or arrange the split view
       </message>
       <message name="IDS_SPLIT_VIEW_DRAG_ENTRYPOINT_LABEL" desc="A label for the drag entrypoint indicating it can create a split view.">
         Create split view

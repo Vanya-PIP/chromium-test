@@ -5,6 +5,9 @@
 #include "components/viz/common/resources/transferable_resource.h"
 
 #include "base/feature_list.h"
+#include "base/trace_event/trace_event.h"
+#include "base/trace_event/traced_value.h"
+#include "base/values.h"
 #include "components/viz/common/features.h"
 #include "components/viz/common/resources/returned_resource.h"
 #include "gpu/command_buffer/client/client_shared_image.h"
@@ -17,6 +20,7 @@ TransferableResource TransferableResource::Make(
     const gpu::SyncToken& sync_token,
     const MetadataOverride& override) {
   CHECK(shared_image);
+
   TransferableResource resource;
   resource.is_software = shared_image->is_software();
   resource.memory_buffer_id_ = shared_image->mailbox();
@@ -24,8 +28,8 @@ TransferableResource TransferableResource::Make(
   resource.resource_source = source;
   resource.format = shared_image->format();
   resource.set_texture_target(shared_image->GetTextureTarget());
+  resource.size = shared_image->size();
 
-  resource.size = override.size.value_or(shared_image->size());
   // Passed in format must be either single or multiplane and not default set.
   CHECK(resource.format.is_single_plane() || resource.format.is_multi_plane());
   resource.is_overlay_candidate = override.is_overlay_candidate.value_or(
@@ -64,6 +68,12 @@ std::vector<ReturnedResource> TransferableResource::ReturnResources(
   for (const auto& r : input)
     out.push_back(r.ToReturnedResource());
   return out;
+}
+
+void TransferableResource::AsValueInto(
+    base::trace_event::TracedValue* value) const {
+  // TODO(zmo): Include all fields.
+  value->SetString("memory_buffer_id", memory_buffer_id_.ToDebugString());
 }
 
 }  // namespace viz

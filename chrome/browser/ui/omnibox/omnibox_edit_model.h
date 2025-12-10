@@ -170,6 +170,13 @@ class OmniboxEditModel {
   // icon.
   ui::ImageModel GetSuperGIcon(int image_size, bool dark_mode) const;
 
+  // Whether the "Add Context" button should be shown in place of the location
+  // bar page info icon button.
+  bool ShouldShowAddContextButton() const;
+
+  // Returns the "mega plus" icon associated with the "Add Context" button.
+  ui::ImageModel GetAddContextIcon(int image_size) const;
+
   // Returns the Agentspace icon for chrome builds. Otherwise return an empty
   // Image. If `dark_mode` is enabled, return the monochrome version of the
   // icon.
@@ -237,6 +244,9 @@ class OmniboxEditModel {
   // `via_keyboard` is set to `true` if AI Mode was invoked via keyboard event
   // and is set to `false` if AI Mode was invoked via mouse / gesture event.
   void OpenAiMode(bool via_keyboard);
+
+  // Returns true if the popup is open and is in in AI-Mode.
+  bool PopupInAiMode() const;
 
   // Opens given selection. Most kinds of selection invoke an action or
   // otherwise call `OpenMatch`, but some may `AcceptInput` which is not

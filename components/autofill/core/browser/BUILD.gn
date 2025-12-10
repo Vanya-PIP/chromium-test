@@ -681,6 +681,7 @@ static_library("browser") {
     "studies/autofill_ablation_study.h",
     "studies/autofill_experiments.cc",
     "studies/autofill_experiments.h",
+    "suggestions/addresses/address_on_typing_suggestion_data.h",
     "suggestions/addresses/address_suggestion_generator.cc",
     "suggestions/addresses/address_suggestion_generator.h",
     "suggestions/autocomplete_suggestion_generator.cc",
@@ -1659,7 +1660,6 @@ source_set("unit_tests") {
     "ui/country_combobox_model_unittest.cc",
     "ui/payments/autofill_error_dialog_controller_impl_unittest.cc",
     "ui/payments/autofill_progress_dialog_controller_impl_unittest.cc",
-    "ui/payments/bnpl_tos_controller_impl_unittest.cc",
     "ui/payments/bubble_show_options_unittest.cc",
     "ui/payments/card_unmask_otp_input_dialog_controller_impl_unittest.cc",
     "ui/payments/card_unmask_prompt_controller_impl_unittest.cc",
@@ -1728,7 +1728,10 @@ source_set("unit_tests") {
   }
 
   if (!is_android) {
-    sources += [ "ui/autofill_image_fetcher_unittest.cc" ]
+    sources += [
+      "ui/autofill_image_fetcher_unittest.cc",
+      "ui/payments/bnpl_tos_controller_impl_unittest.cc",
+    ]
   }
 
   if (is_win || is_mac || is_android) {

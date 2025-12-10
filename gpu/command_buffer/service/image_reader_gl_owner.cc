@@ -267,10 +267,6 @@ gl::ScopedJavaSurface ImageReaderGLOwner::CreateJavaSurface() const {
 bool ImageReaderGLOwner::UpdateTexImage(bool discard) {
   base::AutoLock auto_lock(lock_);
 
-  // If we've lost the texture, then do nothing.
-  if (!texture())
-    return false;
-
   DCHECK(image_reader_);
 
   // Acquire the latest image asynchronously. We must release the current image
@@ -483,16 +479,6 @@ void ImageReaderGLOwner::ReleaseRefOnImageLocked(AImage* image,
 void ImageReaderGLOwner::ReleaseBackBuffers() {
   DCHECK_CALLED_ON_VALID_THREAD(gpu_main_thread_checker_);
   // ReleaseBackBuffers() call is not required with image reader.
-}
-
-gl::GLContext* ImageReaderGLOwner::GetContext() const {
-  DCHECK_CALLED_ON_VALID_THREAD(gpu_main_thread_checker_);
-  return context_.get();
-}
-
-gl::GLSurface* ImageReaderGLOwner::GetSurface() const {
-  DCHECK_CALLED_ON_VALID_THREAD(gpu_main_thread_checker_);
-  return surface_.get();
 }
 
 // This callback function will be called when there is a new image available
