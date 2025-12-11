@@ -7,12 +7,7 @@
 #include <utility>
 
 #include "base/containers/span.h"
-<<<<<<< HEAD
-#include "base/hash/md5.h"
-#include "base/test"
-=======
 #include "base/logging.h"
->>>>>>> 144.0.7504.0~1
 #include "base/numerics/byte_conversions.h"
 #include "components/database_utils/url_converter.h"
 #include "crypto/obsolete/md5.h"
