@@ -1110,14 +1110,23 @@ crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/fragmentation/* [ 
 crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/masonry-grid-template-columns-computed-withcontent.html [ Failure ]
 crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/subgrid/* [ Failure ]
 # Masonry sizing test failures
-crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/* [ Failure Skip ]
+crbug.com/1076027 [ Mac ] external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-cols-001-mix1.html [ Failure ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-cols-005.html [ Failure Crash ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-cols-006.html [ Failure ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-rows-003-auto.html [ Failure Crash ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-rows-003-fr.html [ Failure Crash ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-rows-003-mix1.html [ Failure Crash ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-rows-003-mix2.html [ Failure Crash ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-rows-004-auto.html [ Failure Crash ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-rows-004-fr.html [ Failure ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-rows-004-mix1.html [ Failure Crash ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-rows-004-mix2.html [ Failure Crash ]
+crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/intrinsic-sizing/masonry-intrinsic-sizing-rows-005.html [ Failure Crash ]
 crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/track-sizing/auto-repeat/row-auto-repeat-003.html [ Failure ]
 crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/track-sizing/auto-repeat/row-auto-repeat-006.html [ Failure ]
 crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/track-sizing/auto-repeat/intrinsic-auto-repeat/row-auto-repeat-auto-006.html [ Failure ]
 # Masonry named line failures
 crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/grid-placement/masonry-grid-placement-named-lines-002.html [ Failure ]
-# Intrinsic minimum sizing failures
-crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/items/row-item-minmax-img-002.html [ Failure ]
 # Baseline failures when applied to intrinsic minimums
 crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/items/column-minimum-contribution-baseline-shim-vertical-lr.html [ Failure ]
 crbug.com/1076027 external/wpt/css/css-grid/masonry/tentative/items/column-minimum-contribution-baseline-shim-vertical-rl.html [ Failure ]
@@ -3153,7 +3162,6 @@ crbug.com/438909307 [ Win11-arm64 ] external/wpt/secure-payment-confirmation/aut
 crbug.com/438903183 [ Win11-arm64 ] external/wpt/service-workers/service-worker/controller-on-reload.https.html [ Crash ]
 crbug.com/438909307 [ Win11-arm64 ] external/wpt/signed-exchange/reporting/sxg-reporting-navigation-cert_fetch_error-downgraded.tentative.html [ Crash ]
 crbug.com/438909307 [ Win11-arm64 ] external/wpt/signed-exchange/reporting/sxg-reporting-navigation-cert_parse_error-downgraded.tentative.html [ Timeout ]
-crbug.com/438909308 [ Win11-arm64 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure Timeout ]
 crbug.com/438909308 [ Win11-arm64 ] external/wpt/storage-access-api/requestStorageAccess-insecure.sub.window.html [ Crash ]
 crbug.com/438909308 [ Linux ] external/wpt/storage-access-api/requestStorageAccess-nested-cross-origin-iframe.sub.https.window.html [ Crash Failure Timeout ]
 crbug.com/438909308 [ Win11-arm64 ] external/wpt/storage-access-api/requestStorageAccess-nested-cross-origin-iframe.sub.https.window.html [ Crash Failure Timeout ]
@@ -3200,8 +3208,6 @@ crbug.com/438294027 [ Mac14 ] external/wpt/storage-access-api/requestStorageAcce
 crbug.com/438294027 [ Linux ] external/wpt/storage-access-api/requestStorageAccess-nested-same-origin-iframe.sub.https.window.html [ Crash Timeout ]
 crbug.com/438294027 [ Mac14 ] external/wpt/storage-access-api/requestStorageAccess-nested-same-origin-iframe.sub.https.window.html [ Crash ]
 crbug.com/438294027 [ Win11-arm64 ] external/wpt/storage-access-api/requestStorageAccess-nested-same-origin-iframe.sub.https.window.html [ Crash ]
-# crbug.com/438294027 [ Mac14 ] external/wpt/storage-access-api/requestStorageAccess-sandboxed-iframe-allow-storage-access.sub.https.window.html [ Crash ]
-# crbug.com/438294027 [ Win11-arm64 ] external/wpt/storage-access-api/requestStorageAccess-sandboxed-iframe-allow-storage-access.sub.https.window.html [ Crash ]
 crbug.com/438246977 virtual/threaded/external/wpt/css/css-view-transitions/pseudo-element-overflow-clip-with-border-radius.html [ Failure ]
 crbug.com/438246977 virtual/view-transition-mpa-serialization/external/wpt/css/css-view-transitions/pseudo-element-overflow-clip-with-border-radius.html [ Failure ]
 crbug.com/438246977 virtual/view-transition-wide-gamut/external/wpt/css/css-view-transitions/pseudo-element-overflow-clip-with-border-radius.html [ Failure ]
@@ -3495,8 +3501,6 @@ crbug.com/426164366 [ Win11-arm64 ] external/wpt/signed-exchange/reporting/sxg-r
 crbug.com/426164366 [ Win11-arm64 ] external/wpt/speech-api/SpeechRecognition-availableOnDevice.https.html [ Crash ]
 # crbug.com/426509691 [ Win11-arm64 ] external/wpt/storage-access-api/hasStorageAccess-ABA.sub.https.window.html [ Crash ]
 # crbug.com/426509691 [ Win11-arm64 ] external/wpt/storage-access-api/requestStorageAccess-cross-origin-fetch.sub.https.window.html [ Crash ]
-crbug.com/426509691 [ Linux ] external/wpt/storage-access-api/requestStorageAccess-same-site-iframe.sub.https.window.html [ Crash Timeout ]
-crbug.com/426509691 [ Win11-arm64 ] external/wpt/storage-access-api/requestStorageAccess-same-site-iframe.sub.https.window.html [ Crash ]
 crbug.com/426509691 [ Win11-arm64 ] external/wpt/storage-access-api/storage-access-beyond-cookies.cookies.sub.https.window.html [ Crash ]
 crbug.com/425730182 [ Win11-arm64 ] virtual/dbsc-enabled/external/wpt/device-bound-session-credentials/refresh-replaces-config.https.html [ Crash ]
 crbug.com/425730182 [ Win11-arm64 ] virtual/dbsc-enabled/external/wpt/device-bound-session-credentials/registration-sends-challenge.https.html [ Crash ]
@@ -7576,16 +7580,6 @@ crbug.com/1376845 external/wpt/mediacapture-insertable-streams/MediaStreamTrackP
 crbug.com/1371395 external/wpt/performance-timeline/not-restored-reasons/performance-navigation-timing-same-origin-bfcache.tentative.window.html [ Failure Pass ]
 
 # Test is flaky because of test_driver.bless, see crbug.com/1066891
-crbug.com/1382865 [ Linux ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure Timeout ]
-crbug.com/1382865 [ Mac12 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure ]
-crbug.com/1382865 [ Mac12-arm64 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure ]
-crbug.com/1382865 [ Mac13 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure ]
-crbug.com/1382865 [ Mac13-arm64 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure ]
-crbug.com/1382865 [ Mac14-arm64 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure ]
-crbug.com/1382865 [ Mac15 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure ]
-crbug.com/1382865 [ Mac15-arm64 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure ]
-crbug.com/1382865 [ Win10.20h2 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure ]
-crbug.com/1382865 [ Win11 ] external/wpt/storage-access-api/requestStorageAccess-cross-site-iframe.sub.https.window.html [ Failure ]
 crbug.com/1382865 [ Linux ] external/wpt/storage-access-api/requestStorageAccess-nested-cross-site-iframe.sub.https.window.html [ Failure Timeout ]
 crbug.com/1382865 [ Mac12-arm64 ] external/wpt/storage-access-api/requestStorageAccess-nested-cross-site-iframe.sub.https.window.html [ Failure ]
 crbug.com/1382865 [ Mac13 ] external/wpt/storage-access-api/requestStorageAccess-nested-cross-site-iframe.sub.https.window.html [ Failure ]
@@ -9383,7 +9377,6 @@ crbug.com/384904807 [ Mac ] http/tests/inspector-protocol/tracing/image-decoding
 crbug.com/384863733 external/wpt/fedcm/fedcm-multi-idp/fedcm-multi-idp-mediation-optional.https.html [ Timeout ]
 
 crbug.com/366530634 external/wpt/storage-access-api/storage-access-headers.tentative.https.sub.window.html [ Failure Timeout ]
-crbug.com/366530634 external/wpt/storage-access-api/storage-access-permission.sub.https.window.html [ Timeout ]
 
 # Gardener 2024-12-23
 crbug.com/385571958 virtual/gpu-rasterization/external/wpt/css/css-images/object-view-box-fit-none-video.html [ Failure Pass ]
@@ -9737,7 +9730,6 @@ crbug.com/419705502 [ Win10.20h2 ] http/tests/devtools/elements/styles-2/nested-
 
 # Gardener 2025-08-28
 crbug.com/441519564 [ Mac ] external/wpt/webrtc/RTCRtpParameters-codec.html [ Failure Pass ]
-# crbug.com/441011869 [ Linux ] external/wpt/storage-access-api/requestStorageAccess-sandboxed-iframe-allow-storage-access.sub.https.window.html [ Pass Timeout ]
 
 # Gardener 2025-08-29
 crbug.com/441826647 [ Linux ] external/wpt/webdriver/tests/bidi/browsing_context/navigate/navigate.py [ Skip Timeout ]
@@ -9855,6 +9847,8 @@ crbug.com/453886244 [ Linux ] external/wpt/uievents/mouse/mouse_boundary_events_
 # Gardener 2025-10-22
 crbug.com/453916409 [ Mac12 ] wpt_internal/shared-worker/back-forward-cache/shared-worker-mixed-clients-eviction.tentative.window.html [ Crash Failure Pass Timeout ]
 
+crbug.com/456208218 external/wpt/css/css-view-transitions/scoped/rotation-on-scoped-element.html [ Failure ]
+
 # Gardener 2025-10-24
 crbug.com/447949347 [ Mac ] accessibility/scroll-window-horiz-sends-notification.html [ Pass Timeout ]
 
@@ -9865,3 +9859,8 @@ crbug.com/455803699 [ Mac ] http/tests/accessibility/slow-document-load.html [ P
 crbug.com/455696391 [ Mac ] virtual/view-transition-wide-gamut/inspector-protocol/css/css-get-styles-for-view-transition.js [ Pass Failure ]
 crbug.com/455808926 [ Linux ] images/color-profile-image-object-fit.html [ Pass Failure ]
 crbug.com/455817545 [ Mac ] virtual/threaded/wpt_internal/view-transition/browser-controls-root-offset-new.html [ Pass Failure ]
+
+# Touch drag and drop is not enabled on Linux. The tests will remain disabled until then. The linked crbug was open to decide on the future
+# of the feature on Linux. If enabling the feature, please check `TouchDragEndContextMenu` works as expected.
+crbug.com/451651623 [ Linux ] fast/events/touch/gesture/long-press-on-image-triggers-drag.html [ Failure ]
+crbug.com/451651623 [ Linux ] fast/events/touch/gesture/long-press-on-link-triggers-drag.html [ Failure ]

@@ -672,13 +672,9 @@ public class ToolbarPositionController implements OnSharedPreferenceChangeListen
                             mControlContainer.getView().getRootWindowInsets(),
                             mControlContainer.getView().getRootView());
 
-            int keyboardHeight =
-                    Math.max(
-                            0,
-                            windowInsetsCompat.getInsets(WindowInsetsCompat.Type.ime()).bottom
-                                    - windowInsetsCompat.getInsets(
-                                                    WindowInsetsCompat.Type.tappableElement())
-                                            .bottom);
+            int keyboardHeight = windowInsetsCompat.getInsets(WindowInsetsCompat.Type.ime()).bottom;
+            int statusBarHeight =
+                    windowInsetsCompat.getInsets(WindowInsetsCompat.Type.statusBars()).top;
             // The control container can grow quite large with a multiline url bar, making its full
             // height unrenderable in the amount of space available between the keyboard and window
             // top. We restrict its position and height to allow scrolling and avoid rendering
@@ -687,7 +683,7 @@ public class ToolbarPositionController implements OnSharedPreferenceChangeListen
             int maxHeight = windowHeight - keyboardHeight;
             mControlContainer.setMaxHeight(maxHeight);
 
-            int maxTranslation = -(windowHeight - layer.getHeight());
+            int maxTranslation = -(windowHeight - layer.getHeight() - statusBarHeight);
             // The translation is negative so we take the arithmetic max to get the minimum visible
             // delta.
             layerYOffset = Math.max(layerYOffset - keyboardHeight, maxTranslation);

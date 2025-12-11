@@ -1715,11 +1715,6 @@ constexpr auto kFeatureEntries = std::to_array<flags_ui::FeatureEntry>({
      flag_descriptions::kOptimizationGuideDebugLogsDescription,
      flags_ui::kOsIos,
      SINGLE_VALUE_TYPE(optimization_guide::switches::kDebugLoggingEnabled)},
-    {"optimization-guide-push-notifications",
-     flag_descriptions::kOptimizationGuidePushNotificationClientName,
-     flag_descriptions::kOptimizationGuidePushNotificationClientDescription,
-     flags_ui::kOsIos,
-     FEATURE_VALUE_TYPE(optimization_guide::features::kPushNotifications)},
     {"intents-on-measurements", flag_descriptions::kMeasurementsName,
      flag_descriptions::kMeasurementsDescription, flags_ui::kOsIos,
      FEATURE_VALUE_TYPE(web::features::kEnableMeasurements)},
@@ -2900,6 +2895,14 @@ constexpr auto kFeatureEntries = std::to_array<flags_ui::FeatureEntry>({
      flag_descriptions::kHandleMdmErrorsForDasherAccountsDescription,
      flags_ui::kOsIos,
      FEATURE_VALUE_TYPE(switches::kHandleMdmErrorsForDasherAccounts)},
+    {"location-bar-badge-migration",
+     flag_descriptions::kLocationBarBadgeMigrationName,
+     flag_descriptions::kLocationBarBadgeMigrationDescription, flags_ui::kOsIos,
+     FEATURE_VALUE_TYPE(kLocationBarBadgeMigration)},
+    {"webpage-reported-images-sheet",
+     flag_descriptions::kWebPageReportedImagesSheetName,
+     flag_descriptions::kWebPageReportedImagesSheetDescription,
+     flags_ui::kOsIos, FEATURE_VALUE_TYPE(kWebPageReportedImagesSheet)},
 });
 
 bool SkipConditionalFeatureEntry(const flags_ui::FeatureEntry& entry) {

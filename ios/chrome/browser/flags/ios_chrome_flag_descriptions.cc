@@ -1022,6 +1022,10 @@ const char kLinkedServicesSettingIosName[] = "Linked Services Setting";
 const char kLinkedServicesSettingIosDescription[] =
     "Add Linked Services Setting to the Sync Settings page.";
 
+const char kLocationBarBadgeMigrationName[] = "LocationBarBadgeMigration";
+const char kLocationBarBadgeMigrationDescription[] =
+    "Enables the LocationBarBadgeMigration feature.";
+
 const char kLockBottomToolbarName[] = "Lock bottom toolbar";
 const char kLockBottomToolbarDescription[] =
     "When enabled, the bottom toolbar will not get collapsed when scrolling "
@@ -1280,12 +1284,6 @@ const char kOptimizationGuideDebugLogsName[] =
 const char kOptimizationGuideDebugLogsDescription[] =
     "Enables the optimization guide to log and save debug messages that can be "
     "shown in the internals page.";
-
-const char kOptimizationGuidePushNotificationClientName[] =
-    "Enable optimization guide push notification client";
-const char kOptimizationGuidePushNotificationClientDescription[] =
-    "Enables the client that handles incoming push notifications on behalf of "
-    "the optimization guide.";
 
 const char kPageActionMenuName[] = "Page Action Menu";
 const char kPageActionMenuDescription[] =
@@ -1701,6 +1699,12 @@ const char kWebPageDefaultZoomFromDynamicTypeName[] =
 const char kWebPageDefaultZoomFromDynamicTypeDescription[] =
     "When enabled, the default text zoom level for a website comes from the "
     "current dynamic type setting.";
+
+const char kWebPageReportedImagesSheetName[] =
+    "Surface web page-reported images";
+const char kWebPageReportedImagesSheetDescription[] =
+    "When enabled, surface a sheet on page load which shows web page-reported "
+    "images and associated metadata.";
 
 const char kWebPageTextZoomIPadName[] = "Enable text zoom on iPad";
 const char kWebPageTextZoomIPadDescription[] =

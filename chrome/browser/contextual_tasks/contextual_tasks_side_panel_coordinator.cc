@@ -91,6 +91,7 @@ void ContextualTasksSidePanelCoordinator::CreateAndRegisterEntry(
       base::BindRepeating(&ContextualTasksSidePanelCoordinator::
                               GetPreferredDefaultSidePanelWidth,
                           base::Unretained(this)));
+  entry->set_should_show_ephemerally_in_toolbar(false);
   entry->set_should_show_header(false);
   entry->set_should_show_outline(false);
   global_registry->Register(std::move(entry));
@@ -98,6 +99,20 @@ void ContextualTasksSidePanelCoordinator::CreateAndRegisterEntry(
 
 void ContextualTasksSidePanelCoordinator::Show() {
   side_panel_coordinator_->Show(
+      SidePanelEntry::Key(SidePanelEntry::Id::kContextualTasks));
+}
+
+void ContextualTasksSidePanelCoordinator::Close() {
+  side_panel_coordinator_->Close(SidePanelEntry::PanelType::kToolbar);
+}
+
+bool ContextualTasksSidePanelCoordinator::IsSidePanelOpen() {
+  return side_panel_coordinator_->IsSidePanelShowing(
+      SidePanelEntry::PanelType::kToolbar);
+}
+
+bool ContextualTasksSidePanelCoordinator::IsSidePanelOpenForContextualTask() {
+  return side_panel_coordinator_->IsSidePanelEntryShowing(
       SidePanelEntry::Key(SidePanelEntry::Id::kContextualTasks));
 }
 

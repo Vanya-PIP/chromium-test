@@ -277,8 +277,6 @@ public abstract class ChromeFeatureList {
     public static final String AUTOFILL_ENABLE_SERVER_IBAN = "AutofillEnableServerIban";
     public static final String AUTOFILL_ENABLE_SUPPORT_FOR_HOME_AND_WORK =
             "AutofillEnableSupportForHomeAndWork";
-    public static final String AUTOFILL_ENABLE_SYNCING_OF_PIX_BANK_ACCOUNTS =
-            "AutofillEnableSyncingOfPixBankAccounts";
     public static final String AUTOFILL_RETRY_IMAGE_FETCH_ON_FAILURE =
             "AutofillRetryImageFetchOnFailure";
     public static final String AUTOFILL_SYNC_EWALLET_ACCOUNTS = "AutofillSyncEwalletAccounts";
@@ -508,8 +506,6 @@ public abstract class ChromeFeatureList {
             "OmniboxAutofocusOnIncognitoNtp";
     public static final String OMNIBOX_CACHE_SUGGESTION_RESOURCES =
             "OmniboxCacheSuggestionResources";
-    public static final String OPTIMIZATION_GUIDE_PUSH_NOTIFICATIONS =
-            "OptimizationGuidePushNotifications";
     public static final String PAGE_CONTENT_PROVIDER = "PageContentProvider";
     public static final String PAGE_INFO_ABOUT_THIS_SITE_MORE_LANGS =
             "PageInfoAboutThisSiteMoreLangs";
@@ -663,7 +659,6 @@ public abstract class ChromeFeatureList {
     public static final String TAB_STRIP_DENSITY_CHANGE_ANDROID = "TabStripDensityChangeAndroid";
     public static final String TAB_STRIP_GROUP_DRAG_DROP_ANDROID = "TabStripGroupDragDropAndroid";
     public static final String TAB_STRIP_INCOGNITO_MIGRATION = "TabStripIncognitoMigration";
-    public static final String TAB_STRIP_LAYOUT_OPTIMIZATION = "TabStripLayoutOptimization";
     public static final String TAB_STRIP_MOUSE_CLOSE_RESIZE_DELAY = "TabStripMouseCloseResizeDelay";
     public static final String TAB_SWITCHER_DRAG_DROP_ANDROID = "TabSwitcherDragDropAndroid";
     public static final String TAB_SWITCHER_GROUP_SUGGESTIONS_ANDROID =
@@ -993,8 +988,6 @@ public abstract class ChromeFeatureList {
             newCachedFlag(NEW_TAB_PAGE_CUSTOMIZATION_V2, false);
     public static final CachedFlag sNotificationTrampoline =
             newCachedFlag(NOTIFICATION_TRAMPOLINE, false);
-    public static final CachedFlag sOptimizationGuidePushNotifications =
-            newCachedFlag(OPTIMIZATION_GUIDE_PUSH_NOTIFICATIONS, true);
     public static final CachedFlag sPCctMinimumHeight = newCachedFlag(PCCT_MINIMUM_HEIGHT, true);
     public static final CachedFlag sPaintPreviewDemo = newCachedFlag(PAINT_PREVIEW_DEMO, false);
     public static final CachedFlag sPostGetMyMemoryStateToBackground =
@@ -1051,7 +1044,10 @@ public abstract class ChromeFeatureList {
                     /* defaultValue= */ true,
                     /* defaultValueInTests= */ true);
     public static final CachedFlag sTabStorageSqlitePrototype =
-            newCachedFlag(TAB_STORAGE_SQLITE_PROTOTYPE, false);
+            newCachedFlag(
+                    TAB_STORAGE_SQLITE_PROTOTYPE,
+                    /* defaultValue= */ false,
+                    /* defaultValueInTests= */ true);
     public static final CachedFlag sTabStripDensityChangeAndroid =
             newCachedFlag(TAB_STRIP_DENSITY_CHANGE_ANDROID, true);
     public static final CachedFlag sTabStripIncognitoMigration =
@@ -1221,7 +1217,6 @@ public abstract class ChromeFeatureList {
                     sNewTabPageCustomizationToolbarButton,
                     sNewTabPageCustomizationV2,
                     sNotificationTrampoline,
-                    sOptimizationGuidePushNotifications,
                     sPCctMinimumHeight,
                     sPaintPreviewDemo,
                     sPostGetMyMemoryStateToBackground,
@@ -1377,8 +1372,6 @@ public abstract class ChromeFeatureList {
             newMutableFlagWithSafeDefault(TAB_GROUP_ENTRY_POINTS_ANDROID, true);
     public static final MutableFlagWithSafeDefault sTabGroupParityBottomSheetAndroid =
             newMutableFlagWithSafeDefault(TAB_GROUP_PARITY_BOTTOM_SHEET_ANDROID, true);
-    public static final MutableFlagWithSafeDefault sTabStripLayoutOptimization =
-            newMutableFlagWithSafeDefault(TAB_STRIP_LAYOUT_OPTIMIZATION, true);
     public static final MutableFlagWithSafeDefault sTabSwitcherGroupSuggestionsAndroid =
             newMutableFlagWithSafeDefault(TAB_SWITCHER_GROUP_SUGGESTIONS_ANDROID, false);
     public static final MutableFlagWithSafeDefault sTabSwitcherGroupSuggestionsTestModeAndroid =
@@ -1665,10 +1658,6 @@ public abstract class ChromeFeatureList {
     public static final IntCachedFeatureParam sOmahaMinSdkVersionMinSdkVersion =
             newIntCachedFeatureParam(OMAHA_MIN_SDK_VERSION_ANDROID, "min_sdk_version", -1);
 
-    /** The default cache size in Java for push notification. */
-    public static final IntCachedFeatureParam sOptimizationGuidePushNotificationsMaxCacheSize =
-            newIntCachedFeatureParam(OPTIMIZATION_GUIDE_PUSH_NOTIFICATIONS, "max_cache_size", 100);
-
     public static final DoubleCachedFeatureParam sPCctMinimumHeightRatio =
             newDoubleCachedFeatureParam(PCCT_MINIMUM_HEIGHT, "pcct_minimum_height_ratio", 0.3);
 
@@ -1709,18 +1698,6 @@ public abstract class ChromeFeatureList {
             sTabStorageSqlitePrototypeAuthoritativeReadSource =
                     newBooleanCachedFeatureParam(
                             TAB_STORAGE_SQLITE_PROTOTYPE, "authoritative_read_source", false);
-
-    public static final StringCachedFeatureParam sTabStripLayoutOptimizationOemAllowlist =
-            newStringCachedFeatureParam(
-                    TAB_STRIP_LAYOUT_OPTIMIZATION, "custom_headers_oem_allowlist", "");
-
-    public static final StringCachedFeatureParam sTabStripLayoutOptimizationOemDenylist =
-            newStringCachedFeatureParam(
-                    TAB_STRIP_LAYOUT_OPTIMIZATION, "custom_headers_oem_denylist", "");
-
-    public static final BooleanCachedFeatureParam sTabStripLayoutOptimizationOnExternalDisplay =
-            newBooleanCachedFeatureParam(
-                    TAB_STRIP_LAYOUT_OPTIMIZATION, "enable_on_external_display", true);
 
     public static final IntCachedFeatureParam
             sTabWindowManagerReportIndicesMismatchTimeDiffThresholdMs =
@@ -1805,7 +1782,6 @@ public abstract class ChromeFeatureList {
                     sNotificationTrampolineNormalJobDurationMs,
                     sNotificationTrampolineTimeoutPriorNativeInitMs,
                     sOmahaMinSdkVersionMinSdkVersion,
-                    sOptimizationGuidePushNotificationsMaxCacheSize,
                     sPCctMinimumHeightRatio,
                     sPriceChangeModuleSkipShoppingPersistedTabDataDelayedInit,
                     sReadAloudAudioOverviewsSpeedAdditionPercentage,
@@ -1815,9 +1791,6 @@ public abstract class ChromeFeatureList {
                     sStartSurfaceReturnTimeTabletSecs,
                     sTabGroupListContainment,
                     sTabStorageSqlitePrototypeAuthoritativeReadSource,
-                    sTabStripLayoutOptimizationOemAllowlist,
-                    sTabStripLayoutOptimizationOemDenylist,
-                    sTabStripLayoutOptimizationOnExternalDisplay,
                     sTabWindowManagerReportIndicesMismatchTimeDiffThresholdMs,
                     sTouchToSearchCalloutIph,
                     sTouchToSearchCalloutSnippetAsSubtitle,

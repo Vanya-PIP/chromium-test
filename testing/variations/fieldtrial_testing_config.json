@@ -1441,7 +1441,7 @@
                 {
                     "name": "Enabled_horizontal_plain_v1",
                     "params": {
-                        "probability": "1",
+                        "probability": "1.0",
                         "prompt_arm": "1",
                         "prompt_disposition_reason_filter": "DefaultFallback",
                         "request_type_filter": "Geolocation",
@@ -8084,25 +8084,6 @@
                     },
                     "enable_features": [
                         "DXGIWaitableSwapChain"
-                    ]
-                }
-            ]
-        }
-    ],
-    "DbdRevampDesktop": [
-        {
-            "platforms": [
-                "chromeos",
-                "chromeos_lacros",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "DbdRevampDesktop"
                     ]
                 }
             ]
@@ -17590,6 +17571,7 @@
                         "cookie_controls": "true",
                         "discounts": "true",
                         "file_system_access": "true",
+                        "filled_card_information": "true",
                         "find": "true",
                         "intent_picker": "true",
                         "lens_overlay": "true",
@@ -17602,6 +17584,7 @@
                         "pwa_install": "true",
                         "sharing_hub": "true",
                         "translate": "true",
+                        "virtual_card": "true",
                         "zoom": "true"
                     },
                     "enable_features": [
@@ -19805,35 +19788,6 @@
                     "name": "Enabled",
                     "enable_features": [
                         "ProfilesReordering"
-                    ]
-                }
-            ]
-        }
-    ],
-    "ProgressiveAccessibility": [
-        {
-            "platforms": [
-                "android",
-                "android_webview",
-                "chromeos",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "ProgressiveAccessibility"
-                    ]
-                },
-                {
-                    "name": "EnabledWithHide",
-                    "params": {
-                        "progressive_accessibility_mode": "disable_on_hide"
-                    },
-                    "enable_features": [
-                        "ProgressiveAccessibility"
                     ]
                 }
             ]
@@ -23781,14 +23735,14 @@
             ],
             "experiments": [
                 {
-                    "name": "Enabled_WithMenu",
+                    "name": "Enabled_WithClose",
                     "params": {
                         "drop_target_nudge_to_full_max_width": "360",
                         "drop_target_nudge_to_full_min_width": "120",
                         "drop_target_nudge_to_full_width_percentage": "15",
                         "drop_target_show_delay": "1400ms",
                         "drop_target_width_percentage": "15",
-                        "mini_toolbar_active_config": "showmenu"
+                        "mini_toolbar_active_config": "showclose"
                     },
                     "enable_features": [
                         "CloseActiveTabInSplitViewViaHotkey",
@@ -24659,6 +24613,22 @@
             ]
         }
     ],
+    "SupervisedUserBlockInterstitialV3": [
+        {
+            "platforms": [
+                "android",
+                "chromeos"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "SupervisedUserBlockInterstitialV3"
+                    ]
+                }
+            ]
+        }
+    ],
     "SupportOpeningDraggedLinksInSameTab": [
         {
             "platforms": [
@@ -24723,6 +24693,23 @@
                         "SuppressesLoadingPredictorOnSlowNetwork",
                         "SuppressesPrerenderingOnSlowNetwork",
                         "SuppressesSearchPrefetchOnSlowNetwork"
+                    ]
+                }
+            ]
+        }
+    ],
+    "SurfaceInputForAndroidVEA": [
+        {
+            "platforms": [
+                "android",
+                "android_webview",
+                "android_weblayer"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "SurfaceInputForAndroidVEA"
                     ]
                 }
             ]
@@ -25156,6 +25143,21 @@
                     },
                     "enable_features": [
                         "IPH_TabSearch"
+                    ]
+                }
+            ]
+        }
+    ],
+    "TabStorageSqlitePrototype": [
+        {
+            "platforms": [
+                "android"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "TabStorageSqlitePrototype"
                     ]
                 }
             ]

@@ -727,6 +727,11 @@ inline constexpr char
         "field is not a username/password field and does not have any autofill "
         "suggestions. ";
 
+inline constexpr char kAutofillDisableBnplCountryCheckForTestingName[] =
+    "Disable the country check for BNPL testing";
+inline constexpr char kAutofillDisableBnplCountryCheckForTestingDescription[] =
+    "Enables testing BNPL in countries where it would otherwise be disabled.";
+
 inline constexpr char kAutofillEnableAiBasedAmountExtractionName[] =
     "Enable AI-based checkout amount extraction on Chrome";
 inline constexpr char kAutofillEnableAiBasedAmountExtractionDescription[] =
@@ -960,12 +965,6 @@ inline constexpr char kAutofillEnableSupportForNameAndEmailName[] =
 inline constexpr char kAutofillEnableSupportForNameAndEmailDescription[] =
     "When enabled, a name and email profile with data comming from the account "
     "will be created for autofilling.";
-
-inline constexpr char kAutofillEnableSyncingOfPixBankAccountsName[] =
-    "Sync Pix bank accounts from Google Payments";
-inline constexpr char kAutofillEnableSyncingOfPixBankAccountsDescription[] =
-    "When enabled, Pix bank accounts are synced from Google Payments backend. "
-    "These bank account will show up in Chrome settings.";
 
 inline constexpr char kAutofillEnableVcn3dsAuthenticationName[] =
     "Enable 3DS authentication for virtual cards";
@@ -1734,24 +1733,6 @@ inline constexpr char kEnableControlledFrameDescription[] =
     "Enables experimental support for Controlled Frame. See "
     "https://github.com/WICG/controlled-frame/blob/main/EXPLAINER.md "
     "for more information.";
-
-// LINT.IfChange(FingerprintingProtectionFlagDescriptions)
-inline constexpr char kEnableFingerprintingProtectionBlocklistName[] =
-    "Enable Fingerprinting Protection Blocklist In Regular Browsing";
-inline constexpr char kEnableFingerprintingProtectionBlocklistDescription[] =
-    "Enable Fingerprinting Protection which may block fingerprinting "
-    "resources from loading in a 3p context. This flag applies only outside of "
-    "Incognito mode.";
-
-inline constexpr char
-    kEnableFingerprintingProtectionBlocklistInIncognitoName[] =
-        "Enable Fingerprinting Protection Blocklist In Incognito";
-inline constexpr char
-    kEnableFingerprintingProtectionBlocklistInIncognitoDescription[] =
-        "Enable Fingerprinting Protection which may block fingerprinting "
-        "resources from loading in a 3p context. This flag applies only in "
-        "Incognito mode.";
-// LINT.ThenChange(//ios/chrome/browser/flags/ios_chrome_flag_descriptions.cc:FingerprintingProtectionFlagDescriptions)
 
 inline constexpr char kEnableCanvasNoiseName[] =
     "Enable noise for canvas readbacks in Incognito";
@@ -2780,7 +2761,8 @@ inline constexpr char kMulticastInDirectSocketsName[] =
     "Multicast in Direct Sockets API";
 inline constexpr char kMulticastInDirectSocketsDescription[] =
     "Enables access Multicast in Direct Sockets API. See "
-    "https://github.com/explainers-by-googlers/multicast-in-direct-sockets for "
+    "https://github.com/WICG/direct-sockets/blob/main/docs/"
+    "multicast-explainer.md for "
     "details.";
 
 inline constexpr char kCanvas2DLayersName[] =
@@ -3273,11 +3255,6 @@ inline constexpr char kOptimizationGuideOnDeviceModelAndroidName[] =
     "Enables optimization guide on device on Android";
 inline constexpr char kOptimizationGuideOnDeviceModelAndroidDescription[] =
     "Enables the optimization guide to execute models on device on Android.";
-
-inline constexpr char kOptimizationGuidePushNotificationName[] =
-    "Enable optimization guide push notifications";
-inline constexpr char kOptimizationGuidePushNotificationDescription[] =
-    "Enables the optimization guide to receive push notifications.";
 
 inline constexpr char kOrganicRepeatableQueriesName[] =
     "Organic repeatable queries in Most Visited tiles";
@@ -3851,6 +3828,13 @@ inline constexpr char kScrollableTabStripFlagId[] = "scrollable-tabstrip";
 inline constexpr char kScrollableTabStripName[] = "Tab Scrolling";
 inline constexpr char kScrollableTabStripDescription[] =
     "Enables tab strip to scroll left and right when full.";
+
+inline constexpr char kTabbedBrowserUseNewLayoutId[] =
+    "tabbed-browser-use-new-layout";
+inline constexpr char kTabbedBrowserUseNewLayoutName[] =
+    "Tabbed Browser Use New Layout";
+inline constexpr char kTabbedBrowserUseNewLayoutDescription[] =
+    "Use the new Tabbed Browser Layout. Visually nothing should change.";
 
 inline constexpr char kTabstripComboButtonFlagId[] = "tabstrip-combo-button";
 inline constexpr char kTabstripComboButtonName[] = "Tabstrip Combo Button";
@@ -5825,11 +5809,6 @@ inline constexpr char kTabStripIncognitoMigrationDescription[] =
     "Migrates tab strip incognito switcher to toolbar and adds options to tab "
     "switcher context menu.";
 
-inline constexpr char kTabStripLayoutOptimizationName[] =
-    "Tab Strip Layout Optimization";
-inline constexpr char kTabStripLayoutOptimizationDescription[] =
-    "Allows adding horizontal and vertical margin to the tab strip.";
-
 inline constexpr char kTabStripMouseCloseResizeDelayName[] =
     "Tab Strip Mouse Close Resize Delay";
 inline constexpr char kTabStripMouseCloseResizeDelayDescription[] =
@@ -6479,11 +6458,6 @@ inline constexpr char kMacCatapLoopbackAudioForScreenShareName[] =
 inline constexpr char kMacCatapLoopbackAudioForScreenShareDescription[] =
     "Enable system audio loopback capture for screen share using the macOS "
     "CoreAudio tap API on macOS 14.2+.";
-
-inline constexpr char kMacImeLiveConversionFixName[] =
-    "Mac IME Live Conversion";
-inline constexpr char kMacImeLiveConversionFixDescription[] =
-    "A fix for the Live Conversion feature of Japanese IME.";
 
 inline constexpr char kMacPWAsNotificationAttributionName[] =
     "Mac PWA notification attribution";

@@ -7,6 +7,7 @@
 
 #include "ash/public/cpp/ash_public_export.h"
 #include "third_party/skia/include/core/SkColor.h"
+#include "ui/color/color_id.h"
 #include "ui/gfx/color_palette.h"
 
 namespace ash {
@@ -47,23 +48,12 @@ class ASH_PUBLIC_EXPORT ColorProvider {
     // Background for kIconColorSecondary.
     kIconColorSecondaryBackground,
 
-    // The default color for button labels.
-    kButtonLabelColor,
-
-    // Color for blue button labels, e.g, 'Retry' button of the system toast.
-    kButtonLabelColorBlue,
-
-    kButtonIconColor,
-    kButtonIconColorPrimary,
-
-    // Color for toggle button.
-    kSwitchKnobColorActive,
-    kSwitchKnobColorInactive,
-    kSwitchTrackColorActive,
-    kSwitchTrackColorInactive,
   };
 
   static ColorProvider* Get();
+
+  // Gets the color by resolving the `color_id`.
+  virtual SkColor GetColor(ui::ColorId color_id) const = 0;
 
   // Gets the color of |type| of the corresponding layer based on the current
   // color mode.

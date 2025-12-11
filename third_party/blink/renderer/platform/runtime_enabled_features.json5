@@ -903,12 +903,6 @@
       name: "CanvasHDR",
       status: "experimental",
     },
-    // This flag exists only for testing and should not be changed to stable.
-    // Used for canvas noising tests.
-    {
-      name: "CanvasInterventionsTest",
-      is_protected_feature: "true",
-    },
     {
       // crbug.com/389726691.
       name: "CanvasTextCacheLimit",
@@ -2124,6 +2118,10 @@
       status: "stable",
     },
     {
+      name: "EndpointInclusiveCommitStyles",
+      status: "stable",
+    },
+    {
       name: "EnforceAnonymityExposure",
       status: "stable",
     },
@@ -2777,8 +2775,9 @@
       status: "stable",
     },
     {
+      // Moved from status stable to test due to https://crbug.com/456164629.
       name: "HitTestBorderRadiusForStackingContext",
-      status: "stable",
+      status: "test",
     },
     {
       name: "HrefTranslate",
@@ -2961,6 +2960,10 @@
       base_feature: "none",
     },
     {
+      name: "InstallElement",
+      status: "experimental"
+    },
+    {
       name: "InstallOnDeviceSpeechRecognition",
       status: "stable",
     },
@@ -3046,6 +3049,10 @@
     },
     {
       name: "LayoutIgnoreMarginsForSticky",
+    },
+    {
+      name: "LayoutImageEmptyNaturalSizeBeforeSizeAvailable",
+      status: "stable",
     },
     {
       // Allow triggering the word suggestion from left click.
@@ -3373,10 +3380,10 @@
       status: "stable",
     },
     {
-      // Experimental support for Multicast in Direct Sockets API.
-      // https://github.com/explainers-by-googlers/multicast-in-direct-sockets
+      // Multicast in Direct Sockets API.
+      // https://github.com/WICG/direct-sockets/blob/main/docs/multicast-explainer.md
       name: "MulticastInDirectSockets",
-      status: "test",
+      status: "stable",
       depends_on: ["DirectSockets"]
     },
     {
@@ -3792,7 +3799,7 @@
       public: true,
       base_feature_status: "enabled",
       copied_from_base_feature_if: "overridden",
-      implied_by: ["GeolocationElement"],
+      implied_by: ["GeolocationElement", "InstallElement"],
     },
     {
       // Tracking bug for the implementation: crbug.com/352249547
@@ -5517,6 +5524,10 @@
       // https://chromestatus.com/feature/5183481574850560
       name: "WebAppInstallation",
       status: {"Android": "", "default": "test"},
+      origin_trial_feature_name: "WebAppInstallation",
+      origin_trial_os: ["win", "mac", "linux", "chromeos"],
+      base_feature_status: "enabled",
+      copied_from_base_feature_if: "overridden",
     },
     {
       name: "WebAppLaunchQueue",

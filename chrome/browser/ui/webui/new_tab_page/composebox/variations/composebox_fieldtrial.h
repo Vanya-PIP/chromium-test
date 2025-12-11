@@ -67,9 +67,13 @@ extern const base::FeatureParam<bool> kShowToolsAndModels;
 extern const base::FeatureParam<bool> kShowCreateImageTool;
 // Whether to force tools and models to show in the composebox context menu.
 extern const base::FeatureParam<bool> kForceToolsAndModels;
+// Whether to allow drag and drop files on composebox
+extern const base::FeatureParam<bool> kEnableDragAndDrop;
 
 // Whether to show the submit button in the composebox.
 extern const base::FeatureParam<bool> kShowSubmit;
+// Whether to show the smart compose in the composebox.
+extern const base::FeatureParam<bool> kShowSmartCompose;
 
 bool IsNtpComposeboxEnabled(Profile* profile);
 

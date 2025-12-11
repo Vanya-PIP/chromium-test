@@ -144,6 +144,7 @@ public class BaseCustomTabRootUiCoordinator extends RootUiCoordinator {
     private final @NonNull Runnable mOpenInBrowserRunnable;
     private @Nullable WebAppHeaderLayoutCoordinator mWebAppHeaderLayoutCoordinator;
     private final Supplier<BrowserServicesThemeColorProvider> mWebAppThemeColorProvider;
+    private final @Nullable String mClientPackageName;
     private boolean mHeaderAsOverlay;
 
     // TODO(crbug.com/402213312): This can be NonNull once the flag is enabled by default.
@@ -191,6 +192,7 @@ public class BaseCustomTabRootUiCoordinator extends RootUiCoordinator {
      * @param edgeToEdgeManager Manages core edge-to-edge state and logic.
      * @param desktopWindowStateManager Provides information about desktop windowing state.
      * @param webAppThemeColorProvider Provides current theme of a web app.
+     * @param clientPackageName If provided, the client package name of the embedder
      */
     public BaseCustomTabRootUiCoordinator(
             @NonNull AppCompatActivity activity,
@@ -233,7 +235,8 @@ public class BaseCustomTabRootUiCoordinator extends RootUiCoordinator {
             @NonNull Runnable openInBrowserRunnable,
             @NonNull EdgeToEdgeManager edgeToEdgeManager,
             @Nullable DesktopWindowStateManager desktopWindowStateManager,
-            @Nullable Supplier<BrowserServicesThemeColorProvider> webAppThemeColorProvider) {
+            @Nullable Supplier<BrowserServicesThemeColorProvider> webAppThemeColorProvider,
+            @Nullable String clientPackageName) {
         super(
                 activity,
                 null,
@@ -283,6 +286,7 @@ public class BaseCustomTabRootUiCoordinator extends RootUiCoordinator {
         mIntentDataProvider = intentDataProvider;
         mCustomTabSearchClient = new SearchActivityClientImpl(activity, IntentOrigin.CUSTOM_TAB);
         mWebAppThemeColorProvider = webAppThemeColorProvider;
+        mClientPackageName = clientPackageName;
 
         boolean isAuthTab = intentDataProvider.get().isAuthTab();
         if ((activityType == ActivityType.CUSTOM_TAB || isAuthTab)
@@ -772,7 +776,8 @@ public class BaseCustomTabRootUiCoordinator extends RootUiCoordinator {
                             mAppMenuSupplier,
                             mBrowserControlsManager.getBrowserVisibilityDelegate(),
                             mWindowAndroid,
-                            () -> mCompositorViewHolderSupplier.get().requestFocus());
+                            () -> mCompositorViewHolderSupplier.get().requestFocus(),
+                            mClientPackageName);
             mBrowserControlsManager.addObserver(mWebAppHeaderLayoutCoordinator);
         }
     }
@@ -805,6 +810,20 @@ public class BaseCustomTabRootUiCoordinator extends RootUiCoordinator {
                     location[1] + coord.getHeight());
         }
         return super.getAppRectOnScreen();
+    }
+
+    @Override
+    protected int getFindToolbarStub() {
+        var intentDataProvider = mIntentDataProvider.get();
+        // For PWAs, we have our own app header with a layout that doesn't use
+        // control_container. We need to handle the find toolbar accordingly and use the appropriate
+        // stub.
+        if (DeviceFormFactor.isNonMultiDisplayContextOnTablet(mActivity)) {
+            return WebAppHeaderUtils.isWebAppHeaderEnabled(intentDataProvider)
+                    ? WebAppHeaderUtils.getWebAppHeaderFindToolbarTabletId()
+                    : R.id.find_toolbar_tablet_stub;
+        }
+        return R.id.find_toolbar_stub;
     }
 
     @Override

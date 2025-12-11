@@ -63,6 +63,13 @@ constexpr auto kPageActionProperties =
             },
         },
         {
+            kActionSidePanelShowReadAnything,
+            {
+                .histogram_name = "ReadingMode",
+                .type = PageActionIconType::kReadingMode,
+            },
+        },
+        {
             kActionOffersAndRewardsForPage,
             {
                 .histogram_name = "PaymentsOfferNotification",
@@ -148,6 +155,20 @@ constexpr auto kPageActionProperties =
             {
                 .histogram_name = "AddressAutofill",
                 .type = PageActionIconType::kAutofillAddress,
+            },
+        },
+        {
+            kActionVirtualCardEnroll,
+            {
+                .histogram_name = "VirtualCardEnroll",
+                .type = PageActionIconType::kVirtualCardEnroll,
+            },
+        },
+        {
+            kActionFilledCardInformation,
+            {
+                .histogram_name = "FilledCardInformation",
+                .type = PageActionIconType::kFilledCardInformation,
             },
         },
     });

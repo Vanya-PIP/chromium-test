@@ -605,6 +605,9 @@ extern const char kLensWebPageLoadOptimizationEnabledDescription[];
 extern const char kLinkedServicesSettingIosName[];
 extern const char kLinkedServicesSettingIosDescription[];
 
+extern const char kLocationBarBadgeMigrationName[];
+extern const char kLocationBarBadgeMigrationDescription[];
+
 extern const char kLockBottomToolbarName[];
 extern const char kLockBottomToolbarDescription[];
 
@@ -757,9 +760,6 @@ extern const char kOnlyAccessClipboardAsyncDescription[];
 
 extern const char kOptimizationGuideDebugLogsName[];
 extern const char kOptimizationGuideDebugLogsDescription[];
-
-extern const char kOptimizationGuidePushNotificationClientName[];
-extern const char kOptimizationGuidePushNotificationClientDescription[];
 
 extern const char kPageActionMenuName[];
 extern const char kPageActionMenuDescription[];
@@ -1005,6 +1005,9 @@ extern const char kWebPageAlternativeTextZoomDescription[];
 
 extern const char kWebPageDefaultZoomFromDynamicTypeName[];
 extern const char kWebPageDefaultZoomFromDynamicTypeDescription[];
+
+extern const char kWebPageReportedImagesSheetName[];
+extern const char kWebPageReportedImagesSheetDescription[];
 
 extern const char kWebPageTextZoomIPadName[];
 extern const char kWebPageTextZoomIPadDescription[];

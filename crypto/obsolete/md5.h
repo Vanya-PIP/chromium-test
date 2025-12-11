@@ -51,7 +51,7 @@ crypto::obsolete::Md5 MakeMd5HasherForCachetools();
 }
 
 namespace content {
-std::string Md5OfPixelsAsHexForWebTests(base::span<const uint8_t> pixels);
+std::string Md5AsHexForWebTestPixels(base::span<const uint8_t> pixels);
 }
 
 namespace content_suggestions_tile_saver {
@@ -86,6 +86,11 @@ namespace media::test {
 crypto::obsolete::Md5 MakeMd5HasherForVideoFrameValidation();
 }
 
+namespace nearby {
+std::array<uint8_t, crypto::obsolete::kMd5Size> Md5ForNearby(
+    std::string_view input);
+}
+
 namespace net {
 crypto::obsolete::Md5 MakeMd5HasherForHttpVaryData();
 }
@@ -108,6 +113,11 @@ std::string GetHostHash();
 
 namespace safe_browsing {
 std::string Md5AsHexForBodyDigest(std::string_view data);
+}
+
+namespace segmentation_platform {
+std::array<uint8_t, crypto::obsolete::kMd5Size> Md5ForUrlId(
+    std::string_view data);
 }
 
 namespace shell_util {
@@ -167,11 +177,13 @@ class CRYPTO_EXPORT Md5 {
   friend uint32_t blink::MD5Hash32ForBackgroundTracingHelper(
       std::string_view str);
   friend Md5 cachetool::MakeMd5HasherForCachetools();
-  friend std::string content::Md5OfPixelsAsHexForWebTests(
+  friend std::string content::Md5AsHexForWebTestPixels(
       base::span<const uint8_t> pixels);
   friend Md5 drive::MakeMd5HasherForDriveFsAccount();
   friend Md5 drive::util::MakeMd5HasherForDriveApi();
   friend Md5 extensions::image_writer::MakeMd5HasherForImageWriter();
+  friend std::array<uint8_t, kSize> nearby::Md5ForNearby(
+      std::string_view input);
   friend Md5 policy::MakeMd5HasherForPolicyEventId();
   friend std::string remoting::GetHostHash();
   friend std::string safe_browsing::Md5AsHexForBodyDigest(
@@ -224,6 +236,10 @@ class CRYPTO_EXPORT Md5 {
   // TODO(https://crbug.com/454946840): get rid of this.
   friend std::string reading_list::Md5AsHexForOfflineUrlUtils(
       std::string_view url);
+
+  // TODO(crbug.com/455854083): get rid of this.
+  friend std::array<uint8_t, kSize> segmentation_platform::Md5ForUrlId(
+      std::string_view data);
 
   // TODO(https://crbug.com/425990763): get rid of this.
   friend std::string trusted_vault::MD5StringForTrustedVault(

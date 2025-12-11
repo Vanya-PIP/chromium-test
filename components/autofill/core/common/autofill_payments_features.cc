@@ -12,6 +12,11 @@ namespace autofill::features {
 BASE_FEATURE(kAutofillCreditCardScannerIos, base::FEATURE_DISABLED_BY_DEFAULT);
 #endif
 
+// Enables testing BNPL in countries where it would otherwise be disabled. This
+// is a testing flag that should never be enabled.
+BASE_FEATURE(kAutofillDisableBnplCountryCheckForTesting,
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
 // When enabled, Chrome will extract the checkout amount from the checkout
 // page using server-side AI.
 BASE_FEATURE(kAutofillEnableAiBasedAmountExtraction,
@@ -218,11 +223,6 @@ BASE_FEATURE(kAutofillEnableSaveAndFill, base::FEATURE_DISABLED_BY_DEFAULT);
 // bundling them together with the non-card payment preference menu item.
 BASE_FEATURE(kAutofillEnableSeparatePixPreferenceItem,
              base::FEATURE_DISABLED_BY_DEFAULT);
-
-// When enabled, Pix bank accounts are synced from Chrome Sync backend and
-// stored in the local db.
-BASE_FEATURE(kAutofillEnableSyncingOfPixBankAccounts,
-             base::FEATURE_ENABLED_BY_DEFAULT);
 #endif  // BUILDFLAG(IS_ANDROID)
 
 // When enabled, Chrome will trigger 3DS authentication during a virtual card
