@@ -8,13 +8,9 @@
 
 #include "base/containers/contains.h"
 #include "base/strings/string_number_conversions.h"
-<<<<<<< HEAD
-#include "chromeos/ash/components/quick_start/test"
-=======
 #include "base/strings/string_view_util.h"
 #include "chromeos/ash/components/quick_start/logging.h"
 #include "crypto/obsolete/sha1.h"
->>>>>>> 144.0.7505.0~1
 
 namespace ash::quick_start {
 std::string GetHashedAuthToken(std::string_view authentication_token) {
