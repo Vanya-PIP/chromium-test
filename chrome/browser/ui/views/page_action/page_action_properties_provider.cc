@@ -150,6 +150,20 @@ constexpr auto kPageActionProperties =
                 .type = PageActionIconType::kAutofillAddress,
             },
         },
+        {
+            kActionVirtualCardEnroll,
+            {
+                .histogram_name = "VirtualCardEnroll",
+                .type = PageActionIconType::kVirtualCardEnroll,
+            },
+        },
+        {
+            kActionFilledCardInformation,
+            {
+                .histogram_name = "FilledCardInformation",
+                .type = PageActionIconType::kFilledCardInformation,
+            },
+        },
     });
 
 constexpr bool CheckIgnoreFlagUsage() {

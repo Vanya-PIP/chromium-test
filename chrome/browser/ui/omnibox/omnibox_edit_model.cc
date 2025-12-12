@@ -27,7 +27,9 @@
 #include "base/trace_event/typed_macros.h"
 #include "build/branding_buildflags.h"
 #include "build/build_config.h"
+#include "chrome/app/vector_icons/vector_icons.h"
 #include "chrome/browser/ui/omnibox/omnibox_controller.h"
+#include "chrome/browser/ui/omnibox/omnibox_next_features.h"
 #include "chrome/browser/ui/omnibox/omnibox_popup_view.h"
 #include "chrome/browser/ui/omnibox/omnibox_view.h"
 #include "components/bookmarks/browser/bookmark_model.h"
@@ -495,6 +497,18 @@ ui::ImageModel OmniboxEditModel::GetSuperGIcon(int image_size,
 #endif
 }
 
+bool OmniboxEditModel::ShouldShowAddContextButton() const {
+  return base::FeatureList::IsEnabled(omnibox::kWebUIOmniboxAimPopup) &&
+         omnibox::kWebUIOmniboxAimPopupAddContextButtonVariantParam.Get() ==
+             omnibox::AddContextButtonVariant::kInline &&
+         PopupIsOpen();
+}
+
+ui::ImageModel OmniboxEditModel::GetAddContextIcon(int image_size) const {
+  return ui::ImageModel::FromVectorIcon(kAddChromeRefreshIcon,
+                                        ui::kColorSysPrimary, image_size);
+}
+
 gfx::Image OmniboxEditModel::GetAgentspaceIcon(bool dark_mode) const {
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
   if (dark_mode) {
@@ -743,11 +757,20 @@ void OmniboxEditModel::OpenAiMode(bool via_keyboard) {
       AutocompleteMatch::IsSearchType(current_match_.type) ?
       current_match_.contents : u"";
   RecordAiModeMetrics(query_text, /*activated=*/true, via_keyboard);
-  GURL ai_mode_url =
-      GetUrlForAim(controller_->client()->GetTemplateURLService(),
-                   omnibox::DESKTOP_CHROME_OMNIBOX_KEYWORD_ENTRY_POINT,
-                   /*query_start_time=*/base::Time::Now(), query_text);
-  controller_->client()->OpenUrl(ai_mode_url);
+  if (!query_text.empty() ||
+      !base::FeatureList::IsEnabled(omnibox::kWebUIOmniboxAimPopup)) {
+    GURL ai_mode_url =
+        GetUrlForAim(controller_->client()->GetTemplateURLService(),
+                     omnibox::DESKTOP_CHROME_OMNIBOX_KEYWORD_ENTRY_POINT,
+                     /*query_start_time=*/base::Time::Now(), query_text);
+    controller_->client()->OpenUrl(ai_mode_url);
+  } else {
+    view_->ShowAiModeInPopup();
+  }
+}
+
+bool OmniboxEditModel::PopupInAiMode() const {
+  return popup_view_ && popup_view_->IsAiModeOpen();
 }
 
 void OmniboxEditModel::OpenSelection(OmniboxPopupSelection selection,

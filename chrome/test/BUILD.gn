@@ -3314,7 +3314,6 @@ if (!is_android) {
       "../browser/extensions/api/bookmark_manager_private/bookmark_manager_private_api_browsertest.cc",
       "../browser/fast_shutdown_browsertest.cc",
       "../browser/favicon/content_favicon_driver_browsertest.cc",
-      "../browser/fingerprinting_protection/canvas_interventions_browsertest.cc",
       "../browser/fingerprinting_protection/fingerprinting_protection_filter_user_bypass_browsertest.cc",
       "../browser/first_party_sets/first_party_sets_browsertest.cc",
       "../browser/first_party_sets/first_party_sets_policy_browsertest.cc",
@@ -4077,7 +4076,6 @@ if (!is_android) {
       "//chrome/browser/webauthn",
       "//chrome/browser/webdata_services",
       "//components/contextual_tasks/public:feature_list",
-      "//components/fingerprinting_protection_filter/interventions/common:features",
       "//components/live_caption:live_translate",
       "//components/plus_addresses/core/browser:blocklist_data",
       "//components/policy/core/common:common_constants",
@@ -5231,8 +5229,13 @@ if (!is_android) {
           "../browser/ui/views/status_bubble_views_browsertest_mac.mm",
         ]
       } else {
-        # TaskManagerView is not used or built on Mac.
-        sources += [ "../browser/ui/views/task_manager_view_browsertest.cc" ]
+        sources += [
+          # TaskManagerView is not used or built on Mac.
+          "../browser/ui/views/task_manager_view_browsertest.cc",
+
+          # Excluded on Mac: Cannot reliably check window focus on this platform.
+          "../browser/web_applications/isolated_web_apps/window_management/isolated_web_apps_focus_window_browsertest.cc",
+        ]
       }
       if (is_win || is_mac || is_linux) {
         sources += [
@@ -9810,6 +9813,12 @@ test("unit_tests") {
     ]
   }
 
+  if (is_chromeos) {
+    sources += [ "../browser/shell_integration_chromeos_unittest.cc" ]
+  }
+  if (is_mac) {
+    sources += [ "../browser/shell_integration_mac_unittest.mm" ]
+  }
   if (is_linux) {
     sources += [ "../browser/shell_integration_linux_unittest.cc" ]
 

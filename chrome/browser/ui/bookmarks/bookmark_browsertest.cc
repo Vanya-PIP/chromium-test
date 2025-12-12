@@ -27,9 +27,12 @@
 #include "chrome/browser/ui/bookmarks/bookmark_utils_desktop.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_commands.h"
+#include "chrome/browser/ui/browser_element_identifiers.h"
 #include "chrome/browser/ui/browser_list.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_interface_iterator.h"
 #include "chrome/browser/ui/tabs/tab_group_model.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/ui_features.h"
@@ -52,8 +55,16 @@
 #include "testing/gmock/include/gmock/gmock.h"
 #include "ui/base/dragdrop/mojom/drag_drop_types.mojom-shared.h"
 #include "ui/base/dragdrop/os_exchange_data.h"
+#include "ui/base/interaction/element_tracker.h"
 #include "ui/base/ui_base_features.h"
 #include "ui/gfx/image/image_skia.h"
+#include "ui/views/controls/button/checkbox.h"
+#include "ui/views/interaction/element_tracker_views.h"
+#include "ui/views/test/button_test_api.h"
+#include "ui/views/widget/any_widget_observer.h"
+#include "ui/views/widget/widget.h"
+#include "ui/views/widget/widget_delegate.h"
+#include "ui/views/window/dialog_delegate.h"
 
 using bookmarks::BookmarkModel;
 using bookmarks::BookmarkNode;
@@ -283,8 +294,10 @@ IN_PROC_BROWSER_TEST_F(
   EXPECT_EQ(browser_tabs + 2, browser()->tab_strip_model()->GetTabCount());
 }
 
-IN_PROC_BROWSER_TEST_F(BookmarkBrowsertest, ConvertBookmarkFolderToGroup) {
+IN_PROC_BROWSER_TEST_F(BookmarkBrowsertest,
+                       ConvertBookmarkFolderToGroupCreateNewGroup) {
   base::UserActionTester user_action_tester;
+  // Create a bookmark folder with 2 urls.
   BookmarkModel* bookmark_model = WaitForBookmarkModel(browser()->profile());
   const BookmarkNode* const folder = bookmark_model->AddFolder(
       bookmark_model->bookmark_bar_node(), 0, u"Folder");
@@ -293,66 +306,34 @@ IN_PROC_BROWSER_TEST_F(BookmarkBrowsertest, ConvertBookmarkFolderToGroup) {
   const BookmarkNode* bookmark_node = bookmark_model->AddURL(
       folder, 1, u"Settings", GURL(chrome::kChromeUISettingsURL));
 
-  EXPECT_EQ(
-      0u, browser()->tab_strip_model()->group_model()->ListTabGroups().size());
-
-  bookmarks::OpenAllIfAllowed(browser(), {folder},
-                              WindowOpenDisposition::NEW_BACKGROUND_TAB,
-                              bookmarks::OpenAllBookmarksContext::kInGroup);
-
-  ASSERT_EQ(
-      1u, browser()->tab_strip_model()->group_model()->ListTabGroups().size());
   tab_groups::TabGroupSyncService* tab_group_service =
       tab_groups::TabGroupSyncServiceFactory::GetForProfile(
           browser()->profile());
   CHECK(tab_group_service);
 
-  std::optional<tab_groups::SavedTabGroup> saved_tab_group1;
-  std::optional<tab_groups::SavedTabGroup> saved_tab_group2;
+  // Convert to saved tab group for the first time.
+  {
+    EXPECT_EQ(
+        0u,
+        browser()->tab_strip_model()->group_model()->ListTabGroups().size());
 
-  tab_groups::TabGroupId local_tab_group_id1 =
-      browser()->tab_strip_model()->group_model()->ListTabGroups()[0];
-  saved_tab_group1 = tab_group_service->GetGroup(local_tab_group_id1);
-  ASSERT_TRUE(saved_tab_group1.has_value());
-  ASSERT_EQ(2u, saved_tab_group1->saved_tabs().size());
-  ASSERT_EQ(GURL(chrome::kChromeUIExtensionsURL),
-            saved_tab_group1->saved_tabs()[0].url());
-  ASSERT_EQ(GURL(chrome::kChromeUISettingsURL),
-            saved_tab_group1->saved_tabs()[1].url());
+    bookmarks::OpenAllIfAllowed(browser(), {folder},
+                                WindowOpenDisposition::NEW_BACKGROUND_TAB,
+                                bookmarks::OpenAllBookmarksContext::kInGroup);
 
-  // Create a new group.
-  bookmarks::SetOverrideConnectedGroupForTesting(false);
+    ASSERT_EQ(
+        1u,
+        browser()->tab_strip_model()->group_model()->ListTabGroups().size());
 
-  bookmarks::OpenAllIfAllowed(browser(), {folder},
-                              WindowOpenDisposition::NEW_BACKGROUND_TAB,
-                              bookmarks::OpenAllBookmarksContext::kInGroup);
-
-  EXPECT_EQ(1, user_action_tester.GetActionCount(
-                   "BookmarkTabGroupConversion_UserSelectCreateNewGroup"));
-
-  EXPECT_EQ(
-      2u, browser()->tab_strip_model()->group_model()->ListTabGroups().size());
-  local_tab_group_id1 =
-      browser()->tab_strip_model()->group_model()->ListTabGroups()[0];
-  tab_groups::TabGroupId local_tab_group_id2 =
-      browser()->tab_strip_model()->group_model()->ListTabGroups()[1];
-
-  // Verify group 1 and group2 have the same URLs.
-  saved_tab_group1 = tab_group_service->GetGroup(local_tab_group_id1);
-  ASSERT_TRUE(saved_tab_group1.has_value());
-  ASSERT_EQ(2u, saved_tab_group1->saved_tabs().size());
-  ASSERT_EQ(GURL(chrome::kChromeUIExtensionsURL),
-            saved_tab_group1->saved_tabs()[0].url());
-  ASSERT_EQ(GURL(chrome::kChromeUISettingsURL),
-            saved_tab_group1->saved_tabs()[1].url());
-
-  saved_tab_group2 = tab_group_service->GetGroup(local_tab_group_id2);
-  ASSERT_TRUE(saved_tab_group2.has_value());
-  ASSERT_EQ(2u, saved_tab_group2->saved_tabs().size());
-  ASSERT_EQ(GURL(chrome::kChromeUIExtensionsURL),
-            saved_tab_group2->saved_tabs()[0].url());
-  ASSERT_EQ(GURL(chrome::kChromeUISettingsURL),
-            saved_tab_group2->saved_tabs()[1].url());
+    auto saved_tab_group1 = tab_group_service->GetGroup(
+        browser()->tab_strip_model()->group_model()->ListTabGroups()[0]);
+    ASSERT_TRUE(saved_tab_group1.has_value());
+    ASSERT_EQ(2u, saved_tab_group1->saved_tabs().size());
+    ASSERT_EQ(GURL(chrome::kChromeUIExtensionsURL),
+              saved_tab_group1->saved_tabs()[0].url());
+    ASSERT_EQ(GURL(chrome::kChromeUISettingsURL),
+              saved_tab_group1->saved_tabs()[1].url());
+  }
 
   // Remove a bookmark node and add a new one.
   bookmark_model->Remove(
@@ -360,34 +341,139 @@ IN_PROC_BROWSER_TEST_F(BookmarkBrowsertest, ConvertBookmarkFolderToGroup) {
   bookmark_model->AddURL(folder, 1, u"Version",
                          GURL(chrome::kChromeUIVersionURL));
 
-  // Override the existing group.
-  bookmarks::SetOverrideConnectedGroupForTesting(true);
+  // Convert to saved tab group for the second time.
+  // User chooses to create new group.
+  {
+    views::NamedWidgetShownWaiter waiter(
+        views::test::AnyWidgetTestPasskey{},
+        bookmarks::kReplaceOrCreateGroupDialogName);
 
-  bookmarks::OpenAllIfAllowed(browser(), {folder},
-                              WindowOpenDisposition::NEW_BACKGROUND_TAB,
-                              bookmarks::OpenAllBookmarksContext::kInGroup);
+    bookmarks::OpenAllIfAllowed(browser(), {folder},
+                                WindowOpenDisposition::NEW_BACKGROUND_TAB,
+                                bookmarks::OpenAllBookmarksContext::kInGroup);
+
+    views::Widget* dialog_widget = waiter.WaitIfNeededAndGet();
+    ASSERT_NE(nullptr, dialog_widget);
+    dialog_widget->widget_delegate()->AsDialogDelegate()->Accept();
+  }
+
+  EXPECT_EQ(1, user_action_tester.GetActionCount(
+                   "BookmarkTabGroupConversion_UserSelectCreateNewGroup"));
+
+  EXPECT_EQ(
+      2u, browser()->tab_strip_model()->group_model()->ListTabGroups().size());
+
+  // Verify group1 has the original URLS and group2 has the updated URLs.
+  {
+    auto saved_tab_group1 = tab_group_service->GetGroup(
+        browser()->tab_strip_model()->group_model()->ListTabGroups()[0]);
+    ASSERT_TRUE(saved_tab_group1.has_value());
+    ASSERT_EQ(2u, saved_tab_group1->saved_tabs().size());
+    ASSERT_EQ(GURL(chrome::kChromeUIExtensionsURL),
+              saved_tab_group1->saved_tabs()[0].url());
+    ASSERT_EQ(GURL(chrome::kChromeUISettingsURL),
+              saved_tab_group1->saved_tabs()[1].url());
+
+    auto saved_tab_group2 = tab_group_service->GetGroup(
+        browser()->tab_strip_model()->group_model()->ListTabGroups()[1]);
+    ASSERT_TRUE(saved_tab_group2.has_value());
+    ASSERT_EQ(2u, saved_tab_group2->saved_tabs().size());
+    ASSERT_EQ(GURL(chrome::kChromeUIExtensionsURL),
+              saved_tab_group2->saved_tabs()[0].url());
+    ASSERT_EQ(GURL(chrome::kChromeUIVersionURL),
+              saved_tab_group2->saved_tabs()[1].url());
+  }
+}
+
+IN_PROC_BROWSER_TEST_F(BookmarkBrowsertest,
+                       ConvertBookmarkFolderToGroupOverrideOldGroup) {
+  base::UserActionTester user_action_tester;
+  // Create a bookmark folder with 2 urls.
+  BookmarkModel* bookmark_model = WaitForBookmarkModel(browser()->profile());
+  const BookmarkNode* const folder = bookmark_model->AddFolder(
+      bookmark_model->bookmark_bar_node(), 0, u"Folder");
+  bookmark_model->AddURL(folder, 0, u"Extensions",
+                         GURL(chrome::kChromeUIExtensionsURL));
+  const BookmarkNode* bookmark_node = bookmark_model->AddURL(
+      folder, 1, u"Settings", GURL(chrome::kChromeUISettingsURL));
+
+  tab_groups::TabGroupSyncService* tab_group_service =
+      tab_groups::TabGroupSyncServiceFactory::GetForProfile(
+          browser()->profile());
+  CHECK(tab_group_service);
+
+  // Convert to saved tab group for the first time.
+  {
+    EXPECT_EQ(
+        0u,
+        browser()->tab_strip_model()->group_model()->ListTabGroups().size());
+
+    bookmarks::OpenAllIfAllowed(browser(), {folder},
+                                WindowOpenDisposition::NEW_BACKGROUND_TAB,
+                                bookmarks::OpenAllBookmarksContext::kInGroup);
+
+    ASSERT_EQ(
+        1u,
+        browser()->tab_strip_model()->group_model()->ListTabGroups().size());
+
+    auto saved_tab_group1 = tab_group_service->GetGroup(
+        browser()->tab_strip_model()->group_model()->ListTabGroups()[0]);
+    ASSERT_TRUE(saved_tab_group1.has_value());
+    ASSERT_EQ(2u, saved_tab_group1->saved_tabs().size());
+    ASSERT_EQ(GURL(chrome::kChromeUIExtensionsURL),
+              saved_tab_group1->saved_tabs()[0].url());
+    ASSERT_EQ(GURL(chrome::kChromeUISettingsURL),
+              saved_tab_group1->saved_tabs()[1].url());
+  }
+
+  // Remove a bookmark node and add a new one.
+  bookmark_model->Remove(
+      bookmark_node, bookmarks::metrics::BookmarkEditSource::kOther, FROM_HERE);
+  bookmark_model->AddURL(folder, 1, u"Version",
+                         GURL(chrome::kChromeUIVersionURL));
+
+  // Convert to saved tab group for the second time.
+  // User chooses to override the existing group.
+  {
+    views::NamedWidgetShownWaiter waiter(
+        views::test::AnyWidgetTestPasskey{},
+        bookmarks::kReplaceOrCreateGroupDialogName);
+
+    bookmarks::OpenAllIfAllowed(browser(), {folder},
+                                WindowOpenDisposition::NEW_BACKGROUND_TAB,
+                                bookmarks::OpenAllBookmarksContext::kInGroup);
+
+    views::Widget* dialog_widget = waiter.WaitIfNeededAndGet();
+    ASSERT_NE(nullptr, dialog_widget);
+
+    // Find and check the checkbox.
+    const ui::ElementContext context =
+        views::ElementTrackerViews::GetContextForView(
+            dialog_widget->GetContentsView());
+    views::Checkbox* checkbox =
+        views::ElementTrackerViews::GetInstance()
+            ->GetUniqueViewAs<views::Checkbox>(
+                kBookmarkReplaceOldGroupCheckboxId, context);
+    CHECK(checkbox);
+    ui::MouseEvent released_event(ui::EventType::kMouseReleased, gfx::PointF(),
+                                  gfx::PointF(), base::TimeTicks(), 0, 0);
+    views::test::ButtonTestApi(checkbox).NotifyClick(released_event);
+
+    dialog_widget->widget_delegate()->AsDialogDelegate()->Accept();
+  }
 
   EXPECT_EQ(1, user_action_tester.GetActionCount(
                    "BookmarkTabGroupConversion_UserSelectReplaceOldGroup"));
 
-  // Verify group 1 has the original URLs and group 2 has the updated URLs.
-  EXPECT_EQ(
-      2u, browser()->tab_strip_model()->group_model()->ListTabGroups().size());
-  saved_tab_group1 = tab_group_service->GetGroup(local_tab_group_id1);
+  // Verify group1 has the updated URLs.
+  auto saved_tab_group1 = tab_group_service->GetGroup(
+      browser()->tab_strip_model()->group_model()->ListTabGroups()[0]);
   ASSERT_TRUE(saved_tab_group1.has_value());
   ASSERT_EQ(2u, saved_tab_group1->saved_tabs().size());
   ASSERT_EQ(GURL(chrome::kChromeUIExtensionsURL),
             saved_tab_group1->saved_tabs()[0].url());
-  ASSERT_EQ(GURL(chrome::kChromeUISettingsURL),
-            saved_tab_group1->saved_tabs()[1].url());
-
-  saved_tab_group2 = tab_group_service->GetGroup(local_tab_group_id2);
-  ASSERT_TRUE(saved_tab_group2.has_value());
-  ASSERT_EQ(2u, saved_tab_group2->saved_tabs().size());
-  ASSERT_EQ(GURL(chrome::kChromeUIExtensionsURL),
-            saved_tab_group2->saved_tabs()[0].url());
   ASSERT_EQ(GURL(chrome::kChromeUIVersionURL),
-            saved_tab_group2->saved_tabs()[1].url());
+            saved_tab_group1->saved_tabs()[1].url());
 }
 
 IN_PROC_BROWSER_TEST_F(BookmarkBrowsertest, OpenAllBookmarks) {
@@ -432,18 +518,19 @@ IN_PROC_BROWSER_TEST_F(BookmarkBrowsertest, OpenAllBookmarks) {
       close_all_tabs_except_first(incognito_browser);
       bookmarks::OpenAllIfAllowed(regular_browser, {bbar},
                                   WindowOpenDisposition::NEW_WINDOW);
-      Browser* regular_browser2 = nullptr;
-      for (Browser* browser_instance : *BrowserList::GetInstance()) {
-        if (browser_instance != incognito_browser &&
-            browser_instance != regular_browser) {
-          regular_browser2 = browser_instance;
-        }
-      }
+      BrowserWindowInterface* regular_browser2 = nullptr;
+      ForEachCurrentBrowserWindowInterfaceOrderedByActivation(
+          [&](BrowserWindowInterface* browser) {
+            if (browser != incognito_browser && browser != regular_browser) {
+              regular_browser2 = browser;
+            }
+            return !regular_browser2;
+          });
       // new browser needs to be opened
       EXPECT_NE(regular_browser2, nullptr);
       int num_tabs_regular = regular_browser->tab_strip_model()->GetTabCount();
       int num_tabs_regular2 =
-          regular_browser2->tab_strip_model()->GetTabCount();
+          regular_browser2->GetTabStripModel()->GetTabCount();
       EXPECT_EQ(num_tabs_regular, 1);
       EXPECT_EQ(num_tabs_regular2, 4);
       CloseBrowserSynchronously(regular_browser2);
@@ -484,20 +571,21 @@ IN_PROC_BROWSER_TEST_F(BookmarkBrowsertest, OpenAllBookmarks) {
       close_all_tabs_except_first(incognito_browser);
       bookmarks::OpenAllIfAllowed(incognito_browser, {incognito_bbar},
                                   WindowOpenDisposition::NEW_WINDOW);
-      Browser* incognito_browser2 = nullptr;
-      for (Browser* browser_instance : *BrowserList::GetInstance()) {
-        if (browser_instance != incognito_browser &&
-            browser_instance != regular_browser) {
-          incognito_browser2 = browser_instance;
-        }
-      }
+      BrowserWindowInterface* incognito_browser2 = nullptr;
+      ForEachCurrentBrowserWindowInterfaceOrderedByActivation(
+          [&](BrowserWindowInterface* browser) {
+            if (browser != incognito_browser && browser != regular_browser) {
+              incognito_browser2 = browser;
+            }
+            return !incognito_browser2;
+          });
       // new browser needs to be opened
       EXPECT_NE(incognito_browser2, nullptr);
       int num_tabs_regular = regular_browser->tab_strip_model()->GetTabCount();
       int num_tabs_incognito =
           incognito_browser->tab_strip_model()->GetTabCount();
       int num_tabs_incognito2 =
-          incognito_browser2->tab_strip_model()->GetTabCount();
+          incognito_browser2->GetTabStripModel()->GetTabCount();
       EXPECT_EQ(num_tabs_regular, 3);
       EXPECT_EQ(num_tabs_incognito, 1);
       EXPECT_EQ(num_tabs_incognito2, 2);

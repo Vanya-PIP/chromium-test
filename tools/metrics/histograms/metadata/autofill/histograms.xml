@@ -5166,6 +5166,39 @@ Called by update_autofill_enums.py. This is a manual comment.-->
   </summary>
 </histogram>
 
+<histogram name="Autofill.OneTimeTokens.PhishGuard.CheckPerformed"
+    enum="Boolean" expires_after="2026-10-31">
+  <owner>luchenpeng@google.com</owner>
+  <owner>koerber@google.com</owner>
+  <owner>battre@chromium.org</owner>
+  <summary>
+    Whether a PhishGuard check was performed before offering to autofill
+    one-time tokens. Recorded every time a one-time token field is detected.
+  </summary>
+</histogram>
+
+<histogram name="Autofill.OneTimeTokens.PhishGuard.Latency" units="ms"
+    expires_after="2026-10-31">
+  <owner>luchenpeng@google.com</owner>
+  <owner>koerber@google.com</owner>
+  <owner>battre@chromium.org</owner>
+  <summary>
+    The latency of a PhishGuard check before offering to autofill one-time
+    tokens. Recorded every time a PhishGuard check is completed.
+  </summary>
+</histogram>
+
+<histogram name="Autofill.OneTimeTokens.PhishGuard.Verdict"
+    enum="OneTimeTokensPhishGuardVerdict" expires_after="2026-10-31">
+  <owner>luchenpeng@google.com</owner>
+  <owner>koerber@google.com</owner>
+  <owner>battre@chromium.org</owner>
+  <summary>
+    The verdict of a PhishGuard check before offering to autofill one-time
+    tokens. Recorded every time a PhishGuard check is completed.
+  </summary>
+</histogram>
+
 <histogram name="Autofill.OtpAuth.{CardType}.{OtpAuthType}.Attempt"
     enum="BooleanAttempted" expires_after="2026-06-01">
   <owner>siyua@chromium.org</owner>
@@ -8397,6 +8430,16 @@ Called by update_autofill_enums.py. This is a manual comment.-->
   </token>
 </histogram>
 
+<histogram name="Autofill.ValuableMetadata.OrphanEntriesRemovedCount"
+    units="entries" expires_after="2026-11-30">
+  <owner>vizcay@google.com</owner>
+  <owner>chrome-autofill-alerts@google.com</owner>
+  <summary>
+    Records the number of orphan valuable metadata entries that were removed
+    during cleanup. Recorded on startup.
+  </summary>
+</histogram>
+
 <histogram name="Autofill.Vcn3ds.FlowEvents" enum="Vcn3dsFlowEvents"
     expires_after="2026-06-01">
   <owner>vinnypersky@google.com</owner>
@@ -8700,7 +8743,7 @@ Called by update_autofill_enums.py. This is a manual comment.-->
 </histogram>
 
 <histogram name="Autofill.VirtualCardEnrollBubble.LoadingResult"
-    enum="AutofillVirtualCardEnrollBubbleResult" expires_after="2025-11-02">
+    enum="AutofillVirtualCardEnrollBubbleResult" expires_after="2026-06-01">
   <owner>darwinyang@google.com</owner>
   <owner>chrome-payments-eng@google.com</owner>
   <owner>payments-autofill-team@google.com</owner>
@@ -8711,7 +8754,7 @@ Called by update_autofill_enums.py. This is a manual comment.-->
 </histogram>
 
 <histogram name="Autofill.VirtualCardEnrollBubble.LoadingShown"
-    enum="AutofillVirtualCardEnrollBubbleResult" expires_after="2025-11-02">
+    enum="AutofillVirtualCardEnrollBubbleResult" expires_after="2026-06-01">
   <owner>darwinyang@google.com</owner>
   <owner>chrome-payments-eng@google.com</owner>
   <owner>payments-autofill-team@google.com</owner>

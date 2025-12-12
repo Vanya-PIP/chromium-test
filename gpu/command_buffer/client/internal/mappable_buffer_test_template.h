@@ -119,10 +119,6 @@ class MappableBufferTest : public testing::Test {
     }
   }
 
-  GpuMemoryBufferSupport* gpu_memory_buffer_support() {
-    return &gpu_memory_buffer_support_;
-  }
-
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_OZONE)
   // Overridden from testing::Test:
   void SetUp() override {
@@ -182,10 +178,24 @@ class MappableBufferTest : public testing::Test {
     return handle.type != gfx::EMPTY_BUFFER;
   }
 
+  std::array<gfx::BufferUsage, 11> usages() { return usages_; }
+
  private:
   bool run_gpu_test_ = false;
-  GpuMemoryBufferSupport gpu_memory_buffer_support_;
   raw_ptr<gl::GLDisplay> display_ = nullptr;
+  std::array<gfx::BufferUsage, 11> usages_ = {
+      gfx::BufferUsage::GPU_READ,
+      gfx::BufferUsage::SCANOUT,
+      gfx::BufferUsage::SCANOUT_CAMERA_READ_WRITE,
+      gfx::BufferUsage::CAMERA_AND_CPU_READ_WRITE,
+      gfx::BufferUsage::SCANOUT_CPU_READ_WRITE,
+      gfx::BufferUsage::SCANOUT_VDA_WRITE,
+      gfx::BufferUsage::PROTECTED_SCANOUT,
+      gfx::BufferUsage::PROTECTED_SCANOUT_VDA_WRITE,
+      gfx::BufferUsage::GPU_READ_CPU_READ_WRITE,
+      gfx::BufferUsage::SCANOUT_VEA_CPU_READ,
+      gfx::BufferUsage::VEA_READ_CAMERA_AND_CPU_READ_WRITE,
+  };
 #if BUILDFLAG(IS_OZONE)
   std::unique_ptr<gfx::ClientNativePixmapFactory> client_native_pixmap_factory_;
 #endif
@@ -197,27 +207,14 @@ TYPED_TEST_P(MappableBufferTest, CreateFromHandle) {
   const gfx::Size kBufferSize(8, 8);
 
   for (auto format : viz::GetMappableSharedImageFormatForTesting()) {
-    gfx::BufferUsage usages[] = {
-        gfx::BufferUsage::GPU_READ,
-        gfx::BufferUsage::SCANOUT,
-        gfx::BufferUsage::SCANOUT_CAMERA_READ_WRITE,
-        gfx::BufferUsage::CAMERA_AND_CPU_READ_WRITE,
-        gfx::BufferUsage::SCANOUT_CPU_READ_WRITE,
-        gfx::BufferUsage::SCANOUT_VDA_WRITE,
-        gfx::BufferUsage::PROTECTED_SCANOUT,
-        gfx::BufferUsage::PROTECTED_SCANOUT_VDA_WRITE,
-        gfx::BufferUsage::GPU_READ_CPU_READ_WRITE,
-        gfx::BufferUsage::SCANOUT_VEA_CPU_READ,
-        gfx::BufferUsage::VEA_READ_CAMERA_AND_CPU_READ_WRITE,
-    };
-    for (auto usage : usages) {
+    for (auto usage : TestFixture::usages()) {
       if (TypeParam::kBufferType != gfx::SHARED_MEMORY_BUFFER &&
 #if BUILDFLAG(IS_ANDROID)
           format != viz::MultiPlaneFormat::kNV12) {
 #else
-          !TestFixture::gpu_memory_buffer_support()
-               ->IsNativeGpuMemoryBufferConfigurationSupportedForTesting(
-                   format, usage)) {
+          !GpuMemoryBufferSupport::
+              IsNativeGpuMemoryBufferConfigurationSupportedForTesting(format,
+                                                                      usage)) {
 #endif
         continue;
       }
@@ -242,24 +239,11 @@ TYPED_TEST_P(MappableBufferTest, CreateFromHandleSmallBuffer) {
   const gfx::Size kBufferSize(8, 8);
 
   for (auto format : viz::GetMappableSharedImageFormatForTesting()) {
-    gfx::BufferUsage usages[] = {
-        gfx::BufferUsage::GPU_READ,
-        gfx::BufferUsage::SCANOUT,
-        gfx::BufferUsage::SCANOUT_CAMERA_READ_WRITE,
-        gfx::BufferUsage::CAMERA_AND_CPU_READ_WRITE,
-        gfx::BufferUsage::SCANOUT_CPU_READ_WRITE,
-        gfx::BufferUsage::SCANOUT_VDA_WRITE,
-        gfx::BufferUsage::PROTECTED_SCANOUT,
-        gfx::BufferUsage::PROTECTED_SCANOUT_VDA_WRITE,
-        gfx::BufferUsage::GPU_READ_CPU_READ_WRITE,
-        gfx::BufferUsage::SCANOUT_VEA_CPU_READ,
-        gfx::BufferUsage::VEA_READ_CAMERA_AND_CPU_READ_WRITE,
-    };
-    for (auto usage : usages) {
+    for (auto usage : TestFixture::usages()) {
       if (TypeParam::kBufferType != gfx::SHARED_MEMORY_BUFFER &&
-          !TestFixture::gpu_memory_buffer_support()
-               ->IsNativeGpuMemoryBufferConfigurationSupportedForTesting(
-                   format, usage)) {
+          !GpuMemoryBufferSupport::
+              IsNativeGpuMemoryBufferConfigurationSupportedForTesting(format,
+                                                                      usage)) {
         continue;
       }
 
@@ -293,9 +277,9 @@ TYPED_TEST_P(MappableBufferTest, Map) {
 
   for (auto format : viz::GetMappableSharedImageFormatForTesting()) {
     if (TypeParam::kBufferType != gfx::SHARED_MEMORY_BUFFER &&
-        !TestFixture::gpu_memory_buffer_support()
-             ->IsNativeGpuMemoryBufferConfigurationSupportedForTesting(
-                 format, gfx::BufferUsage::GPU_READ_CPU_READ_WRITE)) {
+        !GpuMemoryBufferSupport::
+            IsNativeGpuMemoryBufferConfigurationSupportedForTesting(
+                format, gfx::BufferUsage::GPU_READ_CPU_READ_WRITE)) {
       continue;
     }
 
@@ -354,9 +338,9 @@ TYPED_TEST_P(MappableBufferTest, PersistentMap) {
 
   for (auto format : viz::GetMappableSharedImageFormatForTesting()) {
     if (TypeParam::kBufferType != gfx::SHARED_MEMORY_BUFFER &&
-        !TestFixture::gpu_memory_buffer_support()
-             ->IsNativeGpuMemoryBufferConfigurationSupportedForTesting(
-                 format, gfx::BufferUsage::GPU_READ_CPU_READ_WRITE)) {
+        !GpuMemoryBufferSupport::
+            IsNativeGpuMemoryBufferConfigurationSupportedForTesting(
+                format, gfx::BufferUsage::GPU_READ_CPU_READ_WRITE)) {
       continue;
     }
 
@@ -433,27 +417,14 @@ TYPED_TEST_P(MappableBufferTest, SerializeAndDeserialize) {
   const gfx::GpuMemoryBufferType kBufferType = TypeParam::kBufferType;
 
   for (auto format : viz::GetMappableSharedImageFormatForTesting()) {
-    gfx::BufferUsage usages[] = {
-        gfx::BufferUsage::GPU_READ,
-        gfx::BufferUsage::SCANOUT,
-        gfx::BufferUsage::SCANOUT_CAMERA_READ_WRITE,
-        gfx::BufferUsage::CAMERA_AND_CPU_READ_WRITE,
-        gfx::BufferUsage::SCANOUT_CPU_READ_WRITE,
-        gfx::BufferUsage::SCANOUT_VDA_WRITE,
-        gfx::BufferUsage::PROTECTED_SCANOUT,
-        gfx::BufferUsage::PROTECTED_SCANOUT_VDA_WRITE,
-        gfx::BufferUsage::GPU_READ_CPU_READ_WRITE,
-        gfx::BufferUsage::SCANOUT_VEA_CPU_READ,
-        gfx::BufferUsage::VEA_READ_CAMERA_AND_CPU_READ_WRITE,
-    };
-    for (auto usage : usages) {
+    for (auto usage : TestFixture::usages()) {
       if (TypeParam::kBufferType != gfx::SHARED_MEMORY_BUFFER &&
 #if BUILDFLAG(IS_ANDROID)
           format != viz::MultiPlaneFormat::kNV12) {
 #else
-          !TestFixture::gpu_memory_buffer_support()
-               ->IsNativeGpuMemoryBufferConfigurationSupportedForTesting(
-                   format, usage)) {
+          !GpuMemoryBufferSupport::
+              IsNativeGpuMemoryBufferConfigurationSupportedForTesting(format,
+                                                                      usage)) {
 #endif
         continue;
       }

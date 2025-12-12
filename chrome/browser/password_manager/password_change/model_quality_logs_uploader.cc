@@ -12,7 +12,10 @@
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/translate/chrome_translate_client.h"
 #include "components/affiliations/core/browser/affiliation_utils.h"
+#include "components/autofill/core/browser/form_structure.h"
+#include "components/autofill/core/common/form_field_data.h"
 #include "components/optimization_guide/core/model_quality/model_quality_log_entry.h"
+#include "components/password_manager/core/browser/password_form.h"
 #include "components/password_manager/core/browser/password_manager.h"
 #include "components/translate/core/browser/translate_manager.h"
 #include "components/variations/service/variations_service.h"
@@ -164,6 +167,29 @@ LoginPasswordType GetLoginAttemptPasswordType(
 bool ReachedAttemptsLimit(int state_checks_count) {
   return state_checks_count >= LoginStateChecker::kMaxLoginChecks;
 }
+
+ModelQualityLogsUploader::QualityStatus GetStepStatus(
+    actor::mojom::ActionResultCode failure) {
+  CHECK_NE(actor::mojom::ActionResultCode::kOk, failure);
+  switch (failure) {
+    case actor::mojom::ActionResultCode::kInvalidDomNodeId:
+      return ModelQualityLogsUploader::QualityStatus::
+          PasswordChangeQuality_StepQuality_SubmissionStatus_ELEMENT_NOT_FOUND;
+    case actor::mojom::ActionResultCode::kElementDisabled:
+      return ModelQualityLogsUploader::QualityStatus::
+          PasswordChangeQuality_StepQuality_SubmissionStatus_ELEMENT_DISABLED;
+    case actor::mojom::ActionResultCode::kElementOffscreen:
+      return ModelQualityLogsUploader::QualityStatus::
+          PasswordChangeQuality_StepQuality_SubmissionStatus_ELEMENT_OFFSCREEN;
+    case actor::mojom::ActionResultCode::kTargetNodeInteractionPointObscured:
+      return ModelQualityLogsUploader::QualityStatus::
+          PasswordChangeQuality_StepQuality_SubmissionStatus_ELEMENT_OBSCURED;
+    default:
+      return ModelQualityLogsUploader::QualityStatus::
+          PasswordChangeQuality_StepQuality_SubmissionStatus_UNEXPECTED_STATE;
+  }
+}
+
 }  // namespace
 
 ModelQualityLogsUploader::ModelQualityLogsUploader(
@@ -362,22 +388,13 @@ void ModelQualityLogsUploader::MarkStepSkipped(
               PasswordChangeQuality_StepQuality_SubmissionStatus_STEP_SKIPPED);
 }
 
-void ModelQualityLogsUploader::OpenFormTargetElementNotFound() {
-  final_log_data_.mutable_password_change_submission()
-      ->mutable_quality()
-      ->mutable_open_form()
-      ->set_status(
-          QualityStatus::
-              PasswordChangeQuality_StepQuality_SubmissionStatus_ELEMENT_NOT_FOUND);
-}
-
-void ModelQualityLogsUploader::SubmitFormTargetElementNotFound() {
-  final_log_data_.mutable_password_change_submission()
-      ->mutable_quality()
-      ->mutable_submit_form()
-      ->set_status(
-          QualityStatus::
-              PasswordChangeQuality_StepQuality_SubmissionStatus_ELEMENT_NOT_FOUND);
+void ModelQualityLogsUploader::RecordButtonClickFailure(
+    FlowStep step,
+    actor::mojom::ActionResultCode failure) {
+  CHECK_NE(FlowStep::PasswordChangeRequest_FlowStep_IS_LOGGED_IN_STEP, step);
+  CHECK_NE(FlowStep::PasswordChangeRequest_FlowStep_VERIFY_SUBMISSION_STEP,
+           step);
+  GetStepQuality(step, final_log_data_)->set_status(GetStepStatus(failure));
 }
 
 void ModelQualityLogsUploader::LoginCheckSkipped() {
@@ -385,6 +402,12 @@ void ModelQualityLogsUploader::LoginCheckSkipped() {
       ->mutable_quality()
       ->mutable_logged_in_check()
       ->set_classification_overridden_by_user(true);
+}
+
+void ModelQualityLogsUploader::SetPasswordFormInfo(
+    const password_manager::PasswordForm& password_form) {
+  // TODO(crbug.com/454561194): Implement logging information about the password
+  // form.
 }
 
 // static

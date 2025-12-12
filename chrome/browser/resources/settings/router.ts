@@ -33,7 +33,6 @@ export interface SettingsRoutes {
   GEMINI: Route;
   GLIC_SECTION: Route;
   HISTORY_SEARCH: Route;
-  INCOGNITO_TRACKING_PROTECTIONS: Route;
   LANGUAGES: Route;
   MANAGE_PROFILE: Route;
   OFFER_WRITING_HELP: Route;
@@ -115,6 +114,7 @@ export interface SettingsRoutes {
   TRIGGERED_RESET_DIALOG: Route;
   YOUR_SAVED_INFO: Route;
   YOUR_SAVED_INFO_IDENTITY_DOCS: Route;
+  YOUR_SAVED_INFO_TRAVEL: Route;
 
   // <if expr="not is_chromeos">
   ACCOUNT: Route;
