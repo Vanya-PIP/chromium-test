@@ -5,12 +5,8 @@
 #include "content/browser/renderer_host/navigation_throttle_runner.h"
 
 #include "base/check_deref.h"
-<<<<<<< HEAD
-#include "base/debug/crash_test"
-=======
 #include "base/debug/crash_logging.h"
 #include "base/debug/dump_without_crashing.h"
->>>>>>> 144.0.7505.0~1
 #include "base/feature_list.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/metrics/metrics_hashes.h"
