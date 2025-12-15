@@ -1669,13 +1669,7 @@ void HttpStreamPool::AttemptManager::NotifyJobOfFailure() {
   CHECK_EQ(availability_state_, AvailabilityState::kFailing);
 
   const FailureKind kind = DetermineFailureKind();
-  base::WeakPtr<AttemptManager> weak_this = weak_ptr_factory_.GetWeakPtr();
   while (Job* job = ExtractFirstJobToNotify()) {
-    // Ensure `this` isn't deleted while notifying the failure.
-    // TODO(crbug.com/414173943): Remove this check when we are certain that
-    // `this` won't be deleted.
-    CHECK(weak_this);
-
     job->AddConnectionAttempts(connection_attempts_);
 
     switch (kind) {
@@ -1772,21 +1766,12 @@ void HttpStreamPool::AttemptManager::CreateTextBasedStreamAndNotify(
 
   std::unique_ptr<HttpStream> http_stream = group_->CreateTextBasedStream(
       std::move(stream_socket), reuse_type, std::move(connect_timing));
-  // TODO(crbug.com/383606724): Change this `if` to CHECK() once we stabilize
-  // the implementation.
-  if (ShouldRespectLimits() && group_->ActiveStreamSocketCount() >
-                                   pool()->max_stream_sockets_per_group()) {
-    const size_t active_count = group_->ActiveStreamSocketCount();
-    const size_t handed_out_count = group_->HandedOutStreamSocketCount();
-    const size_t connecting_count = group_->ConnectingStreamSocketCount();
-    base::debug::Alias(&active_count);
-    base::debug::Alias(&handed_out_count);
-    base::debug::Alias(&connecting_count);
-    NOTREACHED() << "active=" << active_count
-                 << ", handed_out=" << handed_out_count
-                 << ", connecting=" << connecting_count
-                 << ", limit=" << pool()->max_stream_sockets_per_group();
-  }
+  CHECK(!ShouldRespectLimits() || group_->ActiveStreamSocketCount() <=
+                                      pool()->max_stream_sockets_per_group())
+      << "active=" << group_->ActiveStreamSocketCount()
+      << ", handed_out=" << group_->HandedOutStreamSocketCount()
+      << ", connecting=" << group_->ConnectingStreamSocketCount()
+      << ", limit=" << pool()->max_stream_sockets_per_group();
 
   NotifyStreamReady(std::move(http_stream), negotiated_protocol,
                     /*session_source=*/std::nullopt);
@@ -1886,15 +1871,11 @@ void HttpStreamPool::AttemptManager::MaybeCreateSpdyStreamAndNotify(
                                             dns_aliases);
   });
 
-  // This WeakPtr is to ensure `this` is not destroyed while notifying.
-  // TODO(crbug.com/417339803): Remove once we stabilize the implementation.
-  base::WeakPtr<AttemptManager> weak_this = weak_ptr_factory_.GetWeakPtr();
   while (!streams.empty()) {
     std::unique_ptr<SpdyHttpStream> stream = std::move(streams.back());
     streams.pop_back();
     NotifyStreamReady(std::move(stream), NextProto::kProtoHTTP2,
                       session_source);
-    CHECK(weak_this);
   }
   CHECK(request_jobs_.empty());
 }
@@ -1918,14 +1899,10 @@ void HttpStreamPool::AttemptManager::MaybeCreateQuicStreamAndNotify(
         quic_session->CreateHandle(stream_key().destination()), dns_aliases);
   });
 
-  // This WeakPtr is to ensure `this` is not destroyed while notifying.
-  // TODO(crbug.com/417339803): Remove once we stabilize the implementation.
-  base::WeakPtr<AttemptManager> weak_this = weak_ptr_factory_.GetWeakPtr();
   while (!streams.empty()) {
     std::unique_ptr<QuicHttpStream> stream = std::move(streams.back());
     streams.pop_back();
     NotifyStreamReady(std::move(stream), NextProto::kProtoQUIC, session_source);
-    CHECK(weak_this);
   }
   CHECK(request_jobs_.empty());
 }

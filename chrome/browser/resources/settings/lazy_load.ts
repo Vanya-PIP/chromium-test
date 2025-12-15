@@ -19,7 +19,6 @@ import './clear_browsing_data_dialog/clear_browsing_data_account_indicator.js';
 import './clear_browsing_data_dialog/clear_browsing_data_dialog.js';
 import './clear_browsing_data_dialog/clear_browsing_data_dialog_v2.js';
 import './clear_browsing_data_dialog/clear_browsing_data_time_picker.js';
-import './privacy_page/incognito_tracking_protections_page.js';
 import './privacy_page/privacy_guide/privacy_guide_dialog.js';
 import './privacy_page/privacy_guide/privacy_guide_page.js';
 import './privacy_page/security/security_keys_subpage.js';
@@ -116,6 +115,7 @@ import './system_page/system_page.js';
 
 // </if>
 import './your_saved_info_page/identity_docs_page.js';
+import './your_saved_info_page/travel_page.js';
 
 // <if expr="not is_chromeos">
 export {ScreenAiInstallStatus} from '/shared/settings/a11y_page/ax_annotations_browser_proxy.js';
@@ -220,7 +220,6 @@ export {SettingsSyncPageElement} from './people_page/sync_page.js';
 export {NetworkPredictionOptions} from './performance_page/constants.js';
 export {SettingsCookiesPageElement} from './privacy_page/cookies_page.js';
 export {SettingsDoNotTrackToggleElement} from './privacy_page/do_not_track_toggle.js';
-export {IncognitoTrackingProtectionsPageElement} from './privacy_page/incognito_tracking_protections_page.js';
 export {SettingsPersonalizationOptionsElement} from './privacy_page/personalization_options.js';
 export {PrivacyGuideStep} from './privacy_page/privacy_guide/constants.js';
 export {PrivacyGuideAdTopicsFragmentElement} from './privacy_page/privacy_guide/privacy_guide_ad_topics_fragment.js';
@@ -312,3 +311,4 @@ export {SystemPageBrowserProxy, SystemPageBrowserProxyImpl} from './system_page/
 
 // </if>
 export {SettingsIdentityDocsPageElement} from './your_saved_info_page/identity_docs_page.js';
+export {SettingsTravelPageElement} from './your_saved_info_page/travel_page.js';

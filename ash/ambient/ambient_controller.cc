@@ -262,7 +262,7 @@ void AmbientController::RegisterProfilePrefs(PrefRegistrySimple* registry) {
 AmbientController::AmbientController(
     mojo::PendingRemote<device::mojom::Fingerprint> fingerprint)
     : ambient_weather_controller_(std::make_unique<AmbientWeatherController>(
-          SimpleGeolocationProvider::GetInstance())),
+          SystemLocationProvider::GetInstance())),
       fingerprint_(std::move(fingerprint)) {
   ambient_photo_cache::SetFileTaskRunner(
       base::ThreadPool::CreateSequencedTaskRunner(
@@ -1161,7 +1161,6 @@ void AmbientController::OnUiLauncherInitialized(bool success) {
     // Success = false denotes a case where the screensaver is in a permanent
     // error state and such that the UI and any further attempts to launch the
     // UI will also result in this failure.
-    // TODO (b/175142676) Add metrics for cases where success = false.
     LOG(ERROR) << "AmbientUiLauncher failed to initialize";
     SetUiVisibilityClosed();
     return;

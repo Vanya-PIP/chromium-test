@@ -404,7 +404,7 @@ void SidePanel::UpdateWidthOnEntryChanged() {
   }
 
   std::optional<SidePanelEntry::Id> current_entry =
-      side_panel_ui->GetCurrentEntryId();
+      side_panel_ui->GetCurrentEntryId(type_);
   if (!current_entry) {
     return;
   }
@@ -579,7 +579,7 @@ void SidePanel::AnimationEnded(const gfx::Animation* animation) {
   }
   if (largest_animation_step_time_.has_value()) {
     SidePanelUtil::RecordSidePanelAnimationMetrics(
-        largest_animation_step_time_.value());
+        type_, largest_animation_step_time_.value());
   }
   InvalidateLayout();
 }
@@ -617,7 +617,7 @@ void SidePanel::OnResize(int resize_amount, bool done_resizing) {
     if (SidePanelUI* side_panel_ui =
             browser_view_->browser()->GetFeatures().side_panel_ui()) {
       if (std::optional<SidePanelEntry::Id> entry =
-              side_panel_ui->GetCurrentEntryId()) {
+              side_panel_ui->GetCurrentEntryId(type_)) {
         std::string current_panel_id = SidePanelEntryIdToString(entry.value());
         // Update the pref with the new width.
         UpdateSidePanelWidthPref(current_panel_id, proposed_width);
@@ -636,7 +636,8 @@ void SidePanel::RecordMetricsIfResized() {
     if (!side_panel_ui) {
       return;
     }
-    std::optional<SidePanelEntry::Id> id = side_panel_ui->GetCurrentEntryId();
+    std::optional<SidePanelEntry::Id> id =
+        side_panel_ui->GetCurrentEntryId(type_);
     if (!id.has_value()) {
       return;
     }
@@ -644,7 +645,7 @@ void SidePanel::RecordMetricsIfResized() {
     int side_panel_contents_width = width() - GetBorderInsets().width();
     int browser_window_width = browser_view_->width();
     SidePanelUtil::RecordSidePanelResizeMetrics(
-        id.value(), side_panel_contents_width, browser_window_width);
+        type_, id.value(), side_panel_contents_width, browser_window_width);
     did_resize_ = false;
   }
 }

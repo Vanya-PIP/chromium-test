@@ -258,7 +258,7 @@ const base::FeatureParam<bool> kAutofillAiServerModelUseCacheResults{
 // on file, <input type=text value=CX12> uploads a format string "4".
 // TODO(crbug.com/429704303): Clean up when launched.
 BASE_FEATURE(kAutofillAiVoteForFormatStringsForAffixes,
-             base::FEATURE_DISABLED_BY_DEFAULT);
+             base::FEATURE_ENABLED_BY_DEFAULT);
 
 // If enabled, votes for the format of flight number fields are uploaded. For
 // example, if there is a flight number "LH89" on file, a submitted value of
@@ -490,7 +490,7 @@ BASE_FEATURE(kAutofillPreferSavedFormAsSubmittedForm,
 // Allows the import of an Autofill profile if duplicate fields were present
 // with identical field values.
 // TODO(crbug.com/395855125): Remove when launched.
-BASE_FEATURE(kAutofillRelaxAddressImport, base::FEATURE_DISABLED_BY_DEFAULT);
+BASE_FEATURE(kAutofillRelaxAddressImport, base::FEATURE_ENABLED_BY_DEFAULT);
 
 // Replaces blink::WebFormElementObserver usage in FormTracker by updated logic
 // for tracking the disappearance of forms as well as other submission
@@ -539,10 +539,9 @@ BASE_FEATURE(kAutofillSupportPresentationRole,
 BASE_FEATURE(kAutofillSynchronousAfterParsing,
              base::FEATURE_ENABLED_BY_DEFAULT);
 
-// Enables extended zip code validation
-// and new zip code merging logic.
+// Enables extended zip code validation.
 // TODO(crbug.com/434140055): Clean up when launched.
-BASE_FEATURE(kAutofillZipCodeValidationAndMerging,
+BASE_FEATURE(kAutofillExtendZipCodeValidation,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
 // When enabled, the form field parser won't try to match other attributes if

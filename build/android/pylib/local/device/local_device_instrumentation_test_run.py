@@ -133,8 +133,6 @@ _DEVICE_GOLD_DIR = 'skia_gold'
 # A map of Android product models to SDK ints. The keys can be found via `adb
 # shell getprop ro.product.model`.
 RENDER_TEST_MODEL_SDK_CONFIGS = {
-    # Android x86 emulator.
-    'Android SDK built for x86': [29],
     # Android x64 emulator.
     'sdk_gphone64_x86_64': [35],
 }
@@ -1534,8 +1532,9 @@ class LocalDeviceInstrumentationTestRun(
     logcat_file = None
     logmon = None
     try:
-      with self._env.output_manager.ArchivedTempfile(stream_name,
-                                                     'logcat') as logcat_file:
+      with self._env.output_manager.ArchivedTempfile(
+          stream_name, 'logcat', output_manager.Datatype.TEXT,
+          _GetTargetPackageName(self._test_instance.test_apk)) as logcat_file:
         symbolizer = stack_symbolizer.PassThroughSymbolizerPool(
             device.product_cpu_abi)
         with symbolizer:

@@ -13,6 +13,7 @@
 #include "chrome/browser/passage_embeddings/page_embeddings_service.h"
 #include "chrome/browser/passage_embeddings/page_embeddings_service_factory.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/browser_commands.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
 #include "components/contextual_tasks/public/features.h"
@@ -21,6 +22,7 @@
 #include "components/passage_embeddings/passage_embeddings_test_util.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
+#include "net/dns/mock_host_resolver.h"
 #include "testing/gmock/include/gmock/gmock.h"
 
 namespace contextual_tasks {
@@ -115,6 +117,15 @@ class ContextualTasksContextServiceTest : public InProcessBrowserTest {
         /*disabled_features=*/{});
   }
 
+  void SetUpOnMainThread() override {
+    host_resolver()->AddRule("*", "127.0.0.1");
+    InProcessBrowserTest::SetUpOnMainThread();
+
+    embedded_test_server()->ServeFilesFromSourceDirectory(
+        "chrome/test/data/optimization_guide");
+    ASSERT_TRUE(embedded_test_server()->Start());
+  }
+
   void TearDown() override {
     InProcessBrowserTest::TearDown();
   }
@@ -182,6 +193,15 @@ class ContextualTasksContextServiceTest : public InProcessBrowserTest {
     return embedding;
   }
 
+  void NavigateToValidURL() {
+    // Navigate to a valid URL.
+    content::WebContents* web_contents =
+        browser()->tab_strip_model()->GetActiveWebContents();
+    GURL url(embedded_test_server()->GetURL("a.test",
+                                            "/optimization_guide/hello.html"));
+    content::NavigateToURLBlockUntilNavigationsComplete(web_contents, url, 1);
+  }
+
  protected:
   base::test::ScopedFeatureList scoped_feature_list_;
 
@@ -193,6 +213,8 @@ class ContextualTasksContextServiceTest : public InProcessBrowserTest {
 IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTest, NoEmbedder) {
   base::HistogramTester histogram_tester;
 
+  NavigateToValidURL();
+
   base::test::TestFuture<std::vector<content::WebContents*>> future;
   service()->GetRelevantTabsForQuery("some text", future.GetCallback());
   EXPECT_TRUE(future.Get().empty());
@@ -201,10 +223,15 @@ IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTest, NoEmbedder) {
                                     0);
   histogram_tester.ExpectTotalCount(
       "ContextualTasks.Context.ContextCalculationLatency", 0);
+  histogram_tester.ExpectUniqueSample(
+      "ContextualTasks.Context.ContextDeterminationStatus",
+      ContextDeterminationStatus::kEmbedderNotAvailable, 1);
 }
 
 IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTest, EmbedderFailed) {
   base::HistogramTester histogram_tester;
+
+  NavigateToValidURL();
 
   NotifyEmbedderMetadata();
   UpdateEmbedderStatus(
@@ -218,11 +245,16 @@ IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTest, EmbedderFailed) {
                                     0);
   histogram_tester.ExpectTotalCount(
       "ContextualTasks.Context.ContextCalculationLatency", 0);
+  histogram_tester.ExpectUniqueSample(
+      "ContextualTasks.Context.ContextDeterminationStatus",
+      ContextDeterminationStatus::kQueryEmbeddingFailed, 1);
 }
 
 IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTest,
                        SuccessQueryNoPageEmbeddings) {
   base::HistogramTester histogram_tester;
+
+  NavigateToValidURL();
 
   NotifyEmbedderMetadata();
 
@@ -234,10 +266,15 @@ IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTest,
       "ContextualTasks.Context.RelevantTabsCount", 0, 1);
   histogram_tester.ExpectTotalCount(
       "ContextualTasks.Context.ContextCalculationLatency", 1);
+  histogram_tester.ExpectUniqueSample(
+      "ContextualTasks.Context.ContextDeterminationStatus",
+      ContextDeterminationStatus::kSuccess, 1);
 }
 
 IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTest, Success) {
   base::HistogramTester histogram_tester;
+
+  NavigateToValidURL();
 
   NotifyEmbedderMetadata();
 
@@ -265,6 +302,26 @@ IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTest, Success) {
       "ContextualTasks.Context.RelevantTabsCount", 1, 1);
   histogram_tester.ExpectTotalCount(
       "ContextualTasks.Context.ContextCalculationLatency", 1);
+  histogram_tester.ExpectUniqueSample(
+      "ContextualTasks.Context.ContextDeterminationStatus",
+      ContextDeterminationStatus::kSuccess, 1);
+}
+
+IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTest, SkipsNonHttp) {
+  base::HistogramTester histogram_tester;
+
+  NotifyEmbedderMetadata();
+
+  EXPECT_CALL(*page_embeddings_service(), GetEmbeddings(_)).Times(0);
+
+  base::test::TestFuture<std::vector<content::WebContents*>> future;
+  service()->GetRelevantTabsForQuery("some text", future.GetCallback());
+  EXPECT_TRUE(future.Get().empty());
+
+  histogram_tester.ExpectUniqueSample(
+      "ContextualTasks.Context.RelevantTabsCount", 0, 1);
+  histogram_tester.ExpectTotalCount(
+      "ContextualTasks.Context.ContextCalculationLatency", 1);
 }
 
 class ContextualTasksContextServiceTitlesOnlyTest
@@ -281,6 +338,8 @@ class ContextualTasksContextServiceTitlesOnlyTest
 
 IN_PROC_BROWSER_TEST_F(ContextualTasksContextServiceTitlesOnlyTest, Success) {
   NotifyEmbedderMetadata();
+
+  NavigateToValidURL();
 
   std::vector<passage_embeddings::PassageEmbedding> fake_page_embeddings = {
       // Not match.

@@ -1184,6 +1184,9 @@ const char kMultilineOmniboxFullLineAndPeeking[] =
     "kMultilineOmniboxFullLineAndPeeking";
 
 bool IsMultilineBrowserOmniboxEnabled() {
+  if (ui::GetDeviceFormFactor() != ui::DEVICE_FORM_FACTOR_PHONE) {
+    return false;
+  }
   return base::FeatureList::IsEnabled(kMultilineBrowserOmnibox);
 }
 
@@ -1254,4 +1257,10 @@ bool ShouldShowKeyboardAccessoryFeatures() {
   std::string feature_param = base::GetFieldTrialParamValueByFeature(
       kDisableKeyboardAccessory, kDisableKeyboardAccessoryParam);
   return feature_param == kDisableKeyboardAccessoryOnlyFeatures;
+}
+
+BASE_FEATURE(kLocationBarBadgeMigration, base::FEATURE_DISABLED_BY_DEFAULT);
+
+bool IsLocationBarBadgeMigrationEnabled() {
+  return base::FeatureList::IsEnabled(kLocationBarBadgeMigration);
 }

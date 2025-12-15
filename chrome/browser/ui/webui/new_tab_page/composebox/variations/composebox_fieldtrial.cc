@@ -260,6 +260,10 @@ const base::FeatureParam<bool> kShowCreateImageTool(&kNtpComposebox,
 
 const base::FeatureParam<bool> kShowSubmit(&kNtpComposebox, "ShowSubmit", true);
 
+const base::FeatureParam<bool> kShowSmartCompose(&kNtpComposebox,
+                                                 "ShowSmartCompose",
+                                                 true);
+
 const base::FeatureParam<bool> kForceToolsAndModels(&kNtpComposebox,
                                                     "ForceToolsAndModels",
                                                     false);
@@ -270,6 +274,10 @@ const base::FeatureParam<int> kContextMenuMaxTabSuggestions(
     5);
 
 const base::FeatureParam<int> kMaxNumFiles(&kNtpComposebox, "MaxNumFiles", 1);
+
+const base::FeatureParam<bool> kEnableDragAndDrop(&kNtpComposebox,
+                                                  "EnableDragAndDrop",
+                                                  true);
 
 FeatureConfig::FeatureConfig() : config(GetNTPComposeboxConfig()) {}
 

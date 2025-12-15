@@ -98,6 +98,43 @@ class COMPONENT_EXPORT(UNEXPORTABLE_KEYS) UnexportableKeyService {
       base::OnceCallback<void(ServiceErrorOr<std::vector<uint8_t>>)>
           callback) = 0;
 
+  // Deletes a key.
+  //
+  // Invokes `callback` with a `ServiceError` inline if `key_id` is not found.
+  // Otherwise, removes the key from the in-memory cache synchronously, and
+  // schedules an asynchronous deletion task.  This will invoke `callback` with
+  // a `ServiceError` if an error occurs during deletion and `base::ok()`
+  // otherwise.
+  //
+  // `key_id` must have resulted from calling `GenerateSigningKeySlowlyAsync()`
+  // or `FromWrappedSigningKeySlowlyAsync()`.
+  //
+  // Assuming `key_id` was found, it is invalidated immediately and should not
+  // be used again.
+  //
+  // Note: On platforms like macOS this will delete the key from the OS, and
+  // thus future calls to `FromWrappedSigningKeySlowlyAsync()` with the same
+  // wrapped key will fail.
+  virtual void DeleteKeySlowlyAsync(
+      UnexportableKeyId key_id,
+      BackgroundTaskPriority priority,
+      base::OnceCallback<void(ServiceErrorOr<void>)> callback) = 0;
+
+  // Deletes all keys.
+  //
+  // This will remove all keys from the in-memory cache synchronously, reply
+  // `kKeyNotFound` to pending `FromWrappedSigningKeySlowlyAsync()` requests,
+  // and schedule an asynchronous deletion task. This will invoke `callback`
+  // with a `ServiceError` if an error occurs during deletion and `base::ok()`
+  // otherwise. Pending `GenerateSigningKeySlowlyAsync()` requests are not
+  // affected.
+  //
+  // Note: On platforms like macOS this will delete all keys from the OS, and
+  // thus future calls to `FromWrappedSigningKeySlowlyAsync()` will fail.
+  virtual void DeleteAllKeysSlowlyAsync(
+      BackgroundTaskPriority priority,
+      base::OnceCallback<void(ServiceErrorOr<void>)> callback) = 0;
+
   // Returns an SPKI that contains the public key of a key that `key_id` refers
   // to.
   // Returns a `ServiceError` if `key_id` is not found.

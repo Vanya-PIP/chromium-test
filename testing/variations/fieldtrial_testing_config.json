@@ -1441,7 +1441,7 @@
                 {
                     "name": "Enabled_horizontal_plain_v1",
                     "params": {
-                        "probability": "1",
+                        "probability": "1.0",
                         "prompt_arm": "1",
                         "prompt_disposition_reason_filter": "DefaultFallback",
                         "request_type_filter": "Geolocation",
@@ -2261,27 +2261,6 @@
             ]
         }
     ],
-    "AutofillAiVoteForFormatStringsForAffixes": [
-        {
-            "platforms": [
-                "android",
-                "chromeos",
-                "chromeos_lacros",
-                "ios",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "AutofillAiVoteForFormatStringsForAffixes"
-                    ]
-                }
-            ]
-        }
-    ],
     "AutofillAllowFillingModifiedInitialValues": [
         {
             "platforms": [
@@ -2721,6 +2700,27 @@
             ]
         }
     ],
+    "AutofillExtendZipCodeValidation": [
+        {
+            "platforms": [
+                "android",
+                "android_webview",
+                "chromeos",
+                "ios",
+                "linux",
+                "mac",
+                "windows"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "AutofillExtendZipCodeValidation"
+                    ]
+                }
+            ]
+        }
+    ],
     "AutofillFixRewriterRules": [
         {
             "platforms": [
@@ -3001,28 +3001,6 @@
                     "name": "Enabled",
                     "enable_features": [
                         "AutofillPrioritizeSaveCardOverMandatoryReauth"
-                    ]
-                }
-            ]
-        }
-    ],
-    "AutofillRelaxAddressImport": [
-        {
-            "platforms": [
-                "android",
-                "android_webview",
-                "chromeos",
-                "ios",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "AutofillEnableImportWhenMultiplePhoneNumbers",
-                        "AutofillRelaxAddressImport"
                     ]
                 }
             ]
@@ -8084,25 +8062,6 @@
                     },
                     "enable_features": [
                         "DXGIWaitableSwapChain"
-                    ]
-                }
-            ]
-        }
-    ],
-    "DbdRevampDesktop": [
-        {
-            "platforms": [
-                "chromeos",
-                "chromeos_lacros",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "DbdRevampDesktop"
                     ]
                 }
             ]
@@ -14230,13 +14189,15 @@
                         "AdditionalDelay": "100ms",
                         "DelayMainJobWithAvailableSpdySession": "false",
                         "QuicHandshakeTimeout": "15s",
-                        "mtu": "1230"
+                        "mtu": "1230",
+                        "quic_options": "ORIG"
                     },
                     "enable_features": [
                         "AdditionalDelayMainJob",
                         "ConfigureQuicHints",
                         "ExtendQuicHandshakeTimeout",
-                        "LowerQuicMaxPacketSize"
+                        "LowerQuicMaxPacketSize",
+                        "TryQuicByDefault"
                     ]
                 }
             ]
@@ -17590,6 +17551,7 @@
                         "cookie_controls": "true",
                         "discounts": "true",
                         "file_system_access": "true",
+                        "filled_card_information": "true",
                         "find": "true",
                         "intent_picker": "true",
                         "lens_overlay": "true",
@@ -17602,6 +17564,7 @@
                         "pwa_install": "true",
                         "sharing_hub": "true",
                         "translate": "true",
+                        "virtual_card": "true",
                         "zoom": "true"
                     },
                     "enable_features": [
@@ -19810,35 +19773,6 @@
             ]
         }
     ],
-    "ProgressiveAccessibility": [
-        {
-            "platforms": [
-                "android",
-                "android_webview",
-                "chromeos",
-                "linux",
-                "mac",
-                "windows"
-            ],
-            "experiments": [
-                {
-                    "name": "Enabled",
-                    "enable_features": [
-                        "ProgressiveAccessibility"
-                    ]
-                },
-                {
-                    "name": "EnabledWithHide",
-                    "params": {
-                        "progressive_accessibility_mode": "disable_on_hide"
-                    },
-                    "enable_features": [
-                        "ProgressiveAccessibility"
-                    ]
-                }
-            ]
-        }
-    ],
     "PropagateWebViewNetworkingSignals": [
         {
             "platforms": [
@@ -21336,6 +21270,7 @@
                 {
                     "name": "Enabled",
                     "enable_features": [
+                        "ReportStuckThrottle",
                         "ResumeNavigationWithSpeculativeRFHProcessGone"
                     ]
                 }
@@ -23781,14 +23716,14 @@
             ],
             "experiments": [
                 {
-                    "name": "Enabled_WithMenu",
+                    "name": "Enabled_WithClose",
                     "params": {
                         "drop_target_nudge_to_full_max_width": "360",
                         "drop_target_nudge_to_full_min_width": "120",
                         "drop_target_nudge_to_full_width_percentage": "15",
                         "drop_target_show_delay": "1400ms",
                         "drop_target_width_percentage": "15",
-                        "mini_toolbar_active_config": "showmenu"
+                        "mini_toolbar_active_config": "showclose"
                     },
                     "enable_features": [
                         "CloseActiveTabInSplitViewViaHotkey",
@@ -24728,6 +24663,23 @@
             ]
         }
     ],
+    "SurfaceInputForAndroidVEA": [
+        {
+            "platforms": [
+                "android",
+                "android_webview",
+                "android_weblayer"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "SurfaceInputForAndroidVEA"
+                    ]
+                }
+            ]
+        }
+    ],
     "SustainedMPUrgentDiscarding": [
         {
             "platforms": [
@@ -25161,6 +25113,21 @@
             ]
         }
     ],
+    "TabStorageSqlitePrototype": [
+        {
+            "platforms": [
+                "android"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "TabStorageSqlitePrototype"
+                    ]
+                }
+            ]
+        }
+    ],
     "TabstripComboButton": [
         {
             "platforms": [
@@ -25450,6 +25417,21 @@
                     "name": "Enabled_20251008",
                     "enable_features": [
                         "ToolbarStaleCaptureBugFix"
+                    ]
+                }
+            ]
+        }
+    ],
+    "ToolbarTabletResizeRefactor": [
+        {
+            "platforms": [
+                "android"
+            ],
+            "experiments": [
+                {
+                    "name": "Enabled",
+                    "enable_features": [
+                        "ToolbarTabletResizeRefactor"
                     ]
                 }
             ]

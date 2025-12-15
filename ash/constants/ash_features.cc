@@ -1232,12 +1232,6 @@ BASE_FEATURE(kLanguagePacksFonts, base::FEATURE_ENABLED_BY_DEFAULT);
 const base::FeatureParam<bool> kLanguagePacksFontsLoadAfterDownloadDuringLogin =
     {&kLanguagePacksFonts, "load_after_download_during_login", true};
 
-// If enabled, the Language Pack corresponding to the application locale is
-// downloaded and installed during OOBE. This pre-fetching is aimed at improving
-// user experience so that they have language resources available as early as
-// possible.
-BASE_FEATURE(kLanguagePacksInOobe, base::FEATURE_ENABLED_BY_DEFAULT);
-
 // Enables the UI and relative logic to manage Language Packs in Settings.
 // This feature allows users to install/remove languages and input methods
 // via the corresponding Settings page.
@@ -1564,6 +1558,9 @@ BASE_FEATURE(kFeatureManagementOobeSimon, base::FEATURE_DISABLED_BY_DEFAULT);
 
 // Enables or disables the OOBE QuickStart flow on the login screen.
 BASE_FEATURE(kOobeQuickStartOnLoginScreen, base::FEATURE_DISABLED_BY_DEFAULT);
+
+// Enables the enforcement of AutoEnrollment check in OOBE.
+BASE_FEATURE(kOobeAutoEnrollmentCheckForced, base::FEATURE_DISABLED_BY_DEFAULT);
 
 // Enables or disables Orca for ARC apps.
 BASE_FEATURE(kOrcaArc, base::FEATURE_ENABLED_BY_DEFAULT);
@@ -3029,10 +3026,6 @@ bool IsKerberosRememberPasswordByDefaultEnabled() {
   return base::FeatureList::IsEnabled(kKerberosRememberPasswordByDefault);
 }
 
-bool IsLanguagePacksInOobeEnabled() {
-  return base::FeatureList::IsEnabled(kLanguagePacksInOobe);
-}
-
 bool IsLauncherContinueSectionWithRecentsEnabled() {
   // If the holdback feature flag is enabled, the feature should be disabled,
   // but only if the device is eligible for the study. Exclusion happens
@@ -3270,6 +3263,10 @@ bool IsOobeDisplaySizeEnabled() {
 bool IsOobeInputMethodsEnabled() {
   return IsOobeChoobeEnabled() &&
          base::FeatureList::IsEnabled(kOobeInputMethods);
+}
+
+bool IsOobeAutoEnrollmentCheckForcedEnabled() {
+  return base::FeatureList::IsEnabled(kOobeAutoEnrollmentCheckForced);
 }
 
 bool IsOobeSplitModifierKeyboardInfoEnabled() {

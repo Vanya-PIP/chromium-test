@@ -9304,6 +9304,8 @@ from previous Chrome versions.
   <int value="-1765998205"
       label="AccessibilityPopulateSupplementalDescriptionApi:disabled"/>
   <int value="-1765921578" label="BlinkExtensionDiagnostics:enabled"/>
+  <int value="-1765313360"
+      label="AutofillDisableBnplCountryCheckForTesting:enabled"/>
   <int value="-1765004425"
       label="CertificateTransparency2022PolicyAllCerts:disabled"/>
   <int value="-1764447174" label="UseNAT64ForIPv4Literal:disabled"/>
@@ -10794,6 +10796,7 @@ from previous Chrome versions.
   <int value="-1246125067" label="SearchInSettings:enabled"/>
   <int value="-1245617305" label="NewProfilePicker:enabled"/>
   <int value="-1244772303" label="NtpRealboxMatchOmniboxTheme:enabled"/>
+  <int value="-1244267485" label="TabbedBrowserUseNewLayout:disabled"/>
   <int value="-1243870410" label="CrOSLateBootCrasProcessorWavDump:disabled"/>
   <int value="-1243694853" label="DeferAllScript:disabled"/>
   <int value="-1243449299" label="WebPrinting:disabled"/>
@@ -12259,6 +12262,7 @@ from previous Chrome versions.
   <int value="-722635250" label="ChromeRefresh2023NTB:disabled"/>
   <int value="-722474177" label="browser-side-navigation:disabled"/>
   <int value="-722172419" label="SystemChinesePhysicalTyping:disabled"/>
+  <int value="-721757044" label="TabbedBrowserUseNewLayout:enabled"/>
   <int value="-721685663" label="WebViewMixedContentAutoupgrades:enabled"/>
   <int value="-721649087" label="HighEfficiencyModeAvailable:enabled"/>
   <int value="-721245076" label="DesktopPWAsStayInWindow:disabled"/>
@@ -12987,7 +12991,6 @@ from previous Chrome versions.
       label="OminboxUIExperimentUseGenericSearchEngineIcon:enabled"/>
   <int value="-462404204" label="CryptAuthV2DeviceSync:disabled"/>
   <int value="-462205750" label="enable-service-worker-sync"/>
-  <int value="-462021085" label="BlockCanvasReadback:disabled"/>
   <int value="-461713516" label="ArcEnableVirtioBlkForData:enabled"/>
   <int value="-461568027" label="EcheSWADebugMode:disabled"/>
   <int value="-461292699" label="ContentSuggestionsCategoryOrder:enabled"/>
@@ -16366,6 +16369,8 @@ from previous Chrome versions.
   <int value="728550541"
       label="BoundaryEventDispatchTracksNodeRemoval:enabled"/>
   <int value="728656094" label="PasswordForceSaving:disabled"/>
+  <int value="728925040"
+      label="AutofillDisableBnplCountryCheckForTesting:disabled"/>
   <int value="728937354" label="ShutdownSupportForKeepalive:disabled"/>
   <int value="729082677" label="ShimlessRMAComplianceCheck:disabled"/>
   <int value="729726508" label="NtpModulesFirstRunExperience:disabled"/>
@@ -20061,7 +20066,6 @@ from previous Chrome versions.
   <int value="2009697597"
       label="DownloadServiceForegroundSessionIOSFeature:disabled"/>
   <int value="2009995411" label="GlicPanelResetOnSessionTimeout:enabled"/>
-  <int value="2010480310" label="BlockCanvasReadback:enabled"/>
   <int value="2011785323" label="EnableSchemeBoundCookies:enabled"/>
   <int value="2011873998" label="LiveCaptionMultiLanguage:enabled"/>
   <int value="2013589943" label="CrOSLateBootCrOSSOUL:disabled"/>

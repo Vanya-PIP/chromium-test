@@ -370,6 +370,10 @@ constexpr CGFloat kLocationBarCompactBottomPadding = 10.0;
                                                          completion:completion];
                              }];
   }
+
+  [self.primaryToolbarCoordinator.viewController setLocationBarFocused:focused];
+  [self.secondaryToolbarCoordinator.viewController
+      setLocationBarFocused:focused];
   self.locationBarFocused = focused;
   [self updateLocationBarHeightWithAnimation:YES];
 }
@@ -388,6 +392,10 @@ constexpr CGFloat kLocationBarCompactBottomPadding = 10.0;
 
 - (void)setBottomOmniboxOffsetForPopup:(CGFloat)bottomOffset {
   [self.toolbarMediator setBottomOmniboxOffsetForPopup:bottomOffset];
+}
+
+- (ToolbarType)omniboxPosition {
+  return _omniboxPosition;
 }
 
 #pragma mark ToolbarHeightProviding

@@ -120,7 +120,6 @@ const base::Feature* const kFeaturesExposedToJava[] = {
     &autofill::features::kAutofillEnableSecurityTouchEventFilteringAndroid,
     &autofill::features::kAutofillEnableSeparatePixPreferenceItem,
     &autofill::features::kAutofillEnableSupportForHomeAndWork,
-    &autofill::features::kAutofillEnableSyncingOfPixBankAccounts,
     &autofill::features::kAutofillEnableVirtualCardJavaPaymentsDataManager,
     &autofill::features::kAutofillRetryImageFetchOnFailure,
     &autofill::features::kAutofillSyncEwalletAccounts,
@@ -434,7 +433,6 @@ const base::Feature* const kFeaturesExposedToJava[] = {
     &kTabStripDensityChangeAndroid,
     &kTabStripGroupDragDropAndroid,
     &kTabStripIncognitoMigration,
-    &kTabStripLayoutOptimization,
     &kTabStripMouseCloseResizeDelay,
     &kTabSwitcherDragDropAndroid,
     &kTabSwitcherGroupSuggestionsAndroid,
@@ -468,7 +466,6 @@ const base::Feature* const kFeaturesExposedToJava[] = {
     &net::features::kVerifyQWACs,
     &network::features::kLocalNetworkAccessChecks,
     &notifications::features::kUseChimeAndroidSdk,
-    &optimization_guide::features::kPushNotifications,
     &page_info::kPageInfoAboutThisSiteMoreLangs,
     &paint_preview::kPaintPreviewDemo,
     &password_manager::features::kBiometricAuthIdentityCheck,
@@ -786,7 +783,6 @@ BASE_FEATURE(kTabStripAutoSelectOnCloseChange, base::FEATURE_ENABLED_BY_DEFAULT)
 BASE_FEATURE(kTabStripDensityChangeAndroid, base::FEATURE_ENABLED_BY_DEFAULT);
 BASE_FEATURE(kTabStripGroupDragDropAndroid, base::FEATURE_ENABLED_BY_DEFAULT);
 BASE_FEATURE(kTabStripIncognitoMigration, base::FEATURE_DISABLED_BY_DEFAULT);
-BASE_FEATURE(kTabStripLayoutOptimization, base::FEATURE_ENABLED_BY_DEFAULT);
 BASE_FEATURE(kTabStripMouseCloseResizeDelay, base::FEATURE_ENABLED_BY_DEFAULT);
 BASE_FEATURE(kTabSwitcherDragDropAndroid, base::FEATURE_DISABLED_BY_DEFAULT);
 BASE_FEATURE(kTabSwitcherGroupSuggestionsAndroid, base::FEATURE_DISABLED_BY_DEFAULT);

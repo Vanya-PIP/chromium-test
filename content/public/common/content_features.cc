@@ -1238,6 +1238,11 @@ BASE_FEATURE(kWebXr, "WebXR", base::FEATURE_ENABLED_BY_DEFAULT);
 BASE_FEATURE(kWebPermissionsApi, base::FEATURE_ENABLED_BY_DEFAULT);
 
 #if BUILDFLAG(IS_ANDROID)
+// When enabled, will unconditionally poll the C++ cache to check Java node
+// cache freshness to test correctness of Java node cache.
+BASE_FEATURE(kAccessibilityCheckJavaNodeCacheFreshness,
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
 BASE_FEATURE(kAccessibilityDeprecateJavaNodeCache,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
@@ -1314,10 +1319,6 @@ BASE_FEATURE(kUserMediaScreenCapturing, base::FEATURE_DISABLED_BY_DEFAULT);
 // Enables backgrounding hidden renderers on Mac.
 BASE_FEATURE(kMacAllowBackgroundingRenderProcesses,
              base::FEATURE_ENABLED_BY_DEFAULT);
-
-// Enables a fix for a macOS IME Live Conversion issue. crbug.com/40226470 and
-// crbug.com/40060200
-BASE_FEATURE(kMacImeLiveConversionFix, base::FEATURE_ENABLED_BY_DEFAULT);
 
 // Changes how Chrome responds to accessibility activation signals on macOS
 // Sonoma, to avoid unnecessary changes to the screen reader state.
